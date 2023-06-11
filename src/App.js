@@ -1,24 +1,42 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import Home from './components/home';
+import Family from './components/family';
+import Patagonian from './components/patagonian';
+import Wines from './components/wines';
+
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/home">home</Link>
+            </li>
+            <li>
+              <Link to="/family">family</Link>
+            </li>
+            <li>
+              <Link to="/patagonian">patagonian</Link>
+            </li>
+            <li>
+              <Link to="/wines">wines</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/family" element={<Family />} />
+          <Route path="/patagonian" element={<Patagonian />} />
+          <Route path="/wines" element={<Wines />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
