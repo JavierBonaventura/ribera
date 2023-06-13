@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import '../App.css';
 
 
@@ -36,9 +37,9 @@ const Home = () => {
       <div className="body">
       <div className="container">        
         <p className="menu" onClick={opcion1}>Le Domaine</p>
-        {mostrarMenu1  && <div className="subMenu">LE TERROIR</div>}
-        {mostrarMenu1  && <div className="subMenu">L'HISTOIRE</div>}
-        {mostrarMenu1  && <div className="subMenu">LES EQUIPES</div>}
+        {mostrarMenu1  &&  <Link to="/terroir" className="subMenu">LE TERROIR</Link>}
+        {mostrarMenu1  && <Link to="/historie" className="subMenu">L'HISTOIRE</Link>}
+        {mostrarMenu1  && <Link to="/equipes" className="subMenu">LES EQUIPES</Link>}
         <p className="menu"  onClick={opcion2}>Le Savoir-Faire</p>
         {mostrarMenu2  && <div className="subMenu">LE TRAVIAL DE LA VIGNE</div>}
         {mostrarMenu2  && <div className="subMenu">LE TRAVIAL DAS CHAIS</div>}
