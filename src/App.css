@@ -1,5 +1,9 @@
 /* @media (max-width: 767px) { */
   
+.logo {
+  width: 240px;
+margin-bottom: -60px;
+}
   .image {
     width: 100%;
     height: auto;
@@ -11,7 +15,7 @@ body{
 }
 
   .container {
-margin-top: 100px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,8 +27,16 @@ margin-top: 100px;
     z-index: 1;
 
   }
+.background {
+  background-image: url("./images/pexels-bruno-cantuária-774455.jpg");
+  background-size: cover;
+  background-position: center;
+
+
+}
 
   .menu{
+    
     color: #cab57e;
     font-family: Conv_CormorantGaramond-Regular;
     font-size: 35px;

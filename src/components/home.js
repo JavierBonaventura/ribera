@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import '../App.css';
+import logo from '../images/Escudo Bodega Ribera del Cuarzo-FINALcurvas-02.png';
+
+
+
 
 
 const Home = () => {
@@ -33,7 +37,9 @@ const Home = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container background">
+       <img src={logo} alt="Imagen 1" className="logo" />;
+ 
       <div className="body">
       <div className="container">        
         <p className="menu" onClick={opcion1}>Le Domaine</p>
