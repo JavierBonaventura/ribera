@@ -1,8 +1,23 @@
 /* @media (max-width: 767px) { */
   
+.textoTerrir {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  ;
+  margin-left: 20px;
+  line-height: 25px;
+}
+
 .logo {
   width: 240px;
 margin-bottom: -60px;
+z-index: 0;
+}
+
+.logoTerroir {
+  width: 240px;
+margin-top: 250px;
+z-index: 0;
+padding-bottom: 200px;
 }
   .image {
     width: 100%;
@@ -11,7 +26,7 @@ margin-bottom: -60px;
 
 body{
   font-weight: 400;
-  background-color: darkolivegreen;
+  background-color: black;
 }
 
   .container {
@@ -29,6 +44,14 @@ body{
   }
 .background {
   background-image: url("./images/pexels-bruno-cantuária-774455.jpg");
+  background-size: cover;
+  background-position: center;
+
+
+}
+
+.backgroundTerroir {
+  background-image: url("./images/fondoTerroir.png");
   background-size: cover;
   background-position: center;
 
