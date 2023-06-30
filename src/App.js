@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route,Routes, Link } from 'react-router-dom';
-import Home from './components/Home';
+import Menu from './components/Menu'
 import History from './components/History';
 import AraucanaVineyard from './components/AraucanaVineyard'
 import WorkVineyard from './components/WorkVineyard'
@@ -19,7 +19,7 @@ function App() {
     <Router>
    <div>   
     <Routes>
-          <Route path="/" element={<Home />} />   
+          <Route path="/" element={<Menu />} />   
           <Route path="/history" element={<History />} />      
           <Route path="/araucanavineyard" element={<AraucanaVineyard />} />   
           <Route path="/workvineyard" element={<WorkVineyard />} />   
