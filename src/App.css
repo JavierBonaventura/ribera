@@ -29,7 +29,7 @@ body{
   background-color: black;
 }
 
-  .container {
+  .containerHome {
 
     display: flex;
     flex-direction: column;

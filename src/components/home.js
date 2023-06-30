@@ -37,33 +37,33 @@ const Home = () => {
   };
 
   return (
-    <div className="container background">
+    <div className="containerHome pt-8 background">
        <img src={logo} alt="Imagen 1" className="logo" />;
  
       <div className="body">
-      <div className="container">        
-        <p className="menu" onClick={opcion1}>Le Domaine</p>
-        {mostrarMenu1  &&  <Link to="/terroir" className="subMenu">LE TERROIR</Link>}
-        {mostrarMenu1  && <Link to="/historie" className="subMenu">L'HISTOIRE</Link>}
-        {mostrarMenu1  && <Link to="/equipes" className="subMenu">LES EQUIPES</Link>}
-        <p className="menu"  onClick={opcion2}>Le Savoir-Faire</p>
-        {mostrarMenu2  && <div className="subMenu">LE TRAVIAL DE LA VIGNE</div>}
-        {mostrarMenu2  && <div className="subMenu">LE TRAVIAL DAS CHAIS</div>}
-        {mostrarMenu2  && <div className="subMenu">LA CONSERVATION DE NOS VINS</div>}
-        {mostrarMenu2  && <div className="subMenu">LE SERVICE & LA DEGUSTATION</div>}
-        <p className="menu"  onClick={opcion3}>Les Vins</p>
-        {mostrarMenu3  && <div className="subMenu">GRAND VIN</div>}
-        {mostrarMenu3  && <div className="subMenu">PAVILLON ROUGE</div>}
-        {mostrarMenu3  && <div className="subMenu">PAVILLON BLANC</div>}
-        {mostrarMenu3  && <div className="subMenu">MARGAUX</div>}
+      <div className="containerHome pt-16">        
+        <p className="menu" onClick={opcion1}>Family</p>
+        {mostrarMenu1  &&  <Link to="/history" className="subMenu">HISTORY</Link>}
+        <p className="menu"  onClick={opcion2}>Patagonian Spirit</p>
+        {mostrarMenu2  && <Link to="/araucanavineyard" className="subMenu">ARAUCANA VINEYARD</Link>}
+        {mostrarMenu2  && <Link to="/workvineyard" className="subMenu">WORK IN THE VINEYARD</Link>}
+        {mostrarMenu2  && <Link to="/winespreservation" className="subMenu">WINES PRESERVATION</Link>}
+        {mostrarMenu2  && <Link to="/wineyard" className="subMenu">THE VINEYARD</Link>}
+        <p className="menu"  onClick={opcion3}>Wines</p>
+        {mostrarMenu3  && <Link to="/riociervos" className="subMenu">RÍO DE LOS CIERVOS</Link>}
+        {mostrarMenu3  && <Link to="/araucana" className="subMenu">ARAUCANA</Link>}
+        {mostrarMenu3  && <Link to="/araucanaazul" className="subMenu">ARAUCANA AZUL</Link>}
+        {mostrarMenu3  && <Link to="/clasico" className="subMenu">CLÁSICO</Link>}
+        {mostrarMenu3  && <Link to="/especial" className="subMenu">ESPECIAL</Link>}
+        {mostrarMenu3  && <Link to="/reservaestibada" className="subMenu">RESERVA ESTIBADA</Link>}
 
         <div className="footer">
           
-          <p className="footerItems">Contact & visites</p>
+          <p className="footerItems">Contact</p>
           <br></br>
-          <p className="footerItems">Actualities</p>
+          <p className="footerItems">News</p>
           <br></br>
-          <p className="footerItems">Authentication</p>
+          <p className="footerItems">Casa Pirque</p>
 
         </div>
 

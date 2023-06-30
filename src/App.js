@@ -1,10 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router, Route,Routes, Link } from 'react-router-dom';
-import Home from './components/home';
-import Terroir from './components/terroir';
-import Historie from './components/Historie'
-import Equipes from './components/Equipes'
-
+import Home from './components/Home';
+import History from './components/History';
+import AraucanaVineyard from './components/AraucanaVineyard'
+import WorkVineyard from './components/WorkVineyard'
+import WinesPreservation from './components/WinesPreservation'
+import WineYard from './components/WineYard'
+import RioCiervos from './components/RioCiervos'
+import Araucana from './components/Araucana'
+import AraucanaAzul from './components/AraucanaAzul'
+import Clasico from './components/Clasico'
+import Especial from './components/Especial'
+import ReservaEstibada from './components/ReservaEstibada'
 import './App.css';
 
 function App() {
@@ -13,9 +20,17 @@ function App() {
    <div>   
     <Routes>
           <Route path="/" element={<Home />} />   
-          <Route path="/terroir" element={<Terroir />} />         
-          <Route path="/historie" element={<Historie />} />         ç
-          <Route path="/equipes" element={<Equipes />} />         
+          <Route path="/history" element={<History />} />      
+          <Route path="/araucanavineyard" element={<AraucanaVineyard />} />   
+          <Route path="/workvineyard" element={<WorkVineyard />} />   
+          <Route path="/winespreservation" element={<WinesPreservation />} />             
+          <Route path="/wineyard" element={<WineYard />} />  
+          <Route path="/riociervos" element={<RioCiervos />} />  
+          <Route path="/araucana" element={<Araucana />} />
+          <Route path="/araucanaazul" element={<AraucanaAzul />} />  
+          <Route path="/clasico" element={<Clasico />} />  
+          <Route path="/especial" element={<Especial />} />  
+          <Route path="/reservaestibada" element={<ReservaEstibada />} />  
 
 
         </Routes>
