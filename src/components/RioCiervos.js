@@ -2,11 +2,7 @@ import React from "react";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
 import riberaWine from '../images/ribera-wine.png'
-import araucanaWine from "../images/araucana-wine.png";
 import iconDownload from "../images/icon-download.png";
-import araucanaMalbec from "../images/araucana-malbec-wine.png";
-import araucanaAzul from "../images/araucana-azul-wine.png";
-import riberaClasico from "../images/ribera-clasico-wine.png";
 import riberaEspecial from "../images/ribera-especial-wine.png";
 import riberaReserva from "../images/ribera-reserva-wine.png";
 import araucanaWineShort from '../images/araucana-wine-short.png'
