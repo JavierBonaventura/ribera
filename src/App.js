@@ -12,6 +12,7 @@ import AraucanaAzul from './components/AraucanaAzul'
 import Clasico from './components/Clasico'
 import Especial from './components/Especial'
 import ReservaEstibada from './components/ReservaEstibada'
+import MenuHamburguesa from './components/MenuHambuerguesa_'
 import './App.css';
 
 function App() {
@@ -31,6 +32,8 @@ function App() {
           <Route path="/clasico" element={<Clasico />} />  
           <Route path="/especial" element={<Especial />} />  
           <Route path="/reservaestibada" element={<ReservaEstibada />} />  
+          <Route path="/menuhamburguesa" element={<MenuHamburguesa />} />  
+          
 
 
         </Routes>

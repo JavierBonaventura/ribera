@@ -49,6 +49,13 @@ body{
 
 
 }
+.backgroundHambuerguesa {
+  background-image: url("./images/fondoHambuerguesa.jpg");
+  background-size: cover;
+  background-position: center;
+
+
+}
 
 .backgroundTerroir {
   background-image: url("./images/fondoTerroir.png");
