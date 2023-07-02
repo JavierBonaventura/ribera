@@ -61,8 +61,7 @@ const WinesPreservation = () => {
 
   const handleNext = () => {
     if (currentScreen === 2) {
-      // Verifica si currentScreen está en el slide 3
-      setCurrentScreen(0); // Reinicia a cero
+      setCurrentScreen(0); 
     } else {
       setCurrentScreen(currentScreen + 1);
     }
@@ -70,8 +69,7 @@ const WinesPreservation = () => {
 
   const handlePrev = () => {
     if (currentScreen === 0) {
-      // Verifica si currentScreen está en el slide 0
-      setCurrentScreen(2); // Inicia en el slide 3
+      setCurrentScreen(2); 
     } else {
       setCurrentScreen(currentScreen - 1);
     }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
 import workVineyardSlide1 from "../images/workVineyardSlide1.jpg";
@@ -9,8 +9,6 @@ import workVineyardSlide4 from "../images/workVineyardSlide4.jpg";
 import flechaIzquierda from "../images/flechaIzquierda.jpg";
 import flechaDerecha from "../images/flechaDerecha.jpg";
 import iconIg from "../images/icon-ig.png";
-
-import iconDownload from "../images/icon-download.png";
 import "../App.css";
 
 function Header() {
@@ -25,16 +23,12 @@ function Header() {
             <div class="w-1/4">
               <img src={logo} alt="" class="w-full" />
             </div>
-            
 
-
-
-
-        <div className="w-8">
-      <Link to="/MenuHamburguesa">
-        <img src={hambur} alt="" className="w-full" />
-      </Link>
-    </div>
+            <div className="w-8">
+              <Link to="/MenuHamburguesa">
+                <img src={hambur} alt="" className="w-full" />
+              </Link>
+            </div>
           </div>
         </div>
       </header>
@@ -67,9 +61,8 @@ const WorkVineyard = () => {
   const [currentScreen, setCurrentScreen] = useState(0);
 
   const handleNext = () => {
-    if (currentScreen === 2) {
-      // Verifica si currentScreen está en el slide 3
-      setCurrentScreen(0); // Reinicia a cero
+    if (currentScreen === 3) {
+      setCurrentScreen(0); 
     } else {
       setCurrentScreen(currentScreen + 1);
     }
@@ -77,8 +70,7 @@ const WorkVineyard = () => {
 
   const handlePrev = () => {
     if (currentScreen === 0) {
-      // Verifica si currentScreen está en el slide 0
-      setCurrentScreen(2); // Inicia en el slide 3
+      setCurrentScreen(2); 
     } else {
       setCurrentScreen(currentScreen - 1);
     }
