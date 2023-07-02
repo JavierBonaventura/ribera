@@ -7,6 +7,10 @@ import iconIg from '../images/icon-ig.png'
 import logo from "../images/logo.svg";
 
 const Home = () => {
+  const roboto = {
+    fontFamily: "Roboto, sans-serif",
+  };
+
   const [mostrarMenu1, setMostrarMenu1] = useState(false);
   const [mostrarMenu2, setMostrarMenu2] = useState(false);
   const [mostrarMenu3, setMostrarMenu3] = useState(false);
@@ -44,7 +48,7 @@ const Home = () => {
         <img src={logo} alt="Imagen 1" className=" ml-36 w-1/4" />;
         <Link to="/">
           <svg
-            className="ml-16 pt-5"
+            className="ml-10 pt-5"
             xmlns="http://www.w3.org/2000/svg"
             width="100"
             height="100"
@@ -144,29 +148,29 @@ const Home = () => {
             </Link>
           )}
 
-          <div className="flex w-full ml-6 mt-10">
+          <div className="flex w-full mt-10">
             <div className="w-1/3">
-              <p className="text-sm footerItems">Contact</p>
+              <p style={roboto} className="text-sm footerItems">Contact</p>
             </div>
             <div className="w-1/3">
-              <p className="text-sm footerItems">News</p>
+              <p style={roboto} className="text-sm footerItems">News</p>
             </div>
             <div className="w-1/3">
-              <p className="text-sm footerItems">Casa Pirque</p>
+              <p style={roboto} className="text-sm footerItems">Casa Pirque</p>
             </div>
           </div>
           <div className="flex space-x-4 mt-10">
             <div className="w-1/2 ">
-              <p className="text-sm footerItems">english</p>
+              <p style={roboto} className="text-sm footerItems">english</p>
             </div>
             <div className="w-1/2 ">
-              <p className="text-sm footerItems">spanish</p>
+              <p style={roboto}className=" text-sm footerItems">spanish</p>
             </div>
 
           </div>
           <div className="flex mt-10">
             <div className="w-100">
-              <p className="text-xs footerItems">Legals</p>
+              <p style={roboto} className="text-xs footerItems">Legals</p>
             </div>
 
           </div>
@@ -177,13 +181,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-          {/* <div className="footer">
-            <p className="footerItems">Contact</p>
-            <br></br>
-            <p className="footerItems">News</p>
-            <br></br>
-            <p className="footerItems">Casa Pirque</p>
-          </div> */}
+
         </div>
       </div>
 

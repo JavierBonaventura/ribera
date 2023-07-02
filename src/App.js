@@ -12,7 +12,7 @@ import AraucanaAzul from "./components/AraucanaAzul";
 import Clasico from "./components/Clasico";
 import Especial from "./components/Especial";
 import ReservaEstibada from "./components/ReservaEstibada";
-import MenuHamburguesa from "./components/MenuHambuerguesa_";
+import MenuHamburguesa from "./components/MenuHamburguesa";
 import "./App.css";
 
 function App() {
