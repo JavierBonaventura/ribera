@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
+import iconIg from '../images/icon-ig.png'
+
 
 import logo from "../images/logo.svg";
 
@@ -142,15 +144,51 @@ const Home = () => {
             </Link>
           )}
 
-          <div className="footer">
+          <div className="flex w-full ml-6 mt-10">
+            <div className="w-1/3">
+              <p className="text-sm footerItems">Contact</p>
+            </div>
+            <div className="w-1/3">
+              <p className="text-sm footerItems">News</p>
+            </div>
+            <div className="w-1/3">
+              <p className="text-sm footerItems">Casa Pirque</p>
+            </div>
+          </div>
+          <div className="flex space-x-4 mt-10">
+            <div className="w-1/2 ">
+              <p className="text-sm footerItems">english</p>
+            </div>
+            <div className="w-1/2 ">
+              <p className="text-sm footerItems">spanish</p>
+            </div>
+
+          </div>
+          <div className="flex mt-10">
+            <div className="w-100">
+              <p className="text-xs footerItems">Legals</p>
+            </div>
+
+          </div>
+          <div class="py-20">
+        <div class="container mx-auto flex justify-center">
+          <div class="mt-16">
+            <img src={iconIg} alt="" class="w-5" />
+          </div>
+        </div>
+      </div>
+          {/* <div className="footer">
             <p className="footerItems">Contact</p>
             <br></br>
             <p className="footerItems">News</p>
             <br></br>
             <p className="footerItems">Casa Pirque</p>
-          </div>
+          </div> */}
         </div>
       </div>
+
+
+      
     </div>
   );
 };
