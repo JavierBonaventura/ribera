@@ -16,11 +16,11 @@ function Header() {
   };
   return (
     <div>
-      <header class="bg-[#F2ECE1] py-3 px-3">
-        <div class="container mx-auto">
-          <div class="flex bg-[#F2ECE1] justify-between items-center">
-            <div class="w-1/4">
-              <img src={logo} alt="" class="w-full" />
+      <header className="bg-[#F2ECE1] py-3 px-3">
+        <div className="container mx-auto">
+          <div className="flex bg-[#F2ECE1] justify-between items-center">
+            <div className="w-1/4">
+              <img src={logo} alt="" className="w-full" />
             </div>
 
             <div className="w-8">
@@ -32,19 +32,19 @@ function Header() {
         </div>
       </header>
 
-      <div class="bg-[#F2ECE1] py-3">
-        <div class="container mx-auto flex flex-col justify-center items-center">
-          <div class="flex flex-col gap-y-5">
+      <div className="bg-[#F2ECE1] py-3">
+        <div className="container mx-auto flex flex-col justify-center items-center">
+          <div className="flex flex-col gap-y-5">
             <div className="pt-16">
               <h1
                 style={playfairFontItalic}
-                class="italic text-xs text-[#010101] text-center"
+                className="italic text-xs text-[#010101] text-center"
               >
                 Patagonian Spirit
               </h1>
               <h4
                 style={playfairFontItalic}
-                class="font-bold text-base text-[#C4AC77] text-center"
+                className="font-bold text-base text-[#C4AC77] text-center"
               >
                 WINES PRESERVATION
               </h4>

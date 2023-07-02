@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
 import araucanaWine from "../images/araucana-wine.png";
@@ -14,7 +15,7 @@ import "../App.css";
 function Araucana() {
   return (
     <div>
-      <header className="bg-[#231F20] py-3">
+      <header className="bg-[#231F20] py-3  px-3">
         <div className="container mx-auto">
           <div className="flex bg-[#231F20] justify-between items-center">
             <div className="w-1/3">
@@ -22,7 +23,9 @@ function Araucana() {
             </div>
 
             <div className="w-8">
-              <img src={hambur} alt="" className="w-full" />
+            <Link to="/MenuHamburguesa">
+                <img src={hambur} alt="" className="w-full" />
+              </Link>
             </div>
           </div>
         </div>

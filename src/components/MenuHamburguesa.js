@@ -174,10 +174,10 @@ const Home = () => {
             </div>
 
           </div>
-          <div class="py-20">
-        <div class="container mx-auto flex justify-center">
-          <div class="mt-16">
-            <img src={iconIg} alt="" class="w-5" />
+          <div className="py-20">
+        <div className="container mx-auto flex justify-center">
+          <div className="mt-16">
+            <img src={iconIg} alt="" className="w-5" />
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
 import riberaWine from '../images/ribera-wine.png'
@@ -14,38 +15,40 @@ import "../App.css";
 function RioCiervos() {
   return (
     <div>
-      <header class="bg-[#231F20] py-3">
-        <div class="container mx-auto">
-          <div class="flex bg-[#231F20] justify-between items-center">
-            <div class="w-1/3">
-              <img src={logo} alt="" class="w-full" />
+      <header className="bg-[#231F20] py-3 px-3">
+        <div className="container mx-auto">
+          <div className="flex bg-[#231F20] justify-between items-center">
+            <div className="w-1/3">
+              <img src={logo} alt="" className="w-full" />
             </div>
 
-            <div class="w-8">
-              <img src={hambur} alt="" class="w-full" />
+            <div className="w-8">
+            <Link to="/MenuHamburguesa">
+                <img src={hambur} alt="" className="w-full" />
+              </Link>
             </div>
           </div>
         </div>
       </header>
 
-      <div class="bg-[#231F20] py-5">
-        <div class="container mx-auto flex flex-col justify-center items-center">
-          <div class="w-1/3">
-            <img src={riberaWine} alt="" class="w-full" />
+      <div className="bg-[#231F20] py-5">
+        <div className="container mx-auto flex flex-col justify-center items-center">
+          <div className="w-1/3">
+            <img src={riberaWine} alt="" className="w-full" />
           </div>
 
-          <div class="flex flex-col gap-y-5">
+          <div className="flex flex-col gap-y-5">
             <div>
-              <h1 class="uppercase text-xs text-[#C3B17D] text-center">
+              <h1 className="uppercase text-xs text-[#C3B17D] text-center">
                 Araucana Rio de los ciervos
               </h1>
-              <h4 class="text-xs text-[#F2ECE1] text-center">
+              <h4 className="text-xs text-[#F2ECE1] text-center">
                 Patagonia Argentina
               </h4>
             </div>
-            <div class="flex flex-col gap-y-5">
-              <div class="w-2/3 mx-auto">
-                <p class="text-[#F2ECE1] text-xs leading-6">
+            <div className="flex flex-col gap-y-5">
+              <div className="w-2/3 mx-auto">
+                <p className="text-[#F2ECE1] text-xs leading-6">
                   "Río de los Ciervos" es un pequeño pueblo ubicado en tierra
                   del fuego. En esta región Patagónica en 300 km se pueden
                   recorrer todos los paisajes, desde el mar, hasta el desierto,
@@ -56,12 +59,12 @@ function RioCiervos() {
                   largo de los 200k a la vera norte y sur del río."
                 </p>
               </div>
-              <div class="w-2/3 mx-auto flex justify-center">
-                <a href="" class="border-b border-[#C3B17D]">
-                  <div class="w-2 inline-block">
-                    <img src={iconDownload} alt="" class="w-full" />
+              <div className="w-2/3 mx-auto flex justify-center">
+                <a href="" className="border-b border-[#C3B17D]">
+                  <div className="w-2 inline-block">
+                    <img src={iconDownload} alt="" className="w-full" />
                   </div>
-                  <span class="text-xs text-[#C3B17D]">
+                  <span className="text-xs text-[#C3B17D]">
                     Descargar ficha técnica
                   </span>
                 </a>
@@ -71,40 +74,40 @@ function RioCiervos() {
         </div>
       </div>
 
-      <div class="bg-[#231F20] py-5 flex flex-col gap-y-10">
-        <div class="container mx-auto flex flex-col justify-center items-center gap-y-5">
+      <div className="bg-[#231F20] py-5 flex flex-col gap-y-10">
+        <div className="container mx-auto flex flex-col justify-center items-center gap-y-5">
           <div>
             <img src={riberaEspecial} alt="" />
           </div>
           <div>
-            <h1 class="uppercase text-xs text-[#C3B17D] text-center">
+            <h1 className="uppercase text-xs text-[#C3B17D] text-center">
               Ribera del Cuarzo especial
             </h1>
           </div>
-          <div class="bg-[#C3B17D] px-5 py-1 rounded-md">
-            <a href="" class="uppercase text-xs text-[#F2ECE1]">
+          <div className="bg-[#C3B17D] px-5 py-1 rounded-md">
+            <a href="" className="uppercase text-xs text-[#F2ECE1]">
               Read more
             </a>
           </div>
         </div>
-        <div class="container mx-auto flex flex-col justify-center items-center gap-y-5">
+        <div className="container mx-auto flex flex-col justify-center items-center gap-y-5">
           <div>
             <img src={riberaReserva} alt="" />
           </div>
           <div>
-            <h1 class="uppercase text-xs text-[#C3B17D] text-center">
+            <h1 className="uppercase text-xs text-[#C3B17D] text-center">
               Ribera del Cuarzo Río de los Ciervos
             </h1>
           </div>
-          <div class="bg-[#C3B17D] px-5 py-1 rounded-md">
-            <a href="" class="uppercase text-xs text-[#F2ECE1]">
+          <div className="bg-[#C3B17D] px-5 py-1 rounded-md">
+            <a href="" className="uppercase text-xs text-[#F2ECE1]">
               Read more
             </a>
           </div>
         </div>
-        <div class="container mx-auto">
+        <div className="container mx-auto">
           <div>
-            <p class="text-[#F2ECE1] text-xs text-center leading-5">
+            <p className="text-[#F2ECE1] text-xs text-center leading-5">
               Creating unique wines in Patagonia <br />
               Pioneer in winegrowing at the foot of the "barda". <br />
               Small family run winery
@@ -113,29 +116,29 @@ function RioCiervos() {
         </div>
       </div>
 
-      <div class="bg-[#231F20] py-5">
-        <div class="container mx-auto">
-          <div class="grid grid-cols-3 gap-x-4">
-            <div class="flex gap-y-4 flex-col">
+      <div className="bg-[#231F20] py-5">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-3 gap-x-4">
+            <div className="flex gap-y-4 flex-col">
               <img src={araucanaWineShort} alt="" />
-              <div class="bg-[#C3B17D] rounded-md flex justify-center py-2">
-                <a href="" class="uppercase text-xs text-[#F2ECE1]">
+              <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
+                <a href="" className="uppercase text-xs text-[#F2ECE1]">
                   Read more
                 </a>
               </div>
             </div>
-            <div class="flex gap-y-4 flex-col">
+            <div className="flex gap-y-4 flex-col">
               <img src={araucanaMalbecWineShort} alt="" />
-              <div class="bg-[#C3B17D] rounded-md flex justify-center py-2">
-                <a href="" class="uppercase text-xs text-[#F2ECE1]">
+              <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
+                <a href="" className="uppercase text-xs text-[#F2ECE1]">
                   Read more
                 </a>
               </div>
             </div>
-            <div class="flex gap-y-4 flex-col">
+            <div className="flex gap-y-4 flex-col">
               <img src={araucanaMalbecWineShort} alt="" />
-              <div class="bg-[#C3B17D] rounded-md flex justify-center py-2">
-                <a href="" class="uppercase text-xs text-[#F2ECE1]">
+              <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
+                <a href="" className="uppercase text-xs text-[#F2ECE1]">
                   Read more
                 </a>
               </div>
@@ -144,25 +147,25 @@ function RioCiervos() {
         </div>
       </div>
 
-      <div class="bg-[#231F20] py-5">
-        <div class="container mx-auto">
+      <div className="bg-[#231F20] py-5">
+        <div className="container mx-auto">
           <div>
-            <h1 class="text-[#C3B17D] text-center text-xs uppercase">
+            <h1 className="text-[#C3B17D] text-center text-xs uppercase">
               Ribera del cuarzo
             </h1>
           </div>
           <div>
-            <h2 class="text-[#F2ECE1] text-center text-xs">
+            <h2 className="text-[#F2ECE1] text-center text-xs">
               <i>Patagonia, Argentina</i>
             </h2>
           </div>
         </div>
       </div>
 
-      <div class="bg-[#231F20] py-20">
-        <div class="container mx-auto flex justify-center">
-          <div class="border border-[#C3B17D] rounded-full p-7">
-            <img src={iconIg} alt="" class="w-5" />
+      <div className="bg-[#231F20] py-20">
+        <div className="container mx-auto flex justify-center">
+          <div className="border border-[#C3B17D] rounded-full p-7">
+            <img src={iconIg} alt="" className="w-5" />
           </div>
         </div>
       </div>
