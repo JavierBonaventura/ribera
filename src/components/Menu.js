@@ -38,7 +38,7 @@ const Home = () => {
 
   return (
     <div className="containerHome pt-8 background">
-       <img src={logo} alt="Imagen 1" className="logo" />;
+       <img src={logo} alt="Imagen 1" className="logo" />
  
       <div className="body">
       <div className="containerHome pt-16">        
