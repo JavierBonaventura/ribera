@@ -162,7 +162,7 @@ const History = () => {
         </div>
 
         <div class="container mx-auto bg-[#212121]">
-          <div class="py-5">
+          <div class="py-5 px-5">
             <img src={paisajeHistory} alt="" class="-mb-10" />
           </div>
         </div>
