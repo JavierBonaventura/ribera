@@ -14,7 +14,7 @@ import "../App.css";
 const History = () => {
   return (
     <div>
-      <body class="bg-[#F2ECE1]">
+      <body class="bg-[#F2ECE1] px-3">
         <header class="py-3">
           <div class="container mx-auto">
             <div class="flex justify-between items-center">
