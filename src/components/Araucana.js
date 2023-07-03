@@ -17,7 +17,7 @@ function Araucana() {
     <div>
       <header className="bg-[#231F20] py-3  px-3">
         <div className="container mx-auto">
-          <div className="flex bg-[#231F20] justify-between items-center">
+        <div className="flex bg-[#231F20] justify-between items-center px-5">
             <div className="w-1/3">
               <img src={logo} alt="" className="w-full" />
             </div>
@@ -64,7 +64,7 @@ function Araucana() {
                   <div className="w-2 inline-block">
                     <img src={iconDownload} alt="" className="w-full" />
                   </div>
-                  <span className="text-xs text-[#C3B17D]">
+                  <span className="ml-2 text-xs text-[#C3B17D]">
                     Descargar ficha técnica
                   </span>
                 </a>
@@ -116,7 +116,7 @@ function Araucana() {
         </div>
       </div>
 
-      <div className="bg-[#231F20] py-5">
+      <div className="bg-[#231F20] py-5 px-3">
         <div className="container mx-auto">
           <div className="grid grid-cols-3 gap-x-4">
             <div className="flex gap-y-4 flex-col">

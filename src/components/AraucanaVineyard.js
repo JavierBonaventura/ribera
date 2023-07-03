@@ -9,10 +9,10 @@ import "../App.css";
 const ConstructionPage = () => {
   return (
     <div>
-      <body class="bg-[#F2ECE1] px-3">
+      <body class="bg-[#F2ECE1] ">
         <header class="py-3">
           <div class="container mx-auto">
-            <div class="flex justify-between items-center">
+            <div class="flex justify-between items-center px-5">
               <div class="w-1/3">
                 <img src={logo} alt="" class="w-full" />
               </div>
@@ -39,7 +39,7 @@ const ConstructionPage = () => {
             <img src={ilustracionSpirit} alt="" class="w-full" />
           </div>
 
-          <div class="flex flex-col gap-y-5">
+          <div class="flex flex-col gap-y-5 px-10">
             <div>
               <h1 class="uppercase text-[#C4AC77] text-sm">
                 Bodega Ribera del Cuarzo

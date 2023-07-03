@@ -9,15 +9,16 @@ import paisajeHistory from "../images/paisaje-history.jpg"
 import botellasRibera from "../images/botellas-ribera.jpg"
 import ninosHistory from "../images/ninos-history.jpeg"
 import iconIg from "../images/icon-ig.png";
+import carruajeHistory from "../images/carruaje-history.jpg"
 import "../App.css";
 
 const History = () => {
   return (
     <div>
-      <body class="bg-[#F2ECE1] px-3">
+      <body class="bg-[#F2ECE1]">
         <header class="py-3">
           <div class="container mx-auto">
-            <div class="flex justify-between items-center">
+            <div class="flex justify-between items-center px-5">
               <div class="w-1/3">
                 <img src={logo} alt="" class="w-full" />
               </div>
@@ -63,7 +64,7 @@ const History = () => {
           </div>
         </div>
 
-        <div class="container mx-auto">
+        <div class="container mx-auto px-10">
           <div class="flex flex-col gap-y-2 pt-5 pb-32">
             <div>
               <h1 class="text-[#C4AC77] font-bold text-sm">1883</h1>
@@ -101,7 +102,7 @@ const History = () => {
                 class="w-full object-cover"
               />
             </div>
-            <p class="text-white text-xs pt-10">
+            <p class="text-white text-xs pt-10 px-10">
               Stories of how these two individuals worked hard to create their
               ventures intertwine in dinner conversations over generations.
               <br />
@@ -120,8 +121,9 @@ const History = () => {
             </p>
           </div>
         </div>
+        <div><img src={carruajeHistory} alt="" /></div>
 
-        <div class="container mx-auto bg-[#F2ECE1]">
+        <div class="container mx-auto bg-[#F2ECE1] px-10">
           <div class="flex justify-center py-2">
             <span class="uppercase text-[0.5rem]">Sunset at valle azul</span>
           </div>
@@ -165,7 +167,9 @@ const History = () => {
           </div>
         </div>
 
-        <div class="container mx-auto bg-[#F2ECE1]">
+        
+
+        <div class="container mx-auto bg-[#F2ECE1] px-10">
           <div class="py-10 flex flex-col gap-y-5">
             <div>
               <h1 class="text-[#C4AC77] font-bold text-sm uppercase">
