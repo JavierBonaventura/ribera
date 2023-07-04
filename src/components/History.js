@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
-import ilustrationHistory from "../images/ilustracion-history.png"
-import arrowDown from "../images/arrow-down.png"
-import personasHistory from "../images/personas-history.jpeg"
-import paisajeHistory from "../images/paisaje-history.jpg"
-import botellasRibera from "../images/botellas-ribera.jpg"
-import ninosHistory from "../images/ninos-history.jpeg"
+import ilustrationHistory from "../images/ilustracion-history.png";
+import arrowDown from "../images/arrow-down.png";
+import personasHistory from "../images/personas-history.jpeg";
+import paisajeHistory from "../images/paisaje-history.jpg";
+import botellasRibera from "../images/botellas-ribera.jpg";
+import ninosHistory from "../images/ninos-history.jpeg";
 import iconIg from "../images/icon-ig.png";
-import carruajeHistory from "../images/carruaje-history.jpg"
+import carruajeHistory from "../images/carruaje-history.jpg";
 import "../App.css";
 
 const History = () => {
@@ -48,14 +48,15 @@ const History = () => {
         <header class="py-3">
           <div class="container mx-auto">
             <div class="flex justify-between items-center px-5">
-              <div class="w-1/3">
+              <div class="w-28 md:w-36">
                 <img src={logo} alt="" class="w-full" />
               </div>
 
               <div class="w-8">
-              <Link to="/MenuHamburguesa">
-                <img src={hambur} alt="" className="w-full" />
-              </Link>              </div>
+                <Link to="/MenuHamburguesa">
+                  <img src={hambur} alt="" className="w-full" />
+                </Link>{" "}
+              </div>
             </div>
           </div>
         </header>
@@ -125,11 +126,7 @@ const History = () => {
         <div class="container mx-auto bg-[#212121]">
           <div class="pt-32 pb-10">
             <div class="-mt-52 px-4">
-              <img
-                src={personasHistory}
-                alt=""
-                class="w-full object-cover"
-              />
+              <img src={personasHistory} alt="" class="w-full object-cover" />
             </div>
             <p class="text-white text-xs pt-10 px-10">
               Stories of how these two individuals worked hard to create their
@@ -150,7 +147,9 @@ const History = () => {
             </p>
           </div>
         </div>
-        <div><img src={carruajeHistory} alt="" /></div>
+        <div>
+          <img src={carruajeHistory} alt="" />
+        </div>
 
         <div class="container mx-auto bg-[#F2ECE1] px-10">
           <div class="flex justify-center py-2">
@@ -195,8 +194,6 @@ const History = () => {
             <img src={paisajeHistory} alt="" class="-mb-10" />
           </div>
         </div>
-
-        
 
         <div class="container mx-auto bg-[#F2ECE1] px-10">
           <div class="py-10 flex flex-col gap-y-5">
@@ -263,7 +260,6 @@ const History = () => {
             </div>
           </div>
         </div>
-
       </body>
     </div>
   );

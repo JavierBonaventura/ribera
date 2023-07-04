@@ -2,14 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
-import riberaWine from '../images/ribera-wine.png'
+import riberaWine from "../images/ribera-wine.png";
 import iconDownload from "../images/icon-download.png";
 import riberaEspecial from "../images/ribera-especial-wine.png";
 import riberaReserva from "../images/ribera-reserva-wine.png";
-import araucanaWineShort from '../images/araucana-wine-short.png'
-import araucanaMalbecWineShort from '../images/araucana-malbec-wine-short.png'
-import iconIg from '../images/icon-ig.png'
-
+import araucanaWineShort from "../images/araucana-wine-short.png";
+import araucanaMalbecWineShort from "../images/araucana-malbec-wine-short.png";
+import araucanaAzulWineShort from "../images/araucana-azul-wine-short.png";
+import iconIg from "../images/icon-ig.png";
 
 import "../App.css";
 function RioCiervos() {
@@ -18,12 +18,12 @@ function RioCiervos() {
       <header className="bg-[#231F20] py-3 ">
         <div className="container mx-auto">
           <div className="flex bg-[#231F20] justify-between items-center px-5">
-            <div className="w-1/3">
+            <div className="w-28 md:w-36">
               <img src={logo} alt="" className="w-full" />
             </div>
 
             <div className="w-8">
-            <Link to="/MenuHamburguesa">
+              <Link to="/MenuHamburguesa">
                 <img src={hambur} alt="" className="w-full" />
               </Link>
             </div>
@@ -136,7 +136,7 @@ function RioCiervos() {
               </div>
             </div>
             <div className="flex gap-y-4 flex-col">
-              <img src={araucanaMalbecWineShort} alt="" />
+              <img src={araucanaAzulWineShort} alt="" />
               <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
                 <a href="" className="uppercase text-xs text-[#F2ECE1]">
                   Read more

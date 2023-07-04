@@ -9,7 +9,7 @@ import araucanaAzul from "../images/araucana-azul-wine.png";
 import riberaClasico from "../images/ribera-clasico-wine.png";
 import riberaEspecial from "../images/ribera-especial-wine.png";
 import riberaReserva from "../images/ribera-reserva-wine.png";
-import iconIg from '../images/icon-ig.png'
+import iconIg from "../images/icon-ig.png";
 
 import "../App.css";
 function Araucana() {
@@ -17,13 +17,13 @@ function Araucana() {
     <div>
       <header className="bg-[#231F20] py-3  px-3">
         <div className="container mx-auto">
-        <div className="flex bg-[#231F20] justify-between items-center px-5">
-            <div className="w-1/3">
+          <div className="flex bg-[#231F20] justify-between items-center px-5">
+            <div className="w-28 md:w-36">
               <img src={logo} alt="" className="w-full" />
             </div>
 
             <div className="w-8">
-            <Link to="/MenuHamburguesa">
+              <Link to="/MenuHamburguesa">
                 <img src={hambur} alt="" className="w-full" />
               </Link>
             </div>
