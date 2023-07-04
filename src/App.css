@@ -78,6 +78,8 @@ body{
     cursor: pointer;
   }
 
+ 
+
 .subMenu {
   text-decoration: none;
   text-transform: uppercase;
@@ -86,6 +88,10 @@ body{
   color: #fff;
   margin-bottom: 20px;
   font-family: Conv_maisonneue-book;
+}
+
+.subMenu:hover {
+  color: #cab57e; /* Color al pasar el cursor por encima del texto */
 }
 
   .footer {
@@ -105,7 +111,7 @@ body{
     box-sizing: border-box;
     line-height: normal;
     color: #fff;
-    font-family: Conv_maisonneue-book;
+ 
   }
 
 

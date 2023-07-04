@@ -12,9 +12,20 @@ import iconIg from "../images/icon-ig.png";
 import "../App.css";
 
 function Header() {
-  const playfairFontItalic = {
-    fontFamily: "Playfair, sans-serif",
+
+
+  const playfairFontBlack = {
+    fontFamily: 'Playfair Black, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
   };
+  const playfairFontItalic = {
+    fontFamily: "Playfair Italic , sans-serif",
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+
+
   return (
     <div>
       <header className="bg-[#F2ECE1] py-3 px-3">
@@ -44,7 +55,7 @@ function Header() {
                 Patagonian Spirit
               </h1>
               <h4
-                style={playfairFontItalic}
+                style={playfairFontBlack}
                 className="font-bold text-base text-[#C4AC77] text-center"
               >
                 WORK IN THE VINEYARD
@@ -114,19 +125,22 @@ const WorkVineyard = () => {
 };
 
 const Screen1 = () => {
-  const playfairFont = {
-    fontFamily: "Playfair, sans-serif",
+
+  const playfairFontBlack = {
+    fontFamily: 'Playfair Black, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
   };
   return (
     <div className="mt-[-20px]">
       <div className="bg-[#F2ECE1] ">
         <p className="ml-1 text-left relative">
-          <span style={playfairFont} className="text-[#C4AC77] text-lg">
+          <span style={playfairFontBlack} className="text-[#C4AC77] text-lg">
             01
           </span>
           <span
-            style={playfairFont}
-            className="text-[#C4AC77] absolute top-1 left-5 text-xs underline"
+            style={playfairFontBlack}
+            className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
           >
             04
           </span>
@@ -142,9 +156,19 @@ const Screen1 = () => {
   );
 };
 const Screen1Text = () => {
-  const playfairFont = {
-    fontFamily: "Playfair, sans-serif",
+  const playfairFontRegular = {
+    fontFamily: 'Playfair Regular, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
   };
+  
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+    fontSize: '16px',
+  };
+
   return (
     <div>
       <div className="bg-[#F2ECE1] py-5">
@@ -153,13 +177,13 @@ const Screen1Text = () => {
             <div className="flex flex-col gap-y-5">
               <div className="w-4/5 mx-auto">
                 <p
-                  style={playfairFont}
+                  style={robotoFontRegular}
                   className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3"
                 >
                   WORKING METHODS
                 </p>
                 <p
-                  style={playfairFont}
+                  style={playfairFontRegular}
                   className="decoration-black	 text-xs leading-6"
                 >
                   Maintaining traditional working methods helps us to keep in
@@ -188,19 +212,21 @@ const Screen1Text = () => {
 };
 
 const Screen2 = () => {
-  const playfairFont = {
-    fontFamily: "Playfair, sans-serif",
+  const playfairFontBlack = {
+    fontFamily: 'Playfair Black, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
   };
   return (
     <div className="mt-[-20px]">
       <div className="bg-[#F2ECE1]">
         <p className="ml-1 text-left relative">
-          <span style={playfairFont} className="text-[#C4AC77] text-lg">
+          <span style={playfairFontBlack} className="text-[#C4AC77] text-lg">
             02
           </span>
           <span
-            style={playfairFont}
-            className="text-[#C4AC77] absolute top-1 left-5 text-xs underline"
+            style={playfairFontBlack}
+            className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
           >
             04
           </span>
@@ -220,8 +246,17 @@ const Screen2 = () => {
   );
 };
 const Screen2Text = () => {
-  const playfairFont = {
-    fontFamily: "Playfair, sans-serif",
+  const playfairFontRegular = {
+    fontFamily: 'Playfair Regular, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+  
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+    fontSize: '16px',
   };
   return (
     <div>
@@ -231,13 +266,13 @@ const Screen2Text = () => {
             <div className="flex flex-col gap-y-5">
               <div className="w-4/5 mx-auto">
                 <p
-                  style={playfairFont}
+                  style={robotoFontRegular}
                   className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3"
                 >
                   HORSES{" "}
                 </p>
                 <p
-                  style={playfairFont}
+                  style={playfairFontRegular}
                   className="decoration-black	 text-xs leading-6"
                 >
                   Horses also provide manure, which goes into the compost we use
@@ -266,19 +301,21 @@ const Screen2Text = () => {
 };
 
 const Screen3 = () => {
-  const playfairFont = {
-    fontFamily: "Playfair, sans-serif",
+  const playfairFontBlack = {
+    fontFamily: 'Playfair Black, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
   };
   return (
     <div className="mt-[-20px]">
       <div className="bg-[#F2ECE1]">
         <p className="ml-1 text-left relative">
-          <span style={playfairFont} className="text-[#C4AC77] text-lg">
+          <span style={playfairFontBlack} className="text-[#C4AC77] text-lg">
             03
           </span>
           <span
-            style={playfairFont}
-            className="text-[#C4AC77] absolute top-1 left-5 text-xs underline"
+            style={playfairFontBlack}
+            className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
           >
             04
           </span>
@@ -298,8 +335,17 @@ const Screen3 = () => {
   );
 };
 const Screen3Text = () => {
-  const playfairFont = {
-    fontFamily: "Playfair, sans-serif",
+  const playfairFontRegular = {
+    fontFamily: 'Playfair Regular, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+  
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+    fontSize: '16px',
   };
   return (
     <div>
@@ -309,13 +355,13 @@ const Screen3Text = () => {
             <div className="flex flex-col gap-y-5">
               <div className="w-4/5 mx-auto">
                 <p
-                  style={playfairFont}
+                  style={robotoFontRegular}
                   className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3"
                 >
                   WATER{" "}
                 </p>
                 <p
-                  style={playfairFont}
+                  style={playfairFontRegular}
                   className="decoration-black	 text-xs leading-6"
                 >
                   The Countess had planted the vineyard in the highest part of
@@ -358,19 +404,21 @@ const Screen3Text = () => {
   );
 };
 const Screen4 = () => {
-  const playfairFont = {
-    fontFamily: "Playfair, sans-serif",
+  const playfairFontBlack = {
+    fontFamily: 'Playfair Black, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
   };
   return (
     <div className="mt-[-20px]">
       <div className="bg-[#F2ECE1]">
         <p className="ml-1 text-left relative">
-          <span style={playfairFont} className="text-[#C4AC77] text-lg">
+          <span style={playfairFontBlack} className="text-[#C4AC77] text-lg">
             04
           </span>
           <span
-            style={playfairFont}
-            className="text-[#C4AC77] absolute top-1 left-5 text-xs underline"
+            style={playfairFontBlack}
+            className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
           >
             04
           </span>
@@ -386,8 +434,17 @@ const Screen4 = () => {
   );
 };
 const Screen4Text = () => {
-  const playfairFont = {
-    fontFamily: "Playfair, sans-serif",
+  const playfairFontRegular = {
+    fontFamily: 'Playfair Regular, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+  
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+    fontSize: '16px',
   };
   return (
     <div>
@@ -397,13 +454,13 @@ const Screen4Text = () => {
             <div className="flex flex-col gap-y-5">
               <div className="w-4/5 mx-auto">
                 <p
-                  style={playfairFont}
+                  style={robotoFontRegular}
                   className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3"
                 >
                   PLANTATION{" "}
                 </p>
                 <p
-                  style={playfairFont}
+                  style={playfairFontRegular}
                   className="decoration-black	 text-xs leading-6"
                 >
                   Araucana is planted using the traditional high cordon-method

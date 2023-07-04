@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Playfair';
+  font-family: 'Playfair Regular';
   src: url('../src/fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf') format('truetype');
 }
 
@@ -14,6 +14,49 @@
   src: url('../src/fonts/roboto/Roboto-Regular.ttf') format('woff2'),
 
 }
+
+@font-face {
+  font-family: 'Playfair Black';
+  src: url('../src/fonts/Playfair_Display/PlayfairDisplay-Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Playfair Italic';
+  src: url('../src/fonts/Playfair_Display/PlayfairDisplay-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Playfair Bold';
+  src: url('../src/fonts/Playfair_Display/PlayfairDisplay-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Playfair ExtraBold';
+  src: url('../src/fonts/Playfair_Display/PlayfairDisplay-ExtraBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Thin';
+  src: url('../src/fonts/roboto/Roboto-Thin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url('../src/fonts/roboto/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 body {
   margin: 0;

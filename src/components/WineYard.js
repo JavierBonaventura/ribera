@@ -14,8 +14,16 @@ import iconIg from "../images/icon-ig.png";
 import "../App.css";
 
 function Header() {
+
+  const playfairFontBlack = {
+    fontFamily: 'Playfair Black, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
   const playfairFontItalic = {
-    fontFamily: "Playfair, sans-serif",
+    fontFamily: "Playfair Italic , sans-serif",
+    fontWeight: 'normal',
+    fontStyle: 'normal',
   };
   return (
     <div>
@@ -46,7 +54,7 @@ function Header() {
                 Patagonian Spirit
               </h1>
               <h4
-                style={playfairFontItalic}
+                style={playfairFontBlack}
                 className="font-bold text-base text-[#C4AC77] text-center"
               >
                 THE VINEYARD
@@ -116,19 +124,21 @@ const WineYard = () => {
 };
 
 const Screen1 = () => {
-  const playfairFont = {
-    fontFamily: "Playfair, sans-serif",
+  const playfairFontBlack = {
+    fontFamily: 'Playfair Black, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
   };
   return (
     <div className="mt-[-20px]">
       <div className="bg-[#F2ECE1] ">
         <p className="ml-1 text-left relative">
-          <span style={playfairFont} className="text-[#C4AC77] text-lg">
+          <span style={playfairFontBlack} className="text-[#C4AC77] text-lg">
             01
           </span>
           <span
-            style={playfairFont}
-            className="text-[#C4AC77] absolute top-1 left-5 text-xs underline"
+            style={playfairFontBlack}
+            className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
           >
             04
           </span>
@@ -144,8 +154,17 @@ const Screen1 = () => {
   );
 };
 const Screen1Text = () => {
-  const playfairFont = {
-    fontFamily: "Playfair, sans-serif",
+  const playfairFontRegular = {
+    fontFamily: 'Playfair Regular, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+  
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+    fontSize: '16px',
   };
   return (
     <div>
@@ -155,13 +174,13 @@ const Screen1Text = () => {
             <div className="flex flex-col gap-y-5">
               <div className="w-4/5 mx-auto">
                 <p
-                  style={playfairFont}
+                  style={robotoFontRegular}
                   className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3"
                 >
                   UNIQUE TERRIOR
                 </p>
                 <p
-                  style={playfairFont}
+                  style={playfairFontRegular}
                   className="decoration-black	 text-xs leading-6"
                 >
                   Simply to say that Araucana is a unique vineyard doesn't do it
@@ -193,19 +212,21 @@ const Screen1Text = () => {
 };
 
 const Screen2 = () => {
-  const playfairFont = {
-    fontFamily: "Playfair, sans-serif",
+  const playfairFontBlack = {
+    fontFamily: 'Playfair Black, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
   };
   return (
     <div className="mt-[-20px]">
       <div className="bg-[#F2ECE1]">
         <p className="ml-1 text-left relative">
-          <span style={playfairFont} className="text-[#C4AC77] text-lg">
+          <span style={playfairFontBlack} className="text-[#C4AC77] text-lg">
             02
           </span>
           <span
-            style={playfairFont}
-            className="text-[#C4AC77] absolute top-1 left-5 text-xs underline"
+            style={playfairFontBlack}
+            className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
           >
             04
           </span>
@@ -225,8 +246,17 @@ const Screen2 = () => {
   );
 };
 const Screen2Text = () => {
-  const playfairFont = {
-    fontFamily: "Playfair, sans-serif",
+  const playfairFontRegular = {
+    fontFamily: 'Playfair Regular, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+  
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+    fontSize: '16px',
   };
   return (
     <div>
@@ -236,13 +266,13 @@ const Screen2Text = () => {
             <div className="flex flex-col gap-y-5">
               <div className="w-4/5 mx-auto">
                 <p
-                  style={playfairFont}
+                  style={robotoFontRegular}
                   className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3"
                 >
                   WATER{" "}
                 </p>
                 <p
-                  style={playfairFont}
+                  style={playfairFontRegular}
                   className="decoration-black	 text-xs leading-6"
                 >
                   The Rio Negro is the largest in Patagonia. The Limay and
@@ -286,19 +316,21 @@ const Screen2Text = () => {
 };
 
 const Screen3 = () => {
-  const playfairFont = {
-    fontFamily: "Playfair, sans-serif",
+  const playfairFontBlack = {
+    fontFamily: 'Playfair Black, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
   };
   return (
     <div className="mt-[-20px]">
       <div className="bg-[#F2ECE1]">
         <p className="ml-1 text-left relative">
-          <span style={playfairFont} className="text-[#C4AC77] text-lg">
+          <span style={playfairFontBlack} className="text-[#C4AC77] text-lg">
             03
           </span>
           <span
-            style={playfairFont}
-            className="text-[#C4AC77] absolute top-1 left-5 text-xs underline"
+            style={playfairFontBlack}
+            className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
           >
             04
           </span>
@@ -318,8 +350,17 @@ const Screen3 = () => {
   );
 };
 const Screen3Text = () => {
-  const playfairFont = {
-    fontFamily: "Playfair, sans-serif",
+  const playfairFontRegular = {
+    fontFamily: 'Playfair Regular, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+  
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+    fontSize: '16px',
   };
   return (
     <div>
@@ -329,13 +370,13 @@ const Screen3Text = () => {
             <div className="flex flex-col gap-y-5">
               <div className="w-4/5 mx-auto">
                 <p
-                  style={playfairFont}
+                  style={robotoFontRegular}
                   className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3"
                 >
                   HOUSE{" "}
                 </p>
                 <p
-                  style={playfairFont}
+                  style={playfairFontRegular}
                   className="decoration-black	 text-xs leading-6"
                 >
                   Last but not least, the house next to the winery has become a
@@ -361,19 +402,21 @@ const Screen3Text = () => {
   );
 };
 const Screen4 = () => {
-  const playfairFont = {
-    fontFamily: "Playfair, sans-serif",
+  const playfairFontBlack = {
+    fontFamily: 'Playfair Black, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
   };
   return (
     <div className="mt-[-20px]">
       <div className="bg-[#F2ECE1]">
         <p className="ml-1 text-left relative">
-          <span style={playfairFont} className="text-[#C4AC77] text-lg">
+          <span style={playfairFontBlack} className="text-[#C4AC77] text-lg">
             04
           </span>
           <span
-            style={playfairFont}
-            className="text-[#C4AC77] absolute top-1 left-5 text-xs underline"
+            style={playfairFontBlack}
+            className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
           >
             04
           </span>
@@ -389,8 +432,17 @@ const Screen4 = () => {
   );
 };
 const Screen4Text = () => {
-  const playfairFont = {
-    fontFamily: "Playfair, sans-serif",
+  const playfairFontRegular = {
+    fontFamily: 'Playfair Regular, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+  
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+    fontSize: '16px',
   };
   return (
     <div>
@@ -400,13 +452,13 @@ const Screen4Text = () => {
             <div className="flex flex-col gap-y-5">
               <div className="w-4/5 mx-auto">
                 <p
-                  style={playfairFont}
+                  style={robotoFontRegular}
                   className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3"
                 >
                   HOUSE{" "}
                 </p>
                 <p
-                  style={playfairFont}
+                  style={playfairFontRegular}
                   className="decoration-black	 text-xs leading-6"
                 >
                   "I was drawn to Ribera del Cuarzo as a winegrower, attracted

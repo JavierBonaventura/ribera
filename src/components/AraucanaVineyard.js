@@ -7,6 +7,24 @@ import iconIg from "../images/icon-ig.png";
 import "../App.css";
 
 const ConstructionPage = () => {
+  const playfairFontBlack = {
+    fontFamily: 'Playfair Black, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+  const playfairFontItalic = {
+    fontFamily: "Playfair Italic , sans-serif",
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+  
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+    fontSize: '16px',
+  };
+
   return (
     <div>
       <body class="bg-[#F2ECE1] ">
@@ -28,8 +46,8 @@ const ConstructionPage = () => {
         <div class="container mx-auto">
           <div class="py-5">
             <div class="flex flex-col justify-center items-center">
-              <h1 class="text-black text-xs">Patagonian Spirit</h1>
-              <h2 class="uppercase text-[#C4AC77] text-sm">
+              <h1 style={playfairFontItalic} class="text-black text-xs">Patagonian Spirit</h1>
+              <h2 style={playfairFontBlack} class="uppercase text-[#C4AC77] text-sm">
                 Araucana Vineyard
               </h2>
             </div>
@@ -41,7 +59,7 @@ const ConstructionPage = () => {
 
           <div class="flex flex-col gap-y-5 px-10">
             <div>
-              <h1 class="uppercase text-[#C4AC77] text-sm">
+              <h1 style={robotoFontRegular} class="uppercase text-[#C4AC77] text-sm">
                 Bodega Ribera del Cuarzo
               </h1>
             </div>

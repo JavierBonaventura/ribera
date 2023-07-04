@@ -8,6 +8,48 @@ import logo from '../images/Escudo Bodega Ribera del Cuarzo-FINALcurvas-02.png';
 
 
 const Home = () => {
+  
+  const playfairFontRegular = {
+    fontFamily: 'Playfair Regular, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+
+  const playfairFontBlack = {
+    fontFamily: 'Playfair Black, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+  const playfairFontItalic = {
+    fontFamily: "Playfair Italic , sans-serif",
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+
+  const playfairFontBold = {
+    fontFamily: "Playfair Bold , sans-serif",
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+
+  const playfairFontExtraBold = {
+    fontFamily: "Playfair ExtraBold , sans-serif",
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+
+  const robotoFontThin = {
+    fontFamily: "Roboto Thin , sans-serif",
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+
   const [mostrarMenu1, setMostrarMenu1] = useState(false);
   const [mostrarMenu2, setMostrarMenu2] = useState(false);
   const [mostrarMenu3, setMostrarMenu3] = useState(false);
@@ -42,28 +84,28 @@ const Home = () => {
  
       <div className="body">
       <div className="containerHome pt-16">        
-        <p className="menu" onClick={opcion1}>Family</p>
-        {mostrarMenu1  &&  <Link to="/history" className="subMenu">HISTORY</Link>}
-        <p className="menu"  onClick={opcion2}>Patagonian Spirit</p>
-        {mostrarMenu2  && <Link to="/araucanavineyard" className="subMenu">ARAUCANA VINEYARD</Link>}
-        {mostrarMenu2  && <Link to="/workvineyard" className="subMenu">WORK IN THE VINEYARD</Link>}
-        {mostrarMenu2  && <Link to="/winespreservation" className="subMenu">WINES PRESERVATION</Link>}
-        {mostrarMenu2  && <Link to="/wineyard" className="subMenu">THE VINEYARD</Link>}
-        <p className="menu"  onClick={opcion3}>Wines</p>
-        {mostrarMenu3  && <Link to="/riociervos" className="subMenu">RÍO DE LOS CIERVOS</Link>}
-        {mostrarMenu3  && <Link to="/araucana" className="subMenu">ARAUCANA</Link>}
-        {mostrarMenu3  && <Link to="/araucanaazul" className="subMenu">ARAUCANA AZUL</Link>}
-        {mostrarMenu3  && <Link to="/clasico" className="subMenu">CLÁSICO</Link>}
-        {mostrarMenu3  && <Link to="/especial" className="subMenu">ESPECIAL</Link>}
-        {mostrarMenu3  && <Link to="/reservaestibada" className="subMenu">RESERVA ESTIBADA</Link>}
+        <p style={playfairFontRegular} className="menu" onClick={opcion1}>Family</p>
+        {mostrarMenu1  &&  <Link to="/history" className="subMenu" style={robotoFontRegular}>HISTORY</Link>}
+        <p style={playfairFontRegular} className="menu"  onClick={opcion2}>Patagonian Spirit</p>
+        {mostrarMenu2  && <Link to="/araucanavineyard" className="subMenu" style={robotoFontRegular}>ARAUCANA VINEYARD</Link>}
+        {mostrarMenu2  && <Link to="/workvineyard" className="subMenu" style={robotoFontRegular}>WORK IN THE VINEYARD</Link>}
+        {mostrarMenu2  && <Link to="/winespreservation" className="subMenu" style={robotoFontRegular}>WINES PRESERVATION</Link>}
+        {mostrarMenu2  && <Link to="/wineyard" className="subMenu" style={robotoFontRegular}>THE VINEYARD</Link>}
+        <p style={playfairFontRegular} className="menu"  onClick={opcion3}>Wines</p>
+        {mostrarMenu3  && <Link to="/riociervos" className="subMenu" style={robotoFontRegular}>RÍO DE LOS CIERVOS</Link>}
+        {mostrarMenu3  && <Link to="/araucana" className="subMenu" style={robotoFontRegular}>ARAUCANA</Link>}
+        {mostrarMenu3  && <Link to="/araucanaazul" className="subMenu" style={robotoFontRegular}>ARAUCANA AZUL</Link>}
+        {mostrarMenu3  && <Link to="/clasico" className="subMenu" style={robotoFontRegular}>CLÁSICO</Link>}
+        {mostrarMenu3  && <Link to="/especial" className="subMenu" style={robotoFontRegular}>ESPECIAL</Link>}
+        {mostrarMenu3  && <Link to="/reservaestibada" className="subMenu" style={robotoFontRegular}>RESERVA ESTIBADA</Link>}
 
         <div className="footer">
           
-          <p className="footerItems">Contact</p>
+          <p style={robotoFontRegular} className="footerItems">Contact</p>
           <br></br>
-          <p className="footerItems">News</p>
+          <p style={robotoFontRegular} className="footerItems">News</p>
           <br></br>
-          <p className="footerItems">Casa Pirque</p>
+          <p  style={robotoFontRegular} className="footerItems">Casa Pirque</p>
 
         </div>
 

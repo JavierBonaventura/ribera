@@ -13,6 +13,35 @@ import carruajeHistory from "../images/carruaje-history.jpg"
 import "../App.css";
 
 const History = () => {
+  const playfairFontBlack = {
+    fontFamily: 'Playfair Black, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+  const playfairFontItalic = {
+    fontFamily: "Playfair Italic , sans-serif",
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+
+  const playfairFontBold = {
+    fontFamily: "Playfair Bold , sans-serif",
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+
+  const playfairFontExtraBold = {
+    fontFamily: "Playfair ExtraBold , sans-serif",
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+
+  const robotoFontThin = {
+    fontFamily: "Roboto Thin , sans-serif",
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+
   return (
     <div>
       <body class="bg-[#F2ECE1]">
@@ -34,8 +63,8 @@ const History = () => {
         <div class="container mx-auto">
           <div class="py-5">
             <div class="flex flex-col justify-center items-center">
-              <h1 class="text-black text-xs">Family</h1>
-              <h2 class="uppercase text-[#C4AC77] text-sm font-bold">
+              <h1 style={playfairFontItalic} class="text-black text-xs">Family</h1>
+              <h2 style={playfairFontBold} class="uppercase text-[#C4AC77] text-sm font-bold">
                 Our History
               </h2>
             </div>
@@ -43,7 +72,7 @@ const History = () => {
 
           <div class="relative flex justify-center items-center">
             <img src={ilustrationHistory} alt="" class="w-full" />
-            <h1 class="text-[#C4AC77] text-5xl absolute font-bold">
+            <h1 style={playfairFontExtraBold} class="text-[#C4AC77] text-5xl absolute font-bold">
               1883 - 2023
             </h1>
           </div>
@@ -67,8 +96,8 @@ const History = () => {
         <div class="container mx-auto px-10">
           <div class="flex flex-col gap-y-2 pt-5 pb-32">
             <div>
-              <h1 class="text-[#C4AC77] font-bold text-sm">1883</h1>
-              <h2 class="uppercase text-[#C4AC77] text-sm">
+              <h1 style={playfairFontBlack} class="text-[#C4AC77] font-bold text-sm">1883</h1>
+              <h2 style={robotoFontThin} class="uppercase text-[#C4AC77] text-sm">
                 Roots in patagonia
               </h2>
             </div>
@@ -129,10 +158,10 @@ const History = () => {
           </div>
           <div class="py-10 flex flex-col gap-y-5">
             <div>
-              <h1 class="text-[#C4AC77] font-bold text-sm uppercase">
+              <h1 style={playfairFontBlack} class="text-[#C4AC77] font-bold text-sm uppercase">
                 The 2000´s
               </h1>
-              <h2 class="uppercase text-[#C4AC77] text-sm">
+              <h2 style={robotoFontThin} class="uppercase text-[#C4AC77] text-sm">
                 Working with Nicolas Catena
               </h2>
             </div>
@@ -172,10 +201,10 @@ const History = () => {
         <div class="container mx-auto bg-[#F2ECE1] px-10">
           <div class="py-10 flex flex-col gap-y-5">
             <div>
-              <h1 class="text-[#C4AC77] font-bold text-sm uppercase">
+              <h1 style={playfairFontBlack} class="text-[#C4AC77] font-bold text-sm uppercase">
                 The 2000´s
               </h1>
-              <h2 class="uppercase text-[#C4AC77] text-sm">
+              <h2 style={robotoFontThin} class="uppercase text-[#C4AC77] text-sm">
                 Working with Nicolas Catena
               </h2>
             </div>
@@ -208,7 +237,7 @@ const History = () => {
 
         <div class="container mx-auto bg-[#212121]">
           <div class="pt-10 pb-5">
-            <h1 class="uppercase text-[#C4AC77] font-bold text-sm text-center">
+            <h1 style={playfairFontBlack} class="uppercase text-[#C4AC77] font-bold text-sm text-center">
               Bodega Ribera del Cuarzo
             </h1>
           </div>

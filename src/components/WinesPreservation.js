@@ -11,9 +11,17 @@ import iconIg from "../images/icon-ig.png";
 import "../App.css";
 
 function Header() {
-  const playfairFontItalic = {
-    fontFamily: "Playfair, sans-serif",
+  const playfairFontBlack = {
+    fontFamily: 'Playfair Black, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
   };
+  const playfairFontItalic = {
+    fontFamily: "Playfair Italic , sans-serif",
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+
   return (
     <div>
       <header className="bg-[#F2ECE1] py-3 px-3">
@@ -43,7 +51,7 @@ function Header() {
                 Patagonian Spirit
               </h1>
               <h4
-                style={playfairFontItalic}
+                style={playfairFontBlack}
                 className="font-bold text-base text-[#C4AC77] text-center"
               >
                 WINES PRESERVATION
@@ -111,19 +119,21 @@ const WinesPreservation = () => {
 };
 
 const Screen1 = () => {
-  const playfairFont = {
-    fontFamily: "Playfair, sans-serif",
+  const playfairFontBlack = {
+    fontFamily: 'Playfair Black, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
   };
   return (
     <div className="mt-[-20px]">
       <div className="bg-[#F2ECE1] ">
         <p className="ml-1 text-left relative">
-          <span style={playfairFont} className="text-[#C4AC77] text-lg">
+          <span style={playfairFontBlack} className="text-[#C4AC77] text-lg">
             01
           </span>
           <span
-            style={playfairFont}
-            className="text-[#C4AC77] absolute top-1 left-5 text-xs underline"
+            style={playfairFontBlack}
+            className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
           >
             03
           </span>
@@ -139,8 +149,17 @@ const Screen1 = () => {
   );
 };
 const Screen1Text = () => {
-  const playfairFont = {
-    fontFamily: "Playfair, sans-serif",
+  const playfairFontRegular = {
+    fontFamily: 'Playfair Regular, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+  
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+    fontSize: '16px',
   };
   return (
     <div>
@@ -150,13 +169,13 @@ const Screen1Text = () => {
             <div className="flex flex-col gap-y-5">
               <div className="w-4/5 mx-auto">
                 <p
-                  style={playfairFont}
+                  style={robotoFontRegular}
                   className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3"
                 >
                   WINEMAKING
                 </p>
                 <p
-                  style={playfairFont}
+                  style={playfairFontRegular}
                   className="decoration-black	 text-xs leading-6"
                 >
                   Winemaking is done in small open-top vats, all carried out painstakingly by hand. During this stage we continue to keep intervention to a minimum, trying to encourage spontaneous fermentation and always respecting the terroir. We barcly add any sulfites in the traditional way to preserve the wines from oxidation and protect their microbiology. We take our lead from the vineyard; it tells us when the best time to harvest is for maximum expression.
@@ -181,19 +200,21 @@ Each of the vats in which we carry out the fermentation is filled with two thous
 };
 
 const Screen2 = () => {
-  const playfairFont = {
-    fontFamily: "Playfair, sans-serif",
+  const playfairFontBlack = {
+    fontFamily: 'Playfair Black, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
   };
   return (
     <div className="mt-[-20px]">
       <div className="bg-[#F2ECE1]">
         <p className="ml-1 text-left relative">
-          <span style={playfairFont} className="text-[#C4AC77] text-lg">
+          <span style={playfairFontBlack} className="text-[#C4AC77] text-lg">
             02
           </span>
           <span
-            style={playfairFont}
-            className="text-[#C4AC77] absolute top-1 left-5 text-xs underline"
+            style={playfairFontBlack}
+            className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
           >
             03
           </span>
@@ -213,8 +234,17 @@ const Screen2 = () => {
   );
 };
 const Screen2Text = () => {
-  const playfairFont = {
-    fontFamily: "Playfair, sans-serif",
+  const playfairFontRegular = {
+    fontFamily: 'Playfair Regular, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+  
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+    fontSize: '16px',
   };
   return (
     <div>
@@ -224,13 +254,13 @@ const Screen2Text = () => {
             <div className="flex flex-col gap-y-5">
               <div className="w-4/5 mx-auto">
                 <p
-                  style={playfairFont}
+                  style={robotoFontRegular}
                   className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3"
                 >
                   CELLAR{" "}
                 </p>
                 <p
-                  style={playfairFont}
+                  style={playfairFontRegular}
                   className="decoration-black	 text-xs leading-6"
                 >
                  Once the wines are finished, they are aged in barrcls.
@@ -254,19 +284,21 @@ Only twenty or thirty percent of the barrels we use are new, the rest are reused
 };
 
 const Screen3 = () => {
-  const playfairFont = {
-    fontFamily: "Playfair, sans-serif",
+  const playfairFontBlack = {
+    fontFamily: 'Playfair Black, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
   };
   return (
     <div className="mt-[-20px]">
       <div className="bg-[#F2ECE1]">
         <p className="ml-1 text-left relative">
-          <span style={playfairFont} className="text-[#C4AC77] text-lg">
+          <span style={playfairFontBlack} className="text-[#C4AC77] text-lg">
             03
           </span>
           <span
-            style={playfairFont}
-            className="text-[#C4AC77] absolute top-1 left-5 text-xs underline"
+            style={playfairFontBlack}
+            className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
           >
             03
           </span>
@@ -286,8 +318,17 @@ const Screen3 = () => {
   );
 };
 const Screen3Text = () => {
-  const playfairFont = {
-    fontFamily: "Playfair, sans-serif",
+  const playfairFontRegular = {
+    fontFamily: 'Playfair Regular, sans-serif',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+  
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+    fontSize: '16px',
   };
   return (
     <div>
@@ -297,13 +338,13 @@ const Screen3Text = () => {
             <div className="flex flex-col gap-y-5">
               <div className="w-4/5 mx-auto">
                 <p
-                  style={playfairFont}
+                  style={robotoFontRegular}
                   className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3"
                 >
                   VITICULTURIST AND WINEMAKER ERNESTO BAJDA{" "}
                 </p>
                 <p
-                  style={playfairFont}
+                  style={playfairFontRegular}
                   className="decoration-black	 text-xs leading-6"
                 >
                 
