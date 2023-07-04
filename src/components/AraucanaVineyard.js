@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
-import ilustracionSpirit from "../images/ilustracion-sprit.png"
+import ilustracionSpirit from "../images/ilustracion-sprit.png";
 import iconIg from "../images/icon-ig.png";
 import "../App.css";
 
@@ -13,40 +13,47 @@ const ConstructionPage = () => {
         <header class="py-3">
           <div class="container mx-auto">
             <div class="flex justify-between items-center px-5">
-              <div class="w-1/3">
+              <div class="w-28 md:w-36">
                 <img src={logo} alt="" class="w-full" />
               </div>
 
               <div class="w-8">
-              <Link to="/MenuHamburguesa">
-                <img src={hambur} alt="" className="w-full" />
-              </Link>                </div>
+                <Link to="/MenuHamburguesa">
+                  <img src={hambur} alt="" className="w-full" />
+                </Link>{" "}
+              </div>
             </div>
           </div>
         </header>
 
-        <div class="container mx-auto">
-          <div class="py-5">
-            <div class="flex flex-col justify-center items-center">
-              <h1 class="text-black text-xs">Patagonian Spirit</h1>
-              <h2 class="uppercase text-[#C4AC77] text-sm">
+        <div class="container mx-auto ">
+          <div class="py-5 md:pt-20 md:pb-0">
+            <div class="flex flex-col justify-center items-center md:gap-y-5">
+              <h1 class="text-black text-xs md:text-4xl">
+                <i>Patagonian Spirit</i>
+              </h1>
+              <h2 class="uppercase text-[#C4AC77] text-sm md:text-5xl">
                 Araucana Vineyard
               </h2>
             </div>
           </div>
 
-          <div class="">
-            <img src={ilustracionSpirit} alt="" class="w-full" />
+          <div class="md:py-20">
+            <img
+              src={ilustracionSpirit}
+              alt=""
+              class="w-full md:w-2/3 mx-auto"
+            />
           </div>
 
-          <div class="flex flex-col gap-y-5 px-10">
+          <div class="flex flex-col gap-y-5 px-10 md:text-center">
             <div>
-              <h1 class="uppercase text-[#C4AC77] text-sm">
+              <h1 class="uppercase text-[#C4AC77] text-sm md:text-5xl">
                 Bodega Ribera del Cuarzo
               </h1>
             </div>
             <div>
-              <p class="text-black text-xs">
+              <p class="text-black text-xs md:text-xl">
                 We are currently undergoing our 6th harvest. We have already
                 planted twenty-two additional hectares at the foot of the bard
                 and foresee reaching up to forty. <br />
