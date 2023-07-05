@@ -14,32 +14,45 @@ import "../App.css";
 
 const History = () => {
   const playfairFontBlack = {
-    fontFamily: 'Playfair Black, sans-serif',
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    fontFamily: "Playfair Black, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
   };
   const playfairFontItalic = {
     fontFamily: "Playfair Italic , sans-serif",
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    fontWeight: "normal",
+    fontStyle: "normal",
   };
 
   const playfairFontBold = {
     fontFamily: "Playfair Bold , sans-serif",
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    fontWeight: "normal",
+    fontStyle: "normal",
   };
 
   const playfairFontExtraBold = {
     fontFamily: "Playfair ExtraBold , sans-serif",
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    fontWeight: "normal",
+    fontStyle: "normal",
   };
 
   const robotoFontThin = {
     fontFamily: "Roboto Thin , sans-serif",
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+
+  const playfairFontRegular = {
+    fontFamily: "Playfair Regular, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+    fontSize: "16px",
   };
 
   return (
@@ -64,8 +77,13 @@ const History = () => {
         <div class="container mx-auto">
           <div class="py-5">
             <div class="flex flex-col justify-center items-center">
-              <h1 style={playfairFontItalic} class="text-black text-xs">Family</h1>
-              <h2 style={playfairFontBold} class="uppercase text-[#C4AC77] text-sm font-bold">
+              <h1 style={playfairFontItalic} class="text-black text-xs">
+                Family
+              </h1>
+              <h2
+                style={playfairFontBold}
+                class="uppercase text-[#C4AC77] text-sm font-bold"
+              >
                 Our History
               </h2>
             </div>
@@ -73,7 +91,10 @@ const History = () => {
 
           <div class="relative flex justify-center items-center">
             <img src={ilustrationHistory} alt="" class="w-full" />
-            <h1 style={playfairFontExtraBold} class="text-[#C4AC77] text-5xl absolute font-bold">
+            <h1
+              style={playfairFontExtraBold}
+              class="text-[#C4AC77] text-5xl absolute font-bold"
+            >
               1883 - 2023
             </h1>
           </div>
@@ -97,14 +118,22 @@ const History = () => {
         <div class="container mx-auto px-10">
           <div class="flex flex-col gap-y-2 pt-5 pb-32">
             <div>
-              <h1 style={playfairFontBlack} class="text-[#C4AC77] font-bold text-sm">1883</h1>
-              <h2 style={robotoFontThin} class="uppercase text-[#C4AC77] text-sm">
+              <h1
+                style={playfairFontBlack}
+                class="text-[#C4AC77] font-bold text-sm"
+              >
+                1883
+              </h1>
+              <h2
+                style={robotoFontRegular}
+                class="uppercase text-[#C4AC77] text-sm"
+              >
                 Roots in patagonia
               </h2>
             </div>
             <div>
-              <p class="text-black text-xs">
-                We have our
+              <p class="text-black text-xs" style={playfairFontRegular}>
+                We have our{" "}
                 <strong>
                   roots in Patagonia and in winemaking stretching back over 150
                   years
@@ -112,7 +141,7 @@ const History = () => {
                 . Stemming from two very different origins, Bodega del Cuarzo
                 seems to be the synthesis of those two powerful forces. <br />
                 <br />
-                On my grandmothers side
+                On my grandmothers side{" "}
                 <strong>
                   Melchor Concha y Toro started his winery in 1883
                 </strong>
@@ -128,7 +157,10 @@ const History = () => {
             <div class="-mt-52 px-4">
               <img src={personasHistory} alt="" class="w-full object-cover" />
             </div>
-            <p class="text-white text-xs pt-10 px-10">
+            <p
+              class="text-white text-xs pt-10 px-10"
+              style={playfairFontRegular}
+            >
               Stories of how these two individuals worked hard to create their
               ventures intertwine in dinner conversations over generations.
               <br />
@@ -157,15 +189,21 @@ const History = () => {
           </div>
           <div class="py-10 flex flex-col gap-y-5">
             <div>
-              <h1 style={playfairFontBlack} class="text-[#C4AC77] font-bold text-sm uppercase">
+              <h1
+                style={playfairFontBlack}
+                class="text-[#C4AC77] font-bold text-sm uppercase"
+              >
                 The 2000´s
               </h1>
-              <h2 style={robotoFontThin} class="uppercase text-[#C4AC77] text-sm">
+              <h2
+                style={robotoFontThin}
+                class="uppercase text-[#C4AC77] text-sm"
+              >
                 Working with Nicolas Catena
               </h2>
             </div>
             <div class="">
-              <p class="text-black text-xs">
+              <p class="text-black text-xs" style={playfairFontRegular}>
                 <strong>
                   My career in wines started as a very young person
                 </strong>
@@ -179,8 +217,8 @@ const History = () => {
                 From the distribution of wines the next logical step for our
                 company was to fine a unique place to create a new winery.
                 <strong>
-                  A place wheere we could produce something truly exceptional.
-                  Almost by magical coincidence the piecesof the puzzle fell
+                  A place where we could produce something truly exceptional.
+                  Almost by magical coincidence the pieces of the puzzle fell
                   into place
                 </strong>
                 .
@@ -198,15 +236,21 @@ const History = () => {
         <div class="container mx-auto bg-[#F2ECE1] px-10">
           <div class="py-10 flex flex-col gap-y-5">
             <div>
-              <h1 style={playfairFontBlack} class="text-[#C4AC77] font-bold text-sm uppercase">
+              <h1
+                style={playfairFontBlack}
+                class="text-[#C4AC77] font-bold text-sm uppercase"
+              >
                 The 2000´s
               </h1>
-              <h2 style={robotoFontThin} class="uppercase text-[#C4AC77] text-sm">
+              <h2
+                style={robotoFontThin}
+                class="uppercase text-[#C4AC77] text-sm"
+              >
                 Working with Nicolas Catena
               </h2>
             </div>
             <div class="">
-              <p class="text-black text-xs">
+              <p class="text-black text-xs" style={playfairFontRegular}>
                 The story of this winery started in 2004, when italian countess
                 Noemi Marone Cinzano discovered this far away land, planted a
                 five hectares vineyard at the foot of the barda (a specific
@@ -234,7 +278,10 @@ const History = () => {
 
         <div class="container mx-auto bg-[#212121]">
           <div class="pt-10 pb-5">
-            <h1 style={playfairFontBlack} class="uppercase text-[#C4AC77] font-bold text-sm text-center">
+            <h1
+              style={playfairFontBlack}
+              class="uppercase text-[#C4AC77] text-sm text-center"
+            >
               Bodega Ribera del Cuarzo
             </h1>
           </div>

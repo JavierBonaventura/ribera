@@ -13,6 +13,18 @@ import iconIg from "../images/icon-ig.png";
 
 import "../App.css";
 function RioCiervos() {
+  const playfairFontRegular = {
+    fontFamily: "Playfair Regular, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+    fontSize: "16px",
+  };
   return (
     <div>
       <header className="bg-[#231F20] py-3 ">
@@ -38,17 +50,26 @@ function RioCiervos() {
           </div>
 
           <div className="flex flex-col gap-y-5">
-            <div>
-              <h1 className="uppercase text-xs text-[#C3B17D] text-center">
+            <div className="flex flex-col gap-y-5">
+              <h1
+                className="uppercase text-xs text-[#C3B17D] text-center"
+                style={robotoFontRegular}
+              >
                 Araucana Rio de los ciervos
               </h1>
-              <h4 className="text-xs text-[#F2ECE1] text-center">
-                Patagonia Argentina
+              <h4
+                className="text-xs text-[#F2ECE1] text-center"
+                style={robotoFontRegular}
+              >
+                <i>Patagonia Argentina</i>
               </h4>
             </div>
             <div className="flex flex-col gap-y-5">
               <div className="w-2/3 mx-auto">
-                <p className="text-[#F2ECE1] text-xs leading-6">
+                <p
+                  className="text-[#F2ECE1] text-xs leading-6"
+                  style={playfairFontRegular}
+                >
                   "Río de los Ciervos" es un pequeño pueblo ubicado en tierra
                   del fuego. En esta región Patagónica en 300 km se pueden
                   recorrer todos los paisajes, desde el mar, hasta el desierto,
@@ -64,7 +85,10 @@ function RioCiervos() {
                   <div className="w-2 inline-block">
                     <img src={iconDownload} alt="" className="w-full" />
                   </div>
-                  <span className="ml-2 text-xs text-[#C3B17D] ">
+                  <span
+                    className="ml-2 text-xs text-[#C3B17D] "
+                    style={robotoFontRegular}
+                  >
                     Descargar ficha técnica
                   </span>
                 </a>
@@ -80,7 +104,10 @@ function RioCiervos() {
             <img src={riberaEspecial} alt="" />
           </div>
           <div>
-            <h1 className="uppercase text-xs text-[#C3B17D] text-center">
+            <h1
+              className="uppercase text-xs text-[#C3B17D] text-center"
+              style={robotoFontRegular}
+            >
               Ribera del Cuarzo especial
             </h1>
           </div>
@@ -95,7 +122,10 @@ function RioCiervos() {
             <img src={riberaReserva} alt="" />
           </div>
           <div>
-            <h1 className="uppercase text-xs text-[#C3B17D] text-center">
+            <h1
+              className="uppercase text-xs text-[#C3B17D] text-center"
+              style={robotoFontRegular}
+            >
               Ribera del Cuarzo Río de los Ciervos
             </h1>
           </div>
@@ -148,14 +178,20 @@ function RioCiervos() {
       </div>
 
       <div className="bg-[#231F20] py-5">
-        <div className="container mx-auto">
+        <div className="container mx-auto flex flex-col gap-y-5">
           <div>
-            <h1 className="text-[#C3B17D] text-center text-xs uppercase">
+            <h1
+              className="text-[#C3B17D] text-center text-xs uppercase"
+              style={robotoFontRegular}
+            >
               Ribera del cuarzo
             </h1>
           </div>
           <div>
-            <h2 className="text-[#F2ECE1] text-center text-xs">
+            <h2
+              className="text-[#F2ECE1] text-center text-xs"
+              style={robotoFontRegular}
+            >
               <i>Patagonia, Argentina</i>
             </h2>
           </div>

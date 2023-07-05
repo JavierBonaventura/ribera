@@ -8,21 +8,33 @@ import "../App.css";
 
 const ConstructionPage = () => {
   const playfairFontBlack = {
-    fontFamily: 'Playfair Black, sans-serif',
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    fontFamily: "Playfair Black, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
   };
   const playfairFontItalic = {
     fontFamily: "Playfair Italic , sans-serif",
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    fontWeight: "normal",
+    fontStyle: "normal",
   };
-  
+
+  const playfairFontBold = {
+    fontFamily: "Playfair Bold , sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+
   const robotoFontRegular = {
     fontFamily: "Roboto Regular , sans-serif",
-    fontWeight: 'normal',
-    fontStyle: 'normal',
-    fontSize: '16px',
+    fontWeight: "normal",
+    fontStyle: "normal",
+    fontSize: "16px",
+  };
+
+  const playfairFontRegular = {
+    fontFamily: "Playfair Regular, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
   };
 
   return (
@@ -47,8 +59,13 @@ const ConstructionPage = () => {
         <div class="container mx-auto">
           <div class="py-5">
             <div class="flex flex-col justify-center items-center">
-              <h1 class="text-black text-xs">Patagonian Spirit</h1>
-              <h2 class="uppercase text-[#C4AC77] text-sm">
+              <h1 class="text-black text-xs" style={playfairFontItalic}>
+                Patagonian Spirit
+              </h1>
+              <h2
+                class="uppercase text-[#C4AC77] text-sm"
+                style={playfairFontBold}
+              >
                 Araucana Vineyard
               </h2>
             </div>
@@ -64,12 +81,18 @@ const ConstructionPage = () => {
 
           <div class="flex flex-col gap-y-5 px-10 md:text-center">
             <div>
-              <h1 class="uppercase text-[#C4AC77] text-sm">
+              <h1
+                class="uppercase text-[#C4AC77] text-sm"
+                style={robotoFontRegular}
+              >
                 Bodega Ribera del Cuarzo
               </h1>
             </div>
             <div>
-              <p class="text-black text-xs md:text-xl">
+              <p
+                class="text-black text-xs md:text-xl"
+                style={playfairFontRegular}
+              >
                 We are currently undergoing our 6th harvest. We have already
                 planted twenty-two additional hectares at the foot of the bard
                 and foresee reaching up to forty. <br />
