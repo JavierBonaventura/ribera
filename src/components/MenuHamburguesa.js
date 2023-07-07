@@ -290,9 +290,13 @@ const Home = () => {
 
           <div className="flex w-full mt-10">
             <div className="w-1/3">
-              <p style={roboto} className="text-sm footerItems">
+              <Link
+                to="/contacto"
+                className="text-sm footerItems"
+                style={robotoFontRegular}
+              >
                 Contact
-              </p>
+              </Link>
             </div>
             <div className="w-1/3">
               <p style={roboto} className="text-sm footerItems">
