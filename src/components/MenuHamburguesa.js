@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import "../App.css";
 import logo from "../images/Escudo Bodega Ribera del Cuarzo-FINALcurvas-02.png";
 import { useSpring, animated } from "@react-spring/web";
+<<<<<<< Updated upstream
+=======
+import hambur from "../images/menu-hambur.png";
+>>>>>>> Stashed changes
 
 import iconIg from "../images/icon-ig.png";
 
@@ -56,7 +60,11 @@ const Home = () => {
   const [mostrarMenu3, setMostrarMenu3] = useState(false);
 
   const dropdownAnimation1 = useSpring({
+<<<<<<< Updated upstream
     height: mostrarMenu1 ? "25px" : "0px",
+=======
+    height: mostrarMenu1 ? "50px" : "0px",
+>>>>>>> Stashed changes
     opacity: mostrarMenu1 ? 1 : 0,
     overflow: "hidden",
     config: { duration: 300 },
@@ -70,7 +78,11 @@ const Home = () => {
   });
 
   const dropdownAnimation3 = useSpring({
+<<<<<<< Updated upstream
     height: mostrarMenu3 ? "150px" : "0px",
+=======
+    height: mostrarMenu3 ? "160px" : "0px",
+>>>>>>> Stashed changes
     opacity: mostrarMenu3 ? 1 : 0,
     overflow: "hidden",
     config: { duration: 300 },
@@ -145,13 +157,18 @@ const Home = () => {
       <div className="body">
         <div className="containerHome pt-12 ">
           <p style={playfairFontRegular} className="menu" onClick={opcion1}>
+<<<<<<< Updated upstream
             Family
+=======
+            History
+>>>>>>> Stashed changes
           </p>
           <animated.div style={dropdownAnimation1}>
             <ul className="text-center -mt-2 space-y-1">
               <li>
                 {" "}
                 <Link
+<<<<<<< Updated upstream
                   to="/history"
                   className="subMenu"
                   style={robotoFontRegular}
@@ -202,11 +219,77 @@ const Home = () => {
                   style={robotoFontRegular}
                 >
                   THE VINEYARD
+=======
+                  to="/family"
+                  className="subMenu"
+                  style={robotoFontRegular}
+                >
+                  Family
+                </Link>
+              </li>
+
+              <li>
+                {" "}
+                <Link
+                  to="/bluevalley"
+                  className="subMenu"
+                  style={robotoFontRegular}
+                >
+                  Blue valley patagonia
+>>>>>>> Stashed changes
                 </Link>
               </li>
             </ul>
           </animated.div>
 
+<<<<<<< Updated upstream
+=======
+          <p style={playfairFontRegular} className="menu" onClick={opcion2}>
+            Patagonian Spirit
+          </p>
+          <animated.div style={dropdownAnimation2}>
+            <ul className="text-center -mt-2 space-y-1">
+              <li>
+                {" "}
+                <Link
+                  to="/araucanavineyard"
+                  className="subMenu"
+                  style={robotoFontRegular}
+                >
+                  ARAUCANA VINEYARD
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/workvineyard"
+                  className="subMenu"
+                  style={robotoFontRegular}
+                >
+                  WORK IN THE VINEYARD
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/winespreservation"
+                  className="subMenu"
+                  style={robotoFontRegular}
+                >
+                  WINES PRESERVATION
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/wineyard"
+                  className="subMenu"
+                  style={robotoFontRegular}
+                >
+                  THE VINEYARD
+                </Link>
+              </li>
+            </ul>
+          </animated.div>
+
+>>>>>>> Stashed changes
           <p style={playfairFontRegular} className="menu" onClick={opcion3}>
             Wines
           </p>

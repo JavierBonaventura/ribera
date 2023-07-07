@@ -85,7 +85,7 @@ function Araucana() {
             <div className="flex flex-col gap-y-5">
               <div className="w-2/3 mx-auto">
                 <p
-                  className="text-[#F2ECE1] text-xs leading-6"
+                  className="text-[#F2ECE1] text-xs "
                   style={playfairFontRegular}
                 >
                   "Río de los Ciervos" es un pequeño pueblo ubicado en tierra
@@ -130,7 +130,11 @@ function Araucana() {
             </h1>
           </div>
           <div className="bg-[#C3B17D] px-5 py-1 rounded-md">
-            <a href="" className="uppercase text-xs text-[#F2ECE1]">
+            <a
+              href=""
+              className="uppercase text-xs text-[#F2ECE1]"
+              style={robotoFontRegular}
+            >
               Read more
             </a>
           </div>
@@ -148,7 +152,11 @@ function Araucana() {
             </h1>
           </div>
           <div className="bg-[#C3B17D] px-5 py-1 rounded-md">
-            <a href="" className="uppercase text-xs text-[#F2ECE1]">
+            <a
+              href=""
+              className="uppercase text-xs text-[#F2ECE1]"
+              style={robotoFontRegular}
+            >
               Read more
             </a>
           </div>
@@ -170,7 +178,11 @@ function Araucana() {
             <div className="flex gap-y-4 flex-col">
               <img src={riberaClasico} alt="" />
               <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
-                <a href="" className="uppercase text-xs text-[#F2ECE1]">
+                <a
+                  href=""
+                  className="uppercase text-xs text-[#F2ECE1]"
+                  style={robotoFontRegular}
+                >
                   Read more
                 </a>
               </div>
@@ -178,7 +190,11 @@ function Araucana() {
             <div className="flex gap-y-4 flex-col">
               <img src={riberaEspecial} alt="" />
               <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
-                <a href="" className="uppercase text-xs text-[#F2ECE1]">
+                <a
+                  href=""
+                  className="uppercase text-xs text-[#F2ECE1]"
+                  style={robotoFontRegular}
+                >
                   Read more
                 </a>
               </div>
@@ -186,7 +202,11 @@ function Araucana() {
             <div className="flex gap-y-4 flex-col">
               <img src={riberaReserva} alt="" />
               <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
-                <a href="" className="uppercase text-xs text-[#F2ECE1]">
+                <a
+                  href=""
+                  className="uppercase text-xs text-[#F2ECE1]"
+                  style={robotoFontRegular}
+                >
                   Read more
                 </a>
               </div>

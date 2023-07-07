@@ -41,7 +41,11 @@ const ConstructionPage = () => {
     <div>
       <body class="bg-[#F2ECE1] ">
         <header className="py-3 fixed top-0 left-0 right-0 z-50 ">
+<<<<<<< Updated upstream
           <div class="container mx-auto">
+=======
+          <div class="container mx-auto ">
+>>>>>>> Stashed changes
             <div class="flex justify-between items-center px-5">
               <div class="w-20 md:w-36">
                 <img src={logo} alt="" class="w-full" />
@@ -79,7 +83,7 @@ const ConstructionPage = () => {
             />
           </div>
 
-          <div class="flex flex-col gap-y-5 px-10 md:text-center">
+          <div class="flex flex-col gap-y-2 px-10 md:text-center pt-8">
             <div>
               <h1
                 class="uppercase text-[#C4AC77] text-sm"

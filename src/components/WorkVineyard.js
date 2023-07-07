@@ -178,10 +178,7 @@ const Screen1Text = () => {
                 >
                   WORKING METHODS
                 </p>
-                <p
-                  style={playfairFontRegular}
-                  className="decoration-black	 text-xs leading-6"
-                >
+                <p class="text-black text-xs " style={playfairFontRegular}>
                   Maintaining traditional working methods helps us to keep in
                   touch with the land, a connection that defines us as farmers.
                   At the estate, we also raise Criollo horses, the famous
@@ -267,10 +264,7 @@ const Screen2Text = () => {
                 >
                   HORSES{" "}
                 </p>
-                <p
-                  style={playfairFontRegular}
-                  className="decoration-black	 text-xs leading-6"
-                >
+                <p class="text-black text-xs" style={playfairFontRegular}>
                   Horses also provide manure, which goes into the compost we use
                   at the vineyard: it is added to organic waste from the wine
                   barrels and vats and everything consumed at the house. This is
@@ -356,10 +350,7 @@ const Screen3Text = () => {
                 >
                   WATER{" "}
                 </p>
-                <p
-                  style={playfairFontRegular}
-                  className="decoration-black	 text-xs leading-6"
-                >
+                <p class="text-black text-xs" style={playfairFontRegular}>
                   The Countess had planted the vineyard in the highest part of
                   the Barda river terrace, an unexplored area where no one had
                   ever considered such an enterprise: it meant having to pump
@@ -455,10 +446,7 @@ const Screen4Text = () => {
                 >
                   PLANTATION{" "}
                 </p>
-                <p
-                  style={playfairFontRegular}
-                  className="decoration-black	 text-xs leading-6"
-                >
+                <p class="text-black text-xs" style={playfairFontRegular}>
                   Araucana is planted using the traditional high cordon-method
                   with two meter gaps between the rows and a meter between each
                   plant resulting in a density of 5000 plants per hectare.

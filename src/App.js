@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Menu from "./components/Menu";
-import History from "./components/History";
+import Family from "./components/Family";
 import AraucanaVineyard from "./components/AraucanaVineyard";
 import WorkVineyard from "./components/WorkVineyard";
 import WinesPreservation from "./components/WinesPreservation";
@@ -14,6 +14,12 @@ import Especial from "./components/Especial";
 import ReservaEstibada from "./components/ReservaEstibada";
 import MenuHamburguesa from "./components/MenuHamburguesa";
 import "./App.css";
+<<<<<<< Updated upstream
+=======
+import Tst from "./components/tst";
+import Acerca from "./components/Acerca";
+import BlueValley from "./components/BlueValley";
+>>>>>>> Stashed changes
 
 function App() {
   return (
@@ -21,7 +27,8 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<Menu />} />
-          <Route path="/history" element={<History />} />
+          <Route path="/family" element={<Family />} />
+          <Route path="/bluevalley" element={<BlueValley />} />
           <Route path="/araucanavineyard" element={<AraucanaVineyard />} />
           <Route path="/workvineyard" element={<WorkVineyard />} />
           <Route path="/winespreservation" element={<WinesPreservation />} />
@@ -33,6 +40,11 @@ function App() {
           <Route path="/especial" element={<Especial />} />
           <Route path="/reservaestibada" element={<ReservaEstibada />} />
           <Route path="/menuhamburguesa" element={<MenuHamburguesa />} />
+<<<<<<< Updated upstream
+=======
+          <Route path="/tst" element={<Tst />} />
+          <Route path="/acerca" element={<Acerca />} />
+>>>>>>> Stashed changes
         </Routes>
       </div>
     </Router>

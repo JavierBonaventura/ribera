@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 import React, { useEffect, useRef, useState } from "react";
+=======
+import React, { useEffect, useRef } from "react";
+>>>>>>> Stashed changes
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
@@ -14,12 +18,15 @@ import iconIg from "../images/icon-ig.png";
 
 import "../App.css";
 function RioCiervos() {
+<<<<<<< Updated upstream
   const [showDropdown, setShowDropdown] = useState(false);
 
   const handleDownloadClick = () => {
     setShowDropdown(!showDropdown);
   };
 
+=======
+>>>>>>> Stashed changes
   const scrollRef = useRef(null);
   const location = useLocation();
 
@@ -36,8 +43,6 @@ function RioCiervos() {
       window.scrollTo(0, scrollPosition);
     }
   }, [location]);
-
-
 
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
@@ -93,7 +98,7 @@ function RioCiervos() {
             <div className="flex flex-col gap-y-5">
               <div className="w-2/3 mx-auto">
                 <p
-                  className="text-[#F2ECE1] text-xs leading-6"
+                  className="text-[#F2ECE1] text-xs"
                   style={playfairFontRegular}
                 >
                   "Río de los Ciervos" es un pequeño pueblo ubicado en tierra
@@ -169,7 +174,11 @@ function RioCiervos() {
             </h1>
           </div>
           <div className="bg-[#C3B17D] px-5 py-1 rounded-md">
-            <a href="" className="uppercase text-xs text-[#F2ECE1]">
+            <a
+              href=""
+              className="uppercase text-xs text-[#F2ECE1]"
+              style={robotoFontRegular}
+            >
               Read more
             </a>
           </div>
@@ -191,7 +200,11 @@ function RioCiervos() {
             <div className="flex gap-y-4 flex-col">
               <img src={araucanaWineShort} alt="" />
               <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
-                <a href="" className="uppercase text-xs text-[#F2ECE1]">
+                <a
+                  href=""
+                  className="uppercase text-xs text-[#F2ECE1]"
+                  style={robotoFontRegular}
+                >
                   Read more
                 </a>
               </div>
@@ -199,7 +212,11 @@ function RioCiervos() {
             <div className="flex gap-y-4 flex-col">
               <img src={araucanaMalbecWineShort} alt="" />
               <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
-                <a href="" className="uppercase text-xs text-[#F2ECE1]">
+                <a
+                  href=""
+                  className="uppercase text-xs text-[#F2ECE1]"
+                  style={robotoFontRegular}
+                >
                   Read more
                 </a>
               </div>
@@ -207,7 +224,11 @@ function RioCiervos() {
             <div className="flex gap-y-4 flex-col">
               <img src={araucanaAzulWineShort} alt="" />
               <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
-                <a href="" className="uppercase text-xs text-[#F2ECE1]">
+                <a
+                  href=""
+                  className="uppercase text-xs text-[#F2ECE1]"
+                  style={robotoFontRegular}
+                >
                   Read more
                 </a>
               </div>

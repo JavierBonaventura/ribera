@@ -4,14 +4,12 @@ import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
 import ilustrationHistory from "../images/ilustracion-history.png";
 import arrowDown from "../images/arrow-down.png";
-import personasHistory from "../images/personas-history.jpeg";
 import paisajeHistory from "../images/paisaje-history.jpg";
 import botellasRibera from "../images/botellas-ribera.jpg";
-import ninosHistory from "../images/ninos-history.jpeg";
 import iconIg from "../images/icon-ig.png";
-import carruajeHistory from "../images/carruaje-history.jpg";
 import "../App.css";
 
+<<<<<<< Updated upstream:src/components/History.js
 const History = () => {
 
   const bondiniFontRegular = {
@@ -20,6 +18,9 @@ const History = () => {
     fontStyle: "normal",
   };
 
+=======
+const BlueValley = () => {
+>>>>>>> Stashed changes:src/components/BlueValley.js
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
     fontWeight: "normal",
@@ -115,81 +116,6 @@ const History = () => {
           </div>
         </div>
 
-        <div class="w-full flex">
-          <div class="w-1/3"></div>
-          <div class="w-2/3">
-            <img src={ninosHistory} alt="" />
-          </div>
-        </div>
-
-        <div class="container mx-auto px-10">
-          <div class="flex flex-col gap-y-2 pt-5 pb-32">
-            <div>
-              <h1
-                style={playfairFontBlack}
-                class="text-[#C4AC77] font-bold text-sm"
-              >
-                1883
-              </h1>
-              <h2
-                style={robotoFontRegular}
-                class="uppercase text-[#C4AC77] text-sm"
-              >
-                Roots in patagonia
-              </h2>
-            </div>
-            <div>
-              <p class="text-black text-xs" style={playfairFontRegular}>
-                We have our{" "}
-                <strong>
-                  roots in Patagonia and in winemaking stretching back over 150
-                  years
-                </strong>
-                . Stemming from two very different origins, Bodega del Cuarzo
-                seems to be the synthesis of those two powerful forces. <br />
-                <br />
-                On my grandmothers side{" "}
-                <strong>
-                  Melchor Concha y Toro started his winery in 1883
-                </strong>
-                , only a few years after, in 1875, Jose Menendez had started his
-                wool producing and shipping company in far away Patagonia.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="container mx-auto bg-[#212121]">
-          <div class="pt-32 pb-10">
-            <div class="-mt-52 px-4">
-              <img src={personasHistory} alt="" class="w-full object-cover" />
-            </div>
-            <p
-              class="text-white text-xs pt-10 px-10"
-              style={playfairFontRegular}
-            >
-              Stories of how these two individuals worked hard to create their
-              ventures intertwine in dinner conversations over generations.
-              <br />
-              <br />
-              I have come to believe that the coincidence of these two pioneers,
-              having thousands of miles apart but almost at the same time
-              successfully developed their companies, was the mysterious merging
-              force that lead to the creation of Bodega del Cuarzo. <br />
-              <br />
-              Patagonia was the place where we spent the summers of my childhood
-              and where I had travelled many times in my youth. It was always a
-              place where I truly found myself at home. Amidst the wind flat
-              topped hills, the enormous open spaces and the gigantic mountains
-              where distances are dwarfed only by an infinite sky the idea of
-              setting up a winery little by little started to materialize.
-            </p>
-          </div>
-        </div>
-        <div>
-          <img src={carruajeHistory} alt="" />
-        </div>
-
         <div class="container mx-auto bg-[#F2ECE1] px-10">
           <div class="flex justify-center py-2">
             <span class="uppercase text-[0.5rem]">Sunset at valle azul</span>
@@ -203,7 +129,7 @@ const History = () => {
                 The 2000´s
               </h1>
               <h2
-                style={robotoFontThin}
+                style={robotoFontRegular}
                 class="uppercase text-[#C4AC77] text-sm"
               >
                 Working with Nicolas Catena
@@ -250,7 +176,7 @@ const History = () => {
                 The 2000´s
               </h1>
               <h2
-                style={robotoFontThin}
+                style={robotoFontRegular}
                 class="uppercase text-[#C4AC77] text-sm"
               >
                 Working with Nicolas Catena
@@ -319,4 +245,4 @@ const History = () => {
   );
 };
 
-export default History;
+export default BlueValley;
