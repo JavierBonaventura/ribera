@@ -14,6 +14,7 @@ import Especial from "./components/Especial";
 import ReservaEstibada from "./components/ReservaEstibada";
 import MenuHamburguesa from "./components/MenuHamburguesa";
 import "./App.css";
+import Tst from './components/tst'
 
 function App() {
   return (
@@ -33,6 +34,8 @@ function App() {
           <Route path="/especial" element={<Especial />} />
           <Route path="/reservaestibada" element={<ReservaEstibada />} />
           <Route path="/menuhamburguesa" element={<MenuHamburguesa />} />
+          <Route path="/tst" element={<Tst />} />
+
         </Routes>
       </div>
     </Router>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import '../App.css';
 import logo from '../images/Escudo Bodega Ribera del Cuarzo-FINALcurvas-02.png';
-import { useSpring, animated } from '@react-spring/web';
+
 
 
 
@@ -53,26 +53,8 @@ const Home = () => {
   const [mostrarMenu1, setMostrarMenu1] = useState(false);
   const [mostrarMenu2, setMostrarMenu2] = useState(false);
   const [mostrarMenu3, setMostrarMenu3] = useState(false);
-  const dropdownAnimation1 = useSpring({
-    height: mostrarMenu1 ? '25px' : '0px',
-    opacity: mostrarMenu1 ? 1 : 0,
-    overflow: 'hidden',
-    config: { duration: 300 },
-  });
 
-  const dropdownAnimation2 = useSpring({
-    height: mostrarMenu2 ? '115px' : '0px',
-    opacity: mostrarMenu2 ? 1 : 0,
-    overflow: 'hidden',
-    config: { duration: 300 },
-  });
-  
-  const dropdownAnimation3 = useSpring({
-    height: mostrarMenu3 ? '94px' : '0px',
-    opacity: mostrarMenu3 ? 1 : 0,
-    overflow: 'hidden',
-    config: { duration: 300 },
-  });
+
   
   const opcion1 = () => {
     
@@ -101,36 +83,23 @@ const Home = () => {
        <img src={logo} alt="Imagen 1" className="logo" />
  
       <div className="body">
-      <div className="containerHome pt-12 ">        
+      <div className="containerHome pt-16">        
         <p style={playfairFontRegular} className="menu" onClick={opcion1}>Family</p>
-        <animated.div style={dropdownAnimation1}>
-        <ul className='text-center -mt-2 space-y-1'  >
-        <li>  <Link to="/history" className="subMenu" style={robotoFontRegular}>HISTORY</Link></li>
-      </ul>
-      </animated.div>
-
+        {mostrarMenu1  &&  <Link to="/history" className="subMenu" style={robotoFontRegular}>HISTORY</Link>}
         <p style={playfairFontRegular} className="menu"  onClick={opcion2}>Patagonian Spirit</p>
-        <animated.div style={dropdownAnimation2}>
-        <ul className='text-center -mt-2 space-y-1'  >
-        <li> <Link to="/araucanavineyard" className="subMenu" style={robotoFontRegular}>ARAUCANA VINEYARD</Link></li>
-        <li><Link to="/workvineyard" className="subMenu" style={robotoFontRegular}>WORK IN THE VINEYARD</Link></li>
-        <li><Link to="/winespreservation" className="subMenu" style={robotoFontRegular}>WINES PRESERVATION</Link></li>
-        <li><Link to="/wineyard" className="subMenu" style={robotoFontRegular}>THE VINEYARD</Link></li>
-       </ul>
-        </animated.div>
-
+        {mostrarMenu2  && <Link to="/araucanavineyard" className="subMenu" style={robotoFontRegular}>ARAUCANA VINEYARD</Link>}
+        {mostrarMenu2  && <Link to="/workvineyard" className="subMenu" style={robotoFontRegular}>WORK IN THE VINEYARD</Link>}
+        {mostrarMenu2  && <Link to="/winespreservation" className="subMenu" style={robotoFontRegular}>WINES PRESERVATION</Link>}
+        {mostrarMenu2  && <Link to="/wineyard" className="subMenu" style={robotoFontRegular}>THE VINEYARD</Link>}
         <p style={playfairFontRegular} className="menu"  onClick={opcion3}>Wines</p>
-        <animated.div style={dropdownAnimation3}>
-        <ul className='text-center -mt-2 space-y-1'  >
-        <li>    <Link to="/riociervos" className="subMenu" style={robotoFontRegular}>RÍO DE LOS CIERVOS</Link></li>
-        <li>    <Link to="/araucana" className="subMenu" style={robotoFontRegular}>ARAUCANA</Link></li>
-       <li>    <Link to="/araucanaazul" className="subMenu" style={robotoFontRegular}>ARAUCANA AZUL</Link></li>
-       <li>  <Link to="/clasico" className="subMenu" style={robotoFontRegular}>CLÁSICO</Link></li>
-       <li><Link to="/especial" className="subMenu" style={robotoFontRegular}>ESPECIAL</Link></li>
-    <li>  <Link to="/reservaestibada" className="subMenu" style={robotoFontRegular}>RESERVA ESTIBADA</Link></li>
-        </ul>
-        </animated.div>
-        <div className="flex flex-col -space-y-4 text-center pt-10">
+        {mostrarMenu3  && <Link to="/riociervos" className="subMenu" style={robotoFontRegular}>RÍO DE LOS CIERVOS</Link>}
+        {mostrarMenu3  && <Link to="/araucana" className="subMenu" style={robotoFontRegular}>ARAUCANA</Link>}
+        {mostrarMenu3  && <Link to="/araucanaazul" className="subMenu" style={robotoFontRegular}>ARAUCANA AZUL</Link>}
+        {mostrarMenu3  && <Link to="/clasico" className="subMenu" style={robotoFontRegular}>CLÁSICO</Link>}
+        {mostrarMenu3  && <Link to="/especial" className="subMenu" style={robotoFontRegular}>ESPECIAL</Link>}
+        {mostrarMenu3  && <Link to="/reservaestibada" className="subMenu" style={robotoFontRegular}>RESERVA ESTIBADA</Link>}
+
+        <div className="footer">
           
           <p style={robotoFontRegular} className="footerItems">Contact</p>
           <br></br>
