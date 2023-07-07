@@ -52,11 +52,7 @@ const Home = () => {
   const [mostrarMenu3, setMostrarMenu3] = useState(false);
 
   const dropdownAnimation1 = useSpring({
-<<<<<<< Updated upstream
-    height: mostrarMenu1 ? "25px" : "0px",
-=======
     height: mostrarMenu1 ? "50px" : "0px",
->>>>>>> Stashed changes
     opacity: mostrarMenu1 ? 1 : 0,
     overflow: "hidden",
     config: { duration: 300 },
@@ -70,11 +66,8 @@ const Home = () => {
   });
 
   const dropdownAnimation3 = useSpring({
-<<<<<<< Updated upstream
-    height: mostrarMenu3 ? "150px" : "0px",
-=======
     height: mostrarMenu3 ? "160px" : "0px",
->>>>>>> Stashed changes
+
     opacity: mostrarMenu3 ? 1 : 0,
     overflow: "hidden",
     config: { duration: 300 },
@@ -121,24 +114,13 @@ const Home = () => {
       <div className="body">
         <div className="containerHome pt-12 ">
           <p style={playfairFontRegular} className="menu" onClick={opcion1}>
-<<<<<<< Updated upstream
-            Family
-=======
             History
->>>>>>> Stashed changes
           </p>
           <animated.div style={dropdownAnimation1}>
             <ul className="text-center -mt-2 space-y-1">
               <li>
                 {" "}
                 <Link
-<<<<<<< Updated upstream
-                  to="/history"
-                  className="subMenu"
-                  style={robotoFontRegular}
-                >
-                  HISTORY
-=======
                   to="/family"
                   className="subMenu"
                   style={robotoFontRegular}
@@ -155,7 +137,6 @@ const Home = () => {
                   style={robotoFontRegular}
                 >
                   Blue valley patagonia
->>>>>>> Stashed changes
                 </Link>
               </li>
             </ul>
