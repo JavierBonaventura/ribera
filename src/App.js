@@ -16,6 +16,7 @@ import MenuHamburguesa from "./components/MenuHamburguesa";
 import "./App.css";
 
 import BlueValley from "./components/BlueValley";
+import FormularioContacto from "./components/FormularioContacto";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="/especial" element={<Especial />} />
           <Route path="/reservaestibada" element={<ReservaEstibada />} />
           <Route path="/menuhamburguesa" element={<MenuHamburguesa />} />
+          <Route path="/contacto" element={<FormularioContacto />} />
         </Routes>
       </div>
     </Router>

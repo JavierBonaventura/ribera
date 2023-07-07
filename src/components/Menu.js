@@ -254,9 +254,13 @@ const Home = () => {
             </ul>
           </animated.div>
           <div className="flex flex-col -space-y-4 text-center pt-10">
-            <p style={robotoFontRegular} className="footerItems">
+            <Link
+              to="/contacto"
+              className="footerItems"
+              style={robotoFontRegular}
+            >
               Contact
-            </p>
+            </Link>
             <br></br>
             <p style={robotoFontRegular} className="footerItems">
               News
