@@ -178,7 +178,10 @@ const Screen1Text = () => {
                 >
                   UNIQUE TERRIOR
                 </p>
-                <p class="text-black text-xs" style={playfairFontRegular}>
+                <p
+                  style={playfairFontRegular}
+                  className="decoration-black	 text-xs"
+                >
                   Simply to say that Araucana is a unique vineyard doesn't do it
                   justice. Located in Ribera del Cuarzo, no other vineyard in
                   Patagonia is located so close to the Barda or in such
@@ -267,7 +270,10 @@ const Screen2Text = () => {
                 >
                   WATER{" "}
                 </p>
-                <p class="text-black text-xs" style={playfairFontRegular}>
+                <p
+                  style={playfairFontRegular}
+                  className="decoration-black	 text-xs "
+                >
                   The Rio Negro is the largest in Patagonia. The Limay and
                   Neuquén Rivers swell with water and minerals from mountain
                   snowmelt before flowing into the center and cast of the
@@ -284,13 +290,8 @@ const Screen2Text = () => {
               </div>
             </div>
 
-<<<<<<< Updated upstream
             <div className="container mx-auto flex flex-col justify-center  items-center">
               <div className="w-10/12">
-=======
-            <div className="container mx-auto flex flex-col justify-center  items-center w-4/5 mx-auto ">
-              <div className="bg-red-500">
->>>>>>> Stashed changes
                 <img
                   src={blackRiver}
                   alt=""
@@ -372,7 +373,10 @@ const Screen3Text = () => {
                 >
                   HOUSE{" "}
                 </p>
-                <p class="text-black text-xs" style={playfairFontRegular}>
+                <p
+                  style={playfairFontRegular}
+                  className="decoration-black	 text-xs "
+                >
                   Last but not least, the house next to the winery has become a
                   home to our family. Patagonian in style with inviting
                   architecture and a small garden with a view of the valley that
@@ -451,7 +455,10 @@ const Screen4Text = () => {
                 >
                   HOUSE{" "}
                 </p>
-                <p class="text-black text-xs" style={playfairFontRegular}>
+                <p
+                  style={playfairFontRegular}
+                  className="decoration-black	 text-xs "
+                >
                   "I was drawn to Ribera del Cuarzo as a winegrower, attracted
                   by the region's distinctive climate, biodiversity and geology,
                   but also by my strong family tics to Patagonia. And it was the

@@ -174,14 +174,7 @@ const Screen1Text = () => {
                 >
                   WINEMAKING
                 </p>
-<<<<<<< Updated upstream
-                <p
-                  style={playfairFontRegular}
-                  className="decoration-black	 text-xs leading-6"
-                >
-=======
                 <p class="text-black text-xs" style={playfairFontRegular}>
->>>>>>> Stashed changes
                   Winemaking is done in small open-top vats, all carried out
                   painstakingly by hand. During this stage we continue to keep
                   intervention to a minimum, trying to encourage spontaneous
@@ -271,14 +264,8 @@ const Screen2Text = () => {
                 >
                   CELLAR{" "}
                 </p>
-<<<<<<< Updated upstream
-                <p
-                  style={playfairFontRegular}
-                  className="decoration-black	 text-xs leading-6"
-                >
-=======
+
                 <p class="text-black text-xs" style={playfairFontRegular}>
->>>>>>> Stashed changes
                   Once the wines are finished, they are aged in barrcls. Only
                   twenty or thirty percent of the barrels we use are new, the
                   rest are reused so as not to overload the wine with oak. Once
@@ -364,14 +351,8 @@ const Screen3Text = () => {
                 >
                   VITICULTURIST AND WINEMAKER ERNESTO BAJDA{" "}
                 </p>
-<<<<<<< Updated upstream
-                <p
-                  style={playfairFontRegular}
-                  className="decoration-black	 text-xs leading-6"
-                >
-=======
+
                 <p class="text-black text-xs" style={playfairFontRegular}>
->>>>>>> Stashed changes
                   - 15 years working closely with Felipe and commited to
                   studying Argentine, and more specifically, Patagonian terroir.
                   - Recognized by The Drink Business as one of the top 100

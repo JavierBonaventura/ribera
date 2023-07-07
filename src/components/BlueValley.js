@@ -9,18 +9,12 @@ import botellasRibera from "../images/botellas-ribera.jpg";
 import iconIg from "../images/icon-ig.png";
 import "../App.css";
 
-<<<<<<< Updated upstream:src/components/History.js
-const History = () => {
-
+const BlueValley = () => {
   const bondiniFontRegular = {
     fontFamily: "Bondini, sans-serif",
     fontWeight: "normal",
     fontStyle: "normal",
   };
-
-=======
-const BlueValley = () => {
->>>>>>> Stashed changes:src/components/BlueValley.js
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
     fontWeight: "normal",
@@ -226,7 +220,10 @@ const BlueValley = () => {
 
         <div class="container mx-auto bg-[#212121]">
           <div class="py-10">
-            <h1 style={bondiniFontRegular}class="text-center text-sm text-[#F2ECE1]">
+            <h1
+              style={bondiniFontRegular}
+              class="text-center text-sm text-[#F2ECE1]"
+            >
               Creating unique wines in Patagonia <br />
               veer in winegrowing at the foot of the "barda". <br />
               Small family run winery

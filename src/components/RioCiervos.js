@@ -1,8 +1,5 @@
-<<<<<<< Updated upstream
 import React, { useEffect, useRef, useState } from "react";
-=======
-import React, { useEffect, useRef } from "react";
->>>>>>> Stashed changes
+
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
@@ -18,15 +15,12 @@ import iconIg from "../images/icon-ig.png";
 
 import "../App.css";
 function RioCiervos() {
-<<<<<<< Updated upstream
   const [showDropdown, setShowDropdown] = useState(false);
 
   const handleDownloadClick = () => {
     setShowDropdown(!showDropdown);
   };
 
-=======
->>>>>>> Stashed changes
   const scrollRef = useRef(null);
   const location = useLocation();
 
