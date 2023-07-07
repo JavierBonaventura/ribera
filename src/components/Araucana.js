@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
@@ -14,16 +14,19 @@ import iconIg from "../images/icon-ig.png";
 
 import "../App.css";
 function Araucana() {
-
   const scrollRef = useRef(null);
   const location = useLocation();
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
-    const scrollPosition = parseInt(params.get('scroll') || '0', 10);
+    const scrollPosition = parseInt(params.get("scroll") || "0", 10);
 
     if (scrollRef.current) {
-      scrollRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+      scrollRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
       window.scrollTo(0, scrollPosition);
     }
   }, [location]);
@@ -43,22 +46,22 @@ function Araucana() {
   return (
     <div>
       <header className="py-3 fixed top-0 left-0 right-0 z-50 ">
-          <div class="container mx-auto">
-            <div class="flex justify-between items-center px-5">
-              <div class="w-20 md:w-36">
-                <img src={logo} alt="" class="w-full" />
-              </div>
+        <div class="container mx-auto">
+          <div class="flex justify-between items-center px-5">
+            <div class="w-20 md:w-36">
+              <img src={logo} alt="" class="w-full" />
+            </div>
 
-              <div class="w-8">
-                <Link to="/MenuHamburguesa">
-                  <img src={hambur} alt="" className="w-full" />
-                </Link>{" "}
-              </div>
+            <div class="w-8">
+              <Link to="/MenuHamburguesa">
+                <img src={hambur} alt="" className="w-full" />
+              </Link>{" "}
             </div>
           </div>
-        </header>
+        </div>
+      </header>
 
-      <div  ref={scrollRef} className="bg-[#231F20] py-5">
+      <div ref={scrollRef} className="bg-[#231F20] py-5">
         <div className="container mx-auto flex flex-col justify-center items-center mt-10">
           <div className="w-1/3">
             <img src={araucanaWine} alt="" className="w-full" />

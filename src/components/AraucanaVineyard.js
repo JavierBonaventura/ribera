@@ -40,7 +40,7 @@ const ConstructionPage = () => {
   return (
     <div>
       <body class="bg-[#F2ECE1] ">
-      <header className="py-3 fixed top-0 left-0 right-0 z-50 ">
+        <header className="py-3 fixed top-0 left-0 right-0 z-50 ">
           <div class="container mx-auto">
             <div class="flex justify-between items-center px-5">
               <div class="w-20 md:w-36">

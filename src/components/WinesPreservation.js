@@ -12,33 +12,33 @@ import "../App.css";
 
 function Header() {
   const playfairFontBlack = {
-    fontFamily: 'Playfair Black, sans-serif',
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    fontFamily: "Playfair Black, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
   };
   const playfairFontItalic = {
     fontFamily: "Playfair Italic , sans-serif",
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    fontWeight: "normal",
+    fontStyle: "normal",
   };
 
   return (
     <div>
       <header className="py-3 fixed top-0 left-0 right-0 z-50 ">
-          <div class="container mx-auto">
-            <div class="flex justify-between items-center px-5">
-              <div class="w-20 md:w-36">
-                <img src={logo} alt="" class="w-full" />
-              </div>
+        <div class="container mx-auto">
+          <div class="flex justify-between items-center px-5">
+            <div class="w-20 md:w-36">
+              <img src={logo} alt="" class="w-full" />
+            </div>
 
-              <div class="w-8">
-                <Link to="/MenuHamburguesa">
-                  <img src={hambur} alt="" className="w-full" />
-                </Link>{" "}
-              </div>
+            <div class="w-8">
+              <Link to="/MenuHamburguesa">
+                <img src={hambur} alt="" className="w-full" />
+              </Link>{" "}
             </div>
           </div>
-        </header>
+        </div>
+      </header>
 
       <div className="bg-[#F2ECE1] py-3">
         <div className="container mx-auto flex flex-col justify-center items-center mt-10">
@@ -69,7 +69,7 @@ const WinesPreservation = () => {
 
   const handleNext = () => {
     if (currentScreen === 2) {
-      setCurrentScreen(0); 
+      setCurrentScreen(0);
     } else {
       setCurrentScreen(currentScreen + 1);
     }
@@ -77,7 +77,7 @@ const WinesPreservation = () => {
 
   const handlePrev = () => {
     if (currentScreen === 0) {
-      setCurrentScreen(2); 
+      setCurrentScreen(2);
     } else {
       setCurrentScreen(currentScreen - 1);
     }
@@ -120,9 +120,9 @@ const WinesPreservation = () => {
 
 const Screen1 = () => {
   const playfairFontBlack = {
-    fontFamily: 'Playfair Black, sans-serif',
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    fontFamily: "Playfair Black, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
   };
   return (
     <div className="mt-[-20px]">
@@ -150,16 +150,16 @@ const Screen1 = () => {
 };
 const Screen1Text = () => {
   const playfairFontRegular = {
-    fontFamily: 'Playfair Regular, sans-serif',
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    fontFamily: "Playfair Regular, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
   };
-  
+
   const robotoFontRegular = {
     fontFamily: "Roboto Regular , sans-serif",
-    fontWeight: 'normal',
-    fontStyle: 'normal',
-    fontSize: '16px',
+    fontWeight: "normal",
+    fontStyle: "normal",
+    fontSize: "16px",
   };
   return (
     <div>
@@ -178,10 +178,18 @@ const Screen1Text = () => {
                   style={playfairFontRegular}
                   className="decoration-black	 text-xs leading-6"
                 >
-                  Winemaking is done in small open-top vats, all carried out painstakingly by hand. During this stage we continue to keep intervention to a minimum, trying to encourage spontaneous fermentation and always respecting the terroir. We barcly add any sulfites in the traditional way to preserve the wines from oxidation and protect their microbiology. We take our lead from the vineyard; it tells us when the best time to harvest is for maximum expression.
-
-Each of the vats in which we carry out the fermentation is filled with two thousand kilos of grapes and they are handled traditionally: manual pressing, deslestage, mainly with the Malbec, and very gentle pumping-over at the end.
-
+                  Winemaking is done in small open-top vats, all carried out
+                  painstakingly by hand. During this stage we continue to keep
+                  intervention to a minimum, trying to encourage spontaneous
+                  fermentation and always respecting the terroir. We barcly add
+                  any sulfites in the traditional way to preserve the wines from
+                  oxidation and protect their microbiology. We take our lead
+                  from the vineyard; it tells us when the best time to harvest
+                  is for maximum expression. Each of the vats in which we carry
+                  out the fermentation is filled with two thousand kilos of
+                  grapes and they are handled traditionally: manual pressing,
+                  deslestage, mainly with the Malbec, and very gentle
+                  pumping-over at the end.
                 </p>
               </div>
             </div>
@@ -201,9 +209,9 @@ Each of the vats in which we carry out the fermentation is filled with two thous
 
 const Screen2 = () => {
   const playfairFontBlack = {
-    fontFamily: 'Playfair Black, sans-serif',
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    fontFamily: "Playfair Black, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
   };
   return (
     <div className="mt-[-20px]">
@@ -235,16 +243,16 @@ const Screen2 = () => {
 };
 const Screen2Text = () => {
   const playfairFontRegular = {
-    fontFamily: 'Playfair Regular, sans-serif',
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    fontFamily: "Playfair Regular, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
   };
-  
+
   const robotoFontRegular = {
     fontFamily: "Roboto Regular , sans-serif",
-    fontWeight: 'normal',
-    fontStyle: 'normal',
-    fontSize: '16px',
+    fontWeight: "normal",
+    fontStyle: "normal",
+    fontSize: "16px",
   };
   return (
     <div>
@@ -263,9 +271,14 @@ const Screen2Text = () => {
                   style={playfairFontRegular}
                   className="decoration-black	 text-xs leading-6"
                 >
-                 Once the wines are finished, they are aged in barrcls.
-Only twenty or thirty percent of the barrels we use are new, the rest are reused so as not to overload the wine with oak. Once the twelve to fourteen months aging period is over, it's time to make the blends and here our decisions are made by the barrel: every barrel is a world unto itself and we taste the expression of cach, deciding which line its contents will suit best.
-
+                  Once the wines are finished, they are aged in barrcls. Only
+                  twenty or thirty percent of the barrels we use are new, the
+                  rest are reused so as not to overload the wine with oak. Once
+                  the twelve to fourteen months aging period is over, it's time
+                  to make the blends and here our decisions are made by the
+                  barrel: every barrel is a world unto itself and we taste the
+                  expression of cach, deciding which line its contents will suit
+                  best.
                 </p>
               </div>
             </div>
@@ -285,9 +298,9 @@ Only twenty or thirty percent of the barrels we use are new, the rest are reused
 
 const Screen3 = () => {
   const playfairFontBlack = {
-    fontFamily: 'Playfair Black, sans-serif',
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    fontFamily: "Playfair Black, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
   };
   return (
     <div className="mt-[-20px]">
@@ -319,16 +332,16 @@ const Screen3 = () => {
 };
 const Screen3Text = () => {
   const playfairFontRegular = {
-    fontFamily: 'Playfair Regular, sans-serif',
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    fontFamily: "Playfair Regular, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
   };
-  
+
   const robotoFontRegular = {
     fontFamily: "Roboto Regular , sans-serif",
-    fontWeight: 'normal',
-    fontStyle: 'normal',
-    fontSize: '16px',
+    fontWeight: "normal",
+    fontStyle: "normal",
+    fontSize: "16px",
   };
   return (
     <div>
@@ -347,11 +360,10 @@ const Screen3Text = () => {
                   style={playfairFontRegular}
                   className="decoration-black	 text-xs leading-6"
                 >
-                
-- 15 years working closely with Felipe and commited to studying Argentine, and more specifically, Patagonian terroir.
-
-- Recognized by The Drink Business as one of the top 100 winekamers in the world, and best for Malbec.
-
+                  - 15 years working closely with Felipe and commited to
+                  studying Argentine, and more specifically, Patagonian terroir.
+                  - Recognized by The Drink Business as one of the top 100
+                  winekamers in the world, and best for Malbec.
                 </p>
               </div>
             </div>

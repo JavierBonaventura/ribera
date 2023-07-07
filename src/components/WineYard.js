@@ -14,34 +14,33 @@ import iconIg from "../images/icon-ig.png";
 import "../App.css";
 
 function Header() {
-
   const playfairFontBlack = {
-    fontFamily: 'Playfair Black, sans-serif',
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    fontFamily: "Playfair Black, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
   };
   const playfairFontItalic = {
     fontFamily: "Playfair Italic , sans-serif",
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    fontWeight: "normal",
+    fontStyle: "normal",
   };
   return (
     <div>
       <header className="py-3 fixed top-0 left-0 right-0 z-50 ">
-          <div class="container mx-auto">
-            <div class="flex justify-between items-center px-5">
-              <div class="w-20 md:w-36">
-                <img src={logo} alt="" class="w-full" />
-              </div>
+        <div class="container mx-auto">
+          <div class="flex justify-between items-center px-5">
+            <div class="w-20 md:w-36">
+              <img src={logo} alt="" class="w-full" />
+            </div>
 
-              <div class="w-8">
-                <Link to="/MenuHamburguesa">
-                  <img src={hambur} alt="" className="w-full" />
-                </Link>{" "}
-              </div>
+            <div class="w-8">
+              <Link to="/MenuHamburguesa">
+                <img src={hambur} alt="" className="w-full" />
+              </Link>{" "}
             </div>
           </div>
-        </header>
+        </div>
+      </header>
 
       <div className="bg-[#F2ECE1] py-3">
         <div className="container mx-auto flex flex-col justify-center items-center mt-10">
@@ -72,7 +71,7 @@ const WineYard = () => {
 
   const handleNext = () => {
     if (currentScreen === 3) {
-      setCurrentScreen(0); 
+      setCurrentScreen(0);
     } else {
       setCurrentScreen(currentScreen + 1);
     }
@@ -80,7 +79,7 @@ const WineYard = () => {
 
   const handlePrev = () => {
     if (currentScreen === 0) {
-      setCurrentScreen(2); 
+      setCurrentScreen(2);
     } else {
       setCurrentScreen(currentScreen - 1);
     }
@@ -125,9 +124,9 @@ const WineYard = () => {
 
 const Screen1 = () => {
   const playfairFontBlack = {
-    fontFamily: 'Playfair Black, sans-serif',
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    fontFamily: "Playfair Black, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
   };
   return (
     <div className="mt-[-20px]">
@@ -155,16 +154,16 @@ const Screen1 = () => {
 };
 const Screen1Text = () => {
   const playfairFontRegular = {
-    fontFamily: 'Playfair Regular, sans-serif',
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    fontFamily: "Playfair Regular, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
   };
-  
+
   const robotoFontRegular = {
     fontFamily: "Roboto Regular , sans-serif",
-    fontWeight: 'normal',
-    fontStyle: 'normal',
-    fontSize: '16px',
+    fontWeight: "normal",
+    fontStyle: "normal",
+    fontSize: "16px",
   };
   return (
     <div>
@@ -213,9 +212,9 @@ const Screen1Text = () => {
 
 const Screen2 = () => {
   const playfairFontBlack = {
-    fontFamily: 'Playfair Black, sans-serif',
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    fontFamily: "Playfair Black, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
   };
   return (
     <div className="mt-[-20px]">
@@ -247,16 +246,16 @@ const Screen2 = () => {
 };
 const Screen2Text = () => {
   const playfairFontRegular = {
-    fontFamily: 'Playfair Regular, sans-serif',
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    fontFamily: "Playfair Regular, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
   };
-  
+
   const robotoFontRegular = {
     fontFamily: "Roboto Regular , sans-serif",
-    fontWeight: 'normal',
-    fontStyle: 'normal',
-    fontSize: '16px',
+    fontWeight: "normal",
+    fontStyle: "normal",
+    fontSize: "16px",
   };
   return (
     <div>
@@ -291,16 +290,15 @@ const Screen2Text = () => {
               </div>
             </div>
 
-
             <div className="container mx-auto flex flex-col justify-center  items-center">
-        <div>
-          <img
-            src={blackRiver}
-            alt=""
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </div>
+              <div className="w-10/12">
+                <img
+                  src={blackRiver}
+                  alt=""
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -317,9 +315,9 @@ const Screen2Text = () => {
 
 const Screen3 = () => {
   const playfairFontBlack = {
-    fontFamily: 'Playfair Black, sans-serif',
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    fontFamily: "Playfair Black, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
   };
   return (
     <div className="mt-[-20px]">
@@ -351,16 +349,16 @@ const Screen3 = () => {
 };
 const Screen3Text = () => {
   const playfairFontRegular = {
-    fontFamily: 'Playfair Regular, sans-serif',
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    fontFamily: "Playfair Regular, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
   };
-  
+
   const robotoFontRegular = {
     fontFamily: "Roboto Regular , sans-serif",
-    fontWeight: 'normal',
-    fontStyle: 'normal',
-    fontSize: '16px',
+    fontWeight: "normal",
+    fontStyle: "normal",
+    fontSize: "16px",
   };
   return (
     <div>
@@ -403,9 +401,9 @@ const Screen3Text = () => {
 };
 const Screen4 = () => {
   const playfairFontBlack = {
-    fontFamily: 'Playfair Black, sans-serif',
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    fontFamily: "Playfair Black, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
   };
   return (
     <div className="mt-[-20px]">
@@ -433,16 +431,16 @@ const Screen4 = () => {
 };
 const Screen4Text = () => {
   const playfairFontRegular = {
-    fontFamily: 'Playfair Regular, sans-serif',
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    fontFamily: "Playfair Regular, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
   };
-  
+
   const robotoFontRegular = {
     fontFamily: "Roboto Regular , sans-serif",
-    fontWeight: 'normal',
-    fontStyle: 'normal',
-    fontSize: '16px',
+    fontWeight: "normal",
+    fontStyle: "normal",
+    fontSize: "16px",
   };
   return (
     <div>

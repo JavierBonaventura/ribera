@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
@@ -12,24 +12,30 @@ import araucanaMalbecWineShort from "../images/araucana-malbec-wine-short.png";
 import araucanaAzulWineShort from "../images/araucana-azul-wine-short.png";
 import iconIg from "../images/icon-ig.png";
 
-
 import "../App.css";
 function RioCiervos() {
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const handleDownloadClick = () => {
+    setShowDropdown(!showDropdown);
+  };
 
   const scrollRef = useRef(null);
   const location = useLocation();
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
-    const scrollPosition = parseInt(params.get('scroll') || '0', 10);
+    const scrollPosition = parseInt(params.get("scroll") || "0", 10);
 
     if (scrollRef.current) {
-      scrollRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+      scrollRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
       window.scrollTo(0, scrollPosition);
     }
   }, [location]);
-
-
 
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
@@ -46,20 +52,20 @@ function RioCiervos() {
   return (
     <div>
       <header className="py-3 fixed top-0 left-0 right-0 z-50 ">
-          <div class="container mx-auto">
-            <div class="flex justify-between items-center px-5">
-              <div class="w-20 md:w-36">
-                <img src={logo} alt="" class="w-full" />
-              </div>
+        <div class="container mx-auto">
+          <div class="flex justify-between items-center px-5">
+            <div class="w-20 md:w-36">
+              <img src={logo} alt="" class="w-full" />
+            </div>
 
-              <div class="w-8">
-                <Link to="/MenuHamburguesa">
-                  <img src={hambur} alt="" className="w-full" />
-                </Link>{" "}
-              </div>
+            <div class="w-8">
+              <Link to="/MenuHamburguesa">
+                <img src={hambur} alt="" className="w-full" />
+              </Link>{" "}
             </div>
           </div>
-        </header>
+        </div>
+      </header>
 
       <div ref={scrollRef} className="bg-[#231F20] py-5">
         <div className="container mx-auto flex flex-col justify-center items-center mt-10">
@@ -98,18 +104,31 @@ function RioCiervos() {
                   largo de los 200k a la vera norte y sur del río."
                 </p>
               </div>
-              <div className="w-2/3 mx-auto flex justify-center">
-                <a href="" className="border-b border-[#C3B17D]">
-                  <div className="w-2 inline-block">
-                    <img src={iconDownload} alt="" className="w-full" />
-                  </div>
-                  <span
-                    className="ml-2 text-xs text-[#C3B17D] "
-                    style={robotoFontRegular}
+
+              <div className="w-2/3 mx-auto">
+                <div className="flex justify-center">
+                  <a
+                    className="border-b border-[#C3B17D]"
+                    onClick={handleDownloadClick}
                   >
-                    Descargar ficha técnica
-                  </span>
-                </a>
+                    <div className="w-2 inline-block">
+                      <img src={iconDownload} alt="" className="w-full" />
+                    </div>
+                    <span className="ml-2 text-xs text-[#C3B17D]">
+                      Descargar ficha técnica
+                    </span>
+                  </a>
+                </div>
+
+                {showDropdown && (
+                  <div className="mt-2 w-48 mx-auto">
+                    <ul className="text-xs text-[#C3B17D] text-center">
+                      <li className="py-2 px-4 hover:bg-gray-100">Opción 1</li>
+                      <li className="py-2 px-4 hover:bg-gray-100">Opción 2</li>
+                      <li className="py-2 px-4 hover:bg-gray-100">Opción 3</li>
+                    </ul>
+                  </div>
+                )}
               </div>
             </div>
           </div>
