@@ -27,24 +27,24 @@ function Header() {
   };
   return (
     <div>
-      <header className="bg-[#F2ECE1] py-3 px-3">
-        <div className="container mx-auto">
-          <div className="flex bg-[#F2ECE1] justify-between items-center">
-            <div className="w-1/4">
-              <img src={logo} alt="" className="w-full" />
-            </div>
+      <header className="py-3 fixed top-0 left-0 right-0 z-50 ">
+          <div class="container mx-auto">
+            <div class="flex justify-between items-center px-5">
+              <div class="w-20 md:w-36">
+                <img src={logo} alt="" class="w-full" />
+              </div>
 
-            <div className="w-8">
-              <Link to="/MenuHamburguesa">
-                <img src={hambur} alt="" className="w-full" />
-              </Link>
+              <div class="w-8">
+                <Link to="/MenuHamburguesa">
+                  <img src={hambur} alt="" className="w-full" />
+                </Link>{" "}
+              </div>
             </div>
           </div>
-        </div>
-      </header>
+        </header>
 
       <div className="bg-[#F2ECE1] py-3">
-        <div className="container mx-auto flex flex-col justify-center items-center">
+        <div className="container mx-auto flex flex-col justify-center items-center mt-10">
           <div className="flex flex-col gap-y-5">
             <div className="pt-16">
               <h1

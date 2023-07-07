@@ -45,7 +45,7 @@ const Home = () => {
   return (
     <div className="containerHome pt-8 backgroundHambuerguesa">
       <div className="flex">
-        <img src={logo} alt="Imagen 1" className=" ml-36 w-1/4" />;
+        <img src={logo} alt="Imagen 1" className=" ml-44 w-1/4" />;
         <Link to="/">
           <svg
             className="ml-10 pt-5"

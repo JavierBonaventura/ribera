@@ -15,6 +15,7 @@ import ReservaEstibada from "./components/ReservaEstibada";
 import MenuHamburguesa from "./components/MenuHamburguesa";
 import "./App.css";
 import Tst from './components/tst'
+import Acerca from './components/Acerca'
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route path="/reservaestibada" element={<ReservaEstibada />} />
           <Route path="/menuhamburguesa" element={<MenuHamburguesa />} />
           <Route path="/tst" element={<Tst />} />
+          <Route path="/acerca" element={<Acerca />} />
 
         </Routes>
       </div>

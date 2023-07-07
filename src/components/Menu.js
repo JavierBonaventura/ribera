@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../App.css';
 import logo from '../images/Escudo Bodega Ribera del Cuarzo-FINALcurvas-02.png';
 import { useSpring, animated } from '@react-spring/web';
+import hambur from "../images/menu-hambur.png";
 
 
 
@@ -98,6 +99,13 @@ const Home = () => {
 
   return (
     <div className="containerHome pt-8 background">
+                  <div className="w-full grid justify-items-end pr-6">
+                  <div className="w-8 ">
+              <Link to="/MenuHamburguesa">
+                <img src={hambur} alt="" className="w-full" />
+              </Link>
+            </div>
+            </div>
        <img src={logo} alt="Imagen 1" className="logo" />
  
       <div className="body">

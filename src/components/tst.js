@@ -1,34 +1,56 @@
 import React, { useState } from 'react';
-import { useSpring, animated } from '@react-spring/web';
+import { useTransition, animated } from '@react-spring/web';
+import Acerca from './Acerca'
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
-const DropdownMenu = () => {
-  const [isOpen, setIsOpen] = useState(false);
 
-  const dropdownAnimation = useSpring({
-    height: isOpen ? '70px' : '0px',
-    opacity: isOpen ? 1 : 0,
-    overflow: 'hidden',
-    config: { duration: 500 },
-  });
 
-  const handleMenuClick = () => {
-    setIsOpen(!isOpen);
+function App() {
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const handleLinkClick = () => {
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setIsTransitioning(false);
+    }, 500);
   };
+
+  const transitions = useTransition(isTransitioning, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+  });
 
   return (
     <div>
-      <button onClick={handleMenuClick}>menu 1</button>
-      <animated.div style={dropdownAnimation}>
+      <nav>
         <ul>
-          <li>Opción 1</li>
-          <li>Opción 2</li>
-          <li>Opción 3</li>
+          <li>
+            <Link to="/" onClick={handleLinkClick}>
+              Inicio
+            </Link>
+          </li>
+          <li>
+            <Link to="/acerca" onClick={handleLinkClick}>
+              Acerca
+            </Link>
+          </li>
+          <li>
+            <Link to="/contacto" onClick={handleLinkClick}>
+              Contacto
+            </Link>
+          </li>
         </ul>
-      </animated.div>
-      <button onClick={handleMenuClick}>menu 2</button>
+      </nav>
 
+      {transitions((style, item) => (
+        <animated.div style={style}>
+          <Route path="/acerca" element={<Acerca />} />
+
+        </animated.div>
+      ))}
     </div>
   );
-};
+}
 
-export default DropdownMenu;
+export default App;

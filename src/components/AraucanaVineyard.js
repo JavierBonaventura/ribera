@@ -40,10 +40,10 @@ const ConstructionPage = () => {
   return (
     <div>
       <body class="bg-[#F2ECE1] ">
-        <header class="py-3">
+      <header className="py-3 fixed top-0 left-0 right-0 z-50 ">
           <div class="container mx-auto">
             <div class="flex justify-between items-center px-5">
-              <div class="w-28 md:w-36">
+              <div class="w-20 md:w-36">
                 <img src={logo} alt="" class="w-full" />
               </div>
 
@@ -58,7 +58,7 @@ const ConstructionPage = () => {
 
         <div class="container mx-auto">
           <div class="py-5">
-            <div class="flex flex-col justify-center items-center">
+            <div class="flex flex-col justify-center items-center mt-10">
               <h1 class="text-black text-xs" style={playfairFontItalic}>
                 Patagonian Spirit
               </h1>
