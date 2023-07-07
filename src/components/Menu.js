@@ -9,6 +9,8 @@ import hambur from "../images/menu-hambur.png";
 
 
 const Home = () => {
+
+
   
   const playfairFontRegular = {
     fontFamily: 'Playfair Regular, sans-serif',
@@ -69,7 +71,7 @@ const Home = () => {
   });
   
   const dropdownAnimation3 = useSpring({
-    height: mostrarMenu3 ? '94px' : '0px',
+    height: mostrarMenu3 ? '150px' : '0px',
     opacity: mostrarMenu3 ? 1 : 0,
     overflow: 'hidden',
     config: { duration: 300 },
@@ -130,12 +132,12 @@ const Home = () => {
         <p style={playfairFontRegular} className="menu"  onClick={opcion3}>Wines</p>
         <animated.div style={dropdownAnimation3}>
         <ul className='text-center -mt-2 space-y-1'  >
-        <li>    <Link to="/riociervos" className="subMenu" style={robotoFontRegular}>RÍO DE LOS CIERVOS</Link></li>
-        <li>    <Link to="/araucana" className="subMenu" style={robotoFontRegular}>ARAUCANA</Link></li>
-       <li>    <Link to="/araucanaazul" className="subMenu" style={robotoFontRegular}>ARAUCANA AZUL</Link></li>
-       <li>  <Link to="/clasico" className="subMenu" style={robotoFontRegular}>CLÁSICO</Link></li>
-       <li><Link to="/especial" className="subMenu" style={robotoFontRegular}>ESPECIAL</Link></li>
-    <li>  <Link to="/reservaestibada" className="subMenu" style={robotoFontRegular}>RESERVA ESTIBADA</Link></li>
+        <li>    <Link to="/riociervos?scroll=0" className="subMenu" style={robotoFontRegular}>RÍO DE LOS CIERVOS</Link></li>
+        <li>    <Link to="/riociervos?scroll=980" className="subMenu" style={robotoFontRegular}>ARAUCANA</Link></li>
+       <li>    <Link to="/riociervos?scroll=1520" className="subMenu" style={robotoFontRegular}>ARAUCANA AZUL</Link></li>
+       <li>  <Link to="/araucana?scroll=0" className="subMenu" style={robotoFontRegular}>CLÁSICO</Link></li>
+       <li><Link to="/araucana?scroll=980" className="subMenu" style={robotoFontRegular}>ESPECIAL</Link></li>
+    <li>  <Link to="/araucana?scroll=1450" className="subMenu" style={robotoFontRegular}>RESERVA ESTIBADA</Link></li>
         </ul>
         </animated.div>
         <div className="flex flex-col -space-y-4 text-center pt-10">

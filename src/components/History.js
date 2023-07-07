@@ -76,7 +76,7 @@ const History = () => {
 
         <div class="container mx-auto">
           <div class="py-5">
-            <div class="flex flex-col justify-center items-center">
+            <div class="flex flex-col justify-center items-center mt-10">
               <h1 style={playfairFontItalic} class="text-black text-xs">
                 Family
               </h1>
