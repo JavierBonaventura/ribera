@@ -37,6 +37,8 @@ function RioCiervos() {
     }
   }, [location]);
 
+
+
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
     fontWeight: "normal",

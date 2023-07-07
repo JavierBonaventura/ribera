@@ -13,6 +13,13 @@ import carruajeHistory from "../images/carruaje-history.jpg";
 import "../App.css";
 
 const History = () => {
+
+  const bondiniFontRegular = {
+    fontFamily: "Bondini, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
     fontWeight: "normal",
@@ -293,7 +300,7 @@ const History = () => {
 
         <div class="container mx-auto bg-[#212121]">
           <div class="py-10">
-            <h1 class="text-center text-sm text-[#F2ECE1]">
+            <h1 style={bondiniFontRegular}class="text-center text-sm text-[#F2ECE1]">
               Creating unique wines in Patagonia <br />
               veer in winegrowing at the foot of the "barda". <br />
               Small family run winery

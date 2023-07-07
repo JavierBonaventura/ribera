@@ -58,6 +58,14 @@
 }
 
 
+@font-face {
+  font-family: 'Bondini';
+  src: url('../src/fonts/BodoniModa_72pt/BodoniModa_72pt-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
