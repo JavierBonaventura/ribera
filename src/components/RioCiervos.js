@@ -50,13 +50,21 @@ function RioCiervos() {
     fontStyle: "normal",
     fontSize: "16px",
   };
+
+  const bondiniFontRegular = {
+    fontFamily: "Bondini, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
   return (
     <div>
-      <header className="py-3 fixed top-0 left-0 right-0 z-50 ">
+      <header className="py-10 fixed top-0 left-0 right-0 z-50 ">
         <div class="container mx-auto">
           <div class="flex justify-between items-center px-5">
             <div class="w-20 md:w-36">
-              <img src={logo} alt="" class="w-full" />
+              <Link to="/">
+                <img src={logo} alt="" className="w-full" />
+              </Link>{" "}
             </div>
 
             <div class="w-8">
@@ -68,7 +76,7 @@ function RioCiervos() {
         </div>
       </header>
 
-      <div ref={scrollRef} className="bg-[#231F20] py-5">
+      <div ref={scrollRef} className="bg-[#231F20] pt-16">
         <div className="container mx-auto flex flex-col justify-center items-center mt-10">
           <div className="w-1/3">
             <img src={riberaWine} alt="" className="w-full" />
@@ -77,22 +85,22 @@ function RioCiervos() {
           <div className="flex flex-col gap-y-5">
             <div className="flex flex-col gap-y-5">
               <h1
-                className="uppercase text-xs text-[#C3B17D] text-center"
+                className="uppercase text-xs text-[#C3B17D] text-center tracking-widest"
                 style={robotoFontRegular}
               >
-                Araucana Rio de los ciervos
+                Araucana Río de los ciervos
               </h1>
               <h4
-                className="text-xs text-[#F2ECE1] text-center"
+                className="text-xs text-[#F2ECE1] text-center  tracking-widest"
                 style={robotoFontRegular}
               >
-                <i>Patagonia Argentina</i>
+                <i>Patagonia, Argentina</i>
               </h4>
             </div>
             <div className="flex flex-col gap-y-5">
               <div className="w-2/3 mx-auto">
                 <p
-                  className="text-[#F2ECE1] text-xs"
+                  className="text-[#F2ECE1] text-xs tracking-wider"
                   style={playfairFontRegular}
                 >
                   "Río de los Ciervos" es un pequeño pueblo ubicado en tierra
@@ -115,7 +123,7 @@ function RioCiervos() {
                     <div className="w-2 inline-block">
                       <img src={iconDownload} alt="" className="w-full" />
                     </div>
-                    <span className="ml-2 text-xs text-[#C3B17D]">
+                    <span className="ml-2 text-xs text-[#C3B17D] tracking-wider">
                       Descargar ficha técnica
                     </span>
                   </a>
@@ -143,15 +151,17 @@ function RioCiervos() {
           </div>
           <div>
             <h1
-              className="uppercase text-xs text-[#C3B17D] text-center"
+              className="uppercase text-xs text-[#C3B17D] text-center tracking-widest"
               style={robotoFontRegular}
             >
               Ribera del Cuarzo especial
             </h1>
           </div>
           <div className="bg-[#C3B17D] px-5 py-1 rounded-md">
-            <a href="" className="uppercase text-xs text-[#F2ECE1]">
-              Read more
+            <a href="" style={robotoFontRegular}>
+              <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
+                Read more
+              </span>
             </a>
           </div>
         </div>
@@ -161,28 +171,32 @@ function RioCiervos() {
           </div>
           <div>
             <h1
-              className="uppercase text-xs text-[#C3B17D] text-center"
+              className="uppercase text-xs text-[#C3B17D] text-center tracking-widest"
               style={robotoFontRegular}
             >
               Ribera del Cuarzo Río de los Ciervos
             </h1>
           </div>
           <div className="bg-[#C3B17D] px-5 py-1 rounded-md">
-            <a
-              href=""
-              className="uppercase text-xs text-[#F2ECE1]"
-              style={robotoFontRegular}
-            >
-              Read more
+            <a href="" style={robotoFontRegular}>
+              <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
+                Read more
+              </span>
             </a>
           </div>
         </div>
         <div className="container mx-auto">
           <div>
-            <p className="text-[#F2ECE1] text-xs text-center leading-5">
-              Creating unique wines in Patagonia <br />
-              Pioneer in winegrowing at the foot of the "barda". <br />
-              Small family run winery
+            <p
+              className="text-[#F2ECE1] text-xs text-center leading-5"
+              style={bondiniFontRegular}
+            >
+              {" "}
+              <i>
+                Creating unique wines in Patagonia <br />
+                Pioneer in winegrowing at the foot of the "barda". <br />
+                Small family run winery
+              </i>
             </p>
           </div>
         </div>
@@ -194,36 +208,30 @@ function RioCiervos() {
             <div className="flex gap-y-4 flex-col">
               <img src={araucanaWineShort} alt="" />
               <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
-                <a
-                  href=""
-                  className="uppercase text-xs text-[#F2ECE1]"
-                  style={robotoFontRegular}
-                >
-                  Read more
+                <a href="" style={robotoFontRegular}>
+                  <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
+                    Read more
+                  </span>
                 </a>
               </div>
             </div>
             <div className="flex gap-y-4 flex-col">
               <img src={araucanaMalbecWineShort} alt="" />
               <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
-                <a
-                  href=""
-                  className="uppercase text-xs text-[#F2ECE1]"
-                  style={robotoFontRegular}
-                >
-                  Read more
+                <a href="" style={robotoFontRegular}>
+                  <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
+                    Read more
+                  </span>
                 </a>
               </div>
             </div>
             <div className="flex gap-y-4 flex-col">
               <img src={araucanaAzulWineShort} alt="" />
               <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
-                <a
-                  href=""
-                  className="uppercase text-xs text-[#F2ECE1]"
-                  style={robotoFontRegular}
-                >
-                  Read more
+                <a href="" style={robotoFontRegular}>
+                  <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
+                    Read more
+                  </span>
                 </a>
               </div>
             </div>
@@ -232,10 +240,10 @@ function RioCiervos() {
       </div>
 
       <div className="bg-[#231F20] py-5">
-        <div className="container mx-auto flex flex-col gap-y-5">
-          <div>
+        <div className="container mx-auto flex flex-col gap-y-5 ">
+          <div className="">
             <h1
-              className="text-[#C3B17D] text-center text-xs uppercase"
+              className="text-[#C3B17D] text-center text-xs uppercase tracking-widest"
               style={robotoFontRegular}
             >
               Ribera del cuarzo
@@ -243,7 +251,7 @@ function RioCiervos() {
           </div>
           <div>
             <h2
-              className="text-[#F2ECE1] text-center text-xs"
+              className="text-[#F2ECE1] text-center text-xs tracking-widest"
               style={robotoFontRegular}
             >
               <i>Patagonia, Argentina</i>

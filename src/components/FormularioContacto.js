@@ -4,7 +4,7 @@ import "../App.css";
 import logo from "../images/Escudo Bodega Ribera del Cuarzo-FINALcurvas-02.png";
 import hambur from "../images/menu-hambur.png";
 import iconIg from "../images/icon-ig-form.png";
-import arrowDownload from "../images/arrow-download.png";
+import iconDownload from "../images/icon-download.png";
 
 const FormularioContacto = () => {
   const playfairFontRegular = {
@@ -13,10 +13,11 @@ const FormularioContacto = () => {
     fontStyle: "normal",
   };
 
-  const playfairFontItalic = {
-    fontFamily: "Playfair Italic , sans-serif",
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
     fontWeight: "normal",
     fontStyle: "normal",
+    fontSize: "16px",
   };
 
   const [nombre, setNombre] = useState("");
@@ -147,7 +148,7 @@ const FormularioContacto = () => {
                 </div>
                 <div className="flex items-center justify-start">
                   <button
-                    className="bg-[#F4EDE2] text-black hover:bg-[#C4AD77] rounded-xl  py-1 px-12  focus:outline-none focus:shadow-outline"
+                    className="bg-[#C3B17D] text-[#F2ECE1] text-sm hover:bg-[#C4AD77] rounded-md  py-2 px-8  focus:outline-none focus:shadow-outline"
                     type="submit"
                   >
                     Enviar
@@ -174,15 +175,19 @@ const FormularioContacto = () => {
                   <h2>@riberadelcuarzo</h2>
                 </div>
               </div>
-              <a
-                href=""
-                className="uppercase rounded-lg bg-[#C4AD77] hover:bg-[#86703d] text-sm  mx-auto px-1.5 py-1"
-              >
-                <div className="flex gap-x-1 items-center">
-                  <img src={arrowDownload} alt="" className="w-3" />
-                  <span> Download Brochure</span>
-                </div>
-              </a>
+              <div className="w-2/3 mx-auto flex justify-center">
+                <a href="" className="border-b border-[#C3B17D]">
+                  <div className="w-2 inline-block">
+                    <img src={iconDownload} alt="" className="w-full" />
+                  </div>
+                  <span
+                    className="ml-2 text-xs text-[#C3B17D]"
+                    style={robotoFontRegular}
+                  >
+                    Descargar Brochure
+                  </span>
+                </a>
+              </div>
             </div>
           </div>
         </div>

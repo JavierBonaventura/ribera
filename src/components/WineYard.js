@@ -26,11 +26,13 @@ function Header() {
   };
   return (
     <div>
-      <header className="py-3 fixed top-0 left-0 right-0 z-50 ">
+      <header className="py-10 fixed top-0 left-0 right-0 z-50 ">
         <div class="container mx-auto">
           <div class="flex justify-between items-center px-5">
             <div class="w-20 md:w-36">
-              <img src={logo} alt="" class="w-full" />
+              <Link to="/">
+                <img src={logo} alt="" className="w-full" />
+              </Link>{" "}
             </div>
 
             <div class="w-8">
@@ -48,13 +50,13 @@ function Header() {
             <div className="pt-16">
               <h1
                 style={playfairFontItalic}
-                className="italic text-xs text-[#010101] text-center"
+                className="italic text-xs text-[#010101] text-center tracking-widest"
               >
                 Patagonian Spirit
               </h1>
               <h4
                 style={playfairFontBlack}
-                className="font-bold text-base text-[#C4AC77] text-center"
+                className="font-bold text-base text-[#C4AC77] text-center tracking-wider"
               >
                 THE VINEYARD
               </h4>
@@ -174,13 +176,13 @@ const Screen1Text = () => {
               <div className="w-4/5 mx-auto">
                 <p
                   style={robotoFontRegular}
-                  className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3"
+                  className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3 tracking-wide"
                 >
                   UNIQUE TERRIOR
                 </p>
                 <p
                   style={playfairFontRegular}
-                  className="decoration-black	 text-xs"
+                  className="decoration-black	 text-xs tracking-wider"
                 >
                   Simply to say that Araucana is a unique vineyard doesn't do it
                   justice. Located in Ribera del Cuarzo, no other vineyard in
@@ -266,13 +268,13 @@ const Screen2Text = () => {
               <div className="w-4/5 mx-auto">
                 <p
                   style={robotoFontRegular}
-                  className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3"
+                  className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3 tracking-wide"
                 >
                   WATER{" "}
                 </p>
                 <p
                   style={playfairFontRegular}
-                  className="decoration-black	 text-xs "
+                  className="decoration-black	 text-xs tracking-wider"
                 >
                   The Rio Negro is the largest in Patagonia. The Limay and
                   Neuquén Rivers swell with water and minerals from mountain
@@ -369,13 +371,13 @@ const Screen3Text = () => {
               <div className="w-4/5 mx-auto">
                 <p
                   style={robotoFontRegular}
-                  className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3"
+                  className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3 tracking-wide"
                 >
                   HOUSE{" "}
                 </p>
                 <p
                   style={playfairFontRegular}
-                  className="decoration-black	 text-xs "
+                  className="decoration-black	 text-xs tracking-wider"
                 >
                   Last but not least, the house next to the winery has become a
                   home to our family. Patagonian in style with inviting
@@ -451,13 +453,13 @@ const Screen4Text = () => {
               <div className="w-4/5 mx-auto">
                 <p
                   style={robotoFontRegular}
-                  className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3"
+                  className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3 tracking-wide"
                 >
                   HOUSE{" "}
                 </p>
                 <p
                   style={playfairFontRegular}
-                  className="decoration-black	 text-xs "
+                  className="decoration-black	 text-xs tracking-wider"
                 >
                   "I was drawn to Ribera del Cuarzo as a winegrower, attracted
                   by the region's distinctive climate, biodiversity and geology,

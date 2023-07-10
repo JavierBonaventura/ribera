@@ -25,11 +25,13 @@ function Header() {
 
   return (
     <div>
-      <header className="py-3 fixed top-0 left-0 right-0 z-50 ">
+      <header className="py-10 fixed top-0 left-0 right-0 z-50 ">
         <div class="container mx-auto">
           <div class="flex justify-between items-center px-5">
             <div class="w-20 md:w-36">
-              <img src={logo} alt="" class="w-full" />
+              <Link to="/">
+                <img src={logo} alt="" className="w-full" />
+              </Link>{" "}
             </div>
 
             <div class="w-8">
@@ -47,13 +49,13 @@ function Header() {
             <div className="pt-16">
               <h1
                 style={playfairFontItalic}
-                className="italic text-xs text-[#010101] text-center"
+                className="italic text-xs text-[#010101] text-center tracking-widest"
               >
                 Patagonian Spirit
               </h1>
               <h4
                 style={playfairFontBlack}
-                className="font-bold text-base text-[#C4AC77] text-center"
+                className="font-bold text-base text-[#C4AC77] text-center tracking-wider"
               >
                 WORK IN THE VINEYARD
               </h4>
@@ -174,11 +176,14 @@ const Screen1Text = () => {
               <div className="w-4/5 mx-auto">
                 <p
                   style={robotoFontRegular}
-                  className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3"
+                  className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3 tracking-wide"
                 >
                   WORKING METHODS
                 </p>
-                <p class="text-black text-xs " style={playfairFontRegular}>
+                <p
+                  class="text-black text-xs tracking-wider"
+                  style={playfairFontRegular}
+                >
                   Maintaining traditional working methods helps us to keep in
                   touch with the land, a connection that defines us as farmers.
                   At the estate, we also raise Criollo horses, the famous
@@ -260,11 +265,14 @@ const Screen2Text = () => {
               <div className="w-4/5 mx-auto">
                 <p
                   style={robotoFontRegular}
-                  className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3"
+                  className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3 tracking-wide"
                 >
                   HORSES{" "}
                 </p>
-                <p class="text-black text-xs" style={playfairFontRegular}>
+                <p
+                  class="text-black text-xs tracking-wider"
+                  style={playfairFontRegular}
+                >
                   Horses also provide manure, which goes into the compost we use
                   at the vineyard: it is added to organic waste from the wine
                   barrels and vats and everything consumed at the house. This is
@@ -346,11 +354,14 @@ const Screen3Text = () => {
               <div className="w-4/5 mx-auto">
                 <p
                   style={robotoFontRegular}
-                  className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3"
+                  className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3 tracking-wide"
                 >
                   WATER{" "}
                 </p>
-                <p class="text-black text-xs" style={playfairFontRegular}>
+                <p
+                  class="text-black text-xs tracking-wider"
+                  style={playfairFontRegular}
+                >
                   The Countess had planted the vineyard in the highest part of
                   the Barda river terrace, an unexplored area where no one had
                   ever considered such an enterprise: it meant having to pump
@@ -442,11 +453,14 @@ const Screen4Text = () => {
               <div className="w-4/5 mx-auto">
                 <p
                   style={robotoFontRegular}
-                  className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3"
+                  className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3 tracking-wide"
                 >
                   PLANTATION{" "}
                 </p>
-                <p class="text-black text-xs" style={playfairFontRegular}>
+                <p
+                  class="text-black text-xs tracking-wider"
+                  style={playfairFontRegular}
+                >
                   Araucana is planted using the traditional high cordon-method
                   with two meter gaps between the rows and a meter between each
                   plant resulting in a density of 5000 plants per hectare.

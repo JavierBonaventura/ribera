@@ -12,7 +12,6 @@ import carruajeHistory from "../images/carruaje-history.jpg";
 import "../App.css";
 
 const Family = () => {
-
   const bondiniFontRegular = {
     fontFamily: "Bondini, sans-serif",
     fontWeight: "normal",
@@ -64,11 +63,13 @@ const Family = () => {
   return (
     <div>
       <body class="bg-[#F2ECE1]">
-        <header className="py-3 fixed top-0 left-0 right-0 z-50 ">
+        <header className="py-10 fixed top-0 left-0 right-0 z-50  ">
           <div class="container mx-auto">
             <div class="flex justify-between items-center px-5">
               <div class="w-20 md:w-36">
-                <img src={logo} alt="" class="w-full" />
+                <Link to="/">
+                  <img src={logo} alt="" className="w-full" />
+                </Link>{" "}
               </div>
 
               <div class="w-8">
@@ -81,14 +82,17 @@ const Family = () => {
         </header>
 
         <div class="container mx-auto">
-          <div class="py-5">
+          <div class="pt-16 ">
             <div class="flex flex-col justify-center items-center mt-10">
-              <h1 style={playfairFontItalic} class="text-black text-xs">
+              <h1
+                style={playfairFontItalic}
+                class="text-black text-xs tracking-widest"
+              >
                 Family
               </h1>
               <h2
                 style={playfairFontBold}
-                class="uppercase text-[#C4AC77] text-sm font-bold"
+                class="uppercase text-[#C4AC77] text-sm font-bold  tracking-wider"
               >
                 Our History
               </h2>
@@ -126,19 +130,22 @@ const Family = () => {
             <div>
               <h1
                 style={playfairFontBlack}
-                class="text-[#C4AC77] font-bold text-sm"
+                class="text-[#C4AC77] font-bold text-sm tracking-wide"
               >
                 1883
               </h1>
               <h2
                 style={robotoFontRegular}
-                class="uppercase text-[#C4AC77] text-sm"
+                class="uppercase text-[#C4AC77] text-sm tracking-wide"
               >
                 Roots in patagonia
               </h2>
             </div>
             <div>
-              <p class="text-black text-xs" style={playfairFontRegular}>
+              <p
+                class="text-black text-xs tracking-wider"
+                style={playfairFontRegular}
+              >
                 We have our{" "}
                 <strong>
                   roots in Patagonia and in winemaking stretching back over 150
@@ -164,7 +171,7 @@ const Family = () => {
               <img src={personasHistory} alt="" class="w-full object-cover" />
             </div>
             <p
-              class="text-white text-xs pt-10 px-10"
+              class="text-white text-xs pt-10 px-10 tracking-wider"
               style={playfairFontRegular}
             >
               Stories of how these two individuals worked hard to create their
@@ -206,7 +213,10 @@ const Family = () => {
 
         <div class="container mx-auto bg-[#212121]">
           <div class="py-10">
-            <h1 style={bondiniFontRegular} class="text-center text-sm text-[#F2ECE1]">
+            <h1
+              style={bondiniFontRegular}
+              class="text-center text-sm text-[#F2ECE1]"
+            >
               Creating unique wines in Patagonia <br />
               veer in winegrowing at the foot of the "barda". <br />
               Small family run winery

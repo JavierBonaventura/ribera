@@ -109,11 +109,16 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <img src={logo} alt="Imagen 1" className="logo" />
-
+      <Link to="/">
+        <img src={logo} alt="" className="logo" />
+      </Link>{" "}
       <div className="body">
         <div className="containerHome pt-12 ">
-          <p style={playfairFontRegular} className="menu" onClick={opcion1}>
+          <p
+            style={playfairFontRegular}
+            className="menu sombra-menu tracking-wider"
+            onClick={opcion1}
+          >
             History
           </p>
           <animated.div style={dropdownAnimation1}>
@@ -122,7 +127,7 @@ const Home = () => {
                 {" "}
                 <Link
                   to="/family"
-                  className="subMenu"
+                  className="subMenu tracking-widest"
                   style={robotoFontRegular}
                 >
                   Family
@@ -133,7 +138,7 @@ const Home = () => {
                 {" "}
                 <Link
                   to="/bluevalley"
-                  className="subMenu"
+                  className="subMenu tracking-widest"
                   style={robotoFontRegular}
                 >
                   Blue valley patagonia
@@ -142,7 +147,11 @@ const Home = () => {
             </ul>
           </animated.div>
 
-          <p style={playfairFontRegular} className="menu" onClick={opcion2}>
+          <p
+            style={playfairFontRegular}
+            className="menu sombra-menu px-2 tracking-wider"
+            onClick={opcion2}
+          >
             Patagonian Spirit
           </p>
           <animated.div style={dropdownAnimation2}>
@@ -151,7 +160,7 @@ const Home = () => {
                 {" "}
                 <Link
                   to="/araucanavineyard"
-                  className="subMenu"
+                  className="subMenu tracking-widest"
                   style={robotoFontRegular}
                 >
                   ARAUCANA VINEYARD
@@ -160,7 +169,7 @@ const Home = () => {
               <li>
                 <Link
                   to="/workvineyard"
-                  className="subMenu"
+                  className="subMenu tracking-widest"
                   style={robotoFontRegular}
                 >
                   WORK IN THE VINEYARD
@@ -169,7 +178,7 @@ const Home = () => {
               <li>
                 <Link
                   to="/winespreservation"
-                  className="subMenu"
+                  className="subMenu tracking-widest"
                   style={robotoFontRegular}
                 >
                   WINES PRESERVATION
@@ -178,7 +187,7 @@ const Home = () => {
               <li>
                 <Link
                   to="/wineyard"
-                  className="subMenu"
+                  className="subMenu tracking-widest"
                   style={robotoFontRegular}
                 >
                   THE VINEYARD
@@ -187,7 +196,11 @@ const Home = () => {
             </ul>
           </animated.div>
 
-          <p style={playfairFontRegular} className="menu" onClick={opcion3}>
+          <p
+            style={playfairFontRegular}
+            className="menu sombra-menu tracking-wider"
+            onClick={opcion3}
+          >
             Wines
           </p>
           <animated.div style={dropdownAnimation3}>
@@ -196,7 +209,7 @@ const Home = () => {
                 {" "}
                 <Link
                   to="/riociervos?scroll=0"
-                  className="subMenu"
+                  className="subMenu tracking-widest"
                   style={robotoFontRegular}
                 >
                   RÍO DE LOS CIERVOS
@@ -206,7 +219,7 @@ const Home = () => {
                 {" "}
                 <Link
                   to="/riociervos?scroll=980"
-                  className="subMenu"
+                  className="subMenu tracking-widest"
                   style={robotoFontRegular}
                 >
                   ARAUCANA
@@ -216,7 +229,7 @@ const Home = () => {
                 {" "}
                 <Link
                   to="/riociervos?scroll=1520"
-                  className="subMenu"
+                  className="subMenu tracking-widest"
                   style={robotoFontRegular}
                 >
                   ARAUCANA AZUL
@@ -226,7 +239,7 @@ const Home = () => {
                 {" "}
                 <Link
                   to="/araucana?scroll=0"
-                  className="subMenu"
+                  className="subMenu tracking-widest"
                   style={robotoFontRegular}
                 >
                   CLÁSICO
@@ -235,7 +248,7 @@ const Home = () => {
               <li>
                 <Link
                   to="/araucana?scroll=980"
-                  className="subMenu"
+                  className="subMenu tracking-widest"
                   style={robotoFontRegular}
                 >
                   ESPECIAL
@@ -245,7 +258,7 @@ const Home = () => {
                 {" "}
                 <Link
                   to="/araucana?scroll=1450"
-                  className="subMenu"
+                  className="subMenu tracking-widest"
                   style={robotoFontRegular}
                 >
                   RESERVA ESTIBADA
@@ -253,20 +266,26 @@ const Home = () => {
               </li>
             </ul>
           </animated.div>
-          <div className="flex flex-col -space-y-4 text-center pt-10">
+          <div className="flex flex-col text-center pt-10">
             <Link
               to="/contacto"
-              className="footerItems"
+              className="footerItems tracking-widest"
               style={robotoFontRegular}
             >
               Contact
             </Link>
             <br></br>
-            <p style={robotoFontRegular} className="footerItems">
+            <p
+              style={robotoFontRegular}
+              className="footerItems tracking-widest"
+            >
               News
             </p>
             <br></br>
-            <p style={robotoFontRegular} className="footerItems">
+            <p
+              style={robotoFontRegular}
+              className="footerItems tracking-widest"
+            >
               Casa Pirque
             </p>
           </div>

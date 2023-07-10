@@ -38,12 +38,6 @@ const BlueValley = () => {
     fontStyle: "normal",
   };
 
-  const robotoFontThin = {
-    fontFamily: "Roboto Thin , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
     fontWeight: "normal",
@@ -60,11 +54,13 @@ const BlueValley = () => {
   return (
     <div>
       <body class="bg-[#F2ECE1]">
-        <header className="py-3 fixed top-0 left-0 right-0 z-50 ">
+        <header className="py-10 fixed top-0 left-0 right-0 z-50 ">
           <div class="container mx-auto">
             <div class="flex justify-between items-center px-5">
               <div class="w-20 md:w-36">
-                <img src={logo} alt="" class="w-full" />
+                <Link to="/">
+                  <img src={logo} alt="" className="w-full" />
+                </Link>{" "}
               </div>
 
               <div class="w-8">
@@ -77,14 +73,17 @@ const BlueValley = () => {
         </header>
 
         <div class="container mx-auto">
-          <div class="py-5">
+          <div class="pt-16">
             <div class="flex flex-col justify-center items-center mt-10">
-              <h1 style={playfairFontItalic} class="text-black text-xs">
+              <h1
+                style={playfairFontItalic}
+                class="text-black text-xs tracking-widest"
+              >
                 Family
               </h1>
               <h2
                 style={playfairFontBold}
-                class="uppercase text-[#C4AC77] text-sm font-bold"
+                class="uppercase text-[#C4AC77] text-sm font-bold tracking-wider"
               >
                 Our History
               </h2>
@@ -112,25 +111,30 @@ const BlueValley = () => {
 
         <div class="container mx-auto bg-[#F2ECE1] px-10">
           <div class="flex justify-center py-2">
-            <span class="uppercase text-[0.5rem]">Sunset at valle azul</span>
+            <span class="uppercase text-[0.5rem] tracking-wide">
+              Sunset at valle azul
+            </span>
           </div>
           <div class="py-10 flex flex-col gap-y-5">
             <div>
               <h1
                 style={playfairFontBlack}
-                class="text-[#C4AC77] font-bold text-sm uppercase"
+                class="text-[#C4AC77] font-bold text-sm uppercase tracking-wide"
               >
                 The 2000´s
               </h1>
               <h2
                 style={robotoFontRegular}
-                class="uppercase text-[#C4AC77] text-sm"
+                class="uppercase text-[#C4AC77] text-sm tracking-wide"
               >
                 Working with Nicolas Catena
               </h2>
             </div>
             <div class="">
-              <p class="text-black text-xs" style={playfairFontRegular}>
+              <p
+                class="text-black text-xs tracking-wider"
+                style={playfairFontRegular}
+              >
                 <strong>
                   My career in wines started as a very young person
                 </strong>
@@ -165,19 +169,22 @@ const BlueValley = () => {
             <div>
               <h1
                 style={playfairFontBlack}
-                class="text-[#C4AC77] font-bold text-sm uppercase"
+                class="text-[#C4AC77] font-bold text-sm uppercase tracking-wide"
               >
                 The 2000´s
               </h1>
               <h2
                 style={robotoFontRegular}
-                class="uppercase text-[#C4AC77] text-sm"
+                class="uppercase text-[#C4AC77] text-sm tracking-wide"
               >
                 Working with Nicolas Catena
               </h2>
             </div>
             <div class="">
-              <p class="text-black text-xs" style={playfairFontRegular}>
+              <p
+                class="text-black text-xs tracking-wider"
+                style={playfairFontRegular}
+              >
                 The story of this winery started in 2004, when italian countess
                 Noemi Marone Cinzano discovered this far away land, planted a
                 five hectares vineyard at the foot of the barda (a specific

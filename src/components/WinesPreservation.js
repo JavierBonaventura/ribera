@@ -24,11 +24,13 @@ function Header() {
 
   return (
     <div>
-      <header className="py-3 fixed top-0 left-0 right-0 z-50 ">
+      <header className="py-10 fixed top-0 left-0 right-0 z-50 ">
         <div class="container mx-auto">
           <div class="flex justify-between items-center px-5">
             <div class="w-20 md:w-36">
-              <img src={logo} alt="" class="w-full" />
+              <Link to="/">
+                <img src={logo} alt="" className="w-full" />
+              </Link>{" "}
             </div>
 
             <div class="w-8">
@@ -46,13 +48,13 @@ function Header() {
             <div className="pt-16">
               <h1
                 style={playfairFontItalic}
-                className="italic text-xs text-[#010101] text-center"
+                className="italic text-xs text-[#010101] text-center tracking-widest"
               >
                 Patagonian Spirit
               </h1>
               <h4
                 style={playfairFontBlack}
-                className="font-bold text-base text-[#C4AC77] text-center"
+                className="font-bold text-base text-[#C4AC77] text-center tracking-wider"
               >
                 WINES PRESERVATION
               </h4>
@@ -170,11 +172,14 @@ const Screen1Text = () => {
               <div className="w-4/5 mx-auto">
                 <p
                   style={robotoFontRegular}
-                  className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3"
+                  className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3 tracking-wide"
                 >
                   WINEMAKING
                 </p>
-                <p class="text-black text-xs" style={playfairFontRegular}>
+                <p
+                  class="text-black text-xs tracking-wider"
+                  style={playfairFontRegular}
+                >
                   Winemaking is done in small open-top vats, all carried out
                   painstakingly by hand. During this stage we continue to keep
                   intervention to a minimum, trying to encourage spontaneous
@@ -260,12 +265,15 @@ const Screen2Text = () => {
               <div className="w-4/5 mx-auto">
                 <p
                   style={robotoFontRegular}
-                  className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3"
+                  className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3 tracking-wide"
                 >
                   CELLAR{" "}
                 </p>
 
-                <p class="text-black text-xs" style={playfairFontRegular}>
+                <p
+                  class="text-black text-xs tracking-wider"
+                  style={playfairFontRegular}
+                >
                   Once the wines are finished, they are aged in barrcls. Only
                   twenty or thirty percent of the barrels we use are new, the
                   rest are reused so as not to overload the wine with oak. Once
@@ -347,12 +355,15 @@ const Screen3Text = () => {
               <div className="w-4/5 mx-auto">
                 <p
                   style={robotoFontRegular}
-                  className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3"
+                  className="decoration-black	text-[#C4AC77] text-xs leading-6 pb-3 tracking-wide"
                 >
                   VITICULTURIST AND WINEMAKER ERNESTO BAJDA{" "}
                 </p>
 
-                <p class="text-black text-xs" style={playfairFontRegular}>
+                <p
+                  class="text-black text-xs tracking-wider"
+                  style={playfairFontRegular}
+                >
                   - 15 years working closely with Felipe and commited to
                   studying Argentine, and more specifically, Patagonian terroir.
                   - Recognized by The Drink Business as one of the top 100

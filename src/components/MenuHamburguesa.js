@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
-import logo from "../images/Escudo Bodega Ribera del Cuarzo-FINALcurvas-02.png";
+import logo from "../images/logo.svg";
 import { useSpring, animated } from "@react-spring/web";
 import hambur from "../images/menu-hambur.png";
-
 import iconIg from "../images/icon-ig.png";
 
 const Home = () => {
@@ -14,35 +13,6 @@ const Home = () => {
 
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-
-  const playfairFontBlack = {
-    fontFamily: "Playfair Black, sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-  const playfairFontItalic = {
-    fontFamily: "Playfair Italic , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-
-  const playfairFontBold = {
-    fontFamily: "Playfair Bold , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-
-  const playfairFontExtraBold = {
-    fontFamily: "Playfair ExtraBold , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-
-  const robotoFontThin = {
-    fontFamily: "Roboto Thin , sans-serif",
     fontWeight: "normal",
     fontStyle: "normal",
   };
@@ -107,10 +77,16 @@ const Home = () => {
   };
 
   return (
-    <div className="containerHome pt-8 backgroundHambuerguesa">
+    <div className="containerHome pt-8 backgroundHambuerguesa  ">
       <div className="flex">
-        <img src={logo} alt="Imagen 1" className=" ml-44 w-1/4" />;
-        <Link to="/">
+        <div className="">
+          {" "}
+          <Link to="/">
+            {" "}
+            <img src={logo} alt="Imagen 1" className="w-32" />
+          </Link>
+        </div>
+        <Link to="/" className="absolute right-0">
           <svg
             className="ml-10 pt-5"
             xmlns="http://www.w3.org/2000/svg"
@@ -146,8 +122,12 @@ const Home = () => {
         </Link>
       </div>
       <div className="body">
-        <div className="containerHome pt-12 ">
-          <p style={playfairFontRegular} className="menu" onClick={opcion1}>
+        <div className="containerHome pt-20 ">
+          <p
+            style={playfairFontRegular}
+            className="menu sombra-menu tracking-wider "
+            onClick={opcion1}
+          >
             History
           </p>
           <animated.div style={dropdownAnimation1}>
@@ -156,7 +136,7 @@ const Home = () => {
                 {" "}
                 <Link
                   to="/family"
-                  className="subMenu"
+                  className="subMenu tracking-widest"
                   style={robotoFontRegular}
                 >
                   Family
@@ -167,7 +147,7 @@ const Home = () => {
                 {" "}
                 <Link
                   to="/bluevalley"
-                  className="subMenu"
+                  className="subMenu tracking-widest"
                   style={robotoFontRegular}
                 >
                   Blue valley patagonia
@@ -176,7 +156,11 @@ const Home = () => {
             </ul>
           </animated.div>
 
-          <p style={playfairFontRegular} className="menu" onClick={opcion2}>
+          <p
+            style={playfairFontRegular}
+            className="menu sombra-menu tracking-wider "
+            onClick={opcion2}
+          >
             Patagonian Spirit
           </p>
           <animated.div style={dropdownAnimation2}>
@@ -185,7 +169,7 @@ const Home = () => {
                 {" "}
                 <Link
                   to="/araucanavineyard"
-                  className="subMenu"
+                  className="subMenu tracking-widest"
                   style={robotoFontRegular}
                 >
                   ARAUCANA VINEYARD
@@ -194,7 +178,7 @@ const Home = () => {
               <li>
                 <Link
                   to="/workvineyard"
-                  className="subMenu"
+                  className="subMenu tracking-widest"
                   style={robotoFontRegular}
                 >
                   WORK IN THE VINEYARD
@@ -203,7 +187,7 @@ const Home = () => {
               <li>
                 <Link
                   to="/winespreservation"
-                  className="subMenu"
+                  className="subMenu tracking-widest"
                   style={robotoFontRegular}
                 >
                   WINES PRESERVATION
@@ -212,7 +196,7 @@ const Home = () => {
               <li>
                 <Link
                   to="/wineyard"
-                  className="subMenu"
+                  className="subMenu tracking-widest"
                   style={robotoFontRegular}
                 >
                   THE VINEYARD
@@ -221,7 +205,11 @@ const Home = () => {
             </ul>
           </animated.div>
 
-          <p style={playfairFontRegular} className="menu" onClick={opcion3}>
+          <p
+            style={playfairFontRegular}
+            className="menu sombra-menu tracking-wider"
+            onClick={opcion3}
+          >
             Wines
           </p>
           <animated.div style={dropdownAnimation3}>
@@ -230,7 +218,7 @@ const Home = () => {
                 {" "}
                 <Link
                   to="/riociervos?scroll=0"
-                  className="subMenu"
+                  className="subMenu tracking-widest"
                   style={robotoFontRegular}
                 >
                   RÍO DE LOS CIERVOS
@@ -240,7 +228,7 @@ const Home = () => {
                 {" "}
                 <Link
                   to="/riociervos?scroll=980"
-                  className="subMenu"
+                  className="subMenu tracking-widest"
                   style={robotoFontRegular}
                 >
                   ARAUCANA
@@ -250,7 +238,7 @@ const Home = () => {
                 {" "}
                 <Link
                   to="/riociervos?scroll=1520"
-                  className="subMenu"
+                  className="subMenu tracking-widest"
                   style={robotoFontRegular}
                 >
                   ARAUCANA AZUL
@@ -260,7 +248,7 @@ const Home = () => {
                 {" "}
                 <Link
                   to="/araucana?scroll=0"
-                  className="subMenu"
+                  className="subMenu tracking-widest"
                   style={robotoFontRegular}
                 >
                   CLÁSICO
@@ -269,7 +257,7 @@ const Home = () => {
               <li>
                 <Link
                   to="/araucana?scroll=980"
-                  className="subMenu"
+                  className="subMenu tracking-widest"
                   style={robotoFontRegular}
                 >
                   ESPECIAL
@@ -279,7 +267,7 @@ const Home = () => {
                 {" "}
                 <Link
                   to="/araucana?scroll=1450"
-                  className="subMenu"
+                  className="subMenu tracking-widest"
                   style={robotoFontRegular}
                 >
                   RESERVA ESTIBADA
@@ -288,42 +276,54 @@ const Home = () => {
             </ul>
           </animated.div>
 
-          <div className="flex w-full mt-10">
-            <div className="w-1/3">
+          <div className="flex w-full mt-10 items-center justify-between ">
+            <div className="text-center">
               <Link
                 to="/contacto"
-                className="text-sm footerItems"
+                className="text-base footerItems tracking-widest"
                 style={robotoFontRegular}
               >
                 Contact
               </Link>
             </div>
-            <div className="w-1/3">
-              <p style={roboto} className="text-sm footerItems">
+            <div className="  text-center">
+              <p
+                style={roboto}
+                className="text-base footerItems tracking-widest"
+              >
                 News
               </p>
             </div>
-            <div className="w-1/3">
-              <p style={roboto} className="text-sm footerItems">
+            <div className="  text-center">
+              <p
+                style={roboto}
+                className="text-base footerItems tracking-widest"
+              >
                 Casa Pirque
               </p>
             </div>
           </div>
           <div className="flex space-x-4 mt-10">
             <div className="w-1/2 ">
-              <p style={roboto} className="text-sm footerItems">
-                english
+              <p
+                style={roboto}
+                className="text-base footerItems tracking-widest"
+              >
+                <strong>english</strong>
               </p>
             </div>
             <div className="w-1/2 ">
-              <p style={roboto} className=" text-sm footerItems">
+              <p
+                style={roboto}
+                className=" text-base footerItems tracking-widest"
+              >
                 spanish
               </p>
             </div>
           </div>
           <div className="flex mt-10">
             <div className="w-100">
-              <p style={roboto} className="text-xs footerItems">
+              <p style={roboto} className="text-xs footerItems tracking-widest">
                 Legals
               </p>
             </div>
