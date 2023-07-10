@@ -12,9 +12,12 @@ import araucanaWineShort from "../images/araucana-wine-short.png";
 import araucanaMalbecWineShort from "../images/araucana-malbec-wine-short.png";
 import araucanaAzulWineShort from "../images/araucana-azul-wine-short.png";
 import iconIg from "../images/icon-ig.png";
+import { Transition, animated } from '@react-spring/web';
 
 import "../App.css";
 function RioCiervos() {
+  const locationAnimacion = useLocation();
+
   const [showDropdown, setShowDropdown] = useState(false);
 
   const handleDownloadClick = () => {
@@ -57,6 +60,17 @@ function RioCiervos() {
     fontStyle: "normal",
   };
   return (
+    <Transition
+    items={locationAnimacion}
+    keys={(location) => location.pathname}
+    from={{ opacity: 0 }}
+    enter={{ opacity: 1 }}
+    leave={{ opacity: 0 }}
+    config={{ duration: 1000 }}
+  >
+    {(style, item) => (
+      <animated.div style={{ ...style, width: '100%' }}>
+
     <div>
       <header className="py-10 fixed top-0 left-0 right-0 z-50 ">
         <div class="container mx-auto">
@@ -268,6 +282,11 @@ function RioCiervos() {
         </div>
       </div>
     </div>
+            </animated.div>
+      )}
+    </Transition>
+
+
   );
 }
 

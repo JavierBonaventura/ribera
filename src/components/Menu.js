@@ -4,8 +4,12 @@ import "../App.css";
 import logo from "../images/Escudo Bodega Ribera del Cuarzo-FINALcurvas-02.png";
 import { useSpring, animated } from "@react-spring/web";
 import hambur from "../images/menu-hambur.png";
+import { useLocation  } from "react-router-dom";
+import { Transition } from '@react-spring/web';
 
 const Home = () => {
+  const location = useLocation();
+
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
     fontWeight: "normal",
@@ -101,6 +105,17 @@ const Home = () => {
   };
 
   return (
+    <Transition
+    items={location}
+    keys={(location) => location.pathname}
+    from={{ opacity: 0 }}
+    enter={{ opacity: 1 }}
+    leave={{ opacity: 0 }}
+    config={{ duration: 1000 }}
+  >
+    {(style, item) => (
+      <animated.div style={{ ...style, width: '100%' }}>
+
     <div className="containerHome pt-8 background">
       <div className="w-full grid justify-items-end pr-6">
         <div className="w-8 ">
@@ -292,6 +307,10 @@ const Home = () => {
         </div>
       </div>
     </div>
+    </animated.div>
+      )}
+    </Transition>
+
   );
 };
 

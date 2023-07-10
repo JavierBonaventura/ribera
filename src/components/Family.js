@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useLocation  } from "react-router-dom";
+
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
@@ -10,8 +12,10 @@ import ninosHistory from "../images/ninos-history.jpeg";
 import iconIg from "../images/icon-ig.png";
 import carruajeHistory from "../images/carruaje-history.jpg";
 import "../App.css";
+import { Transition, animated } from '@react-spring/web';
 
 const Family = () => {
+   const location = useLocation();
   const bondiniFontRegular = {
     fontFamily: "Bondini, sans-serif",
     fontWeight: "normal",
@@ -61,6 +65,16 @@ const Family = () => {
   };
 
   return (
+      <Transition
+      items={location}
+      keys={(location) => location.pathname}
+      from={{ opacity: 0 }}
+      enter={{ opacity: 1 }}
+      leave={{ opacity: 0 }}
+      config={{ duration: 500 }}
+    >
+      {(style, item) => (
+        <animated.div style={{ ...style, position: 'absolute', width: '100%' }}>
     <div>
       <body class="bg-[#F2ECE1]">
         <header className="py-10 fixed top-0 left-0 right-0 z-50  ">
@@ -232,6 +246,9 @@ const Family = () => {
         </div>
       </body>
     </div>
+            </animated.div>
+      )}
+    </Transition>
   );
 };
 

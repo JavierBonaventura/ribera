@@ -5,8 +5,12 @@ import logo from "../images/logo.svg";
 import { useSpring, animated } from "@react-spring/web";
 import hambur from "../images/menu-hambur.png";
 import iconIg from "../images/icon-ig.png";
+import { useLocation  } from "react-router-dom";
+import { Transition } from '@react-spring/web';
 
 const Home = () => {
+  const location = useLocation();
+
   const roboto = {
     fontFamily: "Roboto, sans-serif",
   };
@@ -77,6 +81,17 @@ const Home = () => {
   };
 
   return (
+    <Transition
+    items={location}
+    keys={(location) => location.pathname}
+    from={{ opacity: 0 }}
+    enter={{ opacity: 1 }}
+    leave={{ opacity: 0 }}
+    config={{ duration: 1000 }}
+  >
+    {(style, item) => (
+      <animated.div style={{ ...style, width: '100%' }}>
+
     <div className="containerHome pt-8 backgroundHambuerguesa  ">
       <div className="flex">
         <div className="">
@@ -338,6 +353,10 @@ const Home = () => {
         </div>
       </div>
     </div>
+    </animated.div>
+      )}
+    </Transition>
+
   );
 };
 

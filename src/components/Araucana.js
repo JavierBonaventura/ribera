@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
@@ -11,11 +11,19 @@ import riberaClasico from "../images/ribera-clasico-wine.png";
 import riberaEspecial from "../images/ribera-especial-wine.png";
 import riberaReserva from "../images/ribera-reserva-wine.png";
 import iconIg from "../images/icon-ig.png";
+import { Transition, animated } from '@react-spring/web';
+
 
 import "../App.css";
 function Araucana() {
   const scrollRef = useRef(null);
   const location = useLocation();
+  const locationAnimacion = useLocation();
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const handleDownloadClick = () => {
+    setShowDropdown(!showDropdown);
+  };
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -50,6 +58,17 @@ function Araucana() {
     fontStyle: "normal",
   };
   return (
+    <Transition
+    items={locationAnimacion}
+    keys={(location) => location.pathname}
+    from={{ opacity: 0 }}
+    enter={{ opacity: 1 }}
+    leave={{ opacity: 0 }}
+    config={{ duration: 1000 }}
+  >
+    {(style, item) => (
+      <animated.div style={{ ...style, width: '100%' }}>
+
     <div>
       <header className="py-10 fixed top-0 left-0 right-0 z-50 ">
         <div class="container mx-auto">
@@ -116,6 +135,16 @@ function Araucana() {
                   </span>
                 </a>
               </div>
+              {showDropdown && (
+                  <div className="mt-2 w-48 mx-auto">
+                    <ul className="text-xs text-[#C3B17D] text-center">
+                      <li className="py-2 px-4 hover:bg-gray-100">Opción 1</li>
+                      <li className="py-2 px-4 hover:bg-gray-100">Opción 2</li>
+                      <li className="py-2 px-4 hover:bg-gray-100">Opción 3</li>
+                    </ul>
+                  </div>
+                )}
+
             </div>
           </div>
         </div>
@@ -244,6 +273,10 @@ function Araucana() {
         </div>
       </div>
     </div>
+    </animated.div>
+      )}
+    </Transition>
+
   );
 }
 

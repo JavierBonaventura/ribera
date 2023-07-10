@@ -7,6 +7,8 @@ import wineYardSlide2 from "../images/wineYardSlide2.jpg";
 import wineYardSlide3 from "../images/wineYardSlide3.jpg";
 import wineYardSlide4 from "../images/wineYardSlide4.jpg";
 import blackRiver from "../images/blackRiver.jpg";
+import { useLocation  } from "react-router-dom";
+import { Transition, animated } from '@react-spring/web';
 
 import flechaIzquierda from "../images/flechaIzquierda.jpg";
 import flechaDerecha from "../images/flechaDerecha.jpg";
@@ -69,6 +71,8 @@ function Header() {
 }
 
 const WineYard = () => {
+    const location = useLocation();
+
   const [currentScreen, setCurrentScreen] = useState(0);
 
   const handleNext = () => {
@@ -88,6 +92,18 @@ const WineYard = () => {
   };
 
   return (
+        <Transition
+    items={location}
+    keys={(location) => location.pathname}
+    from={{ opacity: 0 }}
+    enter={{ opacity: 1 }}
+    leave={{ opacity: 0 }}
+    config={{ duration: 1000 }}
+  >
+    {(style, item) => (
+      <animated.div style={{ ...style, width: '100%' }}>
+
+
     <div>
       <Header />
       <div>
@@ -121,16 +137,34 @@ const WineYard = () => {
       {currentScreen === 2 && <Screen3Text />}
       {currentScreen === 3 && <Screen4Text />}
     </div>
+        </animated.div>
+      )}
+    </Transition>
+
   );
 };
 
 const Screen1 = () => {
+    const location = useLocation();
+
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
     fontWeight: "normal",
     fontStyle: "normal",
   };
   return (
+        <Transition
+    items={location}
+    keys={(location) => location.pathname}
+    from={{ opacity: 0 }}
+    enter={{ opacity: 1 }}
+    leave={{ opacity: 0 }}
+    config={{ duration: 1000 }}
+  >
+    {(style, item) => (
+      <animated.div style={{ ...style, width: '100%' }}>
+
+
     <div className="mt-[-20px]">
       <div className="bg-[#F2ECE1] ">
         <p className="ml-1 text-left relative">
@@ -152,9 +186,15 @@ const Screen1 = () => {
         </div>
       </div>
     </div>
+        </animated.div>
+      )}
+    </Transition>
+
   );
 };
 const Screen1Text = () => {
+    const location = useLocation();
+
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
     fontWeight: "normal",
@@ -168,6 +208,17 @@ const Screen1Text = () => {
     fontSize: "16px",
   };
   return (
+        <Transition
+    items={location}
+    keys={(location) => location.pathname}
+    from={{ opacity: 0 }}
+    enter={{ opacity: 1 }}
+    leave={{ opacity: 0 }}
+    config={{ duration: 1000 }}
+  >
+    {(style, item) => (
+      <animated.div style={{ ...style, width: '100%' }}>
+
     <div>
       <div className="bg-[#F2ECE1] py-5">
         <div className="container mx-auto flex flex-col justify-center items-center">
@@ -209,16 +260,33 @@ const Screen1Text = () => {
         </div>
       </div>
     </div>
+        </animated.div>
+      )}
+    </Transition>
+
   );
 };
 
 const Screen2 = () => {
+    const location = useLocation();
+
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
     fontWeight: "normal",
     fontStyle: "normal",
   };
   return (
+        <Transition
+    items={location}
+    keys={(location) => location.pathname}
+    from={{ opacity: 0 }}
+    enter={{ opacity: 1 }}
+    leave={{ opacity: 0 }}
+    config={{ duration: 1000 }}
+  >
+    {(style, item) => (
+      <animated.div style={{ ...style,  width: '100%' }}>
+
     <div className="mt-[-20px]">
       <div className="bg-[#F2ECE1]">
         <p className="ml-1 text-left relative">
@@ -244,9 +312,16 @@ const Screen2 = () => {
         </div>
       </div>
     </div>
+        </animated.div>
+      )}
+    </Transition>
+
+
   );
 };
 const Screen2Text = () => {
+    const location = useLocation();
+
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
     fontWeight: "normal",
@@ -260,6 +335,17 @@ const Screen2Text = () => {
     fontSize: "16px",
   };
   return (
+        <Transition
+    items={location}
+    keys={(location) => location.pathname}
+    from={{ opacity: 0 }}
+    enter={{ opacity: 1 }}
+    leave={{ opacity: 0 }}
+    config={{ duration: 1000 }}
+  >
+    {(style, item) => (
+      <animated.div style={{ ...style, width: '100%' }}>
+
     <div>
       <div className="bg-[#F2ECE1] py-5">
         <div className="container mx-auto flex flex-col justify-center items-center">
@@ -312,16 +398,33 @@ const Screen2Text = () => {
         </div>
       </div>
     </div>
+        </animated.div>
+      )}
+    </Transition>
+
   );
 };
 
 const Screen3 = () => {
+    const location = useLocation();
+
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
     fontWeight: "normal",
     fontStyle: "normal",
   };
   return (
+        <Transition
+    items={location}
+    keys={(location) => location.pathname}
+    from={{ opacity: 0 }}
+    enter={{ opacity: 1 }}
+    leave={{ opacity: 0 }}
+    config={{ duration: 1000 }}
+  >
+    {(style, item) => (
+      <animated.div style={{ ...style, width: '100%' }}>
+
     <div className="mt-[-20px]">
       <div className="bg-[#F2ECE1]">
         <p className="ml-1 text-left relative">
@@ -347,9 +450,15 @@ const Screen3 = () => {
         </div>
       </div>
     </div>
+        </animated.div>
+      )}
+    </Transition>
+
   );
 };
 const Screen3Text = () => {
+    const location = useLocation();
+
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
     fontWeight: "normal",
@@ -363,6 +472,17 @@ const Screen3Text = () => {
     fontSize: "16px",
   };
   return (
+        <Transition
+    items={location}
+    keys={(location) => location.pathname}
+    from={{ opacity: 0 }}
+    enter={{ opacity: 1 }}
+    leave={{ opacity: 0 }}
+    config={{ duration: 1000 }}
+  >
+    {(style, item) => (
+      <animated.div style={{ ...style, width: '100%' }}>
+
     <div>
       <div className="bg-[#F2ECE1] py-5">
         <div className="container mx-auto flex flex-col justify-center items-center">
@@ -399,15 +519,33 @@ const Screen3Text = () => {
         </div>
       </div>
     </div>
+        </animated.div>
+      )}
+    </Transition>
+
   );
 };
 const Screen4 = () => {
+  
+    const location = useLocation();
+
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
     fontWeight: "normal",
     fontStyle: "normal",
   };
   return (
+        <Transition
+    items={location}
+    keys={(location) => location.pathname}
+    from={{ opacity: 0 }}
+    enter={{ opacity: 1 }}
+    leave={{ opacity: 0 }}
+    config={{ duration: 1000 }}
+  >
+    {(style, item) => (
+      <animated.div style={{ ...style, width: '100%' }}>
+
     <div className="mt-[-20px]">
       <div className="bg-[#F2ECE1]">
         <p className="ml-1 text-left relative">
@@ -429,9 +567,15 @@ const Screen4 = () => {
         </div>
       </div>
     </div>
+        </animated.div>
+      )}
+    </Transition>
+
   );
 };
 const Screen4Text = () => {
+    const location = useLocation();
+
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
     fontWeight: "normal",
@@ -445,6 +589,17 @@ const Screen4Text = () => {
     fontSize: "16px",
   };
   return (
+        <Transition
+    items={location}
+    keys={(location) => location.pathname}
+    from={{ opacity: 0 }}
+    enter={{ opacity: 1 }}
+    leave={{ opacity: 0 }}
+    config={{ duration: 1000 }}
+  >
+    {(style, item) => (
+      <animated.div style={{ ...style, width: '100%' }}>
+
     <div>
       <div className="bg-[#F2ECE1] py-5">
         <div className="container mx-auto flex flex-col justify-center items-center">
@@ -485,6 +640,10 @@ const Screen4Text = () => {
         </div>
       </div>
     </div>
+        </animated.div>
+      )}
+    </Transition>
+
   );
 };
 export default WineYard;
