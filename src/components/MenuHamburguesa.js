@@ -150,7 +150,7 @@ const Home = () => {
                   className="subMenu tracking-widest"
                   style={robotoFontRegular}
                 >
-                  Blue valley patagonia
+                  Valle Azul, Río Negro
                 </Link>
               </li>
             </ul>
