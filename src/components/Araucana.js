@@ -321,6 +321,8 @@ function Araucana() {
                 <div className="grid grid-cols-3 gap-x-4">
                   <div className="flex gap-y-4 flex-col">
                     <img src={riberaClasico} alt="" />
+                    <Link  to="/riociervos?scroll=545">
+
                     <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
                       <a href="" style={robotoFontRegular}>
                         <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
@@ -328,9 +330,12 @@ function Araucana() {
                         </span>
                       </a>
                     </div>
+                    </Link>
                   </div>
                   <div className="flex gap-y-4 flex-col">
                     <img src={riberaEspecial} alt="" />
+                    <Link  to="/riociervos?scroll=1420">
+
                     <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
                       <a href="" style={robotoFontRegular}>
                         <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
@@ -338,9 +343,14 @@ function Araucana() {
                         </span>
                       </a>
                     </div>
+                    </Link>
+
                   </div>
+
                   <div className="flex gap-y-4 flex-col">
                     <img src={riberaReserva} alt="" />
+                    <Link  to="/riociervos?scroll=2320">
+
                     <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
                       <a href="" style={robotoFontRegular}>
                         <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
@@ -348,6 +358,7 @@ function Araucana() {
                         </span>
                       </a>
                     </div>
+                    </Link>
                   </div>
                 </div>
               </div>

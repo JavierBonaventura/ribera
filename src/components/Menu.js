@@ -54,6 +54,9 @@ const Home = () => {
   const [mostrarMenu1, setMostrarMenu1] = useState(false);
   const [mostrarMenu2, setMostrarMenu2] = useState(false);
   const [mostrarMenu3, setMostrarMenu3] = useState(false);
+  const [mostrarMenu4, setMostrarMenu4] = useState(false);
+  const [mostrarMenu5, setMostrarMenu5] = useState(false);
+
 
   const dropdownAnimation1 = useSpring({
     height: mostrarMenu1 ? "50px" : "0px",
@@ -70,17 +73,38 @@ const Home = () => {
   });
 
   const dropdownAnimation3 = useSpring({
-    height: mostrarMenu3 ? "160px" : "0px",
-
+    height: mostrarMenu3 ? "195px" : "0px",
     opacity: mostrarMenu3 ? 1 : 0,
     overflow: "hidden",
     config: { duration: 300 },
   });
 
+  const dropdownAnimation4 = useSpring({
+    height: mostrarMenu4 ? "120px" : "0px",
+    opacity: mostrarMenu4 ? 1 : 0,
+    overflow: "hidden",
+    config: { duration: 300 },
+  });
+
+  const dropdownAnimation5 = useSpring({
+    height: mostrarMenu5 ? "120px" : "0px",
+    opacity: mostrarMenu5 ? 1 : 0,
+    overflow: "hidden",
+    config: { duration: 300 },
+  });
+
+  const bondiniFontRegular = {
+    fontFamily: "Bondini, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+
   const opcion1 = () => {
     setMostrarMenu1(true);
     setMostrarMenu2(false);
     setMostrarMenu3(false);
+    setMostrarMenu4(false);
+    setMostrarMenu5(false);
     if (mostrarMenu1 === true) {
       setMostrarMenu1(false);
     }
@@ -90,6 +114,9 @@ const Home = () => {
     setMostrarMenu1(false);
     setMostrarMenu2(true);
     setMostrarMenu3(false);
+    setMostrarMenu4(false);
+    setMostrarMenu5(false);
+
     if (mostrarMenu2 === true) {
       setMostrarMenu2(false);
     }
@@ -99,8 +126,34 @@ const Home = () => {
     setMostrarMenu1(false);
     setMostrarMenu2(false);
     setMostrarMenu3(true);
+    setMostrarMenu4(false);
+    setMostrarMenu5(false);
+
     if (mostrarMenu3 === true) {
       setMostrarMenu3(false);
+    }
+  };
+
+  const opcion4 = () => {
+    setMostrarMenu1(false);
+    setMostrarMenu2(false);
+    setMostrarMenu3(true);
+    setMostrarMenu4(true);
+    setMostrarMenu5(false);
+    if (mostrarMenu4 === true) {
+      setMostrarMenu4(false);
+    }
+  };
+
+  const opcion5 = () => {
+    setMostrarMenu1(false);
+    setMostrarMenu2(false);
+    setMostrarMenu3(true);
+    setMostrarMenu4(false);
+    setMostrarMenu5(true);
+
+    if (mostrarMenu5 === true) {
+      setMostrarMenu5(false);
     }
   };
 
@@ -144,7 +197,7 @@ const Home = () => {
                         className="subMenu tracking-widest"
                         style={robotoFontRegular}
                       >
-                        Family
+                        FAMILY
                       </Link>
                     </li>
 
@@ -155,7 +208,7 @@ const Home = () => {
                         className="subMenu tracking-widest"
                         style={robotoFontRegular}
                       >
-                        Valle Azul, Patagonia
+                        VALLE AZUL, PATAGONIA
                       </Link>
                     </li>
                   </ul>
@@ -227,69 +280,129 @@ const Home = () => {
                   Our Wines
                 </p>
                 <animated.div style={dropdownAnimation3}>
-                  <ul className="text-center -mt-2 space-y-1">
+                  <ul className="text-center  space-y-1">
                     <li>
                       {" "}
-                      <Link
+                      <p
                         to="/riociervos?scroll=0"
                         className="subMenu tracking-widest"
                         style={robotoFontRegular}
+                        onClick={opcion4}
                       >
-                        RÍO DE LOS CIERVOS
+                        WINES IN THE WORLD
+                      </p>
+                    </li>
+                    <animated.div style={dropdownAnimation4}>
+                  <ul className="text-center  -space-y-2">
+                    <li>
+                      {" "}
+                      <Link  to="/riociervos?scroll=545">
+                      <p                       
+                        className="subMenu tracking-widest font-sans italic "                    
+                      >
+                       Ribera del cuarzo clasico
+                      </p>
                       </Link>
                     </li>
                     <li>
                       {" "}
-                      <Link
+                      <Link  to="/riociervos?scroll=1420">
+                      <p                       
+                        className="subMenu tracking-widest font-sans italic "                    
+                      >
+                        Ribera del cuarzo especial
+                      </p>
+                      </Link>
+
+                    </li>
+                    <li>
+                      {" "}
+                      <Link  to="/riociervos?scroll=2320">
+                      <p                       
+                        className="subMenu tracking-widest font-sans italic "                    
+                      >
+                       Ribera del cuarzo reserva estibada
+                      </p>
+                      </Link>
+
+                    </li>
+                    <li>
+                      {" "}
+                      <Link  to="/riociervos?scroll=0">
+                      <p                       
+                        className="subMenu tracking-widest font-sans italic "                    
+                      >
+                       View all
+                      </p>
+                      </Link>
+
+                    </li>
+
+                  </ul>
+                </animated.div>
+                    <li>
+                      {" "}
+                      <p
                         to="/riociervos?scroll=980"
                         className="subMenu tracking-widest"
                         style={robotoFontRegular}
+                        onClick={opcion5}
                       >
-                        ARAUCANA
+                        WINES IN ARGENTINA
+                      </p>
+                    </li>
+                    <animated.div style={dropdownAnimation5}>
+                  <ul className="text-center  -space-y-3 ">
+                  <li>
+                      {" "}
+                      <Link  to="/araucana?scroll=545">
+                      <p                       
+                        className="subMenu tracking-widest font-sans italic "                    
+                      >
+                       Araucana rio de los ciervos
+                      </p>
                       </Link>
+
                     </li>
                     <li>
                       {" "}
-                      <Link
-                        to="/riociervos?scroll=1520"
-                        className="subMenu tracking-widest"
-                        style={robotoFontRegular}
+                      <Link  to="/araucana?scroll=1420">
+                      <p                       
+                        className="subMenu tracking-widest font-sans italic "                    
                       >
-                        ARAUCANA AZUL
+                        Araucana
+                      </p>
                       </Link>
+
                     </li>
                     <li>
                       {" "}
-                      <Link
-                        to="/araucana?scroll=0"
-                        className="subMenu tracking-widest"
-                        style={robotoFontRegular}
+                      <Link  to="/araucana?scroll=2320">
+                      <p                       
+                        className="subMenu tracking-widest font-sans italic "                    
                       >
-                        CLÁSICO
+                       Araucana azul
+                      </p>
                       </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/araucana?scroll=980"
-                        className="subMenu tracking-widest"
-                        style={robotoFontRegular}
-                      >
-                        ESPECIAL
-                      </Link>
+
                     </li>
                     <li>
                       {" "}
-                      <Link
-                        to="/araucana?scroll=1450"
-                        className="subMenu tracking-widest"
-                        style={robotoFontRegular}
+                      <Link  to="/araucana?scroll=0">
+                      <p                       
+                        className="subMenu tracking-widest font-sans italic "                    
                       >
-                        RESERVA ESTIBADA
+                       View all
+                      </p>
                       </Link>
+
                     </li>
+
                   </ul>
                 </animated.div>
-                <div className="flex flex-col text-center pt-10">
+                  </ul>
+                </animated.div>
+                <div className="flex flex-col text-center mt-6">
                   <Link
                     to="/contacto"
                     className="footerItems tracking-widest"

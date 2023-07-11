@@ -329,6 +329,8 @@ function RioCiervos() {
                 <div className="grid grid-cols-3 gap-x-4">
                   <div className="flex gap-y-4 flex-col">
                     <img src={araucanaWineShort} alt="" />
+                    <Link  to="/araucana?scroll=545">
+
                     <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
                       <a href="" style={robotoFontRegular}>
                         <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
@@ -336,19 +338,24 @@ function RioCiervos() {
                         </span>
                       </a>
                     </div>
+                    </Link>
                   </div>
                   <div className="flex gap-y-4 flex-col">
                     <img src={araucanaMalbecWineShort} alt="" />
+                      <Link  to="/araucana?scroll=1420">
                     <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
                       <a href="" style={robotoFontRegular}>
                         <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
                           Read more
                         </span>
+                    
                       </a>
                     </div>
+                    </Link>
                   </div>
                   <div className="flex gap-y-4 flex-col">
                     <img src={araucanaAzulWineShort} alt="" />
+                    <Link  to="/araucana?scroll=2320">
                     <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
                       <a href="" style={robotoFontRegular}>
                         <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
@@ -356,6 +363,7 @@ function RioCiervos() {
                         </span>
                       </a>
                     </div>
+                    </Link>
                   </div>
                 </div>
               </div>

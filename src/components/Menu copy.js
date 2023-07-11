@@ -1,21 +1,46 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
-import logo from "../images/logo.svg";
+import logo from "../images/Escudo Bodega Ribera del Cuarzo-FINALcurvas-02.png";
 import { useSpring, animated } from "@react-spring/web";
-import iconIg from "../images/icon-ig.png";
+import hambur from "../images/menu-hambur.png";
 import { useLocation } from "react-router-dom";
 import { Transition } from "@react-spring/web";
 
 const Home = () => {
   const location = useLocation();
 
-  const roboto = {
-    fontFamily: "Roboto, sans-serif",
-  };
-
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+
+  const playfairFontBlack = {
+    fontFamily: "Playfair Black, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+  const playfairFontItalic = {
+    fontFamily: "Playfair Italic , sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+
+  const playfairFontBold = {
+    fontFamily: "Playfair Bold , sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+
+  const playfairFontExtraBold = {
+    fontFamily: "Playfair ExtraBold , sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+
+  const robotoFontThin = {
+    fontFamily: "Roboto Thin , sans-serif",
     fontWeight: "normal",
     fontStyle: "normal",
   };
@@ -25,6 +50,7 @@ const Home = () => {
     fontWeight: "normal",
     fontStyle: "normal",
   };
+
   const [mostrarMenu1, setMostrarMenu1] = useState(false);
   const [mostrarMenu2, setMostrarMenu2] = useState(false);
   const [mostrarMenu3, setMostrarMenu3] = useState(false);
@@ -47,31 +73,25 @@ const Home = () => {
   });
 
   const dropdownAnimation3 = useSpring({
-    height: mostrarMenu3 ? "195px" : "0px",
+    height: mostrarMenu3 ? "160px" : "0px",
     opacity: mostrarMenu3 ? 1 : 0,
     overflow: "hidden",
     config: { duration: 300 },
   });
 
   const dropdownAnimation4 = useSpring({
-    height: mostrarMenu4 ? "120px" : "0px",
+    height: mostrarMenu4 ? "160px" : "0px",
     opacity: mostrarMenu4 ? 1 : 0,
     overflow: "hidden",
     config: { duration: 300 },
   });
 
   const dropdownAnimation5 = useSpring({
-    height: mostrarMenu5 ? "120px" : "0px",
-    opacity: mostrarMenu5 ? 1 : 0,
+    height: mostrarMenu4 ? "160px" : "0px",
+    opacity: mostrarMenu4 ? 1 : 0,
     overflow: "hidden",
     config: { duration: 300 },
   });
-
-  const bondiniFontRegular = {
-    fontFamily: "Bondini, sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
 
   const opcion1 = () => {
     setMostrarMenu1(true);
@@ -111,7 +131,7 @@ const Home = () => {
   const opcion4 = () => {
     setMostrarMenu1(false);
     setMostrarMenu2(false);
-    setMostrarMenu3(true);
+    setMostrarMenu3(false);
     setMostrarMenu4(true);
     setMostrarMenu5(false);
     if (mostrarMenu4 === true) {
@@ -122,7 +142,7 @@ const Home = () => {
   const opcion5 = () => {
     setMostrarMenu1(false);
     setMostrarMenu2(false);
-    setMostrarMenu3(true);
+    setMostrarMenu3(false);
     setMostrarMenu4(false);
     setMostrarMenu5(true);
 
@@ -142,55 +162,22 @@ const Home = () => {
     >
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
-          <div className="containerHome pt-8 backgroundHambuerguesa  ">
-            <div className="flex">
-              <div className="">
-                {" "}
-                <Link to="/">
-                  {" "}
-                  <img src={logo} alt="Imagen 1" className="w-32" />
+          <div className="containerHome pt-8 background">
+            <div className="w-full grid justify-items-end pr-6">
+              <div className="w-8 ">
+                <Link to="/MenuHamburguesa">
+                  <img src={hambur} alt="" className="w-full" />
                 </Link>
               </div>
-              <Link to="/" className="absolute right-0">
-                <svg
-                  className="ml-10 pt-5"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="100"
-                  height="100"
-                  viewBox="0 0 100 100"
-                >
-                  <circle
-                    cx="50"
-                    cy="50"
-                    r="16"
-                    stroke="#C3B17D"
-                    fill="transparent"
-                    strokeWidth="2"
-                  />
-                  <line
-                    x1="44"
-                    y1="44"
-                    x2="56"
-                    y2="56"
-                    stroke="#C3B17D"
-                    strokeWidth="2"
-                  />
-                  <line
-                    x1="44"
-                    y1="56"
-                    x2="56"
-                    y2="44"
-                    stroke="#C3B17D"
-                    strokeWidth="2"
-                  />
-                </svg>
-              </Link>
             </div>
+            <Link to="/">
+              <img src={logo} alt="" className="logo" />
+            </Link>{" "}
             <div className="body">
-              <div className="containerHome pt-20 ">
+              <div className="containerHome pt-12 ">
                 <p
                   style={playfairFontRegular}
-                  className="menu sombra-menu tracking-wider "
+                  className="menu sombra-menu tracking-wider"
                   onClick={opcion1}
                 >
                   Our History
@@ -204,7 +191,7 @@ const Home = () => {
                         className="subMenu tracking-widest"
                         style={robotoFontRegular}
                       >
-                        FAMILY
+                        Family
                       </Link>
                     </li>
 
@@ -215,7 +202,7 @@ const Home = () => {
                         className="subMenu tracking-widest"
                         style={robotoFontRegular}
                       >
-                        VALLE AZUL, PATAGONIA
+                        Valle Azul, Patagonia
                       </Link>
                     </li>
                   </ul>
@@ -287,190 +274,90 @@ const Home = () => {
                   Our Wines
                 </p>
                 <animated.div style={dropdownAnimation3}>
-                  <ul className="text-center  space-y-1">
+                  <ul className="text-center -mt-2 space-y-1">
                     <li>
                       {" "}
-                      <p
+                      <Link
                         to="/riociervos?scroll=0"
                         className="subMenu tracking-widest"
                         style={robotoFontRegular}
-                        onClick={opcion4}
                       >
-                        WINES IN THE WORLD
-                      </p>
-                    </li>
-                    <animated.div style={dropdownAnimation4}>
-                  <ul className="text-center  -space-y-2">
-                    <li>
-                      {" "}
-                      <Link  to="/riociervos?scroll=545">
-                      <p                       
-                        className="subMenu tracking-widest font-sans italic "                    
-                      >
-                       Ribera del cuarzo clasico
-                      </p>
+                        RÍO DE LOS CIERVOS
                       </Link>
                     </li>
                     <li>
                       {" "}
-                      <Link  to="/riociervos?scroll=1420">
-                      <p                       
-                        className="subMenu tracking-widest font-sans italic "                    
-                      >
-                        Ribera del cuarzo especial
-                      </p>
-                      </Link>
-
-                    </li>
-                    <li>
-                      {" "}
-                      <Link  to="/riociervos?scroll=2320">
-                      <p                       
-                        className="subMenu tracking-widest font-sans italic "                    
-                      >
-                       Ribera del cuarzo reserva estibada
-                      </p>
-                      </Link>
-
-                    </li>
-                    <li>
-                      {" "}
-                      <Link  to="/riociervos?scroll=0">
-                      <p                       
-                        className="subMenu tracking-widest font-sans italic "                    
-                      >
-                       View all
-                      </p>
-                      </Link>
-
-                    </li>
-
-                  </ul>
-                </animated.div>
-                    <li>
-                      {" "}
-                      <p
+                      <Link
                         to="/riociervos?scroll=980"
                         className="subMenu tracking-widest"
                         style={robotoFontRegular}
-                        onClick={opcion5}
                       >
-                        WINES IN ARGENTINA
-                      </p>
-                    </li>
-                    <animated.div style={dropdownAnimation5}>
-                  <ul className="text-center  -space-y-3 ">
-                  <li>
-                      {" "}
-                      <Link  to="/araucana?scroll=545">
-                      <p                       
-                        className="subMenu tracking-widest font-sans italic "                    
-                      >
-                       Araucana rio de los ciervos
-                      </p>
+                        ARAUCANA
                       </Link>
-
                     </li>
                     <li>
                       {" "}
-                      <Link  to="/araucana?scroll=1420">
-                      <p                       
-                        className="subMenu tracking-widest font-sans italic "                    
+                      <Link
+                        to="/riociervos?scroll=1520"
+                        className="subMenu tracking-widest"
+                        style={robotoFontRegular}
                       >
-                        Araucana
-                      </p>
+                        ARAUCANA AZUL
                       </Link>
-
                     </li>
                     <li>
                       {" "}
-                      <Link  to="/araucana?scroll=2320">
-                      <p                       
-                        className="subMenu tracking-widest font-sans italic "                    
+                      <Link
+                        to="/araucana?scroll=0"
+                        className="subMenu tracking-widest"
+                        style={robotoFontRegular}
                       >
-                       Araucana azul
-                      </p>
+                        CLÁSICO
                       </Link>
-
+                    </li>
+                    <li>
+                      <Link
+                        to="/araucana?scroll=980"
+                        className="subMenu tracking-widest"
+                        style={robotoFontRegular}
+                      >
+                        ESPECIAL
+                      </Link>
                     </li>
                     <li>
                       {" "}
-                      <Link  to="/araucana?scroll=0">
-                      <p                       
-                        className="subMenu tracking-widest font-sans italic "                    
+                      <Link
+                        to="/araucana?scroll=1450"
+                        className="subMenu tracking-widest"
+                        style={robotoFontRegular}
                       >
-                       View all
-                      </p>
+                        RESERVA ESTIBADA
                       </Link>
-
                     </li>
-
                   </ul>
                 </animated.div>
-                  </ul>
-                </animated.div>
-
-                <div className="flex w-full mt-10 items-center justify-between ">
-                  <div className="text-center">
-                    <Link
-                      to="/contacto"
-                      className="text-base footerItems tracking-widest"
-                      style={robotoFontRegular}
-                    >
-                      Contact
-                    </Link>
-                  </div>
-                  <div className="  text-center">
-                    <p
-                      style={roboto}
-                      className="text-base footerItems tracking-widest"
-                    >
-                      News
-                    </p>
-                  </div>
-                  <div className="  text-center">
-                    <p
-                      style={roboto}
-                      className="text-base footerItems tracking-widest"
-                    >
-                      Casa Pirque
-                    </p>
-                  </div>
-                </div>
-                <div className="flex space-x-4 mt-10">
-                  <div className="w-1/2 ">
-                    <p
-                      style={roboto}
-                      className="text-base footerItems tracking-widest"
-                    >
-                      <strong>english</strong>
-                    </p>
-                  </div>
-                  <div className="w-1/2 ">
-                    <p
-                      style={roboto}
-                      className=" text-base footerItems tracking-widest"
-                    >
-                      spanish
-                    </p>
-                  </div>
-                </div>
-                <div className="flex mt-10">
-                  <div className="w-100">
-                    <p
-                      style={roboto}
-                      className="text-xs footerItems tracking-widest"
-                    >
-                      Legals
-                    </p>
-                  </div>
-                </div>
-                <div className="py-20">
-                  <div className="container mx-auto flex justify-center">
-                    <div className="mt-16">
-                      <img src={iconIg} alt="" className="w-5" />
-                    </div>
-                  </div>
+                <div className="flex flex-col text-center pt-10">
+                  <Link
+                    to="/contacto"
+                    className="footerItems tracking-widest"
+                    style={robotoFontRegular}
+                  >
+                    Contact
+                  </Link>
+                  <br></br>
+                  <p
+                    style={robotoFontRegular}
+                    className="footerItems tracking-widest"
+                  >
+                    News
+                  </p>
+                  <br></br>
+                  <p
+                    style={robotoFontRegular}
+                    className="footerItems tracking-widest"
+                  >
+                    Casa Pirque
+                  </p>
                 </div>
               </div>
             </div>
