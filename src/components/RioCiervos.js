@@ -13,16 +13,55 @@ import araucanaMalbecWineShort from "../images/araucana-malbec-wine-short.png";
 import araucanaAzulWineShort from "../images/araucana-azul-wine-short.png";
 import cava from "../images/cava.jpg";
 import iconIg from "../images/icon-ig.png";
-import { Transition, animated } from "@react-spring/web";
+import {useSpring, Transition, animated } from "@react-spring/web";
 
 import "../App.css";
 function RioCiervos() {
   const locationAnimacion = useLocation();
 
-  const [showDropdown, setShowDropdown] = useState(false);
+  const [showDropdown1, setShowDropdown1] = useState(false);
+  const [showDropdown2, setShowDropdown2] = useState(false);
+  const [showDropdown3, setShowDropdown3] = useState(false);
 
-  const handleDownloadClick = () => {
-    setShowDropdown(!showDropdown);
+  const dropdownAnimation1 = useSpring({
+    height: showDropdown1 ? "100px" : "0px",
+    opacity: showDropdown1 ? 1 : 0,
+    overflow: "hidden",
+    config: { duration: 300 },
+  });
+
+  const dropdownAnimation2 = useSpring({
+    height: showDropdown2 ? "100px" : "0px",
+    opacity: showDropdown2 ? 1 : 0,
+    overflow: "hidden",
+    config: { duration: 300 },
+  });
+
+  const dropdownAnimation3 = useSpring({
+    height: showDropdown3 ? "100px" : "0px",
+    opacity: showDropdown3 ? 1 : 0,
+    overflow: "hidden",
+    config: { duration: 300 },
+  });
+
+  const handleDownloadClick1 = () => {
+    setShowDropdown2(false)
+    setShowDropdown3(false);
+    setShowDropdown1(!showDropdown1);
+  };
+
+  const handleDownloadClick2 = () => {
+    setShowDropdown1(false);
+    setShowDropdown3(false);
+
+    setShowDropdown2(!showDropdown2);
+  };
+
+  const handleDownloadClick3 = () => {
+    setShowDropdown1(false);
+    setShowDropdown2(false)
+
+    setShowDropdown3(!showDropdown3);
   };
 
   const scrollRef = useRef(null);
@@ -60,6 +99,11 @@ function RioCiervos() {
     fontWeight: "normal",
     fontStyle: "normal",
   };
+
+
+
+
+  
   return (
     <Transition
       items={locationAnimacion}
@@ -145,7 +189,7 @@ function RioCiervos() {
                       <div className="flex justify-center">
                         <a
                           className="border-b border-[#C3B17D]"
-                          onClick={handleDownloadClick}
+                          onClick={handleDownloadClick1}
                         >
                           <div className="w-2 inline-block">
                             <img src={iconDownload} alt="" className="w-full" />
@@ -156,7 +200,9 @@ function RioCiervos() {
                         </a>
                       </div>
 
-                      {showDropdown && (
+                      {showDropdown1 && (
+                                        <animated.div style={dropdownAnimation1}>
+
                         <div className="mt-2 w-48 mx-auto">
                           <ul className="text-xs text-[#C3B17D] text-center">
                             <li className="py-2 px-4 hover:bg-gray-100">
@@ -170,6 +216,7 @@ function RioCiervos() {
                             </li>
                           </ul>
                         </div>
+                        </animated.div>
                       )}
                     </div>
                   </div>
@@ -212,7 +259,7 @@ function RioCiervos() {
                     <div className="flex justify-center">
                       <a
                         className="border-b border-[#C3B17D]"
-                        onClick={handleDownloadClick}
+                        onClick={handleDownloadClick2}
                       >
                         <div className="w-2 inline-block">
                           <img src={iconDownload} alt="" className="w-full" />
@@ -223,21 +270,24 @@ function RioCiervos() {
                       </a>
                     </div>
 
-                    {showDropdown && (
-                      <div className="mt-2 w-48 mx-auto">
-                        <ul className="text-xs text-[#C3B17D] text-center">
-                          <li className="py-2 px-4 hover:bg-gray-100">
-                            Opción 1
-                          </li>
-                          <li className="py-2 px-4 hover:bg-gray-100">
-                            Opción 2
-                          </li>
-                          <li className="py-2 px-4 hover:bg-gray-100">
-                            Opción 3
-                          </li>
-                        </ul>
-                      </div>
-                    )}
+                    {showDropdown2 && (
+                                        <animated.div style={dropdownAnimation2}>
+
+                        <div className="mt-2 w-48 mx-auto">
+                          <ul className="text-xs text-[#C3B17D] text-center">
+                            <li className="py-2 px-4 hover:bg-gray-100">
+                              Opción 1
+                            </li>
+                            <li className="py-2 px-4 hover:bg-gray-100">
+                              Opción 2
+                            </li>
+                            <li className="py-2 px-4 hover:bg-gray-100">
+                              Opción 3
+                            </li>
+                          </ul>
+                        </div>
+                        </animated.div>
+                      )}
                   </div>
                 </div>
               </div>
@@ -277,7 +327,7 @@ function RioCiervos() {
                     <div className="flex justify-center">
                       <a
                         className="border-b border-[#C3B17D]"
-                        onClick={handleDownloadClick}
+                        onClick={handleDownloadClick3}
                       >
                         <div className="w-2 inline-block">
                           <img src={iconDownload} alt="" className="w-full" />
@@ -288,21 +338,24 @@ function RioCiervos() {
                       </a>
                     </div>
 
-                    {showDropdown && (
-                      <div className="mt-2 w-48 mx-auto">
-                        <ul className="text-xs text-[#C3B17D] text-center">
-                          <li className="py-2 px-4 hover:bg-gray-100">
-                            Opción 1
-                          </li>
-                          <li className="py-2 px-4 hover:bg-gray-100">
-                            Opción 2
-                          </li>
-                          <li className="py-2 px-4 hover:bg-gray-100">
-                            Opción 3
-                          </li>
-                        </ul>
-                      </div>
-                    )}
+                    {showDropdown3 && (
+                                        <animated.div style={dropdownAnimation3}>
+
+                        <div className="mt-2 w-48 mx-auto">
+                          <ul className="text-xs text-[#C3B17D] text-center">
+                            <li className="py-2 px-4 hover:bg-gray-100">
+                              Opción 1
+                            </li>
+                            <li className="py-2 px-4 hover:bg-gray-100">
+                              Opción 2
+                            </li>
+                            <li className="py-2 px-4 hover:bg-gray-100">
+                              Opción 3
+                            </li>
+                          </ul>
+                        </div>
+                        </animated.div>
+                      )}
                   </div>
                 </div>
               </div>
