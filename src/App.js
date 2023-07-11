@@ -5,7 +5,8 @@ import Family from "./components/Family";
 import AraucanaVineyard from "./components/AraucanaVineyard";
 import WorkVineyard from "./components/WorkVineyard";
 import WinesPreservation from "./components/WinesPreservation";
-import WineYard from "./components/WineYard";
+import LifeOnEstate from "./components/LifeOnEstate";
+import LifeWater from "./components/LifeWater";
 import RioCiervos from "./components/RioCiervos";
 import Araucana from "./components/Araucana";
 import AraucanaAzul from "./components/AraucanaAzul";
@@ -29,7 +30,8 @@ function App() {
           <Route path="/araucanavineyard" element={<AraucanaVineyard />} />
           <Route path="/workvineyard" element={<WorkVineyard />} />
           <Route path="/winespreservation" element={<WinesPreservation />} />
-          <Route path="/wineyard" element={<WineYard />} />
+          <Route path="/lifeonestate" element={<LifeOnEstate />} />
+          <Route path="/lifewater" element={<LifeWater />} />
           <Route path="/riociervos" element={<RioCiervos />} />
           <Route path="/araucana" element={<Araucana />} />
           <Route path="/araucanaazul" element={<AraucanaAzul />} />

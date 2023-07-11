@@ -8,9 +8,8 @@ import paisajeHistory from "../images/paisaje-history.jpg";
 import botellasRibera from "../images/botellas-ribera.jpg";
 import iconIg from "../images/icon-ig.png";
 import "../App.css";
-import { useLocation  } from "react-router-dom";
-import { Transition, animated } from '@react-spring/web';
-
+import { useLocation } from "react-router-dom";
+import { Transition, animated } from "@react-spring/web";
 
 const BlueValley = () => {
   const location = useLocation();
@@ -58,214 +57,183 @@ const BlueValley = () => {
 
   return (
     <Transition
-    items={location}
-    keys={(location) => location.pathname}
-    from={{ opacity: 0 }}
-    enter={{ opacity: 1 }}
-    leave={{ opacity: 0 }}
-    config={{ duration: 1000 }}
-  >
-    {(style, item) => (
-      <animated.div style={{ ...style, width: '100%' }}>
+      items={location}
+      keys={(location) => location.pathname}
+      from={{ opacity: 0 }}
+      enter={{ opacity: 1 }}
+      leave={{ opacity: 0 }}
+      config={{ duration: 1000 }}
+    >
+      {(style, item) => (
+        <animated.div style={{ ...style, width: "100%" }}>
+          <div>
+            <body class="bg-[#F2ECE1]">
+              <header className="py-10 fixed top-0 left-0 right-0 z-50 ">
+                <div class="container mx-auto">
+                  <div class="flex justify-between items-center px-5">
+                    <div class="w-20 md:w-36">
+                      <Link to="/">
+                        <img src={logo} alt="" className="w-full" />
+                      </Link>{" "}
+                    </div>
 
-    <div>
-      <body class="bg-[#F2ECE1]">
-        <header className="py-10 fixed top-0 left-0 right-0 z-50 ">
-          <div class="container mx-auto">
-            <div class="flex justify-between items-center px-5">
-              <div class="w-20 md:w-36">
-                <Link to="/">
-                  <img src={logo} alt="" className="w-full" />
-                </Link>{" "}
+                    <div class="w-8">
+                      <Link to="/MenuHamburguesa">
+                        <img src={hambur} alt="" className="w-full" />
+                      </Link>{" "}
+                    </div>
+                  </div>
+                </div>
+              </header>
+
+              <div class="container mx-auto">
+                <div class="pt-16">
+                  <div class="flex flex-col justify-center items-center mt-10">
+                    <h1
+                      style={playfairFontItalic}
+                      class="text-black text-xs tracking-widest"
+                    >
+                      Family
+                    </h1>
+                    <h2
+                      style={playfairFontBold}
+                      class="uppercase text-[#C4AC77] text-sm font-bold tracking-wider"
+                    >
+                      Our History
+                    </h2>
+                  </div>
+                </div>
+
+                <div class="relative flex justify-center items-center">
+                  <img src={ilustrationHistory} alt="" class="w-full" />
+                  <h1
+                    style={playfairFontExtraBold}
+                    class="text-[#C4AC77] text-5xl absolute font-bold"
+                  >
+                    1883 - 2023
+                  </h1>
+                </div>
+
+                <div class="py-28">
+                  <div class="flex justify-center">
+                    <div class="border border-[#C3B17D] rounded-full p-6 relative flex justify-center items-center">
+                      <img src={arrowDown} alt="" class="w-1.5 absolute" />
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <div class="w-8">
-                <Link to="/MenuHamburguesa">
-                  <img src={hambur} alt="" className="w-full" />
-                </Link>{" "}
+              <div class="container mx-auto bg-[#F2ECE1] px-10">
+                <div class="flex justify-center py-2">
+                  <span class="uppercase text-[0.5rem] tracking-wide">
+                    Sunset at valle azul
+                  </span>
+                </div>
+                <div class="py-10 flex flex-col gap-y-5">
+                  <div>
+                    <h1
+                      style={playfairFontBlack}
+                      class="text-[#C4AC77] font-bold text-sm uppercase tracking-wide"
+                    >
+                      The 2000´s
+                    </h1>
+                    <h2
+                      style={robotoFontRegular}
+                      class="uppercase text-[#C4AC77] text-sm tracking-wide"
+                    >
+                      Working with Noemi Marone Cinzano
+                    </h2>
+                  </div>
+                  <div class="">
+                    <p
+                      class="text-black text-xs tracking-wider"
+                      style={playfairFontRegular}
+                    >
+                      The story of this winery started in 2001, when italian
+                      countess Noemi Marone Cinzano discovered this far away
+                      land, planted a 5 hectares vineyard at the foot of the
+                      barda (a specific patagonian landscape, a steep cliff or
+                      hill made of a dark grain of volcanic rock, with plenty of
+                      quartz, carbonate calcium and calcareous) and began
+                      producing wine in a Burgundy style - the winery built
+                      right by the vineyard with small concrete open top pools
+                      for craft production, employing pigeage.
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </header>
 
-        <div class="container mx-auto">
-          <div class="pt-16">
-            <div class="flex flex-col justify-center items-center mt-10">
-              <h1
-                style={playfairFontItalic}
-                class="text-black text-xs tracking-widest"
-              >
-                Family
-              </h1>
-              <h2
-                style={playfairFontBold}
-                class="uppercase text-[#C4AC77] text-sm font-bold tracking-wider"
-              >
-                Our History
-              </h2>
-            </div>
-          </div>
-
-          <div class="relative flex justify-center items-center">
-            <img src={ilustrationHistory} alt="" class="w-full" />
-            <h1
-              style={playfairFontExtraBold}
-              class="text-[#C4AC77] text-5xl absolute font-bold"
-            >
-              1883 - 2023
-            </h1>
-          </div>
-
-          <div class="py-28">
-            <div class="flex justify-center">
-              <div class="border border-[#C3B17D] rounded-full p-6 relative flex justify-center items-center">
-                <img src={arrowDown} alt="" class="w-1.5 absolute" />
+              <div class="container mx-auto bg-[#212121]">
+                <div class="py-5 px-5">
+                  <img src={paisajeHistory} alt="" class="-mb-10" />
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="container mx-auto bg-[#F2ECE1] px-10">
-          <div class="flex justify-center py-2">
-            <span class="uppercase text-[0.5rem] tracking-wide">
-              Sunset at valle azul
-            </span>
-          </div>
-          <div class="py-10 flex flex-col gap-y-5">
-            <div>
-              <h1
-                style={playfairFontBlack}
-                class="text-[#C4AC77] font-bold text-sm uppercase tracking-wide"
-              >
-                The 2000´s
-              </h1>
-              <h2
-                style={robotoFontRegular}
-                class="uppercase text-[#C4AC77] text-sm tracking-wide"
-              >
-                Working with Nicolas Catena
-              </h2>
-            </div>
-            <div class="">
-              <p
-                class="text-black text-xs tracking-wider"
-                style={playfairFontRegular}
-              >
-                <strong>
-                  My career in wines started as a very young person
-                </strong>
-                , I joined the winery of Doctor <strong>Nicolas Catena</strong>{" "}
-                and at his side discovered the fascinating world of wine which
-                has become my life. learned from him every detail of how to
-                cultivate the best grapes, how to produce the best wines and
-                above all how to never ever relinquish in the pursuit of
-                excellence. <br />
-                <br />
-                From the distribution of wines the next logical step for our
-                company was to fine a unique place to create a new winery.
-                <strong>
-                  A place where we could produce something truly exceptional.
-                  Almost by magical coincidence the pieces of the puzzle fell
-                  into place
-                </strong>
-                .
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="container mx-auto bg-[#212121]">
-          <div class="py-5 px-5">
-            <img src={paisajeHistory} alt="" class="-mb-10" />
-          </div>
-        </div>
-
-        <div class="container mx-auto bg-[#F2ECE1] px-10">
-          <div class="py-10 flex flex-col gap-y-5">
-            <div>
-              <h1
-                style={playfairFontBlack}
-                class="text-[#C4AC77] font-bold text-sm uppercase tracking-wide"
-              >
-                The 2000´s
-              </h1>
-              <h2
-                style={robotoFontRegular}
-                class="uppercase text-[#C4AC77] text-sm tracking-wide"
-              >
-                Working with Nicolas Catena
-              </h2>
-            </div>
-            <div class="">
-              <p
-                class="text-black text-xs tracking-wider"
-                style={playfairFontRegular}
-              >
-                The story of this winery started in 2004, when italian countess
-                Noemi Marone Cinzano discovered this far away land, planted a
-                five hectares vineyard at the foot of the barda (a specific
-                patagonian landscape, a kind of cliff or hill made of a dark
-                grain of volcanic rock, with plenty of quartz, carbonate calcium
-                and calcareus) and began producing wine in a Burgundy style -
-                the winery built right by the vineyard with small concrete open
-                top pools for craft production, employing pisage.
-                <br />
-                <br />
-                When I first tasted the 2008 vintage, I knew Noemi had found a
-                real terroir. During ten years I explored all other nearby
-                places in Patagonia where to produce an equal taste. I finally
-                concluded the conditions in Valle Azul were perfect. <br />
-                <br />
-                An extraordinary coincidence brought me together with the
-                Countess and we finally came to an agreement through which we
-                could manage the land and the winery for a very long period of
-                time and thus invest in a larger and better operation to produce
-                an exceptional wine.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="container mx-auto bg-[#212121]">
-          <div class="pt-10 pb-5">
-            <h1
-              style={playfairFontBlack}
-              class="uppercase text-[#C4AC77] text-sm text-center"
-            >
-              Bodega Ribera del Cuarzo
-            </h1>
-          </div>
-        </div>
-
-        <div class="w-full">
-          <img src={botellasRibera} alt="" class="w-full" />
-        </div>
-
-        <div class="container mx-auto bg-[#212121]">
-          <div class="py-10">
-            <h1
-              style={bondiniFontRegular}
-              class="text-center text-sm text-[#F2ECE1]"
-            >
-              Creating unique wines in Patagonia <br />
-              veer in winegrowing at the foot of the "barda". <br />
-              Small family run winery
-            </h1>
-          </div>
-          <div class="pb-20">
-            <div class="flex justify-center">
-              <div class="border border-[#C3B17D] rounded-full p-7">
-                <img src={iconIg} alt="" class="w-5" />
+              <div class="container mx-auto bg-[#F2ECE1] px-10">
+                <div class="py-10 flex flex-col gap-y-5">
+                  <div class="">
+                    <p
+                      class="text-black text-xs tracking-wider"
+                      style={playfairFontRegular}
+                    >
+                      When we first tasted the 2008 vintage, we knew Noemi had
+                      found a real terroir. During ten years we explored all
+                      other nearby places in Patagonia where to produce an equal
+                      taste. We finally concluded the conditions in Valle Azul
+                      were perfect. <br /> <br />
+                      An extraordinary coincidence brought Menendez together
+                      with the Countess 10 years after having tasted that first
+                      memorable glass. Touched by Felipe´s passion and
+                      commitment, the Countess granted us the privilege to start
+                      producing our wines at that very land she had discovered.
+                      In 2018, Bodega Ribera del Cuarzo was born.
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
+
+              <div class="container mx-auto bg-[#212121]">
+                <div class="pt-10 pb-5">
+                  <h1
+                    style={playfairFontBlack}
+                    class="uppercase text-[#C4AC77] text-sm text-center"
+                  >
+                    Winery Ribera del Cuarzo
+                  </h1>
+                </div>
+              </div>
+
+              <div class="w-full">
+                <img src={botellasRibera} alt="" class="w-full" />
+              </div>
+
+              <div class="container mx-auto bg-[#212121]">
+                <div class="py-10">
+                  <h1
+                    style={bondiniFontRegular}
+                    class="text-center text-sm text-[#F2ECE1]"
+                  >
+                    {" "}
+                    <i>
+                      Creating unique wines in Patagonia <br />
+                      veer in winegrowing at the foot of the barda. <br />
+                      Small family run winery
+                    </i>
+                  </h1>
+                </div>
+                <div class="pb-20">
+                  <div class="flex justify-center">
+                    <div class="border border-[#C3B17D] rounded-full p-7">
+                      <img src={iconIg} alt="" class="w-5" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </body>
           </div>
-        </div>
-      </body>
-    </div>
-    </animated.div>
+        </animated.div>
       )}
     </Transition>
-
   );
 };
 

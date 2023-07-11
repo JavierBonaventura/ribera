@@ -2,16 +2,18 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
-import workVineyardSlide1 from "../images/workVineyardSlide1.jpg";
-import workVineyardSlide2 from "../images/workVineyardSlide2.jpg";
-import workVineyardSlide3 from "../images/workVineyardSlide3.jpg";
-import workVineyardSlide4 from "../images/workVineyardSlide4.jpg";
+import wineYardSlide1 from "../images/wineYardSlide1.jpg";
+import wineYardSlide2 from "../images/wineYardSlide2.jpg";
+import wineYardSlide3 from "../images/wineYardSlide3.jpg";
+import wineYardSlide4 from "../images/wineYardSlide4.jpg";
+import blackRiver from "../images/blackRiver.jpg";
+import { useLocation } from "react-router-dom";
+import { Transition, animated } from "@react-spring/web";
+
 import flechaIzquierda from "../images/flechaIzquierda.jpg";
 import flechaDerecha from "../images/flechaDerecha.jpg";
 import iconIg from "../images/icon-ig.png";
 import "../App.css";
-import { useLocation } from "react-router-dom";
-import { Transition, animated } from "@react-spring/web";
 
 function Header() {
   const playfairFontBlack = {
@@ -24,7 +26,6 @@ function Header() {
     fontWeight: "normal",
     fontStyle: "normal",
   };
-
   return (
     <div>
       <header className="py-10 fixed top-0 left-0 right-0 z-50 ">
@@ -59,7 +60,7 @@ function Header() {
                 style={playfairFontBlack}
                 className="font-bold text-base text-[#C4AC77] text-center tracking-wider"
               >
-                WORK IN THE VINEYARD
+                LIFE ON ESTATE
               </h4>
             </div>
           </div>
@@ -69,13 +70,13 @@ function Header() {
   );
 }
 
-const WorkVineyard = () => {
+const LifeOnEstate = () => {
   const location = useLocation();
 
   const [currentScreen, setCurrentScreen] = useState(0);
 
   const handleNext = () => {
-    if (currentScreen === 4) {
+    if (currentScreen === 3) {
       setCurrentScreen(0);
     } else {
       setCurrentScreen(currentScreen + 1);
@@ -109,7 +110,6 @@ const WorkVineyard = () => {
               {currentScreen === 1 && <Screen2 />}
               {currentScreen === 2 && <Screen3 />}
               {currentScreen === 3 && <Screen4 />}
-              {currentScreen === 4 && <Screen5 />}
             </div>
             <div className="flex justify-center space-x-10 pt-2  bg-[#F2ECE1]">
               <button
@@ -134,7 +134,6 @@ const WorkVineyard = () => {
             {currentScreen === 1 && <Screen2Text />}
             {currentScreen === 2 && <Screen3Text />}
             {currentScreen === 3 && <Screen4Text />}
-            {currentScreen === 4 && <Screen5Text />}
           </div>
         </animated.div>
       )}
@@ -174,14 +173,14 @@ const Screen1 = () => {
                   style={playfairFontBlack}
                   className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
                 >
-                  05
+                  04
                 </span>
               </p>
             </div>
 
             <div className="container mx-auto flex flex-col justify-center  items-center">
               <div>
-                <img src={workVineyardSlide1} alt="" className="w-full" />
+                <img src={wineYardSlide1} alt="" className="w-full" />
               </div>
             </div>
           </div>
@@ -205,7 +204,6 @@ const Screen1Text = () => {
     fontStyle: "normal",
     fontSize: "16px",
   };
-
   return (
     <Transition
       items={location}
@@ -224,23 +222,13 @@ const Screen1Text = () => {
                   <div className="flex flex-col gap-y-5">
                     <div className="w-4/5 mx-auto">
                       <p
-                        style={robotoFontRegular}
-                        className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3 tracking-wide"
-                      >
-                        PRUNING
-                      </p>
-                      <p
-                        class="text-black text-xs tracking-wider"
                         style={playfairFontRegular}
+                        className="decoration-black	 text-xs tracking-wider"
                       >
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptatum quisquam veniam commodi illum eaque
-                        laboriosam consequuntur, neque molestiae reiciendis
-                        voluptate, quibusdam et. Dolore beatae officia quasi
-                        sint quisquam vero inventore!. Lorem, ipsum dolor sit
-                        amet consectetur adipisicing elit. Mollitia ratione eum
-                        vel voluptatibus odio modi adipisci inventore, sunt
-                        neque facere delectus consequuntur.
+                        Horses are a way of life: living with horses slows
+                        things down, allowing us perspective and to connect with
+                        nature, to go through life in a more relaxed and
+                        profound way.
                       </p>
                     </div>
                   </div>
@@ -293,7 +281,7 @@ const Screen2 = () => {
                   style={playfairFontBlack}
                   className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
                 >
-                  05
+                  04
                 </span>
               </p>
             </div>
@@ -301,7 +289,7 @@ const Screen2 = () => {
             <div className="container mx-auto flex flex-col justify-center  items-center">
               <div>
                 <img
-                  src={workVineyardSlide2}
+                  src={wineYardSlide2}
                   alt=""
                   className="w-full h-full object-cover"
                 />
@@ -349,21 +337,34 @@ const Screen2Text = () => {
                         style={robotoFontRegular}
                         className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3 tracking-wide"
                       >
-                        TRELLISING{" "}
+                        THE HOUSE{" "}
                       </p>
                       <p
-                        class="text-black text-xs tracking-wider"
                         style={playfairFontRegular}
+                        className="decoration-black	 text-xs tracking-wider"
                       >
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptatum quisquam veniam commodi illum eaque
-                        laboriosam consequuntur, neque molestiae reiciendis
-                        voluptate, quibusdam et. Dolore beatae officia quasi
-                        sint quisquam vero inventore!. Lorem, ipsum dolor sit
-                        amet consectetur adipisicing elit. Mollitia ratione eum
-                        vel voluptatibus odio modi adipisci inventore, sunt
-                        neque facere delectus consequuntur.
+                        Countess Noemi Marone Cinzano identified this unique
+                        location and laid the foundations for what is now Bodega
+                        Ribera del Cuarzo. Similarly to Italian vineyards, she
+                        decided to build a house next to the winery. Patagonian
+                        in style with inviting architecture and a small garden
+                        with a view of the valley that leads down to the river,
+                        the house is where we rest after work and where we
+                        gather as a family to enjoy the holidays. It’s also
+                        where we think, plan, and make decisions with our
+                        colleagues, sharing our table with them in what has
+                        become the family home.
                       </p>
+                    </div>
+                  </div>
+
+                  <div className="container mx-auto flex flex-col justify-center  items-center">
+                    <div className="w-10/12">
+                      <img
+                        src={blackRiver}
+                        alt=""
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </div>
                 </div>
@@ -415,7 +416,7 @@ const Screen3 = () => {
                   style={playfairFontBlack}
                   className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
                 >
-                  05
+                  04
                 </span>
               </p>
             </div>
@@ -423,7 +424,7 @@ const Screen3 = () => {
             <div className="container mx-auto flex flex-col justify-center  items-center">
               <div>
                 <img
-                  src={workVineyardSlide3}
+                  src={wineYardSlide3}
                   alt=""
                   className="w-full h-full object-cover"
                 />
@@ -471,20 +472,27 @@ const Screen3Text = () => {
                         style={robotoFontRegular}
                         className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3 tracking-wide"
                       >
-                        DISBUDDING{" "}
+                        THE RIVER{" "}
                       </p>
                       <p
-                        class="text-black text-xs tracking-wider"
                         style={playfairFontRegular}
+                        className="decoration-black	 text-xs tracking-wider"
                       >
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptatum quisquam veniam commodi illum eaque
-                        laboriosam consequuntur, neque molestiae reiciendis
-                        voluptate, quibusdam et. Dolore beatae officia quasi
-                        sint quisquam vero inventore!. Lorem, ipsum dolor sit
-                        amet consectetur adipisicing elit. Mollitia ratione eum
-                        vel voluptatibus odio modi adipisci inventore, sunt
-                        neque facere delectus consequuntur.
+                        The Rio Negro is the largest river in Patagonia. The
+                        Limay and Neuquén rivers gather water and minerals from
+                        mountain snowmelt before flowing into the central and
+                        eastern parts of the country, eventually merging to form
+                        the Rio Negro. <br />
+                        <br />
+                        The Rio Negro reaches the sea in the south of the Buenos
+                        Aires Province, in a small town called El Cóndor. It
+                        meanders between two imposing barda walls, one to the
+                        north and the other to the south, which have been formed
+                        over millions of years. In 1860, Estanislao Ceballos
+                        described them as river terraces, and they contribute
+                        invaluable calcium carbonate, stone, quartz, and ash to
+                        the landscape. Today, the river flows through the center
+                        of this valley, a valley nestled between bardas.
                       </p>
                     </div>
                   </div>
@@ -536,14 +544,14 @@ const Screen4 = () => {
                   style={playfairFontBlack}
                   className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
                 >
-                  05
+                  04
                 </span>
               </p>
             </div>
 
             <div className="container mx-auto flex flex-col justify-center  items-center">
               <div>
-                <img src={workVineyardSlide4} alt="" className="w-full" />
+                <img src={wineYardSlide4} alt="" className="w-full" />
               </div>
             </div>
           </div>
@@ -588,18 +596,35 @@ const Screen4Text = () => {
                         style={robotoFontRegular}
                         className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3 tracking-wide"
                       >
-                        HARVERST{" "}
+                        THE HORSES{" "}
                       </p>
                       <p
-                        class="text-black text-xs tracking-wider"
                         style={playfairFontRegular}
+                        className="decoration-black	 text-xs tracking-wider"
                       >
-                        The harvest at our vineyard is a meticulous manual
-                        process that unfolds in multiple stages. Given the
-                        unique characteristics of each subsector within our
-                        five-hectare estate, different varieties and grape
-                        ripening cycles necessitate harvesting at distinct
-                        times.
+                        Maintaining traditional working methods helps us to keep
+                        in touch with the land, a connection that defines us as
+                        farmers. At the estate, we also raise Criollo horses,
+                        the famous Argentine breed. In addition to using
+                        tractors and other machinery that improve the efficiency
+                        of certain tasks, working with animals is a way of
+                        respecting and caring for nature in all our
+                        interventions, always working towards producing the best
+                        possible flavor. <br />
+                        <br />
+                        Horses also provide manure, which goes into the compost
+                        we use at the vineyard: it is added to organic waste
+                        from the wine barrels and vats and everything consumed
+                        at the house. This is the fertilizer for the fruits and
+                        vegetables we grow for ourselves, our gardens and, of
+                        course, our vineyard. <br />
+                        <br />
+                        <strong>
+                          But horses are also a way of life: living with horses
+                          slows things down, allowing us perspective and to
+                          connect with nature, to go through life in a more
+                          relaxed and profound way.
+                        </strong>
                       </p>
                     </div>
                   </div>
@@ -619,121 +644,4 @@ const Screen4Text = () => {
     </Transition>
   );
 };
-const Screen5 = () => {
-  const location = useLocation();
-
-  const playfairFontBlack = {
-    fontFamily: "Playfair Black, sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-  return (
-    <Transition
-      items={location}
-      keys={(location) => location.pathname}
-      from={{ opacity: 0 }}
-      enter={{ opacity: 1 }}
-      leave={{ opacity: 0 }}
-      config={{ duration: 1000 }}
-    >
-      {(style, item) => (
-        <animated.div style={{ ...style, width: "100%" }}>
-          <div className="mt-[-20px]">
-            <div className="bg-[#F2ECE1]">
-              <p className="ml-1 text-left relative">
-                <span
-                  style={playfairFontBlack}
-                  className="text-[#C4AC77] text-lg"
-                >
-                  05
-                </span>
-                <span
-                  style={playfairFontBlack}
-                  className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
-                >
-                  05
-                </span>
-              </p>
-            </div>
-
-            <div className="container mx-auto flex flex-col justify-center  items-center">
-              <div>
-                <img src={workVineyardSlide4} alt="" className="w-full" />
-              </div>
-            </div>
-          </div>
-        </animated.div>
-      )}
-    </Transition>
-  );
-};
-const Screen5Text = () => {
-  const location = useLocation();
-
-  const playfairFontRegular = {
-    fontFamily: "Playfair Regular, sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-
-  const robotoFontRegular = {
-    fontFamily: "Roboto Regular , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-    fontSize: "16px",
-  };
-  return (
-    <Transition
-      items={location}
-      keys={(location) => location.pathname}
-      from={{ opacity: 0 }}
-      enter={{ opacity: 1 }}
-      leave={{ opacity: 0 }}
-      config={{ duration: 1000 }}
-    >
-      {(style, item) => (
-        <animated.div style={{ ...style, width: "100%" }}>
-          <div>
-            <div className="bg-[#F2ECE1] py-5">
-              <div className="container mx-auto flex flex-col justify-center items-center">
-                <div className="flex flex-col gap-y-5">
-                  <div className="flex flex-col gap-y-5">
-                    <div className="w-4/5 mx-auto">
-                      <p
-                        style={robotoFontRegular}
-                        className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3 tracking-wide"
-                      >
-                        ANCIENT TECHNIQUES{" "}
-                      </p>
-                      <p
-                        class="text-black text-xs tracking-wider"
-                        style={playfairFontRegular}
-                      >
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptatum quisquam veniam commodi illum eaque
-                        laboriosam consequuntur, neque molestiae reiciendis
-                        voluptate, quibusdam et. Dolore beatae officia quasi
-                        sint quisquam vero inventore!. Lorem, ipsum dolor sit
-                        amet consectetur adipisicing elit. Mollitia ratione eum
-                        vel voluptatibus odio modi adipisci inventore, sunt
-                        neque facere delectus consequuntur.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="bg-[#F2ECE1] py-16">
-              <div className="container mx-auto flex justify-center">
-                <div className="border border-[#C3B17D] rounded-full p-6">
-                  <img src={iconIg} alt="" className="w-4" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </animated.div>
-      )}
-    </Transition>
-  );
-};
-export default WorkVineyard;
+export default LifeOnEstate;

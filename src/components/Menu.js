@@ -200,7 +200,7 @@ const Home = () => {
                     </li>
                     <li>
                       <Link
-                        to="/wineyard"
+                        to="/lifeonestate"
                         className="subMenu tracking-widest"
                         style={robotoFontRegular}
                       >
@@ -209,7 +209,7 @@ const Home = () => {
                     </li>
                     <li>
                       <Link
-                        to="/wineyard"
+                        to="/lifewater"
                         className="subMenu tracking-widest"
                         style={robotoFontRegular}
                       >

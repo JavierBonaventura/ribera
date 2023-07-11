@@ -3,16 +3,16 @@ import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
-import araucanaWine from "../images/araucana-wine.png";
+import araucanaWine from "../images/araucana-rio-wine.png";
 import iconDownload from "../images/icon-download.png";
 import araucanaMalbec from "../images/araucana-malbec-wine.png";
 import araucanaAzul from "../images/araucana-azul-wine.png";
 import riberaClasico from "../images/ribera-clasico-wine.png";
 import riberaEspecial from "../images/ribera-especial-wine.png";
 import riberaReserva from "../images/ribera-reserva-wine.png";
+import cava from "../images/cava.jpg";
 import iconIg from "../images/icon-ig.png";
-import { Transition, animated } from '@react-spring/web';
-
+import { Transition, animated } from "@react-spring/web";
 
 import "../App.css";
 function Araucana() {
@@ -59,224 +59,332 @@ function Araucana() {
   };
   return (
     <Transition
-    items={locationAnimacion}
-    keys={(location) => location.pathname}
-    from={{ opacity: 0 }}
-    enter={{ opacity: 1 }}
-    leave={{ opacity: 0 }}
-    config={{ duration: 1000 }}
-  >
-    {(style, item) => (
-      <animated.div style={{ ...style, width: '100%' }}>
+      items={locationAnimacion}
+      keys={(location) => location.pathname}
+      from={{ opacity: 0 }}
+      enter={{ opacity: 1 }}
+      leave={{ opacity: 0 }}
+      config={{ duration: 1000 }}
+    >
+      {(style, item) => (
+        <animated.div style={{ ...style, width: "100%" }}>
+          <div>
+            <header className="py-10 fixed top-0 left-0 right-0 z-50 ">
+              <div class="container mx-auto">
+                <div class="flex justify-between items-center px-5">
+                  <div class="w-20 md:w-36">
+                    <Link to="/">
+                      <img src={logo} alt="" className="w-full" />
+                    </Link>
+                  </div>
 
-    <div>
-      <header className="py-10 fixed top-0 left-0 right-0 z-50 ">
-        <div class="container mx-auto">
-          <div class="flex justify-between items-center px-5">
-            <div class="w-20 md:w-36">
-              <Link to="/">
-                <img src={logo} alt="" className="w-full" />
-              </Link>
-            </div>
+                  <div class="w-8">
+                    <Link to="/MenuHamburguesa">
+                      <img src={hambur} alt="" className="w-full" />
+                    </Link>{" "}
+                  </div>
+                </div>
+              </div>
+            </header>
 
-            <div class="w-8">
-              <Link to="/MenuHamburguesa">
-                <img src={hambur} alt="" className="w-full" />
-              </Link>{" "}
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <div ref={scrollRef} className="bg-[#231F20] pt-16">
-        <div className="container mx-auto flex flex-col justify-center items-center mt-10">
-          <div className="w-1/3">
-            <img src={araucanaWine} alt="" className="w-full" />
-          </div>
-
-          <div className="flex flex-col gap-y-5">
-            <div className="flex flex-col gap-y-5">
-              <h1
-                className="uppercase text-xs text-[#C3B17D] text-center tracking-widest"
-                style={robotoFontRegular}
-              >
-                Araucana Río de los ciervos
-              </h1>
-              <h4
-                className="text-xs text-[#F2ECE1] text-center tracking-widest"
-                style={robotoFontRegular}
-              >
-                <i>Patagonia, Argentina</i>
-              </h4>
-            </div>
-            <div className="flex flex-col gap-y-5">
-              <div className="w-2/3 mx-auto">
+            <div className="container mx-auto flex flex-col justify-center items-center  bg-[#231F20] py-28">
+              <div className=" flex flex-col gap-y-5">
+                <img src={cava} alt="" className="w-full" />
                 <p
-                  className="text-[#F2ECE1] text-xs tracking-wider"
+                  className="text-[#F2ECE1] text-xs tracking-wider px-5  text-center"
                   style={playfairFontRegular}
                 >
-                  "Río de los Ciervos" es un pequeño pueblo ubicado en tierra
-                  del fuego. En esta región Patagónica en 300 km se pueden
-                  recorrer todos los paisajes, desde el mar, hasta el desierto,
-                  la montaña y los ríos típicos del sur. En ese pueblo nació Don
-                  Julio Menéndez Prendes Abuelo de Felie. A través de este vino
-                  intentamos mostrar la diversidad de la zona clásica del valle
-                  del río negro, la uva proviene de 8 viñedos, ubicados a lo
-                  largo de los 200k a la vera norte y sur del río."
+                  We craft wines with the adventurous spirit inherent to
+                  Patagonia, respecting the environment and listening to nature.
+                  The result is a collection of wines that never cease to amaze.
                 </p>
               </div>
-              <div className="w-2/3 mx-auto flex justify-center">
-                <a className="border-b border-[#C3B17D]">
-                  <div className="w-2 inline-block">
-                    <img src={iconDownload} alt="" className="w-full" />
+            </div>
+
+            <div
+              ref={scrollRef}
+              className="bg-[#231F20] flex flex-col gap-y-20"
+            >
+              <div className="container mx-auto flex flex-col justify-center items-center gap-y-5">
+                <div className="w-1/3 ">
+                  <img src={araucanaWine} alt="" className="w-full" />
+                </div>
+
+                <div className="flex flex-col gap-y-5 ">
+                  <div className="flex flex-col gap-y-5">
+                    <h1
+                      className="uppercase text-xs text-[#C3B17D] text-center tracking-widest"
+                      style={robotoFontRegular}
+                    >
+                      Araucana Río de los ciervos
+                    </h1>
+                    <h4
+                      className="text-xs text-[#F2ECE1] text-center tracking-widest"
+                      style={robotoFontRegular}
+                    >
+                      <i>Patagonia, Argentina</i>
+                    </h4>
                   </div>
-                  <span className="ml-2 text-xs text-[#C3B17D] tracking-wider">
-                    Descargar ficha técnica
-                  </span>
-                </a>
-              </div>
-              {showDropdown && (
-                  <div className="mt-2 w-48 mx-auto">
-                    <ul className="text-xs text-[#C3B17D] text-center">
-                      <li className="py-2 px-4 hover:bg-gray-100">Opción 1</li>
-                      <li className="py-2 px-4 hover:bg-gray-100">Opción 2</li>
-                      <li className="py-2 px-4 hover:bg-gray-100">Opción 3</li>
-                    </ul>
+                  <div className="flex flex-col gap-y-5">
+                    <div className="w-2/3 mx-auto">
+                      <p
+                        className="text-[#F2ECE1] text-xs tracking-wider"
+                        style={playfairFontRegular}
+                      >
+                        Río de los Ciervos´ grapes come from 8 vineyards located
+                        along the 200km on both sides of the river. Through this
+                        wine, we aim to showcase the diversity of the classic
+                        area of the Río Negro valley.
+                      </p>
+                    </div>
+                    <div className="w-2/3 mx-auto flex justify-center">
+                      <a
+                        className="border-b border-[#C3B17D]"
+                        onClick={handleDownloadClick}
+                      >
+                        <div className="w-2 inline-block">
+                          <img src={iconDownload} alt="" className="w-full" />
+                        </div>
+                        <span className="ml-2 text-xs text-[#C3B17D] tracking-wider">
+                          Download technical sheet
+                        </span>
+                      </a>
+                    </div>
+                    {showDropdown && (
+                      <div className="mt-2 w-48 mx-auto">
+                        <ul className="text-xs text-[#C3B17D] text-center">
+                          <li className="py-2 px-4 hover:bg-gray-100">
+                            Opción 1
+                          </li>
+                          <li className="py-2 px-4 hover:bg-gray-100">
+                            Opción 2
+                          </li>
+                          <li className="py-2 px-4 hover:bg-gray-100">
+                            Opción 3
+                          </li>
+                        </ul>
+                      </div>
+                    )}
                   </div>
-                )}
+                </div>
+              </div>
 
-            </div>
-          </div>
-        </div>
-      </div>
+              <div className="container mx-auto flex flex-col justify-center items-center gap-y-5">
+                <div className="w-1/3">
+                  <img src={araucanaMalbec} alt="" />
+                </div>
+                <div className="flex flex-col gap-y-5">
+                  <h1
+                    className="uppercase text-xs text-[#C3B17D] text-center tracking-widest"
+                    style={robotoFontRegular}
+                  >
+                    Araucana Malbec
+                  </h1>
+                  <h4
+                    className="text-xs text-[#F2ECE1] text-center tracking-widest"
+                    style={robotoFontRegular}
+                  >
+                    <i>Patagonia, Argentina</i>
+                  </h4>
+                </div>
+                <div className="bg-[#C3B17D] px-5 py-1 rounded-md hidden">
+                  <a href="" style={robotoFontRegular}>
+                    <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
+                      Read more
+                    </span>
+                  </a>
+                </div>
+                <div className="flex flex-col gap-y-5">
+                  <div className="w-2/3 mx-auto">
+                    <p
+                      className="text-[#F2ECE1] text-xs tracking-wider"
+                      style={playfairFontRegular}
+                    >
+                      ARAUCANA MALBEC comes from our 5 ha Araucana Vineyard that
+                      has unique and distinctive characteristics. Calcareous
+                      soils, cold nights and constant winds are permanent
+                      challenges for our vines, which react by generating
+                      excellent concentration and marked acidity.
+                    </p>
+                  </div>
+                  <div className="w-2/3 mx-auto flex justify-center">
+                    <a
+                      className="border-b border-[#C3B17D]"
+                      onClick={handleDownloadClick}
+                    >
+                      <div className="w-2 inline-block">
+                        <img src={iconDownload} alt="" className="w-full" />
+                      </div>
+                      <span className="ml-2 text-xs text-[#C3B17D] tracking-wider">
+                        Download technical sheet
+                      </span>
+                    </a>
+                  </div>
+                  {showDropdown && (
+                    <div className="mt-2 w-48 mx-auto">
+                      <ul className="text-xs text-[#C3B17D] text-center">
+                        <li className="py-2 px-4 hover:bg-gray-100">
+                          Opción 1
+                        </li>
+                        <li className="py-2 px-4 hover:bg-gray-100">
+                          Opción 2
+                        </li>
+                        <li className="py-2 px-4 hover:bg-gray-100">
+                          Opción 3
+                        </li>
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              </div>
 
-      <div className="bg-[#231F20] py-5 flex flex-col gap-y-10">
-        <div className="container mx-auto flex flex-col justify-center items-center gap-y-5">
-          <div>
-            <img src={araucanaMalbec} alt="" />
-          </div>
-          <div>
-            <h1
-              className="uppercase text-xs text-[#C3B17D] text-center tracking-widest"
-              style={robotoFontRegular}
-            >
-              Araucana Malbec
-            </h1>
-          </div>
-          <div className="bg-[#C3B17D] px-5 py-1 rounded-md">
-            <a href="" style={robotoFontRegular}>
-              <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
-                Read more
-              </span>
-            </a>
-          </div>
-        </div>
-        <div className="container mx-auto flex flex-col justify-center items-center gap-y-5">
-          <div>
-            <img src={araucanaAzul} alt="" />
-          </div>
-          <div>
-            <h1
-              className="uppercase text-xs text-[#C3B17D] text-center tracking-widest"
-              style={robotoFontRegular}
-            >
-              Araucana Azul
-            </h1>
-          </div>
-          <div className="bg-[#C3B17D] px-5 py-1 rounded-md">
-            <a href="" style={robotoFontRegular}>
-              <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
-                Read more
-              </span>
-            </a>
-          </div>
-        </div>
-        <div className="container mx-auto">
-          <div>
-            <p
-              className="text-[#F2ECE1] text-xs text-center leading-5"
-              style={bondiniFontRegular}
-            >
-              <i>
-                Creating unique wines in Patagonia <br />
-                Pioneer in winegrowing at the foot of the "barda". <br />
-                Small family run winery
-              </i>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-[#231F20] py-5 px-3">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-3 gap-x-4">
-            <div className="flex gap-y-4 flex-col">
-              <img src={riberaClasico} alt="" />
-              <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
-                <a href="" style={robotoFontRegular}>
-                  <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
-                    Read more
-                  </span>
-                </a>
+              <div className="container mx-auto flex flex-col justify-center items-center gap-y-5 ">
+                <div className="w-1/3">
+                  <img src={araucanaAzul} alt="" />
+                </div>
+                <div className="flex flex-col gap-y-5">
+                  <h1
+                    className="uppercase text-xs text-[#C3B17D] text-center tracking-widest"
+                    style={robotoFontRegular}
+                  >
+                    Araucana Azul
+                  </h1>
+                  <h4
+                    className="text-xs text-[#F2ECE1] text-center tracking-widest"
+                    style={robotoFontRegular}
+                  >
+                    <i>Patagonia, Argentina</i>
+                  </h4>
+                </div>
+                <div className="flex flex-col gap-y-5">
+                  <div className="w-2/3 mx-auto">
+                    <p
+                      className="text-[#F2ECE1] text-xs tracking-wider"
+                      style={playfairFontRegular}
+                    >
+                      AZUL is a barrel blend. We select the barrels that show
+                      the most elegance from the Southern sector of the
+                      vineyard, where the higher limestone content results in
+                      greater power and expression.
+                    </p>
+                  </div>
+                  <div className="w-2/3 mx-auto flex justify-center">
+                    <a
+                      className="border-b border-[#C3B17D]"
+                      onClick={handleDownloadClick}
+                    >
+                      <div className="w-2 inline-block">
+                        <img src={iconDownload} alt="" className="w-full" />
+                      </div>
+                      <span className="ml-2 text-xs text-[#C3B17D] tracking-wider">
+                        Download technical sheet
+                      </span>
+                    </a>
+                  </div>
+                  {showDropdown && (
+                    <div className="mt-2 w-48 mx-auto">
+                      <ul className="text-xs text-[#C3B17D] text-center">
+                        <li className="py-2 px-4 hover:bg-gray-100">
+                          Opción 1
+                        </li>
+                        <li className="py-2 px-4 hover:bg-gray-100">
+                          Opción 2
+                        </li>
+                        <li className="py-2 px-4 hover:bg-gray-100">
+                          Opción 3
+                        </li>
+                      </ul>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
-            <div className="flex gap-y-4 flex-col">
-              <img src={riberaEspecial} alt="" />
-              <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
-                <a href="" style={robotoFontRegular}>
-                  <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
-                    Read more
-                  </span>
-                </a>
+
+            <div className="container mx-auto bg-[#231F20] pt-20 pb-10">
+              <div>
+                <p
+                  className="text-[#F2ECE1] text-xs text-center leading-5"
+                  style={bondiniFontRegular}
+                >
+                  {" "}
+                  <i>
+                    Creating unique wines in Patagonia <br />
+                    Pioneer in winegrowing at the foot of the "barda". <br />
+                    Small family run winery
+                  </i>
+                </p>
               </div>
             </div>
-            <div className="flex gap-y-4 flex-col">
-              <img src={riberaReserva} alt="" />
-              <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
-                <a href="" style={robotoFontRegular}>
-                  <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
-                    Read more
-                  </span>
-                </a>
+
+            <div className="bg-[#231F20] px-5 py-10">
+              <div className="container mx-auto">
+                <div className="grid grid-cols-3 gap-x-4">
+                  <div className="flex gap-y-4 flex-col">
+                    <img src={riberaClasico} alt="" />
+                    <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
+                      <a href="" style={robotoFontRegular}>
+                        <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
+                          Read more
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex gap-y-4 flex-col">
+                    <img src={riberaEspecial} alt="" />
+                    <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
+                      <a href="" style={robotoFontRegular}>
+                        <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
+                          Read more
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex gap-y-4 flex-col">
+                    <img src={riberaReserva} alt="" />
+                    <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
+                      <a href="" style={robotoFontRegular}>
+                        <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
+                          Read more
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-[#231F20] py-10">
+              <div className="container mx-auto flex flex-col gap-y-5">
+                <div>
+                  <h1
+                    className="text-[#C3B17D] text-center text-xs uppercase tracking-widest"
+                    style={robotoFontRegular}
+                  >
+                    Ribera del cuarzo
+                  </h1>
+                </div>
+                <div>
+                  <h2
+                    className="text-[#F2ECE1] text-center text-xs tracking-widest"
+                    style={robotoFontRegular}
+                  >
+                    <i>Patagonia, Argentina</i>
+                  </h2>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-[#231F20] py-20">
+              <div className="container mx-auto flex justify-center">
+                <div className="border border-[#C3B17D] rounded-full p-7">
+                  <img src={iconIg} alt="" className="w-5" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className="bg-[#231F20] py-5">
-        <div className="container mx-auto flex flex-col gap-y-5">
-          <div>
-            <h1
-              className="text-[#C3B17D] text-center text-xs uppercase tracking-widest"
-              style={robotoFontRegular}
-            >
-              Ribera del cuarzo
-            </h1>
-          </div>
-          <div>
-            <h2
-              className="text-[#F2ECE1] text-center text-xs tracking-widest"
-              style={robotoFontRegular}
-            >
-              <i>Patagonia, Argentina</i>
-            </h2>
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-[#231F20] py-20">
-        <div className="container mx-auto flex justify-center">
-          <div className="border border-[#C3B17D] rounded-full p-7">
-            <img src={iconIg} alt="" className="w-5" />
-          </div>
-        </div>
-      </div>
-    </div>
-    </animated.div>
+        </animated.div>
       )}
     </Transition>
-
   );
 }
 

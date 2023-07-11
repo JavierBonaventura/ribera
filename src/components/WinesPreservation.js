@@ -9,9 +9,8 @@ import flechaIzquierda from "../images/flechaIzquierda.jpg";
 import flechaDerecha from "../images/flechaDerecha.jpg";
 import iconIg from "../images/icon-ig.png";
 import "../App.css";
-import { useLocation  } from "react-router-dom";
-import { Transition, animated } from '@react-spring/web';
-
+import { useLocation } from "react-router-dom";
+import { Transition, animated } from "@react-spring/web";
 
 function Header() {
   const playfairFontBlack = {
@@ -75,7 +74,7 @@ const WinesPreservation = () => {
   const [currentScreen, setCurrentScreen] = useState(0);
 
   const handleNext = () => {
-    if (currentScreen === 2) {
+    if (currentScreen === 4) {
       setCurrentScreen(0);
     } else {
       setCurrentScreen(currentScreen + 1);
@@ -92,52 +91,53 @@ const WinesPreservation = () => {
 
   return (
     <Transition
-    items={location}
-    keys={(location) => location.pathname}
-    from={{ opacity: 0 }}
-    enter={{ opacity: 1 }}
-    leave={{ opacity: 0 }}
-    config={{ duration: 1000 }}
-  >
-    {(style, item) => (
-      <animated.div style={{ ...style, width: '100%' }}>
+      items={location}
+      keys={(location) => location.pathname}
+      from={{ opacity: 0 }}
+      enter={{ opacity: 1 }}
+      leave={{ opacity: 0 }}
+      config={{ duration: 1000 }}
+    >
+      {(style, item) => (
+        <animated.div style={{ ...style, width: "100%" }}>
+          <div>
+            <Header />
+            <div>
+              {/* Contenido del slider */}
+              {currentScreen === 0 && <Screen1 />}
+              {currentScreen === 1 && <Screen2 />}
+              {currentScreen === 2 && <Screen3 />}
+              {currentScreen === 3 && <Screen4 />}
+              {currentScreen === 4 && <Screen5 />}
+            </div>
+            <div className="flex justify-center space-x-10 pt-2  bg-[#F2ECE1]">
+              <button
+                className="w-14 h-14 rounded-full flex items-center justify-center mr-2"
+                onClick={handlePrev}
+              >
+                <div className="">
+                  <img src={flechaIzquierda} alt="" className="w-full" />
+                </div>
+              </button>
 
-
-    <div>
-      <Header />
-      <div>
-        {/* Contenido del slider */}
-        {currentScreen === 0 && <Screen1 />}
-        {currentScreen === 1 && <Screen2 />}
-        {currentScreen === 2 && <Screen3 />}
-      </div>
-      <div className="flex justify-center space-x-10 pt-2  bg-[#F2ECE1]">
-        <button
-          className="w-14 h-14 rounded-full flex items-center justify-center mr-2"
-          onClick={handlePrev}
-        >
-          <div className="">
-            <img src={flechaIzquierda} alt="" className="w-full" />
+              <button
+                className="w-14 h-14 flex items-center justify-center"
+                onClick={handleNext}
+              >
+                <div className="">
+                  <img src={flechaDerecha} alt="" className="w-full" />
+                </div>
+              </button>
+            </div>
+            {currentScreen === 0 && <Screen1Text />}
+            {currentScreen === 1 && <Screen2Text />}
+            {currentScreen === 2 && <Screen3Text />}
+            {currentScreen === 3 && <Screen4Text />}
+            {currentScreen === 4 && <Screen5Text />}
           </div>
-        </button>
-
-        <button
-          className="w-14 h-14 flex items-center justify-center"
-          onClick={handleNext}
-        >
-          <div className="">
-            <img src={flechaDerecha} alt="" className="w-full" />
-          </div>
-        </button>
-      </div>
-      {currentScreen === 0 && <Screen1Text />}
-      {currentScreen === 1 && <Screen2Text />}
-      {currentScreen === 2 && <Screen3Text />}
-    </div>
-    </animated.div>
+        </animated.div>
       )}
     </Transition>
-
   );
 };
 
@@ -151,41 +151,42 @@ const Screen1 = () => {
   };
   return (
     <Transition
-    items={location}
-    keys={(location) => location.pathname}
-    from={{ opacity: 0 }}
-    enter={{ opacity: 1 }}
-    leave={{ opacity: 0 }}
-    config={{ duration: 1000 }}
-  >
-    {(style, item) => (
-      <animated.div style={{ ...style, width: '100%' }}>
+      items={location}
+      keys={(location) => location.pathname}
+      from={{ opacity: 0 }}
+      enter={{ opacity: 1 }}
+      leave={{ opacity: 0 }}
+      config={{ duration: 1000 }}
+    >
+      {(style, item) => (
+        <animated.div style={{ ...style, width: "100%" }}>
+          <div className="mt-[-20px]">
+            <div className="bg-[#F2ECE1] ">
+              <p className="ml-1 text-left relative">
+                <span
+                  style={playfairFontBlack}
+                  className="text-[#C4AC77] text-lg"
+                >
+                  01
+                </span>
+                <span
+                  style={playfairFontBlack}
+                  className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
+                >
+                  05
+                </span>
+              </p>
+            </div>
 
-    <div className="mt-[-20px]">
-      <div className="bg-[#F2ECE1] ">
-        <p className="ml-1 text-left relative">
-          <span style={playfairFontBlack} className="text-[#C4AC77] text-lg">
-            01
-          </span>
-          <span
-            style={playfairFontBlack}
-            className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
-          >
-            03
-          </span>
-        </p>
-      </div>
-
-      <div className="container mx-auto flex flex-col justify-center  items-center">
-        <div>
-          <img src={winesPreservationSlide1} alt="" className="w-full" />
-        </div>
-      </div>
-    </div>
-    </animated.div>
+            <div className="container mx-auto flex flex-col justify-center  items-center">
+              <div>
+                <img src={winesPreservationSlide1} alt="" className="w-full" />
+              </div>
+            </div>
+          </div>
+        </animated.div>
       )}
     </Transition>
-
   );
 };
 const Screen1Text = () => {
@@ -205,68 +206,69 @@ const Screen1Text = () => {
   };
   return (
     <Transition
-    items={location}
-    keys={(location) => location.pathname}
-    from={{ opacity: 0 }}
-    enter={{ opacity: 1 }}
-    leave={{ opacity: 0 }}
-    config={{ duration: 1000 }}
-  >
-    {(style, item) => (
-      <animated.div style={{ ...style, width: '100%' }}>
-
-    <div>
-      <div className="bg-[#F2ECE1] py-5">
-        <div className="container mx-auto flex flex-col justify-center items-center">
-          <div className="flex flex-col gap-y-5">
-            <div className="flex flex-col gap-y-5">
-              <div className="w-4/5 mx-auto">
-                <p
-                  style={robotoFontRegular}
-                  className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3 tracking-wide"
-                >
-                  WINEMAKING
-                </p>
-                <p
-                  class="text-black text-xs tracking-wider"
-                  style={playfairFontRegular}
-                >
-                  Winemaking is done in small open-top vats, all carried out
-                  painstakingly by hand. During this stage we continue to keep
-                  intervention to a minimum, trying to encourage spontaneous
-                  fermentation and always respecting the terroir. We barcly add
-                  any sulfites in the traditional way to preserve the wines from
-                  oxidation and protect their microbiology. We take our lead
-                  from the vineyard; it tells us when the best time to harvest
-                  is for maximum expression. Each of the vats in which we carry
-                  out the fermentation is filled with two thousand kilos of
-                  grapes and they are handled traditionally: manual pressing,
-                  deslestage, mainly with the Malbec, and very gentle
-                  pumping-over at the end.
-                </p>
+      items={location}
+      keys={(location) => location.pathname}
+      from={{ opacity: 0 }}
+      enter={{ opacity: 1 }}
+      leave={{ opacity: 0 }}
+      config={{ duration: 1000 }}
+    >
+      {(style, item) => (
+        <animated.div style={{ ...style, width: "100%" }}>
+          <div>
+            <div className="bg-[#F2ECE1] py-5">
+              <div className="container mx-auto flex flex-col justify-center items-center">
+                <div className="flex flex-col gap-y-5">
+                  <div className="flex flex-col gap-y-5">
+                    <div className="w-4/5 mx-auto">
+                      <p
+                        style={robotoFontRegular}
+                        className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3 tracking-wide"
+                      >
+                        FERMENTATION
+                      </p>
+                      <p
+                        class="text-black text-xs tracking-wider"
+                        style={playfairFontRegular}
+                      >
+                        Winemaking takes place in small open-top vats, and every
+                        step is executed with meticulous care by hand.
+                        Throughout this stage, we maintain minimal intervention,
+                        striving to foster spontaneous fermentation while
+                        upholding utmost respect for the terroir. Our approach
+                        to sulfites is traditional and conservative, adding only
+                        a small amount to safeguard the wines against oxidation
+                        and preserve their microbiology. We entrust the vineyard
+                        itself to guide us in determining the ideal moment for
+                        harvest, ensuring maximum expression. <br />
+                        <br />
+                        Each fermentation vat is filled with two thousand kilos
+                        of grapes, and we adhere to traditional methods
+                        throughout the process: manual pressing, deslestage,
+                        particularly with our Malbec grapes, and gentle
+                        pumping-over during the final stages.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-[#F2ECE1] py-16">
+              <div className="container mx-auto flex justify-center">
+                <div className="border border-[#C3B17D] rounded-full p-6">
+                  <img src={iconIg} alt="" className="w-4" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="bg-[#F2ECE1] py-16">
-        <div className="container mx-auto flex justify-center">
-          <div className="border border-[#C3B17D] rounded-full p-6">
-            <img src={iconIg} alt="" className="w-4" />
-          </div>
-        </div>
-      </div>
-    </div>
-    </animated.div>
+        </animated.div>
       )}
     </Transition>
-
   );
 };
 
 const Screen2 = () => {
   const location = useLocation();
-
 
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
@@ -275,46 +277,46 @@ const Screen2 = () => {
   };
   return (
     <Transition
-    items={location}
-    keys={(location) => location.pathname}
-    from={{ opacity: 0 }}
-    enter={{ opacity: 1 }}
-    leave={{ opacity: 0 }}
-    config={{ duration: 1000 }}
-  >
-    {(style, item) => (
-      <animated.div style={{ ...style,  width: '100%' }}>
+      items={location}
+      keys={(location) => location.pathname}
+      from={{ opacity: 0 }}
+      enter={{ opacity: 1 }}
+      leave={{ opacity: 0 }}
+      config={{ duration: 1000 }}
+    >
+      {(style, item) => (
+        <animated.div style={{ ...style, width: "100%" }}>
+          <div className="mt-[-20px]">
+            <div className="bg-[#F2ECE1]">
+              <p className="ml-1 text-left relative">
+                <span
+                  style={playfairFontBlack}
+                  className="text-[#C4AC77] text-lg"
+                >
+                  02
+                </span>
+                <span
+                  style={playfairFontBlack}
+                  className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
+                >
+                  05
+                </span>
+              </p>
+            </div>
 
-    <div className="mt-[-20px]">
-      <div className="bg-[#F2ECE1]">
-        <p className="ml-1 text-left relative">
-          <span style={playfairFontBlack} className="text-[#C4AC77] text-lg">
-            02
-          </span>
-          <span
-            style={playfairFontBlack}
-            className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
-          >
-            03
-          </span>
-        </p>
-      </div>
-
-      <div className="container mx-auto flex flex-col justify-center  items-center">
-        <div>
-          <img
-            src={winesPreservationSlide2}
-            alt=""
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </div>
-    </div>
-    </animated.div>
+            <div className="container mx-auto flex flex-col justify-center  items-center">
+              <div>
+                <img
+                  src={winesPreservationSlide2}
+                  alt=""
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </animated.div>
       )}
     </Transition>
-
-
   );
 };
 const Screen2Text = () => {
@@ -334,59 +336,54 @@ const Screen2Text = () => {
   };
   return (
     <Transition
-    items={location}
-    keys={(location) => location.pathname}
-    from={{ opacity: 0 }}
-    enter={{ opacity: 1 }}
-    leave={{ opacity: 0 }}
-    config={{ duration: 1000 }}
-  >
-    {(style, item) => (
-      <animated.div style={{ ...style, width: '100%' }}>
+      items={location}
+      keys={(location) => location.pathname}
+      from={{ opacity: 0 }}
+      enter={{ opacity: 1 }}
+      leave={{ opacity: 0 }}
+      config={{ duration: 1000 }}
+    >
+      {(style, item) => (
+        <animated.div style={{ ...style, width: "100%" }}>
+          <div>
+            <div className="bg-[#F2ECE1] py-5">
+              <div className="container mx-auto flex flex-col justify-center items-center">
+                <div className="flex flex-col gap-y-5">
+                  <div className="flex flex-col gap-y-5">
+                    <div className="w-4/5 mx-auto">
+                      <p
+                        style={robotoFontRegular}
+                        className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3 tracking-wide"
+                      >
+                        AGING{" "}
+                      </p>
 
-    <div>
-      <div className="bg-[#F2ECE1] py-5">
-        <div className="container mx-auto flex flex-col justify-center items-center">
-          <div className="flex flex-col gap-y-5">
-            <div className="flex flex-col gap-y-5">
-              <div className="w-4/5 mx-auto">
-                <p
-                  style={robotoFontRegular}
-                  className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3 tracking-wide"
-                >
-                  CELLAR{" "}
-                </p>
-
-                <p
-                  class="text-black text-xs tracking-wider"
-                  style={playfairFontRegular}
-                >
-                  Once the wines are finished, they are aged in barrcls. Only
-                  twenty or thirty percent of the barrels we use are new, the
-                  rest are reused so as not to overload the wine with oak. Once
-                  the twelve to fourteen months aging period is over, it's time
-                  to make the blends and here our decisions are made by the
-                  barrel: every barrel is a world unto itself and we taste the
-                  expression of cach, deciding which line its contents will suit
-                  best.
-                </p>
+                      <p
+                        class="text-black text-xs tracking-wider"
+                        style={playfairFontRegular}
+                      >
+                        Once the wines complete their fermentation, they embark
+                        on a journey of aging in barrels. Only a fraction,
+                        around twenty to thirty percent, of the barrels used are
+                        new, as we strive to strike a delicate balance and avoid
+                        overwhelming the wines with oak.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-[#F2ECE1] py-16">
+              <div className="container mx-auto flex justify-center">
+                <div className="border border-[#C3B17D] rounded-full p-6">
+                  <img src={iconIg} alt="" className="w-4" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="bg-[#F2ECE1] py-16">
-        <div className="container mx-auto flex justify-center">
-          <div className="border border-[#C3B17D] rounded-full p-6">
-            <img src={iconIg} alt="" className="w-4" />
-          </div>
-        </div>
-      </div>
-    </div>
-    </animated.div>
+        </animated.div>
       )}
     </Transition>
-
   );
 };
 
@@ -400,45 +397,46 @@ const Screen3 = () => {
   };
   return (
     <Transition
-    items={location}
-    keys={(location) => location.pathname}
-    from={{ opacity: 0 }}
-    enter={{ opacity: 1 }}
-    leave={{ opacity: 0 }}
-    config={{ duration: 1000 }}
-  >
-    {(style, item) => (
-      <animated.div style={{ ...style, width: '100%' }}>
+      items={location}
+      keys={(location) => location.pathname}
+      from={{ opacity: 0 }}
+      enter={{ opacity: 1 }}
+      leave={{ opacity: 0 }}
+      config={{ duration: 1000 }}
+    >
+      {(style, item) => (
+        <animated.div style={{ ...style, width: "100%" }}>
+          <div className="mt-[-20px]">
+            <div className="bg-[#F2ECE1]">
+              <p className="ml-1 text-left relative">
+                <span
+                  style={playfairFontBlack}
+                  className="text-[#C4AC77] text-lg"
+                >
+                  03
+                </span>
+                <span
+                  style={playfairFontBlack}
+                  className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
+                >
+                  05
+                </span>
+              </p>
+            </div>
 
-    <div className="mt-[-20px]">
-      <div className="bg-[#F2ECE1]">
-        <p className="ml-1 text-left relative">
-          <span style={playfairFontBlack} className="text-[#C4AC77] text-lg">
-            03
-          </span>
-          <span
-            style={playfairFontBlack}
-            className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
-          >
-            03
-          </span>
-        </p>
-      </div>
-
-      <div className="container mx-auto flex flex-col justify-center  items-center">
-        <div>
-          <img
-            src={winesPreservationSlide3}
-            alt=""
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </div>
-    </div>
-    </animated.div>
+            <div className="container mx-auto flex flex-col justify-center  items-center">
+              <div>
+                <img
+                  src={winesPreservationSlide3}
+                  alt=""
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </animated.div>
       )}
     </Transition>
-
   );
 };
 const Screen3Text = () => {
@@ -458,56 +456,302 @@ const Screen3Text = () => {
   };
   return (
     <Transition
-    items={location}
-    keys={(location) => location.pathname}
-    from={{ opacity: 0 }}
-    enter={{ opacity: 1 }}
-    leave={{ opacity: 0 }}
-    config={{ duration: 1000 }}
-  >
-    {(style, item) => (
-      <animated.div style={{ ...style, width: '100%' }}>
+      items={location}
+      keys={(location) => location.pathname}
+      from={{ opacity: 0 }}
+      enter={{ opacity: 1 }}
+      leave={{ opacity: 0 }}
+      config={{ duration: 1000 }}
+    >
+      {(style, item) => (
+        <animated.div style={{ ...style, width: "100%" }}>
+          <div>
+            <div className="bg-[#F2ECE1] py-5">
+              <div className="container mx-auto flex flex-col justify-center items-center">
+                <div className="flex flex-col gap-y-5">
+                  <div className="flex flex-col gap-y-5">
+                    <div className="w-4/5 mx-auto">
+                      <p
+                        style={robotoFontRegular}
+                        className="decoration-black	text-[#C4AC77] text-xs leading-6 pb-3 tracking-wide"
+                      >
+                        BLENDING{" "}
+                      </p>
 
-
-    <div>
-      <div className="bg-[#F2ECE1] py-5">
-        <div className="container mx-auto flex flex-col justify-center items-center">
-          <div className="flex flex-col gap-y-5">
-            <div className="flex flex-col gap-y-5">
-              <div className="w-4/5 mx-auto">
-                <p
-                  style={robotoFontRegular}
-                  className="decoration-black	text-[#C4AC77] text-xs leading-6 pb-3 tracking-wide"
-                >
-                  VITICULTURIST AND WINEMAKER ERNESTO BAJDA{" "}
-                </p>
-
-                <p
-                  class="text-black text-xs tracking-wider"
-                  style={playfairFontRegular}
-                >
-                  - 15 years working closely with Felipe and commited to
-                  studying Argentine, and more specifically, Patagonian terroir.
-                  - Recognized by The Drink Business as one of the top 100
-                  winekamers in the world, and best for Malbec.
-                </p>
+                      <p
+                        class="text-black text-xs tracking-wider"
+                        style={playfairFontRegular}
+                      >
+                        After a patient aging period of twelve to fourteen
+                        months, the time comes to craft the blends. In this
+                        phase, our decisions are driven by the unique
+                        characteristics of each barrel. Each barrel possesses
+                        its own distinct identity, and through careful tasting,
+                        we determine which expression will harmonize best with
+                        its contents.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-[#F2ECE1] py-16">
+              <div className="container mx-auto flex justify-center">
+                <div className="border border-[#C3B17D] rounded-full p-6">
+                  <img src={iconIg} alt="" className="w-4" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="bg-[#F2ECE1] py-16">
-        <div className="container mx-auto flex justify-center">
-          <div className="border border-[#C3B17D] rounded-full p-6">
-            <img src={iconIg} alt="" className="w-4" />
-          </div>
-        </div>
-      </div>
-    </div>
-    </animated.div>
+        </animated.div>
       )}
     </Transition>
+  );
+};
 
+const Screen4 = () => {
+  const location = useLocation();
+
+  const playfairFontBlack = {
+    fontFamily: "Playfair Black, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+  return (
+    <Transition
+      items={location}
+      keys={(location) => location.pathname}
+      from={{ opacity: 0 }}
+      enter={{ opacity: 1 }}
+      leave={{ opacity: 0 }}
+      config={{ duration: 1000 }}
+    >
+      {(style, item) => (
+        <animated.div style={{ ...style, width: "100%" }}>
+          <div className="mt-[-20px]">
+            <div className="bg-[#F2ECE1]">
+              <p className="ml-1 text-left relative">
+                <span
+                  style={playfairFontBlack}
+                  className="text-[#C4AC77] text-lg"
+                >
+                  04
+                </span>
+                <span
+                  style={playfairFontBlack}
+                  className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
+                >
+                  05
+                </span>
+              </p>
+            </div>
+
+            <div className="container mx-auto flex flex-col justify-center  items-center">
+              <div>
+                <img
+                  src={winesPreservationSlide3}
+                  alt=""
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </animated.div>
+      )}
+    </Transition>
+  );
+};
+const Screen4Text = () => {
+  const location = useLocation();
+
+  const playfairFontRegular = {
+    fontFamily: "Playfair Regular, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+    fontSize: "16px",
+  };
+  return (
+    <Transition
+      items={location}
+      keys={(location) => location.pathname}
+      from={{ opacity: 0 }}
+      enter={{ opacity: 1 }}
+      leave={{ opacity: 0 }}
+      config={{ duration: 1000 }}
+    >
+      {(style, item) => (
+        <animated.div style={{ ...style, width: "100%" }}>
+          <div>
+            <div className="bg-[#F2ECE1] py-5">
+              <div className="container mx-auto flex flex-col justify-center items-center">
+                <div className="flex flex-col gap-y-5">
+                  <div className="flex flex-col gap-y-5">
+                    <div className="w-4/5 mx-auto">
+                      <p
+                        style={robotoFontRegular}
+                        className="decoration-black	text-[#C4AC77] text-xs leading-6 pb-3 tracking-wide"
+                      >
+                        BOTTLING AND LABELING (manual process)
+                      </p>
+
+                      <p
+                        class="text-black text-xs tracking-wider"
+                        style={playfairFontRegular}
+                      >
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptatum quisquam veniam commodi illum eaque
+                        laboriosam consequuntur, neque molestiae reiciendis
+                        voluptate, quibusdam et. Dolore beatae officia quasi
+                        sint quisquam vero inventore!. Lorem, ipsum dolor sit
+                        amet consectetur adipisicing elit. Mollitia ratione eum
+                        vel voluptatibus odio modi adipisci inventore, sunt
+                        neque facere delectus consequuntur.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-[#F2ECE1] py-16">
+              <div className="container mx-auto flex justify-center">
+                <div className="border border-[#C3B17D] rounded-full p-6">
+                  <img src={iconIg} alt="" className="w-4" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </animated.div>
+      )}
+    </Transition>
+  );
+};
+
+const Screen5 = () => {
+  const location = useLocation();
+
+  const playfairFontBlack = {
+    fontFamily: "Playfair Black, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+  return (
+    <Transition
+      items={location}
+      keys={(location) => location.pathname}
+      from={{ opacity: 0 }}
+      enter={{ opacity: 1 }}
+      leave={{ opacity: 0 }}
+      config={{ duration: 1000 }}
+    >
+      {(style, item) => (
+        <animated.div style={{ ...style, width: "100%" }}>
+          <div className="mt-[-20px]">
+            <div className="bg-[#F2ECE1]">
+              <p className="ml-1 text-left relative">
+                <span
+                  style={playfairFontBlack}
+                  className="text-[#C4AC77] text-lg"
+                >
+                  05
+                </span>
+                <span
+                  style={playfairFontBlack}
+                  className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
+                >
+                  05
+                </span>
+              </p>
+            </div>
+
+            <div className="container mx-auto flex flex-col justify-center  items-center">
+              <div>
+                <img
+                  src={winesPreservationSlide3}
+                  alt=""
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </animated.div>
+      )}
+    </Transition>
+  );
+};
+const Screen5Text = () => {
+  const location = useLocation();
+
+  const playfairFontRegular = {
+    fontFamily: "Playfair Regular, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+    fontSize: "16px",
+  };
+  return (
+    <Transition
+      items={location}
+      keys={(location) => location.pathname}
+      from={{ opacity: 0 }}
+      enter={{ opacity: 1 }}
+      leave={{ opacity: 0 }}
+      config={{ duration: 1000 }}
+    >
+      {(style, item) => (
+        <animated.div style={{ ...style, width: "100%" }}>
+          <div>
+            <div className="bg-[#F2ECE1] py-5">
+              <div className="container mx-auto flex flex-col justify-center items-center">
+                <div className="flex flex-col gap-y-5">
+                  <div className="flex flex-col gap-y-5">
+                    <div className="w-4/5 mx-auto">
+                      <p
+                        style={robotoFontRegular}
+                        className="decoration-black	text-[#C4AC77] text-xs leading-6 pb-3 tracking-wide"
+                      >
+                        CELLARING{" "}
+                      </p>
+
+                      <p
+                        class="text-black text-xs tracking-wider"
+                        style={playfairFontRegular}
+                      >
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptatum quisquam veniam commodi illum eaque
+                        laboriosam consequuntur, neque molestiae reiciendis
+                        voluptate, quibusdam et. Dolore beatae officia quasi
+                        sint quisquam vero inventore!. Lorem, ipsum dolor sit
+                        amet consectetur adipisicing elit. Mollitia ratione eum
+                        vel voluptatibus odio modi adipisci inventore, sunt
+                        neque facere delectus consequuntur.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-[#F2ECE1] py-16">
+              <div className="container mx-auto flex justify-center">
+                <div className="border border-[#C3B17D] rounded-full p-6">
+                  <img src={iconIg} alt="" className="w-4" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </animated.div>
+      )}
+    </Transition>
   );
 };
 

@@ -2,20 +2,15 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
-import ilustracionSpirit from "../images/ilustracion-sprit.png";
+import workVineyardSlide3 from "../images/workVineyardSlide3.jpg";
 import iconIg from "../images/icon-ig.png";
 import "../App.css";
 import { useLocation } from "react-router-dom";
 import { Transition, animated } from "@react-spring/web";
 
-const ConstructionPage = () => {
+const LifeWater = () => {
   const location = useLocation();
 
-  const playfairFontBlack = {
-    fontFamily: "Playfair Black, sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
   const playfairFontItalic = {
     fontFamily: "Playfair Italic , sans-serif",
     fontWeight: "normal",
@@ -73,7 +68,7 @@ const ConstructionPage = () => {
               </header>
 
               <div class="container mx-auto">
-                <div class="pt-16">
+                <div class="pt-16 pb-5">
                   <div class="flex flex-col justify-center items-center mt-10 gap-y-2">
                     <h1
                       class="text-black text-xs tracking-widest"
@@ -85,14 +80,14 @@ const ConstructionPage = () => {
                       class="uppercase text-[#C4AC77] text-sm tracking-wider"
                       style={playfairFontBold}
                     >
-                      Araucana Vineyard
+                      Life Water
                     </h2>
                   </div>
                 </div>
 
                 <div class="md:py-20">
                   <img
-                    src={ilustracionSpirit}
+                    src={workVineyardSlide3}
                     alt=""
                     class="w-full md:w-2/3 mx-auto"
                   />
@@ -100,53 +95,44 @@ const ConstructionPage = () => {
 
                 <div class="flex flex-col gap-y-2 px-10 md:text-center pt-8">
                   <div>
-                    <h1
-                      class="uppercase text-[#C4AC77] text-sm tracking-wide"
-                      style={robotoFontRegular}
-                    >
-                      Winery Ribera del Cuarzo
-                    </h1>
-                  </div>
-                  <div>
                     <p
                       class="text-black text-xs md:text-xl tracking-wider"
                       style={playfairFontRegular}
                     >
-                      Araucana Vineyard is far more than just unique—it is an
-                      extraordinary gem that surpasses mere words. Nestled in
-                      Ribera del Cuarzo, no other vineyard in Patagonia can
-                      boast such proximity to the barda or such seclusion.{" "}
+                      The Countess planted the vineyard in the highest part of
+                      the barda, an unexplored area where no one had ever
+                      considered such an endeavor: it required bringing water
+                      for irrigation using pumps, at enormous cost. Until then,
+                      vineyard productions in the Rio Negro Valley had been
+                      carried out alongside the river, where water was obtained
+                      through canals and gates, an economic irrigation system
+                      known as flood irrigation.
                       <br />
                       <br />
-                      The soils of Araucana are predominantly aeolic,
-                      painstakingly shaped over countless ages by the erosive
-                      forces of wind. Enriched with volcanic ash and high
-                      potassium content, they possess a chemical composition
-                      that is both crucial and remarkably uncommon, not only for
-                      Patagonia but for the World in general. <br />
+                      Nevertheless, the Countess decided to plant up there
+                      because she believed that what she would produce would be
+                      worth the effort. Without calculating the costs, she
+                      embarked on building a pump system that brought water 3
+                      kilometers uphill. When we finally took over the vineyard,
+                      we had faith that in the short term, renewable energy,
+                      perhaps wind or solar, would allow us to transform that
+                      cost into something reasonable. In any case, the risk was
+                      worth it. <br />
                       <br />
-                      Adding to its distinctiveness is the barda river terrace.
-                      The surface texture owes its character to a fusion of
-                      quartz and calcium carbonate, locally known as Indian
-                      cement. As it erodes and integrates into the soil, it
-                      imparts its exceptional qualities to our grapes. <br />
-                      <br />
-                      Araucana adopts the traditional high cordon-method for
-                      planting, with two-meter gaps between rows and a meter
-                      between each vine, resulting in a density of 5000 plants
-                      per hectare. While the majority of our vineyard is
-                      dedicated to Malbec, we also cultivate Petit Verdot and
-                      Merlot vines. <br />
-                      <br />
-                      Our philosophy revolves around nurturing the plants to
-                      self-regulate throughout their growth cycle, intervening
-                      as minimally as possible, and offering support to allow
-                      them to make decisions autonomously. Our role is to guide
-                      them towards their utmost expression and quality. <br />
-                      <br />
-                      That's why we embrace time-honored vine management
-                      techniques like Guyot pruning with canes and renewal
-                      spurs.
+                      Some time later, a local man spoke to us about water. This
+                      kind man, Facundo Catriel, told us that abundant water
+                      could be found at the foot of the barda. Although it
+                      seemed unlikely, we decided to drill some wells. Water
+                      gushed and flowed to the surface with force. These wells
+                      now produce around 200,000 liters per hour, significantly
+                      reducing our costs. We listen to nature and special
+                      people.{" "}
+                      <strong>
+                        Today, Ribera del Cuarzo follows a virtuous cycle of
+                        respect for the environment, and the reward is a wine
+                        that never ceases to amaze us
+                      </strong>
+                      .
                     </p>
                   </div>
                 </div>
@@ -166,4 +152,4 @@ const ConstructionPage = () => {
   );
 };
 
-export default ConstructionPage;
+export default LifeWater;
