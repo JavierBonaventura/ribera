@@ -152,9 +152,13 @@ const ConstructionPage = () => {
                 </div>
                 <div class="py-20">
                   <div class="flex justify-center">
-                    <div class="border border-[#C3B17D] rounded-full p-7">
+                    <a
+                      class="border border-[#C3B17D] rounded-full p-7"
+                      href="https://www.instagram.com/riberadelcuarzo/"
+                      target="_blank"
+                    >
                       <img src={iconIg} alt="" class="w-5" />
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>

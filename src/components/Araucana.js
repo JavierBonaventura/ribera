@@ -12,7 +12,7 @@ import riberaEspecial from "../images/ribera-especial-wine.png";
 import riberaReserva from "../images/ribera-reserva-wine.png";
 import cava from "../images/cava.jpg";
 import iconIg from "../images/icon-ig.png";
-import {useSpring, Transition, animated } from "@react-spring/web";
+import { useSpring, Transition, animated } from "@react-spring/web";
 
 import "../App.css";
 function Araucana() {
@@ -45,7 +45,7 @@ function Araucana() {
   });
 
   const handleDownloadClick1 = () => {
-    setShowDropdown2(false)
+    setShowDropdown2(false);
     setShowDropdown3(false);
 
     setShowDropdown1(!showDropdown1);
@@ -60,7 +60,7 @@ function Araucana() {
 
   const handleDownloadClick3 = () => {
     setShowDropdown1(false);
-    setShowDropdown2(false)
+    setShowDropdown2(false);
 
     setShowDropdown3(!showDropdown3);
   };
@@ -181,7 +181,7 @@ function Araucana() {
                       <a
                         className="border-b border-[#C3B17D]"
                         onClick={handleDownloadClick1}
-                        >
+                      >
                         <div className="w-2 inline-block">
                           <img src={iconDownload} alt="" className="w-full" />
                         </div>
@@ -191,8 +191,7 @@ function Araucana() {
                       </a>
                     </div>
                     {showDropdown1 && (
-                                        <animated.div style={dropdownAnimation1}>
-
+                      <animated.div style={dropdownAnimation1}>
                         <div className="mt-2 w-48 mx-auto">
                           <ul className="text-xs text-[#C3B17D] text-center">
                             <li className="py-2 px-4 hover:bg-gray-100">
@@ -206,8 +205,8 @@ function Araucana() {
                             </li>
                           </ul>
                         </div>
-                        </animated.div>
-                      )}
+                      </animated.div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -254,7 +253,7 @@ function Araucana() {
                     <a
                       className="border-b border-[#C3B17D]"
                       onClick={handleDownloadClick2}
-                      >
+                    >
                       <div className="w-2 inline-block">
                         <img src={iconDownload} alt="" className="w-full" />
                       </div>
@@ -264,23 +263,22 @@ function Araucana() {
                     </a>
                   </div>
                   {showDropdown2 && (
-                                        <animated.div style={dropdownAnimation2}>
-
-                        <div className="mt-2 w-48 mx-auto">
-                          <ul className="text-xs text-[#C3B17D] text-center">
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 1
-                            </li>
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 2
-                            </li>
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 3
-                            </li>
-                          </ul>
-                        </div>
-                        </animated.div>
-                      )}
+                    <animated.div style={dropdownAnimation2}>
+                      <div className="mt-2 w-48 mx-auto">
+                        <ul className="text-xs text-[#C3B17D] text-center">
+                          <li className="py-2 px-4 hover:bg-gray-100">
+                            Opción 1
+                          </li>
+                          <li className="py-2 px-4 hover:bg-gray-100">
+                            Opción 2
+                          </li>
+                          <li className="py-2 px-4 hover:bg-gray-100">
+                            Opción 3
+                          </li>
+                        </ul>
+                      </div>
+                    </animated.div>
+                  )}
                 </div>
               </div>
 
@@ -328,23 +326,22 @@ function Araucana() {
                     </a>
                   </div>
                   {showDropdown3 && (
-                                        <animated.div style={dropdownAnimation3}>
-
-                        <div className="mt-2 w-48 mx-auto">
-                          <ul className="text-xs text-[#C3B17D] text-center">
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 1
-                            </li>
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 2
-                            </li>
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 3
-                            </li>
-                          </ul>
-                        </div>
-                        </animated.div>
-                      )}
+                    <animated.div style={dropdownAnimation3}>
+                      <div className="mt-2 w-48 mx-auto">
+                        <ul className="text-xs text-[#C3B17D] text-center">
+                          <li className="py-2 px-4 hover:bg-gray-100">
+                            Opción 1
+                          </li>
+                          <li className="py-2 px-4 hover:bg-gray-100">
+                            Opción 2
+                          </li>
+                          <li className="py-2 px-4 hover:bg-gray-100">
+                            Opción 3
+                          </li>
+                        </ul>
+                      </div>
+                    </animated.div>
+                  )}
                 </div>
               </div>
             </div>
@@ -370,43 +367,39 @@ function Araucana() {
                 <div className="grid grid-cols-3 gap-x-4">
                   <div className="flex gap-y-4 flex-col">
                     <img src={riberaClasico} alt="" />
-                    <Link  to="/riociervos?scroll=545">
-
-                    <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
-                      <a href="" style={robotoFontRegular}>
-                        <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
-                          Read more
-                        </span>
-                      </a>
-                    </div>
+                    <Link to="/riociervos?scroll=545">
+                      <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
+                        <a href="" style={robotoFontRegular}>
+                          <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
+                            Read more
+                          </span>
+                        </a>
+                      </div>
                     </Link>
                   </div>
                   <div className="flex gap-y-4 flex-col">
                     <img src={riberaEspecial} alt="" />
-                    <Link  to="/riociervos?scroll=1420">
-
-                    <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
-                      <a href="" style={robotoFontRegular}>
-                        <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
-                          Read more
-                        </span>
-                      </a>
-                    </div>
+                    <Link to="/riociervos?scroll=1420">
+                      <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
+                        <a href="" style={robotoFontRegular}>
+                          <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
+                            Read more
+                          </span>
+                        </a>
+                      </div>
                     </Link>
-
                   </div>
 
                   <div className="flex gap-y-4 flex-col">
                     <img src={riberaReserva} alt="" />
-                    <Link  to="/riociervos?scroll=2320">
-
-                    <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
-                      <a href="" style={robotoFontRegular}>
-                        <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
-                          Read more
-                        </span>
-                      </a>
-                    </div>
+                    <Link to="/riociervos?scroll=2320">
+                      <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
+                        <a href="" style={robotoFontRegular}>
+                          <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
+                            Read more
+                          </span>
+                        </a>
+                      </div>
                     </Link>
                   </div>
                 </div>
@@ -436,9 +429,13 @@ function Araucana() {
 
             <div className="bg-[#231F20] py-20">
               <div className="container mx-auto flex justify-center">
-                <div className="border border-[#C3B17D] rounded-full p-7">
+                <a
+                  className="border border-[#C3B17D] rounded-full p-7"
+                  href="https://www.instagram.com/riberadelcuarzo/"
+                  target="_blank"
+                >
                   <img src={iconIg} alt="" className="w-5" />
-                </div>
+                </a>
               </div>
             </div>
           </div>

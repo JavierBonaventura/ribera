@@ -13,7 +13,7 @@ import araucanaMalbecWineShort from "../images/araucana-malbec-wine-short.png";
 import araucanaAzulWineShort from "../images/araucana-azul-wine-short.png";
 import cava from "../images/cava.jpg";
 import iconIg from "../images/icon-ig.png";
-import {useSpring, Transition, animated } from "@react-spring/web";
+import { useSpring, Transition, animated } from "@react-spring/web";
 
 import "../App.css";
 function RioCiervos() {
@@ -45,7 +45,7 @@ function RioCiervos() {
   });
 
   const handleDownloadClick1 = () => {
-    setShowDropdown2(false)
+    setShowDropdown2(false);
     setShowDropdown3(false);
     setShowDropdown1(!showDropdown1);
   };
@@ -59,7 +59,7 @@ function RioCiervos() {
 
   const handleDownloadClick3 = () => {
     setShowDropdown1(false);
-    setShowDropdown2(false)
+    setShowDropdown2(false);
 
     setShowDropdown3(!showDropdown3);
   };
@@ -100,10 +100,6 @@ function RioCiervos() {
     fontStyle: "normal",
   };
 
-
-
-
-  
   return (
     <Transition
       items={locationAnimacion}
@@ -201,21 +197,20 @@ function RioCiervos() {
                       </div>
 
                       {showDropdown1 && (
-                                        <animated.div style={dropdownAnimation1}>
-
-                        <div className="mt-2 w-48 mx-auto">
-                          <ul className="text-xs text-[#C3B17D] text-center">
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 1
-                            </li>
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 2
-                            </li>
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 3
-                            </li>
-                          </ul>
-                        </div>
+                        <animated.div style={dropdownAnimation1}>
+                          <div className="mt-2 w-48 mx-auto">
+                            <ul className="text-xs text-[#C3B17D] text-center">
+                              <li className="py-2 px-4 hover:bg-gray-100">
+                                Opción 1
+                              </li>
+                              <li className="py-2 px-4 hover:bg-gray-100">
+                                Opción 2
+                              </li>
+                              <li className="py-2 px-4 hover:bg-gray-100">
+                                Opción 3
+                              </li>
+                            </ul>
+                          </div>
                         </animated.div>
                       )}
                     </div>
@@ -271,8 +266,7 @@ function RioCiervos() {
                     </div>
 
                     {showDropdown2 && (
-                                        <animated.div style={dropdownAnimation2}>
-
+                      <animated.div style={dropdownAnimation2}>
                         <div className="mt-2 w-48 mx-auto">
                           <ul className="text-xs text-[#C3B17D] text-center">
                             <li className="py-2 px-4 hover:bg-gray-100">
@@ -286,8 +280,8 @@ function RioCiervos() {
                             </li>
                           </ul>
                         </div>
-                        </animated.div>
-                      )}
+                      </animated.div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -339,8 +333,7 @@ function RioCiervos() {
                     </div>
 
                     {showDropdown3 && (
-                                        <animated.div style={dropdownAnimation3}>
-
+                      <animated.div style={dropdownAnimation3}>
                         <div className="mt-2 w-48 mx-auto">
                           <ul className="text-xs text-[#C3B17D] text-center">
                             <li className="py-2 px-4 hover:bg-gray-100">
@@ -354,8 +347,8 @@ function RioCiervos() {
                             </li>
                           </ul>
                         </div>
-                        </animated.div>
-                      )}
+                      </animated.div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -382,40 +375,38 @@ function RioCiervos() {
                 <div className="grid grid-cols-3 gap-x-4">
                   <div className="flex gap-y-4 flex-col">
                     <img src={araucanaWineShort} alt="" />
-                    <Link  to="/araucana?scroll=545">
-
-                    <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
-                      <a href="" style={robotoFontRegular}>
-                        <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
-                          Read more
-                        </span>
-                      </a>
-                    </div>
+                    <Link to="/araucana?scroll=545">
+                      <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
+                        <a href="" style={robotoFontRegular}>
+                          <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
+                            Read more
+                          </span>
+                        </a>
+                      </div>
                     </Link>
                   </div>
                   <div className="flex gap-y-4 flex-col">
                     <img src={araucanaMalbecWineShort} alt="" />
-                      <Link  to="/araucana?scroll=1420">
-                    <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
-                      <a href="" style={robotoFontRegular}>
-                        <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
-                          Read more
-                        </span>
-                    
-                      </a>
-                    </div>
+                    <Link to="/araucana?scroll=1420">
+                      <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
+                        <a href="" style={robotoFontRegular}>
+                          <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
+                            Read more
+                          </span>
+                        </a>
+                      </div>
                     </Link>
                   </div>
                   <div className="flex gap-y-4 flex-col">
                     <img src={araucanaAzulWineShort} alt="" />
-                    <Link  to="/araucana?scroll=2320">
-                    <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
-                      <a href="" style={robotoFontRegular}>
-                        <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
-                          Read more
-                        </span>
-                      </a>
-                    </div>
+                    <Link to="/araucana?scroll=2320">
+                      <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
+                        <a href="" style={robotoFontRegular}>
+                          <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
+                            Read more
+                          </span>
+                        </a>
+                      </div>
                     </Link>
                   </div>
                 </div>
@@ -445,9 +436,13 @@ function RioCiervos() {
 
             <div className="bg-[#231F20] py-20">
               <div className="container mx-auto flex justify-center">
-                <div className="border border-[#C3B17D] rounded-full p-7">
+                <a
+                  className="border border-[#C3B17D] rounded-full p-7"
+                  href="https://www.instagram.com/riberadelcuarzo/"
+                  target="_blank"
+                >
                   <img src={iconIg} alt="" className="w-5" />
-                </div>
+                </a>
               </div>
             </div>
           </div>

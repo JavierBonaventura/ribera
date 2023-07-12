@@ -72,7 +72,7 @@ const FormularioContacto = () => {
                       className="text-center text-2xl uppercase text-[#F4EDE2] "
                       style={playfairFontRegular}
                     >
-                      Contacto
+                      Contact
                     </h1>
                   </div>
                   <div>
@@ -87,7 +87,7 @@ const FormularioContacto = () => {
                             className="block text-[#F4EDE2] text-sm font-bold mb-2"
                             htmlFor="nombre"
                           >
-                            Nombre
+                            Name
                           </label>
                           <input
                             className=" bg-transparent appearance-none border-b  w-full py-2 px-3 text-[#F4EDE2] leading-tight focus:outline-none focus:shadow-outline"
@@ -103,7 +103,7 @@ const FormularioContacto = () => {
                             className="block text-[#F4EDE2] text-sm font-bold mb-2"
                             htmlFor="apellido"
                           >
-                            Apellido
+                            Last name
                           </label>
                           <input
                             className=" appearance-none bg-transparent border-b rouded w-full py-2 px-3 text-[#F4EDE2] leading-tight focus:outline-none focus:shadow-outline"
@@ -136,7 +136,7 @@ const FormularioContacto = () => {
                           className="block text-[#F4EDE2] text-sm font-bold mb-2"
                           htmlFor="pais"
                         >
-                          País
+                          Country
                         </label>
                         <input
                           className=" appearance-none bg-transparent border-b  w-full py-2 px-3 text-[#F4EDE2] leading-tight focus:outline-none focus:shadow-outline"
@@ -152,7 +152,7 @@ const FormularioContacto = () => {
                           className="block text-[#F4EDE2] text-sm font-bold mb-2"
                           htmlFor="consulta"
                         >
-                          Consulta
+                          Message
                         </label>
                         <textarea
                           className=" appearance-none border-b bg-transparent  w-full py-2 px-3 text-[#F4EDE2] leading-tight focus:outline-none focus:shadow-outline"
@@ -167,7 +167,7 @@ const FormularioContacto = () => {
                           className="bg-[#C3B17D] text-[#F2ECE1] text-sm hover:bg-[#C4AD77] rounded-md  py-2 px-8  focus:outline-none focus:shadow-outline"
                           type="submit"
                         >
-                          Enviar
+                          Send
                         </button>
                       </div>
                     </form>
@@ -178,18 +178,22 @@ const FormularioContacto = () => {
                     style={playfairFontRegular}
                   >
                     <div className="flex flex-col gap-y-2">
-                      <h2 className="text-sm">Nuestra oficinas</h2>
+                      <h2 className="text-sm">Our offices</h2>
                       <h3 className="text-base">
-                        Ortiz de Ocampo 330 <br /> Módulo, Oficina 5 <br />{" "}
+                        Ortiz de Ocampo 330 <br /> Module, office 5 <br />{" "}
                         Buenos Aires, Argentina
                       </h3>
                     </div>
                     <div className="text-base">
-                      <h2 className="uppercase">¡Seguinos en instagram!</h2>
-                      <div className="flex items-center mx-auto justify-center gap-x-1">
+                      <h2 className="uppercase">¡follow us on instagram!</h2>
+                      <a
+                        href="https://www.instagram.com/riberadelcuarzo/"
+                        target="_blank"
+                        className="flex items-center mx-auto justify-center gap-x-1"
+                      >
                         <img src={iconIg} alt="" className="w-4" />
                         <h2>@riberadelcuarzo</h2>
-                      </div>
+                      </a>
                     </div>
                     <div className="w-2/3 mx-auto flex justify-center">
                       <a href="" className="border-b border-[#C3B17D]">
@@ -200,7 +204,7 @@ const FormularioContacto = () => {
                           className="ml-2 text-xs text-[#C3B17D]"
                           style={robotoFontRegular}
                         >
-                          Descargar Brochure
+                          Download Brochure
                         </span>
                       </a>
                     </div>

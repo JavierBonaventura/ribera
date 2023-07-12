@@ -237,9 +237,13 @@ const Screen1Text = () => {
             </div>
             <div className="bg-[#F2ECE1] py-16">
               <div className="container mx-auto flex justify-center">
-                <div className="border border-[#C3B17D] rounded-full p-6">
+                <a
+                  className="border border-[#C3B17D] rounded-full p-6"
+                  href="https://www.instagram.com/riberadelcuarzo/"
+                  target="_blank"
+                >
                   <img src={iconIg} alt="" className="w-4" />
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -372,9 +376,13 @@ const Screen2Text = () => {
             </div>
             <div className="bg-[#F2ECE1] py-16">
               <div className="container mx-auto flex justify-center">
-                <div className="border border-[#C3B17D] rounded-full p-6">
+                <a
+                  className="border border-[#C3B17D] rounded-full p-6"
+                  href="https://www.instagram.com/riberadelcuarzo/"
+                  target="_blank"
+                >
                   <img src={iconIg} alt="" className="w-4" />
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -501,9 +509,13 @@ const Screen3Text = () => {
             </div>
             <div className="bg-[#F2ECE1] py-16">
               <div className="container mx-auto flex justify-center">
-                <div className="border border-[#C3B17D] rounded-full p-6">
+                <a
+                  className="border border-[#C3B17D] rounded-full p-6"
+                  href="https://www.instagram.com/riberadelcuarzo/"
+                  target="_blank"
+                >
                   <img src={iconIg} alt="" className="w-4" />
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -633,9 +645,13 @@ const Screen4Text = () => {
             </div>
             <div className="bg-[#F2ECE1] py-16">
               <div className="container mx-auto flex justify-center">
-                <div className="border border-[#C3B17D] rounded-full p-6">
+                <a
+                  className="border border-[#C3B17D] rounded-full p-6"
+                  href="https://www.instagram.com/riberadelcuarzo/"
+                  target="_blank"
+                >
                   <img src={iconIg} alt="" className="w-4" />
-                </div>
+                </a>
               </div>
             </div>
           </div>

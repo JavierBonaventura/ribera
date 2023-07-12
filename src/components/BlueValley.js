@@ -93,7 +93,7 @@ const BlueValley = () => {
                       style={playfairFontItalic}
                       class="text-black text-xs tracking-widest"
                     >
-                      Family
+                      Valle azul
                     </h1>
                     <h2
                       style={playfairFontBold}
@@ -223,9 +223,13 @@ const BlueValley = () => {
                 </div>
                 <div class="pb-20">
                   <div class="flex justify-center">
-                    <div class="border border-[#C3B17D] rounded-full p-7">
+                    <a
+                      class="border border-[#C3B17D] rounded-full p-7"
+                      href="https://www.instagram.com/riberadelcuarzo/"
+                      target="_blank"
+                    >
                       <img src={iconIg} alt="" class="w-5" />
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
