@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
-import wineYardSlide1 from "../images/wineYardSlide1.jpg";
+import wineYardSlide1 from "../images/introHourses.jpg";
 import wineYardSlide2 from "../images/wineYardSlide2.jpg";
 import wineYardSlide3 from "../images/wineYardSlide3.jpg";
-import wineYardSlide4 from "../images/wineYardSlide4.jpg";
+import wineYardSlide4 from "../images/hourses.jpg";
 import blackRiver from "../images/blackRiver.jpg";
 import { useLocation } from "react-router-dom";
 import { Transition, animated } from "@react-spring/web";
@@ -58,7 +58,7 @@ function Header() {
               style={playfairFontBlack}
               className="font-bold text-base text-[#C4AC77] text-center tracking-wider"
             >
-              LIFE ON ESTATE
+              LIFE ON THE ESTATE
             </h2>
           </div>
         </div>
@@ -218,6 +218,12 @@ const Screen1Text = () => {
                 <div className="flex flex-col gap-y-5">
                   <div className="flex flex-col gap-y-5">
                     <div className="w-4/5 mx-auto">
+                      <p
+                        style={robotoFontRegular}
+                        className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3 tracking-wide"
+                      >
+                        LOREM IPSUM
+                      </p>
                       <p
                         style={playfairFontRegular}
                         className="decoration-black	 text-xs tracking-wider"

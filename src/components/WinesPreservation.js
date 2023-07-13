@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
-import winesPreservationSlide1 from "../images/winesPreservationSlide1.jpg";
-import winesPreservationSlide2 from "../images/winesPreservationSlide2.jpg";
-import winesPreservationSlide3 from "../images/winesPreservationSlide3.jpg";
+import winesPreservationSlide1 from "../images/fermentation.jpg";
+import winesPreservationSlide2 from "../images/aging.jpg";
+import winesPreservationSlide3 from "../images/blending.jpg";
+import winesPreservationSlide4 from "../images/bottling.jpeg";
+import winesPreservationSlide5 from "../images/cellaring.jpg";
 import flechaIzquierda from "../images/flechaIzquierda.jpg";
 import flechaDerecha from "../images/flechaDerecha.jpg";
 import iconIg from "../images/icon-ig.png";
@@ -54,7 +56,7 @@ function Header() {
               style={playfairFontBlack}
               className="font-bold text-base text-[#C4AC77] text-center tracking-wider"
             >
-              WINES PRESERVATION
+              WORK IN THE WINERY
             </h2>
           </div>
         </div>
@@ -556,7 +558,7 @@ const Screen4 = () => {
             <div className="container mx-auto flex flex-col justify-center  items-center">
               <div>
                 <img
-                  src={winesPreservationSlide3}
+                  src={winesPreservationSlide4}
                   alt=""
                   className="w-full h-full object-cover"
                 />
@@ -683,7 +685,7 @@ const Screen5 = () => {
             <div className="container mx-auto flex flex-col justify-center  items-center">
               <div>
                 <img
-                  src={winesPreservationSlide3}
+                  src={winesPreservationSlide5}
                   alt=""
                   className="w-full h-full object-cover"
                 />

@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
-import workVineyardSlide1 from "../images/workVineyardSlide1.jpg";
-import workVineyardSlide2 from "../images/workVineyardSlide2.jpg";
-import workVineyardSlide3 from "../images/workVineyardSlide3.jpg";
+import workVineyardSlide1 from "../images/pruning.jpg";
+import workVineyardSlide2 from "../images/trellising.jpg";
+import workVineyardSlide3 from "../images/disbudding.jpg";
 import workVineyardSlide4 from "../images/workVineyardSlide4.jpg";
+import workVineyardSlide5 from "../images/ancient.jpg";
 import flechaIzquierda from "../images/flechaIzquierda.jpg";
 import flechaDerecha from "../images/flechaDerecha.jpg";
 import iconIg from "../images/icon-ig.png";
@@ -672,7 +673,7 @@ const Screen5 = () => {
 
             <div className="container mx-auto flex flex-col justify-center  items-center">
               <div>
-                <img src={workVineyardSlide4} alt="" className="w-full" />
+                <img src={workVineyardSlide5} alt="" className="w-full" />
               </div>
             </div>
           </div>

@@ -6,11 +6,9 @@ import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
 import ilustrationHistory from "../images/ilustracion-history.png";
 import arrowDown from "../images/arrow-down.png";
-import personasHistory from "../images/personas-history.jpeg";
-import botellasRibera from "../images/botellas-ribera.jpg";
-import ninosHistory from "../images/ninos-history.jpeg";
-import iconIg from "../images/icon-ig.png";
 import carruajeHistory from "../images/carruaje-history.jpg";
+import paisaje from "../images/paisaje-family-2.png";
+import iconIg from "../images/icon-ig.png";
 import felipe from "../images/wineYardSlide4.jpg";
 import "../App.css";
 import { Transition, animated } from "@react-spring/web";
@@ -137,7 +135,7 @@ const Family = () => {
               <div class="w-full flex">
                 <div class="w-1/3"></div>
                 <div class="w-2/3">
-                  <img src={ninosHistory} alt="" />
+                  <img src={paisaje} alt="" />
                 </div>
               </div>
 
@@ -194,7 +192,7 @@ const Family = () => {
                 <div class="pt-32 pb-10">
                   <div class="-mt-52 px-4">
                     <img
-                      src={personasHistory}
+                      src={carruajeHistory}
                       alt=""
                       class="w-full object-cover"
                     />

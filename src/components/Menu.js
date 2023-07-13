@@ -415,13 +415,6 @@ const Home = () => {
                   >
                     News
                   </p>
-                  <br></br>
-                  <p
-                    style={robotoFontRegular}
-                    className="footerItems tracking-widest"
-                  >
-                    Casa Pirque
-                  </p>
                 </div>
               </div>
             </div>

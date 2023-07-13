@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
-import ilustrationHistory from "../images/ilustracion-history.png";
+import paisajeValle from "../images/paisaje-valle.png";
 import arrowDown from "../images/arrow-down.png";
 import paisajeHistory from "../images/paisaje-history.jpg";
-import botellasRibera from "../images/botellas-ribera.jpg";
 import iconIg from "../images/icon-ig.png";
 import "../App.css";
 import { useLocation } from "react-router-dom";
@@ -14,11 +13,6 @@ import { Transition, animated } from "@react-spring/web";
 const BlueValley = () => {
   const location = useLocation();
 
-  const bondiniFontRegular = {
-    fontFamily: "Bondini, sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
     fontWeight: "normal",
@@ -30,29 +24,10 @@ const BlueValley = () => {
     fontStyle: "normal",
   };
 
-  const playfairFontBold = {
-    fontFamily: "Playfair Bold , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-
-  const playfairFontExtraBold = {
-    fontFamily: "Playfair ExtraBold , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
     fontWeight: "normal",
     fontStyle: "normal",
-  };
-
-  const robotoFontRegular = {
-    fontFamily: "Roboto Regular , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-    fontSize: "16px",
   };
 
   return (
@@ -104,14 +79,8 @@ const BlueValley = () => {
                   </div>
                 </div>
 
-                <div class="relative flex justify-center items-center">
-                  <img src={ilustrationHistory} alt="" class="w-full" />
-                  <h1
-                    style={playfairFontExtraBold}
-                    class="text-[#C4AC77] text-5xl absolute font-bold"
-                  >
-                    1883 - 2023
-                  </h1>
+                <div class="relative flex justify-center items-center pt-5">
+                  <img src={paisajeValle} alt="" class="w-full" />
                 </div>
 
                 <div class="py-28">

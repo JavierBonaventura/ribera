@@ -424,15 +424,7 @@ const Home = () => {
                       News
                     </p>
                   </div>
-                  <div
-                    style={roboto}
-                    className="text-base footerItems tracking-widest hover:underline"
-                  >
-                    <a href="">
-                      <h1>Distributor</h1>
-                      <p>Casa Pirque</p>
-                    </a>
-                  </div>
+
                   <div className=" flex justify-between">
                     <a
                       href=""
@@ -447,6 +439,18 @@ const Home = () => {
                       className=" text-base footerItems tracking-widest hover:underline"
                     >
                       spanish
+                    </a>
+                  </div>
+                </div>
+
+                <div className=" w-full  text-center flex flex-col gap-y-5 pt-10">
+                  <div
+                    style={roboto}
+                    className="text-base footerItems tracking-widest hover:underline"
+                  >
+                    <a href="https://casapirque.com.ar" target="_blank">
+                      <h1 className="text-center">Our distribution office</h1>
+                      <p className="text-center">Casa Pirque</p>
                     </a>
                   </div>
                 </div>

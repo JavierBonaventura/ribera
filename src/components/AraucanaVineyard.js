@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
 import ilustracionSpirit from "../images/ilustracion-sprit.png";
+import paisajeAraucana from "../images/paisaje-araucana.jpg";
 import iconIg from "../images/icon-ig.png";
 import "../App.css";
 import { useLocation } from "react-router-dom";
@@ -115,27 +116,13 @@ const ConstructionPage = () => {
                     is both crucial and remarkably uncommon, not only for
                     Patagonia but for the World in general. <br />
                     <br />
+                    <img src={paisajeAraucana} alt="" className="w-full" />{" "}
+                    <br />
                     Adding to its distinctiveness is the barda river terrace.
                     The surface texture owes its character to a fusion of quartz
                     and calcium carbonate, locally known as Indian cement. As it
                     erodes and integrates into the soil, it imparts its
                     exceptional qualities to our grapes. <br />
-                    <br />
-                    Araucana adopts the traditional high cordon-method for
-                    planting, with two-meter gaps between rows and a meter
-                    between each vine, resulting in a density of 5000 plants per
-                    hectare. While the majority of our vineyard is dedicated to
-                    Malbec, we also cultivate Petit Verdot and Merlot vines.{" "}
-                    <br />
-                    <br />
-                    Our philosophy revolves around nurturing the plants to
-                    self-regulate throughout their growth cycle, intervening as
-                    minimally as possible, and offering support to allow them to
-                    make decisions autonomously. Our role is to guide them
-                    towards their utmost expression and quality. <br />
-                    <br />
-                    That's why we embrace time-honored vine management
-                    techniques like Guyot pruning with canes and renewal spurs.
                   </p>
                 </div>
                 <div class="py-20">

@@ -201,10 +201,14 @@ const FormularioContacto = () => {
                     </div>
                     <div className="flex flex-col gap-y-2">
                       <h2 className="text-sm">Our winery</h2>
-                      <a href="" className="hover:underline">
+                      <a
+                        href="https://www.google.com.ar/maps/place/39%C2%B011'17.0%22S+66%C2%B052'26.0%22W/@-39.1880556,-66.8760829,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x7cfe3f53aaf18eb2!8m2!3d-39.1880556!4d-66.8738889"
+                        className="hover:underline"
+                        target="_blank"
+                      >
                         <h3 className="text-base">
-                          Ortiz de Ocampo 3302 <br />
-                          Buenos Aires, Argentina
+                          Route Prov.Nro 7 KM 12, Lot-8 <br />
+                          Valle Azul, El Cuy, Río Negro. CP: 8336
                         </h3>
                       </a>
                     </div>

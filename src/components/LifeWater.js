@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
-import workVineyardSlide3 from "../images/workVineyardSlide3.jpg";
+import imgWater from "../images/water.jpeg";
 import iconIg from "../images/icon-ig.png";
 import "../App.css";
 import { useLocation } from "react-router-dom";
@@ -15,19 +15,6 @@ const LifeWater = () => {
     fontFamily: "Playfair Italic , sans-serif",
     fontWeight: "normal",
     fontStyle: "normal",
-  };
-
-  const playfairFontBold = {
-    fontFamily: "Playfair Bold , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-
-  const robotoFontRegular = {
-    fontFamily: "Roboto Regular , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-    fontSize: "16px",
   };
 
   const playfairFontRegular = {
@@ -92,11 +79,7 @@ const LifeWater = () => {
                 </div>
 
                 <div class="md:py-20">
-                  <img
-                    src={workVineyardSlide3}
-                    alt=""
-                    class="w-full md:w-2/3 mx-auto"
-                  />
+                  <img src={imgWater} alt="" class="w-full md:w-2/3 mx-auto" />
                 </div>
 
                 <div class="flex flex-col gap-y-2 px-10 md:text-center pt-8">

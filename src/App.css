@@ -1,84 +1,72 @@
-
 /* @media (max-width: 767px) { */
-  
+
 .textoTerrir {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-  ;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   margin-left: 20px;
   line-height: 25px;
 }
 
 .logo {
   width: 240px;
-margin-bottom: -60px;
-z-index: 0;
+  margin-bottom: -60px;
+  z-index: 0;
 }
 
 .logoTerroir {
   width: 240px;
-margin-top: 250px;
-z-index: 0;
-padding-bottom: 200px;
+  margin-top: 250px;
+  z-index: 0;
+  padding-bottom: 200px;
 }
-  .image {
-    width: 100%;
-    height: auto;
-  }
+.image {
+  width: 100%;
+  height: auto;
+}
 
-body{
+body {
   font-weight: 400;
   /* background-color: black; */
 }
 
-  .containerHome {
+.containerHome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    position: relative;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    /* height: 100vh; */
-    z-index: 1;
-
-  }
+  position: relative;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  /* height: 100vh; */
+  z-index: 1;
+}
 .background {
-  background-image: url("./images/background.jpg");
+  background-image: url("./images/background-3.png");
   background-size: cover;
   background-position: center;
   height: 100vh;
-
-
 }
 .backgroundHambuerguesa {
   background-image: url("./images/fondoHambuerguesa.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
-
-
 }
 
 .backgroundTerroir {
   background-image: url("./images/fondoTerroir.png");
   background-size: cover;
   background-position: center;
-
-
 }
 
-  .menu{
-    
-    color: #cab57e;
-    font-family: Conv_CormorantGaramond-Regular;
-    font-size: 35px;
-    margin-bottom: 25px;
-    line-height: 35px;
-    cursor: pointer;
-  }
-
- 
+.menu {
+  color: #cab57e;
+  font-family: Conv_CormorantGaramond-Regular;
+  font-size: 35px;
+  margin-bottom: 25px;
+  line-height: 35px;
+  cursor: pointer;
+}
 
 .subMenu {
   text-decoration: none;
@@ -97,50 +85,44 @@ body{
   font-family: Conv_maisonneue-book;
 }
 
-
 .subMenu:hover {
   color: #cab57e; /* Color al pasar el cursor por encima del texto */
 }
 
-  .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-    
-  }
-  
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
 
-  .footerItems {
-    color: #fff;
-    outline: 0;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    line-height: normal;
-    color: #fff;
- 
-  }
+.footerItems {
+  color: #fff;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: normal;
+  color: #fff;
+}
 
-  .fade-enter {
-    opacity: 0;
-  }
-  
-  .fade-enter-active {
-    opacity: 1;
-    transition: opacity 300ms ease-in;
-  }
-  
-  .fade-exit {
-    opacity: 1;
-  }
-  
-  .fade-exit-active {
-    opacity: 0;
-    transition: opacity 300ms ease-out;
-  }
-  
-  
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}
+
 /*   
 } */
-
