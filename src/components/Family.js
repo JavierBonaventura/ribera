@@ -11,6 +11,7 @@ import botellasRibera from "../images/botellas-ribera.jpg";
 import ninosHistory from "../images/ninos-history.jpeg";
 import iconIg from "../images/icon-ig.png";
 import carruajeHistory from "../images/carruaje-history.jpg";
+import felipe from "../images/wineYardSlide4.jpg";
 import "../App.css";
 import { Transition, animated } from "@react-spring/web";
 
@@ -27,6 +28,7 @@ const Family = () => {
     fontWeight: "normal",
     fontStyle: "normal",
   };
+
   const playfairFontItalic = {
     fontFamily: "Playfair Italic , sans-serif",
     fontWeight: "normal",
@@ -86,7 +88,7 @@ const Family = () => {
                       </Link>{" "}
                     </div>
 
-                    <div class="w-8">
+                    <div class="w-7">
                       <Link to="/MenuHamburguesa">
                         <img src={hambur} alt="" className="w-full" />
                       </Link>{" "}
@@ -100,15 +102,15 @@ const Family = () => {
                   <div class="flex flex-col justify-center items-center mt-10">
                     <h1
                       style={playfairFontItalic}
-                      class="text-black text-xs tracking-widest"
+                      class="text-[#5f5f5e] text-xs tracking-widest"
                     >
-                      Family
+                      <i style={playfairFontItalic}>History</i>
                     </h1>
                     <h2
-                      style={playfairFontBold}
-                      class="uppercase text-[#C4AC77] text-sm font-bold  tracking-wider"
+                      style={playfairFontBlack}
+                      className="text-base text-[#C4AC77] text-center tracking-wider uppercase"
                     >
-                      Our History
+                      Family
                     </h2>
                   </div>
                 </div>
@@ -144,7 +146,7 @@ const Family = () => {
                   <div>
                     <h1
                       style={playfairFontBlack}
-                      class="text-[#C4AC77] font-bold text-sm tracking-wide"
+                      class="text-[#C4AC77] font-bold text-lg tracking-wide"
                     >
                       1883
                     </h1>
@@ -230,39 +232,11 @@ const Family = () => {
                 </div>
               </div>
               <div>
-                <img src={carruajeHistory} alt="" />
-              </div>
-
-              <div class="container mx-auto bg-[#212121]">
-                <div class="pt-10 pb-5">
-                  <h1
-                    style={playfairFontBlack}
-                    class="uppercase text-[#C4AC77] text-sm text-center"
-                  >
-                    Winery Ribera del Cuarzo
-                  </h1>
-                </div>
-              </div>
-
-              <div class="w-full">
-                <img src={botellasRibera} alt="" class="w-full" />
+                <img src={felipe} alt="" />
               </div>
 
               <div class="container mx-auto bg-[#212121]">
                 <div class="py-10">
-                  <h1
-                    style={bondiniFontRegular}
-                    class="text-center text-sm text-[#F2ECE1]"
-                  >
-                    {" "}
-                    <i>
-                      Creating unique wines in Patagonia <br />
-                      veer in winegrowing at the foot of the barda. <br />
-                      Small family run winery
-                    </i>
-                  </h1>
-                </div>
-                <div class="pb-20">
                   <div class="flex justify-center">
                     <a
                       class="border border-[#C3B17D] rounded-full p-7"

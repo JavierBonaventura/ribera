@@ -8,9 +8,9 @@ import riberaClasicoWine from "../images/ribera-clasico-wine.png";
 import iconDownload from "../images/icon-download.png";
 import riberaEspecial from "../images/ribera-especial-wine.png";
 import riberaReserva from "../images/ribera-reserva-wine.png";
-import araucanaWineShort from "../images/araucana-wine-short.png";
-import araucanaMalbecWineShort from "../images/araucana-malbec-wine-short.png";
-import araucanaAzulWineShort from "../images/araucana-azul-wine-short.png";
+import araucanaWine from "../images/araucana-rio-wine.png";
+import araucanaMalbec from "../images/araucana-malbec-wine.png";
+import araucanaAzul from "../images/araucana-azul-wine.png";
 import cava from "../images/cava.jpg";
 import iconIg from "../images/icon-ig.png";
 import { useSpring, Transition, animated } from "@react-spring/web";
@@ -100,6 +100,24 @@ function RioCiervos() {
     fontStyle: "normal",
   };
 
+  const playfairFontItalic = {
+    fontFamily: "Playfair Italic , sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+
+  const playfairFontBold = {
+    fontFamily: "Playfair Bold , sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+
+  const playfairFontBlack = {
+    fontFamily: "Playfair Black, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+
   return (
     <Transition
       items={locationAnimacion}
@@ -121,7 +139,7 @@ function RioCiervos() {
                     </Link>{" "}
                   </div>
 
-                  <div class="w-8">
+                  <div class="w-7">
                     <Link to="/MenuHamburguesa">
                       <img src={hambur} alt="" className="w-full" />
                     </Link>{" "}
@@ -130,7 +148,21 @@ function RioCiervos() {
               </div>
             </header>
 
-            <div className="container mx-auto flex flex-col justify-center items-center  bg-[#231F20] py-28">
+            <div className="container mx-auto flex flex-col justify-center items-center  bg-[#231F20] py-28 gap-y-10 ">
+              <div class="flex flex-col justify-center items-center  bg-[#231F20] ">
+                <h1
+                  class="text-xs tracking-widest text-[#F2ECE1]"
+                  style={playfairFontItalic}
+                >
+                  <i style={playfairFontItalic}>Wines</i>
+                </h1>
+                <h2
+                  style={playfairFontBlack}
+                  className="text-base text-[#C4AC77] text-center tracking-wider uppercase"
+                >
+                  Wines in the world
+                </h2>
+              </div>
               <div className=" flex flex-col gap-y-5">
                 <img src={cava} alt="" className="w-full" />
                 <p
@@ -154,18 +186,24 @@ function RioCiervos() {
                 </div>
 
                 <div className="flex flex-col gap-y-5">
-                  <div className="flex flex-col gap-y-5">
+                  <div className="flex flex-col gap-y-2">
                     <h1
-                      className="uppercase text-xs text-[#C3B17D] text-center tracking-widest"
+                      className="uppercase text-[#C3B17D] text-center tracking-widest"
                       style={robotoFontRegular}
                     >
-                      Ribera del Cuarzo CLÁSICO
+                      {" "}
+                      <span className="text-base">
+                        Ribera del Cuarzo <br /> CLÁSICO
+                      </span>
                     </h1>
                     <h4
-                      className="text-xs text-[#F2ECE1] text-center  tracking-widest"
+                      className=" text-[#F2ECE1] text-center  tracking-widest"
                       style={robotoFontRegular}
                     >
-                      <i>Patagonia, Argentina</i>
+                      {" "}
+                      <span className="text-xs">
+                        <i>Patagonia, Argentina</i>
+                      </span>
                     </h4>
                   </div>
                   <div className="flex flex-col gap-y-5">
@@ -222,18 +260,24 @@ function RioCiervos() {
                 <div className="w-1/3">
                   <img src={riberaEspecial} alt="" />
                 </div>
-                <div className="flex flex-col gap-y-5">
+                <div className="flex flex-col gap-y-2">
                   <h1
-                    className="uppercase text-xs text-[#C3B17D] text-center tracking-widest"
+                    className="uppercase text-[#C3B17D] text-center tracking-widest"
                     style={robotoFontRegular}
                   >
-                    Ribera del Cuarzo especial
+                    {" "}
+                    <span className="text-base">
+                      Ribera del Cuarzo <br /> especial
+                    </span>
                   </h1>
                   <h4
-                    className="text-xs text-[#F2ECE1] text-center  tracking-widest"
+                    className=" text-[#F2ECE1] text-center  tracking-widest"
                     style={robotoFontRegular}
                   >
-                    <i>Patagonia, Argentina</i>
+                    {" "}
+                    <span className="text-xs">
+                      <i>Patagonia, Argentina</i>
+                    </span>
                   </h4>
                 </div>
                 <div className="flex flex-col gap-y-5">
@@ -290,18 +334,24 @@ function RioCiervos() {
                 <div className="w-1/3">
                   <img src={riberaReserva} alt="" />
                 </div>
-                <div className="flex flex-col gap-y-5">
+                <div className="flex flex-col gap-y-2">
                   <h1
-                    className="uppercase text-xs text-[#C3B17D] text-center tracking-widest leading-5"
+                    className="uppercase text-[#C3B17D] text-center tracking-widest leading-5"
                     style={robotoFontRegular}
                   >
-                    Ribera del Cuarzo <br /> RESERVA ESTIBADA
+                    {" "}
+                    <span className="text-base">
+                      Ribera del Cuarzo <br /> RESERVA ESTIBADA
+                    </span>
                   </h1>
                   <h4
-                    className="text-xs text-[#F2ECE1] text-center  tracking-widest"
+                    className="text-[#F2ECE1] text-center  tracking-widest"
                     style={robotoFontRegular}
                   >
-                    <i>Patagonia, Argentina</i>
+                    {" "}
+                    <span className="text-xs">
+                      <i>Patagonia, Argentina</i>
+                    </span>
                   </h4>
                 </div>
                 <div className="flex flex-col gap-y-5">
@@ -357,81 +407,42 @@ function RioCiervos() {
             <div className="container mx-auto bg-[#231F20] pt-20 pb-10">
               <div>
                 <p
-                  className="text-[#F2ECE1] text-xs text-center leading-5"
+                  className="text-[#F2ECE1] text-sm text-center leading-5"
                   style={bondiniFontRegular}
                 >
                   {" "}
                   <i>
                     Creating unique wines in Patagonia <br />
-                    Pioneer in winegrowing at the foot of the "barda". <br />
+                    Pioneer in winegrowing at the foot of the barda. <br />
                     Small family run winery
                   </i>
                 </p>
               </div>
             </div>
 
-            <div className="bg-[#231F20] py-10 px-5">
+            <div className="bg-[#231F20] py-10 px-5 flex flex-col gap-y-8">
               <div className="container mx-auto">
                 <div className="grid grid-cols-3 gap-x-4">
                   <div className="flex gap-y-4 flex-col">
-                    <img src={araucanaWineShort} alt="" />
-                    <Link to="/araucana?scroll=545">
-                      <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
-                        <a href="" style={robotoFontRegular}>
-                          <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
-                            Read more
-                          </span>
-                        </a>
-                      </div>
-                    </Link>
+                    <img src={araucanaWine} alt="" />
                   </div>
                   <div className="flex gap-y-4 flex-col">
-                    <img src={araucanaMalbecWineShort} alt="" />
-                    <Link to="/araucana?scroll=1420">
-                      <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
-                        <a href="" style={robotoFontRegular}>
-                          <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
-                            Read more
-                          </span>
-                        </a>
-                      </div>
-                    </Link>
+                    <img src={araucanaMalbec} alt="" />
                   </div>
                   <div className="flex gap-y-4 flex-col">
-                    <img src={araucanaAzulWineShort} alt="" />
-                    <Link to="/araucana?scroll=2320">
-                      <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
-                        <a href="" style={robotoFontRegular}>
-                          <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
-                            Read more
-                          </span>
-                        </a>
-                      </div>
-                    </Link>
+                    <img src={araucanaAzul} alt="" />
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="bg-[#231F20] py-10">
-              <div className="container mx-auto flex flex-col gap-y-5 ">
-                <div className="">
-                  <h1
-                    className="text-[#C3B17D] text-center text-xs uppercase tracking-widest"
-                    style={robotoFontRegular}
-                  >
-                    Ribera del cuarzo
-                  </h1>
+              <Link to="/araucana">
+                <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
+                  <a href="" style={robotoFontRegular}>
+                    <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
+                      View wines in Argentina
+                    </span>
+                  </a>
                 </div>
-                <div>
-                  <h2
-                    className="text-[#F2ECE1] text-center text-xs tracking-widest"
-                    style={robotoFontRegular}
-                  >
-                    <i>Patagonia, Argentina</i>
-                  </h2>
-                </div>
-              </div>
+              </Link>
             </div>
 
             <div className="bg-[#231F20] py-20">

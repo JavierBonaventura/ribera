@@ -36,7 +36,7 @@ function Header() {
               </Link>{" "}
             </div>
 
-            <div class="w-8">
+            <div class="w-7">
               <Link to="/MenuHamburguesa">
                 <img src={hambur} alt="" className="w-full" />
               </Link>{" "}
@@ -47,21 +47,19 @@ function Header() {
 
       <div className="bg-[#F2ECE1] py-3">
         <div className="container mx-auto flex flex-col justify-center items-center mt-10">
-          <div className="flex flex-col gap-y-5">
-            <div className="pt-16">
-              <h1
-                style={playfairFontItalic}
-                className="italic text-xs text-[#010101] text-center tracking-widest"
-              >
-                Patagonian Spirit
-              </h1>
-              <h4
-                style={playfairFontBlack}
-                className="font-bold text-base text-[#C4AC77] text-center tracking-wider"
-              >
-                WORK IN THE VINEYARD
-              </h4>
-            </div>
+          <div className="pt-16">
+            <h1
+              style={playfairFontItalic}
+              className="italic text-xs text-[#5f5f5e] text-center tracking-widest"
+            >
+              <i style={playfairFontItalic}>Patagonian Spirit</i>
+            </h1>
+            <h2
+              style={playfairFontBlack}
+              className="text-base text-[#C4AC77] text-center tracking-wider uppercase"
+            >
+              WORK IN THE VINEYARD
+            </h2>
           </div>
         </div>
       </div>

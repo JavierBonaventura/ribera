@@ -36,6 +36,12 @@ const LifeWater = () => {
     fontStyle: "normal",
   };
 
+  const playfairFontBlack = {
+    fontFamily: "Playfair Black, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+
   return (
     <Transition
       items={location}
@@ -58,7 +64,7 @@ const LifeWater = () => {
                       </Link>{" "}
                     </div>
 
-                    <div class="w-8">
+                    <div class="w-7">
                       <Link to="/MenuHamburguesa">
                         <img src={hambur} alt="" className="w-full" />
                       </Link>{" "}
@@ -69,16 +75,16 @@ const LifeWater = () => {
 
               <div class="container mx-auto">
                 <div class="pt-16 pb-5">
-                  <div class="flex flex-col justify-center items-center mt-10 gap-y-2">
+                  <div class="flex flex-col justify-center items-center mt-10 ">
                     <h1
-                      class="text-black text-xs tracking-widest"
+                      class="text-[#5f5f5e] text-xs tracking-widest"
                       style={playfairFontItalic}
                     >
-                      Patagonian Spirit
+                      <i style={playfairFontItalic}>Patagonian Spirit</i>
                     </h1>
                     <h2
-                      class="uppercase text-[#C4AC77] text-sm tracking-wider"
-                      style={playfairFontBold}
+                      style={playfairFontBlack}
+                      className="text-base text-[#C4AC77] text-center tracking-wider uppercase"
                     >
                       Life Water
                     </h2>

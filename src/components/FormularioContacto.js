@@ -24,6 +24,12 @@ const FormularioContacto = () => {
     fontSize: "16px",
   };
 
+  const playfairFontBold = {
+    fontFamily: "Playfair Bold , sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
   const [email, setEmail] = useState("");
@@ -52,25 +58,32 @@ const FormularioContacto = () => {
     >
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
-          <div className="containerHome pt-8 background">
-            <div className="w-full grid justify-items-end pr-6">
-              <div className="w-8 ">
-                <Link to="/MenuHamburguesa">
-                  <img src={hambur} alt="" className="w-full" />
-                </Link>
+          <div className="containerHome py-20 background">
+            <header className="py-10 fixed top-0 left-0 right-0 z-50  ">
+              <div class="container mx-auto">
+                <div class="flex justify-between items-center px-5">
+                  <div class="w-20 md:w-36">
+                    <Link to="/">
+                      <img src={logo} alt="" className="w-full" />
+                    </Link>{" "}
+                  </div>
+
+                  <div class="w-8">
+                    <Link to="/MenuHamburguesa">
+                      <img src={hambur} alt="" className="w-full" />
+                    </Link>{" "}
+                  </div>
+                </div>
               </div>
-            </div>
-            <Link to="/">
-              <img src={logo} alt="" className="logo" />
-            </Link>
+            </header>
 
             <div className="body">
               <div className="containerHome pt-12 px-5 ">
                 <div className="grid grid-cols-1 text-white">
                   <div>
                     <h1
-                      className="text-center text-2xl uppercase text-[#F4EDE2] "
-                      style={playfairFontRegular}
+                      class="uppercase text-[#C4AC77] text-xl tracking-wider text-center"
+                      style={playfairFontBold}
                     >
                       Contact
                     </h1>
@@ -82,15 +95,15 @@ const FormularioContacto = () => {
                       style={playfairFontRegular}
                     >
                       <div className="mb-4 flex">
-                        <div className="mr-2">
+                        <div className="mr-2 ">
                           <label
-                            className="block text-[#F4EDE2] text-sm font-bold mb-2"
+                            className="block text-[#F4EDE2] text-sm font-bold "
                             htmlFor="nombre"
                           >
                             Name
                           </label>
                           <input
-                            className=" bg-transparent appearance-none border-b  w-full py-2 px-3 text-[#F4EDE2] leading-tight focus:outline-none focus:shadow-outline"
+                            className=" bg-transparent   appearance-none border-b  w-full   text-[#F4EDE2] leading-tight focus:outline-none focus:shadow-outline"
                             id="nombre"
                             type="text"
                             value={nombre}
@@ -100,13 +113,13 @@ const FormularioContacto = () => {
                         </div>
                         <div>
                           <label
-                            className="block text-[#F4EDE2] text-sm font-bold mb-2"
+                            className="block text-[#F4EDE2] text-sm font-bold "
                             htmlFor="apellido"
                           >
                             Last name
                           </label>
                           <input
-                            className=" appearance-none bg-transparent border-b rouded w-full py-2 px-3 text-[#F4EDE2] leading-tight focus:outline-none focus:shadow-outline"
+                            className=" appearance-none bg-transparent border-b rouded w-full   text-[#F4EDE2] leading-tight focus:outline-none focus:shadow-outline"
                             id="apellido"
                             type="text"
                             value={apellido}
@@ -117,13 +130,13 @@ const FormularioContacto = () => {
                       </div>
                       <div className="mb-4">
                         <label
-                          className="block text-[#F4EDE2] text-sm font-bold mb-2"
+                          className="block text-[#F4EDE2] text-sm font-bold "
                           htmlFor="email"
                         >
                           E-mail
                         </label>
                         <input
-                          className=" appearance-none bg-transparent border-b  w-full py-2 px-3 text-[#F4EDE2] leading-tight focus:outline-none focus:shadow-outline"
+                          className=" appearance-none bg-transparent border-b  w-full   text-[#F4EDE2] leading-tight focus:outline-none focus:shadow-outline"
                           id="email"
                           type="email"
                           value={email}
@@ -133,13 +146,13 @@ const FormularioContacto = () => {
                       </div>
                       <div className="mb-4">
                         <label
-                          className="block text-[#F4EDE2] text-sm font-bold mb-2"
+                          className="block text-[#F4EDE2] text-sm font-bold "
                           htmlFor="pais"
                         >
                           Country
                         </label>
                         <input
-                          className=" appearance-none bg-transparent border-b  w-full py-2 px-3 text-[#F4EDE2] leading-tight focus:outline-none focus:shadow-outline"
+                          className=" appearance-none bg-transparent border-b  w-full   text-[#F4EDE2] leading-tight focus:outline-none focus:shadow-outline"
                           id="pais"
                           type="text"
                           value={pais}
@@ -155,7 +168,7 @@ const FormularioContacto = () => {
                           Message
                         </label>
                         <textarea
-                          className=" appearance-none border-b bg-transparent  w-full py-2 px-3 text-[#F4EDE2] leading-tight focus:outline-none focus:shadow-outline"
+                          className=" appearance-none border-b bg-transparent  w-full pb-14  text-[#F4EDE2] leading-tight focus:outline-none focus:shadow-outline"
                           id="consulta"
                           value={consulta}
                           onChange={(e) => setConsulta(e.target.value)}
@@ -174,15 +187,26 @@ const FormularioContacto = () => {
                   </div>
 
                   <div
-                    className="text-[#F4EDE2] text-center flex flex-col gap-y-4  py-4"
+                    className="text-[#F4EDE2] text-center flex flex-col gap-y-4 "
                     style={playfairFontRegular}
                   >
                     <div className="flex flex-col gap-y-2">
                       <h2 className="text-sm">Our offices</h2>
-                      <h3 className="text-base">
-                        Ortiz de Ocampo 330 <br /> Module, office 5 <br />{" "}
-                        Buenos Aires, Argentina
-                      </h3>
+                      <a href="" className="hover:underline">
+                        <h3 className="text-base">
+                          Ortiz de Ocampo 3302 <br />
+                          Buenos Aires, Argentina
+                        </h3>
+                      </a>
+                    </div>
+                    <div className="flex flex-col gap-y-2">
+                      <h2 className="text-sm">Our winery</h2>
+                      <a href="" className="hover:underline">
+                        <h3 className="text-base">
+                          Ortiz de Ocampo 3302 <br />
+                          Buenos Aires, Argentina
+                        </h3>
+                      </a>
                     </div>
                     <div className="text-base">
                       <h2 className="uppercase">¡follow us on instagram!</h2>
@@ -195,7 +219,7 @@ const FormularioContacto = () => {
                         <h2>@riberadelcuarzo</h2>
                       </a>
                     </div>
-                    <div className="w-2/3 mx-auto flex justify-center">
+                    <div className="w-2/3 mx-auto flex justify-center hidden">
                       <a href="" className="border-b border-[#C3B17D]">
                         <div className="w-2 inline-block">
                           <img src={iconDownload} alt="" className="w-full" />

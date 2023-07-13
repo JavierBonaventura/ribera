@@ -63,7 +63,7 @@ const ConstructionPage = () => {
                       </Link>{" "}
                     </div>
 
-                    <div class="w-8">
+                    <div class="w-7">
                       <Link to="/MenuHamburguesa">
                         <img src={hambur} alt="" className="w-full" />
                       </Link>{" "}
@@ -74,16 +74,16 @@ const ConstructionPage = () => {
 
               <div class="container mx-auto">
                 <div class="pt-16">
-                  <div class="flex flex-col justify-center items-center mt-10 gap-y-2">
+                  <div class="flex flex-col justify-center items-center mt-10 ">
                     <h1
-                      class="text-black text-xs tracking-widest"
+                      class="text-[#5f5f5e] text-xs tracking-widest"
                       style={playfairFontItalic}
                     >
-                      Patagonian Spirit
+                      <i style={playfairFontItalic}>Patagonian Spirit</i>
                     </h1>
                     <h2
-                      class="uppercase text-[#C4AC77] text-sm tracking-wider"
-                      style={playfairFontBold}
+                      style={playfairFontBlack}
+                      className="text-base text-[#C4AC77] text-center tracking-wider uppercase"
                     >
                       Araucana Vineyard
                     </h2>
@@ -98,57 +98,45 @@ const ConstructionPage = () => {
                   />
                 </div>
 
-                <div class="flex flex-col gap-y-2 px-10 md:text-center pt-8">
-                  <div>
-                    <h1
-                      class="uppercase text-[#C4AC77] text-sm tracking-wide"
-                      style={robotoFontRegular}
-                    >
-                      Winery Ribera del Cuarzo
-                    </h1>
-                  </div>
-                  <div>
-                    <p
-                      class="text-black text-xs md:text-xl tracking-wider"
-                      style={playfairFontRegular}
-                    >
-                      Araucana Vineyard is far more than just unique—it is an
-                      extraordinary gem that surpasses mere words. Nestled in
-                      Ribera del Cuarzo, no other vineyard in Patagonia can
-                      boast such proximity to the barda or such seclusion.{" "}
-                      <br />
-                      <br />
-                      The soils of Araucana are predominantly aeolic,
-                      painstakingly shaped over countless ages by the erosive
-                      forces of wind. Enriched with volcanic ash and high
-                      potassium content, they possess a chemical composition
-                      that is both crucial and remarkably uncommon, not only for
-                      Patagonia but for the World in general. <br />
-                      <br />
-                      Adding to its distinctiveness is the barda river terrace.
-                      The surface texture owes its character to a fusion of
-                      quartz and calcium carbonate, locally known as Indian
-                      cement. As it erodes and integrates into the soil, it
-                      imparts its exceptional qualities to our grapes. <br />
-                      <br />
-                      Araucana adopts the traditional high cordon-method for
-                      planting, with two-meter gaps between rows and a meter
-                      between each vine, resulting in a density of 5000 plants
-                      per hectare. While the majority of our vineyard is
-                      dedicated to Malbec, we also cultivate Petit Verdot and
-                      Merlot vines. <br />
-                      <br />
-                      Our philosophy revolves around nurturing the plants to
-                      self-regulate throughout their growth cycle, intervening
-                      as minimally as possible, and offering support to allow
-                      them to make decisions autonomously. Our role is to guide
-                      them towards their utmost expression and quality. <br />
-                      <br />
-                      That's why we embrace time-honored vine management
-                      techniques like Guyot pruning with canes and renewal
-                      spurs.
-                    </p>
-                  </div>
+                <div class=" px-10 md:text-center">
+                  <p
+                    class="text-black text-xs md:text-xl tracking-wider"
+                    style={playfairFontRegular}
+                  >
+                    Araucana Vineyard is far more than just unique—it is an
+                    extraordinary gem that surpasses mere words. Nestled in
+                    Ribera del Cuarzo, no other vineyard in Patagonia can boast
+                    such proximity to the barda or such seclusion. <br />
+                    <br />
+                    The soils of Araucana are predominantly aeolic,
+                    painstakingly shaped over countless ages by the erosive
+                    forces of wind. Enriched with volcanic ash and high
+                    potassium content, they possess a chemical composition that
+                    is both crucial and remarkably uncommon, not only for
+                    Patagonia but for the World in general. <br />
+                    <br />
+                    Adding to its distinctiveness is the barda river terrace.
+                    The surface texture owes its character to a fusion of quartz
+                    and calcium carbonate, locally known as Indian cement. As it
+                    erodes and integrates into the soil, it imparts its
+                    exceptional qualities to our grapes. <br />
+                    <br />
+                    Araucana adopts the traditional high cordon-method for
+                    planting, with two-meter gaps between rows and a meter
+                    between each vine, resulting in a density of 5000 plants per
+                    hectare. While the majority of our vineyard is dedicated to
+                    Malbec, we also cultivate Petit Verdot and Merlot vines.{" "}
+                    <br />
+                    <br />
+                    Our philosophy revolves around nurturing the plants to
+                    self-regulate throughout their growth cycle, intervening as
+                    minimally as possible, and offering support to allow them to
+                    make decisions autonomously. Our role is to guide them
+                    towards their utmost expression and quality. <br />
+                    <br />
+                    That's why we embrace time-honored vine management
+                    techniques like Guyot pruning with canes and renewal spurs.
+                  </p>
                 </div>
                 <div class="py-20">
                   <div class="flex justify-center">

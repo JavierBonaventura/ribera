@@ -31,16 +31,15 @@ const Home = () => {
   const [mostrarMenu4, setMostrarMenu4] = useState(false);
   const [mostrarMenu5, setMostrarMenu5] = useState(false);
 
-
   const dropdownAnimation1 = useSpring({
-    height: mostrarMenu1 ? "50px" : "0px",
+    height: mostrarMenu1 ? "120px" : "0px",
     opacity: mostrarMenu1 ? 1 : 0,
     overflow: "hidden",
     config: { duration: 300 },
   });
 
   const dropdownAnimation2 = useSpring({
-    height: mostrarMenu2 ? "140px" : "0px",
+    height: mostrarMenu2 ? "200px" : "0px",
     opacity: mostrarMenu2 ? 1 : 0,
     overflow: "hidden",
     config: { duration: 300 },
@@ -193,7 +192,7 @@ const Home = () => {
                   className="menu sombra-menu tracking-wider "
                   onClick={opcion1}
                 >
-                  Our History
+                  History
                 </p>
                 <animated.div style={dropdownAnimation1}>
                   <ul className="text-center -mt-2 space-y-1">
@@ -284,7 +283,7 @@ const Home = () => {
                   className="menu sombra-menu tracking-wider"
                   onClick={opcion3}
                 >
-                  Our Wines
+                  Wines
                 </p>
                 <animated.div style={dropdownAnimation3}>
                   <ul className="text-center  space-y-1">
@@ -300,53 +299,53 @@ const Home = () => {
                       </p>
                     </li>
                     <animated.div style={dropdownAnimation4}>
-                  <ul className="text-center  -space-y-2">
-                    <li>
-                      {" "}
-                      <Link  to="/riociervos?scroll=545">
-                      <p                       
-                        className="subMenu tracking-widest font-sans italic "                    
-                      >
-                       Ribera del cuarzo clasico
-                      </p>
-                      </Link>
-                    </li>
-                    <li>
-                      {" "}
-                      <Link  to="/riociervos?scroll=1420">
-                      <p                       
-                        className="subMenu tracking-widest font-sans italic "                    
-                      >
-                        Ribera del cuarzo especial
-                      </p>
-                      </Link>
-
-                    </li>
-                    <li>
-                      {" "}
-                      <Link  to="/riociervos?scroll=2320">
-                      <p                       
-                        className="subMenu tracking-widest font-sans italic "                    
-                      >
-                       Ribera del cuarzo reserva estibada
-                      </p>
-                      </Link>
-
-                    </li>
-                    <li>
-                      {" "}
-                      <Link  to="/riociervos?scroll=0">
-                      <p                       
-                        className="subMenu tracking-widest font-sans italic "                    
-                      >
-                       View all
-                      </p>
-                      </Link>
-
-                    </li>
-
-                  </ul>
-                </animated.div>
+                      <ul className="text-center  -space-y-2">
+                        <li>
+                          {" "}
+                          <Link to="/riociervos?scroll=0">
+                            <p
+                              className="subMenu tracking-widest"
+                              style={playfairFontRegular}
+                            >
+                              View all
+                            </p>
+                          </Link>
+                        </li>
+                        <li>
+                          {" "}
+                          <Link to="/riociervos?scroll=545">
+                            <p
+                              className="subMenu tracking-widest"
+                              style={playfairFontRegular}
+                            >
+                              Ribera del Cuarzo Clásico
+                            </p>
+                          </Link>
+                        </li>
+                        <li>
+                          {" "}
+                          <Link to="/riociervos?scroll=1420">
+                            <p
+                              className="subMenu tracking-widest"
+                              style={playfairFontRegular}
+                            >
+                              Ribera del Cuarzo Especial
+                            </p>
+                          </Link>
+                        </li>
+                        <li>
+                          {" "}
+                          <Link to="/riociervos?scroll=2320">
+                            <p
+                              className="subMenu tracking-widest"
+                              style={playfairFontRegular}
+                            >
+                              Ribera del Cuarzo Reserva Estibada
+                            </p>
+                          </Link>
+                        </li>
+                      </ul>
+                    </animated.div>
                     <li>
                       {" "}
                       <p
@@ -359,115 +358,102 @@ const Home = () => {
                       </p>
                     </li>
                     <animated.div style={dropdownAnimation5}>
-                  <ul className="text-center  -space-y-3 ">
-                  <li>
-                      {" "}
-                      <Link  to="/araucana?scroll=545">
-                      <p                       
-                        className="subMenu tracking-widest font-sans italic "                    
-                      >
-                       Araucana rio de los ciervos
-                      </p>
-                      </Link>
-
-                    </li>
-                    <li>
-                      {" "}
-                      <Link  to="/araucana?scroll=1420">
-                      <p                       
-                        className="subMenu tracking-widest font-sans italic "                    
-                      >
-                        Araucana
-                      </p>
-                      </Link>
-
-                    </li>
-                    <li>
-                      {" "}
-                      <Link  to="/araucana?scroll=2320">
-                      <p                       
-                        className="subMenu tracking-widest font-sans italic "                    
-                      >
-                       Araucana azul
-                      </p>
-                      </Link>
-
-                    </li>
-                    <li>
-                      {" "}
-                      <Link  to="/araucana?scroll=0">
-                      <p                       
-                        className="subMenu tracking-widest font-sans italic "                    
-                      >
-                       View all
-                      </p>
-                      </Link>
-
-                    </li>
-
+                      <ul className="text-center  -space-y-3 ">
+                        <li>
+                          {" "}
+                          <Link to="/araucana?scroll=0">
+                            <p
+                              className="subMenu tracking-widest"
+                              style={playfairFontRegular}
+                            >
+                              View all
+                            </p>
+                          </Link>
+                        </li>
+                        <li>
+                          {" "}
+                          <Link to="/araucana?scroll=545">
+                            <p
+                              className="subMenu tracking-widest"
+                              style={playfairFontRegular}
+                            >
+                              Araucana Río de los Ciervos
+                            </p>
+                          </Link>
+                        </li>
+                        <li>
+                          {" "}
+                          <Link to="/araucana?scroll=1420">
+                            <p
+                              className="subMenu tracking-widest"
+                              style={playfairFontRegular}
+                            >
+                              Araucana Malbec
+                            </p>
+                          </Link>
+                        </li>
+                        <li>
+                          {" "}
+                          <Link to="/araucana?scroll=2320">
+                            <p
+                              className="subMenu tracking-widest"
+                              style={playfairFontRegular}
+                            >
+                              Araucana Azul
+                            </p>
+                          </Link>
+                        </li>
+                      </ul>
+                    </animated.div>
                   </ul>
                 </animated.div>
-                  </ul>
-                </animated.div>
 
-                <div className="flex w-full mt-10 items-center justify-between ">
-                  <div className="text-center">
+                <div className=" w-full px-20 text-center flex flex-col gap-y-5 pt-10">
+                  <div className=" flex justify-between">
                     <Link
                       to="/contacto"
-                      className="text-base footerItems tracking-widest"
-                      style={robotoFontRegular}
+                      className="text-base footerItems tracking-widest hover:underline"
+                      style={roboto}
                     >
                       Contact
                     </Link>
-                  </div>
-                  <div className="  text-center">
                     <p
                       style={roboto}
-                      className="text-base footerItems tracking-widest"
+                      className="text-base footerItems tracking-widest  hover:underline"
                     >
                       News
                     </p>
                   </div>
-                  <div className="  text-center">
-                    <p
-                      style={roboto}
-                      className="text-base footerItems tracking-widest"
-                    >
-                      Casa Pirque
-                    </p>
+                  <div
+                    style={roboto}
+                    className="text-base footerItems tracking-widest hover:underline"
+                  >
+                    <a href="">
+                      <h1>Distributor</h1>
+                      <p>Casa Pirque</p>
+                    </a>
                   </div>
-                </div>
-                <div className="flex space-x-4 mt-10">
-                  <div className="w-1/2 ">
-                    <p
+                  <div className=" flex justify-between">
+                    <a
+                      href=""
                       style={roboto}
-                      className="text-base footerItems tracking-widest"
+                      className="text-base footerItems tracking-widest hover:underline"
                     >
                       <strong>english</strong>
-                    </p>
-                  </div>
-                  <div className="w-1/2 ">
-                    <p
+                    </a>
+                    <a
+                      href=""
                       style={roboto}
-                      className=" text-base footerItems tracking-widest"
+                      className=" text-base footerItems tracking-widest hover:underline"
                     >
                       spanish
-                    </p>
+                    </a>
                   </div>
                 </div>
-                <div className="flex mt-10">
-                  <div className="w-100">
-                    <p
-                      style={roboto}
-                      className="text-xs footerItems tracking-widest"
-                    >
-                      Legals
-                    </p>
-                  </div>
-                </div>
+
                 <div className="py-20">
                   <div className="container mx-auto flex justify-center">
-                    <div className="mt-16">
+                    <div className="">
                       <img src={iconIg} alt="" className="w-5" />
                     </div>
                   </div>
