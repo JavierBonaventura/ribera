@@ -283,7 +283,7 @@ const Home = () => {
                     <li>
                       {" "}
                       <p
-                        to="/riociervos?scroll=0"
+                        
                         className="subMenu tracking-widest"
                         style={robotoFontRegular}
                         onClick={opcion4}
@@ -295,7 +295,7 @@ const Home = () => {
                       <ul className="text-center  -space-y-2">
                         <li>
                           {" "}
-                          <Link to="/riociervos?scroll=0">
+                          <Link to="/riociervos">
                             <p
                               className="subMenu tracking-widest  "
                               style={playfairFontRegular}
@@ -306,7 +306,7 @@ const Home = () => {
                         </li>
                         <li>
                           {" "}
-                          <Link to="/riociervos?scroll=545">
+                          <Link to="/riociervos#posicion1">
                             <p
                               className="subMenu tracking-widest"
                               style={playfairFontRegular}
@@ -317,7 +317,7 @@ const Home = () => {
                         </li>
                         <li>
                           {" "}
-                          <Link to="/riociervos?scroll=1420">
+                          <Link to="/riociervos#posicion2">
                             <p
                               className="subMenu tracking-widest"
                               style={playfairFontRegular}
@@ -328,7 +328,7 @@ const Home = () => {
                         </li>
                         <li>
                           {" "}
-                          <Link to="/riociervos?scroll=2320">
+                          <Link to="/riociervos#posicion3">
                             <p
                               className="subMenu tracking-widest"
                               style={playfairFontRegular}
@@ -342,7 +342,7 @@ const Home = () => {
                     <li>
                       {" "}
                       <p
-                        to="/riociervos?scroll=980"
+                        
                         className="subMenu tracking-widest"
                         style={robotoFontRegular}
                         onClick={opcion5}
@@ -354,7 +354,7 @@ const Home = () => {
                       <ul className="text-center  -space-y-3 ">
                         <li>
                           {" "}
-                          <Link to="/araucana?scroll=0">
+                          <Link to="/araucana">
                             <p
                               className="subMenu tracking-widest"
                               style={playfairFontRegular}
@@ -365,7 +365,7 @@ const Home = () => {
                         </li>
                         <li>
                           {" "}
-                          <Link to="/araucana?scroll=545">
+                          <Link to="/araucana#posicion1">
                             <p
                               className="subMenu tracking-widest"
                               style={playfairFontRegular}
@@ -376,7 +376,7 @@ const Home = () => {
                         </li>
                         <li>
                           {" "}
-                          <Link to="/araucana?scroll=1420">
+                          <Link to="/araucana#posicion2">
                             <p
                               className="subMenu tracking-widest"
                               style={playfairFontRegular}
@@ -387,7 +387,7 @@ const Home = () => {
                         </li>
                         <li>
                           {" "}
-                          <Link to="/araucana?scroll=2320">
+                          <Link to="/araucana#posicion3">
                             <p
                               className="subMenu tracking-widest"
                               style={playfairFontRegular}

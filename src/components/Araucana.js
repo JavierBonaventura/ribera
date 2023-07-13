@@ -16,8 +16,6 @@ import { useSpring, Transition, animated } from "@react-spring/web";
 
 import "../App.css";
 function Araucana() {
-  const scrollRef = useRef(null);
-  const location = useLocation();
   const locationAnimacion = useLocation();
   const [showDropdown1, setShowDropdown1] = useState(false);
   const [showDropdown2, setShowDropdown2] = useState(false);
@@ -65,19 +63,49 @@ function Araucana() {
     setShowDropdown3(!showDropdown3);
   };
 
+  const location = useLocation();
+  
   useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const scrollPosition = parseInt(params.get("scroll") || "0", 10);
-
-    if (scrollRef.current) {
-      scrollRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest",
-      });
-      window.scrollTo(0, scrollPosition);
+    if (location.hash === '#posicion0') {
+      const element = document.getElementById('posicion0');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   }, [location]);
+
+  const location1 = useLocation();
+  
+  useEffect(() => {
+    if (location1.hash === '#posicion1') {
+      const element = document.getElementById('posicion1');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location1]);
+
+  const location2 = useLocation();
+
+  useEffect(() => {
+    if (location2.hash === '#posicion2') {
+      const element = document.getElementById('posicion2');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location2]);
+
+  const location3 = useLocation();
+
+  useEffect(() => {
+    if (location3.hash === '#posicion2') {
+      const element = document.getElementById('posicion3');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location3]);
 
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
@@ -128,6 +156,7 @@ function Araucana() {
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
           <div>
+          <div id="posicion0"></div>
             <header className="py-10 fixed top-0 left-0 right-0 z-50 ">
               <div class="container mx-auto">
                 <div class="flex justify-between items-center px-5">
@@ -175,10 +204,10 @@ function Araucana() {
             </div>
 
             <div
-              ref={scrollRef}
               className="bg-[#231F20] flex flex-col gap-y-20"
             >
               <div className="container mx-auto flex flex-col justify-center items-center gap-y-5">
+              <div id="posicion1"></div>
                 <div className="w-1/3 ">
                   <img src={araucanaWine} alt="" className="w-full" />
                 </div>
@@ -251,6 +280,8 @@ function Araucana() {
               </div>
 
               <div className="container mx-auto flex flex-col justify-center items-center gap-y-5">
+              <div id="posicion2"></div>
+
                 <div className="w-1/3">
                   <img src={araucanaMalbec} alt="" />
                 </div>
@@ -329,6 +360,8 @@ function Araucana() {
               </div>
 
               <div className="container mx-auto flex flex-col justify-center items-center gap-y-5 ">
+              <div id="posicion3"></div>
+
                 <div className="w-1/3">
                   <img src={araucanaAzul} alt="" />
                 </div>
@@ -429,7 +462,7 @@ function Araucana() {
                   </div>
                 </div>
               </div>
-              <Link to="/riociervos">
+              <Link to="/riociervos#posicion0">
                 <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
                   <a href="" style={robotoFontRegular}>
                     <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
