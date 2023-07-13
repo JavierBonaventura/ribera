@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { Transition, animated, config } from '@react-spring/web';
-
+import React from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Menu from "./components/Menu";
 import Family from "./components/Family";
 import AraucanaVineyard from "./components/AraucanaVineyard";
@@ -25,56 +23,8 @@ function App() {
   return (
     <Router>
       <div>
-      
-        <AppContent />
-     
-      </div>
-    </Router>
-  );
-}
-
-const AppContent = () => {
-  const location = useLocation();
-  const [showBlackScreen, setShowBlackScreen] = useState(false);
-
-  useEffect(() => {
-    // Mostrar la pantalla negra durante 500ms al cambiar de página
-    setShowBlackScreen(true);
-    const timeout = setTimeout(() => {
-      setShowBlackScreen(false);
-    }, 500);
-
-    // Limpia el timeout al desmontar el componente
-    return () => clearTimeout(timeout);
-  }, [location]);
-
-  return (
-    <div style={{ position: 'relative', height: '100%' }}>
-      <Transition
-        items={location}
-        keys={(location) => location.pathname}
-        from={{ opacity: 0 }}
-        enter={{ opacity: 1 }}
-        leave={{ opacity: 0 }}
-        config={{ duration: 100 }}
-      >
-        {(style, item) => (
-          <animated.div style={{ ...style, position: 'absolute', width: '100%' }}>
-            {showBlackScreen && (
-              <div
-                style={{
-                  position: 'fixed',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%',
-                  backgroundColor: 'black',
-                  zIndex: 9999,
-                }}
-              />
-            )}
-            <Routes location={item}>
-            <Route path="/" element={<Menu />} />
+        <Routes>
+          <Route path="/" element={<Menu />} />
           <Route path="/family" element={<Family />} />
           <Route path="/bluevalley" element={<BlueValley />} />
           <Route path="/araucanavineyard" element={<AraucanaVineyard />} />
@@ -90,12 +40,10 @@ const AppContent = () => {
           <Route path="/reservaestibada" element={<ReservaEstibada />} />
           <Route path="/menuhamburguesa" element={<MenuHamburguesa />} />
           <Route path="/contacto" element={<FormularioContacto />} />
-            </Routes>
-          </animated.div>
-        )}
-      </Transition>
-    </div>
+        </Routes>
+      </div>
+    </Router>
   );
-};
+}
 
 export default App;
