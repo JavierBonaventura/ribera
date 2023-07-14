@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
-
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
@@ -64,6 +63,15 @@ const Family = () => {
     fontSize: "16px",
   };
 
+  
+  const posicionRef = useRef(null);
+
+  const handleClick = () => {
+    if (posicionRef.current) {
+      posicionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <Transition
       items={location}
@@ -123,15 +131,20 @@ const Family = () => {
                   </h1>
                 </div>
 
-                <div class="py-28">
-                  <div class="flex justify-center">
-                    <div class="border border-[#C3B17D] rounded-full p-6 relative flex justify-center items-center">
-                      <img src={arrowDown} alt="" class="w-1.5 absolute" />
+
+                <div className="py-28">
+                  <div className="flex justify-center">
+                    <div
+                      className="border border-[#C3B17D] rounded-full p-6 relative flex justify-center items-center"
+                      onClick={handleClick}
+                    >
+                      <img src={arrowDown} alt="" className="w-1.5 absolute" />
                     </div>
                   </div>
                 </div>
               </div>
-
+              <div ref={posicionRef} id="posicion">
+              </div>
               <div class="w-full flex">
                 <div class="w-1/3"></div>
                 <div class="w-2/3">
@@ -187,6 +200,7 @@ const Family = () => {
                   </div>
                 </div>
               </div>
+
 
               <div class="container mx-auto bg-[#212121]">
                 <div class="pt-32 pb-10">
