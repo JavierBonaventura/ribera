@@ -27,21 +27,21 @@ function RioCiervos() {
     height: showDropdown1 ? "100px" : "0px",
     opacity: showDropdown1 ? 1 : 0,
     overflow: "hidden",
-    config: { duration: 300 },
+    config: { duration: 500 },
   });
 
   const dropdownAnimation2 = useSpring({
     height: showDropdown2 ? "100px" : "0px",
     opacity: showDropdown2 ? 1 : 0,
     overflow: "hidden",
-    config: { duration: 300 },
+    config: { duration: 500 },
   });
 
   const dropdownAnimation3 = useSpring({
     height: showDropdown3 ? "100px" : "0px",
     opacity: showDropdown3 ? 1 : 0,
     overflow: "hidden",
-    config: { duration: 300 },
+    config: { duration: 500 },
   });
 
   const handleDownloadClick1 = () => {
@@ -266,7 +266,6 @@ function RioCiervos() {
                         </a>
                       </div>
 
-                      {showDropdown1 && (
                         <animated.div style={dropdownAnimation1}>
                           <div className="mt-2 w-48 mx-auto">
                             <ul className="text-xs text-[#C3B17D] text-center">
@@ -282,7 +281,6 @@ function RioCiervos() {
                             </ul>
                           </div>
                         </animated.div>
-                      )}
                     </div>
                   </div>
                 </div>
@@ -342,7 +340,6 @@ function RioCiervos() {
                       </a>
                     </div>
 
-                    {showDropdown2 && (
                       <animated.div style={dropdownAnimation2}>
                         <div className="mt-2 w-48 mx-auto">
                           <ul className="text-xs text-[#C3B17D] text-center">
@@ -358,7 +355,6 @@ function RioCiervos() {
                           </ul>
                         </div>
                       </animated.div>
-                    )}
                   </div>
                 </div>
               </div>
@@ -416,7 +412,6 @@ function RioCiervos() {
                       </a>
                     </div>
 
-                    {showDropdown3 && (
                       <animated.div style={dropdownAnimation3}>
                         <div className="mt-2 w-48 mx-auto">
                           <ul className="text-xs text-[#C3B17D] text-center">
@@ -432,7 +427,6 @@ function RioCiervos() {
                           </ul>
                         </div>
                       </animated.div>
-                    )}
                   </div>
                 </div>
               </div>
