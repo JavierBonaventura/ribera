@@ -70,7 +70,6 @@ function Header() {
 
 const WorkVineyard = () => {
   const location = useLocation();
-
   const [currentScreen, setCurrentScreen] = useState(0);
 
   const handleNext = () => {
@@ -101,39 +100,25 @@ const WorkVineyard = () => {
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
           <div>
-            <Header />
+          <Header />
+
             <div>
               {/* Contenido del slider */}
-              {currentScreen === 0 && <Screen1 />}
-              {currentScreen === 1 && <Screen2 />}
-              {currentScreen === 2 && <Screen3 />}
-              {currentScreen === 3 && <Screen4 />}
-              {currentScreen === 4 && <Screen5 />}
-            </div>
-            <div className="flex justify-center space-x-10 pt-2  bg-[#F2ECE1]">
-              <button
-                className="w-14 h-14 rounded-full flex items-center justify-center mr-2"
-                onClick={handlePrev}
-              >
-                <div className="">
-                  <img src={flechaIzquierda} alt="" className="w-full" />
-                </div>
-              </button>
+              {currentScreen === 0 && <Screen1 currentScreen={currentScreen} handleNext={handleNext} handlePrev={handlePrev} />}             
+              {currentScreen === 1 && <Screen2 currentScreen={currentScreen} handleNext={handleNext} handlePrev={handlePrev} />}            
+              {currentScreen === 2 && <Screen3 currentScreen={currentScreen} handleNext={handleNext} handlePrev={handlePrev} />}            
+              {currentScreen === 3 && <Screen4 currentScreen={currentScreen} handleNext={handleNext} handlePrev={handlePrev} />}            
+              {currentScreen === 4 && <Screen5 currentScreen={currentScreen} handleNext={handleNext} handlePrev={handlePrev} />}            
 
-              <button
-                className="w-14 h-14 flex items-center justify-center"
-                onClick={handleNext}
-              >
-                <div className="">
-                  <img src={flechaDerecha} alt="" className="w-full" />
-                </div>
-              </button>
             </div>
+
             {currentScreen === 0 && <Screen1Text />}
             {currentScreen === 1 && <Screen2Text />}
             {currentScreen === 2 && <Screen3Text />}
             {currentScreen === 3 && <Screen4Text />}
             {currentScreen === 4 && <Screen5Text />}
+
+
           </div>
         </animated.div>
       )}
@@ -141,7 +126,7 @@ const WorkVineyard = () => {
   );
 };
 
-const Screen1 = () => {
+const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {  
   const location = useLocation();
 
   const playfairFontBlack = {
@@ -182,6 +167,25 @@ const Screen1 = () => {
               <div>
                 <img src={workVineyardSlide1} alt="" className="w-full" />
               </div>
+            </div>
+            <div className="flex justify-center space-x-10 pt-2  bg-[#F2ECE1]">
+              <button
+                className="w-14 h-14 rounded-full flex items-center justify-center mr-2"
+                onClick={handlePrev}
+              >
+                <div className="">
+                  <img src={flechaIzquierda} alt="" className="w-full" />
+                </div>
+              </button>
+
+              <button
+                className="w-14 h-14 flex items-center justify-center"
+                onClick={handleNext}
+              >
+                <div className="">
+                  <img src={flechaDerecha} alt="" className="w-full" />
+                </div>
+              </button>
             </div>
           </div>
         </animated.div>
@@ -264,7 +268,7 @@ const Screen1Text = () => {
   );
 };
 
-const Screen2 = () => {
+const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {  
   const location = useLocation();
 
   const playfairFontBlack = {
@@ -310,6 +314,26 @@ const Screen2 = () => {
                 />
               </div>
             </div>
+            <div className="flex justify-center space-x-10 pt-2  bg-[#F2ECE1]">
+              <button
+                className="w-14 h-14 rounded-full flex items-center justify-center mr-2"
+                onClick={handlePrev}
+              >
+                <div className="">
+                  <img src={flechaIzquierda} alt="" className="w-full" />
+                </div>
+              </button>
+
+              <button
+                className="w-14 h-14 flex items-center justify-center"
+                onClick={handleNext}
+              >
+                <div className="">
+                  <img src={flechaDerecha} alt="" className="w-full" />
+                </div>
+              </button>
+            </div>
+
           </div>
         </animated.div>
       )}
@@ -389,8 +413,7 @@ const Screen2Text = () => {
     </Transition>
   );
 };
-
-const Screen3 = () => {
+const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {  
   const location = useLocation();
 
   const playfairFontBlack = {
@@ -436,6 +459,26 @@ const Screen3 = () => {
                 />
               </div>
             </div>
+            <div className="flex justify-center space-x-10 pt-2  bg-[#F2ECE1]">
+              <button
+                className="w-14 h-14 rounded-full flex items-center justify-center mr-2"
+                onClick={handlePrev}
+              >
+                <div className="">
+                  <img src={flechaIzquierda} alt="" className="w-full" />
+                </div>
+              </button>
+
+              <button
+                className="w-14 h-14 flex items-center justify-center"
+                onClick={handleNext}
+              >
+                <div className="">
+                  <img src={flechaDerecha} alt="" className="w-full" />
+                </div>
+              </button>
+            </div>
+
           </div>
         </animated.div>
       )}
@@ -515,7 +558,7 @@ const Screen3Text = () => {
     </Transition>
   );
 };
-const Screen4 = () => {
+const Screen4 = ({ currentScreen, handleNext, handlePrev }) => {  
   const location = useLocation();
 
   const playfairFontBlack = {
@@ -557,6 +600,26 @@ const Screen4 = () => {
                 <img src={workVineyardSlide4} alt="" className="w-full" />
               </div>
             </div>
+            <div className="flex justify-center space-x-10 pt-2  bg-[#F2ECE1]">
+              <button
+                className="w-14 h-14 rounded-full flex items-center justify-center mr-2"
+                onClick={handlePrev}
+              >
+                <div className="">
+                  <img src={flechaIzquierda} alt="" className="w-full" />
+                </div>
+              </button>
+
+              <button
+                className="w-14 h-14 flex items-center justify-center"
+                onClick={handleNext}
+              >
+                <div className="">
+                  <img src={flechaDerecha} alt="" className="w-full" />
+                </div>
+              </button>
+            </div>
+
           </div>
         </animated.div>
       )}
@@ -634,7 +697,7 @@ const Screen4Text = () => {
     </Transition>
   );
 };
-const Screen5 = () => {
+const Screen5 = ({ currentScreen, handleNext, handlePrev }) => {  
   const location = useLocation();
 
   const playfairFontBlack = {
@@ -676,6 +739,26 @@ const Screen5 = () => {
                 <img src={workVineyardSlide5} alt="" className="w-full" />
               </div>
             </div>
+            <div className="flex justify-center space-x-10 pt-2  bg-[#F2ECE1]">
+              <button
+                className="w-14 h-14 rounded-full flex items-center justify-center mr-2"
+                onClick={handlePrev}
+              >
+                <div className="">
+                  <img src={flechaIzquierda} alt="" className="w-full" />
+                </div>
+              </button>
+
+              <button
+                className="w-14 h-14 flex items-center justify-center"
+                onClick={handleNext}
+              >
+                <div className="">
+                  <img src={flechaDerecha} alt="" className="w-full" />
+                </div>
+              </button>
+            </div>
+
           </div>
         </animated.div>
       )}
@@ -755,4 +838,5 @@ const Screen5Text = () => {
     </Transition>
   );
 };
+
 export default WorkVineyard;
