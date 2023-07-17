@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
-import imgWater from "../images/water.jpeg";
+import imgWater from "../images/water1.png";
 import iconIg from "../images/icon-ig.png";
 import "../App.css";
 import { useLocation } from "react-router-dom";
@@ -42,18 +42,18 @@ const LifeWater = () => {
         <animated.div style={{ ...style, width: "100%" }}>
           <div>
             <body class="bg-[#F2ECE1] ">
-              <header className="py-10 fixed top-0 left-0 right-0 z-50 ">
-                <div class="container mx-auto ">
-                  <div class="flex justify-between items-center px-5">
-                    <div class="w-20 md:w-36">
+              <header className="py-10 fixed top-0 left-0 right-0 z-50  ">
+                <div class="container mx-auto">
+                  <div class="flex justify-between items-center px-5 ">
+                    <div class="w-24 md:w-36 ">
                       <Link to="/">
                         <img src={logo} alt="" className="w-full" />
                       </Link>{" "}
                     </div>
 
-                    <div class="w-7">
+                    <div class="  mt-4">
                       <Link to="/MenuHamburguesa">
-                        <img src={hambur} alt="" className="w-full" />
+                        <img src={hambur} alt="" className="w-7" />
                       </Link>{" "}
                     </div>
                   </div>
@@ -78,7 +78,7 @@ const LifeWater = () => {
                   </div>
                 </div>
 
-                <div class="md:py-20">
+                <div class="md:py-20 px-4 ">
                   <img src={imgWater} alt="" class="w-full md:w-2/3 mx-auto" />
                 </div>
 

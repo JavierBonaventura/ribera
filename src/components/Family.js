@@ -14,11 +14,6 @@ import { Transition, animated } from "@react-spring/web";
 
 const Family = () => {
   const location = useLocation();
-  const bondiniFontRegular = {
-    fontFamily: "Bondini, sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
 
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
@@ -32,20 +27,8 @@ const Family = () => {
     fontStyle: "normal",
   };
 
-  const playfairFontBold = {
-    fontFamily: "Playfair Bold , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-
   const playfairFontExtraBold = {
     fontFamily: "Playfair ExtraBold , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-
-  const robotoFontThin = {
-    fontFamily: "Roboto Thin , sans-serif",
     fontWeight: "normal",
     fontStyle: "normal",
   };
@@ -63,7 +46,6 @@ const Family = () => {
     fontSize: "16px",
   };
 
-  
   const posicionRef = useRef(null);
 
   const handleClick = () => {
@@ -87,16 +69,16 @@ const Family = () => {
             <body class="bg-[#F2ECE1]">
               <header className="py-10 fixed top-0 left-0 right-0 z-50  ">
                 <div class="container mx-auto">
-                  <div class="flex justify-between items-center px-5">
-                    <div class="w-20 md:w-36">
+                  <div class="flex justify-between items-center px-5 ">
+                    <div class="w-24 md:w-36 ">
                       <Link to="/">
                         <img src={logo} alt="" className="w-full" />
                       </Link>{" "}
                     </div>
 
-                    <div class="w-7">
+                    <div class="  mt-4">
                       <Link to="/MenuHamburguesa">
-                        <img src={hambur} alt="" className="w-full" />
+                        <img src={hambur} alt="" className="w-7" />
                       </Link>{" "}
                     </div>
                   </div>
@@ -131,7 +113,6 @@ const Family = () => {
                   </h1>
                 </div>
 
-
                 <div className="py-28">
                   <div className="flex justify-center">
                     <div
@@ -143,13 +124,9 @@ const Family = () => {
                   </div>
                 </div>
               </div>
-              <div ref={posicionRef} id="posicion">
-              </div>
-              <div class="w-full flex">
-                <div class="w-1/3"></div>
-                <div class="w-2/3">
-                  <img src={paisaje} alt="" />
-                </div>
+              <div ref={posicionRef} id="posicion"></div>
+              <div class="w-full px-4">
+                <img src={paisaje} alt="" />
               </div>
 
               <div class="container mx-auto px-10">
@@ -201,9 +178,8 @@ const Family = () => {
                 </div>
               </div>
 
-
               <div class="container mx-auto bg-[#212121]">
-                <div class="pt-32 pb-10">
+                <div class="pt-32 pb-5">
                   <div class="-mt-52 px-4">
                     <img
                       src={carruajeHistory}
@@ -238,13 +214,20 @@ const Family = () => {
                     opportunity, which we tirelessly pursue each day, is
                     embodied in the name of Bodega Ribera del Cuarzo. Here, we
                     strive to craft the finest wines, honoring our heritage and
-                    expressing the essence of our beloved land.” <br /> <br />
-                    <i>Felipe José Menendez Arguelles</i>
+                    expressing the essence of our beloved land.”
                   </p>
                 </div>
               </div>
-              <div>
-                <img src={felipe} alt="" />
+              <div className="px-4 bg-[#212121] container mx-auto ">
+                <img src={felipe} alt="" className="w-full" />
+              </div>
+              <div className="container mx-auto bg-[#212121]">
+                <p
+                  class="text-white text-xs  pt-2 px-10 tracking-wider"
+                  style={playfairFontRegular}
+                >
+                  <i>Felipe José Menendez Arguelles</i>
+                </p>
               </div>
 
               <div class="container mx-auto bg-[#212121]">

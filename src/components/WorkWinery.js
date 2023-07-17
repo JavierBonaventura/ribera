@@ -28,18 +28,18 @@ function Header() {
 
   return (
     <div>
-      <header className="py-10 fixed top-0 left-0 right-0 z-50 ">
+      <header className="py-10 fixed top-0 left-0 right-0 z-50  ">
         <div class="container mx-auto">
-          <div class="flex justify-between items-center px-5">
-            <div class="w-20 md:w-36">
+          <div class="flex justify-between items-center px-5 ">
+            <div class="w-24 md:w-36 ">
               <Link to="/">
                 <img src={logo} alt="" className="w-full" />
               </Link>{" "}
             </div>
 
-            <div class="w-7">
+            <div class="  mt-4">
               <Link to="/MenuHamburguesa">
-                <img src={hambur} alt="" className="w-full" />
+                <img src={hambur} alt="" className="w-7" />
               </Link>{" "}
             </div>
           </div>
@@ -100,11 +100,41 @@ const WinesPreservation = () => {
             <Header />
             <div>
               {/* Contenido del slider */}
-              {currentScreen === 0 && <Screen1 currentScreen={currentScreen} handleNext={handleNext} handlePrev={handlePrev} />}             
-              {currentScreen === 1 && <Screen2 currentScreen={currentScreen} handleNext={handleNext} handlePrev={handlePrev} />}            
-              {currentScreen === 2 && <Screen3 currentScreen={currentScreen} handleNext={handleNext} handlePrev={handlePrev} />}            
-              {currentScreen === 3 && <Screen4 currentScreen={currentScreen} handleNext={handleNext} handlePrev={handlePrev} />}            
-              {currentScreen === 4 && <Screen5 currentScreen={currentScreen} handleNext={handleNext} handlePrev={handlePrev} />}            
+              {currentScreen === 0 && (
+                <Screen1
+                  currentScreen={currentScreen}
+                  handleNext={handleNext}
+                  handlePrev={handlePrev}
+                />
+              )}
+              {currentScreen === 1 && (
+                <Screen2
+                  currentScreen={currentScreen}
+                  handleNext={handleNext}
+                  handlePrev={handlePrev}
+                />
+              )}
+              {currentScreen === 2 && (
+                <Screen3
+                  currentScreen={currentScreen}
+                  handleNext={handleNext}
+                  handlePrev={handlePrev}
+                />
+              )}
+              {currentScreen === 3 && (
+                <Screen4
+                  currentScreen={currentScreen}
+                  handleNext={handleNext}
+                  handlePrev={handlePrev}
+                />
+              )}
+              {currentScreen === 4 && (
+                <Screen5
+                  currentScreen={currentScreen}
+                  handleNext={handleNext}
+                  handlePrev={handlePrev}
+                />
+              )}
             </div>
             {currentScreen === 0 && <Screen1Text />}
             {currentScreen === 1 && <Screen2Text />}
@@ -118,7 +148,7 @@ const WinesPreservation = () => {
   );
 };
 
-const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {  
+const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
   const location = useLocation();
 
   const playfairFontBlack = {
@@ -179,7 +209,6 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
                 </div>
               </button>
             </div>
-
           </div>
         </animated.div>
       )}
@@ -268,7 +297,7 @@ const Screen1Text = () => {
   );
 };
 
-const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {  
+const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
   const location = useLocation();
 
   const playfairFontBlack = {
@@ -333,7 +362,6 @@ const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
                 </div>
               </button>
             </div>
-
           </div>
         </animated.div>
       )}
@@ -412,7 +440,7 @@ const Screen2Text = () => {
   );
 };
 
-const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {  
+const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
   const location = useLocation();
 
   const playfairFontBlack = {
@@ -477,7 +505,6 @@ const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
                 </div>
               </button>
             </div>
-
           </div>
         </animated.div>
       )}
@@ -558,7 +585,7 @@ const Screen3Text = () => {
   );
 };
 
-const Screen4 = ({ currentScreen, handleNext, handlePrev }) => {  
+const Screen4 = ({ currentScreen, handleNext, handlePrev }) => {
   const location = useLocation();
 
   const playfairFontBlack = {
@@ -623,7 +650,6 @@ const Screen4 = ({ currentScreen, handleNext, handlePrev }) => {
                 </div>
               </button>
             </div>
-
           </div>
         </animated.div>
       )}
@@ -705,7 +731,7 @@ const Screen4Text = () => {
   );
 };
 
-const Screen5 = ({ currentScreen, handleNext, handlePrev }) => {  
+const Screen5 = ({ currentScreen, handleNext, handlePrev }) => {
   const location = useLocation();
 
   const playfairFontBlack = {
@@ -770,8 +796,6 @@ const Screen5 = ({ currentScreen, handleNext, handlePrev }) => {
                 </div>
               </button>
             </div>
-
-
           </div>
         </animated.div>
       )}

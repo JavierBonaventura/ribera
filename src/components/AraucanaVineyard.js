@@ -23,19 +23,6 @@ const ConstructionPage = () => {
     fontStyle: "normal",
   };
 
-  const playfairFontBold = {
-    fontFamily: "Playfair Bold , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-
-  const robotoFontRegular = {
-    fontFamily: "Roboto Regular , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-    fontSize: "16px",
-  };
-
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
     fontWeight: "normal",
@@ -55,25 +42,24 @@ const ConstructionPage = () => {
         <animated.div style={{ ...style, width: "100%" }}>
           <div>
             <body class="bg-[#F2ECE1] ">
-              <header className="py-10 fixed top-0 left-0 right-0 z-50 ">
-                <div class="container mx-auto ">
-                  <div class="flex justify-between items-center px-5">
-                    <div class="w-20 md:w-36">
+              <header className="py-10 fixed top-0 left-0 right-0 z-50">
+                <div class="container mx-auto">
+                  <div class="flex justify-between items-center px-5 ">
+                    <div class="w-24 md:w-36 ">
                       <Link to="/">
                         <img src={logo} alt="" className="w-full" />
                       </Link>{" "}
                     </div>
 
-                    <div class="w-7">
+                    <div class="  mt-4">
                       <Link to="/MenuHamburguesa">
-                        <img src={hambur} alt="" className="w-full" />
+                        <img src={hambur} alt="" className="w-7" />
                       </Link>{" "}
                     </div>
                   </div>
                 </div>
               </header>
-
-              <div class="container mx-auto">
+              <div class="container mx-auto pb-5">
                 <div class="pt-16">
                   <div class="flex flex-col justify-center items-center mt-10 ">
                     <h1
@@ -91,7 +77,7 @@ const ConstructionPage = () => {
                   </div>
                 </div>
 
-                <div class="md:py-20">
+                <div class="md:py-20 -mb-5">
                   <img
                     src={ilustracionSpirit}
                     alt=""
@@ -99,7 +85,7 @@ const ConstructionPage = () => {
                   />
                 </div>
 
-                <div class=" px-10 md:text-center">
+                <div class="px-10 md:text-center">
                   <p
                     class="text-black text-xs md:text-xl tracking-wider"
                     style={playfairFontRegular}
@@ -114,15 +100,25 @@ const ConstructionPage = () => {
                     forces of wind. Enriched with volcanic ash and high
                     potassium content, they possess a chemical composition that
                     is both crucial and remarkably uncommon, not only for
-                    Patagonia but for the World in general. <br />
-                    <br />
-                    <img src={paisajeAraucana} alt="" className="w-full" />{" "}
-                    <br />
+                    Patagonia but for the World in general.
+                  </p>
+                </div>
+              </div>
+              <div>
+                {" "}
+                <img src={paisajeAraucana} alt="" className="w-full px-4" />
+              </div>
+              <div class="container mx-auto pt-5">
+                <div class=" px-10 md:text-center">
+                  <p
+                    class="text-black text-xs md:text-xl tracking-wider"
+                    style={playfairFontRegular}
+                  >
                     Adding to its distinctiveness is the barda river terrace.
                     The surface texture owes its character to a fusion of quartz
                     and calcium carbonate, locally known as Indian cement. As it
                     erodes and integrates into the soil, it imparts its
-                    exceptional qualities to our grapes. <br />
+                    exceptional qualities to our grapes.
                   </p>
                 </div>
                 <div class="py-20">

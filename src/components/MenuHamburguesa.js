@@ -32,14 +32,14 @@ const Home = () => {
   const [mostrarMenu5, setMostrarMenu5] = useState(false);
 
   const dropdownAnimation1 = useSpring({
-    height: mostrarMenu1 ? "120px" : "0px",
+    height: mostrarMenu1 ? "80px" : "0px",
     opacity: mostrarMenu1 ? 1 : 0,
     overflow: "hidden",
     config: { duration: 300 },
   });
 
   const dropdownAnimation2 = useSpring({
-    height: mostrarMenu2 ? "200px" : "0px",
+    height: mostrarMenu2 ? "170px" : "0px",
     opacity: mostrarMenu2 ? 1 : 0,
     overflow: "hidden",
     config: { duration: 300 },
@@ -65,12 +65,6 @@ const Home = () => {
     overflow: "hidden",
     config: { duration: 300 },
   });
-
-  const bondiniFontRegular = {
-    fontFamily: "Bondini, sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
 
   const opcion1 = () => {
     setMostrarMenu1(true);
@@ -150,43 +144,45 @@ const Home = () => {
                   <img src={logo} alt="Imagen 1" className="w-32" />
                 </Link>
               </div>
-              <Link to="/" className="absolute right-0">
-                <svg
-                  className="ml-10 pt-5"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="100"
-                  height="100"
-                  viewBox="0 0 100 100"
-                >
-                  <circle
-                    cx="50"
-                    cy="50"
-                    r="16"
-                    stroke="#C3B17D"
-                    fill="transparent"
-                    strokeWidth="2"
-                  />
-                  <line
-                    x1="44"
-                    y1="44"
-                    x2="56"
-                    y2="56"
-                    stroke="#C3B17D"
-                    strokeWidth="2"
-                  />
-                  <line
-                    x1="44"
-                    y1="56"
-                    x2="56"
-                    y2="44"
-                    stroke="#C3B17D"
-                    strokeWidth="2"
-                  />
-                </svg>
-              </Link>
+              <div className="">
+                <Link to="/" className="absolute right-0">
+                  <svg
+                    className="ml-10 pt-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="100"
+                    height="100"
+                    viewBox="0 0 100 100"
+                  >
+                    <circle
+                      cx="50"
+                      cy="50"
+                      r="16"
+                      stroke="#C3B17D"
+                      fill="transparent"
+                      strokeWidth="2"
+                    />
+                    <line
+                      x1="44"
+                      y1="44"
+                      x2="56"
+                      y2="56"
+                      stroke="#C3B17D"
+                      strokeWidth="2"
+                    />
+                    <line
+                      x1="44"
+                      y1="56"
+                      x2="56"
+                      y2="44"
+                      stroke="#C3B17D"
+                      strokeWidth="2"
+                    />
+                  </svg>
+                </Link>
+              </div>
             </div>
-            <div className="body">
-              <div className="containerHome pt-20 ">
+            <div className="body ">
+              <div className="containerHome pt-36 pb-10">
                 <p
                   style={playfairFontRegular}
                   className="menu sombra-menu tracking-wider "
@@ -210,7 +206,7 @@ const Home = () => {
                     <li>
                       {" "}
                       <Link
-                        to="/bluevalley"
+                        to="/valleazul"
                         className="subMenu tracking-widest"
                         style={robotoFontRegular}
                       >
@@ -250,7 +246,7 @@ const Home = () => {
                     </li>
                     <li>
                       <Link
-                        to="/winespreservation"
+                        to="/workwinery"
                         className="subMenu tracking-widest"
                         style={robotoFontRegular}
                       >
@@ -290,8 +286,7 @@ const Home = () => {
                     <li>
                       {" "}
                       <p
-                        
-                        className="subMenu tracking-widest"
+                        className="!mb-0 subMenu tracking-widest"
                         style={robotoFontRegular}
                         onClick={opcion4}
                       >
@@ -302,7 +297,7 @@ const Home = () => {
                       <ul className="text-center  -space-y-2">
                         <li>
                           {" "}
-                          <Link to="/riociervos">
+                          <Link to="/winesworld">
                             <p
                               className="subMenu tracking-widest  "
                               style={playfairFontRegular}
@@ -313,7 +308,7 @@ const Home = () => {
                         </li>
                         <li>
                           {" "}
-                          <Link to="/riociervos#posicion1">
+                          <Link to="/winesworld#posicion1">
                             <p
                               className="subMenu tracking-widest"
                               style={playfairFontRegular}
@@ -324,7 +319,7 @@ const Home = () => {
                         </li>
                         <li>
                           {" "}
-                          <Link to="/riociervos#posicion2">
+                          <Link to="/winesworld#posicion2">
                             <p
                               className="subMenu tracking-widest"
                               style={playfairFontRegular}
@@ -335,7 +330,7 @@ const Home = () => {
                         </li>
                         <li>
                           {" "}
-                          <Link to="/riociervos#posicion3">
+                          <Link to="/winesworld#posicion3">
                             <p
                               className="subMenu tracking-widest"
                               style={playfairFontRegular}
@@ -349,8 +344,7 @@ const Home = () => {
                     <li>
                       {" "}
                       <p
-                        
-                        className="subMenu tracking-widest"
+                        className="!mb-0 subMenu tracking-widest"
                         style={robotoFontRegular}
                         onClick={opcion5}
                       >
@@ -361,7 +355,7 @@ const Home = () => {
                       <ul className="text-center  -space-y-3 ">
                         <li>
                           {" "}
-                          <Link to="/araucana">
+                          <Link to="/winesworld">
                             <p
                               className="subMenu tracking-widest"
                               style={playfairFontRegular}
@@ -372,7 +366,7 @@ const Home = () => {
                         </li>
                         <li>
                           {" "}
-                          <Link to="/araucana#posicion1">
+                          <Link to="/winesworld#posicion1">
                             <p
                               className="subMenu tracking-widest"
                               style={playfairFontRegular}
@@ -383,7 +377,7 @@ const Home = () => {
                         </li>
                         <li>
                           {" "}
-                          <Link to="/araucana#posicion2">
+                          <Link to="/winesworld#posicion2">
                             <p
                               className="subMenu tracking-widest"
                               style={playfairFontRegular}
@@ -394,7 +388,7 @@ const Home = () => {
                         </li>
                         <li>
                           {" "}
-                          <Link to="/araucana#posicion3">
+                          <Link to="/winesworld#posicion3">
                             <p
                               className="subMenu tracking-widest"
                               style={playfairFontRegular}
@@ -407,60 +401,59 @@ const Home = () => {
                     </animated.div>
                   </ul>
                 </animated.div>
+              </div>
+            </div>
+            <div className=" w-full px-20 text-center flex flex-col gap-y-5 pt-10">
+              <div className=" flex justify-between">
+                <Link
+                  to="/contacto"
+                  className="text-base footerItems tracking-widest hover:underline"
+                  style={roboto}
+                >
+                  Contact
+                </Link>
+                <p
+                  style={roboto}
+                  className="text-base footerItems tracking-widest  hover:underline"
+                >
+                  News
+                </p>
+              </div>
 
-                <div className=" w-full px-20 text-center flex flex-col gap-y-5 pt-10">
-                  <div className=" flex justify-between">
-                    <Link
-                      to="/contacto"
-                      className="text-base footerItems tracking-widest hover:underline"
-                      style={roboto}
-                    >
-                      Contact
-                    </Link>
-                    <p
-                      style={roboto}
-                      className="text-base footerItems tracking-widest  hover:underline"
-                    >
-                      News
-                    </p>
-                  </div>
+              <div className=" flex justify-between">
+                <a
+                  href=""
+                  style={roboto}
+                  className="text-base footerItems tracking-widest hover:underline"
+                >
+                  <strong>english</strong>
+                </a>
+                <a
+                  href=""
+                  style={roboto}
+                  className=" text-base footerItems tracking-widest hover:underline"
+                >
+                  spanish
+                </a>
+              </div>
+            </div>
 
-                  <div className=" flex justify-between">
-                    <a
-                      href=""
-                      style={roboto}
-                      className="text-base footerItems tracking-widest hover:underline"
-                    >
-                      <strong>english</strong>
-                    </a>
-                    <a
-                      href=""
-                      style={roboto}
-                      className=" text-base footerItems tracking-widest hover:underline"
-                    >
-                      spanish
-                    </a>
-                  </div>
-                </div>
+            <div className=" w-full  text-center flex flex-col gap-y-5 pt-10">
+              <div
+                style={roboto}
+                className="text-base footerItems tracking-widest hover:underline"
+              >
+                <a href="https://casapirque.com.ar" target="_blank">
+                  <h1 className="text-center">Our distribution office</h1>
+                  <p className="text-center">Casa Pirque</p>
+                </a>
+              </div>
+            </div>
 
-                <div className=" w-full  text-center flex flex-col gap-y-5 pt-10">
-                  <div
-                    style={roboto}
-                    className="text-base footerItems tracking-widest hover:underline"
-                  >
-                    <a href="https://casapirque.com.ar" target="_blank">
-                      <h1 className="text-center">Our distribution office</h1>
-                      <p className="text-center">Casa Pirque</p>
-                    </a>
-                  </div>
-                </div>
-
-                <div className="py-20">
-                  <div className="container mx-auto flex justify-center">
-                    <div className="">
-                      <img src={iconIg} alt="" className="w-5" />
-                    </div>
-                  </div>
+            <div className="py-20">
+              <div className="container mx-auto flex justify-center">
+                <div className="">
+                  <img src={iconIg} alt="" className="w-5" />
                 </div>
               </div>
             </div>

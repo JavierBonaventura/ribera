@@ -64,23 +64,23 @@ function Araucana() {
   };
 
   const location = useLocation();
-  
+
   useEffect(() => {
-    if (location.hash === '#posicion0') {
-      const element = document.getElementById('posicion0');
+    if (location.hash === "#posicion0") {
+      const element = document.getElementById("posicion0");
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, [location]);
 
   const location1 = useLocation();
-  
+
   useEffect(() => {
-    if (location1.hash === '#posicion1') {
-      const element = document.getElementById('posicion1');
+    if (location1.hash === "#posicion1") {
+      const element = document.getElementById("posicion1");
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, [location1]);
@@ -88,10 +88,10 @@ function Araucana() {
   const location2 = useLocation();
 
   useEffect(() => {
-    if (location2.hash === '#posicion2') {
-      const element = document.getElementById('posicion2');
+    if (location2.hash === "#posicion2") {
+      const element = document.getElementById("posicion2");
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, [location2]);
@@ -99,10 +99,10 @@ function Araucana() {
   const location3 = useLocation();
 
   useEffect(() => {
-    if (location3.hash === '#posicion2') {
-      const element = document.getElementById('posicion3');
+    if (location3.hash === "#posicion2") {
+      const element = document.getElementById("posicion3");
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, [location3]);
@@ -132,12 +132,6 @@ function Araucana() {
     fontStyle: "normal",
   };
 
-  const playfairFontBold = {
-    fontFamily: "Playfair Bold , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
     fontWeight: "normal",
@@ -156,26 +150,26 @@ function Araucana() {
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
           <div>
-          <div id="posicion0"></div>
-            <header className="py-10 fixed top-0 left-0 right-0 z-50 ">
+            <div id="posicion0"></div>
+            <header className="py-10 fixed top-0 left-0 right-0 z-50  ">
               <div class="container mx-auto">
-                <div class="flex justify-between items-center px-5">
-                  <div class="w-20 md:w-36">
+                <div class="flex justify-between items-center px-5 ">
+                  <div class="w-24 md:w-36 ">
                     <Link to="/">
                       <img src={logo} alt="" className="w-full" />
-                    </Link>
+                    </Link>{" "}
                   </div>
 
-                  <div class="w-7">
+                  <div class="  mt-4">
                     <Link to="/MenuHamburguesa">
-                      <img src={hambur} alt="" className="w-full" />
+                      <img src={hambur} alt="" className="w-7" />
                     </Link>{" "}
                   </div>
                 </div>
               </div>
             </header>
 
-            <div className="container mx-auto flex flex-col justify-center items-center  bg-[#231F20] py-28 gap-y-10 ">
+            <div className="container mx-auto flex flex-col justify-center items-center  bg-[#231F20] pt-28 pb-16 gap-y-10 ">
               <div class="flex flex-col justify-center items-center  bg-[#231F20] ">
                 <h1
                   class="text-xs tracking-widest text-[#F2ECE1]"
@@ -191,9 +185,11 @@ function Araucana() {
                 </h2>
               </div>
               <div className=" flex flex-col gap-y-5">
-                <img src={cava} alt="" className="w-full" />
+                <div className="px-4">
+                  <img src={cava} alt="" className="w-full" />
+                </div>
                 <p
-                  className="text-[#F2ECE1] text-xs tracking-wider px-5  text-center"
+                  className="text-[#F2ECE1] text-xs tracking-wider w-2/3 mx-auto  text-center "
                   style={playfairFontRegular}
                 >
                   We craft wines with the adventurous spirit inherent to
@@ -203,22 +199,15 @@ function Araucana() {
               </div>
             </div>
 
-            <div
-              className="bg-[#231F20] flex flex-col gap-y-20"
-            >
-              <div className="container mx-auto flex flex-col justify-center items-center gap-y-5">
-              <div id="posicion1"></div>
-                <div className="w-1/3 ">
-                  <img src={araucanaWine} alt="" className="w-full" />
-                </div>
-
+            <div className="bg-[#231F20] container mx-auto flex flex-col gap-y-44">
+              <div className="flex flex-col justify-center items-center gap-y-5">
+                <div id="posicion1"></div>
                 <div className="flex flex-col gap-y-5">
                   <div className="flex flex-col gap-y-2">
                     <h1
                       className="uppercase text-[#C3B17D] text-center tracking-widest"
                       style={robotoFontRegular}
                     >
-                      {" "}
                       <span className="text-base">
                         Araucana <br /> Río de los ciervos
                       </span>
@@ -227,11 +216,13 @@ function Araucana() {
                       className=" text-[#F2ECE1] text-center tracking-widest"
                       style={robotoFontRegular}
                     >
-                      {" "}
                       <span className="text-xs">
                         <i>Patagonia, Argentina</i>
                       </span>
                     </h4>
+                  </div>
+                  <div className="w-1/3 mx-auto ">
+                    <img src={araucanaWine} alt="" className="w-full" />
                   </div>
                   <div className="flex flex-col gap-y-5">
                     <div className="w-2/3 mx-auto">
@@ -258,39 +249,33 @@ function Araucana() {
                         </span>
                       </a>
                     </div>
-                      <animated.div style={dropdownAnimation1}>
-                        <div className="mt-2 w-48 mx-auto">
-                          <ul className="text-xs text-[#C3B17D] text-center">
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 1
-                            </li>
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 2
-                            </li>
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 3
-                            </li>
-                          </ul>
-                        </div>
-                      </animated.div>
+                    <animated.div style={dropdownAnimation1}>
+                      <div className="mt-2 w-48 mx-auto">
+                        <ul className="text-xs text-[#C3B17D] text-center">
+                          <li className="py-2 px-4 hover:bg-gray-100">
+                            Opción 1
+                          </li>
+                          <li className="py-2 px-4 hover:bg-gray-100">
+                            Opción 2
+                          </li>
+                          <li className="py-2 px-4 hover:bg-gray-100">
+                            Opción 3
+                          </li>
+                        </ul>
+                      </div>
+                    </animated.div>
                   </div>
                 </div>
               </div>
 
-              <div className="container mx-auto flex flex-col justify-center items-center gap-y-5">
-              <div id="posicion2"></div>
-
-                <div className="w-1/3">
-                  <img src={araucanaMalbec} alt="" />
-                </div>
+              <div className="flex flex-col justify-center items-center gap-y-5">
+                <div id="posicion2"></div>
                 <div className="flex flex-col gap-y-2">
                   <h1
                     className="uppercase text-[#C3B17D] text-center tracking-widest"
                     style={robotoFontRegular}
                   >
-                    {" "}
                     <span className="text-base">
-                      {" "}
                       Araucana <br /> Malbec
                     </span>
                   </h1>
@@ -303,6 +288,9 @@ function Araucana() {
                       <i>Patagonia, Argentina</i>
                     </span>
                   </h4>
+                </div>
+                <div className="w-1/3 mx-auto">
+                  <img src={araucanaMalbec} alt="" className="w-full" />
                 </div>
                 <div className="bg-[#C3B17D] px-5 py-1 rounded-md hidden">
                   <a href="" style={robotoFontRegular}>
@@ -337,37 +325,32 @@ function Araucana() {
                       </span>
                     </a>
                   </div>
-                    <animated.div style={dropdownAnimation2}>
-                      <div className="mt-2 w-48 mx-auto">
-                        <ul className="text-xs text-[#C3B17D] text-center">
-                          <li className="py-2 px-4 hover:bg-gray-100">
-                            Opción 1
-                          </li>
-                          <li className="py-2 px-4 hover:bg-gray-100">
-                            Opción 2
-                          </li>
-                          <li className="py-2 px-4 hover:bg-gray-100">
-                            Opción 3
-                          </li>
-                        </ul>
-                      </div>
-                    </animated.div>
+                  <animated.div style={dropdownAnimation2}>
+                    <div className="mt-2 w-48 mx-auto">
+                      <ul className="text-xs text-[#C3B17D] text-center">
+                        <li className="py-2 px-4 hover:bg-gray-100">
+                          Opción 1
+                        </li>
+                        <li className="py-2 px-4 hover:bg-gray-100">
+                          Opción 2
+                        </li>
+                        <li className="py-2 px-4 hover:bg-gray-100">
+                          Opción 3
+                        </li>
+                      </ul>
+                    </div>
+                  </animated.div>
                 </div>
               </div>
 
-              <div className="container mx-auto flex flex-col justify-center items-center gap-y-5 ">
-              <div id="posicion3"></div>
-
-                <div className="w-1/3">
-                  <img src={araucanaAzul} alt="" />
-                </div>
+              <div className="flex flex-col justify-center items-center gap-y-5 ">
+                <div id="posicion3"></div>
                 <div className="flex flex-col gap-y-2">
                   <h1
                     className="uppercase text-[#C3B17D] text-center tracking-widest"
                     style={robotoFontRegular}
                   >
                     <span className="text-base">
-                      {" "}
                       Araucana <br /> Azul
                     </span>
                   </h1>
@@ -380,6 +363,9 @@ function Araucana() {
                       <i>Patagonia, Argentina</i>
                     </span>
                   </h4>
+                </div>
+                <div className="w-1/3 mx-auto">
+                  <img src={araucanaAzul} alt="" className="w-full" />
                 </div>
                 <div className="flex flex-col gap-y-5">
                   <div className="w-2/3 mx-auto">
@@ -406,21 +392,21 @@ function Araucana() {
                       </span>
                     </a>
                   </div>
-                    <animated.div style={dropdownAnimation3}>
-                      <div className="mt-2 w-48 mx-auto">
-                        <ul className="text-xs text-[#C3B17D] text-center">
-                          <li className="py-2 px-4 hover:bg-gray-100">
-                            Opción 1
-                          </li>
-                          <li className="py-2 px-4 hover:bg-gray-100">
-                            Opción 2
-                          </li>
-                          <li className="py-2 px-4 hover:bg-gray-100">
-                            Opción 3
-                          </li>
-                        </ul>
-                      </div>
-                    </animated.div>
+                  <animated.div style={dropdownAnimation3}>
+                    <div className="mt-2 w-48 mx-auto">
+                      <ul className="text-xs text-[#C3B17D] text-center">
+                        <li className="py-2 px-4 hover:bg-gray-100">
+                          Opción 1
+                        </li>
+                        <li className="py-2 px-4 hover:bg-gray-100">
+                          Opción 2
+                        </li>
+                        <li className="py-2 px-4 hover:bg-gray-100">
+                          Opción 3
+                        </li>
+                      </ul>
+                    </div>
+                  </animated.div>
                 </div>
               </div>
             </div>
@@ -456,10 +442,10 @@ function Araucana() {
                   </div>
                 </div>
               </div>
-              <Link to="/riociervos#posicion0">
-                <div className="bg-[#C3B17D] rounded-md flex justify-center py-2">
+              <Link to="/winesworld#posicion0">
+                <div className="flex justify-center">
                   <a href="" style={robotoFontRegular}>
-                    <span className="uppercase text-xs text-[#F2ECE1] tracking-widest">
+                    <span className="uppercase text-xs text-[#F2ECE1] tracking-widest bg-[#C3B17D] rounded-md p-2">
                       View wines in the world
                     </span>
                   </a>

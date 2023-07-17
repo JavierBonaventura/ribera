@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
-import logo from "../images/Escudo Bodega Ribera del Cuarzo-FINALcurvas-02.png";
+import logo from "../images/logo-menu.png";
 import { useSpring, animated } from "@react-spring/web";
 import hambur from "../images/menu-hambur.png";
 import { useLocation } from "react-router-dom";
@@ -12,35 +12,6 @@ const Home = () => {
 
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-
-  const playfairFontBlack = {
-    fontFamily: "Playfair Black, sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-  const playfairFontItalic = {
-    fontFamily: "Playfair Italic , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-
-  const playfairFontBold = {
-    fontFamily: "Playfair Bold , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-
-  const playfairFontExtraBold = {
-    fontFamily: "Playfair ExtraBold , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-
-  const robotoFontThin = {
-    fontFamily: "Roboto Thin , sans-serif",
     fontWeight: "normal",
     fontStyle: "normal",
   };
@@ -58,14 +29,14 @@ const Home = () => {
   const [mostrarMenu5, setMostrarMenu5] = useState(false);
 
   const dropdownAnimation1 = useSpring({
-    height: mostrarMenu1 ? "120px" : "0px",
+    height: mostrarMenu1 ? "80px" : "0px",
     opacity: mostrarMenu1 ? 1 : 0,
     overflow: "hidden",
     config: { duration: 300 },
   });
 
   const dropdownAnimation2 = useSpring({
-    height: mostrarMenu2 ? "200px" : "0px",
+    height: mostrarMenu2 ? "170px" : "0px",
     opacity: mostrarMenu2 ? 1 : 0,
     overflow: "hidden",
     config: { duration: 300 },
@@ -167,19 +138,21 @@ const Home = () => {
     >
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
-          <div className="containerHome pt-8 background">
-            <div className="w-full grid justify-items-end pr-6">
-              <div className="w-8 ">
+          <div className="containerHome  background pt-8">
+            <div className="w-full grid justify-items-end pr-6 ">
+              <div className="w-8">
                 <Link to="/MenuHamburguesa">
                   <img src={hambur} alt="" className="w-full" />
                 </Link>
               </div>
             </div>
-            <Link to="/">
-              <img src={logo} alt="" className="logo" />
-            </Link>{" "}
-            <div className="body">
-              <div className="containerHome pt-12 ">
+            <div className="w-40  py-4">
+              <Link to="/">
+                <img src={logo} alt="" className="" />
+              </Link>{" "}
+            </div>
+            <div className="body  py-20">
+              <div className="containerHome">
                 <p
                   style={playfairFontRegular}
                   className="menu sombra-menu tracking-wider"
@@ -203,7 +176,7 @@ const Home = () => {
                     <li>
                       {" "}
                       <Link
-                        to="/bluevalley"
+                        to="/valleazul"
                         className="subMenu tracking-widest"
                         style={robotoFontRegular}
                       >
@@ -243,7 +216,7 @@ const Home = () => {
                     </li>
                     <li>
                       <Link
-                        to="/winespreservation"
+                        to="/workwinery"
                         className="subMenu tracking-widest"
                         style={robotoFontRegular}
                       >
@@ -283,8 +256,7 @@ const Home = () => {
                     <li>
                       {" "}
                       <p
-                        
-                        className="subMenu tracking-widest"
+                        className="!mb-0 subMenu tracking-widest"
                         style={robotoFontRegular}
                         onClick={opcion4}
                       >
@@ -295,7 +267,7 @@ const Home = () => {
                       <ul className="text-center  -space-y-2">
                         <li>
                           {" "}
-                          <Link to="/riociervos">
+                          <Link to="/winesworld">
                             <p
                               className="subMenu tracking-widest  "
                               style={playfairFontRegular}
@@ -306,7 +278,7 @@ const Home = () => {
                         </li>
                         <li>
                           {" "}
-                          <Link to="/riociervos#posicion1">
+                          <Link to="/winesworld#posicion1">
                             <p
                               className="subMenu tracking-widest"
                               style={playfairFontRegular}
@@ -317,7 +289,7 @@ const Home = () => {
                         </li>
                         <li>
                           {" "}
-                          <Link to="/riociervos#posicion2">
+                          <Link to="/winesworld#posicion2">
                             <p
                               className="subMenu tracking-widest"
                               style={playfairFontRegular}
@@ -328,7 +300,7 @@ const Home = () => {
                         </li>
                         <li>
                           {" "}
-                          <Link to="/riociervos#posicion3">
+                          <Link to="/winesworld#posicion3">
                             <p
                               className="subMenu tracking-widest"
                               style={playfairFontRegular}
@@ -342,8 +314,7 @@ const Home = () => {
                     <li>
                       {" "}
                       <p
-                        
-                        className="subMenu tracking-widest"
+                        className="!mb-0 subMenu tracking-widest"
                         style={robotoFontRegular}
                         onClick={opcion5}
                       >
@@ -354,10 +325,10 @@ const Home = () => {
                       <ul className="text-center  -space-y-3 ">
                         <li>
                           {" "}
-                          <Link to="/araucana">
+                          <Link to="/winesargentina">
                             <p
                               className="subMenu tracking-widest"
-                              style={playfairFontRegular}
+                              style={robotoFontRegular}
                             >
                               View all
                             </p>
@@ -365,10 +336,10 @@ const Home = () => {
                         </li>
                         <li>
                           {" "}
-                          <Link to="/araucana#posicion1">
+                          <Link to="/winesargentina#posicion1">
                             <p
                               className="subMenu tracking-widest"
-                              style={playfairFontRegular}
+                              style={robotoFontRegular}
                             >
                               Araucana Río de los Ciervos
                             </p>
@@ -376,10 +347,10 @@ const Home = () => {
                         </li>
                         <li>
                           {" "}
-                          <Link to="/araucana#posicion2">
+                          <Link to="/winesargentina#posicion2">
                             <p
                               className="subMenu tracking-widest"
-                              style={playfairFontRegular}
+                              style={robotoFontRegular}
                             >
                               Araucana Malbec
                             </p>
@@ -387,10 +358,10 @@ const Home = () => {
                         </li>
                         <li>
                           {" "}
-                          <Link to="/araucana#posicion3">
+                          <Link to="/winesargentina#posicion3">
                             <p
                               className="subMenu tracking-widest"
-                              style={playfairFontRegular}
+                              style={robotoFontRegular}
                             >
                               Araucana Azul
                             </p>
@@ -400,23 +371,23 @@ const Home = () => {
                     </animated.div>
                   </ul>
                 </animated.div>
-                <div className="flex flex-col text-center mt-6">
-                  <Link
-                    to="/contacto"
-                    className="footerItems tracking-widest"
-                    style={robotoFontRegular}
-                  >
-                    Contact
-                  </Link>
-                  <br></br>
-                  <p
-                    style={robotoFontRegular}
-                    className="footerItems tracking-widest"
-                  >
-                    News
-                  </p>
-                </div>
               </div>
+            </div>
+            <div className="flex flex-col text-center pt-5 pb-10 ">
+              <Link
+                to="/contacto"
+                className="footerItems tracking-widest"
+                style={robotoFontRegular}
+              >
+                Contact
+              </Link>
+              <br></br>
+              <p
+                style={robotoFontRegular}
+                className="footerItems tracking-widest"
+              >
+                News
+              </p>
             </div>
           </div>
         </animated.div>

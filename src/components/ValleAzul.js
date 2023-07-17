@@ -10,7 +10,7 @@ import "../App.css";
 import { useLocation } from "react-router-dom";
 import { Transition, animated } from "@react-spring/web";
 
-const BlueValley = () => {
+const ValleAzul = () => {
   const location = useLocation();
 
   const playfairFontBlack = {
@@ -43,18 +43,18 @@ const BlueValley = () => {
         <animated.div style={{ ...style, width: "100%" }}>
           <div>
             <body class="bg-[#F2ECE1]">
-              <header className="py-10 fixed top-0 left-0 right-0 z-50 ">
+              <header className="py-10 fixed top-0 left-0 right-0 z-50">
                 <div class="container mx-auto">
-                  <div class="flex justify-between items-center px-5">
-                    <div class="w-20 md:w-36">
+                  <div class="flex justify-between items-center px-5 ">
+                    <div class="w-24 md:w-36 ">
                       <Link to="/">
                         <img src={logo} alt="" className="w-full" />
                       </Link>{" "}
                     </div>
 
-                    <div class="w-7">
+                    <div class="  mt-4">
                       <Link to="/MenuHamburguesa">
-                        <img src={hambur} alt="" className="w-full" />
+                        <img src={hambur} alt="" className="w-7" />
                       </Link>{" "}
                     </div>
                   </div>
@@ -79,11 +79,11 @@ const BlueValley = () => {
                   </div>
                 </div>
 
-                <div class="relative flex justify-center items-center pt-5">
+                <div class="relative flex justify-center items-center pt-5 px-4">
                   <img src={paisajeValle} alt="" class="w-full" />
                 </div>
 
-                <div class="py-28">
+                <div class="py-28 hidden">
                   <div class="flex justify-center">
                     <div class="border border-[#C3B17D] rounded-full p-6 relative flex justify-center items-center">
                       <img src={arrowDown} alt="" class="w-1.5 absolute" />
@@ -93,7 +93,7 @@ const BlueValley = () => {
               </div>
 
               <div class="container mx-auto bg-[#F2ECE1] px-10">
-                <div class="py-10 flex flex-col gap-y-5">
+                <div class="pt-5 pb-10 flex flex-col gap-y-5">
                   <p
                     class="text-black text-xs tracking-wider"
                     style={playfairFontRegular}
@@ -161,4 +161,4 @@ const BlueValley = () => {
   );
 };
 
-export default BlueValley;
+export default ValleAzul;
