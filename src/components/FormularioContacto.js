@@ -82,7 +82,7 @@ const FormularioContacto = () => {
                 <div className="grid grid-cols-1 text-white">
                   <div>
                     <h1
-                      class="uppercase text-[#C4AC77] text-xl tracking-wider text-center"
+                      class="uppercase text-[#F4EDE2] text-xl tracking-wider text-left"
                       style={playfairFontBold}
                     >
                       Contact
@@ -97,7 +97,7 @@ const FormularioContacto = () => {
                       <div className="mb-4 flex">
                         <div className="mr-2 ">
                           <label
-                            className="block text-[#F4EDE2] text-sm font-bold "
+                            className="block text-[#F4EDE2] text-sm"
                             htmlFor="nombre"
                           >
                             Name
@@ -113,7 +113,7 @@ const FormularioContacto = () => {
                         </div>
                         <div>
                           <label
-                            className="block text-[#F4EDE2] text-sm font-bold "
+                            className="block text-[#F4EDE2] text-sm  "
                             htmlFor="apellido"
                           >
                             Last name
@@ -130,7 +130,7 @@ const FormularioContacto = () => {
                       </div>
                       <div className="mb-4">
                         <label
-                          className="block text-[#F4EDE2] text-sm font-bold "
+                          className="block text-[#F4EDE2] text-sm  "
                           htmlFor="email"
                         >
                           E-mail
@@ -146,7 +146,7 @@ const FormularioContacto = () => {
                       </div>
                       <div className="mb-4">
                         <label
-                          className="block text-[#F4EDE2] text-sm font-bold "
+                          className="block text-[#F4EDE2] text-sm  "
                           htmlFor="pais"
                         >
                           Country
@@ -162,7 +162,7 @@ const FormularioContacto = () => {
                       </div>
                       <div className="mb-4">
                         <label
-                          className="block text-[#F4EDE2] text-sm font-bold mb-2"
+                          className="block text-[#F4EDE2] text-sm  mb-2"
                           htmlFor="consulta"
                         >
                           Message
@@ -177,7 +177,7 @@ const FormularioContacto = () => {
                       </div>
                       <div className="flex items-center justify-start">
                         <button
-                          className="bg-[#C3B17D] text-[#F2ECE1] text-sm hover:bg-[#C4AD77] rounded-md  py-2 px-8  focus:outline-none focus:shadow-outline"
+                          className="bg-[#C3B17D] text-[#F2ECE1] text-sm  hover:bg-[#C4AD77] rounded-md  py-2 px-8  focus:outline-none focus:shadow-outline"
                           type="submit"
                         >
                           Send
@@ -191,33 +191,39 @@ const FormularioContacto = () => {
                     style={playfairFontRegular}
                   >
                     <div className="flex flex-col gap-y-2">
-                      <h2 className="text-sm">Our offices</h2>
-                      <a href="" className="hover:underline">
-                        <h3 className="text-base">
+                      <h2 className="text-lg text-[#c4b27d]">Our offices</h2>
+                      <a
+                        href="https://www.google.com/maps/place/Ortiz+de+Ocampo+3302,+C1425+CABA/@-34.5750298,-58.4035604,17z/data=!3m1!4b1!4m6!3m5!1s0x95bcb5d7344eecc7:0x17bb52293d552009!8m2!3d-34.5750342!4d-58.4009855!16s%2Fg%2F11qpp9y2jx?hl=es&entry=ttu"
+                        target="_blank"
+                        className="hover:underline"
+                      >
+                        <h3 className="text-sm">
                           Ortiz de Ocampo 3302 <br />
                           Buenos Aires, Argentina
                         </h3>
                       </a>
                     </div>
                     <div className="flex flex-col gap-y-2">
-                      <h2 className="text-sm">Our winery</h2>
+                      <h2 className="text-lg text-[#c4b27d]">Our winery</h2>
                       <a
                         href="https://www.google.com.ar/maps/place/39%C2%B011'17.0%22S+66%C2%B052'26.0%22W/@-39.1880556,-66.8760829,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x7cfe3f53aaf18eb2!8m2!3d-39.1880556!4d-66.8738889"
                         className="hover:underline"
                         target="_blank"
                       >
-                        <h3 className="text-base">
+                        <h3 className="text-sm">
                           Route Prov.Nro 7 KM 12, Lot-8 <br />
                           Valle Azul, El Cuy, Río Negro. CP: 8336
                         </h3>
                       </a>
                     </div>
-                    <div className="text-base">
-                      <h2 className="uppercase">¡follow us on instagram!</h2>
+                    <div className="">
+                      <h2 className=" text-lg text-[#c4b27d] uppercase">
+                        ¡Follow us!
+                      </h2>
                       <a
                         href="https://www.instagram.com/riberadelcuarzo/"
                         target="_blank"
-                        className="flex items-center mx-auto justify-center gap-x-1"
+                        className="flex items-center mx-auto justify-center gap-x-1 text-sm"
                       >
                         <img src={iconIg} alt="" className="w-4" />
                         <h2>@riberadelcuarzo</h2>

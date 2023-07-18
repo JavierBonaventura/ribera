@@ -93,7 +93,7 @@ const ConstructionPage = () => {
                     Araucana Vineyard is far more than just unique—it is an
                     extraordinary gem that surpasses mere words. Nestled in
                     Ribera del Cuarzo, no other vineyard in Patagonia can boast
-                    such proximity to the barda or such seclusion. <br />
+                    such proximity to the <i>barda</i> or such seclusion. <br />
                     <br />
                     The soils of Araucana are predominantly aeolic,
                     painstakingly shaped over countless ages by the erosive
@@ -114,11 +114,11 @@ const ConstructionPage = () => {
                     class="text-black text-xs md:text-xl tracking-wider"
                     style={playfairFontRegular}
                   >
-                    Adding to its distinctiveness is the barda river terrace.
-                    The surface texture owes its character to a fusion of quartz
-                    and calcium carbonate, locally known as Indian cement. As it
-                    erodes and integrates into the soil, it imparts its
-                    exceptional qualities to our grapes.
+                    Adding to its distinctiveness is the <i>barda</i> river
+                    terrace. The surface texture owes its character to a fusion
+                    of quartz and calcium carbonate, locally known as Indian
+                    cement. As it erodes and integrates into the soil, it
+                    imparts its exceptional qualities to our grapes.
                   </p>
                 </div>
                 <div class="py-20">

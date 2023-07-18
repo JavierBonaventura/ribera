@@ -41,7 +41,7 @@ body {
   z-index: 1;
 }
 .background {
-  background-image: url("./images/background-4.png");
+  background-image: url("./images/background.png");
   background-size: cover;
   background-position: center;
   height: 100vh;

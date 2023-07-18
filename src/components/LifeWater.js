@@ -89,7 +89,7 @@ const LifeWater = () => {
                       style={playfairFontRegular}
                     >
                       The Countess planted the vineyard in the highest part of
-                      the barda, an unexplored area where no one had ever
+                      the <i>barda</i>, an unexplored area where no one had ever
                       considered such an endeavor: it required bringing water
                       for irrigation using pumps, at enormous cost. Until then,
                       vineyard productions in the Rio Negro Valley had been
@@ -110,8 +110,8 @@ const LifeWater = () => {
                       <br />
                       Some time later, a local man spoke to us about water. This
                       kind man, Facundo Catriel, told us that abundant water
-                      could be found at the foot of the barda. Although it
-                      seemed unlikely, we decided to drill some wells. Water
+                      could be found at the foot of the <i>barda</i>. Although
+                      it seemed unlikely, we decided to drill some wells. Water
                       gushed and flowed to the surface with force. These wells
                       now produce around 200,000 liters per hour, significantly
                       reducing our costs. We listen to nature and special
@@ -125,15 +125,17 @@ const LifeWater = () => {
                     </p>
                   </div>
                 </div>
-                <div class="py-20">
-                  <div class="flex justify-center">
-                    <a
-                      class="border border-[#C3B17D] rounded-full p-7"
-                      href="https://www.instagram.com/riberadelcuarzo/"
-                      target="_blank"
-                    >
-                      <img src={iconIg} alt="" class="w-5" />
-                    </a>
+                <div class="container mx-auto bg-[#F2ECE1]">
+                  <div class="py-20">
+                    <div class="flex justify-center">
+                      <a
+                        class="border border-[#C3B17D] rounded-full p-7"
+                        href="https://www.instagram.com/riberadelcuarzo/"
+                        target="_blank"
+                      >
+                        <img src={iconIg} alt="" class="w-5" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

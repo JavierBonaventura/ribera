@@ -100,13 +100,13 @@ const ValleAzul = () => {
                   >
                     The story of this winery started in 2001, when italian
                     countess Noemi Marone Cinzano discovered this far away land,
-                    planted a 5 hectares vineyard at the foot of the barda (a
-                    specific patagonian landscape, a steep cliff or hill made of
-                    a dark grain of volcanic rock, with plenty of quartz,
-                    carbonate calcium and calcareous) and began producing wine
-                    in a Burgundy style - the winery built right by the vineyard
-                    with small concrete open top pools for craft production,
-                    employing pigeage.
+                    planted a 5 hectares vineyard at the foot of the{" "}
+                    <i>barda</i> (a specific patagonian landscape, a steep cliff
+                    or hill made of a dark grain of volcanic rock, with plenty
+                    of quartz, carbonate calcium and calcareous) and began
+                    producing wine in a Burgundy style - the winery built right
+                    by the vineyard with small concrete open top pools for craft
+                    production, employing pigeage.
                   </p>
                 </div>
               </div>
@@ -118,7 +118,7 @@ const ValleAzul = () => {
               </div>
 
               <div class="container mx-auto bg-[#F2ECE1] px-10">
-                <div class="py-10 flex flex-col gap-y-5">
+                <div class="pt-10 flex flex-col gap-y-5">
                   <div class="">
                     <p
                       class="text-black text-xs tracking-wider"
@@ -140,8 +140,8 @@ const ValleAzul = () => {
                 </div>
               </div>
 
-              <div class="container mx-auto bg-[#212121]">
-                <div class="py-10">
+              <div class="container mx-auto bg-[#F2ECE1]">
+                <div class="py-20">
                   <div class="flex justify-center">
                     <a
                       class="border border-[#C3B17D] rounded-full p-7"

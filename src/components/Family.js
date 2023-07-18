@@ -8,7 +8,7 @@ import arrowDown from "../images/arrow-down.png";
 import carruajeHistory from "../images/carruaje-history.jpg";
 import paisaje from "../images/paisaje-family-2.png";
 import iconIg from "../images/icon-ig.png";
-import felipe from "../images/wineYardSlide4.jpg";
+import felipe from "../images/felipe.jpg";
 import "../App.css";
 import { Transition, animated } from "@react-spring/web";
 
@@ -223,7 +223,7 @@ const Family = () => {
               </div>
               <div className="container mx-auto bg-[#212121]">
                 <p
-                  class="text-white text-xs  pt-2 px-10 tracking-wider"
+                  class="text-white text-xs  pt-2 px-10 tracking-wider text-center"
                   style={playfairFontRegular}
                 >
                   <i>Felipe José Menendez Arguelles</i>
@@ -231,7 +231,7 @@ const Family = () => {
               </div>
 
               <div class="container mx-auto bg-[#212121]">
-                <div class="py-10">
+                <div class=" py-20">
                   <div class="flex justify-center">
                     <a
                       class="border border-[#C3B17D] rounded-full p-7"

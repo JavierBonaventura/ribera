@@ -444,17 +444,24 @@ const Home = () => {
                 className="text-base footerItems tracking-widest hover:underline"
               >
                 <a href="https://casapirque.com.ar" target="_blank">
-                  <h1 className="text-center">Our distribution office</h1>
-                  <p className="text-center">Casa Pirque</p>
+                  <h1 className="text-center pb-2 text-[#c4b27d]">
+                    <i>Our distribution office</i>
+                  </h1>
+                  <p className="text-center uppercase font-semibold">
+                    Casa Pirque
+                  </p>
                 </a>
               </div>
             </div>
 
             <div className="py-20">
               <div className="container mx-auto flex justify-center">
-                <div className="">
+                <a
+                  href="https://www.instagram.com/riberadelcuarzo/"
+                  target="_blank"
+                >
                   <img src={iconIg} alt="" className="w-5" />
-                </div>
+                </a>
               </div>
             </div>
           </div>

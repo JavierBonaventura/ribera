@@ -248,7 +248,7 @@ const Screen1Text = () => {
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
           <div>
-            <div className="bg-[#F2ECE1] py-5">
+            <div className="bg-[#F2ECE1] pt-5">
               <div className="container mx-auto flex flex-col justify-center items-center">
                 <div className="flex flex-col gap-y-5">
                   <div className="flex flex-col gap-y-5">
@@ -277,15 +277,17 @@ const Screen1Text = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-[#F2ECE1] py-16">
-              <div className="container mx-auto flex justify-center">
-                <a
-                  className="border border-[#C3B17D] rounded-full p-6"
-                  href="https://www.instagram.com/riberadelcuarzo/"
-                  target="_blank"
-                >
-                  <img src={iconIg} alt="" className="w-4" />
-                </a>
+            <div class="container mx-auto bg-[#F2ECE1]">
+              <div class="py-20">
+                <div class="flex justify-center">
+                  <a
+                    class="border border-[#C3B17D] rounded-full p-7"
+                    href="https://www.instagram.com/riberadelcuarzo/"
+                    target="_blank"
+                  >
+                    <img src={iconIg} alt="" class="w-5" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -393,7 +395,7 @@ const Screen2Text = () => {
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
           <div>
-            <div className="bg-[#F2ECE1] py-5">
+            <div className="bg-[#F2ECE1] pt-5">
               <div className="container mx-auto flex flex-col justify-center items-center">
                 <div className="flex flex-col gap-y-5">
                   <div className="flex flex-col gap-y-5">
@@ -422,15 +424,17 @@ const Screen2Text = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-[#F2ECE1] py-16">
-              <div className="container mx-auto flex justify-center">
-                <a
-                  className="border border-[#C3B17D] rounded-full p-6"
-                  href="https://www.instagram.com/riberadelcuarzo/"
-                  target="_blank"
-                >
-                  <img src={iconIg} alt="" className="w-4" />
-                </a>
+            <div class="container mx-auto bg-[#F2ECE1]">
+              <div class="py-20">
+                <div class="flex justify-center">
+                  <a
+                    class="border border-[#C3B17D] rounded-full p-7"
+                    href="https://www.instagram.com/riberadelcuarzo/"
+                    target="_blank"
+                  >
+                    <img src={iconIg} alt="" class="w-5" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -537,7 +541,7 @@ const Screen3Text = () => {
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
           <div>
-            <div className="bg-[#F2ECE1] py-5">
+            <div className="bg-[#F2ECE1] pt-5">
               <div className="container mx-auto flex flex-col justify-center items-center">
                 <div className="flex flex-col gap-y-5">
                   <div className="flex flex-col gap-y-5">
@@ -566,15 +570,17 @@ const Screen3Text = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-[#F2ECE1] py-16">
-              <div className="container mx-auto flex justify-center">
-                <a
-                  className="border border-[#C3B17D] rounded-full p-6"
-                  href="https://www.instagram.com/riberadelcuarzo/"
-                  target="_blank"
-                >
-                  <img src={iconIg} alt="" className="w-4" />
-                </a>
+            <div class="container mx-auto bg-[#F2ECE1]">
+              <div class="py-20">
+                <div class="flex justify-center">
+                  <a
+                    class="border border-[#C3B17D] rounded-full p-7"
+                    href="https://www.instagram.com/riberadelcuarzo/"
+                    target="_blank"
+                  >
+                    <img src={iconIg} alt="" class="w-5" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -677,7 +683,7 @@ const Screen4Text = () => {
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
           <div>
-            <div className="bg-[#F2ECE1] py-5">
+            <div className="bg-[#F2ECE1] pt-5">
               <div className="container mx-auto flex flex-col justify-center items-center">
                 <div className="flex flex-col gap-y-5">
                   <div className="flex flex-col gap-y-5">
@@ -704,15 +710,17 @@ const Screen4Text = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-[#F2ECE1] py-16">
-              <div className="container mx-auto flex justify-center">
-                <a
-                  className="border border-[#C3B17D] rounded-full p-6"
-                  href="https://www.instagram.com/riberadelcuarzo/"
-                  target="_blank"
-                >
-                  <img src={iconIg} alt="" className="w-4" />
-                </a>
+            <div class="container mx-auto bg-[#F2ECE1]">
+              <div class="py-20">
+                <div class="flex justify-center">
+                  <a
+                    class="border border-[#C3B17D] rounded-full p-7"
+                    href="https://www.instagram.com/riberadelcuarzo/"
+                    target="_blank"
+                  >
+                    <img src={iconIg} alt="" class="w-5" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -815,7 +823,7 @@ const Screen5Text = () => {
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
           <div>
-            <div className="bg-[#F2ECE1] py-5">
+            <div className="bg-[#F2ECE1] pt-5">
               <div className="container mx-auto flex flex-col justify-center items-center">
                 <div className="flex flex-col gap-y-5">
                   <div className="flex flex-col gap-y-5">
@@ -844,15 +852,17 @@ const Screen5Text = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-[#F2ECE1] py-16">
-              <div className="container mx-auto flex justify-center">
-                <a
-                  className="border border-[#C3B17D] rounded-full p-6"
-                  href="https://www.instagram.com/riberadelcuarzo/"
-                  target="_blank"
-                >
-                  <img src={iconIg} alt="" className="w-4" />
-                </a>
+            <div class="container mx-auto bg-[#F2ECE1]">
+              <div class="py-20">
+                <div class="flex justify-center">
+                  <a
+                    class="border border-[#C3B17D] rounded-full p-7"
+                    href="https://www.instagram.com/riberadelcuarzo/"
+                    target="_blank"
+                  >
+                    <img src={iconIg} alt="" class="w-5" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>

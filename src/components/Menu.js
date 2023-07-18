@@ -146,7 +146,7 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            <div className="w-40  py-4">
+            <div className="w-32  py-4">
               <Link to="/">
                 <img src={logo} alt="" className="" />
               </Link>{" "}

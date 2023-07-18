@@ -301,7 +301,7 @@ function RioCiervos() {
                       className="text-[#F2ECE1] text-xs tracking-wider"
                       style={playfairFontRegular}
                     >
-                      ESPECIAL MALBEC comes from our 5ha Araucana Vineyard that
+                      Especial malbec comes from our 5ha Araucana Vineyard that
                       has unique and distinctive characteristics. Calcareous
                       soils, cold nights and constant winds are permanent
                       challenges for our vines, which react by generating
@@ -372,7 +372,7 @@ function RioCiervos() {
                       className="text-[#F2ECE1] text-xs tracking-wider"
                       style={playfairFontRegular}
                     >
-                      RESERVA ESTIBADA is a barrel blend. We select the barrels
+                      Reserva estibada is a barrel blend. We select the barrels
                       that show the most elegance from the Southern sector of
                       the vineyard, where the higher limestone content results
                       in greater power and expression.
@@ -418,29 +418,33 @@ function RioCiervos() {
               <div>
                 <p
                   className="text-[#F2ECE1] text-sm text-center leading-5"
-                  style={bondiniFontRegular}
+                  style={playfairFontItalic}
                 >
-                  {" "}
                   <i>
                     Creating unique wines in Patagonia <br />
-                    Pioneer in winegrowing at the foot of the barda. <br />
+                    Pioneer in winegrowing at the foot of the <i>barda</i>.{" "}
+                    <br />
                     Small family run winery
                   </i>
                 </p>
               </div>
             </div>
 
-            <div className="bg-[#231F20] py-10 px-5 flex flex-col gap-y-8">
+            <div className="bg-[#231F20] pt-10 px-5 flex flex-col gap-y-8">
               <div className="container mx-auto">
                 <div className="grid grid-cols-3 gap-x-4">
                   <div className="flex gap-y-4 flex-col">
-                    <img src={araucanaWine} alt="" />
+                    <img src={araucanaWine} alt="" className="w-2/3 mx-auto" />
                   </div>
                   <div className="flex gap-y-4 flex-col">
-                    <img src={araucanaMalbec} alt="" />
+                    <img
+                      src={araucanaMalbec}
+                      alt=""
+                      className="w-2/3 mx-auto"
+                    />
                   </div>
                   <div className="flex gap-y-4 flex-col">
-                    <img src={araucanaAzul} alt="" />
+                    <img src={araucanaAzul} alt="" className="w-2/3 mx-auto" />
                   </div>
                 </div>
               </div>
@@ -454,16 +458,17 @@ function RioCiervos() {
                 </div>
               </Link>
             </div>
-
-            <div className="bg-[#231F20] py-20">
-              <div className="container mx-auto flex justify-center">
-                <a
-                  className="border border-[#C3B17D] rounded-full p-7"
-                  href="https://www.instagram.com/riberadelcuarzo/"
-                  target="_blank"
-                >
-                  <img src={iconIg} alt="" className="w-5" />
-                </a>
+            <div class="container mx-auto bg-[#231F20]">
+              <div class="py-20">
+                <div class="flex justify-center">
+                  <a
+                    class="border border-[#C3B17D] rounded-full p-7"
+                    href="https://www.instagram.com/riberadelcuarzo/"
+                    target="_blank"
+                  >
+                    <img src={iconIg} alt="" class="w-5" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
