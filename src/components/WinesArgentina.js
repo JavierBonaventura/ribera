@@ -227,7 +227,7 @@ function Araucana() {
                   <div className="flex flex-col gap-y-5">
                     <div className="w-2/3 mx-auto">
                       <p
-                        className="text-[#F2ECE1] text-xs tracking-wider"
+                        className="text-[#F2ECE1] text-xs tracking-wider text-center"
                         style={playfairFontRegular}
                       >
                         Río de los Ciervos´ grapes come from 8 vineyards located
@@ -302,7 +302,7 @@ function Araucana() {
                 <div className="flex flex-col gap-y-5">
                   <div className="w-2/3 mx-auto">
                     <p
-                      className="text-[#F2ECE1] text-xs tracking-wider"
+                      className="text-[#F2ECE1] text-xs tracking-wider text-center"
                       style={playfairFontRegular}
                     >
                       Araucana malbec comes from our 5 ha Araucana Vineyard that
@@ -370,7 +370,7 @@ function Araucana() {
                 <div className="flex flex-col gap-y-5">
                   <div className="w-2/3 mx-auto">
                     <p
-                      className="text-[#F2ECE1] text-xs tracking-wider"
+                      className="text-[#F2ECE1] text-xs tracking-wider text-center"
                       style={playfairFontRegular}
                     >
                       Azul is a barrel blend. We select the barrels that show

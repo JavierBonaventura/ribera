@@ -228,7 +228,7 @@ function RioCiervos() {
                   <div className="flex flex-col gap-y-5">
                     <div className="w-2/3 mx-auto">
                       <p
-                        className="text-[#F2ECE1] text-xs tracking-wider"
+                        className="text-[#F2ECE1] text-xs tracking-wider text-center"
                         style={playfairFontRegular}
                       >
                         Clasico Malbec´s grapes come from 8 vineyards located
@@ -298,7 +298,7 @@ function RioCiervos() {
                 <div className="flex flex-col gap-y-5">
                   <div className="w-2/3 mx-auto">
                     <p
-                      className="text-[#F2ECE1] text-xs tracking-wider"
+                      className="text-[#F2ECE1] text-xs tracking-wider text-center"
                       style={playfairFontRegular}
                     >
                       Especial malbec comes from our 5ha Araucana Vineyard that
@@ -369,7 +369,7 @@ function RioCiervos() {
                 <div className="flex flex-col gap-y-5">
                   <div className="w-2/3 mx-auto">
                     <p
-                      className="text-[#F2ECE1] text-xs tracking-wider"
+                      className="text-[#F2ECE1] text-xs tracking-wider  text-center"
                       style={playfairFontRegular}
                     >
                       Reserva estibada is a barrel blend. We select the barrels
