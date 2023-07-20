@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
-import fondoHamburguesaDesktop from '../images/fondoHamburguesaDesktop.png';
-import logoDesktop from '../images/logoDesktop.png';
-import hambur from "../images/menu-hambur.png";
-
-
+import React, { useState } from "react";
+import fondoHamburguesaDesktop from "../images/fondoHamburguesaDesktop.png";
+import logoDesktop from "../images/logo.svg";
+import { Link } from "react-router-dom";
 
 const MenuHamburguesaDesktop = () => {
   const [isMenu1Hovered, setMenu1Hovered] = useState(false);
@@ -13,8 +11,14 @@ const MenuHamburguesaDesktop = () => {
     fontStyle: "normal",
   };
 
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+
   const handleMenu1Hover = () => {
-    console.log("test")
+    console.log("test");
     setMenu1Hovered(true);
   };
 
@@ -24,51 +28,185 @@ const MenuHamburguesaDesktop = () => {
 
   return (
     <div
-      className={`h-screen bg-[imagen] bg-no-repeat bg-cover bg-center relative`}
+      className={`h-screen bg-[imagen] bg-no-repeat bg-cover bg-center relative p-5`}
       style={{ backgroundImage: `url(${fondoHamburguesaDesktop})` }}
     >
-      <div className="absolute inset-0 mx-6 my-6 border border-white opacity-60"></div>
-      <div className="absolute inset-0 mx-8 my-8 border border-white opacity-40"></div>
-      <div className="fixed top-10 left-1/2 -ml-20 w-36">
-  <img
-    src={logoDesktop}
-    alt="Logo"
-    className=""
-  />
-</div>
-<img
-        src={hambur}
-        alt="Hamburger"
-        className="fixed top-16 right-16 w-6 h-6 cursor-pointer"
-      />
+      <div className="w-full h-full">
+        <div className="border border-[#F2ECE1] w-full h-full p-2 relative flex flex-col justify-center items-center">
+          <div className="w-full h-full border border-[#F2ECE1] ">
+            <div className="flex justify-end items-center ">
+              <Link to="/">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="100"
+                  height="100"
+                  viewBox="0 0 100 100"
+                >
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="16"
+                    stroke="#C3B17D"
+                    fill="transparent"
+                    strokeWidth="2"
+                  />
+                  <line
+                    x1="44"
+                    y1="44"
+                    x2="56"
+                    y2="56"
+                    stroke="#C3B17D"
+                    strokeWidth="2"
+                  />
+                  <line
+                    x1="44"
+                    y1="56"
+                    x2="56"
+                    y2="44"
+                    stroke="#C3B17D"
+                    strokeWidth="2"
+                  />
+                </svg>
+              </Link>
+            </div>
+            <div className="flex justify-center py-0 2xl:py-10">
+              <img src={logoDesktop} alt="Logo" className="w-32 2xl:w-44" />
+            </div>
+            <div className="flex justify-center w-2/3 2xl:w-1/2 mx-auto  py-10 2xl:py-0">
+              <div
+                id="menu1"
+                onMouseEnter={handleMenu1Hover}
+                onMouseLeave={handleMenu1Leave}
+                className="flex flex-col items-center  w-full"
+              >
+                <p
+                  style={playfairFontRegular}
+                  className="text-center menu-desk sombra-menu tracking-wider pb-5"
+                >
+                  History
+                </p>
+                <p
+                  style={robotoFontRegular}
+                  className="text-center subMenu tracking-widest "
+                >
+                  FAMILY
+                </p>
+                <p
+                  style={robotoFontRegular}
+                  className="text-center subMenu tracking-widest"
+                >
+                  VALLE AZUL PATAGONIA
+                </p>
+              </div>
 
-      <div className="flex justify-center items-center h-full">
-        <div className="w-1/5"></div>
-        <div id='menu1'  onMouseEnter={handleMenu1Hover}  onMouseLeave={handleMenu1Leave}  className=" w-1/5 flex flex-col items-center"> {/* Alinear los elementos en una columna */}
-          <p style={playfairFontRegular} className="text-center menu sombra-menu tracking-wider">History</p>
-          <p style={playfairFontRegular} className="text-center subMenu tracking-widest ">FAMILY</p> 
-          <p style={playfairFontRegular} className="text-center subMenu tracking-widest">VALLE AZUL PATAGONIA</p> 
-          <p style={playfairFontRegular} className="text-center subMenu tracking-widest opacity-0">SubMenu</p> 
-          <p style={playfairFontRegular} className="text-center subMenu tracking-widest opacity-0">SubMenu</p> 
+              <div id="menu2" className="flex flex-col items-center w-full ">
+                <p
+                  style={playfairFontRegular}
+                  className="text-center menu-desk sombra-menu tracking-wider  pb-5"
+                >
+                  Patagonian Spirit
+                </p>
+                <p
+                  style={robotoFontRegular}
+                  className="text-center subMenu tracking-widest"
+                >
+                  ARAUCANA VINEYARD
+                </p>
+                <p
+                  style={robotoFontRegular}
+                  className="text-center subMenu tracking-widest"
+                >
+                  WORK IN THE VINEYARD
+                </p>
+                <p
+                  style={robotoFontRegular}
+                  className="text-center subMenu tracking-widest"
+                >
+                  WINES PRESERVATION
+                </p>
+                <p
+                  style={robotoFontRegular}
+                  className="text-center subMenu tracking-widest"
+                >
+                  LIFE IN THE VINEYARD
+                </p>
+              </div>
 
+              <div id="menu3" className="flex flex-col items-center w-full ">
+                <p
+                  style={playfairFontRegular}
+                  className="text-center menu-desk sombra-menu tracking-wider  pb-5"
+                >
+                  Wines
+                </p>
+                <p
+                  style={robotoFontRegular}
+                  className="text-center subMenu tracking-widest"
+                >
+                  IN ARGENTINA
+                </p>
+                <p
+                  style={robotoFontRegular}
+                  className="text-center subMenu tracking-widest"
+                >
+                  IN THE WORLD
+                </p>
+              </div>
+            </div>
+            <div
+              className="flex flex-col gap-y-5 justify-center w-2/3 2xl:w-1/3 mx-auto 2xl:py-20 "
+              style={robotoFontRegular}
+            >
+              <div className="w-full flex justify-center items-center gap-x-16">
+                <div className="text-[#F2ECE1] hover:text-[#cab57e]">
+                  <a href="">Contact</a>
+                </div>
+                <div className="text-[#F2ECE1] hover:text-[#cab57e]">
+                  <a href="">News</a>
+                </div>
+              </div>
+              <div className="w-full flex justify-center items-center">
+                <a href="https://casapirque.com.ar" target="_blank">
+                  <h1 className="text-center pb-2 text-[#c4b27d]">
+                    <i>Our distribution office</i>
+                  </h1>
+                  <p className="text-center uppercase font-semibold text-[#F2ECE1] hover:text-[#cab57e]">
+                    Casa Pirque
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="absolute bottom-5 2xl:bottom-20 w-full">
+            <div className="flex justify-around items-center w-full text-[#F2ECE1] ">
+              <div className="w-1/3  flex justify-center items-center"></div>
+              <div
+                className="flex justify-center items-center w-1/3 gap-x-20 "
+                style={robotoFontRegular}
+              >
+                <div>
+                  <a href="" className="hover:text-[#cab57e]">
+                    Fact Sheet
+                  </a>
+                </div>
+                <div>
+                  <a href="" className="hover:text-[#cab57e]">
+                    Virtual Tour
+                  </a>
+                </div>
+              </div>
+              <div
+                className="flex justify-center items-center w-1/3 gap-x-5"
+                style={robotoFontRegular}
+              >
+                <span className="font-bold">english</span>
+                <a href="" className="hover:text-[#cab57e]">
+                  spanish
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-       
-        <div id='menu2'  className={`w-1/3 flex flex-col items-center ${isMenu1Hovered ? 'opacity-50' : 'opacity-100'}`}> {/* Alinear los elementos en una columna */}
-          <p style={playfairFontRegular} className="text-center menu sombra-menu tracking-wider">Patagonian Spirit</p>
-          <p style={playfairFontRegular} className="text-center subMenu tracking-widest">ARAUCANA VINEYARD</p> 
-          <p style={playfairFontRegular} className="text-center subMenu tracking-widest">WORK IN THE VINEYARD</p> 
-          <p style={playfairFontRegular} className="text-center subMenu tracking-widest">WINES PRESERVATION</p> 
-          <p style={playfairFontRegular} className="text-center subMenu tracking-widest">LIFE IN THE VINEYARD</p> 
-        </div>
-        <div id='menu3' className="w-1/5 flex flex-col items-center"> {/* Alinear los elementos en una columna */}
-          <p style={playfairFontRegular} className="text-center menu sombra-menu tracking-wider">Wines</p>
-          <p style={playfairFontRegular} className="text-center subMenu tracking-widest">IN ARGENTINA</p> 
-          <p style={playfairFontRegular} className="text-center subMenu tracking-widest">IN THE WORLD</p>
-          <p style={playfairFontRegular} className="text-center subMenu tracking-widest opacity-0">SubMenu</p> 
-          <p style={playfairFontRegular} className="text-center subMenu tracking-widest opacity-0">SubMenu</p> 
- 
-        </div>
-        <div className="w-1/5"></div>
       </div>
     </div>
   );

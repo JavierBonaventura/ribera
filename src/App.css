@@ -68,6 +68,15 @@ body {
   cursor: pointer;
 }
 
+.menu-desk {
+  color: #f3eee3;
+  font-family: Conv_CormorantGaramond-Regular;
+  font-size: 35px;
+  margin-bottom: 15px;
+  line-height: 35px;
+  cursor: default;
+}
+
 .menu:hover {
   color: #c4b27d;
 }
@@ -79,6 +88,7 @@ body {
   color: #f3eee3;
   margin-bottom: 16px;
   font-family: Conv_maisonneue-book;
+  cursor: pointer;
 }
 
 .subMenu2 {

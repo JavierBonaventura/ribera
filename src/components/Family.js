@@ -67,36 +67,35 @@ const Family = () => {
         <animated.div style={{ ...style, position: "absolute", width: "100%" }}>
           <div>
             <body class="bg-[#F2ECE1]">
-              <header className="py-10 fixed top-0 left-0 right-0 z-50  ">
+              <header className="py-10 fixed top-0 left-0 right-0 z-50">
                 <div class="container mx-auto">
                   <div class="flex justify-between items-center px-5 ">
                     <div class="w-24 md:w-36 ">
                       <Link to="/">
                         <img src={logo} alt="" className="w-full" />
-                      </Link>{" "}
+                      </Link>
                     </div>
-
-                    <div class="  mt-4">
+                    <div class="mt-4">
                       <Link to="/MenuHamburguesa">
-                        <img src={hambur} alt="" className="w-7" />
-                      </Link>{" "}
+                        <img src={hambur} alt="" className="w-7 md:w-10" />
+                      </Link>
                     </div>
                   </div>
                 </div>
               </header>
 
               <div class="container mx-auto">
-                <div class="pt-16 ">
-                  <div class="flex flex-col justify-center items-center mt-10">
+                <div class="pt-16 md:pt-40">
+                  <div class="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-2">
                     <h1
                       style={playfairFontItalic}
-                      class="text-[#5f5f5e] text-xs tracking-widest"
+                      class="text-[#5f5f5e] text-xs md:text-xl tracking-widest"
                     >
                       <i style={playfairFontItalic}>History</i>
                     </h1>
                     <h2
                       style={playfairFontBlack}
-                      className="text-base text-[#C4AC77] text-center tracking-wider uppercase"
+                      className="text-base md:text-3xl text-[#C4AC77] text-center tracking-wider uppercase"
                     >
                       Family
                     </h2>
@@ -104,50 +103,65 @@ const Family = () => {
                 </div>
 
                 <div class="relative flex justify-center items-center">
-                  <img src={ilustrationHistory} alt="" class="w-full" />
+                  <img
+                    src={ilustrationHistory}
+                    alt=""
+                    class="w-full md:w-3/4"
+                  />
                   <h1
                     style={playfairFontExtraBold}
-                    class="text-[#C4AC77] text-5xl absolute font-bold"
+                    class="text-[#C4AC77] text-5xl absolute font-bold md:text-9xl"
                   >
                     1883 - 2023
                   </h1>
                 </div>
 
-                <div className="py-28">
+                <div className="py-28 md:py-20">
                   <div className="flex justify-center">
                     <div
-                      className="border border-[#C3B17D] rounded-full p-6 relative flex justify-center items-center"
+                      className="border border-[#C3B17D] rounded-full p-6 md:p-8 relative flex justify-center items-center"
                       onClick={handleClick}
                     >
-                      <img src={arrowDown} alt="" className="w-1.5 absolute" />
+                      <img
+                        src={arrowDown}
+                        alt=""
+                        className="w-1.5 md:w-2 absolute"
+                      />
                     </div>
                   </div>
                 </div>
-              </div>
-              <div ref={posicionRef} id="posicion"></div>
-              <div class="w-full px-4">
-                <img src={paisaje} alt="" />
+                <div ref={posicionRef} id="posicion"></div>
+                <div class="w-full px-4 md:px-0">
+                  <img
+                    src={paisaje}
+                    alt=""
+                    className="w-full md:w-3/4 mx-auto"
+                  />
+                </div>
               </div>
 
-              <div class="container mx-auto px-10">
-                <div class="flex flex-col gap-y-2 pt-5 pb-32">
-                  <div>
+              <div class="container mx-auto">
+                <div class="flex flex-col gap-y-2 md:gap-y-10 pt-5 pb-32 md:w-3/4 mx-auto px-10 md:px-0 ">
+                  <div className="flex flex-col gap-y-4">
                     <h1
                       style={playfairFontBlack}
-                      class="text-[#C4AC77] font-bold text-lg tracking-wide"
+                      class="text-[#C4AC77] font-bold text-lg md:text-5xl tracking-wide"
                     >
                       1883
                     </h1>
                     <h2
+                      class="uppercase text-[#C4AC77] text-sm  tracking-wide md:hidden"
                       style={robotoFontRegular}
-                      class="uppercase text-[#C4AC77] text-sm tracking-wide"
                     >
+                      Roots in patagonia
+                    </h2>
+                    <h2 class="uppercase text-[#C4AC77] text-4xl  tracking-wide hidden md:block ">
                       Roots in patagonia
                     </h2>
                   </div>
                   <div>
                     <p
-                      class="text-black text-xs tracking-wider"
+                      class="text-black text-xs md:text-2xl tracking-wider"
                       style={playfairFontRegular}
                     >
                       We have our{" "}
@@ -178,60 +192,71 @@ const Family = () => {
                 </div>
               </div>
 
-              <div class="container mx-auto bg-[#212121]">
+              <div class=" bg-[#212121]">
                 <div class="pt-32 pb-5">
-                  <div class="-mt-52 px-4">
-                    <img
-                      src={carruajeHistory}
-                      alt=""
-                      class="w-full object-cover"
-                    />
+                  <div className="container mx-auto">
+                    <div class="-mt-52 px-4 md:px-0">
+                      <img
+                        src={carruajeHistory}
+                        alt=""
+                        class="w-full object-cover md:w-3/4 mx-auto"
+                      />
+                    </div>
+                    <p
+                      class="text-white text-xs pt-10 px-10 md:px-0 tracking-wider md:w-3/4 mx-auto md:text-2xl"
+                      style={playfairFontRegular}
+                    >
+                      Patagonia was the place where we spent the summers of my
+                      childhood and where I had traveled many times in my youth.
+                      It was always a place where I truly found myself at home.
+                      Amidst the wind flat topped hills, the enormous open
+                      spaces and the gigantic mountains where distances are
+                      dwarfed only by an infinite sky the idea of setting up a
+                      winery little by little started to materialize.
+                      <br />
+                      <br />
+                      My career in wines started when, as a very young person, I
+                      joined the winery of Dr. Nicolas Catena and at his side
+                      discovered the fascinating world of wine which has become
+                      my life. I Iearned from him every detail of how to
+                      cultivate the best grapes, how to produce the best wines
+                      and above all how to never ever relinquish in the pursuit
+                      of excellence. <br />
+                      <br />
+                      Finally, the day arrived—the moment when I could merge my
+                      love for my Patagonian homeland with the unwavering
+                      passion for wine instilled within me since childhood. This
+                      unique opportunity, which we tirelessly pursue each day,
+                      is embodied in the name of Bodega Ribera del Cuarzo. Here,
+                      we strive to craft the finest wines, honoring our heritage
+                      and expressing the essence of our beloved land.”
+                    </p>
                   </div>
+                </div>
+              </div>
+
+              <div className="bg-[#212121]  ">
+                <div className="container mx-auto  px-4 md:px-0">
+                  <img
+                    src={felipe}
+                    alt=""
+                    className="w-full md:w-3/4 mx-auto"
+                  />
+                </div>
+              </div>
+              <div className=" bg-[#212121]">
+                <div className="container mx-auto">
                   <p
-                    class="text-white text-xs pt-10 px-10 tracking-wider"
+                    class="text-white text-xs md:text-base pt-2 px-10 tracking-wider text-center"
                     style={playfairFontRegular}
                   >
-                    Patagonia was the place where we spent the summers of my
-                    childhood and where I had traveled many times in my youth.
-                    It was always a place where I truly found myself at home.
-                    Amidst the wind flat topped hills, the enormous open spaces
-                    and the gigantic mountains where distances are dwarfed only
-                    by an infinite sky the idea of setting up a winery little by
-                    little started to materialize.
-                    <br />
-                    <br />
-                    My career in wines started when, as a very young person, I
-                    joined the winery of Dr. Nicolas Catena and at his side
-                    discovered the fascinating world of wine which has become my
-                    life. I Iearned from him every detail of how to cultivate
-                    the best grapes, how to produce the best wines and above all
-                    how to never ever relinquish in the pursuit of excellence.{" "}
-                    <br />
-                    <br />
-                    Finally, the day arrived—the moment when I could merge my
-                    love for my Patagonian homeland with the unwavering passion
-                    for wine instilled within me since childhood. This unique
-                    opportunity, which we tirelessly pursue each day, is
-                    embodied in the name of Bodega Ribera del Cuarzo. Here, we
-                    strive to craft the finest wines, honoring our heritage and
-                    expressing the essence of our beloved land.”
+                    <i>Felipe José Menendez Arguelles</i>
                   </p>
                 </div>
               </div>
-              <div className="px-4 bg-[#212121] container mx-auto ">
-                <img src={felipe} alt="" className="w-full" />
-              </div>
-              <div className="container mx-auto bg-[#212121]">
-                <p
-                  class="text-white text-xs  pt-2 px-10 tracking-wider text-center"
-                  style={playfairFontRegular}
-                >
-                  <i>Felipe José Menendez Arguelles</i>
-                </p>
-              </div>
 
-              <div class="container mx-auto bg-[#212121]">
-                <div class=" py-20">
+              <div class=" bg-[#212121]">
+                <div class="container mx-auto py-20">
                   <div class="flex justify-center">
                     <a
                       class="border border-[#C3B17D] rounded-full p-7"
