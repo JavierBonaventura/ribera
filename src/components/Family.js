@@ -161,8 +161,8 @@ const Family = () => {
                     </h2>
                   </div>
                   <div>
-                    <p
-                      class="text-black text-xs md:text-2xl tracking-wider"
+                    <p 
+                      class="text-justify tracking-wider text-black text-xs md:text-2xl tracking-wider"
                       style={playfairFontRegular}
                     >
                       We have our{" "}
@@ -204,7 +204,7 @@ const Family = () => {
                       />
                     </div>
                     <p
-                      class="text-white text-xs pt-10 px-10 md:px-0 tracking-wider md:w-3/4 mx-auto md:text-2xl"
+                      class="text-justify tracking-wider text-white text-xs pt-10 px-10 md:px-0 tracking-wider md:w-3/4 mx-auto md:text-2xl"
                       style={playfairFontRegular}
                     >
                       Patagonia was the place where we spent the summers of my
