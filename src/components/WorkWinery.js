@@ -25,7 +25,6 @@ function Header() {
     fontWeight: "normal",
     fontStyle: "italic",
   };
-  
 
   return (
     <div>
@@ -97,7 +96,7 @@ const WinesPreservation = () => {
     >
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
-         <div className="bg-[#F2ECE1] ">
+          <div className="bg-[#F2ECE1] ">
             <Header />
             <div>
               {/* Contenido del slider */}
@@ -231,7 +230,7 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
                         FERMENTATION
                       </p>
                       <p
-                        class="text-black text-xs tracking-wider"
+                        class="text-black text-xs tracking-wider text-justify"
                         style={playfairFontRegular}
                       >
                         Winemaking takes place in small open-top vats, and every
@@ -275,7 +274,6 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
     </Transition>
   );
 };
-
 
 const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
   const location = useLocation();
@@ -369,7 +367,7 @@ const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
                       </p>
 
                       <p
-                        class="text-black text-xs tracking-wider"
+                        class="text-black text-xs tracking-wider text-justify"
                         style={playfairFontRegular}
                       >
                         Once the wines complete their fermentation, they embark
@@ -402,7 +400,6 @@ const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
     </Transition>
   );
 };
-
 
 const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
   const location = useLocation();
@@ -496,7 +493,7 @@ const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
                       </p>
 
                       <p
-                        class="text-black text-xs tracking-wider"
+                        class="text-black text-xs tracking-wider text-justify"
                         style={playfairFontRegular}
                       >
                         After a patient aging period of twelve to fourteen
@@ -624,7 +621,7 @@ const Screen4 = ({ currentScreen, handleNext, handlePrev }) => {
                       </p>
 
                       <p
-                        class="text-black text-xs tracking-wider"
+                        class="text-black text-xs tracking-wider text-justify"
                         style={playfairFontRegular}
                       >
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -660,7 +657,6 @@ const Screen4 = ({ currentScreen, handleNext, handlePrev }) => {
     </Transition>
   );
 };
-
 
 const Screen5 = ({ currentScreen, handleNext, handlePrev }) => {
   const location = useLocation();
@@ -754,7 +750,7 @@ const Screen5 = ({ currentScreen, handleNext, handlePrev }) => {
                       </p>
 
                       <p
-                        class="text-black text-xs tracking-wider"
+                        class="text-black text-xs tracking-wider text-justify"
                         style={playfairFontRegular}
                       >
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -790,6 +786,5 @@ const Screen5 = ({ currentScreen, handleNext, handlePrev }) => {
     </Transition>
   );
 };
-
 
 export default WinesPreservation;

@@ -25,7 +25,7 @@ function Header() {
     fontWeight: "normal",
     fontStyle: "italic",
   };
-  
+
   return (
     <div>
       <header className="py-10 fixed top-0 left-0 right-0 z-50  ">
@@ -140,8 +140,6 @@ const WorkVineyard = () => {
                 />
               )}
             </div>
-
-          
           </div>
         </animated.div>
       )}
@@ -151,7 +149,6 @@ const WorkVineyard = () => {
 
 const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
   const location = useLocation();
-  
 
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
@@ -237,7 +234,7 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
                         PRUNING
                       </p>
                       <p
-                        class="text-black text-xs tracking-wider"
+                        class="text-black text-xs tracking-wider text-justify"
                         style={playfairFontRegular}
                       >
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -273,7 +270,6 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
     </Transition>
   );
 };
-
 
 const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
   const location = useLocation();
@@ -366,7 +362,7 @@ const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
                         TRELLISING{" "}
                       </p>
                       <p
-                        class="text-black text-xs tracking-wider"
+                        class="text-black text-xs tracking-wider text-justify"
                         style={playfairFontRegular}
                       >
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -418,7 +414,7 @@ const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
     fontStyle: "normal",
     fontSize: "16px",
   };
-  
+
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
     fontWeight: "normal",
@@ -495,7 +491,7 @@ const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
                         DISBUDDING{" "}
                       </p>
                       <p
-                        class="text-black text-xs tracking-wider"
+                        class="text-black text-xs tracking-wider text-justify"
                         style={playfairFontRegular}
                       >
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -619,7 +615,7 @@ const Screen4 = ({ currentScreen, handleNext, handlePrev }) => {
                         HARVERST{" "}
                       </p>
                       <p
-                        class="text-black text-xs tracking-wider"
+                        class="text-black text-xs tracking-wider text-justify"
                         style={playfairFontRegular}
                       >
                         The harvest at our vineyard is a meticulous manual
@@ -742,7 +738,7 @@ const Screen5 = ({ currentScreen, handleNext, handlePrev }) => {
                         ANCIENT TECHNIQUES{" "}
                       </p>
                       <p
-                        class="text-black text-xs tracking-wider"
+                        class="text-black text-xs tracking-wider text-justify"
                         style={playfairFontRegular}
                       >
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.

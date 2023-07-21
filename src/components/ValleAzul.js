@@ -23,7 +23,6 @@ const ValleAzul = () => {
     fontWeight: "normal",
     fontStyle: "italic",
   };
-  
 
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
@@ -96,7 +95,7 @@ const ValleAzul = () => {
               <div class="container mx-auto bg-[#F2ECE1] px-10">
                 <div class="pt-5 pb-10 flex flex-col gap-y-5">
                   <p
-                    class="text-black text-xs tracking-wider"
+                    class="text-black text-xs tracking-wider text-justify"
                     style={playfairFontRegular}
                   >
                     The story of this winery started in 2001, when italian
@@ -122,7 +121,7 @@ const ValleAzul = () => {
                 <div class="pt-10 flex flex-col gap-y-5">
                   <div class="">
                     <p
-                      class="text-black text-xs tracking-wider"
+                      class="text-black text-xs tracking-wider text-justify"
                       style={playfairFontRegular}
                     >
                       When we first tasted the 2008 vintage, we knew Noemi had

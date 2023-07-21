@@ -22,7 +22,6 @@ const ConstructionPage = () => {
     fontWeight: "normal",
     fontStyle: "italic",
   };
-  
 
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
@@ -88,7 +87,7 @@ const ConstructionPage = () => {
 
                 <div class="px-10 md:text-center">
                   <p
-                    class="text-black text-xs md:text-xl tracking-wider"
+                    class="text-black text-xs md:text-xl tracking-wider text-justify"
                     style={playfairFontRegular}
                   >
                     Araucana Vineyard is far more than just unique—it is an
@@ -112,7 +111,7 @@ const ConstructionPage = () => {
               <div class="container mx-auto pt-5">
                 <div class=" px-10 md:text-center">
                   <p
-                    class="text-black text-xs md:text-xl tracking-wider"
+                    class="text-black text-xs md:text-xl tracking-wider text-justify"
                     style={playfairFontRegular}
                   >
                     Adding to its distinctiveness is the <i>barda</i> river

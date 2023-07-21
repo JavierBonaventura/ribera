@@ -25,7 +25,7 @@ function Header() {
     fontWeight: "normal",
     fontStyle: "italic",
   };
-  
+
   return (
     <div>
       <header className="py-10 fixed top-0 left-0 right-0 z-50  ">
@@ -227,7 +227,7 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
                       </p>
                       <p
                         style={playfairFontRegular}
-                        className="decoration-black	 text-xs tracking-wider"
+                        className="decoration-black	 text-xs tracking-wider text-justify"
                       >
                         Horses are a way of life: living with horses slows
                         things down, allowing us perspective and to connect with
@@ -258,7 +258,6 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
     </Transition>
   );
 };
-
 
 const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
   const location = useLocation();
@@ -352,7 +351,7 @@ const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
                       </p>
                       <p
                         style={playfairFontRegular}
-                        className="decoration-black	 text-xs tracking-wider"
+                        className="decoration-black	 text-xs tracking-wider text-justify"
                       >
                         Countess Noemi Marone Cinzano identified this unique
                         location and laid the foundations for what is now Bodega
@@ -390,7 +389,6 @@ const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
     </Transition>
   );
 };
-
 
 const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
   const location = useLocation();
@@ -484,7 +482,7 @@ const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
                       </p>
                       <p
                         style={playfairFontRegular}
-                        className="decoration-black	 text-xs tracking-wider"
+                        className="decoration-black	 text-xs tracking-wider text-justify"
                       >
                         The Rio Negro is the largest river in Patagonia. The
                         Limay and Neuquén rivers gather water and minerals from
@@ -625,7 +623,7 @@ const Screen4 = ({ currentScreen, handleNext, handlePrev }) => {
                       </p>
                       <p
                         style={playfairFontRegular}
-                        className="decoration-black	 text-xs tracking-wider"
+                        className="decoration-black	 text-xs tracking-wider text-justify"
                       >
                         Maintaining traditional working methods helps us to keep
                         in touch with the land, a connection that defines us as

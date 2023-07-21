@@ -16,7 +16,6 @@ const LifeWater = () => {
     fontWeight: "normal",
     fontStyle: "italic",
   };
-  
 
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
@@ -86,7 +85,7 @@ const LifeWater = () => {
                 <div class="flex flex-col gap-y-2 px-10 md:text-center pt-8">
                   <div>
                     <p
-                      class="text-black text-xs md:text-xl tracking-wider"
+                      class="text-black text-xs md:text-xl tracking-wider text-justify"
                       style={playfairFontRegular}
                     >
                       The Countess planted the vineyard in the highest part of
