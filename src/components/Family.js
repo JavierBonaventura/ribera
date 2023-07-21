@@ -22,10 +22,11 @@ const Family = () => {
   };
 
   const playfairFontItalic = {
-    fontFamily: "Playfair Italic , sans-serif",
+    fontFamily: "Playfair Italic, serif",
     fontWeight: "normal",
-    fontStyle: "normal",
+    fontStyle: "italic",
   };
+  
 
   const playfairFontExtraBold = {
     fontFamily: "Playfair ExtraBold , sans-serif",

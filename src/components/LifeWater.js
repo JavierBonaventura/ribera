@@ -12,10 +12,11 @@ const LifeWater = () => {
   const location = useLocation();
 
   const playfairFontItalic = {
-    fontFamily: "Playfair Italic , sans-serif",
+    fontFamily: "Playfair Italic, serif",
     fontWeight: "normal",
-    fontStyle: "normal",
+    fontStyle: "italic",
   };
+  
 
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",

@@ -23,6 +23,7 @@ const ValleAzul = () => {
     fontWeight: "normal",
     fontStyle: "italic",
   };
+  
 
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",

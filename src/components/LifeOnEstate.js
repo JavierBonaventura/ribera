@@ -21,10 +21,11 @@ function Header() {
     fontStyle: "normal",
   };
   const playfairFontItalic = {
-    fontFamily: "Playfair Italic , sans-serif",
+    fontFamily: "Playfair Italic, serif",
     fontWeight: "normal",
-    fontStyle: "normal",
+    fontStyle: "italic",
   };
+  
   return (
     <div>
       <header className="py-10 fixed top-0 left-0 right-0 z-50  ">

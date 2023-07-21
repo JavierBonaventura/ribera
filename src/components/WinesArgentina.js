@@ -127,10 +127,11 @@ function Araucana() {
   };
 
   const playfairFontItalic = {
-    fontFamily: "Playfair Italic , sans-serif",
+    fontFamily: "Playfair Italic, serif",
     fontWeight: "normal",
-    fontStyle: "normal",
+    fontStyle: "italic",
   };
+  
 
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
