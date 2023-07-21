@@ -99,7 +99,7 @@ const WorkVineyard = () => {
     >
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
-          <div className="bg-[#F2ECE1] ">
+          <div>
             <Header />
 
             <div>
@@ -141,7 +141,11 @@ const WorkVineyard = () => {
               )}
             </div>
 
-          
+            {currentScreen === 0 && <Screen1Text />}
+            {currentScreen === 1 && <Screen2Text />}
+            {currentScreen === 2 && <Screen3Text />}
+            {currentScreen === 3 && <Screen4Text />}
+            {currentScreen === 4 && <Screen5Text />}
           </div>
         </animated.div>
       )}
@@ -152,18 +156,6 @@ const WorkVineyard = () => {
 const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
   const location = useLocation();
 
-  const playfairFontRegular = {
-    fontFamily: "Playfair Regular, sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-
-  const robotoFontRegular = {
-    fontFamily: "Roboto Regular , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-    fontSize: "16px",
-  };
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
     fontWeight: "normal",
@@ -223,6 +215,38 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
               </button>
             </div>
           </div>
+        </animated.div>
+      )}
+    </Transition>
+  );
+};
+const Screen1Text = () => {
+  const location = useLocation();
+
+  const playfairFontRegular = {
+    fontFamily: "Playfair Regular, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+    fontSize: "16px",
+  };
+
+  return (
+    <Transition
+      items={location}
+      keys={(location) => location.pathname}
+      from={{ opacity: 0 }}
+      enter={{ opacity: 1 }}
+      leave={{ opacity: 0 }}
+      config={{ duration: 1000 }}
+    >
+      {(style, item) => (
+        <animated.div style={{ ...style, width: "100%" }}>
           <div>
             <div className="bg-[#F2ECE1] pt-5">
               <div className="container mx-auto flex flex-col justify-center items-center">
@@ -273,22 +297,9 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
   );
 };
 
-
 const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
   const location = useLocation();
 
-  const playfairFontRegular = {
-    fontFamily: "Playfair Regular, sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-
-  const robotoFontRegular = {
-    fontFamily: "Roboto Regular , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-    fontSize: "16px",
-  };
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
     fontWeight: "normal",
@@ -352,6 +363,37 @@ const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
               </button>
             </div>
           </div>
+        </animated.div>
+      )}
+    </Transition>
+  );
+};
+const Screen2Text = () => {
+  const location = useLocation();
+
+  const playfairFontRegular = {
+    fontFamily: "Playfair Regular, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+    fontSize: "16px",
+  };
+  return (
+    <Transition
+      items={location}
+      keys={(location) => location.pathname}
+      from={{ opacity: 0 }}
+      enter={{ opacity: 1 }}
+      leave={{ opacity: 0 }}
+      config={{ duration: 1000 }}
+    >
+      {(style, item) => (
+        <animated.div style={{ ...style, width: "100%" }}>
           <div>
             <div className="bg-[#F2ECE1] pt-5">
               <div className="container mx-auto flex flex-col justify-center items-center">
@@ -401,23 +443,9 @@ const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
     </Transition>
   );
 };
-
 const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
   const location = useLocation();
 
-  const playfairFontRegular = {
-    fontFamily: "Playfair Regular, sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-
-  const robotoFontRegular = {
-    fontFamily: "Roboto Regular , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-    fontSize: "16px",
-  };
-  
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
     fontWeight: "normal",
@@ -481,6 +509,37 @@ const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
               </button>
             </div>
           </div>
+        </animated.div>
+      )}
+    </Transition>
+  );
+};
+const Screen3Text = () => {
+  const location = useLocation();
+
+  const playfairFontRegular = {
+    fontFamily: "Playfair Regular, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+    fontSize: "16px",
+  };
+  return (
+    <Transition
+      items={location}
+      keys={(location) => location.pathname}
+      from={{ opacity: 0 }}
+      enter={{ opacity: 1 }}
+      leave={{ opacity: 0 }}
+      config={{ duration: 1000 }}
+    >
+      {(style, item) => (
+        <animated.div style={{ ...style, width: "100%" }}>
           <div>
             <div className="bg-[#F2ECE1] pt-5">
               <div className="container mx-auto flex flex-col justify-center items-center">
@@ -530,21 +589,8 @@ const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
     </Transition>
   );
 };
-
 const Screen4 = ({ currentScreen, handleNext, handlePrev }) => {
   const location = useLocation();
-  const playfairFontRegular = {
-    fontFamily: "Playfair Regular, sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-
-  const robotoFontRegular = {
-    fontFamily: "Roboto Regular , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-    fontSize: "16px",
-  };
 
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
@@ -605,6 +651,37 @@ const Screen4 = ({ currentScreen, handleNext, handlePrev }) => {
               </button>
             </div>
           </div>
+        </animated.div>
+      )}
+    </Transition>
+  );
+};
+const Screen4Text = () => {
+  const location = useLocation();
+
+  const playfairFontRegular = {
+    fontFamily: "Playfair Regular, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+    fontSize: "16px",
+  };
+  return (
+    <Transition
+      items={location}
+      keys={(location) => location.pathname}
+      from={{ opacity: 0 }}
+      enter={{ opacity: 1 }}
+      leave={{ opacity: 0 }}
+      config={{ duration: 1000 }}
+    >
+      {(style, item) => (
+        <animated.div style={{ ...style, width: "100%" }}>
           <div>
             <div className="bg-[#F2ECE1] pt-5">
               <div className="container mx-auto flex flex-col justify-center items-center">
@@ -652,22 +729,8 @@ const Screen4 = ({ currentScreen, handleNext, handlePrev }) => {
     </Transition>
   );
 };
-
 const Screen5 = ({ currentScreen, handleNext, handlePrev }) => {
   const location = useLocation();
-
-  const playfairFontRegular = {
-    fontFamily: "Playfair Regular, sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-
-  const robotoFontRegular = {
-    fontFamily: "Roboto Regular , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-    fontSize: "16px",
-  };
 
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
@@ -728,6 +791,37 @@ const Screen5 = ({ currentScreen, handleNext, handlePrev }) => {
               </button>
             </div>
           </div>
+        </animated.div>
+      )}
+    </Transition>
+  );
+};
+const Screen5Text = () => {
+  const location = useLocation();
+
+  const playfairFontRegular = {
+    fontFamily: "Playfair Regular, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+    fontSize: "16px",
+  };
+  return (
+    <Transition
+      items={location}
+      keys={(location) => location.pathname}
+      from={{ opacity: 0 }}
+      enter={{ opacity: 1 }}
+      leave={{ opacity: 0 }}
+      config={{ duration: 1000 }}
+    >
+      {(style, item) => (
+        <animated.div style={{ ...style, width: "100%" }}>
           <div>
             <div className="bg-[#F2ECE1] pt-5">
               <div className="container mx-auto flex flex-col justify-center items-center">
