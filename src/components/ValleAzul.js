@@ -19,9 +19,9 @@ const ValleAzul = () => {
     fontStyle: "normal",
   };
   const playfairFontItalic = {
-    fontFamily: "Playfair Italic , sans-serif",
+    fontFamily: "Playfair Italic, serif",
     fontWeight: "normal",
-    fontStyle: "normal",
+    fontStyle: "italic",
   };
 
   const playfairFontRegular = {
