@@ -70,7 +70,7 @@ const AppContent = () => {
         from={{ opacity: 0 }}
         enter={{ opacity: 1 }}
         leave={{ opacity: 0 }}
-        config={{ duration: 100 }}
+        config={{ duration: 300 }}
       >
         {(style, item) => (
           <animated.div

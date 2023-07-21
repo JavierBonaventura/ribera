@@ -151,6 +151,7 @@ const WorkVineyard = () => {
 
 const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
   const location = useLocation();
+  
 
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
