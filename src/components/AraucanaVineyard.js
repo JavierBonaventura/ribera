@@ -42,42 +42,40 @@ const ConstructionPage = () => {
         <animated.div style={{ ...style, width: "100%" }}>
           <div>
             <body class="bg-[#F2ECE1] ">
-              <header className="py-10 fixed top-0 left-0 right-0 z-50">
-                <div class="container mx-auto">
-                  <div class="flex justify-between items-center px-5 ">
-                    <div class="w-24 md:w-36 ">
-                      <Link to="/">
-                        <img src={logo} alt="" className="w-full" />
-                      </Link>{" "}
-                    </div>
-
-                    <div class="  mt-4">
-                      <Link to="/MenuHamburguesa">
-                        <img src={hambur} alt="" className="w-7" />
-                      </Link>{" "}
-                    </div>
+              <header className="container mx-auto py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 ">
+                <div class="flex justify-between items-center  ">
+                  <div class="w-24 md:w-36 ">
+                    <Link to="/">
+                      <img src={logo} alt="" className="w-full xl:w-28" />
+                    </Link>
+                  </div>
+                  <div class="mt-4">
+                    <Link to="/MenuHamburguesa">
+                      <img src={hambur} alt="" className="w-7 " />
+                    </Link>
                   </div>
                 </div>
               </header>
+
               <div class="container mx-auto pb-5">
-                <div class="pt-16">
-                  <div class="flex flex-col justify-center items-center mt-10 ">
+                <div class="pt-16 md:pt-32">
+                  <div class="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0">
                     <h1
-                      class="text-[#5f5f5e] text-xs tracking-widest"
+                      class="text-[#5f5f5e] text-xs md:text-xl tracking-widest"
                       style={playfairFontItalic}
                     >
                       <i style={playfairFontItalic}>Patagonian Spirit</i>
                     </h1>
                     <h2
                       style={playfairFontBlack}
-                      className="text-base text-[#C4AC77] text-center tracking-wider uppercase"
+                      className="text-base md:text-3xl text-[#C4AC77] text-center tracking-wider uppercase"
                     >
                       Araucana Vineyard
                     </h2>
                   </div>
                 </div>
 
-                <div class="md:py-20 -mb-5">
+                <div class="py-5 md:py-16">
                   <img
                     src={ilustracionSpirit}
                     alt=""
@@ -85,42 +83,42 @@ const ConstructionPage = () => {
                   />
                 </div>
 
-                <div class="px-10 md:text-center">
-                  <p
-                    class="text-black text-xs md:text-xl tracking-wider text-justify"
-                    style={playfairFontRegular}
-                  >
-                    Araucana Vineyard is far more than just unique—it is an
-                    extraordinary gem that surpasses mere words. Nestled in
-                    Ribera del Cuarzo, no other vineyard in Patagonia can boast
-                    such proximity to the <i>barda</i> or such seclusion. <br />
-                    <br />
-                    The soils of Araucana are predominantly aeolic,
-                    painstakingly shaped over countless ages by the erosive
-                    forces of wind. Enriched with volcanic ash and high
-                    potassium content, they possess a chemical composition that
-                    is both crucial and remarkably uncommon, not only for
-                    Patagonia but for the World in general.
-                  </p>
-                </div>
+                <p
+                  class="text-black text-xs tracking-wider text-justify px-10 md:px-0  md:w-3/4 mx-auto md:text-lg"
+                  style={playfairFontRegular}
+                >
+                  Araucana Vineyard is far more than just unique—it is an
+                  extraordinary gem that surpasses mere words. Nestled in Ribera
+                  del Cuarzo, no other vineyard in Patagonia can boast such
+                  proximity to the <i>barda</i> or such seclusion. <br />
+                  <br />
+                  The soils of Araucana are predominantly aeolic, painstakingly
+                  shaped over countless ages by the erosive forces of wind.
+                  Enriched with volcanic ash and high potassium content, they
+                  possess a chemical composition that is both crucial and
+                  remarkably uncommon, not only for Patagonia but for the World
+                  in general.
+                </p>
               </div>
-              <div>
-                {" "}
-                <img src={paisajeAraucana} alt="" className="w-full px-4" />
+              <div className="container mx-auto px-4 md:px-0 ">
+                <img
+                  src={paisajeAraucana}
+                  alt=""
+                  className="w-full md:w-3/4 mx-auto"
+                />
               </div>
               <div class="container mx-auto pt-5">
-                <div class=" px-10 md:text-center">
-                  <p
-                    class="text-black text-xs md:text-xl tracking-wider text-justify"
-                    style={playfairFontRegular}
-                  >
-                    Adding to its distinctiveness is the <i>barda</i> river
-                    terrace. The surface texture owes its character to a fusion
-                    of quartz and calcium carbonate, locally known as Indian
-                    cement. As it erodes and integrates into the soil, it
-                    imparts its exceptional qualities to our grapes.
-                  </p>
-                </div>
+                <p
+                  class="text-black text-xs tracking-wider text-justify px-10 md:px-0  md:w-3/4 mx-auto md:text-lg"
+                  style={playfairFontRegular}
+                >
+                  Adding to its distinctiveness is the <i>barda</i> river
+                  terrace. The surface texture owes its character to a fusion of
+                  quartz and calcium carbonate, locally known as Indian cement.
+                  As it erodes and integrates into the soil, it imparts its
+                  exceptional qualities to our grapes.
+                </p>
+
                 <div class="py-20">
                   <div class="flex justify-center">
                     <a

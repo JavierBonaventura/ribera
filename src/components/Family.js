@@ -26,7 +26,6 @@ const Family = () => {
     fontWeight: "normal",
     fontStyle: "italic",
   };
-  
 
   const playfairFontExtraBold = {
     fontFamily: "Playfair ExtraBold , sans-serif",
@@ -68,26 +67,24 @@ const Family = () => {
         <animated.div style={{ ...style, position: "absolute", width: "100%" }}>
           <div>
             <body class="bg-[#F2ECE1]">
-              <header className="py-10 fixed top-0 left-0 right-0 z-50">
-                <div class="container mx-auto">
-                  <div class="flex justify-between items-center px-5 ">
-                    <div class="w-24 md:w-36 ">
-                      <Link to="/">
-                        <img src={logo} alt="" className="w-full" />
-                      </Link>
-                    </div>
-                    <div class="mt-4">
-                      <Link to="/MenuHamburguesa">
-                        <img src={hambur} alt="" className="w-7 md:w-10" />
-                      </Link>
-                    </div>
+              <header className="container mx-auto py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 ">
+                <div class="flex justify-between items-center  ">
+                  <div class="w-24 md:w-36 ">
+                    <Link to="/">
+                      <img src={logo} alt="" className="w-full xl:w-28" />
+                    </Link>
+                  </div>
+                  <div class="mt-4">
+                    <Link to="/MenuHamburguesa">
+                      <img src={hambur} alt="" className="w-7 " />
+                    </Link>
                   </div>
                 </div>
               </header>
 
-              <div class="container mx-auto">
-                <div class="pt-16 md:pt-40">
-                  <div class="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-2">
+              <div class="container mx-auto ">
+                <div class="pt-16 md:pt-32">
+                  <div class="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0">
                     <h1
                       style={playfairFontItalic}
                       class="text-[#5f5f5e] text-xs md:text-xl tracking-widest"
@@ -103,15 +100,15 @@ const Family = () => {
                   </div>
                 </div>
 
-                <div class="relative flex justify-center items-center">
+                <div class="relative flex justify-center items-center  pt-5 md:pt-20">
                   <img
                     src={ilustrationHistory}
                     alt=""
-                    class="w-full md:w-3/4"
+                    class="w-full md:w-2/4"
                   />
                   <h1
                     style={playfairFontExtraBold}
-                    class="text-[#C4AC77] text-5xl absolute font-bold md:text-9xl"
+                    class="text-[#C4AC77] text-5xl absolute font-bold md:text-8xl"
                   >
                     1883 - 2023
                   </h1>
@@ -132,7 +129,7 @@ const Family = () => {
                   </div>
                 </div>
                 <div ref={posicionRef} id="posicion"></div>
-                <div class="w-full px-4 md:px-0">
+                <div class="w-full px-4 md:px-0 ">
                   <img
                     src={paisaje}
                     alt=""
@@ -141,12 +138,12 @@ const Family = () => {
                 </div>
               </div>
 
-              <div class="container mx-auto">
-                <div class="flex flex-col gap-y-2 md:gap-y-10 pt-5 pb-32 md:w-3/4 mx-auto px-10 md:px-0 ">
-                  <div className="flex flex-col gap-y-4">
+              <div class="container mx-auto ">
+                <div class="flex flex-col gap-y-2 md:gap-y-5 pt-5 pb-32 md:w-3/4 mx-auto px-10 md:px-0 ">
+                  <div className="flex flex-col gap-y-4 md:gap-y-2">
                     <h1
                       style={playfairFontBlack}
-                      class="text-[#C4AC77] font-bold text-lg md:text-5xl tracking-wide"
+                      class="text-[#C4AC77] font-bold text-lg md:text-3xl tracking-wide"
                     >
                       1883
                     </h1>
@@ -156,13 +153,13 @@ const Family = () => {
                     >
                       Roots in patagonia
                     </h2>
-                    <h2 class="uppercase text-[#C4AC77] text-4xl  tracking-wide hidden md:block ">
+                    <h2 class="uppercase text-[#C4AC77] text-xl tracking-wide hidden md:block ">
                       Roots in patagonia
                     </h2>
                   </div>
                   <div>
-                    <p 
-                      class="text-justify tracking-wider text-black text-xs md:text-2xl tracking-wider"
+                    <p
+                      class="text-justify tracking-wider text-black text-xs md:text-lg "
                       style={playfairFontRegular}
                     >
                       We have our{" "}
@@ -194,7 +191,7 @@ const Family = () => {
               </div>
 
               <div class=" bg-[#212121]">
-                <div class="pt-32 pb-5">
+                <div class="pt-32 pb-5 md:pb-10">
                   <div className="container mx-auto">
                     <div class="-mt-52 px-4 md:px-0">
                       <img
@@ -204,7 +201,7 @@ const Family = () => {
                       />
                     </div>
                     <p
-                      class="text-justify tracking-wider text-white text-xs pt-10 px-10 md:px-0 tracking-wider md:w-3/4 mx-auto md:text-2xl"
+                      class="text-justify tracking-wider text-white text-xs pt-10 px-10 md:px-0  md:w-3/4 mx-auto md:text-lg"
                       style={playfairFontRegular}
                     >
                       Patagonia was the place where we spent the summers of my
@@ -236,15 +233,16 @@ const Family = () => {
                 </div>
               </div>
 
-              <div className="bg-[#212121]  ">
-                <div className="container mx-auto  px-4 md:px-0">
+              <div className="bg-[#212121]">
+                <div className="container mx-auto px-4 md:px-0">
                   <img
                     src={felipe}
                     alt=""
-                    className="w-full md:w-3/4 mx-auto"
+                    className="w-full md:w-2/4 mx-auto"
                   />
                 </div>
               </div>
+
               <div className=" bg-[#212121]">
                 <div className="container mx-auto">
                   <p

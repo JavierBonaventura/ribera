@@ -163,7 +163,6 @@ const Home = () => {
                 <animated.div style={dropdownAnimation1}>
                   <ul className="text-center -mt-2 space-y-1">
                     <li>
-                      {" "}
                       <Link
                         to="/family"
                         className="subMenu tracking-widest"
@@ -174,7 +173,6 @@ const Home = () => {
                     </li>
 
                     <li>
-                      {" "}
                       <Link
                         to="/valleazul"
                         className="subMenu tracking-widest"
@@ -196,7 +194,6 @@ const Home = () => {
                 <animated.div style={dropdownAnimation2}>
                   <ul className="text-center -mt-2 space-y-1">
                     <li>
-                      {" "}
                       <Link
                         to="/araucanavineyard"
                         className="subMenu tracking-widest"
@@ -254,19 +251,17 @@ const Home = () => {
                 <animated.div style={dropdownAnimation3}>
                   <ul className="text-center  space-y-1">
                     <li>
-                      {" "}
                       <p
                         className="!mb-0 subMenu tracking-widest"
                         style={robotoFontRegular}
                         onClick={opcion4}
                       >
-                        WINES IN THE WORLD
+                        IN THE WORLD
                       </p>
                     </li>
                     <animated.div style={dropdownAnimation4}>
                       <ul className="text-center  -space-y-2">
                         <li>
-                          {" "}
                           <Link to="/winesworld">
                             <p
                               className="subMenu tracking-widest  "
@@ -277,7 +272,6 @@ const Home = () => {
                           </Link>
                         </li>
                         <li>
-                          {" "}
                           <Link to="/winesworld#posicion1">
                             <p
                               className="subMenu tracking-widest"
@@ -288,7 +282,6 @@ const Home = () => {
                           </Link>
                         </li>
                         <li>
-                          {" "}
                           <Link to="/winesworld#posicion2">
                             <p
                               className="subMenu tracking-widest"
@@ -299,7 +292,6 @@ const Home = () => {
                           </Link>
                         </li>
                         <li>
-                          {" "}
                           <Link to="/winesworld#posicion3">
                             <p
                               className="subMenu tracking-widest"
@@ -312,19 +304,17 @@ const Home = () => {
                       </ul>
                     </animated.div>
                     <li>
-                      {" "}
                       <p
                         className="!mb-0 subMenu tracking-widest"
                         style={robotoFontRegular}
                         onClick={opcion5}
                       >
-                        WINES IN ARGENTINA
+                        IN ARGENTINA
                       </p>
                     </li>
                     <animated.div style={dropdownAnimation5}>
                       <ul className="text-center  -space-y-3 ">
                         <li>
-                          {" "}
                           <Link to="/winesargentina">
                             <p
                               className="subMenu tracking-widest"
@@ -335,7 +325,6 @@ const Home = () => {
                           </Link>
                         </li>
                         <li>
-                          {" "}
                           <Link to="/winesargentina#posicion1">
                             <p
                               className="subMenu tracking-widest"
@@ -346,7 +335,6 @@ const Home = () => {
                           </Link>
                         </li>
                         <li>
-                          {" "}
                           <Link to="/winesargentina#posicion2">
                             <p
                               className="subMenu tracking-widest"
@@ -357,7 +345,6 @@ const Home = () => {
                           </Link>
                         </li>
                         <li>
-                          {" "}
                           <Link to="/winesargentina#posicion3">
                             <p
                               className="subMenu tracking-widest"

@@ -70,9 +70,12 @@ const MenuHamburguesaDesktop = () => {
               </Link>
             </div>
             <div className="flex justify-center py-0 2xl:py-10">
-              <img src={logoDesktop} alt="Logo" className="w-32 2xl:w-44" />
+              <Link to="/">
+                <img src={logoDesktop} alt="Logo" className="w-40 2xl:w-44" />
+              </Link>
             </div>
-            <div className="flex justify-center w-2/3 2xl:w-1/2 mx-auto  py-10 2xl:py-0">
+
+            <div className="flex justify-center w-2/3 2xl:w-2/3 mx-auto  py-7 2xl:py-0">
               <div
                 id="menu1"
                 onMouseEnter={handleMenu1Hover}
@@ -85,18 +88,20 @@ const MenuHamburguesaDesktop = () => {
                 >
                   History
                 </p>
-                <p
+                <Link
+                  to="/family"
+                  className="subMenu tracking-widest text-center"
                   style={robotoFontRegular}
-                  className="text-center subMenu tracking-widest "
                 >
                   FAMILY
-                </p>
-                <p
+                </Link>
+                <Link
+                  to="/valleazul"
+                  className="subMenu tracking-widest text-center"
                   style={robotoFontRegular}
-                  className="text-center subMenu tracking-widest"
                 >
-                  VALLE AZUL PATAGONIA
-                </p>
+                  VALLE AZUL, PATAGONIA
+                </Link>
               </div>
 
               <div id="menu2" className="flex flex-col items-center w-full ">
@@ -106,30 +111,41 @@ const MenuHamburguesaDesktop = () => {
                 >
                   Patagonian Spirit
                 </p>
-                <p
+                <Link
+                  to="/araucanavineyard"
+                  className="subMenu tracking-widest text-center"
                   style={robotoFontRegular}
-                  className="text-center subMenu tracking-widest"
                 >
                   ARAUCANA VINEYARD
-                </p>
-                <p
+                </Link>
+                <Link
+                  to="/workvineyard"
+                  className="subMenu tracking-widest text-center"
                   style={robotoFontRegular}
-                  className="text-center subMenu tracking-widest"
                 >
                   WORK IN THE VINEYARD
-                </p>
-                <p
+                </Link>
+                <Link
+                  to="/workwinery"
+                  className="subMenu tracking-widest text-center"
                   style={robotoFontRegular}
-                  className="text-center subMenu tracking-widest"
                 >
-                  WINES PRESERVATION
-                </p>
-                <p
+                  WORK IN THE WINERY
+                </Link>
+                <Link
+                  to="/lifeonestate"
+                  className="subMenu tracking-widest text-center"
                   style={robotoFontRegular}
-                  className="text-center subMenu tracking-widest"
                 >
-                  LIFE IN THE VINEYARD
-                </p>
+                  LIFE ON THE ESTATE
+                </Link>
+                <Link
+                  to="/lifewater"
+                  className="subMenu tracking-widest text-center"
+                  style={robotoFontRegular}
+                >
+                  LIFE WATER
+                </Link>
               </div>
 
               <div id="menu3" className="flex flex-col items-center w-full ">
@@ -143,23 +159,30 @@ const MenuHamburguesaDesktop = () => {
                   style={robotoFontRegular}
                   className="text-center subMenu tracking-widest"
                 >
-                  IN ARGENTINA
+                  IN THE WORLD
                 </p>
                 <p
                   style={robotoFontRegular}
                   className="text-center subMenu tracking-widest"
                 >
-                  IN THE WORLD
+                  IN ARGENTINA
                 </p>
               </div>
             </div>
+
             <div
-              className="flex flex-col gap-y-5 justify-center w-2/3 2xl:w-1/3 mx-auto 2xl:py-20 "
+              className="flex flex-col gap-y-2 justify-center w-2/3 2xl:w-1/3 mx-auto pt-2 2xl:pt-10 "
               style={robotoFontRegular}
             >
               <div className="w-full flex justify-center items-center gap-x-16">
                 <div className="text-[#F2ECE1] hover:text-[#cab57e]">
-                  <a href="">Contact</a>
+                  <Link
+                    to="/contacto"
+                    className="hover:text-[#cab57e]"
+                    style={robotoFontRegular}
+                  >
+                    Contact
+                  </Link>
                 </div>
                 <div className="text-[#F2ECE1] hover:text-[#cab57e]">
                   <a href="">News</a>
@@ -177,7 +200,8 @@ const MenuHamburguesaDesktop = () => {
               </div>
             </div>
           </div>
-          <div className="absolute bottom-5 2xl:bottom-20 w-full">
+
+          <div className="absolute bottom-5 2xl:bottom-5 w-full">
             <div className="flex justify-around items-center w-full text-[#F2ECE1] ">
               <div className="w-1/3  flex justify-center items-center"></div>
               <div
@@ -196,13 +220,11 @@ const MenuHamburguesaDesktop = () => {
                 </div>
               </div>
               <div
-                className="flex justify-center items-center w-1/3 gap-x-5"
+                className="flex justify-center items-center w-1/3 cursor-default gap-x-5"
                 style={robotoFontRegular}
               >
                 <span className="font-bold">english</span>
-                <a href="" className="hover:text-[#cab57e]">
-                  spanish
-                </a>
+                <span>spanish</span>
               </div>
             </div>
           </div>

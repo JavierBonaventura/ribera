@@ -46,7 +46,9 @@ const MenuDesktop = () => {
               </Link>
             </div>
             <div className="flex justify-center py-10 2xl:py-16">
-              <img src={logoDesktop} alt="Logo" className="w-32 2xl:w-44" />
+              <Link to="/">
+                <img src={logoDesktop} alt="Logo" className="w-32 2xl:w-44" />
+              </Link>
             </div>
 
             <div className="flex justify-center w-2/3 2xl:w-2/3 mx-auto">
@@ -62,18 +64,20 @@ const MenuDesktop = () => {
                 >
                   History
                 </p>
-                <p
+                <Link
+                  to="/family"
+                  className="subMenu tracking-widest text-center"
                   style={robotoFontRegular}
-                  className="text-center subMenu tracking-widest "
                 >
                   FAMILY
-                </p>
-                <p
+                </Link>
+                <Link
+                  to="/valleazul"
+                  className="subMenu tracking-widest text-center"
                   style={robotoFontRegular}
-                  className="text-center subMenu tracking-widest"
                 >
-                  VALLE AZUL PATAGONIA
-                </p>
+                  VALLE AZUL, PATAGONIA
+                </Link>
               </div>
 
               <div id="menu2" className="flex flex-col items-center w-full ">
@@ -83,30 +87,41 @@ const MenuDesktop = () => {
                 >
                   Patagonian Spirit
                 </p>
-                <p
+                <Link
+                  to="/araucanavineyard"
+                  className="subMenu tracking-widest text-center"
                   style={robotoFontRegular}
-                  className="text-center subMenu tracking-widest"
                 >
                   ARAUCANA VINEYARD
-                </p>
-                <p
+                </Link>
+                <Link
+                  to="/workvineyard"
+                  className="subMenu tracking-widest text-center"
                   style={robotoFontRegular}
-                  className="text-center subMenu tracking-widest"
                 >
                   WORK IN THE VINEYARD
-                </p>
-                <p
+                </Link>
+                <Link
+                  to="/workwinery"
+                  className="subMenu tracking-widest text-center"
                   style={robotoFontRegular}
-                  className="text-center subMenu tracking-widest"
                 >
-                  WINES PRESERVATION
-                </p>
-                <p
+                  WORK IN THE WINERY
+                </Link>
+                <Link
+                  to="/lifeonestate"
+                  className="subMenu tracking-widest text-center"
                   style={robotoFontRegular}
-                  className="text-center subMenu tracking-widest"
                 >
-                  LIFE IN THE VINEYARD
-                </p>
+                  LIFE ON THE ESTATE
+                </Link>
+                <Link
+                  to="/lifewater"
+                  className="subMenu tracking-widest text-center"
+                  style={robotoFontRegular}
+                >
+                  LIFE WATER
+                </Link>
               </div>
 
               <div id="menu3" className="flex flex-col items-center w-full ">
@@ -120,13 +135,13 @@ const MenuDesktop = () => {
                   style={robotoFontRegular}
                   className="text-center subMenu tracking-widest"
                 >
-                  IN ARGENTINA
+                  IN THE WORLD
                 </p>
                 <p
                   style={robotoFontRegular}
                   className="text-center subMenu tracking-widest"
                 >
-                  IN THE WORLD
+                  IN ARGENTINA
                 </p>
               </div>
             </div>
@@ -147,9 +162,13 @@ const MenuDesktop = () => {
                 style={robotoFontRegular}
               >
                 <div>
-                  <a href="" className="hover:text-[#cab57e]">
+                  <Link
+                    to="/contacto"
+                    className="hover:text-[#cab57e]"
+                    style={robotoFontRegular}
+                  >
                     Contact
-                  </a>
+                  </Link>
                 </div>
                 <div>
                   <a href="" className="hover:text-[#cab57e]">

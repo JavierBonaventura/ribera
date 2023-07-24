@@ -42,50 +42,47 @@ const LifeWater = () => {
         <animated.div style={{ ...style, width: "100%" }}>
           <div>
             <body class="bg-[#F2ECE1] ">
-              <header className="py-10 fixed top-0 left-0 right-0 z-50  ">
-                <div class="container mx-auto">
-                  <div class="flex justify-between items-center px-5 ">
-                    <div class="w-24 md:w-36 ">
-                      <Link to="/">
-                        <img src={logo} alt="" className="w-full" />
-                      </Link>{" "}
-                    </div>
-
-                    <div class="  mt-4">
-                      <Link to="/MenuHamburguesa">
-                        <img src={hambur} alt="" className="w-7" />
-                      </Link>{" "}
-                    </div>
+              <header className="container mx-auto py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 ">
+                <div class="flex justify-between items-center  ">
+                  <div class="w-24 md:w-36 ">
+                    <Link to="/">
+                      <img src={logo} alt="" className="w-full xl:w-28" />
+                    </Link>
+                  </div>
+                  <div class="mt-4">
+                    <Link to="/MenuHamburguesa">
+                      <img src={hambur} alt="" className="w-7 " />
+                    </Link>
                   </div>
                 </div>
               </header>
 
               <div class="container mx-auto">
-                <div class="pt-16 pb-5">
-                  <div class="flex flex-col justify-center items-center mt-10 ">
+                <div class="pt-16 md:pt-32 pb-5">
+                  <div class="flex flex-col justify-center items-center mt-10  md:mt-0 md:gap-y-0 ">
                     <h1
-                      class="text-[#5f5f5e] text-xs tracking-widest"
+                      class="text-[#5f5f5e] text-xs md:text-xl tracking-widest"
                       style={playfairFontItalic}
                     >
                       <i style={playfairFontItalic}>Patagonian Spirit</i>
                     </h1>
                     <h2
                       style={playfairFontBlack}
-                      className="text-base text-[#C4AC77] text-center tracking-wider uppercase"
+                      className="text-base md:text-3xl text-[#C4AC77] text-center tracking-wider uppercase"
                     >
                       Life Water
                     </h2>
                   </div>
                 </div>
 
-                <div class="md:py-20 px-4 ">
-                  <img src={imgWater} alt="" class="w-full md:w-2/3 mx-auto" />
+                <div class="px-4 md:px-0 ">
+                  <img src={imgWater} alt="" class="w-full md:w-3/4 mx-auto " />
                 </div>
 
-                <div class="flex flex-col gap-y-2 px-10 md:text-center pt-8">
+                <div class="flex flex-col gap-y-2  pt-8">
                   <div>
                     <p
-                      class="text-black text-xs md:text-xl tracking-wider text-justify"
+                      class="text-black text-xs tracking-wider text-justify px-10 md:px-0 md:w-3/4 mx-auto md:text-lg"
                       style={playfairFontRegular}
                     >
                       The Countess planted the vineyard in the highest part of

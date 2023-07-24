@@ -43,44 +43,45 @@ const ValleAzul = () => {
         <animated.div style={{ ...style, width: "100%" }}>
           <div>
             <body class="bg-[#F2ECE1]">
-              <header className="py-10 fixed top-0 left-0 right-0 z-50">
-                <div class="container mx-auto">
-                  <div class="flex justify-between items-center px-5 ">
-                    <div class="w-24 md:w-36 ">
-                      <Link to="/">
-                        <img src={logo} alt="" className="w-full" />
-                      </Link>{" "}
-                    </div>
-
-                    <div class="  mt-4">
-                      <Link to="/MenuHamburguesa">
-                        <img src={hambur} alt="" className="w-7" />
-                      </Link>{" "}
-                    </div>
+              <header className="container mx-auto py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 ">
+                <div class="flex justify-between items-center  ">
+                  <div class="w-24 md:w-36 ">
+                    <Link to="/">
+                      <img src={logo} alt="" className="w-full xl:w-28" />
+                    </Link>
+                  </div>
+                  <div class="mt-4">
+                    <Link to="/MenuHamburguesa">
+                      <img src={hambur} alt="" className="w-7 " />
+                    </Link>
                   </div>
                 </div>
               </header>
 
               <div class="container mx-auto">
-                <div class="pt-16">
-                  <div class="flex flex-col justify-center items-center mt-10">
+                <div class="pt-16 md:pt-32">
+                  <div class="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0">
                     <h1
                       style={playfairFontItalic}
-                      class="text-[#5f5f5e] text-xs tracking-widest"
+                      class="text-[#5f5f5e] text-xs md:text-xl tracking-widest"
                     >
                       <i style={playfairFontItalic}>History</i>
                     </h1>
                     <h2
                       style={playfairFontBlack}
-                      className="text-base text-[#C4AC77] text-center tracking-wider uppercase"
+                      className="text-base md:text-3xl text-[#C4AC77] text-center tracking-wider uppercase"
                     >
                       Valle azul
                     </h2>
                   </div>
                 </div>
 
-                <div class="relative flex justify-center items-center pt-5 px-4">
-                  <img src={paisajeValle} alt="" class="w-full" />
+                <div class="relative flex justify-center items-center pt-5 px-4 md:px-0">
+                  <img
+                    src={paisajeValle}
+                    alt=""
+                    class="w-full object-cover md:w-3/4 mx-auto"
+                  />
                 </div>
 
                 <div class="py-28 hidden">
@@ -92,10 +93,10 @@ const ValleAzul = () => {
                 </div>
               </div>
 
-              <div class="container mx-auto bg-[#F2ECE1] px-10">
+              <div class="container mx-auto">
                 <div class="pt-5 pb-10 flex flex-col gap-y-5">
                   <p
-                    class="text-black text-xs tracking-wider text-justify"
+                    class="text-black text-xs tracking-wider text-justify px-10 md:px-0 md:w-3/4 mx-auto md:text-lg"
                     style={playfairFontRegular}
                   >
                     The story of this winery started in 2001, when italian
@@ -111,17 +112,21 @@ const ValleAzul = () => {
                 </div>
               </div>
 
-              <div class="container mx-auto bg-[#212121]">
-                <div class="py-5 px-5">
-                  <img src={paisajeHistory} alt="" class="-mb-10" />
+              <div class=" bg-[#212121]">
+                <div class="container mx-auto py-5 px-4 md:px-0">
+                  <img
+                    src={paisajeHistory}
+                    alt=""
+                    class="-mb-10 md:-mb-24 w-full md:w-3/4 mx-auto"
+                  />
                 </div>
               </div>
 
-              <div class="container mx-auto bg-[#F2ECE1] px-10">
-                <div class="pt-10 flex flex-col gap-y-5">
+              <div class="container mx-auto bg-[#F2ECE1]">
+                <div class="pt-10 md:pt-24 flex flex-col gap-y-5">
                   <div class="">
                     <p
-                      class="text-black text-xs tracking-wider text-justify"
+                      class="text-black text-xs tracking-wider text-justify px-10 md:px-0 md:w-3/4 mx-auto md:text-lg"
                       style={playfairFontRegular}
                     >
                       When we first tasted the 2008 vintage, we knew Noemi had
