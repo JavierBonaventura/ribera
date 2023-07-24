@@ -58,8 +58,8 @@ const FormularioContacto = () => {
     >
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
-          <div className="py-20 2xl:py-40 background">
-            <header className="container mx-auto py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 ">
+          <div className="py-20 2xl:py-40 !h-full  background">
+            <header className="container mx-auto py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2">
               <div class="flex justify-between items-center  ">
                 <div class="w-24 md:w-36 ">
                   <Link to="/">
@@ -74,7 +74,7 @@ const FormularioContacto = () => {
               </div>
             </header>
 
-            <div className="pt-12 px-10 container mx-auto md:px-0">
+            <div className="pt-12 px-10 container mx-auto md:px-0 ">
               <div className="grid grid-cols-1 md:grid-cols-2 text-white">
                 <div className="block md:hidden">
                   <h1
@@ -189,7 +189,7 @@ const FormularioContacto = () => {
                 </div>
 
                 <div
-                  className="text-[#F4EDE2] text-center flex flex-col gap-y-4  md:justify-around md:items-center md:py-20"
+                  className="text-[#F4EDE2] text-center flex flex-col gap-y-4 md:justify-around md:items-center md:py-20 "
                   style={playfairFontRegular}
                 >
                   <div className="flex flex-col gap-y-2">
