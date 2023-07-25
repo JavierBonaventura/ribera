@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import fondoHamburguesaDesktop from "../images/fondoHamburguesaDesktop.png";
 import logoDesktop from "../images/logo.svg";
 import { Link } from "react-router-dom";
+import { Transition } from "@react-spring/web";
+import { useSpring, animated } from "@react-spring/web";
+import { useLocation } from "react-router-dom";
 
 const MenuHamburguesaDesktop = () => {
+    const location = useLocation();
+
   const [isMenu1Hovered, setMenu1Hovered] = useState(false);
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
@@ -25,8 +30,82 @@ const MenuHamburguesaDesktop = () => {
   const handleMenu1Leave = () => {
     setMenu1Hovered(false);
   };
+    const [mostrarMenu1, setMostrarMenu1] = useState(false);
+  const [mostrarMenu2, setMostrarMenu2] = useState(false);
+  const [mostrarMenu3, setMostrarMenu3] = useState(true);
+  const [mostrarMenu4, setMostrarMenu4] = useState(false);
+  const [mostrarMenu5, setMostrarMenu5] = useState(false);
+
+  const dropdownAnimation3 = useSpring({
+    height: mostrarMenu3 ? "195px" : "0px",
+    opacity: mostrarMenu3 ? 1 : 0,
+    overflow: "hidden",
+    config: { duration: 300 },
+  });
+
+  const dropdownAnimation4 = useSpring({
+    height: mostrarMenu4 ? "120px" : "0px",
+    opacity: mostrarMenu4 ? 1 : 0,
+    overflow: "hidden",
+    config: { duration: 300 },
+  });
+
+  const dropdownAnimation5 = useSpring({
+    height: mostrarMenu5 ? "120px" : "0px",
+    opacity: mostrarMenu5 ? 1 : 0,
+    overflow: "hidden",
+    config: { duration: 300 },
+  });
+
+  const opcion3 = () => {
+    setMostrarMenu1(false);
+    setMostrarMenu2(false);
+    setMostrarMenu3(true);
+    setMostrarMenu4(false);
+    setMostrarMenu5(false);
+
+    if (mostrarMenu3 === true) {
+      setMostrarMenu3(false);
+    }
+  };
+
+  const opcion4 = () => {
+    setMostrarMenu1(false);
+    setMostrarMenu2(false);
+    setMostrarMenu3(true);
+    setMostrarMenu4(true);
+    setMostrarMenu5(false);
+    if (mostrarMenu4 === true) {
+      setMostrarMenu4(false);
+    }
+  };
+
+  const opcion5 = () => {
+    setMostrarMenu1(false);
+    setMostrarMenu2(false);
+    setMostrarMenu3(true);
+    setMostrarMenu4(false);
+    setMostrarMenu5(true);
+
+    if (mostrarMenu5 === true) {
+      setMostrarMenu5(false);
+    }
+  };
+
 
   return (
+        <Transition
+    items={location}
+    keys={(location) => location.pathname}
+    from={{ opacity: 0 }}
+    enter={{ opacity: 1 }}
+    leave={{ opacity: 0 }}
+    config={{ duration: 1000 }}
+  >
+    {(style, item) => (
+              <animated.div style={{ ...style, width: "100%" }}>
+
+
     <div
       className={`h-screen bg-[imagen] bg-no-repeat bg-cover bg-center relative p-5`}
       style={{ backgroundImage: `url(${fondoHamburguesaDesktop})` }}
@@ -147,26 +226,127 @@ const MenuHamburguesaDesktop = () => {
                   LIFE WATER
                 </Link>
               </div>
+                           <div id="menu3" className="flex flex-col items-center w-full ">
 
-              <div id="menu3" className="flex flex-col items-center w-full ">
-                <p
+              <p
                   style={playfairFontRegular}
-                  className="text-center menu-desk sombra-menu tracking-wider  pb-5"
+                  className="text-center menu-desk sombra-menu tracking-wider pb-5"
+                
                 >
                   Wines
                 </p>
-                <p
-                  style={robotoFontRegular}
-                  className="text-center subMenu tracking-widest"
-                >
-                  IN THE WORLD
-                </p>
-                <p
-                  style={robotoFontRegular}
-                  className="text-center subMenu tracking-widest"
-                >
-                  IN ARGENTINA
-                </p>
+                <animated.div style={dropdownAnimation3}>
+                  <ul className="text-center  space-y-1">
+                    <li>
+                      <p
+                        className="!mb-0 subMenu tracking-widest"
+                        style={robotoFontRegular}
+                        onClick={opcion4}
+                      >
+                        IN THE WORLD
+                      </p>
+                    </li>
+                    <animated.div style={dropdownAnimation4}>
+                      <ul className="text-center  -space-y-2">
+                        <li>
+                          <Link to="/winesworld">
+                            <p
+                              className="subMenu tracking-widest  "
+                              style={playfairFontRegular}
+                            >
+                              View all
+                            </p>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/winesworld#posicion1">
+                            <p
+                              className="subMenu tracking-widest"
+                              style={playfairFontRegular}
+                            >
+                              Ribera del Cuarzo Clásico
+                            </p>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/winesworld#posicion2">
+                            <p
+                              className="subMenu tracking-widest"
+                              style={playfairFontRegular}
+                            >
+                              Ribera del Cuarzo Especial
+                            </p>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/winesworld#posicion3">
+                            <p
+                              className="subMenu tracking-widest"
+                              style={playfairFontRegular}
+                            >
+                              Ribera del Cuarzo Reserva Estibada
+                            </p>
+                          </Link>
+                        </li>
+                      </ul>
+                    </animated.div>
+                    <li>
+                      <p
+                        className="!mb-0 subMenu tracking-widest"
+                        style={robotoFontRegular}
+                        onClick={opcion5}
+                      >
+                        IN ARGENTINA
+                      </p>
+                    </li>
+                    <animated.div style={dropdownAnimation5}>
+                      <ul className="text-center  -space-y-3 ">
+                        <li>
+                          <Link to="/winesargentina">
+                            <p
+                              className="subMenu tracking-widest"
+                              style={robotoFontRegular}
+                            >
+                              View all
+                            </p>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/winesargentina#posicion1">
+                            <p
+                              className="subMenu tracking-widest"
+                              style={robotoFontRegular}
+                            >
+                              Araucana Río de los Ciervos
+                            </p>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/winesargentina#posicion2">
+                            <p
+                              className="subMenu tracking-widest"
+                              style={robotoFontRegular}
+                            >
+                              Araucana Malbec
+                            </p>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/winesargentina#posicion3">
+                            <p
+                              className="subMenu tracking-widest"
+                              style={robotoFontRegular}
+                            >
+                              Araucana Azul
+                            </p>
+                          </Link>
+                        </li>
+                      </ul>
+                    </animated.div>
+                  </ul>
+                </animated.div>
+
+
               </div>
             </div>
 
@@ -231,6 +411,9 @@ const MenuHamburguesaDesktop = () => {
         </div>
       </div>
     </div>
+    </animated.div>
+      )}
+    </Transition>
   );
 };
 

@@ -13,6 +13,7 @@ import MenuDesktop from "./components/MenuDesktop";
 import Family from "./components/Family";
 import AraucanaVineyard from "./components/AraucanaVineyard";
 import WorkVineyard from "./components/WorkVineyard";
+import WorkVineyardDesktop from "./components/WorkVineyardDesktop";
 import WorkWinery from "./components/WorkWinery";
 import LifeOnEstate from "./components/LifeOnEstate";
 import LifeWater from "./components/LifeWater";
@@ -22,7 +23,6 @@ import MenuHamburguesa from "./components/MenuHamburguesa";
 import MenuHamburguesaDesktop from "./components/MenuHamburguesaDesktop";
 import ValleAzul from "./components/ValleAzul";
 import FormularioContacto from "./components/FormularioContacto";
-import AraucanaVineyardDesktop from "./components/AraucanaVineyardDesktop";
 import "./App.css";
 
 function App() {
@@ -101,7 +101,11 @@ const AppContent = () => {
 
               <Route path="/araucanavineyard" element={<AraucanaVineyard />} />
 
-              <Route path="/workvineyard" element={<WorkVineyard />} />
+              {windowWidth < 768 ? (
+                <Route path="/workvineyard" element={<WorkVineyard />} />
+              ) : (
+                <Route path="/workvineyard" element={<WorkVineyardDesktop />} />
+              )}
               <Route path="/workwinery" element={<WorkWinery />} />
               <Route path="/lifeonestate" element={<LifeOnEstate />} />
               <Route path="/lifewater" element={<LifeWater />} />
