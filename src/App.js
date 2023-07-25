@@ -22,7 +22,7 @@ import MenuHamburguesa from "./components/MenuHamburguesa";
 import MenuHamburguesaDesktop from "./components/MenuHamburguesaDesktop";
 import ValleAzul from "./components/ValleAzul";
 import FormularioContacto from "./components/FormularioContacto";
-import AraucanaVineyardDesktop from "./components/AraucanaVineyardDesktop"
+import AraucanaVineyardDesktop from "./components/AraucanaVineyardDesktop";
 import "./App.css";
 
 function App() {
@@ -98,15 +98,9 @@ const AppContent = () => {
               )}
               <Route path="/family" element={<Family />} />
               <Route path="/valleazul" element={<ValleAzul />} />
-              
-              {windowWidth < 768 ? (
-                <Route path="/araucanavineyard" element={<AraucanaVineyard />} />
-              ) : (
-                <Route
-                  path="/araucanavineyard"
-                  element={<AraucanaVineyardDesktop />}
-                />
-              )}
+
+              <Route path="/araucanavineyard" element={<AraucanaVineyard />} />
+
               <Route path="/workvineyard" element={<WorkVineyard />} />
               <Route path="/workwinery" element={<WorkWinery />} />
               <Route path="/lifeonestate" element={<LifeOnEstate />} />

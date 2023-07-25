@@ -174,7 +174,7 @@ const MenuHamburguesaDesktop = () => {
               className="flex flex-col gap-y-2 justify-center w-2/3 2xl:w-1/3 mx-auto pt-2 2xl:pt-10 "
               style={robotoFontRegular}
             >
-              <div className="w-full flex justify-center items-center gap-x-16">
+              <div className="w-full flex justify-center items-center gap-x-16 text-xl">
                 <div className="text-[#F2ECE1] hover:text-[#cab57e]">
                   <Link
                     to="/contacto"
@@ -190,10 +190,10 @@ const MenuHamburguesaDesktop = () => {
               </div>
               <div className="w-full flex justify-center items-center">
                 <a href="https://casapirque.com.ar" target="_blank">
-                  <h1 className="text-center pb-2 text-[#c4b27d]">
+                  <h1 className="text-center pb-2 text-[#c4b27d] text-base">
                     <i>Our distribution office</i>
                   </h1>
-                  <p className="text-center uppercase font-semibold text-[#F2ECE1] hover:text-[#cab57e]">
+                  <p className="text-center uppercase font-semibold text-[#F2ECE1] hover:text-[#cab57e] text-base">
                     Casa Pirque
                   </p>
                 </a>
@@ -205,7 +205,7 @@ const MenuHamburguesaDesktop = () => {
             <div className="flex justify-around items-center w-full text-[#F2ECE1] ">
               <div className="w-1/3  flex justify-center items-center"></div>
               <div
-                className="flex justify-center items-center w-1/3 gap-x-20 "
+                className="flex justify-center items-center w-1/3 gap-x-20 text-base "
                 style={robotoFontRegular}
               >
                 <div>

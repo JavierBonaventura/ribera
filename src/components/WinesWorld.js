@@ -131,7 +131,6 @@ function RioCiervos() {
     fontWeight: "normal",
     fontStyle: "italic",
   };
-  
 
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
@@ -201,7 +200,7 @@ function RioCiervos() {
               </div>
             </div>
 
-            <div className="bg-[#231F20] container mx-auto flex  flex-col gap-y-44">
+            <div className="bg-[#231F20] container mx-auto flex  flex-col gap-y-16">
               <div className="flex flex-col justify-center items-center gap-y-5">
                 <div id="posicion1"></div>
                 <div className="flex flex-col gap-y-5">
@@ -211,7 +210,8 @@ function RioCiervos() {
                       style={robotoFontRegular}
                     >
                       <span className="text-base">
-                        Ribera del Cuarzo <br /> CLÁSICO
+                        Ribera del Cuarzo <br />{" "}
+                        <span className="font-bold">CLÁSICO</span>
                       </span>
                     </h1>
                     <h4
@@ -281,7 +281,8 @@ function RioCiervos() {
                     style={robotoFontRegular}
                   >
                     <span className="text-base">
-                      Ribera del Cuarzo <br /> especial
+                      Ribera del Cuarzo <br />{" "}
+                      <span className="font-bold">especial</span>
                     </span>
                   </h1>
                   <h4
@@ -352,7 +353,8 @@ function RioCiervos() {
                     style={robotoFontRegular}
                   >
                     <span className="text-base">
-                      Ribera del Cuarzo <br /> RESERVA ESTIBADA
+                      Ribera del Cuarzo <br />{" "}
+                      <span className="font-bold">RESERVA ESTIBADA</span>
                     </span>
                   </h1>
                   <h4

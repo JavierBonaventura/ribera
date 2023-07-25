@@ -135,12 +135,57 @@ const Home = () => {
     >
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
-          <div className="containerHome pt-8 backgroundHambuerguesa  ">
-            <div className="flex">
+          <div className="containerHome pt-8 backgroundHambuerguesa">
+            <header className="container mx-auto py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 ">
+              <div class="flex justify-between items-center">
+                <div class="w-24 md:w-36 ">
+                  <Link to="/">
+                    <img src={logo} alt="" className="w-full xl:w-28" />
+                  </Link>
+                </div>
+
+                <div class=" absolute top-4 -right-3">
+                  <Link to="/">
+                    <svg
+                      className=""
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="100"
+                      height="100"
+                      viewBox="0 0 100 100"
+                    >
+                      <circle
+                        cx="50"
+                        cy="50"
+                        r="16"
+                        stroke="#C3B17D"
+                        fill="transparent"
+                        strokeWidth="2"
+                      />
+                      <line
+                        x1="44"
+                        y1="44"
+                        x2="56"
+                        y2="56"
+                        stroke="#C3B17D"
+                        strokeWidth="2"
+                      />
+                      <line
+                        x1="44"
+                        y1="56"
+                        x2="56"
+                        y2="44"
+                        stroke="#C3B17D"
+                        strokeWidth="2"
+                      />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            </header>
+
+            <div className="flex bg-blue-500 hidden">
               <div className="">
-                {" "}
                 <Link to="/">
-                  {" "}
                   <img src={logo} alt="Imagen 1" className="w-32" />
                 </Link>
               </div>
@@ -181,6 +226,7 @@ const Home = () => {
                 </Link>
               </div>
             </div>
+
             <div className="body ">
               <div className="containerHome pt-36 pb-10">
                 <p
@@ -407,14 +453,14 @@ const Home = () => {
               <div className=" flex justify-between">
                 <Link
                   to="/contacto"
-                  className="text-base footerItems tracking-widest hover:underline"
+                  className="text-xl footerItems tracking-widest hover:underline"
                   style={roboto}
                 >
                   Contact
                 </Link>
                 <p
                   style={roboto}
-                  className="text-base footerItems tracking-widest  hover:underline"
+                  className="text-xl footerItems tracking-widest  hover:underline"
                 >
                   News
                 </p>

@@ -131,7 +131,6 @@ function Araucana() {
     fontWeight: "normal",
     fontStyle: "italic",
   };
-  
 
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
@@ -200,7 +199,7 @@ function Araucana() {
               </div>
             </div>
 
-            <div className="bg-[#231F20] container mx-auto flex flex-col gap-y-44">
+            <div className="bg-[#231F20] container mx-auto flex flex-col gap-y-16">
               <div className="flex flex-col justify-center items-center gap-y-5">
                 <div id="posicion1"></div>
                 <div className="flex flex-col gap-y-5">
@@ -210,7 +209,8 @@ function Araucana() {
                       style={robotoFontRegular}
                     >
                       <span className="text-base">
-                        Araucana <br /> Río de los ciervos
+                        Araucana <br />{" "}
+                        <span className="font-bold">Río de los ciervos</span>
                       </span>
                     </h1>
                     <h4
@@ -277,7 +277,7 @@ function Araucana() {
                     style={robotoFontRegular}
                   >
                     <span className="text-base">
-                      Araucana <br /> Malbec
+                      Araucana <br /> <span className="font-bold">Malbec</span>
                     </span>
                   </h1>
                   <h4
@@ -352,7 +352,7 @@ function Araucana() {
                     style={robotoFontRegular}
                   >
                     <span className="text-base">
-                      Araucana <br /> Azul
+                      Araucana <br /> <span className="font-bold">Azul</span>
                     </span>
                   </h1>
                   <h4

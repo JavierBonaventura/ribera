@@ -45,6 +45,21 @@ body {
   background-position: center;
   height: 100vh;
 }
+
+.backgroundContacto {
+  background-image: url("./images/background-contact-mob.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .backgroundContacto {
+    background-image: none;
+    background-color: black;
+  }
+}
+
 .backgroundHambuerguesa {
   background-image: url("./images/fondoHambuerguesa.jpg");
   background-size: cover;

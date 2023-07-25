@@ -7,6 +7,7 @@ import iconIg from "../images/icon-ig-form.png";
 import iconDownload from "../images/icon-download.png";
 import { useLocation } from "react-router-dom";
 import { Transition, animated } from "@react-spring/web";
+import portada from "../images/background-contact.jpg";
 
 const FormularioContacto = () => {
   const location = useLocation();
@@ -58,8 +59,8 @@ const FormularioContacto = () => {
     >
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
-          <div className="py-20 2xl:py-40 !h-full  background">
-            <header className="container mx-auto py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2">
+          <div className="py-20 2xl:py-0   backgroundContacto  md:flex md:flex-col md:justify-end">
+            <header className="container mx-auto py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 ">
               <div class="flex justify-between items-center  ">
                 <div class="w-24 md:w-36 ">
                   <Link to="/">
@@ -73,27 +74,33 @@ const FormularioContacto = () => {
                 </div>
               </div>
             </header>
+            <div className="hidden md:flex container mx-auto ">
+              <img src={portada} alt="" className="" />
+            </div>
 
-            <div className="pt-12 px-10 container mx-auto md:px-0 ">
-              <div className="grid grid-cols-1 md:grid-cols-2 text-white">
+            <div className="pt-12 px-10 container mx-auto md:px-0 md:pt-0">
+              <div className="hidden md:block">
+                <h1
+                  class="uppercase text-[#c4b27d] text-4xl tracking-wider text-center"
+                  style={playfairFontBold}
+                >
+                  Contact
+                </h1>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 text-white md:py-5 ">
                 <div className="block md:hidden">
                   <h1
-                    class="uppercase text-[#F4EDE2] text-xl tracking-wider text-left"
+                    class="uppercase text-[#c4b27d] text-xl tracking-wider text-center"
                     style={playfairFontBold}
                   >
                     Contact
                   </h1>
                 </div>
-                <div className="md:w-3/4 md:mx-auto">
-                  <h1
-                    class="hidden md:block uppercase text-[#F4EDE2] text-xl md:text-3xl tracking-wider text-left md:w-full"
-                    style={playfairFontBold}
-                  >
-                    Contact
-                  </h1>
+                <div className="md:w-3/4 md:mx-auto md:order-2 ">
                   <form
                     onSubmit={handleSubmit}
-                    className="pt-6 pb-8 mb-4 md:w-full"
+                    className="pt-6 pb-8 mb-4 md:w-full md:py-0 md:mt-5"
                     style={playfairFontRegular}
                   >
                     <div className="mb-4 flex">
@@ -189,11 +196,11 @@ const FormularioContacto = () => {
                 </div>
 
                 <div
-                  className="text-[#F4EDE2] text-center flex flex-col gap-y-4 md:justify-around md:items-center md:py-20 "
+                  className="text-[#F4EDE2] flex flex-col gap-y-4 md:justify-around md:items-center md:py-0 md:order-1"
                   style={playfairFontRegular}
                 >
-                  <div className="flex flex-col gap-y-2">
-                    <h2 className="text-lg text-[#c4b27d] md:text-3xl">
+                  <div className="flex flex-col gap-y-2  md:w-1/2  xl:w-1/3">
+                    <h2 className="text-lg text-[#c4b27d] md:text-3xl text-center md:text-left">
                       Our offices
                     </h2>
                     <a
@@ -201,14 +208,14 @@ const FormularioContacto = () => {
                       target="_blank"
                       className="hover:underline"
                     >
-                      <h3 className="text-sm md:text-base">
+                      <h3 className="text-sm md:text-base text-center md:text-left">
                         Ortiz de Ocampo 3302 <br />
                         Buenos Aires, Argentina
                       </h3>
                     </a>
                   </div>
-                  <div className="flex flex-col gap-y-2">
-                    <h2 className="text-lg text-[#c4b27d] md:text-3xl">
+                  <div className="flex flex-col gap-y-2  md:w-1/2  xl:w-1/3">
+                    <h2 className="text-lg text-[#c4b27d] md:text-3xl text-center md:text-left">
                       Our winery
                     </h2>
                     <a
@@ -216,38 +223,26 @@ const FormularioContacto = () => {
                       className="hover:underline"
                       target="_blank"
                     >
-                      <h3 className="text-sm md:text-base">
+                      <h3 className="text-sm md:text-base text-center md:text-left">
                         Route Prov.Nro 7 KM 12, Lot-8 <br />
-                        Valle Azul, El Cuy, Río Negro. CP: 8336
+                        Valle Azul, El Cuy, Río Negro.{" "}
+                        <br className="hidden md:block" /> CP: 8336
                       </h3>
                     </a>
                   </div>
-                  <div className="">
-                    <h2 className="text-lg text-[#c4b27d] uppercase md:text-3xl">
+                  <div className="md:w-1/2 xl:w-1/3">
+                    <h2 className="text-lg text-[#c4b27d] uppercase md:text-3xl text-center md:text-left">
                       ¡Follow us!
                     </h2>
                     <a
                       href="https://www.instagram.com/riberadelcuarzo/"
                       target="_blank"
-                      className="flex items-center mx-auto justify-center gap-x-1 text-sm hover:underline"
+                      className="flex items-center mx-auto justify-center gap-x-1 text-sm hover:underline md:justify-start"
                     >
                       <img src={iconIg} alt="" className="w-4" />
-                      <h2 className="text-sm  md:text-base">
+                      <h2 className="text-sm  md:text-base ">
                         @riberadelcuarzo
                       </h2>
-                    </a>
-                  </div>
-                  <div className="w-2/3 mx-auto flex justify-center hidden">
-                    <a href="" className="border-b border-[#C3B17D]">
-                      <div className="w-2 inline-block">
-                        <img src={iconDownload} alt="" className="w-full" />
-                      </div>
-                      <span
-                        className="ml-2 text-xs text-[#C3B17D]"
-                        style={robotoFontRegular}
-                      >
-                        Download Brochure
-                      </span>
                     </a>
                   </div>
                 </div>
