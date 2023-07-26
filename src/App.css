@@ -178,5 +178,48 @@ body {
   transition: opacity 300ms ease-out;
 }
 
+.awssld__bullets {
+
+ margin-bottom: 50px;
+}
+
+.awssld__bullets button {
+  padding: 0;
+  display: block;
+  width: 6px !important;
+  height: 6px !important;
+  margin: 25px !important;
+  border-radius: 50%;
+  --control-bullet-color: #cab57e;
+  background: var(--control-bullet-color);
+  text-indent: -9999px;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45), background-color 0.175s ease-out;
+}
+
+.awssld__bullets .awssld__bullets--active {
+  transform: scale(1.5);
+  --control-bullet-active-color: #cab57e;
+  background: var(--control-bullet-active-color);
+}
+
+.awssld__controls__arrow-right {
+  opacity: 0 !important;
+}
+.awssld__controls__arrow-left {
+  opacity: 0 !important;
+}
+
+.awssld__next {
+  width: 80px !important;
+  margin-right: 200px !important;  /* Adjust the right margin as needed */
+}
+
+.awssld__prev {
+  width: 80px !important;
+  margin-left: 200px !important;  /* Adjust the left margin as needed */
+}
 /*   
 } */
