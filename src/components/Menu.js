@@ -265,7 +265,7 @@ const Home = () => {
                           <Link to="/winesworld">
                             <p
                               className="subMenu tracking-widest  "
-                              style={playfairFontRegular}
+                              style={robotoFontRegular}
                             >
                               View all
                             </p>
@@ -275,7 +275,7 @@ const Home = () => {
                           <Link to="/winesworld#posicion1">
                             <p
                               className="subMenu tracking-widest"
-                              style={playfairFontRegular}
+                              style={robotoFontRegular}
                             >
                               Ribera del Cuarzo Clásico
                             </p>
@@ -285,7 +285,7 @@ const Home = () => {
                           <Link to="/winesworld#posicion2">
                             <p
                               className="subMenu tracking-widest"
-                              style={playfairFontRegular}
+                              style={robotoFontRegular}
                             >
                               Ribera del Cuarzo Especial
                             </p>
@@ -295,7 +295,7 @@ const Home = () => {
                           <Link to="/winesworld#posicion3">
                             <p
                               className="subMenu tracking-widest"
-                              style={playfairFontRegular}
+                              style={robotoFontRegular}
                             >
                               Ribera del Cuarzo Reserva Estibada
                             </p>
