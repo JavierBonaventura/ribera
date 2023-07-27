@@ -107,7 +107,7 @@ const WorkVineyardDesktop = () => {
                 style={playfairFontBlack}
               >
                 <div
-                  className="italic text-white text-base -mt-72 tracking-wider mb-4"
+                  className="italic text-white text-base -mt-72 tracking-wider"
                   style={playfairFontItalic}
                 >
                   {" "}
@@ -136,7 +136,7 @@ const WorkVineyardDesktop = () => {
                     <div
                       id="numerador"
                       style={{
-                        marginRight: "0.5rem",
+                        marginRight: "-2.5rem",
                         marginTop: "-150px",
                         fontFamily: "playfairFontBlack",
                       }}
