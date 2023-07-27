@@ -124,7 +124,7 @@ const MenuDesktop = () => {
                   </div>
                   <div className="flex justify-center py-10 2xl:py-12 ">
                     <Link to="/">
-                      <img src={logoDesktop} alt="Logo" className="w-36" />
+                      <img src={logoDesktop} alt="Logo" className="w-44" />
                     </Link>
                   </div>
 

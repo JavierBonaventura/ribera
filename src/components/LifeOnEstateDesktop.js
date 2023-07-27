@@ -66,10 +66,10 @@ const WorkVineyardDesktop = () => {
 
   return (
     <div className="w-full h-screen ">
-      <header className="py-10 fixed top-0 left-0 right-0 z-50  ">
-        <div class="container mx-auto">
-          <div class="flex justify-between items-center px-5 ">
-            <div class="w-24 md:w-36 ">
+      <header className="py-10 md:py-2 fixed top-0 left-0 right-0 z-50  ">
+        <div class="container mx-auto max-w-screen-xl">
+          <div class="flex justify-between items-center">
+            <div class="w-24 md:w-28">
               <Link to="/">
                 <img src={logo} alt="" className="w-full" />
               </Link>{" "}

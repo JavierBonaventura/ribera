@@ -112,7 +112,7 @@ const FormularioContacto = () => {
                           Name
                         </label>
                         <input
-                          className="text-sm md:text-base bg-transparent md:py-1 appearance-none border-b w-full text-[#F4EDE2] leading-tight focus:outline-none focus:shadow-outline"
+                          className="text-sm md:text-base bg-transparent md:py-1  border-b w-full text-[#F4EDE2] leading-tight"
                           id="nombre"
                           type="text"
                           value={nombre}
@@ -128,7 +128,7 @@ const FormularioContacto = () => {
                           Last name
                         </label>
                         <input
-                          className="text-sm md:text-base appearance-none bg-transparent  md:py-1 border-b rouded w-full   text-[#F4EDE2] leading-tight focus:outline-none focus:shadow-outline"
+                          className="text-sm md:text-base bg-transparent  md:py-1 border-b w-full text-[#F4EDE2] leading-tight"
                           id="apellido"
                           type="text"
                           value={apellido}
@@ -145,7 +145,7 @@ const FormularioContacto = () => {
                         E-mail
                       </label>
                       <input
-                        className="text-sm md:text-base appearance-none bg-transparent md:py-1 border-b  w-full   text-[#F4EDE2] leading-tight focus:outline-none focus:shadow-outline"
+                        className="text-sm md:text-base bg-transparent md:py-1 border-b  w-full   text-[#F4EDE2] leading-tight"
                         id="email"
                         type="email"
                         value={email}
@@ -155,13 +155,13 @@ const FormularioContacto = () => {
                     </div>
                     <div className="mb-4">
                       <label
-                        className="block text-[#F4EDE2] text-sm md:text-xl "
+                        className="block text-[#F4EDE2] text-sm md:text-xl"
                         htmlFor="pais"
                       >
                         Country
                       </label>
                       <input
-                        className="text-sm md:text-base appearance-none bg-transparent md:py-1 border-b  w-full   text-[#F4EDE2] leading-tight focus:outline-none focus:shadow-outline"
+                        className="text-sm md:text-base bg-transparent md:py-1 border-b  w-full text-[#F4EDE2] leading-tight"
                         id="pais"
                         type="text"
                         value={pais}
@@ -177,7 +177,7 @@ const FormularioContacto = () => {
                         Message
                       </label>
                       <textarea
-                        className="text-sm md:text-base appearance-none border-b bg-transparent  w-full pb-14  text-[#F4EDE2] leading-tight focus:outline-none focus:shadow-outline"
+                        className="text-sm md:text-base border-b bg-transparent  w-full pb-14  text-[#F4EDE2] leading-tight"
                         id="consulta"
                         value={consulta}
                         onChange={(e) => setConsulta(e.target.value)}
@@ -186,7 +186,7 @@ const FormularioContacto = () => {
                     </div>
                     <div className="flex items-center justify-start">
                       <button
-                        className="bg-[#C3B17D] text-[#F2ECE1] text-sm md:text-xl  hover:bg-[#C4AD77] rounded-md  py-2 px-8  focus:outline-none focus:shadow-outline"
+                        className="bg-[#C3B17D] text-[#F2ECE1] text-sm md:text-xl  hover:bg-[#C4AD77] rounded-md  py-2 px-8 "
                         type="submit"
                       >
                         Send
