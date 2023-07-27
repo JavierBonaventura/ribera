@@ -140,7 +140,7 @@ const Family = () => {
 
               <div class="container mx-auto max-w-screen-xl">
                 <div class="flex flex-col gap-y-2 md:gap-y-5 pt-5 pb-32 md:w-3/4 mx-auto px-10 md:px-32">
-                  <div className="flex flex-col gap-y-4 md:gap-y-2">
+                  <div className="flex flex-col">
                     <h1
                       style={playfairFontBlack}
                       class="text-[#C4AC77] font-bold text-lg md:text-3xl tracking-wide"
@@ -148,13 +148,12 @@ const Family = () => {
                       1883
                     </h1>
                     <h2
-                      class="uppercase text-[#C4AC77] text-sm  tracking-wide md:hidden"
+                      class="uppercase text-[#C4AC77] text-sm tracking-wide"
                       style={robotoFontRegular}
                     >
-                      Roots in patagonia
-                    </h2>
-                    <h2 class="uppercase text-[#C4AC77] text-xl tracking-wide hidden md:block ">
-                      Roots in patagonia
+                      <span className="text-sm md:text-xl">
+                        Roots in patagonia
+                      </span>
                     </h2>
                   </div>
                   <div>
