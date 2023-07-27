@@ -60,7 +60,7 @@ const FormularioContacto = () => {
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
           <div className="py-20 2xl:py-0   backgroundContacto  md:flex md:flex-col md:justify-end">
-            <header className="container mx-auto py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 ">
+            <header className="container mx-auto max-w-screen-xl py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 ">
               <div class="flex justify-between items-center  ">
                 <div class="w-24 md:w-36 ">
                   <Link to="/">
@@ -74,11 +74,11 @@ const FormularioContacto = () => {
                 </div>
               </div>
             </header>
-            <div className="hidden md:flex container mx-auto ">
+            <div className="hidden md:flex container mx-auto max-w-screen-xl">
               <img src={portada} alt="" className="" />
             </div>
 
-            <div className="pt-12 px-10 container mx-auto md:px-0 md:pt-0">
+            <div className="pt-12 px-10 container mx-auto max-w-screen-xl md:px-0 md:pt-0">
               <div className="hidden md:block">
                 <h1
                   class="uppercase text-[#c4b27d] text-4xl tracking-wider text-center"

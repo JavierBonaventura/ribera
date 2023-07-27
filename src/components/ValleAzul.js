@@ -43,7 +43,7 @@ const ValleAzul = () => {
         <animated.div style={{ ...style, width: "100%" }}>
           <div>
             <body class="bg-[#F2ECE1]">
-              <header className="container mx-auto py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 ">
+              <header className="container mx-auto max-w-screen-xl  py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 ">
                 <div class="flex justify-between items-center  ">
                   <div class="w-24 md:w-36 ">
                     <Link to="/">
@@ -58,18 +58,18 @@ const ValleAzul = () => {
                 </div>
               </header>
 
-              <div class="container mx-auto">
+              <div class="container mx-auto  max-w-screen-xl">
                 <div class="pt-16 md:pt-32">
                   <div class="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0">
                     <h1
                       style={playfairFontItalic}
-                      class="text-[#5f5f5e] text-xs md:text-xl tracking-widest"
+                      class="text-[#5f5f5e] text-xs md:text-base tracking-widest"
                     >
                       <i style={playfairFontItalic}>History</i>
                     </h1>
                     <h2
                       style={playfairFontBlack}
-                      className="text-base md:text-3xl text-[#C4AC77] text-center tracking-wider uppercase"
+                      className="text-base md:text-xl text-[#C4AC77] text-center tracking-wider uppercase"
                     >
                       Valle azul
                     </h2>
@@ -80,7 +80,7 @@ const ValleAzul = () => {
                   <img
                     src={paisajeValle}
                     alt=""
-                    class="w-full object-cover md:w-3/4 mx-auto"
+                    class="w-full object-cover md:w-2/3 mx-auto"
                   />
                 </div>
 
@@ -93,10 +93,10 @@ const ValleAzul = () => {
                 </div>
               </div>
 
-              <div class="container mx-auto">
+              <div class="container mx-auto  max-w-screen-xl">
                 <div class="pt-5 pb-10 flex flex-col gap-y-5">
                   <p
-                    class="text-black text-xs tracking-wider text-justify px-10 md:px-0 md:w-3/4 mx-auto md:text-lg"
+                    class="text-black text-xs tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto md:text-lg"
                     style={playfairFontRegular}
                   >
                     The story of this winery started in 2001, when italian
@@ -113,20 +113,20 @@ const ValleAzul = () => {
               </div>
 
               <div class=" bg-[#212121]">
-                <div class="container mx-auto py-5 px-4 md:px-0">
+                <div class="container mx-auto  max-w-screen-xl py-5 px-4 md:px-0">
                   <img
                     src={paisajeHistory}
                     alt=""
-                    class="-mb-10 md:-mb-24 w-full md:w-3/4 mx-auto"
+                    class="-mb-10 md:-mb-24 w-full md:w-2/3 mx-auto"
                   />
                 </div>
               </div>
 
-              <div class="container mx-auto bg-[#F2ECE1]">
+              <div class="container mx-auto  max-w-screen-xl bg-[#F2ECE1]">
                 <div class="pt-10 md:pt-24 flex flex-col gap-y-5">
                   <div class="">
                     <p
-                      class="text-black text-xs tracking-wider text-justify px-10 md:px-0 md:w-3/4 mx-auto md:text-lg"
+                      class="text-black text-xs tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto md:text-lg"
                       style={playfairFontRegular}
                     >
                       When we first tasted the 2008 vintage, we knew Noemi had
@@ -145,7 +145,7 @@ const ValleAzul = () => {
                 </div>
               </div>
 
-              <div class="container mx-auto bg-[#F2ECE1]">
+              <div class="container mx-auto  max-w-screen-xl bg-[#F2ECE1]">
                 <div class="py-20">
                   <div class="flex justify-center">
                     <a

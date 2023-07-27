@@ -122,13 +122,9 @@ const MenuDesktop = () => {
                       />
                     </Link>
                   </div>
-                  <div className="flex justify-center py-10 2xl:py-16">
+                  <div className="flex justify-center py-10 2xl:py-12 ">
                     <Link to="/">
-                      <img
-                        src={logoDesktop}
-                        alt="Logo"
-                        className="w-32 2xl:w-44"
-                      />
+                      <img src={logoDesktop} alt="Logo" className="w-36" />
                     </Link>
                   </div>
 

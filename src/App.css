@@ -179,8 +179,7 @@ body {
 }
 
 .awssld__bullets {
-
- margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .awssld__bullets button {
@@ -196,7 +195,8 @@ body {
   overflow: hidden;
   cursor: pointer;
   border: none;
-  transition: transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45), background-color 0.175s ease-out;
+  transition: transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45),
+    background-color 0.175s ease-out;
 }
 
 .awssld__bullets .awssld__bullets--active {
@@ -214,12 +214,12 @@ body {
 
 .awssld__next {
   width: 80px !important;
-  margin-right: 200px !important;  /* Adjust the right margin as needed */
+  margin-right: 200px !important; /* Adjust the right margin as needed */
 }
 
 .awssld__prev {
   width: 80px !important;
-  margin-left: 200px !important;  /* Adjust the left margin as needed */
+  margin-left: 200px !important; /* Adjust the left margin as needed */
 }
 /*   
 } */

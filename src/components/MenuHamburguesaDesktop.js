@@ -109,13 +109,13 @@ const MenuHamburguesaDesktop = () => {
           >
             <div className="w-full h-full">
               <div className="border border-[#F2ECE1] w-full h-full p-2 relative flex flex-col justify-center items-center">
-                <div className="w-full h-full border border-[#F2ECE1] ">
-                  <div className="flex justify-end items-center ">
+                <div className="w-full h-full border border-[#F2ECE1]  flex flex-col justify-center relative ">
+                  <div className="flex justify-end items-center absolute top-0 right-0">
                     <Link to="/">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="100"
-                        height="100"
+                        width="80"
+                        height="80"
                         viewBox="0 0 100 100"
                       >
                         <circle
@@ -145,7 +145,7 @@ const MenuHamburguesaDesktop = () => {
                       </svg>
                     </Link>
                   </div>
-                  <div className="flex justify-center py-0 2xl:py-10">
+                  <div className="flex justify-center py-0 2xl:pb-5 hidden">
                     <Link to="/">
                       <img
                         src={logoDesktop}
@@ -155,7 +155,7 @@ const MenuHamburguesaDesktop = () => {
                     </Link>
                   </div>
 
-                  <div className="flex justify-center w-2/3 2xl:w-2/3 mx-auto  py-7 2xl:py-0">
+                  <div className="flex justify-center w-2/3 2xl:w-2/3 mx-auto ">
                     <div
                       id="menu1"
                       onMouseEnter={handleMenu1Hover}
@@ -354,7 +354,7 @@ const MenuHamburguesaDesktop = () => {
                   </div>
 
                   <div
-                    className="flex flex-col gap-y-2 justify-center w-2/3 2xl:w-1/3 mx-auto pt-2 2xl:pt-10 "
+                    className="flex flex-col gap-y-2 justify-center w-2/3 2xl:w-1/3 mx-auto pt-5"
                     style={robotoFontRegular}
                   >
                     <div className="w-full flex justify-center items-center gap-x-16 text-xl">
