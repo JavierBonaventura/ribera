@@ -15,7 +15,10 @@ import AraucanaVineyard from "./components/AraucanaVineyard";
 import WorkVineyard from "./components/WorkVineyard";
 import WorkVineyardDesktop from "./components/WorkVineyardDesktop";
 import WorkWinery from "./components/WorkWinery";
+import WorkWineryDesktop from "./components/WorkWineryDesktop";
 import LifeOnEstate from "./components/LifeOnEstate";
+import LifeOnEstateDesktop from "./components/LifeOnEstateDesktop";
+
 import LifeWater from "./components/LifeWater";
 import WinesWorld from "./components/WinesWorld";
 import WinesArgentina from "./components/WinesArgentina";
@@ -106,8 +109,19 @@ const AppContent = () => {
               ) : (
                 <Route path="/workvineyard" element={<WorkVineyardDesktop />} />
               )}
-              <Route path="/workwinery" element={<WorkWinery />} />
-              <Route path="/lifeonestate" element={<LifeOnEstate />} />
+
+              {windowWidth < 768 ? (
+                <Route path="/workwinery" element={<WorkWinery />} />
+              ) : (
+                <Route path="/workwinery" element={<WorkWineryDesktop />} />
+              )}
+
+              {windowWidth < 768 ? (
+                <Route path="/lifeonestate" element={<LifeOnEstate />} />
+              ) : (
+                <Route path="/lifeonestate" element={<LifeOnEstateDesktop />} />
+              )}
+
               <Route path="/lifewater" element={<LifeWater />} />
               <Route path="/winesworld" element={<WinesWorld />} />
               <Route path="/winesargentina" element={<WinesArgentina />} />

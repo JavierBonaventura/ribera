@@ -200,10 +200,18 @@ body {
 }
 
 .awssld__bullets .awssld__bullets--active {
-  transform: scale(1.5);
+transform: scale(2.5) !important;
+
+
   --control-bullet-active-color: #cab57e;
   background: var(--control-bullet-active-color);
+
 }
+
+
+
+
+
 
 .awssld__controls__arrow-right {
   opacity: 0 !important;
@@ -221,5 +229,18 @@ body {
   width: 80px !important;
   margin-left: 200px !important;  /* Adjust the left margin as needed */
 }
+
+/* styles.css (o cualquier otro nombre que le hayas dado) */
+
+/* Estilos para los botones de navegación */
+
+
+
+
+
+  
+
+
+
 /*   
 } */

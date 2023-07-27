@@ -1,9 +1,9 @@
 import React from "react";
-import workVineyardSlide1 from "../images/pruning.jpg";
-import workVineyardSlide2 from "../images/trellising.jpg";
-import workVineyardSlide3 from "../images/disbudding.jpg";
-import workVineyardSlide4 from "../images/workVineyardSlide4.jpg";
-import workVineyardSlide5 from "../images/ancient.jpg";
+import workVineyardSlide1 from "../images/fermentation.jpg";
+import workVineyardSlide2 from "../images/aging.jpg";
+import workVineyardSlide3 from "../images/blending.jpg";
+import workVineyardSlide4 from "../images/bottling.jpeg";
+import workVineyardSlide5 from "../images/cellaring.jpg";
 
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
@@ -19,30 +19,28 @@ import rightArrowImage from "../images/flechaDerecha.png";
 const slides = [
   {
     src: workVineyardSlide1,
-    title: "PRUNING",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    title: "FERMENTATION",
+    text: "Winemaking takes place in small open-top vats, and every step is executed with meticulous care by hand.Throughout this stage, we maintain minimal intervention, striving to foster spontaneous fermentation while upholding utmost respect for the terroir. Our approach to sulfites is traditional and conservative, adding only a small amount to safeguard the wines against oxidation and preserve their microbiology. We entrust the vineyard itself to guide us in determining the ideal moment for harvest, ensuring maximum expression.  Each fermentation vat is filled with two thousand kilos of grapes, and we adhere to traditional methods throughout the process: manual pressing, deslestage, particularly with our Malbec grapes, and gentle pumping-over during the final stages.",
   },
   {
     src: workVineyardSlide2,
-    title: "TRELLISING",
-
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    title: "AGING",
+    text: "Once the wines complete their fermentation, they embark on a journey of aging in barrels. Only a fraction, around twenty to thirty percent, of the barrels used are new, as we strive to strike a delicate balance and avoid overwhelming the wines with oak.",
   },
   {
     src: workVineyardSlide3,
-    title: "DISBUDDING",
-
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    title: "BLENDING",
+    text: " After a patient aging period of twelve to fourteen months, the time comes to craft the blends. In this phase, our decisions are driven by the unique characteristics of each barrel. Each barrel possesses its own distinct identity, and through careful tasting, we determine which expression will harmonize best with its contents.",
   },
   {
     src: workVineyardSlide4,
-    title: "HARVERST",
+    title: "BOTTLING AND LABELING",
 
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
   {
     src: workVineyardSlide5,
-    title: "ANCIENT TECHNIQUES",
+    title: "CELLARING",
 
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
@@ -120,7 +118,7 @@ const WorkVineyardDesktop = () => {
                   {" "}
                   Patagonian Spirit
                 </div>
-                WORK IN THE VINEYARD
+                WORK IN THE WINERY
               </div>
             </div>
 

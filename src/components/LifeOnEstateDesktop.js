@@ -1,9 +1,8 @@
 import React from "react";
-import workVineyardSlide1 from "../images/pruning.jpg";
-import workVineyardSlide2 from "../images/trellising.jpg";
-import workVineyardSlide3 from "../images/disbudding.jpg";
-import workVineyardSlide4 from "../images/workVineyardSlide4.jpg";
-import workVineyardSlide5 from "../images/ancient.jpg";
+import workVineyardSlide1 from "../images/introHourses.jpg";
+import workVineyardSlide2 from "../images/wineYardSlide2.jpg";
+import workVineyardSlide3 from "../images/wineYardSlide3.jpg";
+import workVineyardSlide4 from "../images/hourses.jpg";
 
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
@@ -19,32 +18,26 @@ import rightArrowImage from "../images/flechaDerecha.png";
 const slides = [
   {
     src: workVineyardSlide1,
-    title: "PRUNING",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    title: "LOREM IPSUM",
+    text: "Horses are a way of life: living with horses slows things down, allowing us perspective and to connect with nature, to go through life in a more relaxed and profound way",
   },
   {
     src: workVineyardSlide2,
-    title: "TRELLISING",
+    title: "THE HOUSE",
 
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    text: " Countess Noemi Marone Cinzano identified this unique location and laid the foundations for what is now Bodega Ribera del Cuarzo. Similarly to Italian vineyards, she decided to build a house next to the winery. Patagonian in style with inviting architecture and a small garden with a view of the valley that leads down to the river, the house is where we rest after work and where we gather as a family to enjoy the holidays. It’s also where we think, plan, and make decisions with our colleagues, sharing our table with them in what has become the family home.",
   },
   {
     src: workVineyardSlide3,
-    title: "DISBUDDING",
+    title: "THE RIVER",
 
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    text: "The Rio Negro is the largest river in Patagonia. The Limay and Neuquén rivers gather water and minerals from mountain snowmelt before flowing into the central and eastern parts of the country, eventually merging to form the Rio Negro.  The Rio Negro reaches the sea in the south of the Buenos Aires Province, in a small town called El Cóndor. It meanders between two imposing <i>barda</i> walls, one to the north and the other to the south, which have been formed over millions of years. In 1860, Estanislao Ceballos described them as river terraces, and they contribute invaluable calcium carbonate, stone, quartz, and ash to the landscape. Today, the river flows through  the center of this valley, a valley nestled between bardas  ",
   },
   {
     src: workVineyardSlide4,
-    title: "HARVERST",
+    title: "THE HORSES",
 
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  },
-  {
-    src: workVineyardSlide5,
-    title: "ANCIENT TECHNIQUES",
-
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    text: " Maintaining traditional working methods helps us to keep in touch with the land, a connection that defines us as farmers. At the estate, we also raise Criollo horses, the famous Argentine breed. In addition to using tractors and other machinery that improve the efficiency of certain tasks, working with animals is a way of respecting and caring for nature in all our interventions, always working towards producing the best possible flavor.",
   },
 ];
 
@@ -120,7 +113,7 @@ const WorkVineyardDesktop = () => {
                   {" "}
                   Patagonian Spirit
                 </div>
-                WORK IN THE VINEYARD
+                LIFE ON THE ESTATE
               </div>
             </div>
 
@@ -149,7 +142,7 @@ const WorkVineyardDesktop = () => {
                       }}
                     >
                       {"0" + (index + 1)}
-                      <sup className="text-base underline align-middle	">5</sup>
+                      <sup className="text-base underline align-middle	">4</sup>
                     </div>
                     <div>{slide.title}</div>
                   </div>
