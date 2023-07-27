@@ -112,7 +112,7 @@ const FormularioContacto = () => {
                           Name
                         </label>
                         <input
-                          className="text-sm md:text-base bg-transparent md:py-1  border-b border-b-white rounded-none border-t-0 border-l-0 border-r-0 w-full text-[#F4EDE2] leading-tight"
+                          className="text-sm md:text-base bg-transparent md:py-1 border-b border-b-white rounded-none border-t-0 border-l-0 border-r-0 w-full text-[#F4EDE2] leading-tight"
                           id="nombre"
                           type="text"
                           value={nombre}
@@ -120,7 +120,7 @@ const FormularioContacto = () => {
                           required
                         />
                       </div>
-                      <div className="border-b border-b-white">
+                      <div className="">
                         <label
                           className="block text-[#F4EDE2] text-sm md:text-xl"
                           htmlFor="apellido"
@@ -128,7 +128,7 @@ const FormularioContacto = () => {
                           Last name
                         </label>
                         <input
-                          className="text-sm md:text-base bg-transparent  md:py-1  w-full text-[#F4EDE2] leading-tight"
+                          className="text-sm md:text-base bg-transparent  md:py-1 border-b border-b-white rounded-none border-t-0 border-l-0 border-r-0  w-full text-[#F4EDE2] leading-tight"
                           id="apellido"
                           type="text"
                           value={apellido}
@@ -145,7 +145,7 @@ const FormularioContacto = () => {
                         E-mail
                       </label>
                       <input
-                        className="text-sm md:text-base bg-transparent md:py-1 border-b  w-full   text-[#F4EDE2] leading-tight"
+                        className="text-sm md:text-base bg-transparent md:py-1 border-b border-b-white rounded-none border-t-0 border-l-0 border-r-0 w-full   text-[#F4EDE2] leading-tight"
                         id="email"
                         type="email"
                         value={email}
@@ -161,7 +161,7 @@ const FormularioContacto = () => {
                         Country
                       </label>
                       <input
-                        className="text-sm md:text-base bg-transparent md:py-1 border-b  w-full text-[#F4EDE2] leading-tight"
+                        className="text-sm md:text-base bg-transparent md:py-1 border-b border-b-white rounded-none border-t-0 border-l-0 border-r-0  w-full text-[#F4EDE2] leading-tight"
                         id="pais"
                         type="text"
                         value={pais}
@@ -177,7 +177,7 @@ const FormularioContacto = () => {
                         Message
                       </label>
                       <textarea
-                        className="text-sm md:text-base border-b bg-transparent  w-full pb-14  text-[#F4EDE2] leading-tight"
+                        className="text-sm md:text-base border-b border-b-white rounded-none border-t-0 border-l-0 border-r-0 bg-transparent  w-full pb-14  text-[#F4EDE2] leading-tight"
                         id="consulta"
                         value={consulta}
                         onChange={(e) => setConsulta(e.target.value)}
