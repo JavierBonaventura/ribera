@@ -50,13 +50,14 @@ body {
   background-image: url("./images/background-contact-mob.jpg");
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 100%;
 }
 
 @media screen and (min-width: 768px) {
   .backgroundContacto {
     background-image: none;
     background-color: black;
+    height: 100vh;
   }
 }
 
@@ -200,18 +201,11 @@ body {
 }
 
 .awssld__bullets .awssld__bullets--active {
-transform: scale(2.5) !important;
-
+  transform: scale(2.5) !important;
 
   --control-bullet-active-color: #cab57e;
   background: var(--control-bullet-active-color);
-
 }
-
-
-
-
-
 
 .awssld__controls__arrow-right {
   opacity: 0 !important;
@@ -233,14 +227,6 @@ transform: scale(2.5) !important;
 /* styles.css (o cualquier otro nombre que le hayas dado) */
 
 /* Estilos para los botones de navegación */
-
-
-
-
-
-  
-
-
 
 /*   
 } */

@@ -59,7 +59,7 @@ const FormularioContacto = () => {
     >
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
-          <div className="py-20 2xl:py-0   backgroundContacto  md:flex md:flex-col md:justify-end">
+          <div className="py-20  2xl:py-0 backgroundContacto  md:flex md:flex-col md:justify-end">
             <header className="container mx-auto max-w-screen-xl py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 ">
               <div class="flex justify-between items-center  ">
                 <div class="w-24 md:w-36 ">
