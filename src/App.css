@@ -224,6 +224,10 @@ body {
   margin-left: 200px !important; /* Adjust the left margin as needed */
 }
 
+.fade-transition {
+  transition: opacity 1s ease-in-out;
+}
+
 /* styles.css (o cualquier otro nombre que le hayas dado) */
 
 /* Estilos para los botones de navegación */

@@ -18,7 +18,7 @@ import WorkWinery from "./components/WorkWinery";
 import WorkWineryDesktop from "./components/WorkWineryDesktop";
 import LifeOnEstate from "./components/LifeOnEstate";
 import LifeOnEstateDesktop from "./components/LifeOnEstateDesktop";
-
+import CarouselSlider from "./components/CarouselSlider"
 import LifeWater from "./components/LifeWater";
 import WinesWorld from "./components/WinesWorld";
 import WinesArgentina from "./components/WinesArgentina";
@@ -94,6 +94,8 @@ const AppContent = () => {
               />
             )}
             <Routes location={item}>
+            <Route path="/carouselslider" element={<CarouselSlider />} />
+
               {windowWidth < 768 ? (
                 <Route path="/" element={<Menu />} />
               ) : (
