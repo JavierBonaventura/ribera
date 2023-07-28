@@ -112,7 +112,7 @@ const CarouselSlider = () => {
         {images.map((image, index) => (
           <div
             key={index}
-            className={`w-full  brightness-50 ${
+            className={`w-full   ${
               activeIndex === index ? "visible" : "invisible"
             }`}
             style={{
@@ -124,13 +124,13 @@ const CarouselSlider = () => {
               alt={`Image ${index + 1}`}
               className={`w-full h-screen object-cover ${
                 activeIndex === index
-                  ? "fade-transition opacity-100"
+                  ? "fade-transition brightness-50 opacity-100"
                   : "fade-transition opacity-0"
               }`}
             />
 
             {activeIndex === index && (
-              <div className="absolute bottom-10 left-0 right-0 flex justify-center">
+              <div className="absolute bottom-10 left-0 right-0 flex justify-center ">
                 {renderIndicators()}
               </div>
             )}
@@ -173,7 +173,7 @@ const CarouselSlider = () => {
 
         <button
           aria-label="previous"
-          className={`absolute top-1/2 left-40 ${
+          className={`w-24 absolute top-1/2 left-40 ${
             isPrevButtonHovered ? "opacity-50" : "opacity-100"
           }`}
           onClick={handlePrevClick}
@@ -196,7 +196,7 @@ const CarouselSlider = () => {
             <sup className="text-base underline align-middle	">5</sup>
           </p>
         </div>
-        <div className="w-32 container mx-auto py-1/2 fixed -top-32 left-0 right-0  px-5 absolute inset-0 flex items-center justify-center ">
+        <div className="w-96 container mx-auto py-1/2 fixed -top-32 left-0 right-0  px-5 absolute inset-0 flex items-center justify-center ">
           <p
             style={robotoFontRegular}
             className=" uppercase text-[#C4AC77] text-2xl mb-8"
@@ -214,7 +214,7 @@ const CarouselSlider = () => {
         </div>
         <button
           aria-label="next"
-          className={`absolute top-1/2 right-40 ${
+          className={`w-24 absolute top-1/2 right-40 ${
             isNextButtonHovered ? "opacity-50" : "opacity-100"
           }`}
           onClick={handleNextClick}
