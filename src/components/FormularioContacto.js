@@ -224,8 +224,9 @@ const FormularioContacto = () => {
                       target="_blank"
                     >
                       <h3 className="text-sm md:text-base text-center md:text-left">
-                        Route Prov.Nro 7 KM 12, Lot-8 <br />
-                        Valle Azul, El Cuy, Río Negro.{" "}
+                        Route Prov.Nro 7 KM 12
+                        <br />
+                        Valle Azul, El Cuy, Río Negro.
                         <br className="hidden md:block" /> CP: 8336
                       </h3>
                     </a>

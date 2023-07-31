@@ -47,7 +47,7 @@ const MenuDesktop = () => {
   });
 
   const dropdownAnimation4 = useSpring({
-    height: mostrarMenu4 ? "120px" : "0px",
+    height: mostrarMenu4 ? "140px" : "0px",
     opacity: mostrarMenu4 ? 1 : 0,
     overflow: "hidden",
     config: { duration: 300 },
@@ -243,7 +243,17 @@ const MenuDesktop = () => {
                                     className="subMenu tracking-widest"
                                     style={robotoFontRegular}
                                   >
-                                    Araucana Río de los Ciervos
+                                    Araucana Río de los Ciervos Malbec
+                                  </p>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/winesargentina#posicion1">
+                                  <p
+                                    className="subMenu tracking-widest"
+                                    style={robotoFontRegular}
+                                  >
+                                    Araucana Río de los Ciervos Pinot Noir
                                   </p>
                                 </Link>
                               </li>

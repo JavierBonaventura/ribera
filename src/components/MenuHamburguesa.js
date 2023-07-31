@@ -54,7 +54,7 @@ const Home = () => {
   });
 
   const dropdownAnimation4 = useSpring({
-    height: mostrarMenu4 ? "120px" : "0px",
+    height: mostrarMenu4 ? "140px" : "0px",
     opacity: mostrarMenu4 ? 1 : 0,
     overflow: "hidden",
     config: { duration: 300 },
@@ -322,18 +322,26 @@ const Home = () => {
                           </Link>
                         </li>
                         <li>
-                          {" "}
                           <Link to="/winesworld#posicion1">
                             <p
                               className="subMenu tracking-widest"
                               style={robotoFontRegular}
                             >
-                              Araucana Río de los Ciervos
+                              Araucana Río de los Ciervos Malbec
                             </p>
                           </Link>
                         </li>
                         <li>
-                          {" "}
+                          <Link to="/winesworld#posicion1">
+                            <p
+                              className="subMenu tracking-widest"
+                              style={robotoFontRegular}
+                            >
+                              Araucana Río de los Ciervos Pinot Noir
+                            </p>
+                          </Link>
+                        </li>
+                        <li>
                           <Link to="/winesworld#posicion2">
                             <p
                               className="subMenu tracking-widest"
