@@ -222,68 +222,15 @@ const MenuDesktop = () => {
                               style={robotoFontRegular}
                               onClick={opcion4}
                             >
-                              IN THE WORLD
+                              IN ARGENTINA
                             </p>
                           </li>
                           <animated.div style={dropdownAnimation4}>
                             <ul className="text-center  -space-y-2">
                               <li>
-                                <Link to="/winesworld">
-                                  <p
-                                    className="subMenu tracking-widest  "
-                                    style={robotoFontRegular}
-                                  >
-                                    View all
-                                  </p>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link to="/winesworld#posicion1">
-                                  <p
-                                    className="subMenu tracking-widest"
-                                    style={robotoFontRegular}
-                                  >
-                                    Ribera del Cuarzo Clásico
-                                  </p>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link to="/winesworld#posicion2">
-                                  <p
-                                    className="subMenu tracking-widest"
-                                    style={robotoFontRegular}
-                                  >
-                                    Ribera del Cuarzo Especial
-                                  </p>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link to="/winesworld#posicion3">
-                                  <p
-                                    className="subMenu tracking-widest"
-                                    style={robotoFontRegular}
-                                  >
-                                    Ribera del Cuarzo Reserva Estibada
-                                  </p>
-                                </Link>
-                              </li>
-                            </ul>
-                          </animated.div>
-                          <li>
-                            <p
-                              className="!mb-0 subMenu tracking-widest"
-                              style={robotoFontRegular}
-                              onClick={opcion5}
-                            >
-                              IN ARGENTINA
-                            </p>
-                          </li>
-                          <animated.div style={dropdownAnimation5}>
-                            <ul className="text-center  -space-y-3 ">
-                              <li>
                                 <Link to="/winesargentina">
                                   <p
-                                    className="subMenu tracking-widest"
+                                    className="subMenu tracking-widest  "
                                     style={robotoFontRegular}
                                   >
                                     View all
@@ -322,27 +269,61 @@ const MenuDesktop = () => {
                               </li>
                             </ul>
                           </animated.div>
+                          <li>
+                            <p
+                              className="!mb-0 subMenu tracking-widest"
+                              style={robotoFontRegular}
+                              onClick={opcion5}
+                            >
+                              IN THE WORLD
+                            </p>
+                          </li>
+                          <animated.div style={dropdownAnimation5}>
+                            <ul className="text-center  -space-y-3 ">
+                              <li>
+                                <Link to="/winesworld">
+                                  <p
+                                    className="subMenu tracking-widest"
+                                    style={robotoFontRegular}
+                                  >
+                                    View all
+                                  </p>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/winesworld#posicion1">
+                                  <p
+                                    className="subMenu tracking-widest"
+                                    style={robotoFontRegular}
+                                  >
+                                    Ribera del Cuarzo Clásico
+                                  </p>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/winesworld#posicion2">
+                                  <p
+                                    className="subMenu tracking-widest"
+                                    style={robotoFontRegular}
+                                  >
+                                    Ribera del Cuarzo Especial
+                                  </p>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/winesworld#posicion3">
+                                  <p
+                                    className="subMenu tracking-widest"
+                                    style={robotoFontRegular}
+                                  >
+                                    Ribera del Cuarzo Reserva Estibada
+                                  </p>
+                                </Link>
+                              </li>
+                            </ul>
+                          </animated.div>
                         </ul>
                       </animated.div>
-
-                      {/* <p
-                  style={playfairFontRegular}
-                  className="text-center menu-desk sombra-menu tracking-wider  pb-5"
-                >
-                  Wines
-                </p>
-                <p
-                  style={robotoFontRegular}
-                  className="text-center subMenu tracking-widest"
-                >
-                  IN THE WORLD
-                </p>
-                <p
-                  style={robotoFontRegular}
-                  className="text-center subMenu tracking-widest"
-                >
-                  IN ARGENTINA
-                </p> */}
                     </div>
                   </div>
                 </div>
@@ -364,14 +345,17 @@ const MenuDesktop = () => {
                       <div>
                         <Link
                           to="/contacto"
-                          className="hover:text-[#cab57e]"
+                          className="hover:text-[#cab57e]  duration-300 transition ease-in-out"
                           style={robotoFontRegular}
                         >
                           Contact
                         </Link>
                       </div>
                       <div>
-                        <a href="" className="hover:text-[#cab57e]">
+                        <a
+                          href=""
+                          className="hover:text-[#cab57e]  duration-300 transition ease-in-out"
+                        >
                           News
                         </a>
                       </div>

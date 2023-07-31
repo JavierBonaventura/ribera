@@ -4,6 +4,7 @@ import "../App.css";
 import logo from "../images/logo.svg";
 import { useSpring, animated } from "@react-spring/web";
 import iconIg from "../images/icon-ig.png";
+import close from "../images/icon-close.svg";
 import { useLocation } from "react-router-dom";
 import { Transition } from "@react-spring/web";
 
@@ -135,49 +136,17 @@ const Home = () => {
     >
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
-          <div className="containerHome pt-8 backgroundHambuerguesa">
+          <div className="containerHome pt-8 backgroundHambuerguesa ">
             <header className="container mx-auto py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 ">
               <div class="flex justify-between items-center">
-                <div class="w-24 md:w-36 ">
+                <div class="w-24 md:w-36 pb-2">
                   <Link to="/">
-                    <img src={logo} alt="" className="w-full xl:w-28" />
+                    <img src={logo} alt="" className="w-full" />
                   </Link>
                 </div>
-
-                <div class=" absolute top-4 -right-3">
+                <div class="w-12 pt-2">
                   <Link to="/">
-                    <svg
-                      className=""
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="100"
-                      height="100"
-                      viewBox="0 0 100 100"
-                    >
-                      <circle
-                        cx="50"
-                        cy="50"
-                        r="16"
-                        stroke="#C3B17D"
-                        fill="transparent"
-                        strokeWidth="2"
-                      />
-                      <line
-                        x1="44"
-                        y1="44"
-                        x2="56"
-                        y2="56"
-                        stroke="#C3B17D"
-                        strokeWidth="2"
-                      />
-                      <line
-                        x1="44"
-                        y1="56"
-                        x2="56"
-                        y2="44"
-                        stroke="#C3B17D"
-                        strokeWidth="2"
-                      />
-                    </svg>
+                    <img src={close} alt="" className="w-full" />
                   </Link>
                 </div>
               </div>
@@ -336,16 +305,73 @@ const Home = () => {
                         style={robotoFontRegular}
                         onClick={opcion4}
                       >
-                        WINES IN THE WORLD
+                        WINES IN ARGENTINA
                       </p>
                     </li>
                     <animated.div style={dropdownAnimation4}>
                       <ul className="text-center  -space-y-2">
                         <li>
                           {" "}
-                          <Link to="/winesworld">
+                          <Link to="/winesargentina">
                             <p
                               className="subMenu tracking-widest  "
+                              style={robotoFontRegular}
+                            >
+                              View all
+                            </p>
+                          </Link>
+                        </li>
+                        <li>
+                          {" "}
+                          <Link to="/winesworld#posicion1">
+                            <p
+                              className="subMenu tracking-widest"
+                              style={robotoFontRegular}
+                            >
+                              Araucana Río de los Ciervos
+                            </p>
+                          </Link>
+                        </li>
+                        <li>
+                          {" "}
+                          <Link to="/winesworld#posicion2">
+                            <p
+                              className="subMenu tracking-widest"
+                              style={robotoFontRegular}
+                            >
+                              Araucana Malbec
+                            </p>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/winesworld#posicion3">
+                            <p
+                              className="subMenu tracking-widest"
+                              style={robotoFontRegular}
+                            >
+                              Araucana Azul
+                            </p>
+                          </Link>
+                        </li>
+                      </ul>
+                    </animated.div>
+                    <li>
+                      {" "}
+                      <p
+                        className="!mb-0 subMenu tracking-widest"
+                        style={robotoFontRegular}
+                        onClick={opcion5}
+                      >
+                        WINES IN THE WORLD
+                      </p>
+                    </li>
+                    <animated.div style={dropdownAnimation5}>
+                      <ul className="text-center  -space-y-3 ">
+                        <li>
+                          {" "}
+                          <Link to="/winesworld">
+                            <p
+                              className="subMenu tracking-widest"
                               style={robotoFontRegular}
                             >
                               View all
@@ -382,63 +408,6 @@ const Home = () => {
                               style={robotoFontRegular}
                             >
                               Ribera del Cuarzo Reserva Estibada
-                            </p>
-                          </Link>
-                        </li>
-                      </ul>
-                    </animated.div>
-                    <li>
-                      {" "}
-                      <p
-                        className="!mb-0 subMenu tracking-widest"
-                        style={robotoFontRegular}
-                        onClick={opcion5}
-                      >
-                        WINES IN ARGENTINA
-                      </p>
-                    </li>
-                    <animated.div style={dropdownAnimation5}>
-                      <ul className="text-center  -space-y-3 ">
-                        <li>
-                          {" "}
-                          <Link to="/winesworld">
-                            <p
-                              className="subMenu tracking-widest"
-                              style={robotoFontRegular}
-                            >
-                              View all
-                            </p>
-                          </Link>
-                        </li>
-                        <li>
-                          {" "}
-                          <Link to="/winesworld#posicion1">
-                            <p
-                              className="subMenu tracking-widest"
-                              style={robotoFontRegular}
-                            >
-                              Araucana Río de los Ciervos
-                            </p>
-                          </Link>
-                        </li>
-                        <li>
-                          {" "}
-                          <Link to="/winesworld#posicion2">
-                            <p
-                              className="subMenu tracking-widest"
-                              style={robotoFontRegular}
-                            >
-                              Araucana Malbec
-                            </p>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/winesworld#posicion3">
-                            <p
-                              className="subMenu tracking-widest"
-                              style={robotoFontRegular}
-                            >
-                              Araucana Azul
                             </p>
                           </Link>
                         </li>

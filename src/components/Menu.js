@@ -4,6 +4,7 @@ import "../App.css";
 import logo from "../images/logo-menu.png";
 import { useSpring, animated } from "@react-spring/web";
 import hambur from "../images/menu-hambur.png";
+import iconIg from "../images/icon-ig-form.png";
 import { useLocation } from "react-router-dom";
 import { Transition } from "@react-spring/web";
 
@@ -256,68 +257,15 @@ const Home = () => {
                         style={robotoFontRegular}
                         onClick={opcion4}
                       >
-                        IN THE WORLD
+                        IN ARGENTINA
                       </p>
                     </li>
                     <animated.div style={dropdownAnimation4}>
                       <ul className="text-center  -space-y-2">
                         <li>
-                          <Link to="/winesworld">
-                            <p
-                              className="subMenu tracking-widest  "
-                              style={robotoFontRegular}
-                            >
-                              View all
-                            </p>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/winesworld#posicion1">
-                            <p
-                              className="subMenu tracking-widest"
-                              style={robotoFontRegular}
-                            >
-                              Ribera del Cuarzo Clásico
-                            </p>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/winesworld#posicion2">
-                            <p
-                              className="subMenu tracking-widest"
-                              style={robotoFontRegular}
-                            >
-                              Ribera del Cuarzo Especial
-                            </p>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/winesworld#posicion3">
-                            <p
-                              className="subMenu tracking-widest"
-                              style={robotoFontRegular}
-                            >
-                              Ribera del Cuarzo Reserva Estibada
-                            </p>
-                          </Link>
-                        </li>
-                      </ul>
-                    </animated.div>
-                    <li>
-                      <p
-                        className="!mb-0 subMenu tracking-widest"
-                        style={robotoFontRegular}
-                        onClick={opcion5}
-                      >
-                        IN ARGENTINA
-                      </p>
-                    </li>
-                    <animated.div style={dropdownAnimation5}>
-                      <ul className="text-center  -space-y-3 ">
-                        <li>
                           <Link to="/winesargentina">
                             <p
-                              className="subMenu tracking-widest"
+                              className="subMenu tracking-widest  "
                               style={robotoFontRegular}
                             >
                               View all
@@ -356,11 +304,64 @@ const Home = () => {
                         </li>
                       </ul>
                     </animated.div>
+                    <li>
+                      <p
+                        className="!mb-0 subMenu tracking-widest"
+                        style={robotoFontRegular}
+                        onClick={opcion5}
+                      >
+                        IN THE WORLD
+                      </p>
+                    </li>
+                    <animated.div style={dropdownAnimation5}>
+                      <ul className="text-center  -space-y-3 ">
+                        <li>
+                          <Link to="/winesworld">
+                            <p
+                              className="subMenu tracking-widest"
+                              style={robotoFontRegular}
+                            >
+                              View all
+                            </p>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/winesworld#posicion1">
+                            <p
+                              className="subMenu tracking-widest"
+                              style={robotoFontRegular}
+                            >
+                              Ribera del Cuarzo Clásico
+                            </p>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/winesworld#posicion2">
+                            <p
+                              className="subMenu tracking-widest"
+                              style={robotoFontRegular}
+                            >
+                              Ribera del Cuarzo Especial
+                            </p>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/winesworld#posicion3">
+                            <p
+                              className="subMenu tracking-widest"
+                              style={robotoFontRegular}
+                            >
+                              Ribera del Cuarzo Reserva Estibada
+                            </p>
+                          </Link>
+                        </li>
+                      </ul>
+                    </animated.div>
                   </ul>
                 </animated.div>
               </div>
             </div>
-            <div className="flex flex-col text-center pt-5 pb-10 ">
+            <div className="flex flex-col text-center pt-0  gap-y-4 ">
               <Link
                 to="/contacto"
                 className="footerItems tracking-widest"
@@ -368,13 +369,22 @@ const Home = () => {
               >
                 Contact
               </Link>
-              <br></br>
+
               <p
                 style={robotoFontRegular}
                 className="footerItems tracking-widest"
               >
                 News
               </p>
+
+              <div className="container mx-auto flex justify-center">
+                <a
+                  href="https://www.instagram.com/riberadelcuarzo/"
+                  target="_blank"
+                >
+                  <img src={iconIg} alt="" className="w-5" />
+                </a>
+              </div>
             </div>
           </div>
         </animated.div>

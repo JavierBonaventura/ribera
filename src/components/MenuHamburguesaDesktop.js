@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import fondoHamburguesaDesktop from "../images/fondoHamburguesaDesktop.png";
 import logoDesktop from "../images/logo.svg";
+import logo from "../images/logo.svg";
+import close from "../images/icon-close.svg";
+import iconIg from "../images/icon-ig.png";
 import { Link } from "react-router-dom";
 import { Transition } from "@react-spring/web";
 import { useSpring, animated } from "@react-spring/web";
@@ -107,44 +110,61 @@ const MenuHamburguesaDesktop = () => {
             className={`h-screen bg-[imagen] bg-no-repeat bg-cover bg-center relative p-5`}
             style={{ backgroundImage: `url(${fondoHamburguesaDesktop})` }}
           >
-            <div className="w-full h-full">
-              <div className="border border-[#F2ECE1] w-full h-full p-2 relative flex flex-col justify-center items-center">
-                <div className="w-full h-full border border-[#F2ECE1]  flex flex-col justify-center relative ">
-                  <div className="flex justify-end items-center absolute top-0 right-0">
+            <div className="left-1/2 z-50 top-8 transform -translate-x-1/2 max-w-screen-xl container mx-auto absolute ">
+              {" "}
+              <header className="py-10  px-5 md:px-0 md:py-2 ">
+                <div class="flex justify-between items-center  ">
+                  <div class="w-24 md:w-36 ">
                     <Link to="/">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="80"
-                        height="80"
-                        viewBox="0 0 100 100"
-                      >
-                        <circle
-                          cx="50"
-                          cy="50"
-                          r="16"
-                          stroke="#C3B17D"
-                          fill="transparent"
-                          strokeWidth="2"
-                        />
-                        <line
-                          x1="44"
-                          y1="44"
-                          x2="56"
-                          y2="56"
-                          stroke="#C3B17D"
-                          strokeWidth="2"
-                        />
-                        <line
-                          x1="44"
-                          y1="56"
-                          x2="56"
-                          y2="44"
-                          stroke="#C3B17D"
-                          strokeWidth="2"
-                        />
-                      </svg>
+                      <img src={logo} alt="" className="w-full xl:w-28" />
                     </Link>
                   </div>
+                  <div class="">
+                    <Link to="/">
+                      <img src={close} alt="" className="w-14" />
+                    </Link>
+                  </div>
+                </div>
+              </header>
+            </div>
+            <div className="flex justify-end items-center absolute top-0 right-0 hidden">
+              <Link to="/">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="80"
+                  height="80"
+                  viewBox="0 0 100 100"
+                >
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="16"
+                    stroke="#C3B17D"
+                    fill="transparent"
+                    strokeWidth="2"
+                  />
+                  <line
+                    x1="44"
+                    y1="44"
+                    x2="56"
+                    y2="56"
+                    stroke="#C3B17D"
+                    strokeWidth="2"
+                  />
+                  <line
+                    x1="44"
+                    y1="56"
+                    x2="56"
+                    y2="44"
+                    stroke="#C3B17D"
+                    strokeWidth="2"
+                  />
+                </svg>
+              </Link>
+            </div>
+            <div className="w-full h-full">
+              <div className="border border-[#F2ECE1] w-full h-full p-2 relative flex flex-col justify-center items-center">
+                <div className="w-full h-full border border-[#F2ECE1]  flex flex-col justify-center  ">
                   <div className="flex justify-center py-0 2xl:pb-5 hidden">
                     <Link to="/">
                       <img
@@ -248,68 +268,15 @@ const MenuHamburguesaDesktop = () => {
                               style={robotoFontRegular}
                               onClick={opcion4}
                             >
-                              IN THE WORLD
+                              IN ARGENTINA
                             </p>
                           </li>
                           <animated.div style={dropdownAnimation4}>
                             <ul className="text-center  -space-y-2">
                               <li>
-                                <Link to="/winesworld">
-                                  <p
-                                    className="subMenu tracking-widest  "
-                                    style={robotoFontRegular}
-                                  >
-                                    View all
-                                  </p>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link to="/winesworld#posicion1">
-                                  <p
-                                    className="subMenu tracking-widest"
-                                    style={robotoFontRegular}
-                                  >
-                                    Ribera del Cuarzo Clásico
-                                  </p>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link to="/winesworld#posicion2">
-                                  <p
-                                    className="subMenu tracking-widest"
-                                    style={robotoFontRegular}
-                                  >
-                                    Ribera del Cuarzo Especial
-                                  </p>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link to="/winesworld#posicion3">
-                                  <p
-                                    className="subMenu tracking-widest"
-                                    style={robotoFontRegular}
-                                  >
-                                    Ribera del Cuarzo Reserva Estibada
-                                  </p>
-                                </Link>
-                              </li>
-                            </ul>
-                          </animated.div>
-                          <li>
-                            <p
-                              className="!mb-0 subMenu tracking-widest"
-                              style={robotoFontRegular}
-                              onClick={opcion5}
-                            >
-                              IN ARGENTINA
-                            </p>
-                          </li>
-                          <animated.div style={dropdownAnimation5}>
-                            <ul className="text-center  -space-y-3 ">
-                              <li>
                                 <Link to="/winesargentina">
                                   <p
-                                    className="subMenu tracking-widest"
+                                    className="subMenu tracking-widest  "
                                     style={robotoFontRegular}
                                   >
                                     View all
@@ -343,6 +310,59 @@ const MenuHamburguesaDesktop = () => {
                                     style={robotoFontRegular}
                                   >
                                     Araucana Azul
+                                  </p>
+                                </Link>
+                              </li>
+                            </ul>
+                          </animated.div>
+                          <li>
+                            <p
+                              className="!mb-0 subMenu tracking-widest"
+                              style={robotoFontRegular}
+                              onClick={opcion5}
+                            >
+                              IN THE WORLD
+                            </p>
+                          </li>
+                          <animated.div style={dropdownAnimation5}>
+                            <ul className="text-center  -space-y-3 ">
+                              <li>
+                                <Link to="/winesworld">
+                                  <p
+                                    className="subMenu tracking-widest"
+                                    style={robotoFontRegular}
+                                  >
+                                    View all
+                                  </p>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/winesworld#posicion1">
+                                  <p
+                                    className="subMenu tracking-widest"
+                                    style={robotoFontRegular}
+                                  >
+                                    Ribera del Cuarzo Clásico
+                                  </p>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/winesworld#posicion2">
+                                  <p
+                                    className="subMenu tracking-widest"
+                                    style={robotoFontRegular}
+                                  >
+                                    Ribera del Cuarzo Especial
+                                  </p>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/winesworld#posicion3">
+                                  <p
+                                    className="subMenu tracking-widest"
+                                    style={robotoFontRegular}
+                                  >
+                                    Ribera del Cuarzo Reserva Estibada
                                   </p>
                                 </Link>
                               </li>
@@ -384,20 +404,33 @@ const MenuHamburguesaDesktop = () => {
                   </div>
                 </div>
 
-                <div className="absolute bottom-5 2xl:bottom-5 w-full">
-                  <div className="flex justify-around items-center w-full text-[#F2ECE1] ">
-                    <div className="w-1/3  flex justify-center items-center"></div>
+                <div className="absolute bottom-5 2xl:bottom-5 w-full container mx-auto max-w-screen-xl">
+                  <div className="flex justify-around items-center w-full text-[#F2ECE1]">
+                    <div className="w-1/3 flex justify-center items-center">
+                      <a
+                        href="https://www.instagram.com/riberadelcuarzo/"
+                        target="_blank"
+                      >
+                        <img src={iconIg} alt="LogoIg" className="w-5" />
+                      </a>
+                    </div>
                     <div
                       className="flex justify-center items-center w-1/3 gap-x-20 text-base "
                       style={robotoFontRegular}
                     >
                       <div>
-                        <a href="" className="hover:text-[#cab57e]">
+                        <a
+                          href=""
+                          className="hover:text-[#cab57e] duration-300 transition ease-in-out"
+                        >
                           Fact Sheet
                         </a>
                       </div>
                       <div>
-                        <a href="" className="hover:text-[#cab57e]">
+                        <a
+                          href=""
+                          className="hover:text-[#cab57e] duration-300 transition ease-in-out"
+                        >
                           Virtual Tour
                         </a>
                       </div>
