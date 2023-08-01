@@ -146,13 +146,11 @@ const CarouselSlider = () => {
         {images.map((_, index) => (
           <div key={index} className="relative mx-5">
             {" "}
-
             <div
               className={`w-2 h-2 rounded-full ${
                 activeIndex === index ? "bg-[#cab57e]" : "bg-[#cab57e]"
               }`}
             >
-             
               {activeIndex === index && (
                 <div
                   className="absolute w-7 h-7 rounded-full border-2 border-[#cab57e]"
@@ -168,7 +166,7 @@ const CarouselSlider = () => {
 
   return (
     <div className="relative">
-      <div className="overflow-hidden rounded-lg">
+      <div className="overflow-hidden">
         {renderImages()}
 
         <button
@@ -180,7 +178,7 @@ const CarouselSlider = () => {
           onMouseEnter={() => setIsPrevButtonHovered(true)}
           onMouseLeave={() => setIsPrevButtonHovered(false)}
           style={{
-            transition: "transform 0.3s", 
+            transition: "transform 0.3s",
             transform: isPrevButtonHovered ? "scale(0.9)" : "scale(1)",
           }}
         >
@@ -221,8 +219,8 @@ const CarouselSlider = () => {
           onMouseEnter={() => setIsNextButtonHovered(true)}
           onMouseLeave={() => setIsNextButtonHovered(false)}
           style={{
-            transition: "transform 0.3s", 
-            transform: isNextButtonHovered ? "scale(0.9)" : "scale(1)", 
+            transition: "transform 0.3s",
+            transform: isNextButtonHovered ? "scale(0.9)" : "scale(1)",
           }}
         >
           <img src={rightArrowImage} alt="derecha" />

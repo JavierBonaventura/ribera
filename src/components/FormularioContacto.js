@@ -4,7 +4,6 @@ import "../App.css";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
 import iconIg from "../images/icon-ig-form.png";
-import iconDownload from "../images/icon-download.png";
 import { useLocation } from "react-router-dom";
 import { Transition, animated } from "@react-spring/web";
 import portada from "../images/background-contact.jpg";
@@ -16,13 +15,6 @@ const FormularioContacto = () => {
     fontFamily: "Playfair Regular, sans-serif",
     fontWeight: "normal",
     fontStyle: "normal",
-  };
-
-  const robotoFontRegular = {
-    fontFamily: "Roboto Regular , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-    fontSize: "16px",
   };
 
   const playfairFontBold = {
@@ -59,7 +51,7 @@ const FormularioContacto = () => {
     >
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
-          <div className="py-20  2xl:py-0 backgroundContacto  md:flex md:flex-col md:justify-end">
+          <div className="py-20  md:py-0 backgroundContacto  md:!bg-black ">
             <header className="container mx-auto max-w-screen-xl py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 ">
               <div class="flex justify-between items-center  ">
                 <div class="w-24 md:w-36 ">
@@ -74,11 +66,15 @@ const FormularioContacto = () => {
                 </div>
               </div>
             </header>
-            <div className="hidden md:flex container mx-auto max-w-screen-xl">
-              <img src={portada} alt="" className="" />
+            <div className="hidden md:flex container mx-auto max-w-screen-xl  absolute top-0 left-1/2 transform -translate-x-1/2 h-2/5  w-2/3">
+              <img
+                src={portada}
+                alt=""
+                className=" mx-auto object-cover w-full"
+              />
             </div>
 
-            <div className="pt-12 px-10 container mx-auto max-w-screen-xl md:px-0 md:pt-0">
+            <div className=" pt-12 px-10 container mx-auto max-w-screen-xl md:px-0 md:pt-56  md:w-2/3 ">
               <div className="hidden md:block">
                 <h1
                   class="uppercase text-[#c4b27d] text-4xl tracking-wider text-center"

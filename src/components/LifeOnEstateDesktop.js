@@ -46,12 +46,7 @@ const CarouselSlider = () => {
     "The Rio Negro is the largest river in Patagonia. The Limay and Neuquén rivers gather water and minerals from mountain snowmelt before flowing into the central and eastern parts of the country, eventually merging to form the Rio Negro.  The Rio Negro reaches the sea in the south of the Buenos Aires Province, in a small town called El Cóndor. It meanders between two imposing barda walls, one to the north and the other to the south, which have been formed over millions of years. In 1860, Estanislao Ceballos described them as river terraces, and they contribute invaluable calcium carbonate, stone, quartz, and ash to the landscape. ",
     "Maintaining traditional working methods helps us to keep in touch with the land, a connection that defines us as farmers. At the estate, we also raise Criollo horses, the famous Argentine breed. In addition to using tractors and other machinery that improve the efficiency of certain tasks, working with animals is a way of respecting and caring for nature in all our interventions, always working towards producing the best possible flavor.",
   ];
-  const title = [
-    "LOREM IPSUM",
-    "THE HOUSE",
-    "THE RIVER",
-    "THE HORSES",
-  ];
+  const title = ["LOREM IPSUM", "THE HOUSE", "THE RIVER", "THE HORSES"];
   const [activeIndex, setActiveIndex] = useState(0);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -142,13 +137,11 @@ const CarouselSlider = () => {
         {images.map((_, index) => (
           <div key={index} className="relative mx-5">
             {" "}
-
             <div
               className={`w-2 h-2 rounded-full ${
                 activeIndex === index ? "bg-[#cab57e]" : "bg-[#cab57e]"
               }`}
             >
-             
               {activeIndex === index && (
                 <div
                   className="absolute w-7 h-7 rounded-full border-2 border-[#cab57e]"
@@ -164,7 +157,7 @@ const CarouselSlider = () => {
 
   return (
     <div className="relative">
-      <div className="overflow-hidden rounded-lg">
+      <div className="overflow-hidden ">
         {renderImages()}
 
         <button
@@ -176,7 +169,7 @@ const CarouselSlider = () => {
           onMouseEnter={() => setIsPrevButtonHovered(true)}
           onMouseLeave={() => setIsPrevButtonHovered(false)}
           style={{
-            transition: "transform 0.3s", 
+            transition: "transform 0.3s",
             transform: isPrevButtonHovered ? "scale(0.9)" : "scale(1)",
           }}
         >
@@ -189,7 +182,7 @@ const CarouselSlider = () => {
           >
             {" "}
             {"0" + (currentImageIndex + 1)}{" "}
-            <sup className="text-base underline align-middle	">5</sup>
+            <sup className="text-base underline align-middle	">4</sup>
           </p>
         </div>
         <div className="w-96 container mx-auto py-1/2 fixed -top-32 left-0 right-0  px-5 absolute inset-0 flex items-center justify-center ">
@@ -217,8 +210,8 @@ const CarouselSlider = () => {
           onMouseEnter={() => setIsNextButtonHovered(true)}
           onMouseLeave={() => setIsNextButtonHovered(false)}
           style={{
-            transition: "transform 0.3s", 
-            transform: isNextButtonHovered ? "scale(0.9)" : "scale(1)", 
+            transition: "transform 0.3s",
+            transform: isNextButtonHovered ? "scale(0.9)" : "scale(1)",
           }}
         >
           <img src={rightArrowImage} alt="derecha" />
