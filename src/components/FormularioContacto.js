@@ -52,6 +52,7 @@ const FormularioContacto = () => {
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
           <div className="py-20  md:py-0 backgroundContacto">
+            {/*HEADER START*/}
             <header className="container mx-auto max-w-screen-xl py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 ">
               <div class="flex justify-between items-center  ">
                 <div class="w-24 md:w-36 ">
@@ -66,15 +67,21 @@ const FormularioContacto = () => {
                 </div>
               </div>
             </header>
-            <div className="hidden md:flex container mx-auto max-w-screen-xl  absolute top-0 left-1/2 transform -translate-x-1/2 h-2/5  w-2/3">
+            {/*HEADER END*/}
+
+            {/*PORTADA DESK START*/}
+            <div className="hidden md:flex container mx-auto max-w-screen-xl  absolute top-0 left-1/2 transform -translate-x-1/2 h-2/5  ">
               <img
                 src={portada}
                 alt=""
-                className=" mx-auto object-cover w-full"
+                className=" mx-auto object-cover  w-3/4"
               />
             </div>
+            {/*PORTADA DESK END*/}
 
-            <div className=" pt-12 px-10 container mx-auto max-w-screen-xl md:px-0 md:pt-56  md:w-2/3 ">
+            {/*CONTENIDO GENERAL START*/}
+            <div className=" pt-12 px-10 container mx-auto max-w-screen-xl md:px-0 md:pt-[25rem] ">
+              {/*TITULAR DESK START*/}
               <div className="hidden md:block">
                 <h1
                   class="uppercase text-[#c4b27d] text-4xl tracking-wider text-center"
@@ -83,8 +90,11 @@ const FormularioContacto = () => {
                   Contact
                 </h1>
               </div>
+              {/*TITULAR DESK START*/}
 
-              <div className="grid grid-cols-1 md:grid-cols-2 text-white md:py-5 ">
+              {/*FORMULARIO START*/}
+              <div className="grid grid-cols-1 md:grid-cols-2 text-white md:py-5  md:w-3/4 md:mx-auto ">
+                {/*TITULAR MOB START*/}
                 <div className="block md:hidden">
                   <h1
                     class="uppercase text-[#c4b27d] text-xl tracking-wider text-center"
@@ -93,7 +103,10 @@ const FormularioContacto = () => {
                     Contact
                   </h1>
                 </div>
-                <div className="md:w-3/4 md:mx-auto md:order-2 ">
+                {/*TITULAR MOB END*/}
+
+                {/*INPUTS START*/}
+                <div className="md:w-full md:mx-auto md:order-2">
                   <form
                     onSubmit={handleSubmit}
                     className="pt-6 pb-8 mb-4 md:w-full md:py-0 md:mt-5"
@@ -190,12 +203,14 @@ const FormularioContacto = () => {
                     </div>
                   </form>
                 </div>
+                {/*INPUTS END*/}
 
+                {/*INFORMACION START*/}
                 <div
-                  className="text-[#F4EDE2] flex flex-col gap-y-4 md:justify-around md:items-center md:py-0 md:order-1"
+                  className="text-[#F4EDE2] flex flex-col gap-y-4 md:justify-around md:items-start md:py-0 md:order-1  md:w-full"
                   style={playfairFontRegular}
                 >
-                  <div className="flex flex-col gap-y-2  md:w-1/2  xl:w-1/3">
+                  <div className="flex flex-col gap-y-2  ">
                     <h2 className="text-lg text-[#c4b27d] md:text-3xl text-center md:text-left">
                       Our offices
                     </h2>
@@ -210,7 +225,7 @@ const FormularioContacto = () => {
                       </h3>
                     </a>
                   </div>
-                  <div className="flex flex-col gap-y-2  md:w-1/2  xl:w-1/3">
+                  <div className="flex flex-col gap-y-2">
                     <h2 className="text-lg text-[#c4b27d] md:text-3xl text-center md:text-left">
                       Our winery
                     </h2>
@@ -227,7 +242,7 @@ const FormularioContacto = () => {
                       </h3>
                     </a>
                   </div>
-                  <div className="md:w-1/2 xl:w-1/3">
+                  <div className="">
                     <h2 className="text-lg text-[#c4b27d] uppercase md:text-3xl text-center md:text-left">
                       ¡Follow us!
                     </h2>
@@ -243,8 +258,11 @@ const FormularioContacto = () => {
                     </a>
                   </div>
                 </div>
+                {/*INFORMACION END*/}
               </div>
+              {/*FORMULARIO END*/}
             </div>
+            {/*CONTENIDO GENERAL END*/}
           </div>
         </animated.div>
       )}
