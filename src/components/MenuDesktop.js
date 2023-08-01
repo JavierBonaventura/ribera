@@ -9,9 +9,55 @@ import { useSpring, animated } from "@react-spring/web";
 import { useLocation } from "react-router-dom";
 
 const MenuDesktop = () => {
-  const location = useLocation();
+
 
   const [isMenu1Hovered, setMenu1Hovered] = useState(false);
+  const [isMenu2Hovered, setMenu2Hovered] = useState(false);
+  const [isMenu3Hovered, setMenu3Hovered] = useState(false);
+
+  const [isMenu1Visible, setMenu1Visible] = useState(true);
+  const [isMenu2Visible, setMenu2Visible] = useState(true);
+  const [isMenu3Visible, setMenu3Visible] = useState(true);
+
+  const handleMenu1Hover = () => {
+    setMenu1Hovered(true);
+    setMenu2Visible(false); // Hide menu2 when hovering over menu1
+    setMenu3Visible(false); // Hide menu3 when hovering over menu1
+  };
+
+  const handleMenu1Leave = () => {
+    setMenu1Hovered(false);
+    setMenu2Visible(true); // Show menu2 when leaving menu1
+    setMenu3Visible(true); // Show menu3 when leaving menu1
+  };
+
+  
+  const handleMenu2Hover = () => {
+    setMenu2Hovered(true);
+    setMenu1Visible(false); // Hide menu2 when hovering over menu1
+    setMenu3Visible(false); // Hide menu3 when hovering over menu1
+  };
+
+  const handleMenu2Leave = () => {
+    setMenu2Hovered(false);
+    setMenu1Visible(true); // Show menu2 when leaving menu1
+    setMenu3Visible(true); // Show menu3 when leaving menu1
+  };
+
+  const handleMenu3Hover = () => {
+    setMenu3Hovered(true);
+    setMenu1Visible(false); // Hide menu2 when hovering over menu1
+    setMenu2Visible(false); // Hide menu3 when hovering over menu1
+  };
+
+  const handleMenu3Leave = () => {
+    setMenu3Hovered(false);
+    setMenu1Visible(true); // Show menu2 when leaving menu1
+    setMenu2Visible(true); // Show menu3 when leaving menu1
+  };
+
+  const location = useLocation();
+
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
     fontWeight: "normal",
@@ -24,14 +70,7 @@ const MenuDesktop = () => {
     fontStyle: "normal",
   };
 
-  const handleMenu1Hover = () => {
-    console.log("test");
-    setMenu1Hovered(true);
-  };
 
-  const handleMenu1Leave = () => {
-    setMenu1Hovered(false);
-  };
 
   const [mostrarMenu1, setMostrarMenu1] = useState(false);
   const [mostrarMenu2, setMostrarMenu2] = useState(false);
@@ -133,7 +172,7 @@ const MenuDesktop = () => {
                       id="menu1"
                       onMouseEnter={handleMenu1Hover}
                       onMouseLeave={handleMenu1Leave}
-                      className="flex flex-col items-center  w-full"
+                      className={`flex flex-col items-center w-full transition-opacity duration-500 ${isMenu2Hovered || isMenu3Hovered ? "opacity-30" : "opacity-100"}`}
                     >
                       <p
                         style={playfairFontRegular}
@@ -159,7 +198,10 @@ const MenuDesktop = () => {
 
                     <div
                       id="menu2"
-                      className="flex flex-col items-center w-full "
+                      onMouseEnter={handleMenu2Hover}
+                      onMouseLeave={handleMenu2Leave}
+
+                      className={`flex flex-col items-center w-full transition-opacity duration-500 ${isMenu1Hovered || isMenu3Hovered ? "opacity-30" : "opacity-100"}`}
                     >
                       <p
                         style={playfairFontRegular}
@@ -206,7 +248,10 @@ const MenuDesktop = () => {
 
                     <div
                       id="menu3"
-                      className="flex flex-col items-center w-full "
+                      onMouseEnter={handleMenu3Hover}
+                      onMouseLeave={handleMenu3Leave}
+
+                      className={`flex flex-col items-center w-full transition-opacity duration-500 ${isMenu1Hovered || isMenu2Hovered ? "opacity-30" : "opacity-100"}`}
                     >
                       <p
                         style={playfairFontRegular}
