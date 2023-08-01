@@ -57,6 +57,7 @@ body {
   .backgroundContacto {
     background-image: none;
     background-color: black;
+    height: 100vh;
   }
 }
 
