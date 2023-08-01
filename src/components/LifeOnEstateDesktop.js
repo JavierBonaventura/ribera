@@ -67,23 +67,23 @@ const CarouselSlider = () => {
   const renderImages = () => {
     return (
       <div className="transition-all ease-in-out duration-500 relative">
-        <header className="container mx-auto py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 ">
-          <div class="flex justify-between items-center  ">
-            <div class="w-24 md:w-36 ">
+        <header className="container mx-auto py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2  max-w-screen-xl">
+          <div class="flex justify-between items-center">
+            <div class="w-24 md:w-28">
               <Link to="/">
-                <img src={logo} alt="" className="w-full xl:w-28" />
+                <img src={logo} alt="" className="w-full" />
               </Link>
             </div>
-            <div class=" w-10 h-10 mt-4">
+            <div class="mt-4">
               <Link to="/MenuHamburguesa">
-                <img src={hambur} alt="" className="w-7" />
-              </Link>{" "}
+                <img src={hambur} alt="" className="w-7 " />
+              </Link>
             </div>
           </div>
         </header>
         <div
           id="pataginan"
-          className="container mx-auto py-10 fixed top-10 left-0 right-0 z-50 px-5 "
+          className="container mx-auto  max-w-screen-xl py-10 fixed top-10 left-0 right-0 z-50 px-5 "
         >
           <div class="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0">
             <h1
@@ -175,7 +175,7 @@ const CarouselSlider = () => {
         >
           <img src={leftArrowImage} alt="izquierda" />
         </button>
-        <div className=" w-32 container  py-1/2 fixed -top-60 left-72 right-0  px-5 absolute inset-0 flex items-center justify-center ">
+        <div className=" w-32 container   max-w-screen-xl   py-1/2 fixed -top-60 left-72 right-0  px-5 absolute inset-0 flex items-center justify-center ">
           <p
             style={playfairFontBlack}
             className=" uppercase text-[#C4AC77] text-3xl mb-8"
@@ -185,7 +185,7 @@ const CarouselSlider = () => {
             <sup className="text-base underline align-middle	">4</sup>
           </p>
         </div>
-        <div className="w-96 container mx-auto py-1/2 fixed -top-32 left-0 right-0  px-5 absolute inset-0 flex items-center justify-center ">
+        <div className="w-96 container   max-w-screen-xl mx-auto py-1/2 fixed -top-32 left-0 right-0  px-5 absolute inset-0 flex items-center justify-center ">
           <p
             style={robotoFontRegular}
             className=" uppercase text-[#C4AC77] text-2xl mb-8"
@@ -193,7 +193,7 @@ const CarouselSlider = () => {
             {title[currentImageIndex]}
           </p>
         </div>
-        <div className=" w-2/4 container mx-auto py-1/2 fixed top-40 left-0 right-0  px-5 absolute inset-0 flex items-center justify-center ">
+        <div className=" w-2/4 container mx-auto   max-w-screen-xl py-1/2 fixed top-40 left-0 right-0  px-5 absolute inset-0 flex items-center justify-center ">
           <p
             style={playfairFontRegular}
             className=" text-white text-lg tracking-wider text-center mb-6"
