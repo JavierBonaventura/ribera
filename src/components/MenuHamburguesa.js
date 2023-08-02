@@ -137,14 +137,14 @@ const Home = () => {
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
           <div className="containerHome pt-8 backgroundHambuerguesa ">
-            <header className="container mx-auto py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 ">
+            <header className="container mx-auto py-0 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 ">
               <div class="flex justify-between items-center">
-                <div class="w-24 md:w-36 pb-2">
+                <div class="w-24 md:w-36 pt-0">
                   <Link to="/">
                     <img src={logo} alt="" className="w-full" />
                   </Link>
                 </div>
-                <div class="w-12 pt-2">
+                <div class="w-12 mr-2 pt-3">
                   <Link to="/">
                     <img src={close} alt="" className="w-full" />
                   </Link>
@@ -196,36 +196,30 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="body ">
-              <div className="containerHome pt-36 pb-10">
+            <div className="body pt-24 ">
+              <div className="containerHome gap-y-3">
                 <p
                   style={playfairFontRegular}
-                  className="menu sombra-menu tracking-wider "
+                  className="menu sombra-menu"
                   onClick={opcion1}
                 >
                   History
                 </p>
                 <animated.div style={dropdownAnimation1}>
-                  <ul className="text-center -mt-2 space-y-1">
+                  <ul className="text-center space-y-1.5">
                     <li>
-                      {" "}
-                      <Link
-                        to="/family"
-                        className="subMenu tracking-widest"
-                        style={robotoFontRegular}
-                      >
-                        FAMILY
+                      <Link to="/family" style={robotoFontRegular}>
+                        <span className="subMenu tracking-widest">FAMILY</span>
                       </Link>
                     </li>
 
                     <li>
                       {" "}
-                      <Link
-                        to="/valleazul"
-                        className="subMenu tracking-widest"
-                        style={robotoFontRegular}
-                      >
-                        VALLE AZUL, PATAGONIA
+                      <Link to="/valleazul" style={robotoFontRegular}>
+                        {" "}
+                        <span className="subMenu tracking-widest">
+                          VALLE AZUL, PATAGONIA
+                        </span>
                       </Link>
                     </li>
                   </ul>
@@ -233,57 +227,46 @@ const Home = () => {
 
                 <p
                   style={playfairFontRegular}
-                  className="menu sombra-menu px-2 tracking-wider"
+                  className="menu sombra-menu px-2 "
                   onClick={opcion2}
                 >
                   Patagonian Spirit
                 </p>
                 <animated.div style={dropdownAnimation2}>
-                  <ul className="text-center -mt-2 space-y-1">
+                  <ul className="text-center space-y-1.5">
                     <li>
-                      {" "}
-                      <Link
-                        to="/araucanavineyard"
-                        className="subMenu tracking-widest"
-                        style={robotoFontRegular}
-                      >
-                        ARAUCANA VINEYARD
+                      <Link to="/araucanavineyard" style={robotoFontRegular}>
+                        <span className="subMenu tracking-widest">
+                          ARAUCANA VINEYARD
+                        </span>
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        to="/workvineyard"
-                        className="subMenu tracking-widest"
-                        style={robotoFontRegular}
-                      >
-                        WORK IN THE VINEYARD
+                      <Link to="/workvineyard" style={robotoFontRegular}>
+                        <span className="subMenu tracking-widest">
+                          WORK IN THE VINEYARD
+                        </span>
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        to="/workwinery"
-                        className="subMenu tracking-widest"
-                        style={robotoFontRegular}
-                      >
-                        WORK IN THE WINERY
+                      <Link to="/workwinery" style={robotoFontRegular}>
+                        <span className="subMenu tracking-widest">
+                          WORK IN THE WINERY
+                        </span>
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        to="/lifeonestate"
-                        className="subMenu tracking-widest"
-                        style={robotoFontRegular}
-                      >
-                        LIFE ON THE ESTATE
+                      <Link to="/lifeonestate" style={robotoFontRegular}>
+                        <span className="subMenu tracking-widest">
+                          LIFE ON THE ESTATE
+                        </span>
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        to="/lifewater"
-                        className="subMenu tracking-widest"
-                        style={robotoFontRegular}
-                      >
-                        LIFE WATER
+                      <Link to="/lifewater" style={robotoFontRegular}>
+                        <span className="subMenu tracking-widest">
+                          LIFE WATER
+                        </span>
                       </Link>
                     </li>
                   </ul>
@@ -291,131 +274,111 @@ const Home = () => {
 
                 <p
                   style={playfairFontRegular}
-                  className="menu sombra-menu tracking-wider"
+                  className="menu sombra-menu"
                   onClick={opcion3}
                 >
                   Wines
                 </p>
                 <animated.div style={dropdownAnimation3}>
-                  <ul className="text-center  space-y-1">
+                  <ul className="text-center space-y-1.5">
                     <li>
-                      {" "}
-                      <p
-                        className="!mb-0 subMenu tracking-widest"
-                        style={robotoFontRegular}
-                        onClick={opcion4}
-                      >
-                        WINES IN ARGENTINA
+                      <p style={robotoFontRegular} onClick={opcion4}>
+                        <span className="!mb-0 subMenu tracking-widest">
+                          WINES IN ARGENTINA
+                        </span>
                       </p>
                     </li>
                     <animated.div style={dropdownAnimation4}>
-                      <ul className="text-center  -space-y-2">
+                      <ul className="text-center">
                         <li>
-                          {" "}
                           <Link to="/winesargentina">
-                            <p
-                              className="subMenu tracking-widest  "
-                              style={robotoFontRegular}
-                            >
-                              View all
+                            <p style={robotoFontRegular}>
+                              <span className="subMenu tracking-widest">
+                                View all
+                              </span>
                             </p>
                           </Link>
                         </li>
                         <li>
                           <Link to="/winesworld#posicion1">
-                            <p
-                              className="subMenu tracking-widest"
-                              style={robotoFontRegular}
-                            >
-                              Araucana Río de los Ciervos Malbec
+                            <p style={robotoFontRegular}>
+                              <span className="subMenu tracking-widest">
+                                Araucana Río de los Ciervos Malbec
+                              </span>
                             </p>
                           </Link>
                         </li>
                         <li>
                           <Link to="/winesworld#posicion1">
-                            <p
-                              className="subMenu tracking-widest"
-                              style={robotoFontRegular}
-                            >
-                              Araucana Río de los Ciervos Pinot Noir
+                            <p style={robotoFontRegular}>
+                              <span className="subMenu tracking-widest">
+                                Araucana Río de los Ciervos Pinot Noir
+                              </span>
                             </p>
                           </Link>
                         </li>
                         <li>
                           <Link to="/winesworld#posicion2">
-                            <p
-                              className="subMenu tracking-widest"
-                              style={robotoFontRegular}
-                            >
-                              Araucana Malbec
+                            <p style={robotoFontRegular}>
+                              <span className="subMenu tracking-widest">
+                                Araucana Malbec
+                              </span>
                             </p>
                           </Link>
                         </li>
                         <li>
                           <Link to="/winesworld#posicion3">
-                            <p
-                              className="subMenu tracking-widest"
-                              style={robotoFontRegular}
-                            >
-                              Araucana Azul
+                            <p style={robotoFontRegular}>
+                              <span className="subMenu tracking-widest">
+                                Araucana Azul
+                              </span>
                             </p>
                           </Link>
                         </li>
                       </ul>
                     </animated.div>
                     <li>
-                      {" "}
-                      <p
-                        className="!mb-0 subMenu tracking-widest"
-                        style={robotoFontRegular}
-                        onClick={opcion5}
-                      >
-                        WINES IN THE WORLD
+                      <p style={robotoFontRegular} onClick={opcion5}>
+                        <span className="!mb-0 subMenu tracking-widest">
+                          WINES IN THE WORLD
+                        </span>
                       </p>
                     </li>
                     <animated.div style={dropdownAnimation5}>
-                      <ul className="text-center  -space-y-3 ">
+                      <ul className="text-center">
                         <li>
-                          {" "}
                           <Link to="/winesworld">
-                            <p
-                              className="subMenu tracking-widest"
-                              style={robotoFontRegular}
-                            >
-                              View all
+                            <p style={robotoFontRegular}>
+                              <span className="subMenu tracking-widest">
+                                View all
+                              </span>
                             </p>
                           </Link>
                         </li>
                         <li>
-                          {" "}
                           <Link to="/winesworld#posicion1">
-                            <p
-                              className="subMenu tracking-widest"
-                              style={robotoFontRegular}
-                            >
-                              Ribera del Cuarzo Clásico
+                            <p style={robotoFontRegular}>
+                              <span className="subMenu tracking-widest">
+                                Ribera del Cuarzo Clásico
+                              </span>
                             </p>
                           </Link>
                         </li>
                         <li>
-                          {" "}
                           <Link to="/winesworld#posicion2">
-                            <p
-                              className="subMenu tracking-widest"
-                              style={robotoFontRegular}
-                            >
-                              Ribera del Cuarzo Especial
+                            <p style={robotoFontRegular}>
+                              <span className="subMenu tracking-widest">
+                                Ribera del Cuarzo Especial
+                              </span>
                             </p>
                           </Link>
                         </li>
                         <li>
-                          {" "}
                           <Link to="/winesworld#posicion3">
-                            <p
-                              className="subMenu tracking-widest"
-                              style={robotoFontRegular}
-                            >
-                              Ribera del Cuarzo Reserva Estibada
+                            <p style={robotoFontRegular}>
+                              <span className="subMenu tracking-widest">
+                                Ribera del Cuarzo Reserva Estibada
+                              </span>
                             </p>
                           </Link>
                         </li>
@@ -429,14 +392,14 @@ const Home = () => {
               <div className=" flex justify-between">
                 <Link
                   to="/contacto"
-                  className="text-xl footerItems tracking-widest hover:underline"
+                  className="text-lg footerItems tracking-widest hover:underline"
                   style={roboto}
                 >
                   Contact
                 </Link>
                 <p
                   style={roboto}
-                  className="text-xl footerItems tracking-widest  hover:underline"
+                  className="text-lg footerItems tracking-widest  hover:underline"
                 >
                   News
                 </p>

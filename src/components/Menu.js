@@ -150,13 +150,13 @@ const Home = () => {
             <div className="w-40 py-4">
               <Link to="/">
                 <img src={logo} alt="" className="" />
-              </Link>{" "}
+              </Link>
             </div>
             <div className="body  py-12 ">
-              <div className="containerHome gap-y-3  ">
+              <div className="containerHome gap-y-3">
                 <p
                   style={playfairFontRegular}
-                  className="menu sombra-menu "
+                  className="menu sombra-menu"
                   onClick={opcion1}
                 >
                   History
@@ -181,16 +181,15 @@ const Home = () => {
 
                 <p
                   style={playfairFontRegular}
-                  className="menu sombra-menu "
+                  className="menu sombra-menu"
                   onClick={opcion2}
                 >
                   Patagonian Spirit
                 </p>
                 <animated.div style={dropdownAnimation2}>
-                  <ul className="text-center -mt-2 space-y-1.5">
+                  <ul className="text-center space-y-1.5">
                     <li>
                       <Link to="/araucanavineyard" style={robotoFontRegular}>
-                        {" "}
                         <span className="subMenu tracking-widest">
                           ARAUCANA VINEYARD
                         </span>
@@ -198,7 +197,6 @@ const Home = () => {
                     </li>
                     <li>
                       <Link to="/workvineyard" style={robotoFontRegular}>
-                        {" "}
                         <span className="subMenu tracking-widest">
                           WORK IN THE VINEYARD
                         </span>
@@ -206,7 +204,6 @@ const Home = () => {
                     </li>
                     <li>
                       <Link to="/workwinery" style={robotoFontRegular}>
-                        {" "}
                         <span className="subMenu tracking-widest">
                           WORK IN THE WINERY
                         </span>
@@ -214,7 +211,6 @@ const Home = () => {
                     </li>
                     <li>
                       <Link to="/lifeonestate" style={robotoFontRegular}>
-                        {" "}
                         <span className="subMenu tracking-widest">
                           LIFE ON THE ESTATE
                         </span>
@@ -222,7 +218,6 @@ const Home = () => {
                     </li>
                     <li>
                       <Link to="/lifewater" style={robotoFontRegular}>
-                        {" "}
                         <span className="subMenu tracking-widest">
                           LIFE WATER
                         </span>
@@ -239,17 +234,16 @@ const Home = () => {
                   Wines
                 </p>
                 <animated.div style={dropdownAnimation3}>
-                  <ul className="text-center  space-y-1.5">
+                  <ul className="text-center space-y-1.5">
                     <li>
                       <p style={robotoFontRegular} onClick={opcion4}>
-                        {" "}
                         <span className="!mb-0 subMenu tracking-widest">
                           IN ARGENTINA
                         </span>
                       </p>
                     </li>
                     <animated.div style={dropdownAnimation4}>
-                      <ul className="text-center ">
+                      <ul className="text-center">
                         <li>
                           <Link to="/winesargentina">
                             <p style={robotoFontRegular}>
@@ -308,7 +302,7 @@ const Home = () => {
                       </p>
                     </li>
                     <animated.div style={dropdownAnimation5}>
-                      <ul className="text-center   ">
+                      <ul className="text-center">
                         <li>
                           <Link to="/winesworld">
                             <p style={robotoFontRegular}>
