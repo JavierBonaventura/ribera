@@ -34,10 +34,10 @@ body {
   flex-direction: column;
   align-items: center;
   position: relative;
-  overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   /* height: 100vh; */
   z-index: 1;
+  overflow-y: scroll;
 }
 .background {
   background-image: url("./images/background.png");
@@ -75,10 +75,7 @@ body {
 
 .menu {
   color: #f3eee3;
-  font-family: Conv_CormorantGaramond-Regular;
-  font-size: 35px;
-  margin-bottom: 15px;
-  line-height: 35px;
+  font-size: 2rem;
   cursor: pointer;
 }
 
@@ -97,11 +94,9 @@ body {
 
 .subMenu {
   text-decoration: none;
-  font-size: 13px;
+  font-size: 0.8rem;
   letter-spacing: 1.5px;
   color: #f3eee3;
-  margin-bottom: 16px;
-  font-family: Conv_maisonneue-book;
   cursor: pointer;
 }
 

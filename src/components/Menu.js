@@ -139,47 +139,41 @@ const Home = () => {
     >
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
-          <div className="containerHome  background pt-8">
+          <div className="containerHome  background  pt-8">
             <div className="w-full grid justify-items-end pr-6 ">
-              <div className="w-8">
+              <div className="w-6">
                 <Link to="/MenuHamburguesa">
                   <img src={hambur} alt="" className="w-full" />
                 </Link>
               </div>
             </div>
-            <div className="w-32  py-4">
+            <div className="w-40 py-4">
               <Link to="/">
                 <img src={logo} alt="" className="" />
               </Link>{" "}
             </div>
-            <div className="body  py-20">
-              <div className="containerHome">
+            <div className="body  py-12 ">
+              <div className="containerHome gap-y-3  ">
                 <p
                   style={playfairFontRegular}
-                  className="menu sombra-menu tracking-wider"
+                  className="menu sombra-menu "
                   onClick={opcion1}
                 >
                   History
                 </p>
                 <animated.div style={dropdownAnimation1}>
-                  <ul className="text-center -mt-2 space-y-1">
+                  <ul className="text-center space-y-1.5">
                     <li>
-                      <Link
-                        to="/family"
-                        className="subMenu tracking-widest"
-                        style={robotoFontRegular}
-                      >
-                        FAMILY
+                      <Link to="/family" style={robotoFontRegular}>
+                        <span className="subMenu tracking-widest">FAMILY</span>
                       </Link>
                     </li>
 
                     <li>
-                      <Link
-                        to="/valleazul"
-                        className="subMenu tracking-widest"
-                        style={robotoFontRegular}
-                      >
-                        VALLE AZUL, PATAGONIA
+                      <Link to="/valleazul" style={robotoFontRegular}>
+                        <span className="subMenu tracking-widest">
+                          VALLE AZUL, PATAGONIA
+                        </span>
                       </Link>
                     </li>
                   </ul>
@@ -187,56 +181,51 @@ const Home = () => {
 
                 <p
                   style={playfairFontRegular}
-                  className="menu sombra-menu px-2 tracking-wider"
+                  className="menu sombra-menu "
                   onClick={opcion2}
                 >
                   Patagonian Spirit
                 </p>
                 <animated.div style={dropdownAnimation2}>
-                  <ul className="text-center -mt-2 space-y-1">
+                  <ul className="text-center -mt-2 space-y-1.5">
                     <li>
-                      <Link
-                        to="/araucanavineyard"
-                        className="subMenu tracking-widest"
-                        style={robotoFontRegular}
-                      >
-                        ARAUCANA VINEYARD
+                      <Link to="/araucanavineyard" style={robotoFontRegular}>
+                        {" "}
+                        <span className="subMenu tracking-widest">
+                          ARAUCANA VINEYARD
+                        </span>
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        to="/workvineyard"
-                        className="subMenu tracking-widest"
-                        style={robotoFontRegular}
-                      >
-                        WORK IN THE VINEYARD
+                      <Link to="/workvineyard" style={robotoFontRegular}>
+                        {" "}
+                        <span className="subMenu tracking-widest">
+                          WORK IN THE VINEYARD
+                        </span>
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        to="/workwinery"
-                        className="subMenu tracking-widest"
-                        style={robotoFontRegular}
-                      >
-                        WORK IN THE WINERY
+                      <Link to="/workwinery" style={robotoFontRegular}>
+                        {" "}
+                        <span className="subMenu tracking-widest">
+                          WORK IN THE WINERY
+                        </span>
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        to="/lifeonestate"
-                        className="subMenu tracking-widest"
-                        style={robotoFontRegular}
-                      >
-                        LIFE ON THE ESTATE
+                      <Link to="/lifeonestate" style={robotoFontRegular}>
+                        {" "}
+                        <span className="subMenu tracking-widest">
+                          LIFE ON THE ESTATE
+                        </span>
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        to="/lifewater"
-                        className="subMenu tracking-widest"
-                        style={robotoFontRegular}
-                      >
-                        LIFE WATER
+                      <Link to="/lifewater" style={robotoFontRegular}>
+                        {" "}
+                        <span className="subMenu tracking-widest">
+                          LIFE WATER
+                        </span>
                       </Link>
                     </li>
                   </ul>
@@ -244,71 +233,66 @@ const Home = () => {
 
                 <p
                   style={playfairFontRegular}
-                  className="menu sombra-menu tracking-wider"
+                  className="menu sombra-menu"
                   onClick={opcion3}
                 >
                   Wines
                 </p>
                 <animated.div style={dropdownAnimation3}>
-                  <ul className="text-center  space-y-1">
+                  <ul className="text-center  space-y-1.5">
                     <li>
-                      <p
-                        className="!mb-0 subMenu tracking-widest"
-                        style={robotoFontRegular}
-                        onClick={opcion4}
-                      >
-                        IN ARGENTINA
+                      <p style={robotoFontRegular} onClick={opcion4}>
+                        {" "}
+                        <span className="!mb-0 subMenu tracking-widest">
+                          IN ARGENTINA
+                        </span>
                       </p>
                     </li>
                     <animated.div style={dropdownAnimation4}>
-                      <ul className="text-center  -space-y-2">
+                      <ul className="text-center ">
                         <li>
                           <Link to="/winesargentina">
-                            <p
-                              className="subMenu tracking-widest  "
-                              style={robotoFontRegular}
-                            >
-                              View all
+                            <p style={robotoFontRegular}>
+                              {" "}
+                              <span className="subMenu tracking-widest">
+                                View all
+                              </span>
                             </p>
                           </Link>
                         </li>
                         <li>
                           <Link to="/winesargentina#posicion1">
-                            <p
-                              className="subMenu tracking-widest"
-                              style={robotoFontRegular}
-                            >
-                              Araucana Río de los Ciervos Malbec
+                            <p style={robotoFontRegular}>
+                              <span className="subMenu tracking-widest">
+                                Araucana Río de los Ciervos Malbec
+                              </span>
                             </p>
                           </Link>
                         </li>
                         <li>
                           <Link to="/winesargentina#posicion1">
-                            <p
-                              className="subMenu tracking-widest"
-                              style={robotoFontRegular}
-                            >
-                              Araucana Río de los Ciervos Pinot Noir
+                            <p style={robotoFontRegular}>
+                              <span className="subMenu tracking-widest">
+                                Araucana Río de los Ciervos Pinot Noir
+                              </span>
                             </p>
                           </Link>
                         </li>
                         <li>
                           <Link to="/winesargentina#posicion2">
-                            <p
-                              className="subMenu tracking-widest"
-                              style={robotoFontRegular}
-                            >
-                              Araucana Malbec
+                            <p style={robotoFontRegular}>
+                              <span className="subMenu tracking-widest">
+                                Araucana Malbec
+                              </span>
                             </p>
                           </Link>
                         </li>
                         <li>
                           <Link to="/winesargentina#posicion3">
-                            <p
-                              className="subMenu tracking-widest"
-                              style={robotoFontRegular}
-                            >
-                              Araucana Azul
+                            <p style={robotoFontRegular}>
+                              <span className="subMenu tracking-widest">
+                                Araucana Azul
+                              </span>
                             </p>
                           </Link>
                         </li>
@@ -324,44 +308,40 @@ const Home = () => {
                       </p>
                     </li>
                     <animated.div style={dropdownAnimation5}>
-                      <ul className="text-center  -space-y-3 ">
+                      <ul className="text-center   ">
                         <li>
                           <Link to="/winesworld">
-                            <p
-                              className="subMenu tracking-widest"
-                              style={robotoFontRegular}
-                            >
-                              View all
+                            <p style={robotoFontRegular}>
+                              <span className="subMenu tracking-widest">
+                                View all
+                              </span>
                             </p>
                           </Link>
                         </li>
                         <li>
                           <Link to="/winesworld#posicion1">
-                            <p
-                              className="subMenu tracking-widest"
-                              style={robotoFontRegular}
-                            >
-                              Ribera del Cuarzo Clásico
+                            <p style={robotoFontRegular}>
+                              <span className="subMenu tracking-widest">
+                                Ribera del Cuarzo Clásico
+                              </span>
                             </p>
                           </Link>
                         </li>
                         <li>
                           <Link to="/winesworld#posicion2">
-                            <p
-                              className="subMenu tracking-widest"
-                              style={robotoFontRegular}
-                            >
-                              Ribera del Cuarzo Especial
+                            <p style={robotoFontRegular}>
+                              <span className="subMenu tracking-widest">
+                                Ribera del Cuarzo Especial
+                              </span>
                             </p>
                           </Link>
                         </li>
                         <li>
                           <Link to="/winesworld#posicion3">
-                            <p
-                              className="subMenu tracking-widest"
-                              style={robotoFontRegular}
-                            >
-                              Ribera del Cuarzo Reserva Estibada
+                            <p style={robotoFontRegular}>
+                              <span className="subMenu tracking-widest">
+                                Ribera del Cuarzo Reserva Estibada
+                              </span>
                             </p>
                           </Link>
                         </li>
