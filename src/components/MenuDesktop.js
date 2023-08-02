@@ -1,5 +1,11 @@
 import React, { useState } from "react";
 import fondoDesktop from "../images/fondoDesktop.png";
+import videoDesktop from "../images/videoHome.mp4";
+import videoHistory from "../images/videoHome.mp4";
+import videoWines from "../images/videoHome.mp4";
+import videoPatagonian from "../images/videoHome.mp4";
+
+
 import logoDesktop from "../images/logoDesktop.png";
 import hambur from "../images/menu-hambur.png";
 import iconIg from "../images/icon-ig-form.png";
@@ -9,6 +15,10 @@ import { useSpring, animated } from "@react-spring/web";
 import { useLocation } from "react-router-dom";
 
 const MenuDesktop = () => {
+  
+
+  const [currentVideo, setCurrentVideo] = useState(videoDesktop);
+
 
 
   const [isMenu1Hovered, setMenu1Hovered] = useState(false);
@@ -21,39 +31,49 @@ const MenuDesktop = () => {
 
   const handleMenu1Hover = () => {
     setMenu1Hovered(true);
-    setMenu2Visible(false); // Hide menu2 when hovering over menu1
-    setMenu3Visible(false); // Hide menu3 when hovering over menu1
+    setMenu2Visible(false); 
+    setMenu3Visible(false);
+    setCurrentVideo(videoHistory);
   };
 
   const handleMenu1Leave = () => {
     setMenu1Hovered(false);
-    setMenu2Visible(true); // Show menu2 when leaving menu1
-    setMenu3Visible(true); // Show menu3 when leaving menu1
+    setMenu2Visible(true); 
+    setMenu3Visible(true); 
+    setCurrentVideo(videoDesktop)
   };
 
   
   const handleMenu2Hover = () => {
     setMenu2Hovered(true);
-    setMenu1Visible(false); // Hide menu2 when hovering over menu1
-    setMenu3Visible(false); // Hide menu3 when hovering over menu1
+    setMenu1Visible(false); 
+    setMenu3Visible(false); 
+    setCurrentVideo(videoPatagonian)
+
   };
 
   const handleMenu2Leave = () => {
     setMenu2Hovered(false);
-    setMenu1Visible(true); // Show menu2 when leaving menu1
-    setMenu3Visible(true); // Show menu3 when leaving menu1
+    setMenu1Visible(true);
+    setMenu3Visible(true); 
+    setCurrentVideo(videoDesktop)
+
   };
 
   const handleMenu3Hover = () => {
     setMenu3Hovered(true);
-    setMenu1Visible(false); // Hide menu2 when hovering over menu1
-    setMenu2Visible(false); // Hide menu3 when hovering over menu1
+    setMenu1Visible(false); 
+    setMenu2Visible(false); 
+    setCurrentVideo(videoWines)
+
   };
 
   const handleMenu3Leave = () => {
     setMenu3Hovered(false);
-    setMenu1Visible(true); // Show menu2 when leaving menu1
-    setMenu2Visible(true); // Show menu3 when leaving menu1
+    setMenu1Visible(true); 
+    setMenu2Visible(true); 
+    setCurrentVideo(videoDesktop)
+
   };
 
   const location = useLocation();
@@ -145,10 +165,16 @@ const MenuDesktop = () => {
     >
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
-          <div
-            className={`h-screen bg-[imagen] bg-no-repeat bg-cover bg-center relative p-5`}
-            style={{ backgroundImage: `url(${fondoDesktop})` }}
-          >
+<div className="h-screen relative p-5">
+<video
+  className="w-full h-full object-cover absolute top-0 left-0 z-0"
+  autoPlay
+  loop
+  muted
+  playsInline
+  preload="auto" // Añadir el atributo preload con el valor "auto"
+  src={currentVideo} // Use the currentVideo as the source
+/>
             <div className="w-full h-full">
               <div className="border border-[#F2ECE1] w-full h-full p-2 relative flex flex-col justify-center items-center">
                 <div className="w-full h-full border border-[#F2ECE1]">
