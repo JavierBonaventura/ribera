@@ -403,7 +403,7 @@ const MenuDesktop = () => {
 
                 <div className="absolute bottom-5 2xl:bottom-5 w-full">
                   <div className="flex justify-around items-center w-full text-[#F2ECE1] ">
-                    <div className="w-1/3  flex justify-center items-center">
+                    <div className="w-1/3  flex justify-start items-center">
                       <a
                         href="https://www.instagram.com/riberadelcuarzo/"
                         target="_blank"
@@ -434,7 +434,7 @@ const MenuDesktop = () => {
                       </div>
                     </div>
                     <div
-                      className="flex flex-col justify-center items-center w-1/3 cursor-default text-sm lg:text-base"
+                      className="flex flex-col justify-end items-center w-1/3 cursor-default text-sm lg:text-base"
                       style={robotoFontRegular}
                     >
                       <span className="uppercase">Río Negro</span>
