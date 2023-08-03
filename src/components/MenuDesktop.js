@@ -401,7 +401,7 @@ const MenuDesktop = () => {
                   </div>
                 </div>
 
-                <div className="absolute bottom-5 2xl:bottom-5 w-full">
+                <div className="absolute bottom-5 2xl:bottom-5 w-full container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl">
                   <div className="flex justify-around items-center w-full text-[#F2ECE1] ">
                     <div className="w-1/3  flex justify-start items-center">
                       <a
