@@ -79,6 +79,10 @@ body {
   cursor: pointer;
 }
 
+.menu:hover {
+  color: #c4b27d;
+}
+
 .menu-desk {
   color: #c4b27d;
   font-size: 1.8rem;
