@@ -165,7 +165,7 @@ const MenuDesktop = () => {
             />
             <div className="w-full h-full">
               <div className="border border-[#F2ECE1] w-full h-full p-2 relative flex flex-col justify-center items-center">
-                <div className="w-full h-full border border-[#F2ECE1]">
+                <div className="w-full h-full border border-[#F2ECE1] relative">
                   <div className="flex justify-end items-center pr-4 py-5">
                     <Link to="/MenuHamburguesa">
                       <img
@@ -181,7 +181,7 @@ const MenuDesktop = () => {
                     </Link>
                   </div>
 
-                  <div className="flex justify-center w-full xl:w-3/4 2xl:w-2/4 mx-auto">
+                  <div className="flex justify-center w-full xl:w-3/4 2xl:px-28 mx-auto ">
                     <div
                       id="menu1"
                       onMouseEnter={handleMenu1Hover}
@@ -399,50 +399,51 @@ const MenuDesktop = () => {
                       </animated.div>
                     </div>
                   </div>
-                </div>
-
-                <div className="absolute bottom-5 2xl:bottom-5 w-full container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl">
-                  <div className="flex justify-around items-center w-full text-[#F2ECE1] ">
-                    <div className="w-1/3  flex justify-start items-center">
-                      <a
-                        href="https://www.instagram.com/riberadelcuarzo/"
-                        target="_blank"
-                      >
-                        <img
-                          src={iconIg}
-                          alt="LogoIg"
-                          className="w-4 lg:w-5 "
-                        />
-                      </a>
-                    </div>
-                    <div
-                      className="flex justify-center items-center w-1/3 gap-x-20 text-sm lg:text-base"
-                      style={robotoFontRegular}
-                    >
-                      <div>
-                        <Link
-                          to="/contacto"
-                          className="hover:text-[#cab57e]  duration-300 transition ease-in-out"
-                          style={robotoFontRegular}
-                        >
-                          Contact
-                        </Link>
-                      </div>
-                      <div>
+                  <div className="absolute bottom-5 px-5 w-full container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl  left-1/2 transform -translate-x-1/2">
+                    <div className="flex justify-around items-center w-full text-[#F2ECE1] ">
+                      <div className="w-1/3  flex justify-start items-center ">
                         <a
-                          href=""
-                          className="hover:text-[#cab57e]  duration-300 transition ease-in-out"
+                          href="https://www.instagram.com/riberadelcuarzo/"
+                          target="_blank"
                         >
-                          News
+                          <img
+                            src={iconIg}
+                            alt="LogoIg"
+                            className="w-4 lg:w-5"
+                          />
                         </a>
                       </div>
-                    </div>
-                    <div
-                      className="flex flex-col justify-end items-center w-1/3 cursor-default text-sm lg:text-base"
-                      style={robotoFontRegular}
-                    >
-                      <span className="uppercase">Río Negro</span>
-                      <span>Patagonia Argentina</span>
+                      <div
+                        className="flex justify-center items-center w-1/3 gap-x-20 text-sm lg:text-base "
+                        style={robotoFontRegular}
+                      >
+                        <div>
+                          <Link
+                            to="/contacto"
+                            className="hover:text-[#cab57e]  duration-300 transition ease-in-out"
+                            style={robotoFontRegular}
+                          >
+                            Contact
+                          </Link>
+                        </div>
+                        <div>
+                          <a
+                            href=""
+                            className="hover:text-[#cab57e]  duration-300 transition ease-in-out"
+                          >
+                            News
+                          </a>
+                        </div>
+                      </div>
+                      <div
+                        className="flex flex-col justify-center items-end w-1/3 cursor-default text-sm lg:text-base"
+                        style={robotoFontRegular}
+                      >
+                        <div className="flex flex-col text-center">
+                          <span className="uppercase">Río Negro</span>
+                          <span>Patagonia Argentina</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
