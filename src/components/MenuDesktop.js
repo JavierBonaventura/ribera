@@ -7,7 +7,7 @@ import videoPatagonian from "../images/videoHome.mp4";
 
 import logoDesktop from "../images/logoDesktop.png";
 import hambur from "../images/menu-hambur.png";
-import iconIg from "../images/icon-ig-form.png";
+import iconIg from "../images/icon-ig-form.svg";
 import { Link } from "react-router-dom";
 import { Transition } from "@react-spring/web";
 import { useSpring, animated } from "@react-spring/web";
@@ -408,7 +408,11 @@ const MenuDesktop = () => {
                         href="https://www.instagram.com/riberadelcuarzo/"
                         target="_blank"
                       >
-                        <img src={iconIg} alt="LogoIg" className="w-4 lg:w-5" />
+                        <img
+                          src={iconIg}
+                          alt="LogoIg"
+                          className="w-4 lg:w-5 "
+                        />
                       </a>
                     </div>
                     <div
