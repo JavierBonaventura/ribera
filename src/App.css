@@ -81,11 +81,16 @@ body {
 
 .menu-desk {
   color: #f3eee3;
-  font-family: Conv_CormorantGaramond-Regular;
-  font-size: 35px;
-  margin-bottom: 15px;
-  line-height: 35px;
+  font-size: 1.8rem;
   cursor: default;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-desk {
+    color: #f3eee3;
+    font-size: 2.2rem;
+    cursor: default;
+  }
 }
 
 .menu:hover {
@@ -94,10 +99,20 @@ body {
 
 .subMenu {
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   letter-spacing: 1.5px;
   color: #f3eee3;
   cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .subMenu {
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    color: #f3eee3;
+    cursor: pointer;
+  }
 }
 
 .subMenu2 {

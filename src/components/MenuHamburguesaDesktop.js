@@ -110,23 +110,6 @@ const MenuHamburguesaDesktop = () => {
             className={`h-screen bg-[imagen] bg-no-repeat bg-cover bg-center relative p-5`}
             style={{ backgroundImage: `url(${fondoHamburguesaDesktop})` }}
           >
-            <div className="left-1/2 z-50 top-8 transform -translate-x-1/2 max-w-screen-xl container mx-auto absolute ">
-              {" "}
-              <header className="py-10  px-5 md:px-0 md:py-2 ">
-                <div class="flex justify-between items-center  ">
-                  <div class="w-24 md:w-36 ">
-                    <Link to="/">
-                      <img src={logo} alt="" className="w-full xl:w-28" />
-                    </Link>
-                  </div>
-                  <div class="">
-                    <Link to="/">
-                      <img src={close} alt="" className="w-14" />
-                    </Link>
-                  </div>
-                </div>
-              </header>
-            </div>
             <div className="flex justify-end items-center absolute top-0 right-0 hidden">
               <Link to="/">
                 <svg
@@ -162,9 +145,26 @@ const MenuHamburguesaDesktop = () => {
                 </svg>
               </Link>
             </div>
-            <div className="w-full h-full">
+
+            <div className="w-full h-full ">
               <div className="border border-[#F2ECE1] w-full h-full p-2 relative flex flex-col justify-center items-center">
-                <div className="w-full h-full border border-[#F2ECE1]  flex flex-col justify-center  ">
+                <div className="w-full h-full border border-[#F2ECE1]  flex flex-col justify-center relative">
+                  <div className="left-1/2 z-50 top-2 transform -translate-x-1/2 max-w-screen-xl  2xl:max-w-screen-2xl container mx-auto absolute ">
+                    <header className="py-10  px-5 md:px-0 md:py-2 ">
+                      <div class="flex justify-between items-center">
+                        <div class="w-28">
+                          <Link to="/">
+                            <img src={logo} alt="" className="w-full " />
+                          </Link>
+                        </div>
+                        <div class="">
+                          <Link to="/">
+                            <img src={close} alt="" className="w-14" />
+                          </Link>
+                        </div>
+                      </div>
+                    </header>
+                  </div>
                   <div className="flex justify-center py-0 2xl:pb-5 hidden">
                     <Link to="/">
                       <img
@@ -175,204 +175,198 @@ const MenuHamburguesaDesktop = () => {
                     </Link>
                   </div>
 
-                  <div className="flex justify-center w-2/3 2xl:w-2/3 mx-auto ">
+                  <div className="flex justify-center w-full xl:w-3/4 2xl:w-2/4 mx-auto">
                     <div
                       id="menu1"
                       onMouseEnter={handleMenu1Hover}
                       onMouseLeave={handleMenu1Leave}
-                      className="flex flex-col items-center  w-full"
+                      className="flex flex-col items-center w-full gap-y-8"
                     >
                       <p
                         style={playfairFontRegular}
-                        className="text-center menu-desk sombra-menu tracking-wider pb-5"
+                        className="menu-desk sombra-menu"
                       >
                         History
                       </p>
-                      <Link
-                        to="/family"
-                        className="subMenu tracking-widest text-center"
-                        style={robotoFontRegular}
-                      >
-                        FAMILY
-                      </Link>
-                      <Link
-                        to="/valleazul"
-                        className="subMenu tracking-widest text-center"
-                        style={robotoFontRegular}
-                      >
-                        VALLE AZUL, PATAGONIA
-                      </Link>
+                      <ul className="text-center space-y-1.5">
+                        <li>
+                          <Link to="/family" style={robotoFontRegular}>
+                            <span className="subMenu tracking-widest">
+                              FAMILY
+                            </span>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/valleazul" style={robotoFontRegular}>
+                            <span className="subMenu tracking-widest">
+                              VALLE AZUL, PATAGONIA
+                            </span>
+                          </Link>
+                        </li>
+                      </ul>
                     </div>
 
                     <div
                       id="menu2"
-                      className="flex flex-col items-center w-full "
+                      className="flex flex-col items-center w-full gap-y-8"
                     >
                       <p
                         style={playfairFontRegular}
-                        className="text-center menu-desk sombra-menu tracking-wider  pb-5"
+                        className="menu-desk sombra-menu text-center"
                       >
                         Patagonian Spirit
                       </p>
-                      <Link
-                        to="/araucanavineyard"
-                        className="subMenu tracking-widest text-center"
-                        style={robotoFontRegular}
-                      >
-                        ARAUCANA VINEYARD
-                      </Link>
-                      <Link
-                        to="/workvineyard"
-                        className="subMenu tracking-widest text-center"
-                        style={robotoFontRegular}
-                      >
-                        WORK IN THE VINEYARD
-                      </Link>
-                      <Link
-                        to="/workwinery"
-                        className="subMenu tracking-widest text-center"
-                        style={robotoFontRegular}
-                      >
-                        WORK IN THE WINERY
-                      </Link>
-                      <Link
-                        to="/lifeonestate"
-                        className="subMenu tracking-widest text-center"
-                        style={robotoFontRegular}
-                      >
-                        LIFE ON THE ESTATE
-                      </Link>
-                      <Link
-                        to="/lifewater"
-                        className="subMenu tracking-widest text-center"
-                        style={robotoFontRegular}
-                      >
-                        LIFE WATER
-                      </Link>
+                      <ul className="text-center space-y-1.5">
+                        <li>
+                          <Link
+                            to="/araucanavineyard"
+                            style={robotoFontRegular}
+                          >
+                            <span className="subMenu tracking-widest">
+                              ARAUCANA VINEYARD
+                            </span>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/workvineyard" style={robotoFontRegular}>
+                            <span className="subMenu tracking-widest">
+                              WORK IN THE VINEYARD
+                            </span>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/workwinery" style={robotoFontRegular}>
+                            <span className="subMenu tracking-widest">
+                              WORK IN THE WINERY
+                            </span>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/lifeonestate" style={robotoFontRegular}>
+                            <span className="subMenu tracking-widest">
+                              LIFE ON THE ESTATE
+                            </span>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/lifewater" style={robotoFontRegular}>
+                            <span className="subMenu tracking-widest">
+                              LIFE WATER
+                            </span>
+                          </Link>
+                        </li>
+                      </ul>
                     </div>
                     <div
                       id="menu3"
-                      className="flex flex-col items-center w-full "
+                      className="flex flex-col items-center w-full gap-y-8"
                     >
                       <p
                         style={playfairFontRegular}
-                        className="text-center menu-desk sombra-menu tracking-wider pb-5"
+                        className="menu-desk sombra-menu"
                       >
                         Wines
                       </p>
                       <animated.div style={dropdownAnimation3}>
-                        <ul className="text-center  space-y-1">
+                        <ul className="text-center space-y-1.5">
                           <li>
-                            <p
-                              className="!mb-0 subMenu tracking-widest"
-                              style={robotoFontRegular}
-                              onClick={opcion4}
-                            >
-                              IN ARGENTINA
+                            <p style={robotoFontRegular} onClick={opcion4}>
+                              <span className="!mb-0 subMenu tracking-widest">
+                                IN ARGENTINA
+                              </span>
                             </p>
                           </li>
                           <animated.div style={dropdownAnimation4}>
-                            <ul className="text-center  -space-y-2">
+                            <ul className="text-center">
                               <li>
                                 <Link to="/winesargentina">
-                                  <p
-                                    className="subMenu tracking-widest  "
-                                    style={robotoFontRegular}
-                                  >
-                                    View all
+                                  <p style={robotoFontRegular}>
+                                    <span className="subMenu tracking-widest">
+                                      View all
+                                    </span>
                                   </p>
                                 </Link>
                               </li>
                               <li>
                                 <Link to="/winesargentina#posicion1">
-                                  <p
-                                    className="subMenu tracking-widest"
-                                    style={robotoFontRegular}
-                                  >
-                                    Araucana Río de los Ciervos Malbec
+                                  <p style={robotoFontRegular}>
+                                    <span className="subMenu tracking-widest">
+                                      Araucana Río de los Ciervos Malbec
+                                    </span>
                                   </p>
                                 </Link>
                               </li>
                               <li>
                                 <Link to="/winesargentina#posicion1">
-                                  <p
-                                    className="subMenu tracking-widest"
-                                    style={robotoFontRegular}
-                                  >
-                                    Araucana Río de los Ciervos Pinot Noir
+                                  <p style={robotoFontRegular}>
+                                    <span className="subMenu tracking-widest">
+                                      Araucana Río de los Ciervos Pinot Noir
+                                    </span>
                                   </p>
                                 </Link>
                               </li>
                               <li>
                                 <Link to="/winesargentina#posicion2">
-                                  <p
-                                    className="subMenu tracking-widest"
-                                    style={robotoFontRegular}
-                                  >
-                                    Araucana Malbec
+                                  <p style={robotoFontRegular}>
+                                    <span className="subMenu tracking-widest">
+                                      Araucana Malbec
+                                    </span>
                                   </p>
                                 </Link>
                               </li>
                               <li>
                                 <Link to="/winesargentina#posicion3">
-                                  <p
-                                    className="subMenu tracking-widest"
-                                    style={robotoFontRegular}
-                                  >
-                                    Araucana Azul
+                                  <p style={robotoFontRegular}>
+                                    <span className="subMenu tracking-widest">
+                                      Araucana Azul
+                                    </span>
                                   </p>
                                 </Link>
                               </li>
                             </ul>
                           </animated.div>
                           <li>
-                            <p
-                              className="!mb-0 subMenu tracking-widest"
-                              style={robotoFontRegular}
-                              onClick={opcion5}
-                            >
-                              IN THE WORLD
+                            <p style={robotoFontRegular} onClick={opcion5}>
+                              <span className="!mb-0 subMenu tracking-widest">
+                                IN THE WORLD
+                              </span>
                             </p>
                           </li>
                           <animated.div style={dropdownAnimation5}>
-                            <ul className="text-center  -space-y-3 ">
+                            <ul className="text-center">
                               <li>
                                 <Link to="/winesworld">
-                                  <p
-                                    className="subMenu tracking-widest"
-                                    style={robotoFontRegular}
-                                  >
-                                    View all
+                                  <p style={robotoFontRegular}>
+                                    <span className="subMenu tracking-widest">
+                                      View all
+                                    </span>
                                   </p>
                                 </Link>
                               </li>
                               <li>
                                 <Link to="/winesworld#posicion1">
-                                  <p
-                                    className="subMenu tracking-widest"
-                                    style={robotoFontRegular}
-                                  >
-                                    Ribera del Cuarzo Clásico
+                                  <p style={robotoFontRegular}>
+                                    <span className="subMenu tracking-widest">
+                                      Ribera del Cuarzo Clásico
+                                    </span>
                                   </p>
                                 </Link>
                               </li>
                               <li>
                                 <Link to="/winesworld#posicion2">
-                                  <p
-                                    className="subMenu tracking-widest"
-                                    style={robotoFontRegular}
-                                  >
-                                    Ribera del Cuarzo Especial
+                                  <p style={robotoFontRegular}>
+                                    <span className="subMenu tracking-widest">
+                                      Ribera del Cuarzo Especial
+                                    </span>
                                   </p>
                                 </Link>
                               </li>
                               <li>
                                 <Link to="/winesworld#posicion3">
-                                  <p
-                                    className="subMenu tracking-widest"
-                                    style={robotoFontRegular}
-                                  >
-                                    Ribera del Cuarzo Reserva Estibada
+                                  <p style={robotoFontRegular}>
+                                    <span className="subMenu tracking-widest">
+                                      Ribera del Cuarzo Reserva Estibada
+                                    </span>
                                   </p>
                                 </Link>
                               </li>
@@ -384,29 +378,29 @@ const MenuHamburguesaDesktop = () => {
                   </div>
 
                   <div
-                    className="flex flex-col gap-y-2 justify-center w-2/3 2xl:w-1/3 mx-auto pt-5"
+                    className="flex flex-col gap-y-4 justify-center w-2/3 2xl:w-1/3 mx-auto pt-5 2xl:pt-10"
                     style={robotoFontRegular}
                   >
-                    <div className="w-full flex justify-center items-center gap-x-16 text-xl">
-                      <div className="text-[#F2ECE1] hover:text-[#cab57e]">
-                        <Link
-                          to="/contacto"
-                          className="hover:text-[#cab57e]"
-                          style={robotoFontRegular}
-                        >
-                          Contact
+                    <div className="w-full flex justify-center items-center gap-x-16 text-sm lg:text-xl tracking-widest">
+                      <div>
+                        <Link to="/contacto" style={robotoFontRegular}>
+                          <span className="text-[#F2ECE1] hover:text-[#cab57e] transition ease-in-out duration-300">
+                            Contact
+                          </span>
                         </Link>
                       </div>
-                      <div className="text-[#F2ECE1] hover:text-[#cab57e]">
-                        <a href="">News</a>
+                      <div>
+                        <span className="text-[#F2ECE1] hover:text-[#cab57e] transition ease-in-out duration-300">
+                          <a href="">News</a>
+                        </span>
                       </div>
                     </div>
-                    <div className="w-full flex justify-center items-center">
+                    <div className="w-full flex justify-center items-center text-base">
                       <a href="https://casapirque.com.ar" target="_blank">
-                        <h1 className="text-center pb-2 text-[#c4b27d] text-base">
+                        <h1 className="text-center  text-[#c4b27d] ">
                           <i>Our distribution office</i>
                         </h1>
-                        <p className="text-center uppercase font-semibold text-[#F2ECE1] hover:text-[#cab57e] text-base">
+                        <p className="text-center uppercase font-semibold text-[#F2ECE1] hover:text-[#cab57e]  tracking-widest">
                           Casa Pirque
                         </p>
                       </a>
@@ -414,18 +408,18 @@ const MenuHamburguesaDesktop = () => {
                   </div>
                 </div>
 
-                <div className="absolute bottom-5 2xl:bottom-5 w-full container mx-auto max-w-screen-xl">
+                <div className="absolute bottom-5 2xl:bottom-5 w-full container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl">
                   <div className="flex justify-around items-center w-full text-[#F2ECE1]">
-                    <div className="w-1/3 flex justify-center items-center">
+                    <div className="w-1/3 flex justify-start items-center">
                       <a
                         href="https://www.instagram.com/riberadelcuarzo/"
                         target="_blank"
                       >
-                        <img src={iconIg} alt="LogoIg" className="w-5" />
+                        <img src={iconIg} alt="LogoIg" className="w-4 lg:w-5" />
                       </a>
                     </div>
                     <div
-                      className="flex justify-center items-center w-1/3 gap-x-20 text-base "
+                      className="flex justify-center items-center w-1/3 gap-x-20 text-sm lg:text-base"
                       style={robotoFontRegular}
                     >
                       <div>
@@ -446,7 +440,7 @@ const MenuHamburguesaDesktop = () => {
                       </div>
                     </div>
                     <div
-                      className="flex justify-center items-center w-1/3 cursor-default gap-x-5"
+                      className="flex justify-end items-center w-1/3 cursor-default gap-x-5 text-sm lg:text-base"
                       style={robotoFontRegular}
                     >
                       <span className="font-bold">english</span>

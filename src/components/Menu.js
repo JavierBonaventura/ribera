@@ -152,7 +152,8 @@ const Home = () => {
                 <img src={logo} alt="" className="" />
               </Link>
             </div>
-            <div className="body  py-12 ">
+
+            <div className="body py-12">
               <div className="containerHome gap-y-3">
                 <p
                   style={playfairFontRegular}

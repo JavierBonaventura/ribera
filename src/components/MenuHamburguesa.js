@@ -137,14 +137,14 @@ const Home = () => {
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
           <div className="containerHome pt-8 backgroundHambuerguesa ">
-            <header className="container mx-auto py-0 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 ">
+            <header className="container mx-auto py-5 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 ">
               <div class="flex justify-between items-center">
-                <div class="w-24 md:w-36 pt-0">
+                <div class="w-24 md:w-36 ">
                   <Link to="/">
                     <img src={logo} alt="" className="w-full" />
                   </Link>
                 </div>
-                <div class="w-12 mr-2 pt-3">
+                <div class="w-12 pt-3">
                   <Link to="/">
                     <img src={close} alt="" className="w-full" />
                   </Link>
@@ -388,8 +388,8 @@ const Home = () => {
                 </animated.div>
               </div>
             </div>
-            <div className=" w-full px-20 text-center flex flex-col gap-y-5 pt-10">
-              <div className=" flex justify-between">
+            <div className=" w-full px-20 text-center flex flex-col gap-y-5 pt-10 ">
+              <div className=" flex justify-center gap-x-10 ">
                 <Link
                   to="/contacto"
                   className="text-lg footerItems tracking-widest hover:underline"
@@ -405,7 +405,7 @@ const Home = () => {
                 </p>
               </div>
 
-              <div className=" flex justify-between">
+              <div className=" flex justify-center gap-x-10 ">
                 <a
                   href=""
                   style={roboto}
