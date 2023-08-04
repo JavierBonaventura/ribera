@@ -233,3 +233,11 @@ body {
 
 /*   
 } */
+
+.filter-invert {
+  filter: saturate(4.0) brightness(0.9);
+}
+
+img {
+  transition: filter 0.2s ease;
+}

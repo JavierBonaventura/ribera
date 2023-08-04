@@ -14,6 +14,14 @@ import { useSpring, animated } from "@react-spring/web";
 import { useLocation } from "react-router-dom";
 
 const MenuDesktop = () => {
+  const [igHovered, setIgHovered] = useState(false);
+  const handleMouseEnter = () => {
+    setIgHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIgHovered(false);
+  };
   const [currentVideo, setCurrentVideo] = useState(videoDesktop);
 
   const [isMenu1Hovered, setMenu1Hovered] = useState(false);
@@ -405,11 +413,15 @@ const MenuDesktop = () => {
                         <a
                           href="https://www.instagram.com/riberadelcuarzo/"
                           target="_blank"
+                          onMouseEnter={handleMouseEnter}
+                          onMouseLeave={handleMouseLeave}
                         >
                           <img
                             src={iconIg}
                             alt="LogoIg"
-                            className="w-4 lg:w-5"
+                            className={`w-5 ${
+                              igHovered ? "filter-invert" : ""
+                            }`}
                           />
                         </a>
                       </div>
