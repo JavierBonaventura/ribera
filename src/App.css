@@ -1,5 +1,14 @@
 /* @media (max-width: 767px) { */
 
+
+
+   /* para borrar  */
+
+
+
+   /* para borrar */
+
+
   .video-background {
     position: absolute;
     top: 0;
@@ -8,13 +17,20 @@
     height: 100%;
     object-fit: cover;
     opacity: 1;
-    transition: opacity 0.9s ease; /* Aquí establecemos la duración y la función de transición */
+    transition: opacity 0.9s ease; 
   }
   
   .hidden {
     opacity: 0;
-    pointer-events: none; /* Evitar que los eventos del video oculto se activen */
+    pointer-events: none; 
   }
+
+  .black-fade-transition {
+    transition: opacity 0.3s, background-color 0.3s;
+    background-color: black;
+  }
+  
+  
 
 .textoTerrir {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",

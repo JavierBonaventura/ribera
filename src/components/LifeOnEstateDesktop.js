@@ -66,7 +66,7 @@ const CarouselSlider = () => {
 
   const renderImages = () => {
     return (
-      <div className="transition-all ease-in-out duration-500 relative">
+      <div className="transition-all ease-in-out duration-500 relative bg-black">
         <header className="container mx-auto py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2  max-w-screen-xl">
           <div class="flex justify-between items-center">
             <div class="w-24 md:w-28">
