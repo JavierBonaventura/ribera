@@ -4,7 +4,7 @@ import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
 import paisajeValle from "../images/paisaje-valle.png";
 import arrowDown from "../images/arrow-down.png";
-import paisajeHistory from "../images/paisaje-history.jpg";
+import paisajeHistory from "../images/paisaje-history-1.jpg";
 import iconIg from "../images/icon-ig.png";
 import "../App.css";
 import { useLocation } from "react-router-dom";

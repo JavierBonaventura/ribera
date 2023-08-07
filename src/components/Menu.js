@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
-import logo from "../images/logo-menu.png";
+import logo from "../images/logo-home-mob.png";
 import { useSpring, animated } from "@react-spring/web";
 import hambur from "../images/menu-hambur.png";
 import iconIg from "../images/icon-ig-form.png";
@@ -147,7 +147,7 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            <div className="w-40 py-4">
+            <div className="w-44 py-4">
               <Link to="/">
                 <img src={logo} alt="" className="" />
               </Link>

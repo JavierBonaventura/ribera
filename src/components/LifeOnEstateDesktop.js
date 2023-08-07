@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import workVineyardSlide1 from "../images/introHourses.jpg";
+import workVineyardSlide1 from "../images/wineYardSlide3.jpg";
 import workVineyardSlide2 from "../images/wineYardSlide2.jpg";
-import workVineyardSlide3 from "../images/wineYardSlide3.jpg";
-import workVineyardSlide4 from "../images/hourses.jpg";
+import workVineyardSlide3 from "../images/hourses.jpg";
 import leftArrowImage from "../images/flechaIzquierda.png";
 import rightArrowImage from "../images/flechaDerecha.png";
 import { Link } from "react-router-dom";
@@ -34,19 +33,13 @@ const CarouselSlider = () => {
 
   const [isPrevButtonHovered, setIsPrevButtonHovered] = useState(false);
   const [isNextButtonHovered, setIsNextButtonHovered] = useState(false);
-  const images = [
-    workVineyardSlide1,
-    workVineyardSlide2,
-    workVineyardSlide3,
-    workVineyardSlide4,
-  ];
+  const images = [workVineyardSlide1, workVineyardSlide2, workVineyardSlide3];
   const paragraphs = [
-    "Horses are a way of life: living with horses slows things down, allowing us perspective and to connect with nature, to go through life in a more relaxed and profound way",
     "Countess Noemi Marone Cinzano identified this unique location and laid the foundations for what is now Bodega Ribera del Cuarzo. Similarly to Italian vineyards, she decided to build a house next to the winery. Patagonian in style with inviting architecture and a small garden with a view of the valley that leads down to the river, the house is where we rest after work and where we gather as a family to enjoy the holidays. It’s also where we think, plan, and make decisions with our colleagues, sharing our table with them in what has become the family home.",
     "The Rio Negro is the largest river in Patagonia. The Limay and Neuquén rivers gather water and minerals from mountain snowmelt before flowing into the central and eastern parts of the country, eventually merging to form the Rio Negro.  The Rio Negro reaches the sea in the south of the Buenos Aires Province, in a small town called El Cóndor. It meanders between two imposing barda walls, one to the north and the other to the south, which have been formed over millions of years. In 1860, Estanislao Ceballos described them as river terraces, and they contribute invaluable calcium carbonate, stone, quartz, and ash to the landscape. ",
     "Maintaining traditional working methods helps us to keep in touch with the land, a connection that defines us as farmers. At the estate, we also raise Criollo horses, the famous Argentine breed. In addition to using tractors and other machinery that improve the efficiency of certain tasks, working with animals is a way of respecting and caring for nature in all our interventions, always working towards producing the best possible flavor.",
   ];
-  const title = ["LOREM IPSUM", "THE HOUSE", "THE RIVER", "THE HORSES"];
+  const title = ["THE HOUSE", "THE RIVER", "THE HORSES"];
   const [activeIndex, setActiveIndex] = useState(0);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -182,7 +175,7 @@ const CarouselSlider = () => {
           >
             {" "}
             {"0" + (currentImageIndex + 1)}{" "}
-            <sup className="text-base underline align-middle	">4</sup>
+            <sup className="text-base underline align-middle	">3</sup>
           </p>
         </div>
         <div className="w-96 container   max-w-screen-xl mx-auto py-1/2 fixed -top-32 left-0 right-0  px-5 absolute inset-0 flex items-center justify-center ">

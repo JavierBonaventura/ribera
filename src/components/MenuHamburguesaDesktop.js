@@ -3,7 +3,7 @@ import fondoHamburguesaDesktop from "../images/fondoHamburguesaDesktop.png";
 import logoDesktop from "../images/logo.svg";
 import logo from "../images/logo.svg";
 import close from "../images/icon-close.svg";
-import iconIg from "../images/icon-ig.png";
+import iconIg from "../images/icon-ig-form.svg";
 import { Link } from "react-router-dom";
 import { Transition } from "@react-spring/web";
 import { useSpring, animated } from "@react-spring/web";
@@ -184,7 +184,7 @@ const MenuHamburguesaDesktop = () => {
                     >
                       <p
                         style={playfairFontRegular}
-                        className="menu-desk sombra-menu"
+                        className="menu-desk-hambur sombra-menu"
                       >
                         History
                       </p>
@@ -212,7 +212,7 @@ const MenuHamburguesaDesktop = () => {
                     >
                       <p
                         style={playfairFontRegular}
-                        className="menu-desk sombra-menu text-center"
+                        className="menu-desk-hambur sombra-menu text-center"
                       >
                         Patagonian Spirit
                       </p>
@@ -263,7 +263,7 @@ const MenuHamburguesaDesktop = () => {
                     >
                       <p
                         style={playfairFontRegular}
-                        className="menu-desk sombra-menu"
+                        className="menu-desk-hambur sombra-menu"
                       >
                         Wines
                       </p>

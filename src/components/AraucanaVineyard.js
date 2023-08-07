@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
 import ilustracionSpirit from "../images/ilustracion-sprit.png";
-import paisajeAraucana from "../images/paisaje-araucana.jpg";
+import paisajeAraucana from "../images/paisaje-araucana-1.jpg";
 import iconIg from "../images/icon-ig.png";
 import "../App.css";
 import { useLocation } from "react-router-dom";
@@ -77,7 +77,7 @@ const ConstructionPage = () => {
 
                 <div class="py-5 md:py-6">
                   <img
-                    src={ilustracionSpirit}
+                    src={paisajeAraucana}
                     alt=""
                     class="w-full md:w-5/6 mx-auto"
                   />
@@ -102,9 +102,9 @@ const ConstructionPage = () => {
               </div>
               <div className="container mx-auto px-4 md:px-0 max-w-screen-xl">
                 <img
-                  src={paisajeAraucana}
+                  src={ilustracionSpirit}
                   alt=""
-                  className="w-full md:w-2/3 mx-auto"
+                  className="w-full md:w-3/4 mx-auto"
                 />
               </div>
               <div class="container mx-auto pt-5 md:pt-12 max-w-screen-xl">

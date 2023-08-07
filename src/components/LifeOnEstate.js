@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
-import wineYardSlide1 from "../images/introHourses.jpg";
+import wineYardSlide1 from "../images/wineYardSlide3.jpg";
 import wineYardSlide2 from "../images/wineYardSlide2.jpg";
-import wineYardSlide3 from "../images/wineYardSlide3.jpg";
-import wineYardSlide4 from "../images/hourses.jpg";
+import wineYardSlide3 from "../images/hourses.jpg";
 import blackRiver from "../images/blackRiver.jpg";
 import { useLocation } from "react-router-dom";
 import { Transition, animated } from "@react-spring/web";
@@ -73,7 +72,7 @@ const LifeOnEstate = () => {
   const [currentScreen, setCurrentScreen] = useState(0);
 
   const handleNext = () => {
-    if (currentScreen === 3) {
+    if (currentScreen === 2) {
       setCurrentScreen(0);
     } else {
       setCurrentScreen(currentScreen + 1);
@@ -119,13 +118,6 @@ const LifeOnEstate = () => {
               )}
               {currentScreen === 2 && (
                 <Screen3
-                  currentScreen={currentScreen}
-                  handleNext={handleNext}
-                  handlePrev={handlePrev}
-                />
-              )}
-              {currentScreen === 3 && (
-                <Screen4
                   currentScreen={currentScreen}
                   handleNext={handleNext}
                   handlePrev={handlePrev}
@@ -183,7 +175,7 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
                   style={playfairFontBlack}
                   className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
                 >
-                  04
+                  03
                 </span>
               </p>
             </div>
@@ -223,16 +215,23 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
                         style={robotoFontRegular}
                         className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3 tracking-wide"
                       >
-                        LOREM IPSUM
+                        THE HOUSE
                       </p>
                       <p
                         style={playfairFontRegular}
                         className="decoration-black	 text-xs tracking-wider text-justify"
                       >
-                        Horses are a way of life: living with horses slows
-                        things down, allowing us perspective and to connect with
-                        nature, to go through life in a more relaxed and
-                        profound way.
+                        Countess Noemi Marone Cinzano identified this unique
+                        location and laid the foundations for what is now Bodega
+                        Ribera del Cuarzo. Similarly to Italian vineyards, she
+                        decided to build a house next to the winery. Patagonian
+                        in style with inviting architecture and a small garden
+                        with a view of the valley that leads down to the river,
+                        the house is where we rest after work and where we
+                        gather as a family to enjoy the holidays. It’s also
+                        where we think, plan, and make decisions with our
+                        colleagues, sharing our table with them in what has
+                        become the family home.
                       </p>
                     </div>
                   </div>
@@ -303,138 +302,7 @@ const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
                   style={playfairFontBlack}
                   className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
                 >
-                  04
-                </span>
-              </p>
-            </div>
-
-            <div className="container mx-auto flex flex-col justify-center  items-center">
-              <div>
-                <img
-                  src={wineYardSlide3}
-                  alt=""
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-            <div className="flex justify-center space-x-10 pt-2  bg-[#F2ECE1]">
-              <button
-                className="w-14 h-14 rounded-full flex items-center justify-center mr-2"
-                onClick={handlePrev}
-              >
-                <div className="">
-                  <img src={flechaIzquierda} alt="" className="w-full" />
-                </div>
-              </button>
-
-              <button
-                className="w-14 h-14 flex items-center justify-center"
-                onClick={handleNext}
-              >
-                <div className="">
-                  <img src={flechaDerecha} alt="" className="w-full" />
-                </div>
-              </button>
-            </div>
-          </div>
-          <div>
-            <div className="bg-[#F2ECE1] pt-5">
-              <div className="container mx-auto flex flex-col justify-center items-center">
-                <div className="flex flex-col gap-y-5">
-                  <div className="flex flex-col gap-y-5">
-                    <div className="w-4/5 mx-auto">
-                      <p
-                        style={robotoFontRegular}
-                        className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3 tracking-wide"
-                      >
-                        THE HOUSE{" "}
-                      </p>
-                      <p
-                        style={playfairFontRegular}
-                        className="decoration-black	 text-xs tracking-wider text-justify"
-                      >
-                        Countess Noemi Marone Cinzano identified this unique
-                        location and laid the foundations for what is now Bodega
-                        Ribera del Cuarzo. Similarly to Italian vineyards, she
-                        decided to build a house next to the winery. Patagonian
-                        in style with inviting architecture and a small garden
-                        with a view of the valley that leads down to the river,
-                        the house is where we rest after work and where we
-                        gather as a family to enjoy the holidays. It’s also
-                        where we think, plan, and make decisions with our
-                        colleagues, sharing our table with them in what has
-                        become the family home.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="container mx-auto bg-[#F2ECE1]">
-              <div class="py-20">
-                <div class="flex justify-center">
-                  <a
-                    class="border border-[#C3B17D] rounded-full p-7"
-                    href="https://www.instagram.com/riberadelcuarzo/"
-                    target="_blank"
-                  >
-                    <img src={iconIg} alt="" class="w-5" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </animated.div>
-      )}
-    </Transition>
-  );
-};
-
-const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
-  const location = useLocation();
-
-  const playfairFontBlack = {
-    fontFamily: "Playfair Black, sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-  const playfairFontRegular = {
-    fontFamily: "Playfair Regular, sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-
-  const robotoFontRegular = {
-    fontFamily: "Roboto Regular , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-    fontSize: "16px",
-  };
-  return (
-    <Transition
-      items={location}
-      keys={(location) => location.pathname}
-      from={{ opacity: 0 }}
-      enter={{ opacity: 1 }}
-      leave={{ opacity: 0 }}
-      config={{ duration: 1000 }}
-    >
-      {(style, item) => (
-        <animated.div style={{ ...style, width: "100%" }}>
-          <div className="mt-[-20px]">
-            <div className="bg-[#F2ECE1]">
-              <p className="ml-1 text-left relative">
-                <span
-                  style={playfairFontBlack}
-                  className="text-[#C4AC77] text-lg"
-                >
                   03
-                </span>
-                <span
-                  style={playfairFontBlack}
-                  className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
-                >
-                  04
                 </span>
               </p>
             </div>
@@ -535,7 +403,7 @@ const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
   );
 };
 
-const Screen4 = ({ currentScreen, handleNext, handlePrev }) => {
+const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
   const location = useLocation();
 
   const playfairFontBlack = {
@@ -573,7 +441,7 @@ const Screen4 = ({ currentScreen, handleNext, handlePrev }) => {
                   style={playfairFontBlack}
                   className="text-[#C4AC77] text-lg"
                 >
-                  04
+                  03
                 </span>
                 <span
                   style={playfairFontBlack}
@@ -586,7 +454,11 @@ const Screen4 = ({ currentScreen, handleNext, handlePrev }) => {
 
             <div className="container mx-auto flex flex-col justify-center  items-center">
               <div>
-                <img src={wineYardSlide4} alt="" className="w-full" />
+                <img
+                  src={wineYardSlide3}
+                  alt=""
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             <div className="flex justify-center space-x-10 pt-2  bg-[#F2ECE1]">
@@ -619,7 +491,7 @@ const Screen4 = ({ currentScreen, handleNext, handlePrev }) => {
                         style={robotoFontRegular}
                         className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3 tracking-wide"
                       >
-                        THE HORSES{" "}
+                        THE HORSES
                       </p>
                       <p
                         style={playfairFontRegular}

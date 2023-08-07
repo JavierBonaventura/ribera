@@ -1,36 +1,29 @@
 /* @media (max-width: 767px) { */
 
+/* para borrar  */
 
+/* para borrar */
 
-   /* para borrar  */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transition: opacity 0.9s ease;
+}
 
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
 
-
-   /* para borrar */
-
-
-  .video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 1;
-    transition: opacity 0.9s ease; 
-  }
-  
-  .hidden {
-    opacity: 0;
-    pointer-events: none; 
-  }
-
-  .black-fade-transition {
-    transition: opacity 0.3s, background-color 0.3s;
-    background-color: black;
-  }
-  
-  
+.black-fade-transition {
+  transition: opacity 0.3s, background-color 0.3s;
+  background-color: black;
+}
 
 .textoTerrir {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -120,8 +113,19 @@ body {
   cursor: default;
 }
 
+.menu-desk-hambur {
+  color: #c4b27d;
+  font-size: 1.8rem;
+  cursor: default;
+}
+
 @media screen and (min-width: 1024px) {
   .menu-desk {
+    font-size: 2.2rem;
+    cursor: default;
+  }
+
+  .menu-desk-hambur {
     font-size: 2.2rem;
     cursor: default;
   }
@@ -265,7 +269,7 @@ body {
 } */
 
 .filter-invert {
-  filter: saturate(4.0)
+  filter: saturate(4);
 }
 
 img {

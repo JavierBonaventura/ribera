@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import workVineyardSlide1 from "../images/fermentation.jpg";
-import workVineyardSlide2 from "../images/aging.jpg";
-import workVineyardSlide3 from "../images/blending.jpg";
+import workVineyardSlide1 from "../images/fermentation-1.jpg";
+import workVineyardSlide2 from "../images/aging-1.jpg";
+import workVineyardSlide3 from "../images/blending-1.jpg";
 import workVineyardSlide4 from "../images/bottling.jpeg";
 import workVineyardSlide5 from "../images/cellaring.jpg";
 import leftArrowImage from "../images/flechaIzquierda.png";

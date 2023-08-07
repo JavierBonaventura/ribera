@@ -4,9 +4,8 @@ import videoDesktop from "../images/videoHome.mp4";
 import videoHistory from "../images/videoHistory.mp4";
 import videoWines from "../images/videoWines.mp4";
 import videoPatagonian from "../images/videoPatagonian.mp4";
-
-import logoDesktop from "../images/logoDesktop.png";
-import hambur from "../images/menu-hambur.png";
+import logoDesktop from "../images/logoDesktop-01.png";
+import hambur from "../images/hambur-claro.png";
 import iconIg from "../images/icon-ig-form.svg";
 import { Link } from "react-router-dom";
 import { Transition } from "@react-spring/web";
@@ -162,40 +161,42 @@ const MenuDesktop = () => {
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
           <div className="h-screen relative p-5">
-         
-                  <video
-        className={`video-background ${isMenu1Hovered || isMenu2Hovered || isMenu3Hovered ? 'hidden' : ''}`}
-
-        autoPlay
-        muted
-        loop
-        playsInline
-        src={videoDesktop}
-      ></video>
             <video
-        className={`video-background ${isMenu1Hovered ? '' : 'hidden'}`}
-        autoPlay
-        muted
-        loop
-        playsInline
-        src={videoHistory}
-      ></video>
-                  <video
-        className={`video-background ${isMenu2Hovered ? '' : 'hidden'}`}
-        autoPlay
-        muted
-        loop
-        playsInline
-        src={videoPatagonian}
-      ></video>
-                  <video
-        className={`video-background ${isMenu3Hovered ? '' : 'hidden'}`}
-        autoPlay
-        muted
-        loop
-        playsInline
-        src={videoWines}
-      ></video>
+              className={`video-background ${
+                isMenu1Hovered || isMenu2Hovered || isMenu3Hovered
+                  ? "hidden"
+                  : ""
+              }`}
+              autoPlay
+              muted
+              loop
+              playsInline
+              src={videoDesktop}
+            ></video>
+            <video
+              className={`video-background ${isMenu1Hovered ? "" : "hidden"}`}
+              autoPlay
+              muted
+              loop
+              playsInline
+              src={videoHistory}
+            ></video>
+            <video
+              className={`video-background ${isMenu2Hovered ? "" : "hidden"}`}
+              autoPlay
+              muted
+              loop
+              playsInline
+              src={videoPatagonian}
+            ></video>
+            <video
+              className={`video-background ${isMenu3Hovered ? "" : "hidden"}`}
+              autoPlay
+              muted
+              loop
+              playsInline
+              src={videoWines}
+            ></video>
             <div className="w-full h-full">
               <div className="border border-[#F2ECE1] w-full h-full p-2 relative flex flex-col justify-center items-center">
                 <div className="w-full h-full border border-[#F2ECE1] relative">
@@ -228,9 +229,7 @@ const MenuDesktop = () => {
                       <p
                         style={playfairFontRegular}
                         className={`menu-desk sombra-menu ${
-                          isMenu1Hovered
-                            ? "text-[#c4b27d]"
-                            : "text-[#f3eee3]"
+                          isMenu1Hovered ? "text-[#f3eee3]" : "text-[#c4b27d]"
                         }`}
                       >
                         History
@@ -266,12 +265,9 @@ const MenuDesktop = () => {
                       <p
                         style={playfairFontRegular}
                         className={`text-center menu-desk sombra-menu ${
-                          isMenu2Hovered
-                            ? "text-[#c4b27d]"
-                            : "text-[#f3eee3]"
+                          isMenu2Hovered ? "text-[#f3eee3]" : "text-[#c4b27d]"
                         }`}
                       >
-           
                         Patagonian Spirit
                       </p>
                       <ul className="text-center space-y-1.5">
@@ -329,13 +325,9 @@ const MenuDesktop = () => {
                       <p
                         style={playfairFontRegular}
                         className={`text-center menu-desk sombra-menu ${
-                          isMenu3Hovered
-                            ? "text-[#c4b27d]"
-                            : "text-[#f3eee3]"
+                          isMenu3Hovered ? "text-[#f3eee3]" : "text-[#c4b27d]"
                         }`}
                       >
-
-
                         Wines
                       </p>
                       <animated.div style={dropdownAnimation3}>

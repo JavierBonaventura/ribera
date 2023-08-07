@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
-import ilustrationHistory from "../images/ilustracion-history.png";
+import ilustrationHistory from "../images/ilustracion-history-1.png";
 import arrowDown from "../images/arrow-down.png";
 import carruajeHistory from "../images/carruaje-history.jpg";
 import paisaje from "../images/paisaje-family-2.png";
