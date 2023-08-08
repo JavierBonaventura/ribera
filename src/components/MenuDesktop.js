@@ -21,6 +21,14 @@ const MenuDesktop = () => {
   const handleMouseLeave = () => {
     setIgHovered(false);
   };
+  const [hamburHovered, sethamburHovered] = useState(false);
+  const handlehamburMouseEnter = () => {
+    sethamburHovered(true);
+  };
+
+  const handlehamburMouseLeave = () => {
+    sethamburHovered(false);
+  };
   const [currentVideo, setCurrentVideo] = useState(videoDesktop);
 
   const [isMenu1Hovered, setMenu1Hovered] = useState(false);
@@ -201,12 +209,16 @@ const MenuDesktop = () => {
               <div className="border border-[#F2ECE1] w-full h-full p-2 relative flex flex-col justify-center items-center">
                 <div className="w-full h-full border border-[#F2ECE1] relative">
                   <div className="flex justify-end items-center pr-4 py-5">
-                    <Link to="/MenuHamburguesa">
+                    <Link to="/MenuHamburguesa"
+                      onMouseEnter={handlehamburMouseEnter}
+                      onMouseLeave={handlehamburMouseLeave}
+                    >
                       <img
                         src={hambur}
                         alt="Hamburger"
-                        className="w-6 cursor-pointer"
-                      />
+                        className={`w-6 cursor-pointer ${
+                          hamburHovered ? "" : "filter brightness-200"
+                        }`} />                
                     </Link>
                   </div>
                   <div className="flex justify-center py-10 2xl:pb-24 2xl:pt-24">
