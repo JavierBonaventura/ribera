@@ -10,25 +10,9 @@ import { useSpring, animated } from "@react-spring/web";
 import { useLocation } from "react-router-dom";
 
 const MenuHamburguesaDesktop = () => {
-  const [igHovered, setIgHovered] = useState(false);
-  const handleMouseEnter = () => {
-    setIgHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIgHovered(false);
-  };
-
-  const [isMenu1Hovered, setMenu1Hovered] = useState(false);
-  const [isMenu2Hovered, setMenu2Hovered] = useState(false);
-  const [isMenu3Hovered, setMenu3Hovered] = useState(false);
-
-  const [isMenu1Visible, setMenu1Visible] = useState(true);
-  const [isMenu2Visible, setMenu2Visible] = useState(true);
-  const [isMenu3Visible, setMenu3Visible] = useState(true);
-
   const location = useLocation();
 
+  const [isMenu1Hovered, setMenu1Hovered] = useState(false);
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
     fontWeight: "normal",
@@ -42,39 +26,12 @@ const MenuHamburguesaDesktop = () => {
   };
 
   const handleMenu1Hover = () => {
+    console.log("test");
     setMenu1Hovered(true);
-    setMenu2Visible(false);
-    setMenu3Visible(false);
   };
 
   const handleMenu1Leave = () => {
     setMenu1Hovered(false);
-    setMenu2Visible(true);
-    setMenu3Visible(true);
-  };
-
-  const handleMenu2Hover = () => {
-    setMenu2Hovered(true);
-    setMenu1Visible(false);
-    setMenu3Visible(false);
-  };
-
-  const handleMenu2Leave = () => {
-    setMenu2Hovered(false);
-    setMenu1Visible(true);
-    setMenu3Visible(true);
-  };
-
-  const handleMenu3Hover = () => {
-    setMenu3Hovered(true);
-    setMenu1Visible(false);
-    setMenu2Visible(false);
-  };
-
-  const handleMenu3Leave = () => {
-    setMenu3Hovered(false);
-    setMenu1Visible(true);
-    setMenu2Visible(true);
   };
   const [mostrarMenu1, setMostrarMenu1] = useState(false);
   const [mostrarMenu2, setMostrarMenu2] = useState(false);
@@ -218,22 +175,16 @@ const MenuHamburguesaDesktop = () => {
                     </Link>
                   </div>
 
-                  <div className="flex justify-center w-full xl:w-3/4 2xl:px-28 mx-auto ">
+                  <div className="flex justify-center w-full xl:w-3/4 2xl:px-28 mx-auto">
                     <div
                       id="menu1"
                       onMouseEnter={handleMenu1Hover}
                       onMouseLeave={handleMenu1Leave}
-                      className={`flex flex-col items-center w-full transition-opacity duration-500 gap-y-8  ${
-                        isMenu2Hovered || isMenu3Hovered
-                          ? "opacity-30"
-                          : "opacity-100"
-                      }`}
+                      className="flex flex-col items-center w-full gap-y-8"
                     >
                       <p
                         style={playfairFontRegular}
-                        className={`menu-desk sombra-menu ${
-                          isMenu1Hovered ? "text-[#f3eee3]" : "text-[#c4b27d]"
-                        }`}
+                        className="menu-desk-hambur sombra-menu"
                       >
                         History
                       </p>
@@ -257,19 +208,11 @@ const MenuHamburguesaDesktop = () => {
 
                     <div
                       id="menu2"
-                      onMouseEnter={handleMenu2Hover}
-                      onMouseLeave={handleMenu2Leave}
-                      className={`flex flex-col items-center w-full transition-opacity duration-500 gap-y-8  ${
-                        isMenu1Hovered || isMenu3Hovered
-                          ? "opacity-30"
-                          : "opacity-100"
-                      }`}
+                      className="flex flex-col items-center w-full gap-y-8"
                     >
                       <p
                         style={playfairFontRegular}
-                        className={`text-center menu-desk sombra-menu ${
-                          isMenu2Hovered ? "text-[#f3eee3]" : "text-[#c4b27d]"
-                        }`}
+                        className="menu-desk-hambur sombra-menu text-center"
                       >
                         Patagonian Spirit
                       </p>
@@ -314,22 +257,13 @@ const MenuHamburguesaDesktop = () => {
                         </li>
                       </ul>
                     </div>
-
                     <div
                       id="menu3"
-                      onMouseEnter={handleMenu3Hover}
-                      onMouseLeave={handleMenu3Leave}
-                      className={`flex flex-col items-center w-full transition-opacity duration-500 gap-y-8 ${
-                        isMenu1Hovered || isMenu2Hovered
-                          ? "opacity-30"
-                          : "opacity-100"
-                      }`}
+                      className="flex flex-col items-center w-full gap-y-8"
                     >
                       <p
                         style={playfairFontRegular}
-                        className={`text-center menu-desk sombra-menu ${
-                          isMenu3Hovered ? "text-[#f3eee3]" : "text-[#c4b27d]"
-                        }`}
+                        className="menu-desk-hambur sombra-menu"
                       >
                         Wines
                       </p>
@@ -442,6 +376,7 @@ const MenuHamburguesaDesktop = () => {
                       </animated.div>
                     </div>
                   </div>
+
                   <div
                     className="flex flex-col gap-y-4 justify-center w-2/3 2xl:w-1/3 mx-auto pt-5 2xl:pt-10"
                     style={robotoFontRegular}
@@ -474,18 +409,14 @@ const MenuHamburguesaDesktop = () => {
                   <div className="absolute px-5  bottom-5 w-full container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl left-1/2 transform -translate-x-1/2">
                     <div className="flex justify-around items-center w-full text-[#F2ECE1]">
                       <div className="w-1/3 flex justify-start items-center">
-                      <a
+                        <a
                           href="https://www.instagram.com/riberadelcuarzo/"
                           target="_blank"
-                          onMouseEnter={handleMouseEnter}
-                          onMouseLeave={handleMouseLeave}
                         >
                           <img
                             src={iconIg}
                             alt="LogoIg"
-                            className={`w-5 ${
-                              igHovered ? "filter-invert" : ""
-                            }`}
+                            className="w-4 lg:w-5"
                           />
                         </a>
                       </div>
