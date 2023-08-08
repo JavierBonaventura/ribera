@@ -4,6 +4,7 @@ import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
 import imgWater from "../images/water.png";
 import iconIg from "../images/icon-ig.png";
+import backgroundLife from "../images/life-water-1.png";
 import "../App.css";
 import { useLocation } from "react-router-dom";
 import { Transition, animated } from "@react-spring/web";
@@ -29,6 +30,12 @@ const LifeWater = () => {
     fontStyle: "normal",
   };
 
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+
   return (
     <Transition
       items={location}
@@ -40,8 +47,8 @@ const LifeWater = () => {
     >
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
-          <div>
-            <body class="bg-[#F2ECE1] ">
+          <div className="h-screen bg-black">
+            <body className="">
               <header className="container mx-auto max-w-screen-xl py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 ">
                 <div class="flex justify-between items-center  ">
                   <div class="w-24 md:w-36 ">
@@ -58,7 +65,52 @@ const LifeWater = () => {
               </header>
 
               <div class="container mx-auto max-w-screen-xl">
-                <div class="pt-16 md:pt-32 pb-5">
+                <div class="pt-16 md:pt-32 pb-5 ">
+                  <div class="flex flex-col justify-center items-center mt-10  md:mt-0 md:gap-y-0 ">
+                    <h1
+                      class="text-[#5f5f5e] text-xs md:text-base tracking-widest"
+                      style={playfairFontItalic}
+                    >
+                      <i style={playfairFontItalic}>Patagonian Spirit</i>
+                    </h1>
+                    <h2
+                      style={playfairFontBlack}
+                      className="text-base md:text-xl text-[#C4AC77] text-center tracking-wider uppercase"
+                    >
+                      Life Water
+                    </h2>
+                  </div>
+                </div>
+
+                <div className="w-2/4 mx-auto flex flex-col gap-y-7 py-24">
+                  <p style={robotoFontRegular} className="text-center">
+                    <span className=" uppercase text-[#C4AC77] text-2xl">
+                      Water
+                    </span>
+                  </p>
+                  <p
+                    style={playfairFontRegular}
+                    className=" text-[#F2ECE1] text-lg tracking-wider text-center"
+                  >
+                    The Countess had planted the vineyard in the highest part of
+                    the
+                    <i>barda</i> river terrace, an unexplored area where no one
+                    had ever considered such an enterprise: it meant having to
+                    pump water up from the river at enormous expense.
+                  </p>
+                  <div className="flex justify-center items-center ">
+                    <a
+                      href=""
+                      className="text-[#F2ECE1] bg-[#C4AC77] border border-[#C4AC77] text-lg py-2 px-10 rounded-lg hover:text-[#C4AC77] hover:bg-transparent transition ease-in-out  duration-300"
+                    >
+                      Read more
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container mx-auto max-w-screen-xl hidden">
+                <div class="pt-16 md:pt-32 pb-5 ">
                   <div class="flex flex-col justify-center items-center mt-10  md:mt-0 md:gap-y-0 ">
                     <h1
                       class="text-[#5f5f5e] text-xs md:text-base tracking-widest"

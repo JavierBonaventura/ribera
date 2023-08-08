@@ -400,7 +400,7 @@ const MenuHamburguesaDesktop = () => {
                         <h1 className="text-center  text-[#c4b27d] ">
                           <i>Our distribution office</i>
                         </h1>
-                        <p className="text-center uppercase font-semibold text-[#F2ECE1] hover:text-[#cab57e]  tracking-widest">
+                        <p className="text-center uppercase font-semibold text-[#F2ECE1] hover:text-[#cab57e]  tracking-widest transition ease-in-out duration-300">
                           Casa Pirque
                         </p>
                       </a>
@@ -445,8 +445,12 @@ const MenuHamburguesaDesktop = () => {
                         className="flex justify-end items-center w-1/3 cursor-default gap-x-5 text-sm lg:text-base"
                         style={robotoFontRegular}
                       >
-                        <span className="font-bold">english</span>
-                        <span>spanish</span>
+                        <span className="font-bold text-[#c4b27d] cursor-pointer">
+                          english
+                        </span>
+                        <span className="text-[#F2ECE1] hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300">
+                          spanish
+                        </span>
                       </div>
                     </div>
                   </div>

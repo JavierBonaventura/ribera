@@ -71,6 +71,13 @@ body {
   height: 100vh;
 }
 
+.background-life {
+  background-image: url("./images/life-water-1.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
 .backgroundContacto {
   background-image: url("./images/background-contact-mob.jpg");
   background-size: cover;
