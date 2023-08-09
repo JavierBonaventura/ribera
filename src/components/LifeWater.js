@@ -47,10 +47,10 @@ const LifeWater = () => {
     >
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
-          <div className="h-screen bg-black">
-            <body className="">
-              <header className="container mx-auto max-w-screen-xl py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 ">
-                <div class="flex justify-between items-center  ">
+          <body>
+            <div className="md:h-screen bg-[#F2ECE1] background-life">
+              <header className="container mx-auto max-w-screen-xl py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2">
+                <div class="flex justify-between items-center ">
                   <div class="w-24 md:w-36 ">
                     <Link to="/">
                       <img src={logo} alt="" className="w-full xl:w-28" />
@@ -64,9 +64,9 @@ const LifeWater = () => {
                 </div>
               </header>
 
-              <div class="container mx-auto max-w-screen-xl">
+              <div class="container mx-auto max-w-screen-xl contenido-dinamico">
                 <div class="pt-16 md:pt-32 pb-5 ">
-                  <div class="flex flex-col justify-center items-center mt-10  md:mt-0 md:gap-y-0 ">
+                  <div class="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0 ">
                     <h1
                       class="text-[#5f5f5e] text-xs md:text-base tracking-widest"
                       style={playfairFontItalic}
@@ -90,7 +90,7 @@ const LifeWater = () => {
                   </p>
                   <p
                     style={playfairFontRegular}
-                    className=" text-[#F2ECE1] text-lg tracking-wider text-center"
+                    className="text-[#F2ECE1] text-lg tracking-wider text-center "
                   >
                     The Countess had planted the vineyard in the highest part of
                     the
@@ -99,17 +99,19 @@ const LifeWater = () => {
                     pump water up from the river at enormous expense.
                   </p>
                   <div className="flex justify-center items-center ">
-                    <a
-                      href=""
-                      className="text-[#F2ECE1] bg-[#C4AC77] border border-[#C4AC77] text-lg py-2 px-10 rounded-lg hover:text-[#C4AC77] hover:bg-transparent transition ease-in-out  duration-300"
-                    >
-                      Read more
-                    </a>
+                    <Link to="/lifewaterread">
+                      <a
+                        href=""
+                        className="text-[#F2ECE1] bg-[#C4AC77] border border-[#C4AC77] text-lg py-2 px-10 rounded-lg hover:text-[#C4AC77] hover:bg-transparent transition ease-in-out  duration-300"
+                      >
+                        Read more
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>
 
-              <div class="container mx-auto max-w-screen-xl hidden">
+              <div class="container mx-auto max-w-screen-xl md:hidden">
                 <div class="pt-16 md:pt-32 pb-5 ">
                   <div class="flex flex-col justify-center items-center mt-10  md:mt-0 md:gap-y-0 ">
                     <h1
@@ -127,11 +129,11 @@ const LifeWater = () => {
                   </div>
                 </div>
 
-                <div class="px-4 md:px-0 ">
+                <div class="px-4 md:px-0 bg-[#F2ECE1]">
                   <img src={imgWater} alt="" class="w-full md:w-2/3 mx-auto " />
                 </div>
 
-                <div class="flex flex-col gap-y-2  pt-8">
+                <div class="flex flex-col gap-y-2  pt-8 bg-[#F2ECE1]">
                   <div>
                     <p
                       class="text-black text-xs tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto md:text-lg"
@@ -188,8 +190,8 @@ const LifeWater = () => {
                   </div>
                 </div>
               </div>
-            </body>
-          </div>
+            </div>
+          </body>
         </animated.div>
       )}
     </Transition>

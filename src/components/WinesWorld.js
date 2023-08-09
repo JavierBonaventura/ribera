@@ -180,7 +180,7 @@ function RioCiervos() {
                     style={playfairFontBlack}
                     className="text-base text-[#C4AC77] text-center tracking-wider uppercase"
                   >
-                    Wines in the world
+                    In the world
                   </h2>
                 </div>
                 <div className=" flex flex-col gap-y-5">
@@ -206,10 +206,16 @@ function RioCiervos() {
 
             <div className="bg-[#231F20]">
               <div className="container mx-auto max-w-screen-xl flex flex-col gap-y-16 md:gap-y-32 md:py-20">
-                
                 <div className="flex flex-col justify-center items-center gap-y-5 md:gap-y-0">
                   <div id="posicion1"></div>
                   <div className="flex flex-col md:flex-row gap-y-5 ">
+                    <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center">
+                      <img
+                        src={riberaClasicoWine}
+                        alt=""
+                        className="w-full md:w-32"
+                      />
+                    </div>
                     <div className="flex flex-col gap-y-2 md:hidden">
                       <h1
                         className="uppercase text-[#C3B17D] text-center tracking-widest"
@@ -228,9 +234,6 @@ function RioCiervos() {
                           <i>Patagonia, Argentina</i>
                         </span>
                       </h4>
-                    </div>
-                    <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center">
-                      <img src={riberaClasicoWine} alt=""   className="w-full md:w-32" />
                     </div>
                     <div className="flex flex-col gap-y-5 md:w-full ">
                       <div className="md:flex flex-col gap-y-2 hidden">
@@ -306,186 +309,204 @@ function RioCiervos() {
                 <div className="flex flex-col justify-center items-center gap-y-5 md:gap-y-0 ">
                   <div id="posicion2"></div>
                   <div className="flex flex-col md:flex-row gap-y-5">
-                  <div className="flex md:hidden flex-col gap-y-2">
-                    <h1
-                      className="uppercase text-[#C3B17D] text-center tracking-widest"
-                      style={robotoFontRegular}
-                    >
-                      <span className="text-base md:text-3xl">
-                        Ribera del Cuarzo <br />{" "}
-                        <span className="font-bold">especial</span>
-                      </span>
-                    </h1>
-                    <h4
-                      className=" text-[#F2ECE1] text-center  tracking-widest"
-                      style={robotoFontRegular}
-                    >
-                      <span className="text-xs md:text-xl">
-                        <i>Patagonia, Argentina</i>
-                      </span>
-                    </h4>
-                  </div>
-                  <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center ">
-                    <img src={riberaEspecial} alt="" className="w-full md:w-32" />
-                  </div>
-                  <div className="flex flex-col gap-y-5  md:w-full">
-                  <div className="hidden md:flex flex-col gap-y-2">
-                    <h1
-                      className="uppercase text-[#C3B17D] text-center md:text-left tracking-widest"
-                      style={robotoFontRegular}
-                    >
-                      <span className="text-base md:text-3xl">
-                        Ribera del Cuarzo <br />{" "}
-                        <span className="font-bold">especial</span>
-                      </span>
-                    </h1>
-                    <h4
-                      className=" text-[#F2ECE1] text-center md:text-left  tracking-widest"
-                      style={robotoFontRegular}
-                    >
-                      <span className="text-xs md:text-xl">
-                        <i>Patagonia, Argentina</i>
-                      </span>
-                    </h4>
-                  </div>
-                    <div className="w-2/3 mx-auto md:mx-0">
-                      <p
-                        className="text-[#F2ECE1] text-xs tracking-wider text-center md:text-justify md:text-lg"
-                        style={playfairFontRegular}
+                    <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center ">
+                      <img
+                        src={riberaEspecial}
+                        alt=""
+                        className="w-full md:w-32"
+                      />
+                    </div>
+                    <div className="flex md:hidden flex-col gap-y-2">
+                      <h1
+                        className="uppercase text-[#C3B17D] text-center tracking-widest"
+                        style={robotoFontRegular}
                       >
-                        Especial malbec comes from our 5ha Araucana Vineyard
-                        that has unique and distinctive characteristics.
-                        Calcareous soils, cold nights and constant winds are
-                        permanent challenges for our vines, which react by
-                        generating excellent concentration and marked acidity.
-                      </p>
+                        <span className="text-base md:text-3xl">
+                          Ribera del Cuarzo <br />{" "}
+                          <span className="font-bold">especial</span>
+                        </span>
+                      </h1>
+                      <h4
+                        className=" text-[#F2ECE1] text-center  tracking-widest"
+                        style={robotoFontRegular}
+                      >
+                        <span className="text-xs md:text-xl">
+                          <i>Patagonia, Argentina</i>
+                        </span>
+                      </h4>
                     </div>
 
-                    <div className="w-2/3 mx-auto md:m-0">
-                      <div className="flex justify-center md:justify-start">
-                        <a
-                          className="border-b border-[#C3B17D]"
-                          onClick={handleDownloadClick2}
+                    <div className="flex flex-col gap-y-5  md:w-full">
+                      <div className="hidden md:flex flex-col gap-y-2">
+                        <h1
+                          className="uppercase text-[#C3B17D] text-center md:text-left tracking-widest"
+                          style={robotoFontRegular}
                         >
-                          <div className="w-2 inline-block">
-                            <img src={iconDownload} alt="" className="w-full" />
-                          </div>
-                          <span className="ml-2 text-xs md:text-lg text-[#C3B17D] tracking-wider">
-                            Download technical sheet
+                          <span className="text-base md:text-3xl">
+                            Ribera del Cuarzo <br />{" "}
+                            <span className="font-bold">especial</span>
                           </span>
-                        </a>
+                        </h1>
+                        <h4
+                          className=" text-[#F2ECE1] text-center md:text-left  tracking-widest"
+                          style={robotoFontRegular}
+                        >
+                          <span className="text-xs md:text-xl">
+                            <i>Patagonia, Argentina</i>
+                          </span>
+                        </h4>
+                      </div>
+                      <div className="w-2/3 mx-auto md:mx-0">
+                        <p
+                          className="text-[#F2ECE1] text-xs tracking-wider text-center md:text-justify md:text-lg"
+                          style={playfairFontRegular}
+                        >
+                          Especial malbec comes from our 5ha Araucana Vineyard
+                          that has unique and distinctive characteristics.
+                          Calcareous soils, cold nights and constant winds are
+                          permanent challenges for our vines, which react by
+                          generating excellent concentration and marked acidity.
+                        </p>
                       </div>
 
-                      <animated.div style={dropdownAnimation2}>
-                        <div className="mt-2 w-48 mx-auto md:mx-0 md:w-2/3">
-                          <ul className="text-xs text-[#C3B17D] text-center">
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 1
-                            </li>
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 2
-                            </li>
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 3
-                            </li>
-                          </ul>
+                      <div className="w-2/3 mx-auto md:m-0">
+                        <div className="flex justify-center md:justify-start">
+                          <a
+                            className="border-b border-[#C3B17D]"
+                            onClick={handleDownloadClick2}
+                          >
+                            <div className="w-2 inline-block">
+                              <img
+                                src={iconDownload}
+                                alt=""
+                                className="w-full"
+                              />
+                            </div>
+                            <span className="ml-2 text-xs md:text-lg text-[#C3B17D] tracking-wider">
+                              Download technical sheet
+                            </span>
+                          </a>
                         </div>
-                      </animated.div>
+
+                        <animated.div style={dropdownAnimation2}>
+                          <div className="mt-2 w-48 mx-auto md:mx-0 md:w-2/3">
+                            <ul className="text-xs text-[#C3B17D] text-center">
+                              <li className="py-2 px-4 hover:bg-gray-100">
+                                Opción 1
+                              </li>
+                              <li className="py-2 px-4 hover:bg-gray-100">
+                                Opción 2
+                              </li>
+                              <li className="py-2 px-4 hover:bg-gray-100">
+                                Opción 3
+                              </li>
+                            </ul>
+                          </div>
+                        </animated.div>
+                      </div>
                     </div>
-                  </div>
                   </div>
                 </div>
 
                 <div className="flex flex-col justify-center items-center gap-y-5 md:gap-y-0">
                   <div id="posicion3"></div>
                   <div className="flex flex-col md:flex-row gap-y-5">
-                  <div className="flex md:hidden flex-col gap-y-2 ">
-                    <h1
-                      className="uppercase text-[#C3B17D] text-center md:text-start tracking-widest leading-5"
-                      style={robotoFontRegular}
-                    >
-                      <span className="text-base md:text-3xl">
-                        Ribera del Cuarzo <br />{" "}
-                        <span className="font-bold">RESERVA ESTIBADA</span>
-                      </span>
-                    </h1>
-                    <h4
-                      className="text-[#F2ECE1] text-center md:text-start  tracking-widest"
-                      style={robotoFontRegular}
-                    >
-                      <span className="text-xs md:text-xl">
-                        <i>Patagonia, Argentina</i>
-                      </span>
-                    </h4>
-                  </div>
-                  <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center">
-                    <img src={riberaReserva} alt="" className="w-full md:w-32" />
-                  </div>
-                  <div className="flex flex-col gap-y-5 md:w-full">
-                  <div className="hidden md:flex flex-col gap-y-2 ">
-                    <h1
-                      className="uppercase text-[#C3B17D] text-center md:text-start tracking-widest leading-5"
-                      style={robotoFontRegular}
-                    >
-                      <span className="text-base md:text-3xl">
-                        Ribera del Cuarzo <br />{" "}
-                        <span className="font-bold">RESERVA ESTIBADA</span>
-                      </span>
-                    </h1>
-                    <h4
-                      className="text-[#F2ECE1] text-center md:text-start  tracking-widest"
-                      style={robotoFontRegular}
-                    >
-                      <span className="text-xs md:text-xl">
-                        <i>Patagonia, Argentina</i>
-                      </span>
-                    </h4>
-                  </div>
-                    <div className="w-2/3 mx-auto md:mx-0">
-                      <p
-                        className="text-[#F2ECE1] text-xs tracking-wider text-center md:text-justify md:text-lg"
-                        style={playfairFontRegular}
+                    <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center">
+                      <img
+                        src={riberaReserva}
+                        alt=""
+                        className="w-full md:w-32"
+                      />
+                    </div>
+                    <div className="flex md:hidden flex-col gap-y-2 ">
+                      <h1
+                        className="uppercase text-[#C3B17D] text-center md:text-start tracking-widest leading-5"
+                        style={robotoFontRegular}
                       >
-                        Reserva estibada is a barrel blend. We select the
-                        barrels that show the most elegance from the Southern
-                        sector of the vineyard, where the higher limestone
-                        content results in greater power and expression.
-                      </p>
+                        <span className="text-base md:text-3xl">
+                          Ribera del Cuarzo <br />{" "}
+                          <span className="font-bold">RESERVA ESTIBADA</span>
+                        </span>
+                      </h1>
+                      <h4
+                        className="text-[#F2ECE1] text-center md:text-start  tracking-widest"
+                        style={robotoFontRegular}
+                      >
+                        <span className="text-xs md:text-xl">
+                          <i>Patagonia, Argentina</i>
+                        </span>
+                      </h4>
                     </div>
 
-                    <div className="w-2/3 mx-auto md:mx-0">
-                      <div className="flex justify-center md:justify-start">
-                        <a
-                          className="border-b border-[#C3B17D]"
-                          onClick={handleDownloadClick3}
+                    <div className="flex flex-col gap-y-5 md:w-full">
+                      <div className="hidden md:flex flex-col gap-y-2 ">
+                        <h1
+                          className="uppercase text-[#C3B17D] text-center md:text-start tracking-widest leading-5"
+                          style={robotoFontRegular}
                         >
-                          <div className="w-2 inline-block">
-                            <img src={iconDownload} alt="" className="w-full" />
-                          </div>
-                          <span className="ml-2 text-xs text-[#C3B17D] tracking-wider md:text-lg">
-                            Download technical sheet
+                          <span className="text-base md:text-3xl">
+                            Ribera del Cuarzo <br />{" "}
+                            <span className="font-bold">RESERVA ESTIBADA</span>
                           </span>
-                        </a>
+                        </h1>
+                        <h4
+                          className="text-[#F2ECE1] text-center md:text-start  tracking-widest"
+                          style={robotoFontRegular}
+                        >
+                          <span className="text-xs md:text-xl">
+                            <i>Patagonia, Argentina</i>
+                          </span>
+                        </h4>
+                      </div>
+                      <div className="w-2/3 mx-auto md:mx-0">
+                        <p
+                          className="text-[#F2ECE1] text-xs tracking-wider text-center md:text-justify md:text-lg"
+                          style={playfairFontRegular}
+                        >
+                          Reserva estibada is a barrel blend. We select the
+                          barrels that show the most elegance from the Southern
+                          sector of the vineyard, where the higher limestone
+                          content results in greater power and expression.
+                        </p>
                       </div>
 
-                      <animated.div style={dropdownAnimation3}>
-                        <div className="mt-2 w-48 mx-auto md:mx-0 md:w-2/3 ">
-                          <ul className="text-xs text-[#C3B17D] text-center">
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 1
-                            </li>
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 2
-                            </li>
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 3
-                            </li>
-                          </ul>
+                      <div className="w-2/3 mx-auto md:mx-0">
+                        <div className="flex justify-center md:justify-start">
+                          <a
+                            className="border-b border-[#C3B17D]"
+                            onClick={handleDownloadClick3}
+                          >
+                            <div className="w-2 inline-block">
+                              <img
+                                src={iconDownload}
+                                alt=""
+                                className="w-full"
+                              />
+                            </div>
+                            <span className="ml-2 text-xs text-[#C3B17D] tracking-wider md:text-lg">
+                              Download technical sheet
+                            </span>
+                          </a>
                         </div>
-                      </animated.div>
+
+                        <animated.div style={dropdownAnimation3}>
+                          <div className="mt-2 w-48 mx-auto md:mx-0 md:w-2/3 ">
+                            <ul className="text-xs text-[#C3B17D] text-center">
+                              <li className="py-2 px-4 hover:bg-gray-100">
+                                Opción 1
+                              </li>
+                              <li className="py-2 px-4 hover:bg-gray-100">
+                                Opción 2
+                              </li>
+                              <li className="py-2 px-4 hover:bg-gray-100">
+                                Opción 3
+                              </li>
+                            </ul>
+                          </div>
+                        </animated.div>
+                      </div>
                     </div>
                   </div>
-                </div>
                 </div>
               </div>
             </div>

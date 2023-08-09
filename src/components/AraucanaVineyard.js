@@ -57,7 +57,7 @@ const ConstructionPage = () => {
                 </div>
               </header>
 
-              <div class="container mx-auto pb-5 md:pb-12 max-w-screen-xl">
+              <div class="container mx-auto pb-5 md:pb-12 max-w-screen-xl ">
                 <div class="pt-16 md:pt-24">
                   <div class="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0">
                     <h1

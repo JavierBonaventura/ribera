@@ -18,8 +18,9 @@ import WorkWinery from "./components/WorkWinery";
 import WorkWineryDesktop from "./components/WorkWineryDesktop";
 import LifeOnEstate from "./components/LifeOnEstate";
 import LifeOnEstateDesktop from "./components/LifeOnEstateDesktop";
-import CarouselSlider from "./components/CarouselSlider"
+import CarouselSlider from "./components/CarouselSlider";
 import LifeWater from "./components/LifeWater";
+import LifeWaterRead from "./components/LifeWater-read";
 import WinesWorld from "./components/WinesWorld";
 import WinesArgentina from "./components/WinesArgentina";
 import MenuHamburguesa from "./components/MenuHamburguesa";
@@ -94,7 +95,7 @@ const AppContent = () => {
               />
             )}
             <Routes location={item}>
-            <Route path="/carouselslider" element={<CarouselSlider />} />
+              <Route path="/carouselslider" element={<CarouselSlider />} />
 
               {windowWidth < 768 ? (
                 <Route path="/" element={<Menu />} />
@@ -125,6 +126,7 @@ const AppContent = () => {
               )}
 
               <Route path="/lifewater" element={<LifeWater />} />
+              <Route path="/lifewaterread" element={<LifeWaterRead />} />
               <Route path="/winesworld" element={<WinesWorld />} />
               <Route path="/winesargentina" element={<WinesArgentina />} />
               {windowWidth < 768 ? (

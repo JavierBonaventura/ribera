@@ -72,10 +72,22 @@ body {
 }
 
 .background-life {
-  background-image: url("./images/life-water-1.png");
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
+}
+
+.contenido-dinamico {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .background-life {
+    background-image: url("./images/background-water.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+  .contenido-dinamico {
+    display: block;
+  }
 }
 
 .backgroundContacto {
@@ -126,10 +138,15 @@ body {
   cursor: default;
 }
 
+@media screen and (min-width: 768px) {
+  .menu-desk {
+    font-size: 1.7rem;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .menu-desk {
     font-size: 2.2rem;
-    cursor: default;
   }
 
   .menu-desk-hambur {
@@ -146,6 +163,17 @@ body {
   cursor: pointer;
 }
 
+@media screen and (min-width: 768px) {
+  .subMenu {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .subMenu {
+    font-size: 0.8rem;
+  }
+}
 .subMenu2 {
   font-size: 13px;
   letter-spacing: 1.5px;

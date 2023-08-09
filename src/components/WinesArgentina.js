@@ -5,6 +5,7 @@ import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
 import iconDownload from "../images/icon-download.png";
 import araucanaWine from "../images/araucana-rio-wine.png";
+import pinotWine from "../images/araucana-pino-wine.png";
 import araucanaMalbec from "../images/araucana-malbec-wine.png";
 import araucanaAzul from "../images/araucana-azul-wine.png";
 import riberaClasico from "../images/ribera-clasico-wine.png";
@@ -179,7 +180,7 @@ function Araucana() {
                     style={playfairFontBlack}
                     className="text-base text-[#C4AC77] text-center tracking-wider uppercase"
                   >
-                    Wines in Argentina
+                    In Argentina
                   </h2>
                 </div>
                 <div className=" flex flex-col gap-y-5">
@@ -208,6 +209,13 @@ function Araucana() {
                 <div className="flex flex-col justify-center items-center gap-y-5 md:gap-y-0">
                   <div id="posicion1"></div>
                   <div className="flex flex-col md:flex-row gap-y-5">
+                    <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center">
+                      <img
+                        src={araucanaWine}
+                        alt=""
+                        className="w-full md:w-32"
+                      />
+                    </div>
                     <div className="flex flex-col gap-y-2 md:hidden">
                       <h1
                         className="uppercase text-[#C3B17D] text-center tracking-widest"
@@ -215,7 +223,9 @@ function Araucana() {
                       >
                         <span className="text-base">
                           Araucana <br />{" "}
-                          <span className="font-bold">Río de los ciervos</span>
+                          <span className="font-bold">
+                            Río de los ciervos Malbec
+                          </span>
                         </span>
                       </h1>
                       <h4
@@ -227,13 +237,7 @@ function Araucana() {
                         </span>
                       </h4>
                     </div>
-                    <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center">
-                      <img
-                        src={araucanaWine}
-                        alt=""
-                        className="w-full md:w-32"
-                      />
-                    </div>
+
                     <div className="flex flex-col gap-y-5 md:w-full">
                       <div className="hidden flex-col gap-y-2 md:flex">
                         <h1
@@ -268,42 +272,154 @@ function Araucana() {
                         </p>
                       </div>
                       <div className="w-2/3 mx-auto md:mx-0">
-                      <div className="flex justify-center md:justify-start">
-                        <a
-                          className="border-b border-[#C3B17D]"
-                          onClick={handleDownloadClick1}
-                        >
-                          <div className="w-2 inline-block">
-                            <img src={iconDownload} alt="" className="w-full" />
-                          </div>
-                          <span className="ml-2 text-xs md:text-lg text-[#C3B17D] tracking-wider">
-                            Download technical sheet
-                          </span>
-                        </a>
-                      </div>
-
-                      <animated.div style={dropdownAnimation1}>
-                        <div className="mt-2 w-48 mx-auto md:w-2/3 md:mx-0">
-                          <ul className="text-xs text-[#C3B17D] text-center">
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 1
-                            </li>
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 2
-                            </li>
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 3
-                            </li>
-                          </ul>
+                        <div className="flex justify-center md:justify-start">
+                          <a
+                            className="border-b border-[#C3B17D]"
+                            onClick={handleDownloadClick1}
+                          >
+                            <div className="w-2 inline-block">
+                              <img
+                                src={iconDownload}
+                                alt=""
+                                className="w-full"
+                              />
+                            </div>
+                            <span className="ml-2 text-xs md:text-lg text-[#C3B17D] tracking-wider">
+                              Download technical sheet
+                            </span>
+                          </a>
                         </div>
-                      </animated.div>
-                    </div></div>
+
+                        <animated.div style={dropdownAnimation1}>
+                          <div className="mt-2 w-48 mx-auto md:w-2/3 md:mx-0">
+                            <ul className="text-xs text-[#C3B17D] text-center">
+                              <li className="py-2 px-4 hover:bg-gray-100">
+                                Opción 1
+                              </li>
+                              <li className="py-2 px-4 hover:bg-gray-100">
+                                Opción 2
+                              </li>
+                              <li className="py-2 px-4 hover:bg-gray-100">
+                                Opción 3
+                              </li>
+                            </ul>
+                          </div>
+                        </animated.div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-col justify-center items-center gap-y-5 md:gap-y-0">
+                  <div id="posicion4"></div>
+                  <div className="flex flex-col md:flex-row gap-y-5">
+                    <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center">
+                      <img src={pinotWine} alt="" className="w-full md:w-32" />
+                    </div>
+                    <div className="flex flex-col gap-y-2 md:hidden">
+                      <h1
+                        className="uppercase text-[#C3B17D] text-center tracking-widest"
+                        style={robotoFontRegular}
+                      >
+                        <span className="text-base">
+                          Araucana <br />{" "}
+                          <span className="font-bold">
+                            Río de los ciervos Pinot Noir
+                          </span>
+                        </span>
+                      </h1>
+                      <h4
+                        className=" text-[#F2ECE1] text-center tracking-widest"
+                        style={robotoFontRegular}
+                      >
+                        <span className="text-xs">
+                          <i>Patagonia, Argentina</i>
+                        </span>
+                      </h4>
+                    </div>
+
+                    <div className="flex flex-col gap-y-5 md:w-full">
+                      <div className="hidden flex-col gap-y-2 md:flex">
+                        <h1
+                          className="uppercase text-[#C3B17D] text-center md:text-left tracking-widest"
+                          style={robotoFontRegular}
+                        >
+                          <span className="text-base md:text-3xl">
+                            Araucana <br />{" "}
+                            <span className="font-bold">
+                              Río de los ciervos
+                            </span>
+                          </span>
+                        </h1>
+                        <h4
+                          className=" text-[#F2ECE1] text-center md:text-left tracking-widest"
+                          style={robotoFontRegular}
+                        >
+                          <span className="text-xs md:text-xl">
+                            <i>Patagonia, Argentina</i>
+                          </span>
+                        </h4>
+                      </div>
+                      <div className="w-2/3 mx-auto md:mx-0">
+                        <p
+                          className="text-[#F2ECE1] text-xs md:text-lg tracking-wider text-center md:text-justify"
+                          style={playfairFontRegular}
+                        >
+                          Río de los Ciervos´ grapes come from 8 vineyards
+                          located along the 200km on both sides of the river.
+                          Through this wine, we aim to showcase the diversity of
+                          the classic area of the Río Negro valley.
+                        </p>
+                      </div>
+                      <div className="w-2/3 mx-auto md:mx-0">
+                        <div className="flex justify-center md:justify-start">
+                          <a
+                            className="border-b border-[#C3B17D]"
+                            onClick={handleDownloadClick1}
+                          >
+                            <div className="w-2 inline-block">
+                              <img
+                                src={iconDownload}
+                                alt=""
+                                className="w-full"
+                              />
+                            </div>
+                            <span className="ml-2 text-xs md:text-lg text-[#C3B17D] tracking-wider">
+                              Download technical sheet
+                            </span>
+                          </a>
+                        </div>
+
+                        <animated.div style={dropdownAnimation1}>
+                          <div className="mt-2 w-48 mx-auto md:w-2/3 md:mx-0">
+                            <ul className="text-xs text-[#C3B17D] text-center">
+                              <li className="py-2 px-4 hover:bg-gray-100">
+                                Opción 1
+                              </li>
+                              <li className="py-2 px-4 hover:bg-gray-100">
+                                Opción 2
+                              </li>
+                              <li className="py-2 px-4 hover:bg-gray-100">
+                                Opción 3
+                              </li>
+                            </ul>
+                          </div>
+                        </animated.div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
                 <div className="flex flex-col justify-center items-center gap-y-5 md:gap-y-0">
                   <div id="posicion2"></div>
                   <div className="flex flex-col md:flex-row gap-y-5 ">
+                    <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center ">
+                      <img
+                        src={araucanaMalbec}
+                        alt=""
+                        className="w-full md:w-32"
+                      />
+                    </div>
                     <div className="flex md:hidden flex-col md:fl gap-y-2">
                       <h1
                         className="uppercase text-[#C3B17D] text-center tracking-widest"
@@ -324,14 +440,6 @@ function Araucana() {
                         </span>
                       </h4>
                     </div>
-                    <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center ">
-                      <img
-                        src={araucanaMalbec}
-                        alt=""
-                        className="w-full md:w-32"
-                      />
-                    </div>
-
                     <div className="flex flex-col gap-y-5 md:w-full ">
                       <div className="md:flex hidden flex-col gap-y-2">
                         <h1
@@ -366,41 +474,53 @@ function Araucana() {
                         </p>
                       </div>
                       <div className="w-2/3 mx-auto md:mx-0">
-                      <div className="flex justify-center md:justify-start">
-                        <a
-                          className="border-b border-[#C3B17D]"
-                          onClick={handleDownloadClick2}
-                        >
-                          <div className="w-2 inline-block">
-                            <img src={iconDownload} alt="" className="w-full" />
-                          </div>
-                          <span className="ml-2 text-xs md:text-lg text-[#C3B17D] tracking-wider">
-                            Download technical sheet
-                          </span>
-                        </a>
-                      </div>
-                      <animated.div style={dropdownAnimation2}>
-                        <div className="mt-2 w-48 mx-auto md:mx-0 md:w-2/3">
-                          <ul className="text-xs text-[#C3B17D] text-center">
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 1
-                            </li>
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 2
-                            </li>
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 3
-                            </li>
-                          </ul>
+                        <div className="flex justify-center md:justify-start">
+                          <a
+                            className="border-b border-[#C3B17D]"
+                            onClick={handleDownloadClick2}
+                          >
+                            <div className="w-2 inline-block">
+                              <img
+                                src={iconDownload}
+                                alt=""
+                                className="w-full"
+                              />
+                            </div>
+                            <span className="ml-2 text-xs md:text-lg text-[#C3B17D] tracking-wider">
+                              Download technical sheet
+                            </span>
+                          </a>
                         </div>
-                      </animated.div>
-                    </div></div>
+                        <animated.div style={dropdownAnimation2}>
+                          <div className="mt-2 w-48 mx-auto md:mx-0 md:w-2/3">
+                            <ul className="text-xs text-[#C3B17D] text-center">
+                              <li className="py-2 px-4 hover:bg-gray-100">
+                                Opción 1
+                              </li>
+                              <li className="py-2 px-4 hover:bg-gray-100">
+                                Opción 2
+                              </li>
+                              <li className="py-2 px-4 hover:bg-gray-100">
+                                Opción 3
+                              </li>
+                            </ul>
+                          </div>
+                        </animated.div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
                 <div className="flex flex-col justify-center items-center gap-y-5 md:gap-y-0">
                   <div id="posicion3"></div>
                   <div className="flex flex-col md:flex-row gap-y-5">
+                    <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center  ">
+                      <img
+                        src={araucanaAzul}
+                        alt=""
+                        className="w-full md:w-32"
+                      />
+                    </div>
                     <div className="flex md:hidden flex-col gap-y-2">
                       <h1
                         className="uppercase text-[#C3B17D] text-center tracking-widest"
@@ -419,13 +539,6 @@ function Araucana() {
                           <i>Patagonia, Argentina</i>
                         </span>
                       </h4>
-                    </div>
-                    <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center  ">
-                      <img
-                        src={araucanaAzul}
-                        alt=""
-                        className="w-full md:w-32"
-                      />
                     </div>
                     <div className="flex flex-col gap-y-5 md:w-full">
                       <div className="hidden md:flex flex-col gap-y-2">
@@ -460,35 +573,40 @@ function Araucana() {
                         </p>
                       </div>
                       <div className="w-2/3 mx-auto md:mx-0">
-                      <div className="flex justify-center md:justify-start">
-                        <a
-                          className="border-b border-[#C3B17D]"
-                          onClick={handleDownloadClick3}
-                        >
-                          <div className="w-2 inline-block">
-                            <img src={iconDownload} alt="" className="w-full" />
-                          </div>
-                          <span className="ml-2 text-xs md:text-lg text-[#C3B17D] tracking-wider">
-                            Download technical sheet
-                          </span>
-                        </a>
-                      </div>
-                      <animated.div style={dropdownAnimation3}>
-                      <div className="mt-2 w-48 mx-auto md:mx-0 md:w-2/3 ">
-                          <ul className="text-xs text-[#C3B17D] text-center">
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 1
-                            </li>
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 2
-                            </li>
-                            <li className="py-2 px-4 hover:bg-gray-100">
-                              Opción 3
-                            </li>
-                          </ul>
+                        <div className="flex justify-center md:justify-start">
+                          <a
+                            className="border-b border-[#C3B17D]"
+                            onClick={handleDownloadClick3}
+                          >
+                            <div className="w-2 inline-block">
+                              <img
+                                src={iconDownload}
+                                alt=""
+                                className="w-full"
+                              />
+                            </div>
+                            <span className="ml-2 text-xs md:text-lg text-[#C3B17D] tracking-wider">
+                              Download technical sheet
+                            </span>
+                          </a>
                         </div>
-                      </animated.div>
-                    </div></div>
+                        <animated.div style={dropdownAnimation3}>
+                          <div className="mt-2 w-48 mx-auto md:mx-0 md:w-2/3 ">
+                            <ul className="text-xs text-[#C3B17D] text-center">
+                              <li className="py-2 px-4 hover:bg-gray-100">
+                                Opción 1
+                              </li>
+                              <li className="py-2 px-4 hover:bg-gray-100">
+                                Opción 2
+                              </li>
+                              <li className="py-2 px-4 hover:bg-gray-100">
+                                Opción 3
+                              </li>
+                            </ul>
+                          </div>
+                        </animated.div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

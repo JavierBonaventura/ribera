@@ -265,7 +265,7 @@ const Home = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="/winesargentina#posicion1">
+                          <Link to="/winesargentina#posicion4">
                             <p style={robotoFontRegular}>
                               <span className="subMenu tracking-widest">
                                 Araucana Río de los Ciervos Pinot Noir
