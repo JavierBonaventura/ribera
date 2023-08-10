@@ -434,7 +434,7 @@ const Home = () => {
               </span>
             </div>
 
-            <div className="py-10">
+            <div className="py-14">
               <div className="container mx-auto flex justify-center">
                 <a
                   href="https://www.instagram.com/riberadelcuarzo/"
