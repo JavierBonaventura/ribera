@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import fondoHamburguesaDesktop from "../images/fondoHamburguesaDesktop.png";
-import logoDesktop from "../images/logo.svg";
+import logoDesktop from "../images/logo-home-mob.png";
 import logo from "../images/logo.svg";
-import close from "../images/icon-close.svg";
+import x from "../images/x.png";
 import iconIg from "../images/icon-ig-form.svg";
 import { Link } from "react-router-dom";
 import { Transition } from "@react-spring/web";
@@ -153,72 +153,27 @@ const MenuHamburguesaDesktop = () => {
             className={`h-screen bg-[imagen] bg-no-repeat bg-cover bg-center relative p-5`}
             style={{ backgroundImage: `url(${fondoHamburguesaDesktop})` }}
           >
-            <div className="flex justify-end items-center absolute top-0 right-0 hidden">
-              <Link to="/">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="80"
-                  height="80"
-                  viewBox="0 0 100 100"
-                >
-                  <circle
-                    cx="50"
-                    cy="50"
-                    r="16"
-                    stroke="#C3B17D"
-                    fill="transparent"
-                    strokeWidth="2"
-                  />
-                  <line
-                    x1="44"
-                    y1="44"
-                    x2="56"
-                    y2="56"
-                    stroke="#C3B17D"
-                    strokeWidth="2"
-                  />
-                  <line
-                    x1="44"
-                    y1="56"
-                    x2="56"
-                    y2="44"
-                    stroke="#C3B17D"
-                    strokeWidth="2"
-                  />
-                </svg>
-              </Link>
-            </div>
-
-            <div className="w-full h-full ">
+            <div className="w-full h-full">
               <div className="border border-[#F2ECE1] w-full h-full p-2 relative flex flex-col justify-center items-center">
-                <div className="w-full h-full border border-[#F2ECE1]  flex flex-col justify-center relative">
-                  <div className="left-1/2 z-50 top-2 transform -translate-x-1/2 max-w-screen-xl  2xl:max-w-screen-2xl container mx-auto absolute ">
-                    <header className="py-10  px-5 md:px-0 md:py-2 ">
-                      <div class="flex justify-between items-center">
-                        <div class="w-28">
-                          <Link to="/">
-                            <img src={logo} alt="" className="w-full " />
-                          </Link>
-                        </div>
-                        <div class="">
-                          <Link to="/">
-                            <img src={close} alt="" className="w-14" />
-                          </Link>
-                        </div>
+                <div className="w-full h-full border border-[#F2ECE1] flex flex-col justify-start relative gap-y-8 2xl:gap-y-24 pt-24 2xl:pt-36">
+                  <div className="flex justify-end items-center absolute top-7 right-7">
+                    <Link to="/">
+                      <div className=" bg-transparent border border-[#c4b27d] rounded-full p-4">
+                        <img src={x} alt="" />
                       </div>
-                    </header>
+                    </Link>
                   </div>
-                  <div className="flex justify-center py-0 2xl:pb-5 hidden">
+                  <div className="flex justify-center">
                     <Link to="/">
                       <img
                         src={logoDesktop}
                         alt="Logo"
-                        className="w-40 2xl:w-44"
+                        className="w-32 lg:w-44"
                       />
                     </Link>
                   </div>
 
-                  <div className="flex justify-center w-full xl:w-3/4 2xl:px-28 mx-auto ">
+                  <div className="flex justify-center w-full xl:w-3/4 2xl:px-28 mx-auto">
                     <div
                       id="menu1"
                       onMouseEnter={handleMenu1Hover}
@@ -231,7 +186,7 @@ const MenuHamburguesaDesktop = () => {
                     >
                       <p
                         style={playfairFontRegular}
-                        className={`menu-desk sombra-menu ${
+                        className={`menu-desk sombra-menu tracking-wider ${
                           isMenu1Hovered ? "text-[#f3eee3]" : "text-[#c4b27d]"
                         }`}
                       >
@@ -267,7 +222,7 @@ const MenuHamburguesaDesktop = () => {
                     >
                       <p
                         style={playfairFontRegular}
-                        className={`text-center menu-desk sombra-menu ${
+                        className={`text-center menu-desk sombra-menu tracking-wider ${
                           isMenu2Hovered ? "text-[#f3eee3]" : "text-[#c4b27d]"
                         }`}
                       >
@@ -327,7 +282,7 @@ const MenuHamburguesaDesktop = () => {
                     >
                       <p
                         style={playfairFontRegular}
-                        className={`text-center menu-desk sombra-menu ${
+                        className={`text-center menu-desk sombra-menu tracking-wider ${
                           isMenu3Hovered ? "text-[#f3eee3]" : "text-[#c4b27d]"
                         }`}
                       >
@@ -442,8 +397,9 @@ const MenuHamburguesaDesktop = () => {
                       </animated.div>
                     </div>
                   </div>
+
                   <div
-                    className="flex flex-col gap-y-4 justify-center w-2/3 2xl:w-1/3 mx-auto pt-5 2xl:pt-10"
+                    className="hidden flex flex-col gap-y-4 justify-center w-2/3 2xl:w-1/3 mx-auto pt-5 2xl:pt-10"
                     style={robotoFontRegular}
                   >
                     <div className="w-full flex justify-center items-center gap-x-16 text-sm lg:text-xl tracking-widest">
@@ -471,53 +427,74 @@ const MenuHamburguesaDesktop = () => {
                       </a>
                     </div>
                   </div>
-                  <div className="absolute px-5  bottom-5 w-full container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl left-1/2 transform -translate-x-1/2">
-                    <div className="flex justify-around items-center w-full text-[#F2ECE1]">
-                      <div className="w-1/3 flex justify-start items-center">
+
+                  <div className="absolute px-5 bottom-5 w-full container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl left-1/2 transform -translate-x-1/2">
+                    <div className="flex flex-row-reverse justify-around items-center w-full text-[#F2ECE1]">
+                      <div className="w-1/3 flex justify-end items-center">
                         <a
                           href="https://www.instagram.com/riberadelcuarzo/"
                           target="_blank"
                           onMouseEnter={handleMouseEnter}
                           onMouseLeave={handleMouseLeave}
                         >
-                          <img
-                            src={iconIg}
-                            alt="LogoIg"
-                            className={`w-5 ${
-                              igHovered ? "filter-invert" : ""
-                            }`}
-                          />
+                          <div className="p-3 border border-white rounded-full hover:border-[#cab57e] transition duration-300 ease-in-out">
+                            <img
+                              src={iconIg}
+                              alt="LogoIg"
+                              className={`w-5 ${
+                                igHovered ? "filter-invert" : ""
+                              }`}
+                            />
+                          </div>
                         </a>
                       </div>
                       <div
-                        className="flex justify-center items-center w-1/3 gap-x-20 text-sm lg:text-base"
+                        className="flex justify-center items-end md:w-2/4 lg:w-1/3 gap-x-5 xl:gap-x-10 text-sm"
                         style={robotoFontRegular}
                       >
-                        <div>
+                        <div className=" ">
+                          <Link
+                            to="/contacto"
+                            className="hover:text-[#cab57e]  duration-300 transition ease-in-out uppercase tracking-widest"
+                            style={robotoFontRegular}
+                          >
+                            Contact
+                          </Link>
+                        </div>
+
+                        <div className="" style={robotoFontRegular}>
                           <a
                             href=""
-                            className="hover:text-[#cab57e] duration-300 transition ease-in-out"
+                            className="hover:text-[#cab57e]  duration-300 transition ease-in-out"
                           >
-                            Fact Sheet
+                            <div className="flex flex-col items-center ">
+                              <span className="text-center">
+                                <i>Our distribution office</i>
+                              </span>
+                              <span className="uppercase tracking-widest text-center">
+                                Casa Pirque
+                              </span>
+                            </div>
                           </a>
                         </div>
-                        <div>
+
+                        <div className="uppercase">
                           <a
                             href=""
-                            className="hover:text-[#cab57e] duration-300 transition ease-in-out"
+                            className="hover:text-[#cab57e]  duration-300 transition ease-in-out tracking-widest"
                           >
-                            Virtual Tour
+                            News
                           </a>
                         </div>
                       </div>
                       <div
-                        className="flex justify-end items-center w-1/3 cursor-default gap-x-5 text-sm lg:text-base"
+                        className="flex justify-start items-center w-1/3 cursor-default gap-x-5 text-sm lg:text-base"
                         style={robotoFontRegular}
                       >
-                        <span className="font-bold text-[#c4b27d] cursor-pointer">
+                        <span className="font-bold text-[#c4b27d] cursor-pointer tracking-widest">
                           english
                         </span>
-                        <span className="text-[#F2ECE1] hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300">
+                        <span className="text-[#F2ECE1] hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest">
                           spanish
                         </span>
                       </div>

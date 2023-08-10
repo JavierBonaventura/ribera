@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import "../App.css";
 import logo from "../images/logo.svg";
 import { useSpring, animated } from "@react-spring/web";
-import iconIg from "../images/icon-ig.png";
+import iconIg from "../images/icon-ig-form.png";
 import close from "../images/icon-close.svg";
+import x from "../images/x.png";
 import { useLocation } from "react-router-dom";
 import { Transition } from "@react-spring/web";
 
@@ -137,7 +138,7 @@ const Home = () => {
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
           <div className="containerHome pt-8 backgroundHambuerguesa ">
-            <header className="container mx-auto py-5 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 ">
+            <header className="container mx-auto py-5 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 bg-red-500 hidden">
               <div class="flex justify-between items-center">
                 <div class="w-24 md:w-36 ">
                   <Link to="/">
@@ -151,7 +152,6 @@ const Home = () => {
                 </div>
               </div>
             </header>
-
             <div className="flex bg-blue-500 hidden">
               <div className="">
                 <Link to="/">
@@ -195,8 +195,15 @@ const Home = () => {
                 </Link>
               </div>
             </div>
+            <div className="flex justify-end items-center absolute top-7 right-7">
+              <Link to="/">
+                <div className=" bg-transparent border border-[#c4b27d] rounded-full p-2">
+                  <img src={x} alt="" className="w-2" />
+                </div>
+              </Link>
+            </div>
 
-            <div className="body pt-24 ">
+            <div className="body pt-36">
               <div className="containerHome gap-y-3">
                 <p
                   style={playfairFontRegular}
@@ -388,64 +395,52 @@ const Home = () => {
                 </animated.div>
               </div>
             </div>
-            <div className=" w-full px-20 text-center flex flex-col gap-y-5 pt-10 ">
-              <div className=" flex justify-center gap-x-10 ">
+            <div className=" w-full px-20 text-center flex flex-col gap-y-5 pt-14 ">
+              <div className=" flex justify-center gap-x-10 text-base">
                 <Link
                   to="/contacto"
-                  className="text-lg footerItems tracking-widest hover:underline"
+                  className="uppercase footerItems tracking-widest hover:underline"
                   style={roboto}
                 >
                   Contact
                 </Link>
                 <p
                   style={roboto}
-                  className="text-lg footerItems tracking-widest  hover:underline"
+                  className="uppercase footerItems tracking-widest  hover:underline"
                 >
                   News
                 </p>
               </div>
-
-              <div className=" flex justify-center gap-x-10 ">
-                <a
-                  href=""
+              <div className=" w-full  text-center flex flex-col gap-y-5 text-sm ">
+                <div
                   style={roboto}
-                  className="text-base footerItems tracking-widest hover:underline"
+                  className="footerItems tracking-widest hover:underline"
                 >
-                  <strong>english</strong>
-                </a>
-                <a
-                  href=""
-                  style={roboto}
-                  className=" text-base footerItems tracking-widest hover:underline"
-                >
-                  spanish
-                </a>
+                  <a href="https://casapirque.com.ar" target="_blank">
+                    <h1 className="text-center pb-2 text-[#8B8A8B]">
+                      <i>Our distribution office</i>
+                    </h1>
+                    <p className="text-center uppercase">Casa Pirque</p>
+                  </a>
+                </div>
               </div>
             </div>
-
-            <div className=" w-full  text-center flex flex-col gap-y-5 pt-10">
-              <div
-                style={roboto}
-                className="text-base footerItems tracking-widest hover:underline"
-              >
-                <a href="https://casapirque.com.ar" target="_blank">
-                  <h1 className="text-center pb-2 text-[#c4b27d]">
-                    <i>Our distribution office</i>
-                  </h1>
-                  <p className="text-center uppercase font-semibold">
-                    Casa Pirque
-                  </p>
-                </a>
-              </div>
+            <div className="text-[#f3eee3] text-sm flex gap-x-5 pt-10">
+              <span className="font-bold text-[#c4b27d] cursor-pointer tracking-widest">
+                english
+              </span>
+              <span className="text-[#F2ECE1] hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest">
+                spanish
+              </span>
             </div>
 
-            <div className="py-20">
+            <div className="py-10">
               <div className="container mx-auto flex justify-center">
                 <a
                   href="https://www.instagram.com/riberadelcuarzo/"
                   target="_blank"
                 >
-                  <img src={iconIg} alt="" className="w-5" />
+                  <img src={iconIg} alt="" className="w-4" />
                 </a>
               </div>
             </div>

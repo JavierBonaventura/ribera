@@ -346,8 +346,8 @@ const Home = () => {
                 </animated.div>
               </div>
             </div>
-            <div className="flex flex-col text-center gap-y-20 text-sm ">
-              <div className="flex flex-col gap-y-2 ">
+            <div className="flex flex-col text-center gap-y-20 text-sm">
+              <div className="flex flex-col gap-y-4 ">
                 <Link
                   to="/contacto"
                   className="footerItems tracking-widest"
