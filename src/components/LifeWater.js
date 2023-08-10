@@ -49,27 +49,27 @@ const LifeWater = () => {
         <animated.div style={{ ...style, width: "100%" }}>
           <body>
             <div className="md:h-screen bg-[#F2ECE1] background-life">
-              <header className="container mx-auto max-w-screen-xl py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2">
-                <div class="flex justify-between items-center ">
-                  <div class="w-24 md:w-36 ">
+              <header className="container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl py-5 xl:py-10 px-5 xl:px-0 fixed top-0 left-0 right-0 z-50 ">
+                <div class="flex justify-between items-center  ">
+                  <div class="">
                     <Link to="/">
-                      <img src={logo} alt="" className="w-full xl:w-28" />
+                      <img src={logo} alt="" className="w-24 md:w-28" />
                     </Link>
                   </div>
                   <div class="mt-4">
                     <Link to="/MenuHamburguesa">
-                      <img src={hambur} alt="" className="w-7 " />
+                      <img src={hambur} alt="" className="w-7" />
                     </Link>
                   </div>
                 </div>
               </header>
 
-              <div class="container mx-auto max-w-screen-xl contenido-dinamico">
-                <div class="pt-16 md:pt-32 pb-5 ">
-                  <div class="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0 ">
+              <div class="container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl contenido-dinamico">
+                <div class="pt-24 md:pb-10 lg:pt-24 2xl:pt-36 flex flex-col gap-y-5 2xl:gap-y-10">
+                  <div class="flex flex-col justify-center items-center md:mt-0 md:gap-y-0">
                     <h1
-                      class="text-[#5f5f5e] text-xs md:text-base tracking-widest"
                       style={playfairFontItalic}
+                      class="text-[#5f5f5e] text-xs md:text-base tracking-widest"
                     >
                       <i style={playfairFontItalic}>Patagonian Spirit</i>
                     </h1>
@@ -82,7 +82,7 @@ const LifeWater = () => {
                   </div>
                 </div>
 
-                <div className="w-2/4 mx-auto flex flex-col gap-y-7 py-24">
+                <div className="w-2/4 mx-auto flex flex-col gap-y-14 py-16 2xl:py-40">
                   <p style={robotoFontRegular} className="text-center">
                     <span className=" uppercase text-[#C4AC77] text-2xl">
                       Water
@@ -90,7 +90,7 @@ const LifeWater = () => {
                   </p>
                   <p
                     style={playfairFontRegular}
-                    className="text-[#F2ECE1] text-lg tracking-wider text-center "
+                    className="text-[#F2ECE1]  text-xs md:text-base lg:text-lg tracking-wider text-center "
                   >
                     The Countess had planted the vineyard in the highest part of
                     the
@@ -111,7 +111,7 @@ const LifeWater = () => {
                 </div>
               </div>
 
-              <div class="container mx-auto max-w-screen-xl md:hidden">
+              <div class="container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl md:hidden">
                 <div class="pt-16 md:pt-32 pb-5 ">
                   <div class="flex flex-col justify-center items-center mt-10  md:mt-0 md:gap-y-0 ">
                     <h1
@@ -136,7 +136,7 @@ const LifeWater = () => {
                 <div class="flex flex-col gap-y-2  pt-8 bg-[#F2ECE1]">
                   <div>
                     <p
-                      class="text-black text-xs tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto md:text-lg"
+                      class="text-black tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto  text-xs md:text-base lg:text-lg"
                       style={playfairFontRegular}
                     >
                       The Countess planted the vineyard in the highest part of
@@ -176,7 +176,7 @@ const LifeWater = () => {
                     </p>
                   </div>
                 </div>
-                <div class="container mx-auto  max-w-screen-xl bg-[#F2ECE1]">
+                <div class="container mx-auto  max-w-screen-xl 2xl:max-w-screen-2xl bg-[#F2ECE1]">
                   <div class="py-20">
                     <div class="flex justify-center">
                       <a

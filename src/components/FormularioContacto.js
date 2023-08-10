@@ -53,11 +53,11 @@ const FormularioContacto = () => {
         <animated.div style={{ ...style, width: "100%" }}>
           <div className="py-20  md:py-0 backgroundContacto">
             {/*HEADER START*/}
-            <header className="container mx-auto max-w-screen-xl py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 ">
-              <div class="flex justify-between items-center  ">
-                <div class="w-24 md:w-36 ">
+            <header className="container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl py-5 xl:py-10 px-5 xl:px-0 fixed top-0 left-0 right-0 z-50">
+              <div class="flex justify-between items-center">
+                <div class="">
                   <Link to="/">
-                    <img src={logo} alt="" className="w-full xl:w-28" />
+                    <img src={logo} alt="" className="w-24 md:w-28" />
                   </Link>
                 </div>
                 <div class="mt-4">
@@ -70,7 +70,7 @@ const FormularioContacto = () => {
             {/*HEADER END*/}
 
             {/*PORTADA DESK START*/}
-            <div className="hidden md:flex container mx-auto max-w-screen-xl  absolute top-0 left-1/2 transform -translate-x-1/2 h-2/5  ">
+            <div className="contenido-dinamico-contact container mx-auto max-w-screen-xl  absolute top-0 left-1/2 transform -translate-x-1/2 h-2/5">
               <img
                 src={portada}
                 alt=""
@@ -80,9 +80,9 @@ const FormularioContacto = () => {
             {/*PORTADA DESK END*/}
 
             {/*CONTENIDO GENERAL START*/}
-            <div className=" pt-12 px-10 container mx-auto max-w-screen-xl md:px-0 md:pt-[25rem] ">
+            <div className="pt-12 px-10 container mx-auto max-w-screen-xl md:px-0 md:pt-[25rem] ">
               {/*TITULAR DESK START*/}
-              <div className="hidden md:block">
+              <div className="contenido-dinamico-contact justify-center">
                 <h1
                   class="uppercase text-[#c4b27d] text-4xl tracking-wider text-center"
                   style={playfairFontBold}

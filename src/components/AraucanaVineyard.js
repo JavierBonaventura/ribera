@@ -50,11 +50,11 @@ const ConstructionPage = () => {
         <animated.div style={{ ...style, width: "100%" }}>
           <div>
             <body class="bg-[#F2ECE1] ">
-              <header className="container mx-auto py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2  max-w-screen-xl">
+              <header className="container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl py-5 xl:py-10 px-5 xl:px-0 fixed top-0 left-0 right-0 z-50">
                 <div class="flex justify-between items-center">
-                  <div class="w-24 md:w-28">
+                  <div class="">
                     <Link to="/">
-                      <img src={logo} alt="" className="w-full" />
+                      <img src={logo} alt="" className="w-24 md:w-28" />
                     </Link>
                   </div>
                   <div class="mt-4">
@@ -65,12 +65,12 @@ const ConstructionPage = () => {
                 </div>
               </header>
 
-              <div class="container mx-auto pb-5 md:pb-12 max-w-screen-xl ">
-                <div class="pt-16 md:pt-24">
-                  <div class="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0">
+              <div class="container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl">
+                <div class="pt-24 md:pb-10 lg:pt-24 2xl:pt-36 lg:h-screen flex flex-col gap-y-5 2xl:gap-y-10">
+                  <div class="flex flex-col justify-center items-center md:mt-0 md:gap-y-0">
                     <h1
-                      class="text-[#5f5f5e] text-xs md:text-base tracking-widest"
                       style={playfairFontItalic}
+                      class="text-[#5f5f5e] text-xs md:text-base tracking-widest"
                     >
                       <i style={playfairFontItalic}>Patagonian Spirit</i>
                     </h1>
@@ -81,18 +81,19 @@ const ConstructionPage = () => {
                       Araucana Vineyard
                     </h2>
                   </div>
+                  <div class="relative flex justify-center items-center  md:pt-0 px-4 md:px-0">
+                    <img
+                      src={paisajeAraucana}
+                      alt=""
+                      class="w-full object-cover md:w-2/3 mx-auto"
+                    />
+                  </div>
                 </div>
+              </div>
 
-                <div class="py-5 md:py-6">
-                  <img
-                    src={paisajeAraucana}
-                    alt=""
-                    class="w-full md:w-5/6 mx-auto"
-                  />
-                </div>
-
+              <div class="container mx-auto py-5 md:py-12 xl:pb-12 xl:pt-0 max-w-screen-xl  2xl:max-w-screen-2xl ">
                 <p
-                  class="text-black text-xs tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto md:text-lg md:pt-5"
+                  class="text-black  tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto text-xs md:text-base lg:text-lg md:pt-5"
                   style={playfairFontRegular}
                 >
                   Araucana Vineyard is far more than just unique—it is an
@@ -108,16 +109,16 @@ const ConstructionPage = () => {
                   in general.
                 </p>
               </div>
-              <div className="container mx-auto px-4 md:px-0 max-w-screen-xl">
+              <div className="container mx-auto px-4 md:px-0 max-w-screen-xl  2xl:max-w-screen-2xl">
                 <img
                   src={ilustracionSpirit}
                   alt=""
                   className="w-full md:w-3/4 mx-auto"
                 />
               </div>
-              <div class="container mx-auto pt-5 md:pt-12 max-w-screen-xl">
+              <div class="container mx-auto pt-5 md:pt-12 max-w-screen-xl  2xl:max-w-screen-2xl">
                 <p
-                  class="text-black text-xs tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto md:text-lg"
+                  class="text-black tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto text-xs md:text-base lg:text-lg"
                   style={playfairFontRegular}
                 >
                   Adding to its distinctiveness is the <i>barda</i> river
@@ -139,12 +140,14 @@ const ConstructionPage = () => {
                       target="_blank"
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
-
                     >
-                      <img src={iconIg} alt=""                         className={`w-5 ${
+                      <img
+                        src={iconIg}
+                        alt=""
+                        className={`w-5 ${
                           igHovered ? "filter brightness-200" : ""
                         }`}
- />
+                      />
                     </a>
                   </div>
                 </div>

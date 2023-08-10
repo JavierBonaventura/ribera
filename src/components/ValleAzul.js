@@ -50,7 +50,7 @@ const ValleAzul = () => {
         <animated.div style={{ ...style, width: "100%" }}>
           <div>
             <body class="bg-[#F2ECE1]">
-              <header className="container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl  py-5 xl:py-10 fixed top-0 left-0 right-0 z-50 px-5 xl:px-0">
+              <header className="container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl py-5 xl:py-10 px-5 xl:px-0 fixed top-0 left-0 right-0 z-50">
                 <div class="flex justify-between items-center  ">
                   <div class="">
                     <Link to="/">
@@ -94,7 +94,7 @@ const ValleAzul = () => {
               <div class="container mx-auto  max-w-screen-xl  2xl:max-w-screen-2xl">
                 <div class="pt-5 pb-10 flex flex-col gap-y-5">
                   <p
-                    class="text-black text-xs tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto md:text-base lg:text-lg"
+                    class="text-black  tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto text-xs md:text-base lg:text-lg"
                     style={playfairFontRegular}
                   >
                     The story of this winery started in 2001, when italian
@@ -124,7 +124,7 @@ const ValleAzul = () => {
                 <div class="pt-10 md:pt-24 flex flex-col gap-y-5">
                   <div class="">
                     <p
-                      class="text-black text-xs tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto md:text-lg"
+                      class="text-black tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto text-xs md:text-base lg:text-lg"
                       style={playfairFontRegular}
                     >
                       When we first tasted the 2008 vintage, we knew Noemi had

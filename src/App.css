@@ -78,6 +78,10 @@ body {
   display: none;
 }
 
+.contenido-dinamico-contact {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   .background-life {
     background-image: url("./images/background-water.jpg");
@@ -87,6 +91,15 @@ body {
   }
   .contenido-dinamico {
     display: block;
+  }
+  .contenido-dinamico-contact {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1540px) {
+  .background-life {
+    height: 100vh;
   }
 }
 

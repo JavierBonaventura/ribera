@@ -46,33 +46,33 @@ const LifeWater = () => {
     >
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
-          <body className="bg-[#F2ECE1]">
-            <header className="container mx-auto max-w-screen-xl py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 ">
-              <div class="flex justify-between items-center ">
-                <div class="w-24 md:w-36 ">
+          <div className="bg-[#F2ECE1]">
+            <header className="container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl py-5 xl:py-10 px-5 xl:px-0 fixed top-0 left-0 right-0 z-50 ">
+              <div class="flex justify-between items-center  ">
+                <div class="">
                   <Link to="/">
-                    <img src={logo} alt="" className="w-full xl:w-28" />
+                    <img src={logo} alt="" className="w-24 md:w-28" />
                   </Link>
                 </div>
                 <div class="mt-4">
                   <Link to="/MenuHamburguesa">
-                    <img src={hambur} alt="" className="w-7 " />
+                    <img src={hambur} alt="" className="w-7" />
                   </Link>
                 </div>
               </div>
             </header>
 
-            <div className="container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl relative">
-              <div class="absolute left-1/2 top-10 transform -translate-x-1/2">
+            <div class="container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl pt-24 ">
+              <div class="absolute left-1/2 top-32 transform -translate-x-1/2">
                 <Link to="/lifewater">
                   <img src={close} alt="" className="w-16" />
                 </Link>
               </div>
-              <div className="pt-16 md:pt-32 pb-5 flex flex-col gap-y-10 ">
-                <div className="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0 ">
+              <div class="pt-24 md:pb-10 lg:pt-24 2xl:pt-36 flex flex-col gap-y-5 2xl:gap-y-10">
+                <div class="flex flex-col justify-center items-center md:mt-0 md:gap-y-0">
                   <h1
-                    className="text-[#5f5f5e] text-xs md:text-base tracking-widest"
                     style={playfairFontItalic}
+                    class="text-[#5f5f5e] text-xs md:text-base tracking-widest"
                   >
                     <i style={playfairFontItalic}>Patagonian Spirit</i>
                   </h1>
@@ -83,11 +83,15 @@ const LifeWater = () => {
                     Life Water
                   </h2>
                 </div>
+              </div>
+            </div>
 
+            <div className="container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl relative pb-16">
+              <div className="flex flex-col gap-y-10 ">
                 <div className="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0 w-2/5 mx-auto ">
                   <p
                     style={playfairFontRegular}
-                    className="text-black text-lg tracking-wider text-justify "
+                    className="text-black text-xs md:text-base lg:text-lg tracking-wider text-justify "
                   >
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Labore pariatur ratione facere quis? Ea asperiores facilis
@@ -122,7 +126,7 @@ const LifeWater = () => {
                 </div>
               </div>
             </div>
-          </body>
+          </div>
         </animated.div>
       )}
     </Transition>

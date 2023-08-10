@@ -28,27 +28,24 @@ function Header() {
 
   return (
     <div>
-      <header className="py-10 fixed top-0 left-0 right-0 z-50  ">
-        <div class="container mx-auto">
-          <div class="flex justify-between items-center px-5 ">
-            <div class="w-24 md:w-36 ">
-              <Link to="/">
-                <img src={logo} alt="" className="w-full" />
-              </Link>{" "}
-            </div>
-
-            <div class="  mt-4">
-              <Link to="/MenuHamburguesa">
-                <img src={hambur} alt="" className="w-7" />
-              </Link>{" "}
-            </div>
+      <header className="container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl py-5 xl:py-10 px-5 xl:px-0 fixed top-0 left-0 right-0 z-50">
+        <div class="flex justify-between items-center  ">
+          <div class="">
+            <Link to="/">
+              <img src={logo} alt="" className="w-24 md:w-28" />
+            </Link>
+          </div>
+          <div class="mt-4">
+            <Link to="/MenuHamburguesa">
+              <img src={hambur} alt="" className="w-7" />
+            </Link>
           </div>
         </div>
       </header>
 
-      <div className="bg-[#F2ECE1] py-3">
+      <div className=" bg-[#F2ECE1] py-4">
         <div className="container mx-auto flex flex-col justify-center items-center mt-10">
-          <div className="pt-16">
+          <div className="pt-9">
             <h1
               style={playfairFontItalic}
               className="italic text-xs text-[#5f5f5e] text-center tracking-widest"
@@ -179,8 +176,8 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
           <div className="mt-[-20px]">
-            <div className="bg-[#F2ECE1] ">
-              <p className="ml-1 text-left relative">
+            <div className="bg-[#F2ECE1]">
+              <p className="ml-6 text-left relative">
                 <span
                   style={playfairFontBlack}
                   className="text-[#C4AC77] text-lg"
@@ -304,7 +301,7 @@ const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
         <animated.div style={{ ...style, width: "100%" }}>
           <div className="mt-[-20px]">
             <div className="bg-[#F2ECE1]">
-              <p className="ml-1 text-left relative">
+              <p className="ml-6 text-left relative">
                 <span
                   style={playfairFontBlack}
                   className="text-[#C4AC77] text-lg"
@@ -433,7 +430,7 @@ const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
         <animated.div style={{ ...style, width: "100%" }}>
           <div className="mt-[-20px]">
             <div className="bg-[#F2ECE1]">
-              <p className="ml-1 text-left relative">
+              <p className="ml-6 text-left relative">
                 <span
                   style={playfairFontBlack}
                   className="text-[#C4AC77] text-lg"
@@ -561,7 +558,7 @@ const Screen4 = ({ currentScreen, handleNext, handlePrev }) => {
         <animated.div style={{ ...style, width: "100%" }}>
           <div className="mt-[-20px]">
             <div className="bg-[#F2ECE1]">
-              <p className="ml-1 text-left relative">
+              <p className="ml-6 text-left relative">
                 <span
                   style={playfairFontBlack}
                   className="text-[#C4AC77] text-lg"
@@ -684,7 +681,7 @@ const Screen5 = ({ currentScreen, handleNext, handlePrev }) => {
         <animated.div style={{ ...style, width: "100%" }}>
           <div className="mt-[-20px]">
             <div className="bg-[#F2ECE1]">
-              <p className="ml-1 text-left relative">
+              <p className="ml-6 text-left relative">
                 <span
                   style={playfairFontBlack}
                   className="text-[#C4AC77] text-lg"

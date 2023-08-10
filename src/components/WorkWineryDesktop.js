@@ -76,23 +76,23 @@ const CarouselSlider = () => {
   const renderImages = () => {
     return (
       <div className="transition-all ease-in-out duration-500 relative bg-black">
-        <header className="container mx-auto py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2  max-w-screen-xl">
-          <div class="flex justify-between items-center">
-            <div class="w-24 md:w-28">
+        <header className="container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl py-5 xl:py-10 px-5 xl:px-0 fixed top-0 left-0 right-0 z-50">
+          <div class="flex justify-between items-center  ">
+            <div class="">
               <Link to="/">
-                <img src={logo} alt="" className="w-full" />
+                <img src={logo} alt="" className="w-24 md:w-28" />
               </Link>
             </div>
             <div class="mt-4">
               <Link to="/MenuHamburguesa">
-                <img src={hambur} alt="" className="w-7 " />
+                <img src={hambur} alt="" className="w-7" />
               </Link>
             </div>
           </div>
         </header>
         <div
           id="pataginan"
-          className="container   max-w-screen-xl mx-auto py-10 fixed top-10 left-0 right-0 z-50 px-5 "
+          className="container   max-w-screen-xl  2xl:max-w-screen-2xl mx-auto py-10 fixed top-28 left-0 right-0 z-50 px-5 "
         >
           <div class="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0">
             <h1
@@ -171,7 +171,7 @@ const CarouselSlider = () => {
 
         <button
           aria-label="previous"
-          className={`w-24 absolute top-1/2 left-40 ${
+          className={`w-20 absolute top-1/2 left-40 ${
             isPrevButtonHovered ? "opacity-50" : "opacity-100"
           }`}
           onClick={handlePrevClick}
@@ -187,14 +187,14 @@ const CarouselSlider = () => {
         <div className=" w-32 container  py-1/2 fixed -top-60 left-72 right-0  px-5 absolute inset-0 flex items-center justify-center ">
           <p
             style={playfairFontBlack}
-            className=" uppercase text-[#C4AC77] text-3xl mb-8"
+            className=" uppercase text-[#C4AC77] text-2xl mb-8"
           >
             {" "}
             {"0" + (currentImageIndex + 1)}{" "}
             <sup className="text-base underline align-middle	">5</sup>
           </p>
         </div>
-        <div className="w-96 container mx-auto   max-w-screen-xl py-1/2 fixed -top-32 left-0 right-0  px-5 absolute inset-0 flex items-center justify-center ">
+        <div className="w-96 container mx-auto   max-w-screen-xl  2xl:max-w-screen-2xl py-1/2 fixed -top-32 left-0 right-0  px-5 absolute inset-0 flex items-center justify-center ">
           <p
             style={robotoFontRegular}
             className=" uppercase text-[#C4AC77] text-2xl mb-8"
@@ -202,7 +202,7 @@ const CarouselSlider = () => {
             {title[currentImageIndex]}
           </p>
         </div>
-        <div className=" w-2/4 container   max-w-screen-xl mx-auto py-1/2 fixed top-40 left-0 right-0  px-5 absolute inset-0 flex items-center justify-center ">
+        <div className="w-2/4 container max-w-screen-xl mx-auto  2xl:max-w-screen-2xl py-1/2 fixed top-40 left-0 right-0  px-5 absolute inset-0 flex items-center justify-center ">
           <p
             style={playfairFontRegular}
             className=" text-white text-lg tracking-wider text-center mb-6"
@@ -212,7 +212,7 @@ const CarouselSlider = () => {
         </div>
         <button
           aria-label="next"
-          className={`w-24 absolute top-1/2 right-40 ${
+          className={`w-20 absolute top-1/2 right-40 ${
             isNextButtonHovered ? "opacity-50" : "opacity-100"
           }`}
           onClick={handleNextClick}
