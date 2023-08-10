@@ -346,28 +346,30 @@ const Home = () => {
                 </animated.div>
               </div>
             </div>
-            <div className="flex flex-col text-center pt-0  gap-y-4 ">
-              <Link
-                to="/contacto"
-                className="footerItems tracking-widest"
-                style={robotoFontRegular}
-              >
-                Contact
-              </Link>
+            <div className="flex flex-col text-center gap-y-20 text-sm ">
+              <div className="flex flex-col gap-y-2 ">
+                <Link
+                  to="/contacto"
+                  className="footerItems tracking-widest"
+                  style={robotoFontRegular}
+                >
+                  Contact
+                </Link>
 
-              <p
-                style={robotoFontRegular}
-                className="footerItems tracking-widest"
-              >
-                News
-              </p>
+                <p
+                  style={robotoFontRegular}
+                  className="footerItems tracking-widest"
+                >
+                  News
+                </p>
+              </div>
 
               <div className="container mx-auto flex justify-center">
                 <a
                   href="https://www.instagram.com/riberadelcuarzo/"
                   target="_blank"
                 >
-                  <img src={iconIg} alt="" className="w-5" />
+                  <img src={iconIg} alt="" className="w-4" />
                 </a>
               </div>
             </div>
