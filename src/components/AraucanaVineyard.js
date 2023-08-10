@@ -10,6 +10,14 @@ import { useLocation } from "react-router-dom";
 import { Transition, animated } from "@react-spring/web";
 
 const ConstructionPage = () => {
+  const [igHovered, setIgHovered] = useState(false);
+  const handleMouseEnter = () => {
+    setIgHovered(true);
+  };
+  const handleMouseLeave = () => {
+    setIgHovered(false);
+  };
+
   const location = useLocation();
 
   const playfairFontBlack = {
@@ -122,11 +130,21 @@ const ConstructionPage = () => {
                 <div class="py-20">
                   <div class="flex justify-center">
                     <a
-                      class="border border-[#C3B17D] rounded-full p-7"
+                      className={`border border-[#C3B17D] rounded-full p-7 ${
+                        igHovered
+                          ? "bg-[#C3B17D] transition-bg ease-in-out duration-200"
+                          : "bg-transparent transition-bg ease-in-out duration-200"
+                      }`}
                       href="https://www.instagram.com/riberadelcuarzo/"
                       target="_blank"
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
+
                     >
-                      <img src={iconIg} alt="" class="w-5" />
+                      <img src={iconIg} alt=""                         className={`w-5 ${
+                          igHovered ? "filter brightness-200" : ""
+                        }`}
+ />
                     </a>
                   </div>
                 </div>

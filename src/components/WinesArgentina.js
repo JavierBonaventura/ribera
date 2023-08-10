@@ -17,6 +17,14 @@ import { useSpring, Transition, animated } from "@react-spring/web";
 
 import "../App.css";
 function Araucana() {
+  const [igHovered, setIgHovered] = useState(false);
+  const handleMouseEnter = () => {
+    setIgHovered(true);
+  };
+  const handleMouseLeave = () => {
+    setIgHovered(false);
+  };
+
   const locationAnimacion = useLocation();
   const [showDropdown1, setShowDropdown1] = useState(false);
   const [showDropdown2, setShowDropdown2] = useState(false);
@@ -100,13 +108,24 @@ function Araucana() {
   const location3 = useLocation();
 
   useEffect(() => {
-    if (location3.hash === "#posicion2") {
+    if (location3.hash === "#posicion3") {
       const element = document.getElementById("posicion3");
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, [location3]);
+
+  const location4 = useLocation();
+
+  useEffect(() => {
+    if (location3.hash === "#posicion4") {
+      const element = document.getElementById("posicion4");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location4]);
 
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
@@ -311,7 +330,7 @@ function Araucana() {
                 </div>
 
                 <div className="flex flex-col justify-center items-center gap-y-5 md:gap-y-0">
-                  <div id="posicion4"></div>
+                  <div id="posicion2"></div>
                   <div className="flex flex-col md:flex-row gap-y-5">
                     <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center">
                       <img src={pinotWine} alt="" className="w-full md:w-32" />
@@ -411,7 +430,7 @@ function Araucana() {
                 </div>
 
                 <div className="flex flex-col justify-center items-center gap-y-5 md:gap-y-0">
-                  <div id="posicion2"></div>
+                  <div id="posicion3"></div>
                   <div className="flex flex-col md:flex-row gap-y-5 ">
                     <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center ">
                       <img
@@ -512,7 +531,7 @@ function Araucana() {
                 </div>
 
                 <div className="flex flex-col justify-center items-center gap-y-5 md:gap-y-0">
-                  <div id="posicion3"></div>
+                  <div id="posicion4"></div>
                   <div className="flex flex-col md:flex-row gap-y-5">
                     <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center  ">
                       <img
@@ -671,11 +690,20 @@ function Araucana() {
               <div class="container mx-auto max-w-screen-xl py-20">
                 <div class="flex justify-center">
                   <a
-                    class="border border-[#C3B17D] rounded-full p-7"
+                      className={`border border-[#C3B17D] rounded-full p-7 ${
+                        igHovered
+                          ? "bg-[#C3B17D] transition-bg ease-in-out duration-200"
+                          : "bg-transparent transition-bg ease-in-out duration-200"
+                      }`}
                     href="https://www.instagram.com/riberadelcuarzo/"
                     target="_blank"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+
                   >
-                    <img src={iconIg} alt="" class="w-5" />
+                    <img src={iconIg} alt="" className={`w-5 ${
+                          igHovered ? "filter brightness-200" : ""
+                        }`} />
                   </a>
                 </div>
               </div>

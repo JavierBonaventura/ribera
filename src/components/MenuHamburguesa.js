@@ -300,7 +300,7 @@ const Home = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="/winesworld#posicion1">
+                          <Link to="/winesargentina#posicion1">
                             <p style={robotoFontRegular}>
                               <span className="subMenu tracking-widest">
                                 Araucana Río de los Ciervos Malbec
@@ -309,7 +309,7 @@ const Home = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="/winesworld#posicion4">
+                          <Link to="/winesargentina#posicion2">
                             <p style={robotoFontRegular}>
                               <span className="subMenu tracking-widest">
                                 Araucana Río de los Ciervos Pinot Noir
@@ -318,7 +318,7 @@ const Home = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="/winesworld#posicion2">
+                          <Link to="/winesargentina#posicion3">
                             <p style={robotoFontRegular}>
                               <span className="subMenu tracking-widest">
                                 Araucana Malbec
@@ -327,7 +327,7 @@ const Home = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="/winesworld#posicion3">
+                          <Link to="/winesargentina#posicion4">
                             <p style={robotoFontRegular}>
                               <span className="subMenu tracking-widest">
                                 Araucana Azul
