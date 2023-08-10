@@ -50,24 +50,24 @@ const ValleAzul = () => {
         <animated.div style={{ ...style, width: "100%" }}>
           <div>
             <body class="bg-[#F2ECE1]">
-              <header className="container mx-auto max-w-screen-xl  py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2 ">
+              <header className="container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl  py-5 xl:py-10 fixed top-0 left-0 right-0 z-50 px-5 xl:px-0">
                 <div class="flex justify-between items-center  ">
-                  <div class="w-24 md:w-36 ">
+                  <div class="">
                     <Link to="/">
-                      <img src={logo} alt="" className="w-full xl:w-28" />
+                      <img src={logo} alt="" className="w-24 md:w-28" />
                     </Link>
                   </div>
                   <div class="mt-4">
                     <Link to="/MenuHamburguesa">
-                      <img src={hambur} alt="" className="w-7 " />
+                      <img src={hambur} alt="" className="w-7" />
                     </Link>
                   </div>
                 </div>
               </header>
 
-              <div class="container mx-auto  max-w-screen-xl">
-                <div class="pt-16 md:pt-32">
-                  <div class="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0">
+              <div class="container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl">
+                <div class="pt-24 md:pb-10 lg:pt-24 2xl:pt-36 lg:h-screen flex flex-col gap-y-5 2xl:gap-y-10">
+                  <div class="flex flex-col justify-center items-center md:mt-0 md:gap-y-0">
                     <h1
                       style={playfairFontItalic}
                       class="text-[#5f5f5e] text-xs md:text-base tracking-widest"
@@ -81,29 +81,20 @@ const ValleAzul = () => {
                       Valle azul
                     </h2>
                   </div>
-                </div>
-
-                <div class="relative flex justify-center items-center pt-5 px-4 md:px-0">
-                  <img
-                    src={paisajeValle}
-                    alt=""
-                    class="w-full object-cover md:w-2/3 mx-auto"
-                  />
-                </div>
-
-                <div class="py-28 hidden">
-                  <div class="flex justify-center">
-                    <div class="border border-[#C3B17D] rounded-full p-6 relative flex justify-center items-center">
-                      <img src={arrowDown} alt="" class="w-1.5 absolute" />
-                    </div>
+                  <div class="relative flex justify-center items-center  md:pt-0 px-4 md:px-0">
+                    <img
+                      src={paisajeValle}
+                      alt=""
+                      class="w-full object-cover md:w-2/3 mx-auto"
+                    />
                   </div>
                 </div>
               </div>
 
-              <div class="container mx-auto  max-w-screen-xl">
+              <div class="container mx-auto  max-w-screen-xl  2xl:max-w-screen-2xl">
                 <div class="pt-5 pb-10 flex flex-col gap-y-5">
                   <p
-                    class="text-black text-xs tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto md:text-lg"
+                    class="text-black text-xs tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto md:text-base lg:text-lg"
                     style={playfairFontRegular}
                   >
                     The story of this winery started in 2001, when italian
@@ -120,7 +111,7 @@ const ValleAzul = () => {
               </div>
 
               <div class=" bg-[#212121]">
-                <div class="container mx-auto  max-w-screen-xl py-5 px-4 md:px-0">
+                <div class="container mx-auto  max-w-screen-xl 2xl:max-w-screen-2xl py-5 px-4 md:px-0">
                   <img
                     src={paisajeHistory}
                     alt=""
@@ -129,7 +120,7 @@ const ValleAzul = () => {
                 </div>
               </div>
 
-              <div class="container mx-auto  max-w-screen-xl bg-[#F2ECE1]">
+              <div class="container mx-auto  max-w-screen-xl 2xl:max-w-screen-2xl bg-[#F2ECE1]">
                 <div class="pt-10 md:pt-24 flex flex-col gap-y-5">
                   <div class="">
                     <p
@@ -152,17 +143,16 @@ const ValleAzul = () => {
                 </div>
               </div>
 
-              <div class="container mx-auto  max-w-screen-xl bg-[#F2ECE1]">
+              <div class="container mx-auto  max-w-screen-xl 2xl:max-w-screen-2xl bg-[#F2ECE1]">
                 <div class="py-20">
                   <div class="flex justify-center">
                     <a
-                     
-                     className={`border border-[#C3B17D] rounded-full p-7 ${
-                      igHovered
-                        ? "bg-[#C3B17D] transition-bg ease-in-out duration-200"
-                        : "bg-transparent transition-bg ease-in-out duration-200"
-                    }`}
-                    href="https://www.instagram.com/riberadelcuarzo/"
+                      className={`border border-[#C3B17D] rounded-full p-7 ${
+                        igHovered
+                          ? "bg-[#C3B17D] transition-bg ease-in-out duration-200"
+                          : "bg-transparent transition-bg ease-in-out duration-200"
+                      }`}
+                      href="https://www.instagram.com/riberadelcuarzo/"
                       target="_blank"
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
