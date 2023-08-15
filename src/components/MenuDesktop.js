@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import fondoDesktop from "../images/fondoDesktop.png";
 import videoDesktop from "../images/videoHome.mp4";
 import videoHistory from "../images/videoHistory.mp4";
@@ -158,6 +158,30 @@ const MenuDesktop = () => {
     }
   };
 
+  // Codigo para que los videos esten en reproduccion aunque esten con clase hidden
+
+  const videoRef1 = useRef(null);
+  const videoRef2 = useRef(null);
+  const videoRef3 = useRef(null);
+  const videoRef4 = useRef(null);
+  useEffect(() => {
+    // Función para iniciar la reproducción de un video si está cargado
+    const playHiddenVideo = (videoRef) => {
+      if (videoRef && videoRef.current) {
+        if (!videoRef.current.paused && videoRef.current.currentTime > 0) {
+          // Si el video ya está reproduciéndose, no hagas nada
+          return;
+        }
+        videoRef.current.play();
+      }
+    };
+
+    // Iniciar la reproducción de los videos ocultos
+    playHiddenVideo(videoRef2);
+    playHiddenVideo(videoRef3);
+    playHiddenVideo(videoRef4);
+  }, []);
+
   return (
     <Transition
       items={location}
@@ -171,6 +195,7 @@ const MenuDesktop = () => {
         <animated.div style={{ ...style, width: "100%" }}>
           <div className="h-screen relative p-5">
             <video
+              ref={videoRef1}
               className={`video-background ${
                 isMenu1Hovered || isMenu2Hovered || isMenu3Hovered
                   ? "hidden"
@@ -183,6 +208,7 @@ const MenuDesktop = () => {
               src={videoDesktop}
             ></video>
             <video
+              ref={videoRef2}
               className={`video-background ${isMenu1Hovered ? "" : "hidden"}`}
               autoPlay
               muted
@@ -191,6 +217,7 @@ const MenuDesktop = () => {
               src={videoHistory}
             ></video>
             <video
+              ref={videoRef3}
               className={`video-background ${isMenu2Hovered ? "" : "hidden"}`}
               autoPlay
               muted
@@ -199,6 +226,7 @@ const MenuDesktop = () => {
               src={videoPatagonian}
             ></video>
             <video
+              ref={videoRef4}
               className={`video-background ${isMenu3Hovered ? "" : "hidden"}`}
               autoPlay
               muted
@@ -206,6 +234,7 @@ const MenuDesktop = () => {
               playsInline
               src={videoWines}
             ></video>
+
             <div className="w-full h-full">
               <div className="border border-[#F2ECE1] w-full h-full p-2 relative flex flex-col justify-center items-center">
                 <div className="w-full h-full border border-[#F2ECE1] relative">
