@@ -174,7 +174,7 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
       config={{ duration: 1000 }}
     >
       {(style, item) => (
-        <animated.div style={{ ...style, width: "100%", backgroundColor: "#F2ECE1" }}>
+        <animated.div style={{ ...style, width: "100%", backgroundColor: "#F2ECE1",  minHeight: "100vh" }}>
           <div className="mt-[-20px] ">
             <div className="bg-[#F2ECE1]">
               <p className="ml-6 text-left relative">
@@ -298,7 +298,7 @@ const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
       config={{ duration: 1000 }}
     >
       {(style, item) => (
-        <animated.div style={{ ...style, width: "100%" , backgroundColor: "#F2ECE1"  }}>
+        <animated.div style={{ ...style, width: "100%" , backgroundColor: "#F2ECE1" ,  minHeight: "100vh"   }}>
           <div className="mt-[-20px]">
             <div className="bg-[#F2ECE1]">
               <p className="ml-6 text-left relative">
@@ -427,7 +427,7 @@ const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
       config={{ duration: 1000 }}
     >
       {(style, item) => (
-        <animated.div style={{ ...style, width: "100%" , backgroundColor: "#F2ECE1"  }}>
+        <animated.div style={{ ...style, width: "100%" , backgroundColor: "#F2ECE1"  ,  minHeight: "100vh" }}>
           <div className="mt-[-20px]">
             <div className="bg-[#F2ECE1]">
               <p className="ml-6 text-left relative">
@@ -555,7 +555,7 @@ const Screen4 = ({ currentScreen, handleNext, handlePrev }) => {
       config={{ duration: 1000 }}
     >
       {(style, item) => (
-        <animated.div style={{ ...style, width: "100%" , backgroundColor: "#F2ECE1" }}>
+        <animated.div style={{ ...style, width: "100%" , backgroundColor: "#F2ECE1" ,  minHeight: "100vh" }}>
           <div className="mt-[-20px]">
             <div className="bg-[#F2ECE1]">
               <p className="ml-6 text-left relative">
@@ -678,7 +678,7 @@ const Screen5 = ({ currentScreen, handleNext, handlePrev }) => {
       config={{ duration: 1000 }}
     >
       {(style, item) => (
-        <animated.div style={{ ...style, width: "100%" , backgroundColor: "#F2ECE1"  }}>
+        <animated.div style={{ ...style, width: "100%" , backgroundColor: "#F2ECE1" ,  minHeight: "100vh"  }}>
           <div className="mt-[-20px]">
             <div className="bg-[#F2ECE1]">
               <p className="ml-6 text-left relative">
