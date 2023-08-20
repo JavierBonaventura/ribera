@@ -248,7 +248,7 @@ const MenuDesktop = () => {
                         src={hambur}
                         alt="Hamburger"
                         className={`w-6 cursor-pointer ${
-                          hamburHovered ? "" : "filter brightness-200"
+                          hamburHovered ? "filterHambur" : ""
                         }`}
                       />
                     </Link>

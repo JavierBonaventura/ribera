@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import fondoDesktop from "../images/fondoDesktop.png";
 import videoDesktop from "../images/videoHome.mp4";
-import videoHistory from "../images/videoHome.mp4";
-import videoWines from "../images/videoHome.mp4";
-import videoPatagonian from "../images/videoHome.mp4";
-
-import logoDesktop from "../images/logoDesktop.png";
-import hambur from "../images/menu-hambur.png";
+import videoHistory from "../images/videoHistory.mp4";
+import videoWines from "../images/videoWines.mp4";
+import videoPatagonian from "../images/videoPatagonian.mp4";
+import logoDesktop from "../images/logoDesktop-01.png";
+import hambur from "../images/hambur-claro.png";
 import iconIg from "../images/icon-ig-form.svg";
+import iconUbi from "../images/icon-ubi.png";
 import { Link } from "react-router-dom";
 import { Transition } from "@react-spring/web";
 import { useSpring, animated } from "@react-spring/web";
@@ -21,6 +21,14 @@ const MenuDesktop = () => {
 
   const handleMouseLeave = () => {
     setIgHovered(false);
+  };
+  const [hamburHovered, sethamburHovered] = useState(false);
+  const handlehamburMouseEnter = () => {
+    sethamburHovered(true);
+  };
+
+  const handlehamburMouseLeave = () => {
+    sethamburHovered(false);
   };
   const [currentVideo, setCurrentVideo] = useState(videoDesktop);
 
@@ -163,29 +171,66 @@ const MenuDesktop = () => {
         <animated.div style={{ ...style, width: "100%" }}>
           <div className="h-screen relative p-5">
             <video
-              className="w-full h-full object-cover absolute top-0 left-0 z-0"
+              className={`video-background ${
+                isMenu1Hovered || isMenu2Hovered || isMenu3Hovered
+                  ? "hidden"
+                  : ""
+              }`}
               autoPlay
-              loop
               muted
+              loop
               playsInline
-              preload="auto" // Añadir el atributo preload con el valor "auto"
-              src={currentVideo} // Use the currentVideo as the source
-            />
+              src={videoDesktop}
+            ></video>
+            <video
+              className={`video-background ${isMenu1Hovered ? "" : "hidden"}`}
+              autoPlay
+              muted
+              loop
+              playsInline
+              src={videoHistory}
+            ></video>
+            <video
+              className={`video-background ${isMenu2Hovered ? "" : "hidden"}`}
+              autoPlay
+              muted
+              loop
+              playsInline
+              src={videoPatagonian}
+            ></video>
+            <video
+              className={`video-background ${isMenu3Hovered ? "" : "hidden"}`}
+              autoPlay
+              muted
+              loop
+              playsInline
+              src={videoWines}
+            ></video>
             <div className="w-full h-full">
               <div className="border border-[#F2ECE1] w-full h-full p-2 relative flex flex-col justify-center items-center">
                 <div className="w-full h-full border border-[#F2ECE1] relative">
                   <div className="flex justify-end items-center pr-4 py-5">
-                    <Link to="/MenuHamburguesa">
+                    <Link
+                      to="/MenuHamburguesa"
+                      onMouseEnter={handlehamburMouseEnter}
+                      onMouseLeave={handlehamburMouseLeave}
+                    >
                       <img
                         src={hambur}
                         alt="Hamburger"
-                        className="w-6 cursor-pointer"
+                        className={`w-6 cursor-pointer ${
+                          hamburHovered ? "" : "filter brightness-200"
+                        }`}
                       />
                     </Link>
                   </div>
                   <div className="flex justify-center py-10 2xl:pb-24 2xl:pt-24">
                     <Link to="/">
-                      <img src={logoDesktop} alt="Logo" className="w-44" />
+                      <img
+                        src={logoDesktop}
+                        alt="Logo"
+                        className="w-32 lg:w-44"
+                      />
                     </Link>
                   </div>
 
@@ -194,7 +239,7 @@ const MenuDesktop = () => {
                       id="menu1"
                       onMouseEnter={handleMenu1Hover}
                       onMouseLeave={handleMenu1Leave}
-                      className={`flex flex-col items-center w-full transition-opacity duration-500 gap-y-8  ${
+                      className={`flex flex-col items-center w-full transition-opacity duration-500 gap-y-2 xl:gap-y-8   ${
                         isMenu2Hovered || isMenu3Hovered
                           ? "opacity-30"
                           : "opacity-100"
@@ -202,15 +247,13 @@ const MenuDesktop = () => {
                     >
                       <p
                         style={playfairFontRegular}
-                        className={`menu-desk sombra-menu ${
-                          isMenu1Hovered
-                            ? "text-[#c4b27d]"
-                            : "text-[#f3eee3]"
+                        className={`menu-desk sombra-menu tracking-wider ${
+                          isMenu1Hovered ? "text-[#f3eee3]" : "text-[#c4b27d]"
                         }`}
                       >
                         History
                       </p>
-                      <ul className="text-center space-y-1.5">
+                      <ul className="text-center space-y-0 lg:space-y-1.5">
                         <li>
                           <Link to="/family" style={robotoFontRegular}>
                             <span className="subMenu tracking-widest">
@@ -232,7 +275,7 @@ const MenuDesktop = () => {
                       id="menu2"
                       onMouseEnter={handleMenu2Hover}
                       onMouseLeave={handleMenu2Leave}
-                      className={`flex flex-col items-center w-full transition-opacity duration-500 gap-y-8  ${
+                      className={`flex flex-col items-center w-full transition-opacity duration-500 gap-y-2 xl:gap-y-8  ${
                         isMenu1Hovered || isMenu3Hovered
                           ? "opacity-30"
                           : "opacity-100"
@@ -240,16 +283,13 @@ const MenuDesktop = () => {
                     >
                       <p
                         style={playfairFontRegular}
-                        className={`text-center menu-desk sombra-menu ${
-                          isMenu2Hovered
-                            ? "text-[#c4b27d]"
-                            : "text-[#f3eee3]"
+                        className={`text-center menu-desk sombra-menu  tracking-wider ${
+                          isMenu2Hovered ? "text-[#f3eee3]" : "text-[#c4b27d]"
                         }`}
                       >
-           
                         Patagonian Spirit
                       </p>
-                      <ul className="text-center space-y-1.5">
+                      <ul className="text-center space-y-0 lg:space-y-1.5">
                         <li>
                           <Link
                             to="/araucanavineyard"
@@ -295,7 +335,7 @@ const MenuDesktop = () => {
                       id="menu3"
                       onMouseEnter={handleMenu3Hover}
                       onMouseLeave={handleMenu3Leave}
-                      className={`flex flex-col items-center w-full transition-opacity duration-500 gap-y-8 ${
+                      className={`flex flex-col items-center w-full transition-opacity duration-500 gap-y-2 xl:gap-y-8 ${
                         isMenu1Hovered || isMenu2Hovered
                           ? "opacity-30"
                           : "opacity-100"
@@ -303,18 +343,14 @@ const MenuDesktop = () => {
                     >
                       <p
                         style={playfairFontRegular}
-                        className={`text-center menu-desk sombra-menu ${
-                          isMenu3Hovered
-                            ? "text-[#c4b27d]"
-                            : "text-[#f3eee3]"
+                        className={`text-center menu-desk sombra-menu  tracking-wider ${
+                          isMenu3Hovered ? "text-[#f3eee3]" : "text-[#c4b27d]"
                         }`}
                       >
-
-
                         Wines
                       </p>
                       <animated.div style={dropdownAnimation3}>
-                        <ul className="text-center space-y-1.5">
+                        <ul className="text-center space-y-0 lg:space-y-1.5">
                           <li>
                             <p style={robotoFontRegular} onClick={opcion4}>
                               <span className="!mb-0 subMenu tracking-widest">
@@ -343,7 +379,7 @@ const MenuDesktop = () => {
                                 </Link>
                               </li>
                               <li>
-                                <Link to="/winesargentina#posicion1">
+                                <Link to="/winesargentina#posicion4">
                                   <p style={robotoFontRegular}>
                                     <span className="subMenu tracking-widest">
                                       Araucana Río de los Ciervos Pinot Noir
@@ -423,52 +459,80 @@ const MenuDesktop = () => {
                     </div>
                   </div>
                   <div className="absolute bottom-5 px-5 w-full container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl  left-1/2 transform -translate-x-1/2">
-                    <div className="flex justify-around items-center w-full text-[#F2ECE1] ">
-                      <div className="w-1/3  flex justify-start items-center ">
+                    <div className="flex flex-row-reverse justify-around items-end w-full text-[#F2ECE1] ">
+                      <div className="w-1/3  flex justify-end items-center ">
                         <a
                           href="https://www.instagram.com/riberadelcuarzo/"
                           target="_blank"
                           onMouseEnter={handleMouseEnter}
                           onMouseLeave={handleMouseLeave}
                         >
-                          <img
-                            src={iconIg}
-                            alt="LogoIg"
-                            className={`w-5 ${
-                              igHovered ? "filter-invert" : ""
-                            }`}
-                          />
+                          {" "}
+                          <div className="p-3 border border-white rounded-full hover:border-[#cab57e] transition duration-300 ease-in-out">
+                            <img
+                              src={iconIg}
+                              alt="LogoIg"
+                              className={`w-5 ${
+                                igHovered ? "filter-invert" : ""
+                              }`}
+                            />
+                          </div>
                         </a>
                       </div>
                       <div
-                        className="flex justify-center items-center w-1/3 gap-x-20 text-sm lg:text-base "
+                        className="flex justify-center items-end md:w-2/4 lg:w-1/3 gap-x-5 xl:gap-x-10 text-sm"
                         style={robotoFontRegular}
                       >
-                        <div>
+                        <div className=" ">
                           <Link
                             to="/contacto"
-                            className="hover:text-[#cab57e]  duration-300 transition ease-in-out"
+                            className="hover:text-[#cab57e]  duration-300 transition ease-in-out uppercase tracking-widest"
                             style={robotoFontRegular}
                           >
                             Contact
                           </Link>
                         </div>
-                        <div>
+
+                        <div className="" style={robotoFontRegular}>
                           <a
                             href=""
                             className="hover:text-[#cab57e]  duration-300 transition ease-in-out"
+                          >
+                            <div className="flex flex-col items-center ">
+                              <span className="text-center">
+                                <i>Our distribution office</i>
+                              </span>
+                              <span className="uppercase tracking-widest text-center">
+                                Casa Pirque
+                              </span>
+                            </div>
+                          </a>
+                        </div>
+
+                        <div className="uppercase">
+                          <a
+                            href=""
+                            className="hover:text-[#cab57e]  duration-300 transition ease-in-out tracking-widest"
                           >
                             News
                           </a>
                         </div>
                       </div>
                       <div
-                        className="flex flex-col justify-center items-end w-1/3 cursor-default text-sm lg:text-base"
-                        style={robotoFontRegular}
+                        className="flex flex-col justify-center items-start w-1/3 cursor-default "
+                        style={playfairFontRegular}
                       >
+                        <img
+                          src={iconUbi}
+                          className="w-4 absolute -top-3 left-[3.7rem]"
+                        />
                         <div className="flex flex-col text-center">
-                          <span className="uppercase">Río Negro</span>
-                          <span>Patagonia Argentina</span>
+                          <span className="uppercase tracking-[0.17em] text-xs lg:text-sm ">
+                            Río Negro
+                          </span>
+                          <span className="text-xs tracking-tighter">
+                            Patagonia Argentina
+                          </span>
                         </div>
                       </div>
                     </div>

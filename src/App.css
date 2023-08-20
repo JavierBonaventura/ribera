@@ -317,7 +317,11 @@ body {
 } */
 
 .filter-invert {
-  filter: saturate(4);
+  filter: saturate(6);
+}
+
+.filterHambur {
+  filter: saturate(6)
 }
 
 img {
