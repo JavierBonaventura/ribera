@@ -49,7 +49,7 @@ const LifeWater = () => {
         <animated.div style={{ ...style, width: "100%" }}>
           <body>
             <div className="md:h-screen bg-[#F2ECE1] background-life">
-              <header className="container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl py-5 xl:py-10 px-5 xl:px-0 fixed top-0 left-0 right-0 z-50 ">
+              <header className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-5 xl:py-10 px-5 2xl:px-0 fixed top-0 left-0 right-0 z-50 ">
                 <div class="flex justify-between items-center  ">
                   <div class="">
                     <Link to="/">
@@ -64,18 +64,18 @@ const LifeWater = () => {
                 </div>
               </header>
 
-              <div class="container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl contenido-dinamico">
+              <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl contenido-dinamico md:px-5 2xl:px-0">
                 <div class="pt-24 md:pb-10 lg:pt-24 2xl:pt-36 flex flex-col gap-y-5 2xl:gap-y-10">
                   <div class="flex flex-col justify-center items-center md:mt-0 md:gap-y-0">
                     <h1
                       style={playfairFontItalic}
-                      class="text-[#5f5f5e] text-xs md:text-base tracking-widest"
+                      class="text-[#5f5f5e] text-xs md:text-lg tracking-widest"
                     >
                       <i style={playfairFontItalic}>Patagonian Spirit</i>
                     </h1>
                     <h2
                       style={playfairFontBlack}
-                      className="text-base md:text-xl text-[#C4AC77] text-center tracking-wider uppercase"
+                      className="text-base md:text-2xl text-[#C4AC77] text-center tracking-wider uppercase"
                     >
                       Life Water
                     </h2>
@@ -90,7 +90,7 @@ const LifeWater = () => {
                   </p>
                   <p
                     style={playfairFontRegular}
-                    className="text-[#F2ECE1]  text-xs md:text-base lg:text-lg tracking-wider text-center "
+                    className="text-[#F2ECE1]  text-xs  lg:text-base lg:leading-7 tracking-wider text-center "
                   >
                     The Countess had planted the vineyard in the highest part of
                     the
@@ -111,7 +111,7 @@ const LifeWater = () => {
                 </div>
               </div>
 
-              <div class="container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl md:hidden">
+              <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:hidden">
                 <div class="pt-16 md:pt-32 pb-5 ">
                   <div class="flex flex-col justify-center items-center mt-10  md:mt-0 md:gap-y-0 ">
                     <h1

@@ -50,7 +50,7 @@ const ConstructionPage = () => {
         <animated.div style={{ ...style, width: "100%" }}>
           <div>
             <body class="bg-[#F2ECE1] ">
-              <header className="container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl py-5 xl:py-10 px-5 xl:px-0 fixed top-0 left-0 right-0 z-50">
+              <header className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-5 xl:py-10 px-5 2xl:px-0 fixed top-0 left-0 right-0 z-50">
                 <div class="flex justify-between items-center">
                   <div class="">
                     <Link to="/">
@@ -65,18 +65,18 @@ const ConstructionPage = () => {
                 </div>
               </header>
 
-              <div class="container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl">
-                <div class="pt-24 md:pb-10 lg:pt-24 2xl:pt-36 lg:h-screen flex flex-col gap-y-5 2xl:gap-y-10">
+              <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
+                <div class="pt-24 md:pb-0 lg:pt-24 2xl:pt-36 flex flex-col gap-y-5 2xl:gap-y-10">
                   <div class="flex flex-col justify-center items-center md:mt-0 md:gap-y-0">
                     <h1
                       style={playfairFontItalic}
-                      class="text-[#5f5f5e] text-xs md:text-base tracking-widest"
+                      class="text-[#5f5f5e] text-xs md:text-lg tracking-widest"
                     >
                       <i style={playfairFontItalic}>Patagonian Spirit</i>
                     </h1>
                     <h2
                       style={playfairFontBlack}
-                      className="text-base md:text-xl text-[#C4AC77] text-center tracking-wider uppercase"
+                      className="text-base md:text-2xl text-[#C4AC77] text-center tracking-wider uppercase"
                     >
                       Araucana Vineyard
                     </h2>
@@ -91,9 +91,9 @@ const ConstructionPage = () => {
                 </div>
               </div>
 
-              <div class="container mx-auto py-5 md:py-12 xl:pb-12 xl:pt-0 max-w-screen-xl  2xl:max-w-screen-2xl ">
+              <div class="container mx-auto py-5 md:py-12 xl:pb-12 xl:pt-0 max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 ">
                 <p
-                  class="text-black  tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto text-xs md:text-base lg:text-lg md:pt-5"
+                  class="text-black tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto text-xs  lg:text-base lg:leading-7 md:pt-5"
                   style={playfairFontRegular}
                 >
                   Araucana Vineyard is far more than just unique—it is an
@@ -109,16 +109,18 @@ const ConstructionPage = () => {
                   in general.
                 </p>
               </div>
-              <div className="container mx-auto px-4 md:px-0 max-w-screen-xl  2xl:max-w-screen-2xl">
+
+              <div className="container mx-auto px-4  max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
                 <img
                   src={ilustracionSpirit}
                   alt=""
                   className="w-full md:w-3/4 mx-auto"
                 />
               </div>
-              <div class="container mx-auto pt-5 md:pt-12 max-w-screen-xl  2xl:max-w-screen-2xl">
+
+              <div class="container mx-auto pt-5 md:pt-12 max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
                 <p
-                  class="text-black tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto text-xs md:text-base lg:text-lg"
+                  class="text-black tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto text-xs  lg:text-base lg:leading-7"
                   style={playfairFontRegular}
                 >
                   Adding to its distinctiveness is the <i>barda</i> river
@@ -131,7 +133,7 @@ const ConstructionPage = () => {
                 <div class="py-20">
                   <div class="flex justify-center">
                     <a
-                      className={`border border-[#C3B17D] rounded-full p-7 ${
+                      className={`border border-[#C3B17D] rounded-full p-7 md:p-8 ${
                         igHovered
                           ? "bg-[#C3B17D] transition-bg ease-in-out duration-200"
                           : "bg-transparent transition-bg ease-in-out duration-200"
@@ -144,7 +146,7 @@ const ConstructionPage = () => {
                       <img
                         src={iconIg}
                         alt=""
-                        className={`w-5 ${
+                        className={`w-5 md:w-7 ${
                           igHovered ? "filter brightness-200" : ""
                         }`}
                       />

@@ -94,18 +94,18 @@ const Family = () => {
                   <div class="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0">
                     <h1
                       style={playfairFontItalic}
-                      class="text-[#5f5f5e] text-xs md:text-base tracking-widest"
+                      class="text-[#5f5f5e] text-xs md:text-lg tracking-widest"
                     >
                       <i style={playfairFontItalic}>History</i>
                     </h1>
                     <h2
                       style={playfairFontBlack}
-                      className="text-base md:text-xl text-[#C4AC77] text-center tracking-wider uppercase"
+                      className="text-base md:text-2xl text-[#C4AC77] text-center tracking-wider uppercase"
                     >
                       Family
                     </h2>
                   </div>
-                  <div class="relative flex justify-center items-center  pt-5 md:pt-0">
+                  <div class="relative flex justify-center items-center pt-5 md:pt-0">
                     <img
                       src={ilustrationHistory}
                       alt=""
@@ -142,10 +142,10 @@ const Family = () => {
                     <img src={paisaje} alt="" />
                   </div>
                   <div class="flex flex-col gap-y-2 md:gap-y-5 w-full xl:w-3/4 mx-auto px-10 xl:px-24 pt-10 pb-32 md:pt-20 md:pb-0 ">
-                    <div className="flex flex-col">
+                    <div className="flex flex-col md:gap-y-2">
                       <h1
                         style={playfairFontBlack}
-                        class="text-[#C4AC77] font-bold text-lg lg:text-3xl tracking-wide"
+                        class="text-[#C4AC77] font-bold text-lg md:text-4xl tracking-wide"
                       >
                         1883
                       </h1>
@@ -153,14 +153,14 @@ const Family = () => {
                         class="uppercase text-[#C4AC77] tracking-wide"
                         style={robotoFontRegular}
                       >
-                        <span className="text-sm lg:text-xl">
+                        <span className="text-sm md:text-xl">
                           Roots in patagonia
                         </span>
                       </h2>
                     </div>
                     <div>
                       <p
-                        class="text-justify tracking-wider text-black text-xs lg:text-base xl:text-lg"
+                        class="text-justify tracking-wider text-black text-xs lg:text-base lg:leading-7"
                         style={playfairFontRegular}
                       >
                         We have our{" "}
@@ -213,7 +213,7 @@ const Family = () => {
 
                       <div class="flex flex-col gap-y-2 md:gap-y-5 pt-5 pb-12 md:py-10 md:pr-52 lg:pr-60 xl:pl-24 xl:pr-72 w-full 2xl:px-0 2xl:w-2/4 mx-auto px-10 md:px-0 ">
                         <p
-                          class="text-justify  tracking-wider text-white text-xs lg:text-base xl:text-lg"
+                          class="text-justify  tracking-wider text-white text-xs lg:text-base lg:leading-7"
                           style={playfairFontRegular}
                         >
                           Patagonia was the place where we spent the summers of
@@ -261,7 +261,7 @@ const Family = () => {
                         />
                       </div>
                       <p
-                        class="text-justify tracking-wider text-white text-xs pt-10 px-10 md:px-32 md:w-3/4 mx-auto lg:text-base xl:text-lg"
+                        class="text-justify tracking-wider text-white text-xs pt-10 px-10 md:px-32 md:w-3/4 mx-auto lg:text-base 2xl:text-lg"
                         style={playfairFontRegular}
                       >
                         Patagonia was the place where we spent the summers of my
@@ -299,7 +299,7 @@ const Family = () => {
                 <div className="w-full md:w-2/5 mx-auto flex flex-col gap-y-5 xl:gap-y-16">
                   <div className="px-10 md:px-0">
                     <p
-                      class="text-justify tracking-wider text-black text-xs lg:text-base xl:text-lg"
+                      class="text-justify tracking-wider text-black text-xs lg:text-base lg:leading-7"
                       style={playfairFontRegular}
                     >
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -316,7 +316,7 @@ const Family = () => {
                   <img src={felipe} alt="" className="px-4 md:px-0" />
                 </div>
                 <p
-                  class="text-black text-xs lg:text-sm xl:text-base pt-2 px-10 tracking-wider text-center "
+                  class="text-black text-xs lg:text-lg pt-2 px-10 tracking-wider text-center "
                   style={playfairFontRegular}
                 >
                   <i>Felipe José Menendez Arguelles</i>
@@ -326,7 +326,7 @@ const Family = () => {
               <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 py-20 ">
                 <div class="flex justify-center">
                   <a
-                    className={`border border-[#C3B17D] rounded-full p-7 ${
+                    className={`border border-[#C3B17D] rounded-full p-7 md:p-8 ${
                       igHovered
                         ? "bg-[#C3B17D] transition-bg ease-in-out duration-200"
                         : "bg-transparent transition-bg ease-in-out duration-200"
@@ -339,7 +339,7 @@ const Family = () => {
                     <img
                       src={iconIg}
                       alt=""
-                      className={`w-5 ${
+                      className={`w-5 md:w-7 ${
                         igHovered ? "filter brightness-200" : ""
                       }`}
                     />

@@ -47,7 +47,7 @@ const LifeWater = () => {
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
           <div className="bg-[#F2ECE1]">
-            <header className="container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl py-5 xl:py-10 px-5 xl:px-0 fixed top-0 left-0 right-0 z-50 ">
+            <header className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-5 xl:py-10 px-5 2xl:px-0 fixed top-0 left-0 right-0 z-50 ">
               <div class="flex justify-between items-center  ">
                 <div class="">
                   <Link to="/">
@@ -62,23 +62,23 @@ const LifeWater = () => {
               </div>
             </header>
 
-            <div class="container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl pt-24 ">
+            <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl pt-24 md:px-5 2xl:px-0 ">
               <div class="absolute left-1/2 top-32 transform -translate-x-1/2">
                 <Link to="/lifewater">
-                  <img src={close} alt="" className="w-16" />
+                  <img src={close} alt="" className="w-12 2xl:w-16" />
                 </Link>
               </div>
               <div class="pt-24 md:pb-10 lg:pt-24 2xl:pt-36 flex flex-col gap-y-5 2xl:gap-y-10">
                 <div class="flex flex-col justify-center items-center md:mt-0 md:gap-y-0">
                   <h1
                     style={playfairFontItalic}
-                    class="text-[#5f5f5e] text-xs md:text-base tracking-widest"
+                    class="text-[#5f5f5e] text-xs md:text-lg tracking-widest"
                   >
                     <i style={playfairFontItalic}>Patagonian Spirit</i>
                   </h1>
                   <h2
                     style={playfairFontBlack}
-                    className="text-base md:text-xl text-[#C4AC77] text-center tracking-wider uppercase"
+                    className="text-base md:text-2xl text-[#C4AC77] text-center tracking-wider uppercase"
                   >
                     Life Water
                   </h2>
@@ -86,12 +86,12 @@ const LifeWater = () => {
               </div>
             </div>
 
-            <div className="container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl relative pb-16">
+            <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 relative pb-10">
               <div className="flex flex-col gap-y-10 ">
-                <div className="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0 w-2/5 mx-auto ">
+                <div className="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0 w-2/5 mx-auto">
                   <p
                     style={playfairFontRegular}
-                    className="text-black text-xs md:text-base lg:text-lg tracking-wider text-justify "
+                    className="text-black text-xs lg:text-base lg:leading-7 tracking-wider text-justify"
                   >
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Labore pariatur ratione facere quis? Ea asperiores facilis

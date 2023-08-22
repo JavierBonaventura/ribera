@@ -53,7 +53,7 @@ const FormularioContacto = () => {
         <animated.div style={{ ...style, width: "100%" }}>
           <div className="py-20  md:py-0 backgroundContacto">
             {/*HEADER START*/}
-            <header className="container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl py-5 xl:py-10 px-5 xl:px-0 fixed top-0 left-0 right-0 z-50">
+            <header className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-5 xl:py-10 px-5 2xl:px-0 fixed top-0 left-0 right-0 z-50">
               <div class="flex justify-between items-center">
                 <div class="">
                   <Link to="/">
@@ -62,7 +62,7 @@ const FormularioContacto = () => {
                 </div>
                 <div class="mt-4">
                   <Link to="/MenuHamburguesa">
-                    <img src={hambur} alt="" className="w-7 " />
+                    <img src={hambur} alt="" className="w-7" />
                   </Link>
                 </div>
               </div>
@@ -70,21 +70,21 @@ const FormularioContacto = () => {
             {/*HEADER END*/}
 
             {/*PORTADA DESK START*/}
-            <div className="contenido-dinamico-contact container mx-auto max-w-screen-xl  absolute top-0 left-1/2 transform -translate-x-1/2 h-2/5">
+            <div className="contenido-dinamico-contact container mx-auto max-w-screen-xl xl:max-w-screen-2xl  absolute top-0 left-1/2 transform -translate-x-1/2 h-2/5">
               <img
                 src={portada}
                 alt=""
-                className=" mx-auto object-cover  w-3/4"
+                className=" mx-auto object-cover w-3/4"
               />
             </div>
             {/*PORTADA DESK END*/}
 
             {/*CONTENIDO GENERAL START*/}
-            <div className="pt-12 px-10 container mx-auto max-w-screen-xl md:px-0 md:pt-[25rem] ">
+            <div className="pt-12 px-10 container mx-auto max-w-screen-xl md:px-0 md:pt-[25rem]">
               {/*TITULAR DESK START*/}
               <div className="contenido-dinamico-contact justify-center">
                 <h1
-                  class="uppercase text-[#c4b27d] text-4xl tracking-wider text-center"
+                  class="uppercase text-[#c4b27d] text-3xl tracking-wider text-center"
                   style={playfairFontBold}
                 >
                   Contact
@@ -195,7 +195,7 @@ const FormularioContacto = () => {
                     </div>
                     <div className="flex items-center justify-start">
                       <button
-                        className="bg-[#C3B17D] text-[#F2ECE1] text-sm md:text-xl  hover:bg-[#C4AD77] rounded-md  py-2 px-8 "
+                        className="bg-[#C3B17D] text-[#F2ECE1] text-sm md:text-xl  hover:bg-[#F2ECE1] hover:text-[#C3B17D] transition ease-in-out duration-300 rounded-md  py-2 px-8 "
                         type="submit"
                       >
                         Send
