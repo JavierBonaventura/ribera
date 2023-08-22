@@ -497,7 +497,7 @@ const MenuDesktop = () => {
                           onMouseLeave={handleMouseLeave}
                         >
                           {" "}
-                          <div className="p-3 border border-white rounded-full hover:border-[#cab57e] transition duration-300 ease-in-out">
+                          <div className="p-4 border border-white rounded-full hover:border-[#d6c69b] transition duration-300 ease-in-out">
                             <img
                               src={iconIg}
                               alt="LogoIg"
