@@ -130,7 +130,11 @@ const LifeWater = () => {
                 </div>
 
                 <div class="px-4 md:px-0 bg-[#F3EEE3]">
-                  <img src={imgWater} alt="" class="w-full md:w-2/3 mx-auto " />
+                  <img
+                    src={imgWater}
+                    alt=""
+                    class="w-full md:w-2/3 mx-auto shadow-2xl "
+                  />
                 </div>
 
                 <div class="flex flex-col gap-y-2  pt-8 bg-[#F3EEE3]">

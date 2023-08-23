@@ -207,7 +207,7 @@ function Araucana() {
                     <img
                       src={cava}
                       alt=""
-                      className="w-full md:w-5/6 mx-auto"
+                      className="w-full md:w-5/6 mx-auto shadow-custom"
                     />
                   </div>
                   <p
@@ -678,7 +678,7 @@ function Araucana() {
               <Link to="/winesworld#posicion0">
                 <div className="flex justify-center md:-mt-12">
                   <a href="" style={robotoFontRegular}>
-                    <span className="uppercase text-xs md:text-2xl md:border md:border-transparent md:hover:border-[#C4B27D] transition ease-in-out duration-500 text-[#F3EEE3] tracking-widest bg-[#C4B27D] md:hover:bg-[#231F20] md:hover:text-[#C4B27D] rounded-md p-2 md:py-2 md:px-8">
+                    <span className="uppercase text-xs md:text-xl md:border md:border-transparent md:hover:border-transparent transition ease-in-out duration-500 text-[#F3EEE3] tracking-widest bg-[#C4B27D] md:hover:bg-[#F3EEE3] md:hover:text-[#C4B27D] rounded-md p-2 md:py-2 md:px-8">
                       View wines in the world
                     </span>
                   </a>

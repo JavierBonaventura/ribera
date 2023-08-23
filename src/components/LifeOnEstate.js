@@ -42,7 +42,7 @@ function Header() {
         </div>
       </header>
 
-      <div className="bg-[#F3EEE3] py-4">
+      <div className="bg-[#F3EEE3] pt-4 pb-12">
         <div className="container mx-auto flex flex-col justify-center items-center mt-10">
           <div className="pt-9">
             <h1
@@ -167,7 +167,7 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
           }}
         >
           <div className="mt-[-20px]">
-            <div className="bg-[#F3EEE3] ">
+            <div className="bg-[#F3EEE3] pb-2">
               <p className="ml-6 text-left relative">
                 <span
                   style={playfairFontBlack}
@@ -301,7 +301,7 @@ const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
           }}
         >
           <div className="mt-[-20px]">
-            <div className="bg-[#F3EEE3]">
+            <div className="bg-[#F3EEE3] pb-2">
               <p className="ml-6 text-left relative">
                 <span
                   style={playfairFontBlack}
@@ -453,7 +453,7 @@ const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
           }}
         >
           <div className="mt-[-20px]">
-            <div className="bg-[#F3EEE3]">
+            <div className="bg-[#F3EEE3] pb-2">
               <p className="ml-6 text-left relative">
                 <span
                   style={playfairFontBlack}
