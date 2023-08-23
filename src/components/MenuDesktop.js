@@ -487,8 +487,8 @@ const MenuDesktop = () => {
                       </animated.div>
                     </div>
                   </div>
-                  <div className="absolute bottom-5 px-5 w-full container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl  left-1/2 transform -translate-x-1/2">
-                    <div className="flex flex-row-reverse justify-around items-end w-full text-[#F3EEE3] ">
+                  <div className="absolute bottom-5 md:px-5  w-full container mx-auto max-w-screen-xl xl:max-w-screen-2xl  2xl:max-w-none  left-1/2 transform -translate-x-1/2">
+                    <div className="flex flex-row-reverse justify-around items-end w-full text-[#F3EEE3]">
                       <div className="w-1/3  flex justify-end items-center ">
                         <a
                           href="https://www.instagram.com/riberadelcuarzo/"

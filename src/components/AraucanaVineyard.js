@@ -85,7 +85,7 @@ const ConstructionPage = () => {
                     <img
                       src={paisajeAraucana}
                       alt=""
-                      class="w-full object-cover md:w-2/3 mx-auto"
+                      class="w-full object-cover md:w-2/3 mx-auto shadow-2xl"
                     />
                   </div>
                 </div>

@@ -85,7 +85,7 @@ const ValleAzul = () => {
                     <img
                       src={paisajeValle}
                       alt=""
-                      class="w-full object-cover md:w-2/3 mx-auto"
+                      class="w-full object-cover md:w-2/3 mx-auto shadow-2xl"
                     />
                   </div>
                 </div>
@@ -110,13 +110,15 @@ const ValleAzul = () => {
                 </div>
               </div>
 
-              <div class=" bg-[#212121]">
+              <div class=" bg-[#212121] ">
                 <div class="container mx-auto  max-w-screen-xl xl:max-w-screen-2xl py-5 px-4 md:px-5 2xl:px-0 ">
-                  <img
-                    src={paisajeHistory}
-                    alt=""
-                    class="-mb-10 md:-mb-24 w-full md:w-2/3 mx-auto"
-                  />
+                  <div className=" w-full md:w-2/3 mx-auto">
+                    <img
+                      src={paisajeHistory}
+                      alt=""
+                      className="-mb-10 md:-mb-24 w-full shadow-custom"
+                    />
+                  </div>
                 </div>
               </div>
 

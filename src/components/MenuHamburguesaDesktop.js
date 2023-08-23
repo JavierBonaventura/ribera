@@ -158,7 +158,7 @@ const MenuHamburguesaDesktop = () => {
                 <div className="w-full h-full border border-[#F3EEE3] flex flex-col justify-start relative gap-y-8 2xl:gap-y-24 pt-24 2xl:pt-36">
                   <div className="flex justify-end items-center absolute top-3 right-3">
                     <Link to="/">
-                      <div className=" bg-transparent border border-[#c4b27d] rounded-full p-3">
+                      <div className=" bg-transparent border border-[#c4b27d] rounded-full p-3 transition ease-in-out duration-500 hover:scale-90">
                         <img src={x} alt="" className="w-2" />
                       </div>
                     </Link>
@@ -428,7 +428,7 @@ const MenuHamburguesaDesktop = () => {
                     </div>
                   </div>
 
-                  <div className="absolute px-5 bottom-5 w-full container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl left-1/2 transform -translate-x-1/2">
+                  <div className="absolute md:px-5 bottom-5 w-full container mx-auto max-w-screen-xl xl:max-w-screen-2xl 2xl:max-w-none left-1/2 transform -translate-x-1/2">
                     <div className="flex flex-row-reverse justify-around items-center w-full text-[#F3EEE3]">
                       <div className="w-1/3 flex justify-end items-center">
                         <a

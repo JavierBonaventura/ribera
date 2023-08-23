@@ -109,7 +109,7 @@ const Family = () => {
                     <img
                       src={ilustrationHistory}
                       alt=""
-                      class="w-full md:w-[45rem] xl:w-[46rem] 2xl:w-7/12 "
+                      class="w-full md:w-[45rem] xl:w-[46rem] 2xl:w-7/12  "
                     />
                     <h1
                       style={playfairFontExtraBold}
@@ -139,7 +139,7 @@ const Family = () => {
                 <div ref={posicionRef} id="posicion"></div>
                 <div className="flex flex-col md:flex-row md:py-20">
                   <div class="w-full xl:w-9/12 mx-auto px-4 md:px-0">
-                    <img src={paisaje} alt="" />
+                    <img src={paisaje} alt="" className="shadow-2xl" />
                   </div>
                   <div class="flex flex-col gap-y-2 md:gap-y-5 w-full xl:w-3/4 mx-auto px-10 xl:px-24 pt-10 pb-32 md:pt-20 md:pb-0 ">
                     <div className="flex flex-col md:gap-y-2">
@@ -197,7 +197,7 @@ const Family = () => {
                 <img
                   src={carruajeHistory}
                   alt=""
-                  className="w-6/12 2xl:w-4/12 mx-auto contenido-dinamico absolute  right-4 2xl:right-44 -bottom-5 lg:-bottom-20"
+                  className="w-6/12 2xl:w-4/12 mx-auto contenido-dinamico absolute  right-4 2xl:right-44 -bottom-5 lg:-bottom-20 shadow-custom"
                 />
 
                 <div class="bg-[#212121] w-full md:w-2/3">
@@ -207,7 +207,7 @@ const Family = () => {
                         <img
                           src={carruajeHistory}
                           alt=""
-                          className="w-full md:w-9/12 mx-auto "
+                          className="w-full md:w-9/12 mx-auto shadow-2xl "
                         />
                       </div>
 
@@ -313,7 +313,11 @@ const Family = () => {
                       facere ipsam quae.
                     </p>
                   </div>
-                  <img src={felipe} alt="" className="px-4 md:px-0" />
+                  <img
+                    src={felipe}
+                    alt=""
+                    className="px-4 md:px-0 shadow-2xl"
+                  />
                 </div>
                 <p
                   class="text-[#000000] text-xs lg:text-lg pt-2 px-10 tracking-wider text-center "

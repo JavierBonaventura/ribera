@@ -47,7 +47,7 @@ const LifeWater = () => {
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
           <div className="bg-[#F3EEE3]">
-            <header className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-5 xl:py-10 px-5 2xl:px-0 fixed top-0 left-0 right-0 z-50 ">
+            <header className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-5 xl:py-10 px-5 2xl:px-0 fixed top-0 left-0 right-0 z-40 ">
               <div class="flex justify-between items-center  ">
                 <div class="">
                   <Link to="/">
@@ -62,10 +62,10 @@ const LifeWater = () => {
               </div>
             </header>
 
-            <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl pt-24 md:px-5 2xl:px-0 ">
-              <div class="absolute left-1/2 top-32 transform -translate-x-1/2">
+            <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl pt-24 md:px-5 2xl:px-0  ">
+              <div class="absolute left-1/2 top-32  hover:scale-90 -translate-x-1/2 z-50 border border-transparent rounded-full hover:border-[#C4B27D] hover:transf transition ease-in-out duration-500">
                 <Link to="/lifewater">
-                  <img src={close} alt="" className="w-12 2xl:w-16" />
+                  <img src={close} alt="" className="w-12 2xl:w-16 " />
                 </Link>
               </div>
               <div class="pt-24 md:pb-10 lg:pt-24 2xl:pt-36 flex flex-col gap-y-5 2xl:gap-y-10">
@@ -86,7 +86,7 @@ const LifeWater = () => {
               </div>
             </div>
 
-            <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 relative pb-10">
+            <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 relative pb-10 ">
               <div className="flex flex-col gap-y-10 ">
                 <div className="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0 w-2/5 mx-auto">
                   <p
