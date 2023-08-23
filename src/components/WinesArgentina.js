@@ -190,14 +190,14 @@ function Araucana() {
               <div className="container mx-auto max-w-screen-xl flex flex-col justify-center items-center pt-28 pb-16 gap-y-10 ">
                 <div class="flex flex-col justify-center items-center  bg-[#231F20] ">
                   <h1
-                    class="text-xs tracking-widest text-[#F2ECE1]"
+                    class="text-xs tracking-widest text-[#F3EEE3]"
                     style={playfairFontItalic}
                   >
                     <i style={playfairFontItalic}>Wines</i>
                   </h1>
                   <h2
                     style={playfairFontBlack}
-                    className="text-base text-[#C4AC77] text-center tracking-wider uppercase"
+                    className="text-base text-[#C4B27D] text-center tracking-wider uppercase"
                   >
                     In Argentina
                   </h2>
@@ -211,7 +211,7 @@ function Araucana() {
                     />
                   </div>
                   <p
-                    className="text-[#F2ECE1] text-xs tracking-wider w-2/3 mx-auto text-center md:text-lg"
+                    className="text-[#F3EEE3] text-xs tracking-wider w-2/3 mx-auto text-center md:text-lg"
                     style={playfairFontRegular}
                   >
                     We craft wines with the adventurous spirit inherent to
@@ -237,7 +237,7 @@ function Araucana() {
                     </div>
                     <div className="flex flex-col gap-y-2 md:hidden">
                       <h1
-                        className="uppercase text-[#C3B17D] text-center tracking-widest"
+                        className="uppercase text-[#C4B27D] text-center tracking-widest"
                         style={robotoFontRegular}
                       >
                         <span className="text-base">
@@ -248,7 +248,7 @@ function Araucana() {
                         </span>
                       </h1>
                       <h4
-                        className=" text-[#F2ECE1] text-center tracking-widest"
+                        className=" text-[#F3EEE3] text-center tracking-widest"
                         style={robotoFontRegular}
                       >
                         <span className="text-xs">
@@ -260,7 +260,7 @@ function Araucana() {
                     <div className="flex flex-col gap-y-5 md:w-full">
                       <div className="hidden flex-col gap-y-2 md:flex">
                         <h1
-                          className="uppercase text-[#C3B17D] text-center md:text-left tracking-widest"
+                          className="uppercase text-[#C4B27D] text-center md:text-left tracking-widest"
                           style={robotoFontRegular}
                         >
                           <span className="text-base md:text-3xl">
@@ -271,7 +271,7 @@ function Araucana() {
                           </span>
                         </h1>
                         <h4
-                          className=" text-[#F2ECE1] text-center md:text-left tracking-widest"
+                          className=" text-[#F3EEE3] text-center md:text-left tracking-widest"
                           style={robotoFontRegular}
                         >
                           <span className="text-xs md:text-xl">
@@ -281,7 +281,7 @@ function Araucana() {
                       </div>
                       <div className="w-2/3 mx-auto md:mx-0">
                         <p
-                          className="text-[#F2ECE1] text-xs md:text-lg tracking-wider text-center md:text-justify"
+                          className="text-[#F3EEE3] text-xs md:text-lg tracking-wider text-center md:text-justify"
                           style={playfairFontRegular}
                         >
                           Río de los Ciervos´ grapes come from 8 vineyards
@@ -293,7 +293,7 @@ function Araucana() {
                       <div className="w-2/3 mx-auto md:mx-0">
                         <div className="flex justify-center md:justify-start">
                           <a
-                            className="border-b border-[#C3B17D]"
+                            className="border-b border-[#C4B27D]"
                             onClick={handleDownloadClick1}
                           >
                             <div className="w-2 inline-block">
@@ -303,7 +303,7 @@ function Araucana() {
                                 className="w-full"
                               />
                             </div>
-                            <span className="ml-2 text-xs md:text-lg text-[#C3B17D] tracking-wider">
+                            <span className="ml-2 text-xs md:text-lg text-[#C4B27D] tracking-wider">
                               Download technical sheet
                             </span>
                           </a>
@@ -311,7 +311,7 @@ function Araucana() {
 
                         <animated.div style={dropdownAnimation1}>
                           <div className="mt-2 w-48 mx-auto md:w-2/3 md:mx-0">
-                            <ul className="text-xs text-[#C3B17D] text-center">
+                            <ul className="text-xs text-[#C4B27D] text-center">
                               <li className="py-2 px-4 hover:bg-gray-100">
                                 Opción 1
                               </li>
@@ -337,7 +337,7 @@ function Araucana() {
                     </div>
                     <div className="flex flex-col gap-y-2 md:hidden">
                       <h1
-                        className="uppercase text-[#C3B17D] text-center tracking-widest"
+                        className="uppercase text-[#C4B27D] text-center tracking-widest"
                         style={robotoFontRegular}
                       >
                         <span className="text-base">
@@ -348,7 +348,7 @@ function Araucana() {
                         </span>
                       </h1>
                       <h4
-                        className=" text-[#F2ECE1] text-center tracking-widest"
+                        className=" text-[#F3EEE3] text-center tracking-widest"
                         style={robotoFontRegular}
                       >
                         <span className="text-xs">
@@ -360,7 +360,7 @@ function Araucana() {
                     <div className="flex flex-col gap-y-5 md:w-full">
                       <div className="hidden flex-col gap-y-2 md:flex">
                         <h1
-                          className="uppercase text-[#C3B17D] text-center md:text-left tracking-widest"
+                          className="uppercase text-[#C4B27D] text-center md:text-left tracking-widest"
                           style={robotoFontRegular}
                         >
                           <span className="text-base md:text-3xl">
@@ -371,7 +371,7 @@ function Araucana() {
                           </span>
                         </h1>
                         <h4
-                          className=" text-[#F2ECE1] text-center md:text-left tracking-widest"
+                          className=" text-[#F3EEE3] text-center md:text-left tracking-widest"
                           style={robotoFontRegular}
                         >
                           <span className="text-xs md:text-xl">
@@ -381,7 +381,7 @@ function Araucana() {
                       </div>
                       <div className="w-2/3 mx-auto md:mx-0">
                         <p
-                          className="text-[#F2ECE1] text-xs md:text-lg tracking-wider text-center md:text-justify"
+                          className="text-[#F3EEE3] text-xs md:text-lg tracking-wider text-center md:text-justify"
                           style={playfairFontRegular}
                         >
                           Río de los Ciervos´ grapes come from 8 vineyards
@@ -393,7 +393,7 @@ function Araucana() {
                       <div className="w-2/3 mx-auto md:mx-0">
                         <div className="flex justify-center md:justify-start">
                           <a
-                            className="border-b border-[#C3B17D]"
+                            className="border-b border-[#C4B27D]"
                             onClick={handleDownloadClick1}
                           >
                             <div className="w-2 inline-block">
@@ -403,7 +403,7 @@ function Araucana() {
                                 className="w-full"
                               />
                             </div>
-                            <span className="ml-2 text-xs md:text-lg text-[#C3B17D] tracking-wider">
+                            <span className="ml-2 text-xs md:text-lg text-[#C4B27D] tracking-wider">
                               Download technical sheet
                             </span>
                           </a>
@@ -411,7 +411,7 @@ function Araucana() {
 
                         <animated.div style={dropdownAnimation1}>
                           <div className="mt-2 w-48 mx-auto md:w-2/3 md:mx-0">
-                            <ul className="text-xs text-[#C3B17D] text-center">
+                            <ul className="text-xs text-[#C4B27D] text-center">
                               <li className="py-2 px-4 hover:bg-gray-100">
                                 Opción 1
                               </li>
@@ -441,7 +441,7 @@ function Araucana() {
                     </div>
                     <div className="flex md:hidden flex-col md:fl gap-y-2">
                       <h1
-                        className="uppercase text-[#C3B17D] text-center tracking-widest"
+                        className="uppercase text-[#C4B27D] text-center tracking-widest"
                         style={robotoFontRegular}
                       >
                         <span className="text-base">
@@ -450,7 +450,7 @@ function Araucana() {
                         </span>
                       </h1>
                       <h4
-                        className=" text-[#F2ECE1] text-center tracking-widest"
+                        className=" text-[#F3EEE3] text-center tracking-widest"
                         style={robotoFontRegular}
                       >
                         {" "}
@@ -462,7 +462,7 @@ function Araucana() {
                     <div className="flex flex-col gap-y-5 md:w-full ">
                       <div className="md:flex hidden flex-col gap-y-2">
                         <h1
-                          className="uppercase text-[#C3B17D] text-center md:text-left tracking-widest"
+                          className="uppercase text-[#C4B27D] text-center md:text-left tracking-widest"
                           style={robotoFontRegular}
                         >
                           <span className="text-base md:text-3xl">
@@ -471,7 +471,7 @@ function Araucana() {
                           </span>
                         </h1>
                         <h4
-                          className=" text-[#F2ECE1] text-center md:text-left tracking-widest"
+                          className=" text-[#F3EEE3] text-center md:text-left tracking-widest"
                           style={robotoFontRegular}
                         >
                           {" "}
@@ -482,7 +482,7 @@ function Araucana() {
                       </div>
                       <div className="w-2/3 mx-auto md:mx-0">
                         <p
-                          className="text-[#F2ECE1] text-xs md:text-justify md:text-lg tracking-wider text-center"
+                          className="text-[#F3EEE3] text-xs md:text-justify md:text-lg tracking-wider text-center"
                           style={playfairFontRegular}
                         >
                           Araucana malbec comes from our 5 ha Araucana Vineyard
@@ -495,7 +495,7 @@ function Araucana() {
                       <div className="w-2/3 mx-auto md:mx-0">
                         <div className="flex justify-center md:justify-start">
                           <a
-                            className="border-b border-[#C3B17D]"
+                            className="border-b border-[#C4B27D]"
                             onClick={handleDownloadClick2}
                           >
                             <div className="w-2 inline-block">
@@ -505,14 +505,14 @@ function Araucana() {
                                 className="w-full"
                               />
                             </div>
-                            <span className="ml-2 text-xs md:text-lg text-[#C3B17D] tracking-wider">
+                            <span className="ml-2 text-xs md:text-lg text-[#C4B27D] tracking-wider">
                               Download technical sheet
                             </span>
                           </a>
                         </div>
                         <animated.div style={dropdownAnimation2}>
                           <div className="mt-2 w-48 mx-auto md:mx-0 md:w-2/3">
-                            <ul className="text-xs text-[#C3B17D] text-center">
+                            <ul className="text-xs text-[#C4B27D] text-center">
                               <li className="py-2 px-4 hover:bg-gray-100">
                                 Opción 1
                               </li>
@@ -542,7 +542,7 @@ function Araucana() {
                     </div>
                     <div className="flex md:hidden flex-col gap-y-2">
                       <h1
-                        className="uppercase text-[#C3B17D] text-center tracking-widest"
+                        className="uppercase text-[#C4B27D] text-center tracking-widest"
                         style={robotoFontRegular}
                       >
                         <span className="text-base">
@@ -551,7 +551,7 @@ function Araucana() {
                         </span>
                       </h1>
                       <h4
-                        className="text-[#F2ECE1] text-center tracking-widest"
+                        className="text-[#F3EEE3] text-center tracking-widest"
                         style={robotoFontRegular}
                       >
                         <span className="text-xs">
@@ -562,7 +562,7 @@ function Araucana() {
                     <div className="flex flex-col gap-y-5 md:w-full">
                       <div className="hidden md:flex flex-col gap-y-2">
                         <h1
-                          className="uppercase text-[#C3B17D] text-center md:text-left tracking-widest"
+                          className="uppercase text-[#C4B27D] text-center md:text-left tracking-widest"
                           style={robotoFontRegular}
                         >
                           <span className="text-base md:text-3xl">
@@ -571,7 +571,7 @@ function Araucana() {
                           </span>
                         </h1>
                         <h4
-                          className="text-[#F2ECE1] text-center md:text-left tracking-widest"
+                          className="text-[#F3EEE3] text-center md:text-left tracking-widest"
                           style={robotoFontRegular}
                         >
                           <span className="text-xs md:text-lg">
@@ -582,7 +582,7 @@ function Araucana() {
                       </div>
                       <div className="w-2/3 mx-auto md:mx-0">
                         <p
-                          className="text-[#F2ECE1] text-xs md:text-lg tracking-wider text-center md:text-justify"
+                          className="text-[#F3EEE3] text-xs md:text-lg tracking-wider text-center md:text-justify"
                           style={playfairFontRegular}
                         >
                           Azul is a barrel blend. We select the barrels that
@@ -594,7 +594,7 @@ function Araucana() {
                       <div className="w-2/3 mx-auto md:mx-0">
                         <div className="flex justify-center md:justify-start">
                           <a
-                            className="border-b border-[#C3B17D]"
+                            className="border-b border-[#C4B27D]"
                             onClick={handleDownloadClick3}
                           >
                             <div className="w-2 inline-block">
@@ -604,14 +604,14 @@ function Araucana() {
                                 className="w-full"
                               />
                             </div>
-                            <span className="ml-2 text-xs md:text-lg text-[#C3B17D] tracking-wider">
+                            <span className="ml-2 text-xs md:text-lg text-[#C4B27D] tracking-wider">
                               Download technical sheet
                             </span>
                           </a>
                         </div>
                         <animated.div style={dropdownAnimation3}>
                           <div className="mt-2 w-48 mx-auto md:mx-0 md:w-2/3 ">
-                            <ul className="text-xs text-[#C3B17D] text-center">
+                            <ul className="text-xs text-[#C4B27D] text-center">
                               <li className="py-2 px-4 hover:bg-gray-100">
                                 Opción 1
                               </li>
@@ -634,7 +634,7 @@ function Araucana() {
             <div className="bg-[#231F20]">
               <div className="container mx-auto max-w-screen-xl pt-20 pb-10">
                 <p
-                  className="text-[#F2ECE1] text-sm md:text-4xl text-center leading-5"
+                  className="text-[#F3EEE3] text-sm md:text-4xl text-center leading-5"
                   style={playfairFontItalic}
                 >
                   <i>
@@ -649,7 +649,7 @@ function Araucana() {
 
             <div className="bg-[#231F20] px-5 pt-10 flex flex-col gap-y-8">
               <div className="container mx-auto  ">
-                <div className="w-full md:w-3/4 md:mx-auto md:border md:border-[#C3B17D] md:py-8 md:border-opacity-30">
+                <div className="w-full md:w-3/4 md:mx-auto md:border md:border-[#C4B27D] md:py-8 md:border-opacity-30">
                   <div className="grid grid-cols-3 gap-x-4 md:gap-x-0 md:w-3/4 md:mx-auto">
                     <div className="flex gap-y-4 md:gap-y-0 flex-col ">
                       <img
@@ -678,7 +678,7 @@ function Araucana() {
               <Link to="/winesworld#posicion0">
                 <div className="flex justify-center md:-mt-12">
                   <a href="" style={robotoFontRegular}>
-                    <span className="uppercase text-xs md:text-2xl md:border md:border-transparent md:hover:border-[#C3B17D] transition ease-in-out duration-500 text-[#F2ECE1] tracking-widest bg-[#C3B17D] md:hover:bg-[#231F20] md:hover:text-[#C3B17D] rounded-md p-2 md:py-2 md:px-8">
+                    <span className="uppercase text-xs md:text-2xl md:border md:border-transparent md:hover:border-[#C4B27D] transition ease-in-out duration-500 text-[#F3EEE3] tracking-widest bg-[#C4B27D] md:hover:bg-[#231F20] md:hover:text-[#C4B27D] rounded-md p-2 md:py-2 md:px-8">
                       View wines in the world
                     </span>
                   </a>
@@ -690,20 +690,23 @@ function Araucana() {
               <div class="container mx-auto max-w-screen-xl py-20">
                 <div class="flex justify-center">
                   <a
-                      className={`border border-[#C3B17D] rounded-full p-7 ${
-                        igHovered
-                          ? "bg-[#C3B17D] transition-bg ease-in-out duration-200"
-                          : "bg-transparent transition-bg ease-in-out duration-200"
-                      }`}
+                    className={`border border-[#C4B27D] rounded-full p-7 ${
+                      igHovered
+                        ? "bg-[#C4B27D] transition-bg ease-in-out duration-200"
+                        : "bg-transparent transition-bg ease-in-out duration-200"
+                    }`}
                     href="https://www.instagram.com/riberadelcuarzo/"
                     target="_blank"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
-
                   >
-                    <img src={iconIg} alt="" className={`w-5 ${
-                          igHovered ? "filter brightness-200" : ""
-                        }`} />
+                    <img
+                      src={iconIg}
+                      alt=""
+                      className={`w-5 ${
+                        igHovered ? "filter brightness-200" : ""
+                      }`}
+                    />
                   </a>
                 </div>
               </div>

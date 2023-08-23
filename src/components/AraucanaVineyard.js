@@ -49,7 +49,7 @@ const ConstructionPage = () => {
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
           <div>
-            <body class="bg-[#F2ECE1] ">
+            <body class="bg-[#F3EEE3] ">
               <header className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-5 xl:py-10 px-5 2xl:px-0 fixed top-0 left-0 right-0 z-50">
                 <div class="flex justify-between items-center">
                   <div class="">
@@ -76,7 +76,7 @@ const ConstructionPage = () => {
                     </h1>
                     <h2
                       style={playfairFontBlack}
-                      className="text-base md:text-2xl text-[#C4AC77] text-center tracking-wider uppercase"
+                      className="text-base md:text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
                     >
                       Araucana Vineyard
                     </h2>
@@ -93,7 +93,7 @@ const ConstructionPage = () => {
 
               <div class="container mx-auto py-5 md:py-12 xl:pb-12 xl:pt-0 max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 ">
                 <p
-                  class="text-black tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto text-xs  lg:text-base lg:leading-7 md:pt-5"
+                  class="text-[#000000] tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto text-xs  lg:text-base lg:leading-7 md:pt-5"
                   style={playfairFontRegular}
                 >
                   Araucana Vineyard is far more than just unique—it is an
@@ -120,7 +120,7 @@ const ConstructionPage = () => {
 
               <div class="container mx-auto pt-5 md:pt-12 max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
                 <p
-                  class="text-black tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto text-xs  lg:text-base lg:leading-7"
+                  class="text-[#000000] tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto text-xs  lg:text-base lg:leading-7"
                   style={playfairFontRegular}
                 >
                   Adding to its distinctiveness is the <i>barda</i> river

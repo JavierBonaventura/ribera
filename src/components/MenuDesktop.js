@@ -236,8 +236,8 @@ const MenuDesktop = () => {
             ></video>
 
             <div className="w-full h-full">
-              <div className="border border-[#F2ECE1] w-full h-full p-2 relative flex flex-col justify-center items-center">
-                <div className="w-full h-full border border-[#F2ECE1] relative">
+              <div className="border border-[#F3EEE3] w-full h-full p-2 relative flex flex-col justify-center items-center">
+                <div className="w-full h-full border border-[#F3EEE3] relative">
                   <div className="flex justify-end items-center pr-4 py-5">
                     <Link
                       to="/MenuHamburguesa"
@@ -277,7 +277,7 @@ const MenuDesktop = () => {
                       <p
                         style={playfairFontRegular}
                         className={`menu-desk sombra-menu tracking-wider ${
-                          isMenu1Hovered ? "text-[#f3eee3]" : "text-[#c4b27d]"
+                          isMenu1Hovered ? "text-[#F3EEE3]" : "text-[#c4b27d]"
                         }`}
                       >
                         History
@@ -488,7 +488,7 @@ const MenuDesktop = () => {
                     </div>
                   </div>
                   <div className="absolute bottom-5 px-5 w-full container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl  left-1/2 transform -translate-x-1/2">
-                    <div className="flex flex-row-reverse justify-around items-end w-full text-[#F2ECE1] ">
+                    <div className="flex flex-row-reverse justify-around items-end w-full text-[#F3EEE3] ">
                       <div className="w-1/3  flex justify-end items-center ">
                         <a
                           href="https://www.instagram.com/riberadelcuarzo/"
@@ -515,7 +515,7 @@ const MenuDesktop = () => {
                         <div className=" ">
                           <Link
                             to="/contacto"
-                            className="hover:text-[#cab57e]  duration-300 transition ease-in-out uppercase tracking-widest"
+                            className="hover:text-[#C4B27D]  duration-300 transition ease-in-out uppercase tracking-widest"
                             style={robotoFontRegular}
                           >
                             Contact
@@ -525,7 +525,7 @@ const MenuDesktop = () => {
                         <div className="" style={robotoFontRegular}>
                           <a
                             href=""
-                            className="hover:text-[#cab57e]  duration-300 transition ease-in-out"
+                            className="hover:text-[#C4B27D]  duration-300 transition ease-in-out"
                           >
                             <div className="flex flex-col items-center ">
                               <span className="text-center">
@@ -541,7 +541,7 @@ const MenuDesktop = () => {
                         <div className="uppercase">
                           <a
                             href=""
-                            className="hover:text-[#cab57e]  duration-300 transition ease-in-out tracking-widest"
+                            className="hover:text-[#C4B27D]  duration-300 transition ease-in-out tracking-widest"
                           >
                             News
                           </a>

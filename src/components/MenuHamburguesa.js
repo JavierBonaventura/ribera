@@ -152,7 +152,7 @@ const Home = () => {
                 </div>
               </div>
             </header>
-            <div className="flex bg-blue-500 hidden">
+            <div className="flex hidden">
               <div className="">
                 <Link to="/">
                   <img src={logo} alt="Imagen 1" className="w-32" />
@@ -429,7 +429,7 @@ const Home = () => {
               <span className="font-bold text-[#c4b27d] cursor-pointer tracking-widest">
                 english
               </span>
-              <span className="text-[#F2ECE1] hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest">
+              <span className="text-[#f3eee3] hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest">
                 spanish
               </span>
             </div>

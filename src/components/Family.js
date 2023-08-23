@@ -73,7 +73,7 @@ const Family = () => {
       {(style, item) => (
         <animated.div style={{ ...style, position: "absolute", width: "100%" }}>
           <div>
-            <body class="bg-[#F2ECE1]">
+            <body class="bg-[#F3EEE3]">
               <header className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-5 xl:py-10 px-5 2xl:px-0  fixed top-0 left-0 right-0 z-50">
                 <div class="flex justify-between items-center  ">
                   <div class="">
@@ -100,7 +100,7 @@ const Family = () => {
                     </h1>
                     <h2
                       style={playfairFontBlack}
-                      className="text-base md:text-2xl text-[#C4AC77] text-center tracking-wider uppercase"
+                      className="text-base md:text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
                     >
                       Family
                     </h2>
@@ -113,7 +113,7 @@ const Family = () => {
                     />
                     <h1
                       style={playfairFontExtraBold}
-                      class="text-[#C4AC77] text-5xl absolute font-bold md:text-7xl xl:text-8xl md:pt-40"
+                      class="text-[#C4B27D] text-5xl absolute font-bold md:text-7xl xl:text-8xl md:pt-40"
                     >
                       1883 - 2023
                     </h1>
@@ -145,12 +145,12 @@ const Family = () => {
                     <div className="flex flex-col md:gap-y-2">
                       <h1
                         style={playfairFontBlack}
-                        class="text-[#C4AC77] font-bold text-lg md:text-4xl tracking-wide"
+                        class="text-[#C4B27D] font-bold text-lg md:text-4xl tracking-wide"
                       >
                         1883
                       </h1>
                       <h2
-                        class="uppercase text-[#C4AC77] tracking-wide"
+                        class="uppercase text-[#C4B27D] tracking-wide"
                         style={robotoFontRegular}
                       >
                         <span className="text-sm md:text-xl">
@@ -213,7 +213,7 @@ const Family = () => {
 
                       <div class="flex flex-col gap-y-2 md:gap-y-5 pt-5 pb-12 md:py-10 md:pr-52 lg:pr-60 xl:pl-24 xl:pr-72 w-full 2xl:px-0 2xl:w-2/4 mx-auto px-10 md:px-0 ">
                         <p
-                          class="text-justify  tracking-wider text-white text-xs lg:text-base lg:leading-7"
+                          class="text-justify  tracking-wider text-[#ffffff] text-xs lg:text-base lg:leading-7"
                           style={playfairFontRegular}
                         >
                           Patagonia was the place where we spent the summers of
@@ -261,7 +261,7 @@ const Family = () => {
                         />
                       </div>
                       <p
-                        class="text-justify tracking-wider text-white text-xs pt-10 px-10 md:px-32 md:w-3/4 mx-auto lg:text-base 2xl:text-lg"
+                        class="text-justify tracking-wider text-[#ffffff] text-xs pt-10 px-10 md:px-32 md:w-3/4 mx-auto lg:text-base 2xl:text-lg"
                         style={playfairFontRegular}
                       >
                         Patagonia was the place where we spent the summers of my
@@ -299,7 +299,7 @@ const Family = () => {
                 <div className="w-full md:w-2/5 mx-auto flex flex-col gap-y-5 xl:gap-y-16">
                   <div className="px-10 md:px-0">
                     <p
-                      class="text-justify tracking-wider text-black text-xs lg:text-base lg:leading-7"
+                      class="text-justify tracking-wider text-[#000000] text-xs lg:text-base lg:leading-7"
                       style={playfairFontRegular}
                     >
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -316,7 +316,7 @@ const Family = () => {
                   <img src={felipe} alt="" className="px-4 md:px-0" />
                 </div>
                 <p
-                  class="text-black text-xs lg:text-lg pt-2 px-10 tracking-wider text-center "
+                  class="text-[#000000] text-xs lg:text-lg pt-2 px-10 tracking-wider text-center "
                   style={playfairFontRegular}
                 >
                   <i>Felipe José Menendez Arguelles</i>

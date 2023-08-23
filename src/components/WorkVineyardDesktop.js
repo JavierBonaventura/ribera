@@ -75,8 +75,8 @@ const CarouselSlider = () => {
 
   const renderImages = () => {
     return (
-      <div className="transition-all ease-in-out duration-500 relative bg-black">
-        <header className="container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl py-5 xl:py-10 px-5 xl:px-0 fixed top-0 left-0 right-0 z-50">
+      <div className="transition-all ease-in-out duration-500 relative bg-[#000000]">
+        <header className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-5 xl:py-10 px-5 2xl:px-0 fixed top-0 left-0 right-0 z-50">
           <div class="flex justify-between items-center  ">
             <div class="">
               <Link to="/">
@@ -93,18 +93,18 @@ const CarouselSlider = () => {
 
         <div
           id="pataginan"
-          className="container max-w-screen-xl 2xl:max-w-screen-2xl mx-auto py-10 fixed top-28 left-0 right-0 z-50 px-5 "
+          className="container max-w-screen-xl xl:max-w-screen-2xl mx-auto md:px-5 2xl:px-0 py-10 fixed top-28 left-0 right-0 z-50"
         >
           <div class="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0">
             <h1
-              class="text-white text-base md:text-base tracking-widest"
+              class="text-[#ffffff] text-lg tracking-widest"
               style={playfairFontItalic}
             >
               <i style={playfairFontItalic}>Patagonian Spirit</i>
             </h1>
             <h2
               style={playfairFontBlack}
-              className="text-base md:text-xl text-[#C4AC77] text-center tracking-wider uppercase"
+              className="text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
             >
               WORK IN THE VINEYARD
             </h2>
@@ -150,12 +150,12 @@ const CarouselSlider = () => {
             {" "}
             <div
               className={`w-2 h-2 rounded-full ${
-                activeIndex === index ? "bg-[#cab57e]" : "bg-[#cab57e]"
+                activeIndex === index ? "bg-[#C4B27D]" : "bg-[#C4B27D]"
               }`}
             >
               {activeIndex === index && (
                 <div
-                  className="absolute w-7 h-7 rounded-full border-2 border-[#cab57e]"
+                  className="absolute w-7 h-7 rounded-full border-2 border-[#C4B27D]"
                   style={{ top: "-10px", left: "-10px" }}
                 ></div>
               )}
@@ -186,28 +186,28 @@ const CarouselSlider = () => {
         >
           <img src={leftArrowImage} alt="izquierda" />
         </button>
-        <div className=" w-32 container max-w-screen-xl 2xl:max-w-screen-2xl py-1/2 fixed -top-60 left-72 right-0  px-5 absolute inset-0 flex items-center justify-center ">
+        <div className=" w-32 container max-w-screen-xl xl:max-w-screen-2xl py-1/2 fixed -top-60 left-72 right-0  md:px-5 2xl:px-0 absolute inset-0 flex items-center justify-center ">
           <p
             style={playfairFontBlack}
-            className=" uppercase text-[#C4AC77] text-2xl mb-8"
+            className=" uppercase text-[#C4B27D] text-2xl mb-8"
           >
             {" "}
             {"0" + (currentImageIndex + 1)}{" "}
             <sup className="text-base underline align-middle	">5</sup>
           </p>
         </div>
-        <div className="w-96 container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl  py-1/2 fixed -top-32 left-0 right-0  px-5 absolute inset-0 flex items-center justify-center ">
+        <div className="w-96 container  mx-auto max-w-screen-xl xl:max-w-screen-2xl  py-1/2 fixed -top-32 left-0 right-0  md:px-5 2xl:px-0 absolute inset-0 flex items-center justify-center ">
           <p
             style={robotoFontRegular}
-            className=" uppercase text-[#C4AC77] text-2xl mb-8"
+            className=" uppercase text-[#C4B27D] text-2xl mb-8"
           >
             {title[currentImageIndex]}
           </p>
         </div>
-        <div className=" w-2/4 container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl py-1/2 fixed top-40 left-0 right-0  px-5 absolute inset-0 flex items-center justify-center ">
+        <div className=" w-2/4  container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-1/2 fixed top-40 left-0 right-0  md:px-5 2xl:px-0 absolute inset-0 flex items-center justify-center ">
           <p
             style={playfairFontRegular}
-            className=" text-white text-lg tracking-wider text-center mb-6"
+            className=" text-[#ffffff] text-base leading-7 tracking-wider text-center mb-14"
           >
             {paragraphs[currentImageIndex]}
           </p>

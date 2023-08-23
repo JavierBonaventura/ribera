@@ -49,7 +49,7 @@ const ValleAzul = () => {
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
           <div>
-            <body class="bg-[#F2ECE1]">
+            <body class="bg-[#F3EEE3]">
               <header className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-5 xl:py-10 px-5 2xl:px-0 fixed top-0 left-0 right-0 z-50">
                 <div class="flex justify-between items-center  ">
                   <div class="">
@@ -76,7 +76,7 @@ const ValleAzul = () => {
                     </h1>
                     <h2
                       style={playfairFontBlack}
-                      className="text-base md:text-2xl text-[#C4AC77] text-center tracking-wider uppercase"
+                      className="text-base md:text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
                     >
                       Valle azul
                     </h2>
@@ -94,7 +94,7 @@ const ValleAzul = () => {
               <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
                 <div class="pt-5 pb-10 flex flex-col gap-y-5">
                   <p
-                    class="text-black  tracking-wider text-justify px-10 md:px-14 lg:px-20 xl:px-32 md:w-3/4 mx-auto text-xs lg:text-base lg:leading-7"
+                    class="text-[#000000]  tracking-wider text-justify px-10 md:px-14 lg:px-20 xl:px-32 md:w-3/4 mx-auto text-xs lg:text-base lg:leading-7"
                     style={playfairFontRegular}
                   >
                     The story of this winery started in 2001, when italian
@@ -120,11 +120,11 @@ const ValleAzul = () => {
                 </div>
               </div>
 
-              <div class="container mx-auto  max-w-screen-xl xl:max-w-screen-2xl bg-[#F2ECE1] md:px-5 2xl:px-0">
+              <div class="container mx-auto  max-w-screen-xl xl:max-w-screen-2xl bg-[#F3EEE3] md:px-5 2xl:px-0">
                 <div class="pt-10 md:pt-24 flex flex-col gap-y-5">
                   <div class="">
                     <p
-                      class="text-black tracking-wider text-justify px-10 md:px-14 lg:px-20 xl:px-32 md:w-3/4 mx-auto text-xs lg:text-base lg:leading-7"
+                      class="text-[#000000] tracking-wider text-justify px-10 md:px-14 lg:px-20 xl:px-32 md:w-3/4 mx-auto text-xs lg:text-base lg:leading-7"
                       style={playfairFontRegular}
                     >
                       When we first tasted the 2008 vintage, we knew Noemi had
@@ -143,13 +143,13 @@ const ValleAzul = () => {
                 </div>
               </div>
 
-              <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl bg-[#F2ECE1] md:px-5 2xl:px-0 ">
+              <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl bg-[#F3EEE3] md:px-5 2xl:px-0 ">
                 <div class="py-20">
                   <div class="flex justify-center">
                     <a
-                      className={`border border-[#C3B17D] rounded-full p-7 md:p-8 ${
+                      className={`border border-[#C4B27D] rounded-full p-7 md:p-8 ${
                         igHovered
-                          ? "bg-[#C3B17D] transition-bg ease-in-out duration-200"
+                          ? "bg-[#C4B27D] transition-bg ease-in-out duration-200"
                           : "bg-transparent transition-bg ease-in-out duration-200"
                       }`}
                       href="https://www.instagram.com/riberadelcuarzo/"

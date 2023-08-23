@@ -48,7 +48,7 @@ const LifeWater = () => {
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
           <body>
-            <div className="md:h-screen bg-[#F2ECE1] background-life">
+            <div className="md:h-screen bg-[#F3EEE3] background-life">
               <header className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-5 xl:py-10 px-5 2xl:px-0 fixed top-0 left-0 right-0 z-50 ">
                 <div class="flex justify-between items-center  ">
                   <div class="">
@@ -75,7 +75,7 @@ const LifeWater = () => {
                     </h1>
                     <h2
                       style={playfairFontBlack}
-                      className="text-base md:text-2xl text-[#C4AC77] text-center tracking-wider uppercase"
+                      className="text-base md:text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
                     >
                       Life Water
                     </h2>
@@ -84,13 +84,13 @@ const LifeWater = () => {
 
                 <div className="w-2/4 mx-auto flex flex-col gap-y-14 py-16 2xl:py-40">
                   <p style={robotoFontRegular} className="text-center">
-                    <span className=" uppercase text-[#C4AC77] text-2xl">
+                    <span className=" uppercase text-[#C4B27D] text-2xl">
                       Water
                     </span>
                   </p>
                   <p
                     style={playfairFontRegular}
-                    className="text-[#F2ECE1]  text-xs  lg:text-base lg:leading-7 tracking-wider text-center "
+                    className="text-[#F3EEE3]  text-xs  lg:text-base lg:leading-7 tracking-wider text-center "
                   >
                     The Countess had planted the vineyard in the highest part of
                     the
@@ -102,7 +102,7 @@ const LifeWater = () => {
                     <Link to="/lifewaterread">
                       <a
                         href=""
-                        className="text-[#F2ECE1] bg-[#C4AC77] border border-[#C4AC77] text-lg py-2 px-10 rounded-lg hover:text-[#C4AC77] hover:bg-transparent transition ease-in-out  duration-300"
+                        className="text-[#F3EEE3] bg-[#C4B27D] border border-[#C4B27D] text-lg py-2 px-10 rounded-lg hover:text-[#C4B27D] hover:bg-transparent transition ease-in-out  duration-300"
                       >
                         Read more
                       </a>
@@ -122,21 +122,21 @@ const LifeWater = () => {
                     </h1>
                     <h2
                       style={playfairFontBlack}
-                      className="text-base md:text-xl text-[#C4AC77] text-center tracking-wider uppercase"
+                      className="text-base md:text-xl text-[#C4B27D] text-center tracking-wider uppercase"
                     >
                       Life Water
                     </h2>
                   </div>
                 </div>
 
-                <div class="px-4 md:px-0 bg-[#F2ECE1]">
+                <div class="px-4 md:px-0 bg-[#F3EEE3]">
                   <img src={imgWater} alt="" class="w-full md:w-2/3 mx-auto " />
                 </div>
 
-                <div class="flex flex-col gap-y-2  pt-8 bg-[#F2ECE1]">
+                <div class="flex flex-col gap-y-2  pt-8 bg-[#F3EEE3]">
                   <div>
                     <p
-                      class="text-black tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto  text-xs md:text-base lg:text-lg"
+                      class="text-[#000000] tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto  text-xs md:text-base lg:text-lg"
                       style={playfairFontRegular}
                     >
                       The Countess planted the vineyard in the highest part of
@@ -176,11 +176,11 @@ const LifeWater = () => {
                     </p>
                   </div>
                 </div>
-                <div class="container mx-auto  max-w-screen-xl 2xl:max-w-screen-2xl bg-[#F2ECE1]">
+                <div class="container mx-auto  max-w-screen-xl 2xl:max-w-screen-2xl bg-[#F3EEE3]">
                   <div class="py-20">
                     <div class="flex justify-center">
                       <a
-                        class="border border-[#C3B17D] rounded-full p-7"
+                        class="border border-[#C4B27D] rounded-full p-7"
                         href="https://www.instagram.com/riberadelcuarzo/"
                         target="_blank"
                       >

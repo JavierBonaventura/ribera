@@ -42,7 +42,7 @@ function Header() {
         </div>
       </header>
 
-      <div className="bg-[#F2ECE1] py-4">
+      <div className="bg-[#F3EEE3] py-4">
         <div className="container mx-auto flex flex-col justify-center items-center mt-10">
           <div className="pt-9">
             <h1
@@ -53,7 +53,7 @@ function Header() {
             </h1>
             <h2
               style={playfairFontBlack}
-              className="font-bold text-base text-[#C4AC77] text-center tracking-wider"
+              className="font-bold text-base text-[#C4B27D] text-center tracking-wider"
             >
               LIFE ON THE ESTATE
             </h2>
@@ -95,7 +95,7 @@ const LifeOnEstate = () => {
     >
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
-          <div className="bg-[#F2ECE1] ">
+          <div className="bg-[#F3EEE3] ">
             <Header />
             <div>
               {/* Contenido del slider */}
@@ -158,19 +158,26 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
       config={{ duration: 1000 }}
     >
       {(style, item) => (
-        <animated.div style={{ ...style, width: "100%" , backgroundColor: "#F2ECE1" ,  minHeight: "100vh"  }}>
+        <animated.div
+          style={{
+            ...style,
+            width: "100%",
+            backgroundColor: "#F3EEE3",
+            minHeight: "100vh",
+          }}
+        >
           <div className="mt-[-20px]">
-            <div className="bg-[#F2ECE1] ">
+            <div className="bg-[#F3EEE3] ">
               <p className="ml-6 text-left relative">
                 <span
                   style={playfairFontBlack}
-                  className="text-[#C4AC77] text-lg"
+                  className="text-[#C4B27D] text-lg"
                 >
                   01
                 </span>
                 <span
                   style={playfairFontBlack}
-                  className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
+                  className="text-[#C4B27D] absolute top-1 left-6 text-xs underline"
                 >
                   03
                 </span>
@@ -182,7 +189,7 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
                 <img src={wineYardSlide1} alt="" className="w-full" />
               </div>
             </div>
-            <div className="flex justify-center space-x-10 pt-2  bg-[#F2ECE1]">
+            <div className="flex justify-center space-x-10 pt-2  bg-[#F3EEE3]">
               <button
                 className="w-14 h-14 rounded-full flex items-center justify-center mr-2"
                 onClick={handlePrev}
@@ -203,14 +210,14 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
             </div>
           </div>
           <div>
-            <div className="bg-[#F2ECE1] pt-5">
+            <div className="bg-[#F3EEE3] pt-5">
               <div className="container mx-auto flex flex-col justify-center items-center">
                 <div className="flex flex-col gap-y-5">
                   <div className="flex flex-col gap-y-5">
                     <div className="w-4/5 mx-auto">
                       <p
                         style={robotoFontRegular}
-                        className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3 tracking-wide"
+                        className="decoration-black	text-[#C4B27D]  text-xs leading-6 pb-3 tracking-wide"
                       >
                         THE HOUSE
                       </p>
@@ -235,11 +242,11 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
                 </div>
               </div>
             </div>
-            <div class="container mx-auto bg-[#F2ECE1]">
+            <div class="container mx-auto bg-[#F3EEE3]">
               <div class="py-20">
                 <div class="flex justify-center">
                   <a
-                    class="border border-[#C3B17D] rounded-full p-7"
+                    class="border border-[#C4B27D] rounded-full p-7"
                     href="https://www.instagram.com/riberadelcuarzo/"
                     target="_blank"
                   >
@@ -285,19 +292,26 @@ const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
       config={{ duration: 1000 }}
     >
       {(style, item) => (
-        <animated.div style={{ ...style, width: "100%" , backgroundColor: "#F2ECE1" ,  minHeight: "100vh"  }}>
+        <animated.div
+          style={{
+            ...style,
+            width: "100%",
+            backgroundColor: "#F3EEE3",
+            minHeight: "100vh",
+          }}
+        >
           <div className="mt-[-20px]">
-            <div className="bg-[#F2ECE1]">
+            <div className="bg-[#F3EEE3]">
               <p className="ml-6 text-left relative">
                 <span
                   style={playfairFontBlack}
-                  className="text-[#C4AC77] text-lg"
+                  className="text-[#C4B27D] text-lg"
                 >
                   02
                 </span>
                 <span
                   style={playfairFontBlack}
-                  className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
+                  className="text-[#C4B27D] absolute top-1 left-6 text-xs underline"
                 >
                   03
                 </span>
@@ -313,7 +327,7 @@ const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
                 />
               </div>
             </div>
-            <div className="flex justify-center space-x-10 pt-2  bg-[#F2ECE1]">
+            <div className="flex justify-center space-x-10 pt-2  bg-[#F3EEE3]">
               <button
                 className="w-14 h-14 rounded-full flex items-center justify-center mr-2"
                 onClick={handlePrev}
@@ -334,14 +348,14 @@ const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
             </div>
           </div>
           <div>
-            <div className="bg-[#F2ECE1] pt-5">
+            <div className="bg-[#F3EEE3] pt-5">
               <div className="container mx-auto flex flex-col justify-center items-center">
                 <div className="flex flex-col gap-y-5">
                   <div className="flex flex-col gap-y-5">
                     <div className="w-4/5 mx-auto">
                       <p
                         style={robotoFontRegular}
-                        className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3 tracking-wide"
+                        className="decoration-black	text-[#C4B27D] text-xs leading-6 pb-3 tracking-wide"
                       >
                         THE RIVER{" "}
                       </p>
@@ -380,11 +394,11 @@ const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
                 </div>
               </div>
             </div>
-            <div class="container mx-auto bg-[#F2ECE1]">
+            <div class="container mx-auto bg-[#F3EEE3]">
               <div class="py-20">
                 <div class="flex justify-center">
                   <a
-                    class="border border-[#C3B17D] rounded-full p-7"
+                    class="border border-[#C4B27D] rounded-full p-7"
                     href="https://www.instagram.com/riberadelcuarzo/"
                     target="_blank"
                   >
@@ -430,19 +444,26 @@ const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
       config={{ duration: 1000 }}
     >
       {(style, item) => (
-        <animated.div style={{ ...style, width: "100%" , backgroundColor: "#F2ECE1" ,  minHeight: "100vh"  }}>
+        <animated.div
+          style={{
+            ...style,
+            width: "100%",
+            backgroundColor: "#F3EEE3",
+            minHeight: "100vh",
+          }}
+        >
           <div className="mt-[-20px]">
-            <div className="bg-[#F2ECE1]">
+            <div className="bg-[#F3EEE3]">
               <p className="ml-6 text-left relative">
                 <span
                   style={playfairFontBlack}
-                  className="text-[#C4AC77] text-lg"
+                  className="text-[#C4B27D] text-lg"
                 >
                   03
                 </span>
                 <span
                   style={playfairFontBlack}
-                  className="text-[#C4AC77] absolute top-1 left-6 text-xs underline"
+                  className="text-[#C4B27D] absolute top-1 left-6 text-xs underline"
                 >
                   03
                 </span>
@@ -458,7 +479,7 @@ const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
                 />
               </div>
             </div>
-            <div className="flex justify-center space-x-10 pt-2  bg-[#F2ECE1]">
+            <div className="flex justify-center space-x-10 pt-2  bg-[#F3EEE3]">
               <button
                 className="w-14 h-14 rounded-full flex items-center justify-center mr-2"
                 onClick={handlePrev}
@@ -479,14 +500,14 @@ const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
             </div>
           </div>
           <div>
-            <div className="bg-[#F2ECE1] pt-5">
+            <div className="bg-[#F3EEE3] pt-5">
               <div className="container mx-auto flex flex-col justify-center items-center">
                 <div className="flex flex-col gap-y-5">
                   <div className="flex flex-col gap-y-5">
                     <div className="w-4/5 mx-auto">
                       <p
                         style={robotoFontRegular}
-                        className="decoration-black	text-[#C4AC77]  text-xs leading-6 pb-3 tracking-wide"
+                        className="decoration-black	text-[#C4B27D]  text-xs leading-6 pb-3 tracking-wide"
                       >
                         THE HORSES
                       </p>
@@ -523,11 +544,11 @@ const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
                 </div>
               </div>
             </div>
-            <div class="container mx-auto bg-[#F2ECE1]">
+            <div class="container mx-auto bg-[#F3EEE3]">
               <div class="py-20">
                 <div class="flex justify-center">
                   <a
-                    class="border border-[#C3B17D] rounded-full p-7"
+                    class="border border-[#C4B27D] rounded-full p-7"
                     href="https://www.instagram.com/riberadelcuarzo/"
                     target="_blank"
                   >

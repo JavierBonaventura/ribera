@@ -93,7 +93,7 @@ const FormularioContacto = () => {
               {/*TITULAR DESK START*/}
 
               {/*FORMULARIO START*/}
-              <div className="grid grid-cols-1 md:grid-cols-2 text-white md:py-5  md:w-3/4 md:mx-auto ">
+              <div className="grid grid-cols-1 md:grid-cols-2 text-[#ffffff] md:py-5  md:w-3/4 md:mx-auto ">
                 {/*TITULAR MOB START*/}
                 <div className="block md:hidden">
                   <h1
@@ -154,7 +154,7 @@ const FormularioContacto = () => {
                         E-mail
                       </label>
                       <input
-                        className="text-sm md:text-base bg-transparent md:py-1 border-b border-b-white rounded-none border-t-0 border-l-0 border-r-0 w-full   text-[#F4EDE2] leading-tight"
+                        className="text-sm md:text-base bg-transparent md:py-1 border-b border-b-white rounded-none border-t-0 border-l-0 border-r-0 w-full text-[#F4EDE2] leading-tight"
                         id="email"
                         type="email"
                         value={email}
@@ -195,7 +195,7 @@ const FormularioContacto = () => {
                     </div>
                     <div className="flex items-center justify-start">
                       <button
-                        className="bg-[#C3B17D] text-[#F2ECE1] text-sm md:text-xl  hover:bg-[#F2ECE1] hover:text-[#C3B17D] transition ease-in-out duration-300 rounded-md  py-2 px-8 "
+                        className="bg-[#C4B27D] text-[#F2ECE1] text-sm md:text-xl  hover:bg-[#F2ECE1] hover:text-[#C4B27D] transition ease-in-out duration-300 rounded-md  py-2 px-8 "
                         type="submit"
                       >
                         Send

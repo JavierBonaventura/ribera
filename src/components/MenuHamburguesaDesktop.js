@@ -154,8 +154,8 @@ const MenuHamburguesaDesktop = () => {
             style={{ backgroundImage: `url(${fondoHamburguesaDesktop})` }}
           >
             <div className="w-full h-full">
-              <div className="border border-[#F2ECE1] w-full h-full p-2 relative flex flex-col justify-center items-center">
-                <div className="w-full h-full border border-[#F2ECE1] flex flex-col justify-start relative gap-y-8 2xl:gap-y-24 pt-24 2xl:pt-36">
+              <div className="border border-[#F3EEE3] w-full h-full p-2 relative flex flex-col justify-center items-center">
+                <div className="w-full h-full border border-[#F3EEE3] flex flex-col justify-start relative gap-y-8 2xl:gap-y-24 pt-24 2xl:pt-36">
                   <div className="flex justify-end items-center absolute top-7 right-7">
                     <Link to="/">
                       <div className=" bg-transparent border border-[#c4b27d] rounded-full p-4">
@@ -405,13 +405,13 @@ const MenuHamburguesaDesktop = () => {
                     <div className="w-full flex justify-center items-center gap-x-16 text-sm lg:text-xl tracking-widest">
                       <div>
                         <Link to="/contacto" style={robotoFontRegular}>
-                          <span className="text-[#F2ECE1] hover:text-[#cab57e] transition ease-in-out duration-300">
+                          <span className="text-[#F3EEE3] hover:text-[#c4b27d] transition ease-in-out duration-300">
                             Contact
                           </span>
                         </Link>
                       </div>
                       <div>
-                        <span className="text-[#F2ECE1] hover:text-[#cab57e] transition ease-in-out duration-300">
+                        <span className="text-[#F3EEE3] hover:text-[#c4b27d] transition ease-in-out duration-300">
                           <a href="">News</a>
                         </span>
                       </div>
@@ -421,7 +421,7 @@ const MenuHamburguesaDesktop = () => {
                         <h1 className="text-center  text-[#c4b27d] ">
                           <i>Our distribution office</i>
                         </h1>
-                        <p className="text-center uppercase font-semibold text-[#F2ECE1] hover:text-[#cab57e]  tracking-widest transition ease-in-out duration-300">
+                        <p className="text-center uppercase font-semibold text-[#F3EEE3] hover:text-[#c4b27d]  tracking-widest transition ease-in-out duration-300">
                           Casa Pirque
                         </p>
                       </a>
@@ -429,7 +429,7 @@ const MenuHamburguesaDesktop = () => {
                   </div>
 
                   <div className="absolute px-5 bottom-5 w-full container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl left-1/2 transform -translate-x-1/2">
-                    <div className="flex flex-row-reverse justify-around items-center w-full text-[#F2ECE1]">
+                    <div className="flex flex-row-reverse justify-around items-center w-full text-[#F3EEE3]">
                       <div className="w-1/3 flex justify-end items-center">
                         <a
                           href="https://www.instagram.com/riberadelcuarzo/"
@@ -455,7 +455,7 @@ const MenuHamburguesaDesktop = () => {
                         <div className=" ">
                           <Link
                             to="/contacto"
-                            className="hover:text-[#cab57e]  duration-300 transition ease-in-out uppercase tracking-widest"
+                            className="hover:text-[#c4b27d]  duration-300 transition ease-in-out uppercase tracking-widest"
                             style={robotoFontRegular}
                           >
                             Contact
@@ -465,7 +465,7 @@ const MenuHamburguesaDesktop = () => {
                         <div className="" style={robotoFontRegular}>
                           <a
                             href=""
-                            className="hover:text-[#cab57e]  duration-300 transition ease-in-out"
+                            className="hover:text-[#c4b27d]  duration-300 transition ease-in-out"
                           >
                             <div className="flex flex-col items-center ">
                               <span className="text-center">
@@ -481,7 +481,7 @@ const MenuHamburguesaDesktop = () => {
                         <div className="uppercase">
                           <a
                             href=""
-                            className="hover:text-[#cab57e]  duration-300 transition ease-in-out tracking-widest"
+                            className="hover:text-[#c4b27d]  duration-300 transition ease-in-out tracking-widest"
                           >
                             News
                           </a>
@@ -494,7 +494,7 @@ const MenuHamburguesaDesktop = () => {
                         <span className="font-bold text-[#c4b27d] cursor-pointer tracking-widest">
                           english
                         </span>
-                        <span className="text-[#F2ECE1] hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest">
+                        <span className="text-[#F3EEE3] hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest">
                           spanish
                         </span>
                       </div>

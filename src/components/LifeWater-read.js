@@ -46,7 +46,7 @@ const LifeWater = () => {
     >
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
-          <div className="bg-[#F2ECE1]">
+          <div className="bg-[#F3EEE3]">
             <header className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-5 xl:py-10 px-5 2xl:px-0 fixed top-0 left-0 right-0 z-50 ">
               <div class="flex justify-between items-center  ">
                 <div class="">
@@ -78,7 +78,7 @@ const LifeWater = () => {
                   </h1>
                   <h2
                     style={playfairFontBlack}
-                    className="text-base md:text-2xl text-[#C4AC77] text-center tracking-wider uppercase"
+                    className="text-base md:text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
                   >
                     Life Water
                   </h2>
@@ -91,7 +91,7 @@ const LifeWater = () => {
                 <div className="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0 w-2/5 mx-auto">
                   <p
                     style={playfairFontRegular}
-                    className="text-black text-xs lg:text-base lg:leading-7 tracking-wider text-justify"
+                    className="text-[#000000] text-xs lg:text-base lg:leading-7 tracking-wider text-justify"
                   >
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Labore pariatur ratione facere quis? Ea asperiores facilis
