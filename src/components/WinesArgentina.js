@@ -210,7 +210,7 @@ function Araucana() {
                       className="w-full md:w-5/6 mx-auto shadow-custom"
                     />
                   </div>
-                  <div id="posicion1"></div>
+           
                   <p
                     className="text-[#F3EEE3] text-xs tracking-wider w-2/3 mx-auto text-center md:text-lg"
                     style={playfairFontRegular}
@@ -223,10 +223,12 @@ function Araucana() {
                 </div>
               </div>
             </div>
-
-            <div className="bg-[#231F20]">
+            <div id="posicion1"></div>
+       
+            <div className=" py-10 bg-[#231F20]">
               <div className="container mx-auto max-w-screen-xl flex flex-col gap-y-16 md:gap-y-32 md:py-20 ">
                 <div className="flex flex-col justify-center items-center gap-y-5 md:gap-y-0">
+              
                   <div className="flex flex-col md:flex-row gap-y-5">
                     <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center">
                       <img
@@ -330,6 +332,7 @@ function Araucana() {
                 </div>
                 <div id="posicion2"></div>
                 <div className="flex flex-col justify-center items-center gap-y-5 md:gap-y-0">
+                 
                   <div className="flex flex-col md:flex-row gap-y-5">
                     <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center">
                       <img src={pinotWine} alt="" className="w-full md:w-32" />
@@ -429,6 +432,7 @@ function Araucana() {
                 </div>
                 <div id="posicion3"></div>
                 <div className="flex flex-col justify-center items-center gap-y-5 md:gap-y-0">
+              
                   <div className="flex flex-col md:flex-row gap-y-5 ">
                     <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center ">
                       <img
@@ -529,6 +533,7 @@ function Araucana() {
                 </div>
                 <div id="posicion4"></div>
                 <div className="flex flex-col justify-center items-center gap-y-5 md:gap-y-0">
+               
                   <div className="flex flex-col md:flex-row gap-y-5">
                     <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center  ">
                       <img
