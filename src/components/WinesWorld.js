@@ -199,7 +199,7 @@ function RioCiervos() {
                       className="w-full  md:w-5/6 mx-auto shadow-custom"
                     />
                   </div>
-                  <div id="posicion1"></div>
+               
                   <p
                     className="text-[#F3EEE3] text-xs md:text-lg tracking-wider w-2/3 mx-auto text-center"
                     style={playfairFontRegular}
@@ -212,8 +212,8 @@ function RioCiervos() {
                 </div>
               </div>
             </div>
-
-            <div className="bg-[#231F20]">
+            <div id="posicion1"></div>
+            <div className=" py-10 bg-[#231F20]">
               <div className="container mx-auto max-w-screen-xl flex flex-col gap-y-16 md:gap-y-32 md:py-20">
                 <div className="flex flex-col justify-center items-center gap-y-5 md:gap-y-0">
                   <div className="flex flex-col md:flex-row gap-y-5 ">
