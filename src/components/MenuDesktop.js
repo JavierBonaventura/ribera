@@ -408,7 +408,7 @@ const MenuDesktop = () => {
                                 </Link>
                               </li>
                               <li>
-                                <Link to="/winesargentina#posicion4">
+                                <Link to="/winesargentina#posicion2">
                                   <p style={robotoFontRegular}>
                                     <span className="subMenu tracking-widest">
                                       Araucana Río de los Ciervos Pinot Noir
@@ -417,7 +417,7 @@ const MenuDesktop = () => {
                                 </Link>
                               </li>
                               <li>
-                                <Link to="/winesargentina#posicion2">
+                                <Link to="/winesargentina#posicion3">
                                   <p style={robotoFontRegular}>
                                     <span className="subMenu tracking-widest">
                                       Araucana Malbec
@@ -426,7 +426,7 @@ const MenuDesktop = () => {
                                 </Link>
                               </li>
                               <li>
-                                <Link to="/winesargentina#posicion3">
+                                <Link to="/winesargentina#posicion4">
                                   <p style={robotoFontRegular}>
                                     <span className="subMenu tracking-widest">
                                       Araucana Azul
