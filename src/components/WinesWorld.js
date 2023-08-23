@@ -107,7 +107,7 @@ function RioCiervos() {
   const location3 = useLocation();
 
   useEffect(() => {
-    if (location3.hash === "#posicion2") {
+    if (location3.hash === "#posicion3") {
       const element = document.getElementById("posicion3");
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
@@ -199,7 +199,7 @@ function RioCiervos() {
                       className="w-full  md:w-5/6 mx-auto shadow-custom"
                     />
                   </div>
-               
+
                   <p
                     className="text-[#F3EEE3] text-xs md:text-lg tracking-wider w-2/3 mx-auto text-center"
                     style={playfairFontRegular}
