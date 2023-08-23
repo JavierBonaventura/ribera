@@ -7,16 +7,8 @@ import iconIg from "../images/icon-ig-form.png";
 import { useLocation } from "react-router-dom";
 import { Transition, animated } from "@react-spring/web";
 import portada from "../images/background-contact.jpg";
-import emailjs from "emailjs-com";
-
 
 const FormularioContacto = () => {
-
-  // Incio variables paraa manejar el estado del envio del mail
-  const [isEmailSent, setIsEmailSent] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
-  // Fin variables paraa manejar el estado del envio del mail
-
   const location = useLocation();
 
   const playfairFontRegular = {
@@ -37,40 +29,17 @@ const FormularioContacto = () => {
   const [pais, setPais] = useState("");
   const [consulta, setConsulta] = useState("");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-  // Inicio configuracion del envio del Meil - Solo para EmailJS
-    try {
-      const templateParams = {
-        from_name: nombre,
-        to_name: "Recipient Name", 
-        message: consulta,
-        reply_to: email,
-      };
-  
-      await emailjs.send(
-        "service_1x02jcj", 
-        "template_uirwv2e", 
-        templateParams,
-        "fbb72gDufjJSqmZn9" 
-      );
-  
-      console.log("Correo enviado exitosamente");
-      setIsEmailSent(true);
-      setShowPopup(true);
-      // Limpia los campos del formulario
-      setNombre("");
-      setApellido("");
-      setEmail("");
-      setPais("");
-      setConsulta("");
-    } catch (error) {
-      console.error("Error al enviar el correo:", error);
-    }
-      // Inicio configuracion del envio del Meil - Solo para EmailJS
-
+    // Aquí puedes realizar cualquier acción con los datos del formulario, como enviarlos a un servidor
+    console.log({
+      nombre,
+      apellido,
+      email,
+      pais,
+      consulta,
+    });
   };
-
   return (
     <Transition
       items={location}
@@ -225,36 +194,13 @@ const FormularioContacto = () => {
                       ></textarea>
                     </div>
                     <div className="flex items-center justify-start">
-  <button
-    className="bg-[#C4B27D] text-[#F2ECE1] text-sm md:text-xl  hover:bg-[#F2ECE1] hover:text-[#C4B27D] transition ease-in-out duration-300 rounded-md  py-2 px-8 "
-    type="submit"
-    onClick={handleSubmit}
-  >
-    Send
-  </button>
-</div>
-{/* Inicio Muestra pop up y borra el contenido del formulario */}
-{showPopup  && (
-  <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-50">
-    <div className="bg-white p-4 rounded-md text-center w-64">
-      {isEmailSent ? (
-        <p className="text-green-600">Email enviado exitosamente</p>
-      ) : (
-        <p className="text-red-600">Hubo un error al enviar el email</p>
-      )}
-      <div className="mt-4"></div>
-      <button
-        className="mx-auto mt-4 bg-[#C4B27D] text-[#F2ECE1] text-sm md:text-xl hover:bg-[#F2ECE1] hover:text-[#C4B27D] transition ease-in-out duration-300 rounded-md py-2 px-8"
-        onClick={() => setShowPopup(false)}
-      >
-        Cerrar
-      </button>
-    </div>
-  </div>
-)}
-{/* fin Muestra pop up y borra el contenido del formulario */}
-
-
+                      <button
+                        className="bg-[#C4B27D] text-[#F2ECE1] text-sm md:text-xl  hover:bg-[#F2ECE1] hover:text-[#C4B27D] transition ease-in-out duration-300 rounded-md  py-2 px-8 "
+                        type="submit"
+                      >
+                        Send
+                      </button>
+                    </div>
                   </form>
                 </div>
                 {/*INPUTS END*/}
