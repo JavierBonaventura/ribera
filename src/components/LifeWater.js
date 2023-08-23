@@ -69,7 +69,7 @@ const LifeWater = () => {
                   <div class="flex flex-col justify-center items-center md:mt-0 md:gap-y-0">
                     <h1
                       style={playfairFontItalic}
-                      class="text-[#5f5f5e] text-xs md:text-lg tracking-widest"
+                      class="text-[#5f5f5e] md:text-[#F3EEE3] text-xs md:text-lg tracking-widest"
                     >
                       <i style={playfairFontItalic}>Patagonian Spirit</i>
                     </h1>
@@ -102,7 +102,7 @@ const LifeWater = () => {
                     <Link to="/lifewaterread">
                       <a
                         href=""
-                        className="text-[#F3EEE3] bg-[#C4B27D] border border-[#C4B27D] text-lg py-2 px-10 rounded-lg hover:text-[#C4B27D] hover:bg-transparent transition ease-in-out  duration-300"
+                        className="text-[#F3EEE3] uppercase bg-[#C4B27D] border border-[#C4B27D] text-lg py-2 px-10 rounded-lg hover:text-[#C4B27D] hover:bg-[#F3EEE3] hover:border-[#F3EEE3] transition ease-in-out  duration-300"
                       >
                         Read more
                       </a>

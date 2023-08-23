@@ -156,10 +156,10 @@ const MenuHamburguesaDesktop = () => {
             <div className="w-full h-full">
               <div className="border border-[#F3EEE3] w-full h-full p-2 relative flex flex-col justify-center items-center">
                 <div className="w-full h-full border border-[#F3EEE3] flex flex-col justify-start relative gap-y-8 2xl:gap-y-24 pt-24 2xl:pt-36">
-                  <div className="flex justify-end items-center absolute top-7 right-7">
+                  <div className="flex justify-end items-center absolute top-3 right-3">
                     <Link to="/">
-                      <div className=" bg-transparent border border-[#c4b27d] rounded-full p-4">
-                        <img src={x} alt="" />
+                      <div className=" bg-transparent border border-[#c4b27d] rounded-full p-3">
+                        <img src={x} alt="" className="w-2" />
                       </div>
                     </Link>
                   </div>

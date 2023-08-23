@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../App.css";
 import logo from "../images/logo-home-mob.png";
 import { useSpring, animated } from "@react-spring/web";
-import hambur from "../images/menu-hambur.png";
+import hambur from "../images/hambur-claro.png";
 import iconIg from "../images/icon-ig-form.png";
 import { useLocation } from "react-router-dom";
 import { Transition } from "@react-spring/web";
