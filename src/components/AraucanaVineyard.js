@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
-import ilustracionSpirit from "../images/ilustracion-sprit.png";
+import ilustracionSpirit from "../images/dibujoaraucana.png";
 import paisajeAraucana from "../images/paisaje-araucana-1.jpg";
 import iconIg from "../images/icon-ig.png";
 import "../App.css";
@@ -114,7 +114,7 @@ const ConstructionPage = () => {
                 <img
                   src={ilustracionSpirit}
                   alt=""
-                  className="w-full md:w-3/4 mx-auto"
+                  className="w-full md:w-3/5 mx-auto"
                 />
               </div>
 
