@@ -192,7 +192,7 @@ const MenuHamburguesaDesktop = () => {
                       >
                         History
                       </p>
-                      <ul className="text-center space-y-1.5">
+                      <ul className="text-center space-y-0 lg:space-y-1.5">
                         <li>
                           <Link to="/family" style={robotoFontRegular}>
                             <span className="subMenu tracking-widest">
@@ -228,7 +228,7 @@ const MenuHamburguesaDesktop = () => {
                       >
                         Patagonian Spirit
                       </p>
-                      <ul className="text-center space-y-1.5">
+                      <ul className="text-center space-y-0 lg:space-y-1.5">
                         <li>
                           <Link
                             to="/araucanavineyard"
@@ -289,7 +289,7 @@ const MenuHamburguesaDesktop = () => {
                         Wines
                       </p>
                       <animated.div style={dropdownAnimation3}>
-                        <ul className="text-center space-y-1.5">
+                        <ul className="text-center space-y-0 lg:space-y-1">
                           <li>
                             <p style={robotoFontRegular} onClick={opcion4}>
                               <span className="!mb-0 subMenu tracking-widest">

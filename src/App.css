@@ -71,7 +71,6 @@ body {
   height: 100vh;
 }
 
-
 .contenido-dinamico {
   display: none;
 }
@@ -331,4 +330,9 @@ img {
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.text-right-justify {
+  text-align: justify;
+  text-align-last: right;
 }

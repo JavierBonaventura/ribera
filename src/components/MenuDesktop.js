@@ -268,7 +268,7 @@ const MenuDesktop = () => {
                       id="menu1"
                       onMouseEnter={handleMenu1Hover}
                       onMouseLeave={handleMenu1Leave}
-                      className={`flex flex-col items-center w-full transition-opacity duration-500 gap-y-2 xl:gap-y-8   ${
+                      className={`flex flex-col items-center w-full transition-opacity duration-500 gap-y-8   ${
                         isMenu2Hovered || isMenu3Hovered
                           ? "opacity-30"
                           : "opacity-100"
@@ -304,7 +304,7 @@ const MenuDesktop = () => {
                       id="menu2"
                       onMouseEnter={handleMenu2Hover}
                       onMouseLeave={handleMenu2Leave}
-                      className={`flex flex-col items-center w-full transition-opacity duration-500 gap-y-2 xl:gap-y-8  ${
+                      className={`flex flex-col items-center w-full transition-opacity duration-500 gap-y-8  ${
                         isMenu1Hovered || isMenu3Hovered
                           ? "opacity-30"
                           : "opacity-100"
@@ -364,7 +364,7 @@ const MenuDesktop = () => {
                       id="menu3"
                       onMouseEnter={handleMenu3Hover}
                       onMouseLeave={handleMenu3Leave}
-                      className={`flex flex-col items-center w-full transition-opacity duration-500 gap-y-2 xl:gap-y-8 ${
+                      className={`flex flex-col items-center w-full transition-opacity duration-500 gap-y-8 ${
                         isMenu1Hovered || isMenu2Hovered
                           ? "opacity-30"
                           : "opacity-100"
@@ -379,7 +379,7 @@ const MenuDesktop = () => {
                         Wines
                       </p>
                       <animated.div style={dropdownAnimation3}>
-                        <ul className="text-center space-y-0 lg:space-y-1.5">
+                        <ul className="text-center space-y-0 lg:space-y-1">
                           <li>
                             <p style={robotoFontRegular} onClick={opcion4}>
                               <span className="!mb-0 subMenu tracking-widest">

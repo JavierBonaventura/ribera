@@ -246,11 +246,11 @@ const FormularioContacto = () => {
                         >
                           {isEmailSent ? (
                             <p className="text-[#000000]">
-                              Email enviado exitosamente
+                              Email sent successfully
                             </p>
                           ) : (
                             <p className="text-red-600">
-                              Hubo un error al enviar el email
+                              There was an error sending the email
                             </p>
                           )}
                           <div className="mt-4"></div>
@@ -258,7 +258,7 @@ const FormularioContacto = () => {
                             className="mx-auto p-1 bg-[#C4B27D] text-[#F3EEE3] text-sm md:text-base hover:bg-[#F3EEE3] hover:text-[#C4B27D] transition ease-in-out duration-300 rounded-md border border-[#C4B27D] "
                             onClick={() => setShowPopup(false)}
                           >
-                            Cerrar
+                            Close
                           </button>
                         </div>
                       </div>

@@ -91,7 +91,7 @@ const ConstructionPage = () => {
                 </div>
               </div>
 
-              <div class="container mx-auto py-5 md:py-12 xl:pb-12 xl:pt-0 max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 ">
+              <div class="container mx-auto py-5 md:py-12 xl:py-12  max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 ">
                 <p
                   class="text-[#000000] tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto text-xs  lg:text-base lg:leading-7 md:pt-5"
                   style={playfairFontRegular}

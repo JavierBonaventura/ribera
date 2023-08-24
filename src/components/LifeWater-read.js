@@ -63,7 +63,7 @@ const LifeWater = () => {
             </header>
 
             <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl pt-24 md:px-5 2xl:px-0  ">
-              <div class="absolute left-1/2 top-32  hover:scale-90 -translate-x-1/2 z-50 border border-transparent rounded-full hover:border-[#C4B27D] hover:transf transition ease-in-out duration-500">
+              <div class="absolute left-1/2 top-32  hover:scale-90 -translate-x-1/2 z-50  rounded-full transition ease-in-out duration-500">
                 <Link to="/lifewater">
                   <img src={close} alt="" className="w-12 2xl:w-16 " />
                 </Link>

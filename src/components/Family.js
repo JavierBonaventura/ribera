@@ -121,13 +121,13 @@ const Family = () => {
                   <div className="py-28 md:py-0">
                     <div className="flex justify-center">
                       <div
-                        className="border border-[#C3B17D] rounded-full p-6 md:p-6 relative flex justify-center items-center"
+                        className="border border-[#C3B17D] rounded-full p-6 md:p-6 relative flex justify-center items-center hover:scale-90 transition ease-in-out duration-500 cursor-pointer"
                         onClick={handleClick}
                       >
                         <img
                           src={arrowDown}
                           alt=""
-                          className="w-1.5 md:w-1.5 absolute"
+                          className="w-1.5 md:w-1.5 absolute "
                         />
                       </div>
                     </div>
@@ -213,7 +213,7 @@ const Family = () => {
 
                       <div class="flex flex-col gap-y-2 md:gap-y-5 pt-5 pb-12 md:py-10 md:pr-52 lg:pr-60 xl:pl-24 xl:pr-72 w-full 2xl:px-0 2xl:w-2/4 mx-auto px-10 md:px-0 ">
                         <p
-                          class="text-justify  tracking-wider text-[#ffffff] text-xs lg:text-base lg:leading-7"
+                          class="text-right-justify tracking-wider text-[#ffffff] text-xs lg:text-base lg:leading-7"
                           style={playfairFontRegular}
                         >
                           Patagonia was the place where we spent the summers of
@@ -316,7 +316,7 @@ const Family = () => {
                   <img
                     src={felipe}
                     alt=""
-                    className="px-4 md:px-0 shadow-2xl"
+                    className="px-4 md:px-0 shadow-custom"
                   />
                 </div>
                 <p
