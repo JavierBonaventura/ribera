@@ -238,7 +238,7 @@ const MenuDesktop = () => {
             <div className="w-full h-full">
               <div className="border border-[#F3EEE3] w-full h-full p-2 relative flex flex-col justify-center items-center">
                 <div className="w-full h-full border border-[#F3EEE3] relative">
-                  <div className="flex justify-end items-center pr-4 py-5">
+                  <div className="flex justify-end items-center pr-4 py-5 ">
                     <Link
                       to="/MenuHamburguesa"
                       onMouseEnter={handlehamburMouseEnter}
@@ -247,7 +247,7 @@ const MenuDesktop = () => {
                       <img
                         src={hambur}
                         alt="Hamburger"
-                        className={`w-6 cursor-pointer ${
+                        className={`w-6 cursor-pointer hover:scale-90 transition ease-in-out duration-500 ${
                           hamburHovered ? "filterHambur" : ""
                         }`}
                       />
@@ -527,14 +527,18 @@ const MenuDesktop = () => {
                             href=""
                             className="hover:text-[#C4B27D]  duration-300 transition ease-in-out"
                           >
-                            <div className="flex flex-col items-center ">
+                            <a
+                              target="_blank"
+                              href="https://casapirque.com.ar/"
+                              className="flex flex-col items-center "
+                            >
                               <span className="text-center">
                                 <i>Our distribution office</i>
                               </span>
                               <span className="uppercase tracking-widest text-center">
                                 Casa Pirque
                               </span>
-                            </div>
+                            </a>
                           </a>
                         </div>
 
@@ -555,14 +559,18 @@ const MenuDesktop = () => {
                           src={iconUbi}
                           className="w-4 absolute -top-3 left-[3.7rem]"
                         />
-                        <div className="flex flex-col text-center">
+                        <a
+                          target="_blank"
+                          href="https://www.google.com.ar/maps/place/39%C2%B011'17.0%22S+66%C2%B052'26.0%22W/@-39.1880556,-66.8738889,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-39.1880556!4d-66.8738889?entry=ttu"
+                          className="flex flex-col text-center"
+                        >
                           <span className="uppercase tracking-[0.17em] text-xs lg:text-sm ">
                             Río Negro
                           </span>
                           <span className="text-xs tracking-tighter">
                             Patagonia Argentina
                           </span>
-                        </div>
+                        </a>
                       </div>
                     </div>
                   </div>

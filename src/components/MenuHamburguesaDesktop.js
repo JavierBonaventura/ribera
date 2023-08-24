@@ -467,14 +467,18 @@ const MenuHamburguesaDesktop = () => {
                             href=""
                             className="hover:text-[#c4b27d]  duration-300 transition ease-in-out"
                           >
-                            <div className="flex flex-col items-center ">
+                            <a
+                              target="_blank"
+                              href="https://casapirque.com.ar/"
+                              className="flex flex-col items-center "
+                            >
                               <span className="text-center">
                                 <i>Our distribution office</i>
                               </span>
                               <span className="uppercase tracking-widest text-center">
                                 Casa Pirque
                               </span>
-                            </div>
+                            </a>
                           </a>
                         </div>
 

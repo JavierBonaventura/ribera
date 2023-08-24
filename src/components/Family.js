@@ -200,6 +200,13 @@ const Family = () => {
                   className="w-6/12 2xl:w-4/12 mx-auto contenido-dinamico absolute  right-4 2xl:right-44 -bottom-5 lg:-bottom-20 shadow-custom"
                 />
 
+                <span
+                  className="absolute  text-white -bottom-5 lg:bottom-[-4.5rem] right-14 2xl:right-44 text-lg"
+                  style={playfairFontItalic}
+                >
+                  Sunset at Valle Azul
+                </span>
+
                 <div class="bg-[#212121] w-full md:w-2/3">
                   <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
                     <div className="flex flex-col md:flex-row-reverse">

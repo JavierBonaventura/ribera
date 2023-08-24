@@ -6,7 +6,7 @@ import hambur from "../images/menu-hambur.png";
 import iconIg from "../images/icon-ig-form.png";
 import { useLocation } from "react-router-dom";
 import { Transition, animated } from "@react-spring/web";
-import portada from "../images/background-contact.jpg";
+import portada from "../images/background-contact-1.png";
 import emailjs from "emailjs-com";
 
 const FormularioContacto = () => {
@@ -109,7 +109,7 @@ const FormularioContacto = () => {
               <img
                 src={portada}
                 alt=""
-                className=" mx-auto object-cover w-3/4"
+                className="mx-auto object-cover w-3/4"
               />
             </div>
             {/*PORTADA DESK END*/}
