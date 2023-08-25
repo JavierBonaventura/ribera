@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import workVineyardSlide0 from "../images/hourses.jpg";
 import workVineyardSlide1 from "../images/wineYardSlide3.jpg";
 import workVineyardSlide2 from "../images/wineYardSlide2.jpg";
 import workVineyardSlide3 from "../images/hourses.jpg";
@@ -34,24 +33,13 @@ const CarouselSlider = () => {
 
   const [isPrevButtonHovered, setIsPrevButtonHovered] = useState(false);
   const [isNextButtonHovered, setIsNextButtonHovered] = useState(false);
-  const images = [
-    workVineyardSlide0,
-    workVineyardSlide1,
-    workVineyardSlide2,
-    workVineyardSlide3,
-  ];
+  const images = [workVineyardSlide1, workVineyardSlide2, workVineyardSlide3];
   const paragraphs = [
-    "Living with horses slows things down, allowing us to decelerate and connect with nature, to explore the land at a more measured and profound pace.",
     "Countess Noemi Marone Cinzano discovered this unparalleled place and laid the foundation for what is now Bodega Ribera del Cuarzo. As in all Italian estates, she built a house by the winery. With Patagonian style and appealing architecture, a small garden overlooks the valley that flows into the river. The house is where we rest after a day's work and where we gather with family to enjoy and celebrate. It's also where we think, plan, and decide alongside those who help us carry out production. We share meals, as it has become our home.",
     "The Rio Negro is the largest river in Patagonia. The Limay and Neuquén rivers collect water and minerals from mountain melt before flowing towards the center and east of the country, ultimately merging to form the Rio Negro. This river flows into the sea south of Buenos Aires Province, in a small town called El Cóndor. It meanders between two imposing barda walls, one to the north and another to the south, formed over millions of years. In 1860, Estanislao Ceballos described them as river terraces, and they provide invaluable contributions of calcium carbonate, stone, quartz, and ashes. Today, the river runs through this valley, a valley nestled between bardas.",
-    "Maintaining traditional working methods helps us never lose sight of the connection with the land, a connection that defines us as farmers. On the estate, we have Criollo horses, an Argentine breed. In addition to using tractors and machinery for efficiency in specific tasks, working with animals is a form of respect and care for nature. It seeks to be rewarded with the best flavor. Furthermore, the horses play a role in fertilization, contributing to the compost we produce on the estate: their manure combines with organic residues from wine production and household consumption. This serves as fertilizer for the fruits and vegetables we grow for ourselves, as well as for our gardens and, of course, the vineyard. But horses also embody a way of life: living with horses slows things down, allowing us to decelerate and connect with nature, exploring the land at a more leisurely and profound pace.",
+    "Maintaining traditional working methods helps us never lose sight of the connection with the land, a connection that defines us as farmers. On the estate, we have Criollo horses, an Argentine breed. In addition to using tractors and machinery for efficiency in specific tasks, working with animals is a form of respect and care for nature. It seeks to be rewarded with the best flavor. Furthermore, the horses play a role in fertilization, contributing to the compost we produce on the estate: their manure combines with organic residues from wine production and household consumption. This serves as fertilizer for the fruits and vegetables we grow for ourselves, as well as for our gardens and, of course, the vineyard. But horses also embody a way of life: Living with horses slows things down, allowing us to decelerate and connect with nature, to explore the land at a more measured and profound pace.",
   ];
-  const title = [
-    "HORSES ARE A WAY LIFE",
-    "THE HOUSE OF THE WINERY",
-    "THE RIVER",
-    "THE HORSES",
-  ];
+  const title = ["THE HOUSE OF THE WINERY", "THE RIVER", "THE HORSES"];
   const [activeIndex, setActiveIndex] = useState(0);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -187,7 +175,7 @@ const CarouselSlider = () => {
           >
             {" "}
             {"0" + (currentImageIndex + 1)}{" "}
-            <sup className="text-base underline align-middle	">4</sup>
+            <sup className="text-base underline align-middle	">3</sup>
           </p>
         </div>
         <div className="w-96 container max-w-screen-xl xl:max-w-screen-2xl mx-auto py-1/2 fixed -top-32 left-0 right-0  md:px-5 2xl:px-0 absolute inset-0 flex items-center justify-center ">

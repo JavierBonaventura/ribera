@@ -353,7 +353,7 @@ const MenuDesktop = () => {
                         <li>
                           <Link to="/lifewater" style={robotoFontRegular}>
                             <span className="subMenu tracking-widest">
-                              LIFE WATER
+                              WATER OF LIFE
                             </span>
                           </Link>
                         </li>

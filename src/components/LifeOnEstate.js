@@ -70,7 +70,7 @@ const LifeOnEstate = () => {
   const [currentScreen, setCurrentScreen] = useState(0);
 
   const handleNext = () => {
-    if (currentScreen === 3) {
+    if (currentScreen === 2) {
       setCurrentScreen(0);
     } else {
       setCurrentScreen(currentScreen + 1);
@@ -79,7 +79,7 @@ const LifeOnEstate = () => {
 
   const handlePrev = () => {
     if (currentScreen === 0) {
-      setCurrentScreen(3);
+      setCurrentScreen(2);
     } else {
       setCurrentScreen(currentScreen - 1);
     }
@@ -116,13 +116,6 @@ const LifeOnEstate = () => {
               )}
               {currentScreen === 2 && (
                 <Screen3
-                  currentScreen={currentScreen}
-                  handleNext={handleNext}
-                  handlePrev={handlePrev}
-                />
-              )}
-              {currentScreen === 3 && (
-                <Screen4
                   currentScreen={currentScreen}
                   handleNext={handleNext}
                   handlePrev={handlePrev}
@@ -187,133 +180,7 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
                   style={playfairFontBlack}
                   className="text-[#C4B27D] absolute top-1 left-6 text-xs underline"
                 >
-                  04
-                </span>
-              </p>
-            </div>
-
-            <div className="container mx-auto flex flex-col justify-center  items-center">
-              <div>
-                <img src={wineYardSlide4} alt="" className="w-full" />
-              </div>
-            </div>
-            <div className="flex justify-center space-x-10 pt-2  bg-[#F3EEE3]">
-              <button
-                className="w-14 h-14 rounded-full flex items-center justify-center mr-2"
-                onClick={handlePrev}
-              >
-                <div className="">
-                  <img src={flechaIzquierda} alt="" className="w-full" />
-                </div>
-              </button>
-
-              <button
-                className="w-14 h-14 flex items-center justify-center"
-                onClick={handleNext}
-              >
-                <div className="">
-                  <img src={flechaDerecha} alt="" className="w-full" />
-                </div>
-              </button>
-            </div>
-          </div>
-          <div>
-            <div className="bg-[#F3EEE3] pt-5">
-              <div className="container mx-auto flex flex-col justify-center items-center">
-                <div className="flex flex-col gap-y-5">
-                  <div className="flex flex-col gap-y-5">
-                    <div className="w-4/5 mx-auto">
-                      <p
-                        style={robotoFontRegular}
-                        className="decoration-black	text-[#C4B27D]  text-xs leading-6 pb-3 tracking-wide"
-                      >
-                        THE HORSES ARE A WAY OF LIFE
-                      </p>
-                      <p
-                        style={playfairFontRegular}
-                        className="decoration-black	 text-xs tracking-wider text-justify"
-                      >
-                        Living with horses slows things down, allowing us to
-                        decelerate and connect with nature, to explore the land
-                        at a more measured and profound pace.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="container mx-auto bg-[#F3EEE3]">
-              <div class="py-20">
-                <div class="flex justify-center">
-                  <a
-                    class="border border-[#C4B27D] rounded-full p-7"
-                    href="https://www.instagram.com/riberadelcuarzo/"
-                    target="_blank"
-                  >
-                    <img src={iconIg} alt="" class="w-5" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </animated.div>
-      )}
-    </Transition>
-  );
-};
-
-const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
-  const location = useLocation();
-
-  const playfairFontBlack = {
-    fontFamily: "Playfair Black, sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-  const playfairFontRegular = {
-    fontFamily: "Playfair Regular, sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-
-  const robotoFontRegular = {
-    fontFamily: "Roboto Regular , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-    fontSize: "16px",
-  };
-  return (
-    <Transition
-      items={location}
-      keys={(location) => location.pathname}
-      from={{ opacity: 0 }}
-      enter={{ opacity: 1 }}
-      leave={{ opacity: 0 }}
-      config={{ duration: 1000 }}
-    >
-      {(style, item) => (
-        <animated.div
-          style={{
-            ...style,
-            width: "100%",
-            backgroundColor: "#F3EEE3",
-            minHeight: "100vh",
-          }}
-        >
-          <div className="mt-[-20px]">
-            <div className="bg-[#F3EEE3] pb-2">
-              <p className="ml-6 text-left relative">
-                <span
-                  style={playfairFontBlack}
-                  className="text-[#C4B27D] text-lg"
-                >
-                  02
-                </span>
-                <span
-                  style={playfairFontBlack}
-                  className="text-[#C4B27D] absolute top-1 left-6 text-xs underline"
-                >
-                  04
+                  03
                 </span>
               </p>
             </div>
@@ -395,7 +262,7 @@ const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
   );
 };
 
-const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
+const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
   const location = useLocation();
 
   const playfairFontBlack = {
@@ -440,13 +307,13 @@ const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
                   style={playfairFontBlack}
                   className="text-[#C4B27D] text-lg"
                 >
-                  03
+                  02
                 </span>
                 <span
                   style={playfairFontBlack}
                   className="text-[#C4B27D] absolute top-1 left-6 text-xs underline"
                 >
-                  04
+                  03
                 </span>
               </p>
             </div>
@@ -545,7 +412,7 @@ const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
   );
 };
 
-const Screen4 = ({ currentScreen, handleNext, handlePrev }) => {
+const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
   const location = useLocation();
 
   const playfairFontBlack = {
@@ -590,13 +457,13 @@ const Screen4 = ({ currentScreen, handleNext, handlePrev }) => {
                   style={playfairFontBlack}
                   className="text-[#C4B27D] text-lg"
                 >
-                  04
+                  03
                 </span>
                 <span
                   style={playfairFontBlack}
                   className="text-[#C4B27D] absolute top-1 left-6 text-xs underline"
                 >
-                  04
+                  03
                 </span>
               </p>
             </div>
@@ -662,7 +529,7 @@ const Screen4 = ({ currentScreen, handleNext, handlePrev }) => {
                         fertilizer for the fruits and vegetables we grow for
                         ourselves, as well as for our gardens and, of course,
                         the vineyard. But horses also embody a way of life:
-                        <br />
+                        <br /> <br />
                         Living with horses slows things down, allowing us to
                         decelerate and connect with nature, exploring the land
                         at a more leisurely and profound pace.

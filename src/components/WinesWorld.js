@@ -10,6 +10,8 @@ import riberaReserva from "../images/ribera-reserva-wine-1.png";
 import araucanaWine from "../images/araucana-rio-wine-1.png";
 import araucanaMalbec from "../images/araucana-malbec-wine-1.png";
 import araucanaAzul from "../images/araucana-azul-wine-1.png";
+import araucanaPinot from "../images/araucana-pino-wine-1.png";
+import logoTransparencia from "../images/Isologo-transparencia.svg";
 import cava from "../images/cava.jpg";
 import iconIg from "../images/icon-ig.png";
 import { useSpring, Transition, animated } from "@react-spring/web";
@@ -159,7 +161,7 @@ function RioCiervos() {
         <animated.div style={{ ...style, width: "100%" }}>
           <div>
             <div id="posicion0"></div>
-            <header className="container mx-auto py-10 fixed top-0 left-0 right-0 z-50 px-5 md:px-0 md:py-2  max-w-screen-xl">
+            <header className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-5 xl:py-10 px-5 2xl:px-0  fixed top-0 left-0 right-0 z-50">
               <div class="flex justify-between items-center">
                 <div class="w-24 md:w-28">
                   <Link to="/">
@@ -175,10 +177,10 @@ function RioCiervos() {
             </header>
 
             <div className="bg-[#231F20]">
-              <div className="container mx-auto max-w-screen-xl flex flex-col justify-center items-center pt-28 pb-16 gap-y-10">
+              <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 flex flex-col justify-center items-center pt-24 2xl:pt-36 pb-16 gap-y-5 2xl:gap-y-10">
                 <div class="flex flex-col justify-center items-center  bg-[#231F20] ">
                   <h1
-                    class="text-xs tracking-widest text-[#F3EEE3]"
+                    class="text-xs md:text-lg tracking-widest text-[#F3EEE3]"
                     style={playfairFontItalic}
                   >
                     <i style={playfairFontItalic}>Wines</i>
@@ -186,12 +188,12 @@ function RioCiervos() {
 
                   <h2
                     style={playfairFontBlack}
-                    className="text-base text-[#C4B27D] text-center tracking-wider uppercase"
+                    className="text-base md:text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
                   >
                     In the world
                   </h2>
                 </div>
-                <div className=" flex flex-col gap-y-5">
+                <div className=" flex flex-col gap-y-5 contenido-dinamico-contact">
                   <div className="px-4">
                     <img
                       src={cava}
@@ -201,7 +203,7 @@ function RioCiervos() {
                   </div>
 
                   <p
-                    className="text-[#F3EEE3] text-xs md:text-lg tracking-wider w-2/3 mx-auto text-center"
+                    className="text-[#F3EEE3] text-xs md:text-base tracking-wider w-2/3 mx-auto text-center md:px-5 hidden"
                     style={playfairFontRegular}
                   >
                     We craft wines with the adventurous spirit inherent to
@@ -214,42 +216,48 @@ function RioCiervos() {
             </div>
             <div id="posicion1"></div>
             <div className=" py-10 bg-[#231F20]">
-              <div className="container mx-auto max-w-screen-xl flex flex-col gap-y-16 md:gap-y-32 md:py-20">
+              <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 flex flex-col gap-y-16 md:gap-y-32 md:py-20">
+                {/* wine 1 */}
                 <div className="flex flex-col justify-center items-center gap-y-5 md:gap-y-0">
                   <div className="flex flex-col md:flex-row gap-y-5 ">
-                    <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center">
+                    <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center md:items-center relative">
                       <img
                         src={riberaClasicoWine}
                         alt=""
-                        className="w-full md:w-1/3"
+                        className="w-full md:w-1/3 z-50"
+                      />
+                      <img
+                        src={logoTransparencia}
+                        alt=""
+                        className="absolute top-24 contenido-dinamico-contact md:w-[30rem]"
                       />
                     </div>
-                    <div className="flex flex-col gap-y-2 md:hidden">
+                    <div className="flex flex-col gap-y-2 md:hidden w-2/3 mx-auto">
                       <h1
-                        className="uppercase text-[#C4B27D] text-center tracking-widest"
+                        className="uppercase text-[#C4B27D] text-justify tracking-widest"
                         style={robotoFontRegular}
                       >
-                        <span className="text-base md:text-3xl">
+                        <span className="text-base md:text-[1.35rem] md:leading-[1.75rem]">
                           Ribera del Cuarzo <br />{" "}
                           <span className="font-bold">CLÁSICO</span>
                         </span>
                       </h1>
                       <h4
-                        className=" text-[#F3EEE3] text-center  tracking-widest"
+                        className=" text-[#F3EEE3] text-justify tracking-widest"
                         style={robotoFontRegular}
                       >
-                        <span className="text-xs md:text-xl">
+                        <span className="text-xs md:text-base">
                           <i>Patagonia, Argentina</i>
                         </span>
                       </h4>
                     </div>
-                    <div className="flex flex-col gap-y-5 md:w-full ">
-                      <div className="md:flex flex-col gap-y-2 hidden">
+                    <div className="flex flex-col gap-y-5 md:w-full md:justify-center">
+                      <div className="contenido-dinamico-contact flex-col gap-y-2 ">
                         <h1
                           className="uppercase text-[#C4B27D] text-center md:text-left  tracking-widest"
                           style={robotoFontRegular}
                         >
-                          <span className="text-base md:text-3xl">
+                          <span className="text-base md:text-[1.35rem] md:leading-[1.75rem]">
                             Ribera del Cuarzo <br />{" "}
                             <span className="font-bold">CLÁSICO</span>
                           </span>
@@ -258,14 +266,14 @@ function RioCiervos() {
                           className=" text-[#F3EEE3] text-center md:text-left  tracking-widest"
                           style={robotoFontRegular}
                         >
-                          <span className="text-xs md:text-xl ">
+                          <span className="text-xs md:text-base ">
                             <i>Patagonia, Argentina</i>
                           </span>
                         </h4>
                       </div>
                       <div className="w-2/3 mx-auto  md:mx-0 ">
                         <p
-                          className="text-[#F3EEE3] text-xs tracking-wider text-center md:text-lg md:text-justify"
+                          className="text-[#F3EEE3] text-xs tracking-wider text-center text-justify"
                           style={playfairFontRegular}
                         >
                           Clasico Malbec´s grapes come from 8 vineyards located
@@ -275,7 +283,7 @@ function RioCiervos() {
                         </p>
                       </div>
 
-                      <div className="w-2/3 mx-auto md:mx-0">
+                      <div className="w-2/3 mx-auto md:mx-0 hidden">
                         <div className="flex justify-center md:justify-start">
                           <a
                             className="border-b border-[#C4B27D]"
@@ -313,19 +321,27 @@ function RioCiervos() {
                     </div>
                   </div>
                 </div>
+                {/* wine 1 */}
+
+                {/* wine 2 */}
                 <div id="posicion2"></div>
                 <div className="flex flex-col justify-center items-center gap-y-5 md:gap-y-0 ">
                   <div className="flex flex-col md:flex-row gap-y-5">
-                    <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center ">
+                    <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center md:items-center relative">
                       <img
                         src={riberaEspecial}
                         alt=""
-                        className="w-full md:w-1/3"
+                        className="w-full md:w-1/3 z-50"
+                      />
+                      <img
+                        src={logoTransparencia}
+                        alt=""
+                        className="absolute top-24 contenido-dinamico-contact bottom-24 md:w-[30rem] "
                       />
                     </div>
-                    <div className="flex md:hidden flex-col gap-y-2">
+                    <div className="flex md:hidden flex-col gap-y-2 w-2/3 mx-auto">
                       <h1
-                        className="uppercase text-[#C4B27D] text-center tracking-widest"
+                        className="uppercase text-[#C4B27D] text-justify tracking-widest"
                         style={robotoFontRegular}
                       >
                         <span className="text-base md:text-3xl">
@@ -334,7 +350,7 @@ function RioCiervos() {
                         </span>
                       </h1>
                       <h4
-                        className=" text-[#F3EEE3] text-center  tracking-widest"
+                        className=" text-[#F3EEE3] text-justify  tracking-widest"
                         style={robotoFontRegular}
                       >
                         <span className="text-xs md:text-xl">
@@ -343,13 +359,13 @@ function RioCiervos() {
                       </h4>
                     </div>
 
-                    <div className="flex flex-col gap-y-5  md:w-full">
-                      <div className="hidden md:flex flex-col gap-y-2">
+                    <div className="flex flex-col gap-y-5  md:w-full md:justify-center">
+                      <div className="contenido-dinamico-contact flex-col gap-y-2">
                         <h1
                           className="uppercase text-[#C4B27D] text-center md:text-left tracking-widest"
                           style={robotoFontRegular}
                         >
-                          <span className="text-base md:text-3xl">
+                          <span className="text-base md:text-[1.35rem] md:leading-[1.75rem]">
                             Ribera del Cuarzo <br />{" "}
                             <span className="font-bold">especial</span>
                           </span>
@@ -358,14 +374,14 @@ function RioCiervos() {
                           className=" text-[#F3EEE3] text-center md:text-left  tracking-widest"
                           style={robotoFontRegular}
                         >
-                          <span className="text-xs md:text-xl">
+                          <span className="text-xs md:text-base">
                             <i>Patagonia, Argentina</i>
                           </span>
                         </h4>
                       </div>
                       <div className="w-2/3 mx-auto md:mx-0">
                         <p
-                          className="text-[#F3EEE3] text-xs tracking-wider text-center md:text-justify md:text-lg"
+                          className="text-[#F3EEE3] text-xs tracking-wider text-justify md:text-base"
                           style={playfairFontRegular}
                         >
                           Especial malbec comes from our 5ha Araucana Vineyard
@@ -376,7 +392,7 @@ function RioCiervos() {
                         </p>
                       </div>
 
-                      <div className="w-2/3 mx-auto md:m-0">
+                      <div className="w-2/3 mx-auto md:m-0 hidden">
                         <div className="flex justify-center md:justify-start">
                           <a
                             className="border-b border-[#C4B27D]"
@@ -414,19 +430,27 @@ function RioCiervos() {
                     </div>
                   </div>
                 </div>
+                {/* wine 2 */}
+
+                {/* wine 3 */}
                 <div id="posicion3"></div>
                 <div className="flex flex-col justify-center items-center gap-y-5 md:gap-y-0">
                   <div className="flex flex-col md:flex-row gap-y-5">
-                    <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center">
+                    <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center md:items-center relative">
                       <img
                         src={riberaReserva}
                         alt=""
-                        className="w-full md:w-1/3"
+                        className="w-full md:w-1/3 z-50"
+                      />
+                      <img
+                        src={logoTransparencia}
+                        alt=""
+                        className="absolute top-24 contenido-dinamico-contact md:w-[30rem] "
                       />
                     </div>
-                    <div className="flex md:hidden flex-col gap-y-2 ">
+                    <div className="flex md:hidden flex-col gap-y-2 w-2/3 mx-auto ">
                       <h1
-                        className="uppercase text-[#C4B27D] text-center md:text-start tracking-widest leading-5"
+                        className="uppercase text-[#C4B27D] text-justify md:text-start tracking-widest leading-5"
                         style={robotoFontRegular}
                       >
                         <span className="text-base md:text-3xl">
@@ -435,7 +459,7 @@ function RioCiervos() {
                         </span>
                       </h1>
                       <h4
-                        className="text-[#F3EEE3] text-center md:text-start  tracking-widest"
+                        className="text-[#F3EEE3] text-justify md:text-start  tracking-widest"
                         style={robotoFontRegular}
                       >
                         <span className="text-xs md:text-xl">
@@ -444,13 +468,13 @@ function RioCiervos() {
                       </h4>
                     </div>
 
-                    <div className="flex flex-col gap-y-5 md:w-full">
-                      <div className="hidden md:flex flex-col gap-y-2 ">
+                    <div className="flex flex-col gap-y-5 md:w-full md:justify-center">
+                      <div className="contenido-dinamico-contact flex-col gap-y-2 ">
                         <h1
                           className="uppercase text-[#C4B27D] text-center md:text-start tracking-widest leading-5"
                           style={robotoFontRegular}
                         >
-                          <span className="text-base md:text-3xl">
+                          <span className="text-base md:text-[1.35rem] md:leading-[1.75rem]">
                             Ribera del Cuarzo <br />{" "}
                             <span className="font-bold">RESERVA ESTIBADA</span>
                           </span>
@@ -459,14 +483,14 @@ function RioCiervos() {
                           className="text-[#F3EEE3] text-center md:text-start  tracking-widest"
                           style={robotoFontRegular}
                         >
-                          <span className="text-xs md:text-xl">
+                          <span className="text-xs md:text-base">
                             <i>Patagonia, Argentina</i>
                           </span>
                         </h4>
                       </div>
                       <div className="w-2/3 mx-auto md:mx-0">
                         <p
-                          className="text-[#F3EEE3] text-xs tracking-wider text-center md:text-justify md:text-lg"
+                          className="text-[#F3EEE3] text-xs tracking-wider text-justify md:text-base"
                           style={playfairFontRegular}
                         >
                           Reserva estibada is a barrel blend. We select the
@@ -476,7 +500,7 @@ function RioCiervos() {
                         </p>
                       </div>
 
-                      <div className="w-2/3 mx-auto md:mx-0">
+                      <div className="w-2/3 mx-auto md:mx-0 hidden">
                         <div className="flex justify-center md:justify-start">
                           <a
                             className="border-b border-[#C4B27D]"
@@ -514,18 +538,19 @@ function RioCiervos() {
                     </div>
                   </div>
                 </div>
+                {/* wine 3 */}
               </div>
             </div>
 
             <div className="bg-[#231F20]">
-              <div className="container mx-auto pt-20 pb-10">
+              <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 pt-20 pb-10">
                 <p
-                  className="text-[#F3EEE3] text-sm md:text-4xl text-center leading-5"
+                  className="text-[#F3EEE3] text-sm md:text-2xl text-center leading-5"
                   style={playfairFontItalic}
                 >
                   <i>
                     Creating unique wines in Patagonia <br />
-                    Pioneer in winegrowing at the foot of the <i>barda</i>.{" "}
+                    Pioneer in winegrowing at the foot of the <i>barda</i>
                     <br />
                     Small family run winery
                   </i>
@@ -534,9 +559,9 @@ function RioCiervos() {
             </div>
 
             <div className="bg-[#231F20] pt-10 px-5 flex flex-col gap-y-8">
-              <div className="container mx-auto ">
+              <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 ">
                 <div className="w-full md:w-3/4 md:mx-auto md:border md:border-[#C4B27D] md:py-8 md:border-opacity-30">
-                  <div className="grid grid-cols-3 gap-x-4 md:gap-x-0 md:w-3/4 md:mx-auto">
+                  <div className="grid grid-cols-4 gap-x-4 md:gap-x-0 md:w-3/4 md:mx-auto">
                     <div className="flex gap-y-4 md:gap-y-0 flex-col">
                       <img
                         src={araucanaWine}
@@ -544,7 +569,14 @@ function RioCiervos() {
                         className="mx-auto w-full"
                       />
                     </div>
-                    <div className="flex gap-y-4 md:gap-y-0 flex-col md:pt-5">
+                    <div className="flex gap-y-4 md:gap-y-0 flex-col">
+                      <img
+                        src={araucanaPinot}
+                        alt=""
+                        className="mx-auto w-full"
+                      />
+                    </div>
+                    <div className="flex gap-y-4 md:gap-y-0 flex-col">
                       <img
                         src={araucanaMalbec}
                         alt=""
@@ -573,7 +605,7 @@ function RioCiervos() {
             </div>
 
             <div class=" bg-[#231F20]">
-              <div class="container mx-auto max-w-screen-xl py-20">
+              <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 py-20">
                 <div class="flex justify-center">
                   <a
                     className={`border border-[#C4B27D] rounded-full p-7 ${

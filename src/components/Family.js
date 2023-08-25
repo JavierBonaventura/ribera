@@ -6,7 +6,7 @@ import hambur from "../images/menu-hambur.png";
 import ilustrationHistory from "../images/dibujofamily.png";
 import arrowDown from "../images/arrow-down.png";
 import carruajeHistory from "../images/carruaje-history.jpg";
-import paisaje from "../images/paisaje-family-2.png";
+import paisaje from "../images/paisaje-family-3.jpg";
 import iconIg from "../images/icon-ig.png";
 import felipe from "../images/felipe.jpg";
 import "../App.css";
@@ -193,7 +193,7 @@ const Family = () => {
                 </div>
               </div>
 
-              <div className="relative">
+              <div className="relative ">
                 <img
                   src={carruajeHistory}
                   alt=""
@@ -201,7 +201,7 @@ const Family = () => {
                 />
 
                 <span
-                  className="absolute  text-white -bottom-5 lg:bottom-[-4.5rem] right-14 2xl:right-44 text-lg"
+                  className="hidden md:block absolute  text-white bottom-56 md:-bottom-5 lg:bottom-[-4.5rem] right-14 2xl:right-52 text-sm lg:text-lg "
                   style={playfairFontItalic}
                 >
                   Sunset at Valle Azul
@@ -218,7 +218,7 @@ const Family = () => {
                         />
                       </div>
 
-                      <div class="flex flex-col gap-y-2 md:gap-y-5 pt-5 pb-12 md:py-10 md:pr-52 lg:pr-60 xl:pl-24 xl:pr-72 w-full 2xl:px-0 2xl:w-2/4 mx-auto px-10 md:px-0 ">
+                      <div class="flex flex-col gap-y-2 md:gap-y-5 pt-5 pb-12 md:py-32 md:pr-52 lg:pr-60 xl:pl-24 xl:pr-72 w-full 2xl:px-0 2xl:w-2/4 mx-auto px-10 md:px-0 ">
                         <p
                           class="text-right-justify tracking-wider text-[#ffffff] text-xs lg:text-base lg:leading-7"
                           style={playfairFontRegular}
@@ -239,16 +239,7 @@ const Family = () => {
                           which has become my life. I Iearned from him every
                           detail of how to cultivate the best grapes, how to
                           produce the best wines and above all how to never ever
-                          relinquish in the pursuit of excellence. <br />
-                          <br />
-                          Finally, the day arrived—the moment when I could merge
-                          my love for my Patagonian homeland with the unwavering
-                          passion for wine instilled within me since childhood.
-                          This unique opportunity, which we tirelessly pursue
-                          each day, is embodied in the name of Bodega Ribera del
-                          Cuarzo. Here, we strive to craft the finest wines,
-                          honoring our heritage and expressing the essence of
-                          our beloved land.”
+                          relinquish in the pursuit of excellence.
                         </p>
                       </div>
                     </div>
@@ -309,21 +300,19 @@ const Family = () => {
                       class="text-justify tracking-wider text-[#000000] text-xs lg:text-base lg:leading-7"
                       style={playfairFontRegular}
                     >
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptatibus, eligendi! Consectetur, ipsa! Nemo,
-                      consequuntur temporibus maiores minus dolore nulla,
-                      tempore fugit repellat incidunt necessitatibus tempora
-                      totam quo velit? Et, mollitia! Quaerat nostrum quis porro
-                      suscipit provident delectus numquam. Soluta, nobis rerum,
-                      saepe nihil laboriosam non eius, minima laborum tempore
-                      doloribus vero neque quidem vitae sequi! Odit perspiciatis
-                      facere ipsam quae.
+                      Finally, the day arrived—the moment when I could merge my
+                      love for my Patagonian homeland with the unwavering
+                      passion for wine instilled within me since childhood. This
+                      unique opportunity, which we tirelessly pursue each day,
+                      is embodied in the name of Bodega Ribera del Cuarzo. Here,
+                      we strive to craft the finest wines, honoring our heritage
+                      and expressing the essence of our beloved land.”
                     </p>
                   </div>
                   <img
                     src={felipe}
                     alt=""
-                    className="px-4 md:px-0 shadow-custom"
+                    className="px-4 md:px-0 md:shadow-custom"
                   />
                 </div>
                 <p

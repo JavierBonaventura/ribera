@@ -522,21 +522,16 @@ const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
                         We believe in the magic of crafting exceptional wines
                         through the alchemy of blending. Our passion for the art
                         of winemaking leads us to explore two unique approaches:
-                        co-fermentations and the traditional blending technique.
-                        <br /> <br />
+                        co-fermentations and the traditional blending technique.{" "}
+                        <br />
+                        <br />
                         We prefer to work with co-fermentations, a technique we
                         find more enriching as it captures the very essence of
                         our terroir. From the moment different grape varieties
                         and parcels enter our cellar, a shared journey begins
-                        that spans the entire process. <br />
-                        <br />
-                        Ultimately, our goal is to merge the past and the future
-                        in every bottle we present. Whether through
-                        co-fermentations that honor the link between varieties
-                        and terroir from the outset, or via the traditional
-                        blending that unites the experiences of our barrels in a
-                        symphony of flavors, each sip is a journey that
-                        celebrates diversity and a passion for wine.
+                        that spans the entire process. Ultimately, our goal is
+                        to merge the past and the future in every bottle we
+                        present.
                       </p>
                     </div>
                   </div>
