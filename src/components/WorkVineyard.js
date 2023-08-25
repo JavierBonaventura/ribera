@@ -81,7 +81,7 @@ const WorkVineyard = () => {
 
   const handlePrev = () => {
     if (currentScreen === 0) {
-      setCurrentScreen(2);
+      setCurrentScreen(6);
     } else {
       setCurrentScreen(currentScreen - 1);
     }

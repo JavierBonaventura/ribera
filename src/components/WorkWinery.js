@@ -76,7 +76,7 @@ const WinesPreservation = () => {
 
   const handlePrev = () => {
     if (currentScreen === 0) {
-      setCurrentScreen(2);
+      setCurrentScreen(4);
     } else {
       setCurrentScreen(currentScreen - 1);
     }
