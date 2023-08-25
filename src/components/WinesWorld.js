@@ -273,7 +273,7 @@ function RioCiervos() {
                       </div>
                       <div className="w-2/3 mx-auto  md:mx-0 ">
                         <p
-                          className="text-[#F3EEE3] text-xs tracking-wider text-center text-justify"
+                          className="text-[#F3EEE3] text-xs md:text-base tracking-wider text-center text-justify"
                           style={playfairFontRegular}
                         >
                           Clasico Malbec´s grapes come from 8 vineyards located
