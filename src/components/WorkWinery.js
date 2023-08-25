@@ -530,12 +530,6 @@ const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
                         and parcels enter our cellar, a shared journey begins
                         that spans the entire process. <br />
                         <br />
-                        We also embrace the traditional blending technique.
-                        After a meticulous aging period, our barrels reveal
-                        their unique character, and guided by the attributes of
-                        each one, their expression and evolution, we carry out
-                        the delicate process of creating the perfect blends.{" "}
-                        <br />
                         <br />
                         Ultimately, our goal is to merge the past and the future
                         in every bottle we present. Whether through
