@@ -201,7 +201,7 @@ const Family = () => {
                 />
 
                 <span
-                  className="hidden md:block absolute  text-white bottom-56 md:-bottom-5 lg:bottom-[-4.5rem] right-14 2xl:right-52 text-sm lg:text-lg "
+                  className="contenido-dinamico absolute  text-white bottom-56 md:-bottom-5 lg:bottom-[-4.5rem] right-14 2xl:right-52 text-sm lg:text-lg "
                   style={playfairFontItalic}
                 >
                   Sunset at Valle Azul
