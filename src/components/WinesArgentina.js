@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
 import iconDownload from "../images/icon-download.png";
-import araucanaWine from "../images/araucana-rio-wine.png";
-import pinotWine from "../images/araucana-pino-wine.png";
-import araucanaMalbec from "../images/araucana-malbec-wine.png";
-import araucanaAzul from "../images/araucana-azul-wine.png";
-import riberaClasico from "../images/ribera-clasico-wine.png";
-import riberaEspecial from "../images/ribera-especial-wine.png";
-import riberaReserva from "../images/ribera-reserva-wine.png";
+import araucanaWine from "../images/araucana-rio-wine-1.png";
+import pinotWine from "../images/araucana-pino-wine-1.png";
+import araucanaMalbec from "../images/araucana-malbec-wine-1.png";
+import araucanaAzul from "../images/araucana-azul-wine-1.png";
+import riberaClasico from "../images/ribera-clasico-wine-1.png";
+import riberaEspecial from "../images/ribera-especial-wine-1.png";
+import riberaReserva from "../images/ribera-reserva-wine-1.png";
 import cava from "../images/cava.jpg";
 import iconIg from "../images/icon-ig.png";
 import { useSpring, Transition, animated } from "@react-spring/web";
@@ -210,7 +210,7 @@ function Araucana() {
                       className="w-full md:w-5/6 mx-auto shadow-custom"
                     />
                   </div>
-           
+
                   <p
                     className="text-[#F3EEE3] text-xs tracking-wider w-2/3 mx-auto text-center md:text-lg"
                     style={playfairFontRegular}
@@ -224,17 +224,16 @@ function Araucana() {
               </div>
             </div>
             <div id="posicion1"></div>
-       
+
             <div className=" py-10 bg-[#231F20]">
               <div className="container mx-auto max-w-screen-xl flex flex-col gap-y-16 md:gap-y-32 md:py-20 ">
                 <div className="flex flex-col justify-center items-center gap-y-5 md:gap-y-0">
-              
                   <div className="flex flex-col md:flex-row gap-y-5">
                     <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center">
                       <img
                         src={araucanaWine}
                         alt=""
-                        className="w-full md:w-32"
+                        className="w-full md:w-1/3"
                       />
                     </div>
                     <div className="flex flex-col gap-y-2 md:hidden">
@@ -332,10 +331,9 @@ function Araucana() {
                 </div>
                 <div id="posicion2"></div>
                 <div className="flex flex-col justify-center items-center gap-y-5 md:gap-y-0">
-                 
                   <div className="flex flex-col md:flex-row gap-y-5">
                     <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center">
-                      <img src={pinotWine} alt="" className="w-full md:w-32" />
+                      <img src={pinotWine} alt="" className="w-full md:w-1/3" />
                     </div>
                     <div className="flex flex-col gap-y-2 md:hidden">
                       <h1
@@ -386,10 +384,18 @@ function Araucana() {
                           className="text-[#F3EEE3] text-xs md:text-lg tracking-wider text-center md:text-justify"
                           style={playfairFontRegular}
                         >
-                          Río de los Ciervos´ grapes come from 8 vineyards
-                          located along the 200km on both sides of the river.
-                          Through this wine, we aim to showcase the diversity of
-                          the classic area of the Río Negro valley.
+                          Río de los Ciervos" is a small town located in Tierra
+                          del Fuego. In this 300 km Patagonian region, you can
+                          explore a wide range of landscapes, from the sea to
+                          the desert, the mountains, and the typical southern
+                          rivers. Don Julio Menéndez Prendes, Felipe's
+                          grandfather, was born in this town. Through the Río de
+                          los Ciervos line, we aim to showcase the diversity of
+                          the classic Río Negro Valley area. The grapes for this
+                          Pinot Noir come from vines planted over 50 years ago
+                          in the Mainqué area. With the goal of preserving the
+                          ancient vineyards of the region, this wine came to
+                          life.
                         </p>
                       </div>
                       <div className="w-2/3 mx-auto md:mx-0">
@@ -432,13 +438,12 @@ function Araucana() {
                 </div>
                 <div id="posicion3"></div>
                 <div className="flex flex-col justify-center items-center gap-y-5 md:gap-y-0">
-              
                   <div className="flex flex-col md:flex-row gap-y-5 ">
                     <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center ">
                       <img
                         src={araucanaMalbec}
                         alt=""
-                        className="w-full md:w-32"
+                        className="w-full md:w-1/3"
                       />
                     </div>
                     <div className="flex md:hidden flex-col md:fl gap-y-2">
@@ -533,13 +538,12 @@ function Araucana() {
                 </div>
                 <div id="posicion4"></div>
                 <div className="flex flex-col justify-center items-center gap-y-5 md:gap-y-0">
-               
                   <div className="flex flex-col md:flex-row gap-y-5">
                     <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center  ">
                       <img
                         src={araucanaAzul}
                         alt=""
-                        className="w-full md:w-32"
+                        className="w-full md:w-1/3"
                       />
                     </div>
                     <div className="flex md:hidden flex-col gap-y-2">
@@ -657,21 +661,21 @@ function Araucana() {
                       <img
                         src={riberaClasico}
                         alt=""
-                        className="w-2/3 mx-auto md:w-40"
+                        className="w-full mx-auto md:w-full"
                       />
                     </div>
                     <div className="flex gap-y-4 md:gap-y-0 flex-col md:pt-5 ">
                       <img
                         src={riberaEspecial}
                         alt=""
-                        className="w-2/3 mx-auto md:w-40"
+                        className="w-full mx-auto md:w-full"
                       />
                     </div>
                     <div className="flex gap-y-4  md:gap-y-0 flex-col">
                       <img
                         src={riberaReserva}
                         alt=""
-                        className="w-2/3 mx-auto md:w-40"
+                        className="w-full mx-auto md:w-full"
                       />
                     </div>
                   </div>

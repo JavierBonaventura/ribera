@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import workVineyardSlide1 from "../images/fermentation-1.jpg";
+import workVineyardSlide1 from "../images/fermentation-2.jpg";
 import workVineyardSlide2 from "../images/aging-1.jpg";
 import workVineyardSlide3 from "../images/blending-1.jpg";
 import workVineyardSlide4 from "../images/bottling.jpeg";
@@ -43,11 +43,15 @@ const CarouselSlider = () => {
     workVineyardSlide5,
   ];
   const paragraphs = [
-    "Winemaking takes place in small open-top vats, and every step is executed with meticulous care by hand.Throughout this stage, we maintain minimal intervention, striving to foster spontaneous fermentation while upholding utmost respect for the terroir. Our approach to sulfites is traditional and conservative, adding only a small amount to safeguard the wines against oxidation and preserve their microbiology.",
-    "Once the wines complete their fermentation, they embark on a journey of aging in barrels. Only a fraction, around twenty to thirty percent, of the barrels used are new, as we strive to strike a delicate balance and avoid overwhelming the wines with oak.",
-    "After a patient aging period of twelve to fourteen months, the time comes to craft the blends. In this phase, our decisions are driven by the unique characteristics of each barrel. Each barrel possesses its own distinct identity, and through careful tasting, we determine which expression will harmonize best with its contents.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "Fermentation takes place in open-top concrete pools, each with a capacity of about 2000 kilograms, where we work very small and select batches from the vineyard. During the process, the tasks performed are respectful and careful, with minimal intervention, aimed at achieving spontaneous fermentation with vineyard-specific or certified organic yeasts. We do not use additives or clarifiers. We follow traditional methods such as manual pressing and délestage, especially with our Malbec grapes, and gentle remontage during the final stages. Maceration times are short, between 12 and 13 days, because we believe that longer times are counterproductive for expressing the freshness of our terroir.",
+
+    "Each batch or small grape vinification will dictate whether aging will be entirely done in barrels or if a portion will be done in concrete tanks or stainless steel vessels. There are wines we want to preserve the fruit in more, and others where we believe adding complexity with wood is necessary. Generally, 70 percent is in used barrels, 100 percent French oak, as we seek a delicate balance and to avoid overwhelming the wines with wood.",
+
+    "We believe in the magic of crafting exceptional wines through the alchemy of blending. Our passion for the art of winemaking leads us to explore two unique approaches: co-fermentations and the traditional blending technique. We prefer to work with co-fermentations, a technique we find more enriching as it captures the very essence of our terroir. From the moment different grape varieties and parcels enter our cellar, a shared journey begins that spans the entire process. We also embrace the traditional blending technique. After a meticulous aging period, our barrels reveal their unique character, and guided by the attributes of each one, their expression and evolution, we carry out the delicate process of creating the perfect blends. Ultimately, our goal is to merge the past and the future in every bottle we present. Whether through co-fermentations that honor the link between varieties and terroir from the outset, or via the traditional blending that unites the experiences of our barrels in a symphony of flavors, each sip is a journey that celebrates diversity and a passion for wine.",
+
+    "We are highly respectful of the bottling and labeling process to adhere to the highest standards. During bottling, we carry out filtration to protect the wine without affecting it significantly, and we maintain strict control during bottling, ensuring safety and quality standards so that the wine, once bottled, evolves and expresses itself at its best.",
+
+    "We believe it's crucial for the wines to undergo a period of bottle aging before reaching the market. Our wines have shown us that they improve significantly with the passing of the years, and this aging period serves as a library and study area. We continuously taste and compare the stored vintages with new ones, learning how our wines evolve based on our practices in each harvest. The evolution is excellent: our wines greatly improve over time in the bottle, which is why aging is so important for us.",
   ];
   const title = [
     "FERMENTATION",

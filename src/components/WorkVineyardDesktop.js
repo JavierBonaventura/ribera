@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import workVineyardSlide0 from "../images/generica-vineyard.jpg";
 import workVineyardSlide1 from "../images/pruning.jpg";
 import workVineyardSlide2 from "../images/trellising.jpg";
 import workVineyardSlide3 from "../images/disbudding.jpg";
 import workVineyardSlide4 from "../images/workVineyardSlide4.jpg";
-import workVineyardSlide5 from "../images/ancient.jpg";
+import workVineyardSlide5 from "../images/weeds.jpg";
+import workVineyardSlide6 from "../images/ancient.jpg";
 import leftArrowImage from "../images/flechaIzquierda.png";
 import rightArrowImage from "../images/flechaDerecha.png";
 import { Link } from "react-router-dom";
@@ -36,24 +38,30 @@ const CarouselSlider = () => {
   const [isPrevButtonHovered, setIsPrevButtonHovered] = useState(false);
   const [isNextButtonHovered, setIsNextButtonHovered] = useState(false);
   const images = [
+    workVineyardSlide0,
     workVineyardSlide1,
     workVineyardSlide2,
     workVineyardSlide3,
     workVineyardSlide4,
     workVineyardSlide5,
+    workVineyardSlide6,
   ];
   const paragraphs = [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "In our work, all the naturally organic components that the vineyard allows us to take and preserve come into play. The Patagonian wind is a key factor, and the constant breeze along with low ambient humidity conditions combine as a natural mechanism for disease control. The entire vineyard surface features biological corridors that generate a free and natural circulation of permanent flora and fauna, benefiting further from the isolated estate situation without other surrounding crops.",
+    "We embrace traditional vineyard management techniques, such as Guyot pruning, using bilateral cane. This pruning method enables the plants to regulate their resources to achieve a better balance between root growth and fruit development.",
+    "In this process, we use plant-based and biodegradable materials in an effort to respect the environment as much as possible.",
+    "Controlled growth management favors minimal intervention, leading to better plant balance and reduced use of human and mechanical resources.",
+    "Harvesting in our vineyard is a meticulous process carried out manually and in several stages. The unique characteristics of each subsection within our five-hectare estate, with different grape varieties and maturation cycles, require harvesting at distinct times.",
+    "We implement traditional control methods, avoiding the use of herbicides. Between rows, we prioritize the development of our pastures and the natural flora of the environment.",
+    "Maintaining traditional work methods helps us never lose sight of our connection with the land, which defines us as farmers. In addition to using tractors and other machinery to be efficient in specific tasks, working with animals like our Criollo horses, an Argentine breed, is a form of respect and care for nature, seeking to be rewarded with the finest flavor.",
   ];
   const title = [
+    "",
     "PRUNING",
-    "TRELLISING",
-    "DISBUDDING",
+    "TYING",
+    "TOPPING",
     "HARVERST",
+    "WEEDS",
     "ANCIENT TECHNIQUES",
   ];
   const [activeIndex, setActiveIndex] = useState(0);
@@ -132,7 +140,7 @@ const CarouselSlider = () => {
             />
 
             {activeIndex === index && (
-              <div className="absolute bottom-10 left-0 right-0 flex justify-center ">
+              <div className="absolute bottom-10 left-0 right-0 flex justify-center">
                 {renderIndicators()}
               </div>
             )}
@@ -193,7 +201,7 @@ const CarouselSlider = () => {
           >
             {" "}
             {"0" + (currentImageIndex + 1)}{" "}
-            <sup className="text-base underline align-middle	">5</sup>
+            <sup className="text-base underline align-middle	">7</sup>
           </p>
         </div>
         <div className="w-96 container  mx-auto max-w-screen-xl xl:max-w-screen-2xl  py-1/2 fixed -top-32 left-0 right-0  md:px-5 2xl:px-0 absolute inset-0 flex items-center justify-center ">

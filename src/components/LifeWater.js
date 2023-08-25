@@ -77,7 +77,7 @@ const LifeWater = () => {
                       style={playfairFontBlack}
                       className="text-base md:text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
                     >
-                      Life Water
+                      Water of Life
                     </h2>
                   </div>
                 </div>
@@ -92,11 +92,14 @@ const LifeWater = () => {
                     style={playfairFontRegular}
                     className="text-[#F3EEE3]  text-xs  lg:text-base lg:leading-7 tracking-wider text-center "
                   >
-                    The Countess had planted the vineyard in the highest part of
-                    the
-                    <i>barda</i> river terrace, an unexplored area where no one
-                    had ever considered such an enterprise: it meant having to
-                    pump water up from the river at enormous expense.
+                    The countess planted the vineyard at the highest point of
+                    the <i>barda</i>, an unexplored location where no one had
+                    even considered such an endeavor before. It required
+                    transporting water for irrigation using pumps, incurring
+                    significant costs. Until then, productions in the Rio Negro
+                    valley were carried out alongside the river, with water
+                    drawn through channels and gates - an economical flood
+                    irrigation system.
                   </p>
                   <div className="flex justify-center items-center ">
                     <Link to="/lifewaterread">
@@ -124,7 +127,7 @@ const LifeWater = () => {
                       style={playfairFontBlack}
                       className="text-base md:text-xl text-[#C4B27D] text-center tracking-wider uppercase"
                     >
-                      Life Water
+                      Water of Life
                     </h2>
                   </div>
                 </div>
@@ -143,40 +146,37 @@ const LifeWater = () => {
                       class="text-[#000000] tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto  text-xs md:text-base lg:text-lg"
                       style={playfairFontRegular}
                     >
-                      The Countess planted the vineyard in the highest part of
-                      the <i>barda</i>, an unexplored area where no one had ever
-                      considered such an endeavor: it required bringing water
-                      for irrigation using pumps, at enormous cost. Until then,
-                      vineyard productions in the Rio Negro Valley had been
-                      carried out alongside the river, where water was obtained
-                      through canals and gates, an economic irrigation system
-                      known as flood irrigation.
+                      The countess planted the vineyard at the highest point of
+                      the <i>barda</i>, an unexplored location where no one had
+                      even considered such an endeavor before. It required
+                      transporting water for irrigation using pumps, incurring
+                      significant costs. Until then, productions in the Rio
+                      Negro valley were carried out alongside the river, with
+                      water drawn through channels and gates - an economical
+                      flood irrigation system.
                       <br />
                       <br />
-                      Nevertheless, the Countess decided to plant up there
-                      because she believed that what she would produce would be
-                      worth the effort. Without calculating the costs, she
-                      embarked on building a pump system that brought water 3
-                      kilometers uphill. When we finally took over the vineyard,
-                      we had faith that in the short term, renewable energy,
-                      perhaps wind or solar, would allow us to transform that
-                      cost into something reasonable. In any case, the risk was
-                      worth it. <br />
+                      Yet, the countess decided to plant at this elevated site
+                      because she believed that what would be produced there
+                      would be worth the effort. Without calculating costs, she
+                      embarked on building a system of pumps that transported
+                      water three kilometers uphill. When we finally took over
+                      the vineyard, we trusted that renewable energy, perhaps
+                      wind or solar, would eventually transform this cost into
+                      something reasonable in the short term. Regardless, the
+                      risk was worth taking.
+                      <br />
                       <br />
                       Some time later, a local man spoke to us about water. This
-                      kind man, Facundo Catriel, told us that abundant water
-                      could be found at the foot of the <i>barda</i>. Although
-                      it seemed unlikely, we decided to drill some wells. Water
-                      gushed and flowed to the surface with force. These wells
-                      now produce around 200,000 liters per hour, significantly
-                      reducing our costs. We listen to nature and special
-                      people.{" "}
-                      <strong>
-                        Today, Ribera del Cuarzo follows a virtuous cycle of
-                        respect for the environment, and the reward is a wine
-                        that never ceases to amaze us
-                      </strong>
-                      .
+                      kind gentleman, Facundo Catriel, told us that abundant
+                      water could be found at the base of the ridge. Although it
+                      seemed unlikely, we decided to drill some wells. Water
+                      surged forth with force. These wells now produce around
+                      200,000 liters per hour, significantly reducing our costs.
+                      We listened to nature and special individuals. Today,
+                      Ribera del Cuarzo follows a virtuous cycle of respecting
+                      the environment, and the reward is a wine that never
+                      ceases to astonish us.
                     </p>
                   </div>
                 </div>

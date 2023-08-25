@@ -3,13 +3,13 @@ import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
-import riberaClasicoWine from "../images/ribera-clasico-wine.png";
+import riberaClasicoWine from "../images/ribera-clasico-wine-1.png";
 import iconDownload from "../images/icon-download.png";
-import riberaEspecial from "../images/ribera-especial-wine.png";
-import riberaReserva from "../images/ribera-reserva-wine.png";
-import araucanaWine from "../images/araucana-rio-wine.png";
-import araucanaMalbec from "../images/araucana-malbec-wine.png";
-import araucanaAzul from "../images/araucana-azul-wine.png";
+import riberaEspecial from "../images/ribera-especial-wine-1.png";
+import riberaReserva from "../images/ribera-reserva-wine-1.png";
+import araucanaWine from "../images/araucana-rio-wine-1.png";
+import araucanaMalbec from "../images/araucana-malbec-wine-1.png";
+import araucanaAzul from "../images/araucana-azul-wine-1.png";
 import cava from "../images/cava.jpg";
 import iconIg from "../images/icon-ig.png";
 import { useSpring, Transition, animated } from "@react-spring/web";
@@ -221,7 +221,7 @@ function RioCiervos() {
                       <img
                         src={riberaClasicoWine}
                         alt=""
-                        className="w-full md:w-32"
+                        className="w-full md:w-1/3"
                       />
                     </div>
                     <div className="flex flex-col gap-y-2 md:hidden">
@@ -320,7 +320,7 @@ function RioCiervos() {
                       <img
                         src={riberaEspecial}
                         alt=""
-                        className="w-full md:w-32"
+                        className="w-full md:w-1/3"
                       />
                     </div>
                     <div className="flex md:hidden flex-col gap-y-2">
@@ -421,7 +421,7 @@ function RioCiervos() {
                       <img
                         src={riberaReserva}
                         alt=""
-                        className="w-full md:w-32"
+                        className="w-full md:w-1/3"
                       />
                     </div>
                     <div className="flex md:hidden flex-col gap-y-2 ">
@@ -541,21 +541,21 @@ function RioCiervos() {
                       <img
                         src={araucanaWine}
                         alt=""
-                        className="w-2/3 mx-auto md:w-40"
+                        className="mx-auto w-full"
                       />
                     </div>
                     <div className="flex gap-y-4 md:gap-y-0 flex-col md:pt-5">
                       <img
                         src={araucanaMalbec}
                         alt=""
-                        className="w-2/3 mx-auto md:w-40"
+                        className="mx-auto w-full"
                       />
                     </div>
                     <div className="flex gap-y-4 md:gap-y-0 flex-col">
                       <img
                         src={araucanaAzul}
                         alt=""
-                        className="w-2/3 mx-auto md:w-40"
+                        className="mx-auto w-full"
                       />
                     </div>
                   </div>

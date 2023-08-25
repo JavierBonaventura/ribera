@@ -4,6 +4,8 @@ import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
 import ilustracionSpirit from "../images/dibujoaraucana.png";
 import paisajeAraucana from "../images/paisaje-araucana-1.jpg";
+import paisajeAraucana2 from "../images/paisaje-araucana-2.jpg";
+import paisajeAraucana3 from "../images/paisaje-araucana-3.jpg";
 import iconIg from "../images/icon-ig.png";
 import "../App.css";
 import { useLocation } from "react-router-dom";
@@ -83,7 +85,7 @@ const ConstructionPage = () => {
                   </div>
                   <div class="relative flex justify-center items-center  md:pt-0 px-4 md:px-0">
                     <img
-                      src={paisajeAraucana}
+                      src={paisajeAraucana3}
                       alt=""
                       class="w-full object-cover md:w-2/3 mx-auto shadow-2xl"
                     />
@@ -96,25 +98,24 @@ const ConstructionPage = () => {
                   class="text-[#000000] tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto text-xs  lg:text-base lg:leading-7 md:pt-5"
                   style={playfairFontRegular}
                 >
-                  Araucana Vineyard is far more than just unique—it is an
-                  extraordinary gem that surpasses mere words. Nestled in Ribera
-                  del Cuarzo, no other vineyard in Patagonia can boast such
-                  proximity to the <i>barda</i> or such seclusion. <br />
-                  <br />
-                  The soils of Araucana are predominantly aeolic, painstakingly
-                  shaped over countless ages by the erosive forces of wind.
-                  Enriched with volcanic ash and high potassium content, they
-                  possess a chemical composition that is both crucial and
-                  remarkably uncommon, not only for Patagonia but for the World
-                  in general.
+                  The Araucana Vineyard is much more than just unique. Located
+                  in Ribera del Cuarzo, no other vineyard in Patagonia or the
+                  world can boast of being so close to the barda or enjoying
+                  such privacy. <br /> <br />
+                  The soils of Araucana are predominantly aeolian, meticulously
+                  shaped over countless eras by wind erosion. Enriched with
+                  volcanic ash and potassium, and with a high content of calcium
+                  carbonate, they have a crucial and remarkably uncommon
+                  chemical composition, not only for Patagonia but for the
+                  world.
                 </p>
               </div>
 
               <div className="container mx-auto px-4  max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
                 <img
-                  src={ilustracionSpirit}
+                  src={paisajeAraucana2}
                   alt=""
-                  className="w-full md:w-3/5 mx-auto"
+                  className="w-full md:w-2/3 mx-auto shadow-2xl"
                 />
               </div>
 
@@ -123,10 +124,10 @@ const ConstructionPage = () => {
                   class="text-[#000000] tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto text-xs  lg:text-base lg:leading-7"
                   style={playfairFontRegular}
                 >
-                  Adding to its distinctiveness is the <i>barda</i> river
-                  terrace. The surface texture owes its character to a fusion of
-                  quartz and calcium carbonate, locally known as Indian cement.
-                  As it erodes and integrates into the soil, it imparts its
+                  Adding to its singularity is the <i>barda</i> (river terrace).
+                  The texture of the surface is due to a combination of quartz
+                  and calcium carbonate, locally known as "Indian cement." As it
+                  erodes and integrates into the soil, it transfers its
                   exceptional qualities to our grapes.
                 </p>
 

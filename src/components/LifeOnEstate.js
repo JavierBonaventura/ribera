@@ -5,6 +5,7 @@ import hambur from "../images/menu-hambur.png";
 import wineYardSlide1 from "../images/wineYardSlide3.jpg";
 import wineYardSlide2 from "../images/wineYardSlide2.jpg";
 import wineYardSlide3 from "../images/hourses.jpg";
+import wineYardSlide4 from "../images/hourses.jpg";
 import blackRiver from "../images/blackRiver.jpg";
 import { useLocation } from "react-router-dom";
 import { Transition, animated } from "@react-spring/web";
@@ -69,7 +70,7 @@ const LifeOnEstate = () => {
   const [currentScreen, setCurrentScreen] = useState(0);
 
   const handleNext = () => {
-    if (currentScreen === 2) {
+    if (currentScreen === 3) {
       setCurrentScreen(0);
     } else {
       setCurrentScreen(currentScreen + 1);
@@ -115,6 +116,13 @@ const LifeOnEstate = () => {
               )}
               {currentScreen === 2 && (
                 <Screen3
+                  currentScreen={currentScreen}
+                  handleNext={handleNext}
+                  handlePrev={handlePrev}
+                />
+              )}
+              {currentScreen === 3 && (
+                <Screen4
                   currentScreen={currentScreen}
                   handleNext={handleNext}
                   handlePrev={handlePrev}
@@ -179,14 +187,14 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
                   style={playfairFontBlack}
                   className="text-[#C4B27D] absolute top-1 left-6 text-xs underline"
                 >
-                  03
+                  04
                 </span>
               </p>
             </div>
 
             <div className="container mx-auto flex flex-col justify-center  items-center">
               <div>
-                <img src={wineYardSlide1} alt="" className="w-full" />
+                <img src={wineYardSlide4} alt="" className="w-full" />
               </div>
             </div>
             <div className="flex justify-center space-x-10 pt-2  bg-[#F3EEE3]">
@@ -219,23 +227,15 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
                         style={robotoFontRegular}
                         className="decoration-black	text-[#C4B27D]  text-xs leading-6 pb-3 tracking-wide"
                       >
-                        THE HOUSE
+                        THE HORSES ARE A WAY OF LIFE
                       </p>
                       <p
                         style={playfairFontRegular}
                         className="decoration-black	 text-xs tracking-wider text-justify"
                       >
-                        Countess Noemi Marone Cinzano identified this unique
-                        location and laid the foundations for what is now Bodega
-                        Ribera del Cuarzo. Similarly to Italian vineyards, she
-                        decided to build a house next to the winery. Patagonian
-                        in style with inviting architecture and a small garden
-                        with a view of the valley that leads down to the river,
-                        the house is where we rest after work and where we
-                        gather as a family to enjoy the holidays. It’s also
-                        where we think, plan, and make decisions with our
-                        colleagues, sharing our table with them in what has
-                        become the family home.
+                        Living with horses slows things down, allowing us to
+                        decelerate and connect with nature, to explore the land
+                        at a more measured and profound pace.
                       </p>
                     </div>
                   </div>
@@ -313,18 +313,14 @@ const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
                   style={playfairFontBlack}
                   className="text-[#C4B27D] absolute top-1 left-6 text-xs underline"
                 >
-                  03
+                  04
                 </span>
               </p>
             </div>
 
             <div className="container mx-auto flex flex-col justify-center  items-center">
               <div>
-                <img
-                  src={wineYardSlide2}
-                  alt=""
-                  className="w-full h-full object-cover"
-                />
+                <img src={wineYardSlide1} alt="" className="w-full" />
               </div>
             </div>
             <div className="flex justify-center space-x-10 pt-2  bg-[#F3EEE3]">
@@ -355,40 +351,25 @@ const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
                     <div className="w-4/5 mx-auto">
                       <p
                         style={robotoFontRegular}
-                        className="decoration-black	text-[#C4B27D] text-xs leading-6 pb-3 tracking-wide"
+                        className="decoration-black	text-[#C4B27D]  text-xs leading-6 pb-3 tracking-wide"
                       >
-                        THE RIVER{" "}
+                        THE HOUSE BY THE WINERY
                       </p>
                       <p
                         style={playfairFontRegular}
                         className="decoration-black	 text-xs tracking-wider text-justify"
                       >
-                        The Rio Negro is the largest river in Patagonia. The
-                        Limay and Neuquén rivers gather water and minerals from
-                        mountain snowmelt before flowing into the central and
-                        eastern parts of the country, eventually merging to form
-                        the Rio Negro. <br />
-                        <br />
-                        The Rio Negro reaches the sea in the south of the Buenos
-                        Aires Province, in a small town called El Cóndor. It
-                        meanders between two imposing <i>barda</i> walls, one to
-                        the north and the other to the south, which have been
-                        formed over millions of years. In 1860, Estanislao
-                        Ceballos described them as river terraces, and they
-                        contribute invaluable calcium carbonate, stone, quartz,
-                        and ash to the landscape. Today, the river flows through
-                        the center of this valley, a valley nestled between{" "}
-                        <i>bardas</i>.
+                        Countess Noemi Marone Cinzano discovered this
+                        unparalleled place and laid the foundation for what is
+                        now Bodega Ribera del Cuarzo. As in all Italian estates,
+                        she built a house by the winery. With Patagonian style
+                        and appealing architecture, a small garden overlooks the
+                        valley that flows into the river. The house is where we
+                        rest after a day's work and where we gather with family
+                        to enjoy and celebrate. It's also where we think, plan,
+                        and decide alongside those who help us carry out
+                        production. We share meals, as it has become our home.
                       </p>
-                    </div>
-                  </div>
-                  <div className="container mx-auto flex flex-col justify-center  items-center">
-                    <div className="w-10/12">
-                      <img
-                        src={blackRiver}
-                        alt=""
-                        className="w-full h-full object-cover"
-                      />
                     </div>
                   </div>
                 </div>
@@ -465,7 +446,157 @@ const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
                   style={playfairFontBlack}
                   className="text-[#C4B27D] absolute top-1 left-6 text-xs underline"
                 >
-                  03
+                  04
+                </span>
+              </p>
+            </div>
+
+            <div className="container mx-auto flex flex-col justify-center  items-center">
+              <div>
+                <img
+                  src={wineYardSlide2}
+                  alt=""
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div className="flex justify-center space-x-10 pt-2  bg-[#F3EEE3]">
+              <button
+                className="w-14 h-14 rounded-full flex items-center justify-center mr-2"
+                onClick={handlePrev}
+              >
+                <div className="">
+                  <img src={flechaIzquierda} alt="" className="w-full" />
+                </div>
+              </button>
+
+              <button
+                className="w-14 h-14 flex items-center justify-center"
+                onClick={handleNext}
+              >
+                <div className="">
+                  <img src={flechaDerecha} alt="" className="w-full" />
+                </div>
+              </button>
+            </div>
+          </div>
+          <div>
+            <div className="bg-[#F3EEE3] pt-5">
+              <div className="container mx-auto flex flex-col justify-center items-center">
+                <div className="flex flex-col gap-y-5">
+                  <div className="flex flex-col gap-y-5">
+                    <div className="w-4/5 mx-auto">
+                      <p
+                        style={robotoFontRegular}
+                        className="decoration-black	text-[#C4B27D] text-xs leading-6 pb-3 tracking-wide"
+                      >
+                        THE RIVER
+                      </p>
+                      <p
+                        style={playfairFontRegular}
+                        className="decoration-black	 text-xs tracking-wider text-justify"
+                      >
+                        The Rio Negro is the largest river in Patagonia. The
+                        Limay and Neuquén rivers collect water and minerals from
+                        mountain melt before flowing towards the center and east
+                        of the country, ultimately merging to form the Rio
+                        Negro. <br />
+                        <br /> This river flows into the sea south of Buenos
+                        Aires Province, in a small town called El Cóndor. It
+                        meanders between two imposing barda walls, one to the
+                        north and another to the south, formed over millions of
+                        years. In 1860, Estanislao Ceballos described them as
+                        river terraces, and they provide invaluable
+                        contributions of calcium carbonate, stone, quartz, and
+                        ashes. Today, the river runs through this valley, a
+                        valley nestled between <i>bardas</i>.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="container mx-auto flex flex-col justify-center  items-center">
+                    <div className="w-10/12">
+                      <img
+                        src={blackRiver}
+                        alt=""
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container mx-auto bg-[#F3EEE3]">
+              <div class="py-20">
+                <div class="flex justify-center">
+                  <a
+                    class="border border-[#C4B27D] rounded-full p-7"
+                    href="https://www.instagram.com/riberadelcuarzo/"
+                    target="_blank"
+                  >
+                    <img src={iconIg} alt="" class="w-5" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </animated.div>
+      )}
+    </Transition>
+  );
+};
+
+const Screen4 = ({ currentScreen, handleNext, handlePrev }) => {
+  const location = useLocation();
+
+  const playfairFontBlack = {
+    fontFamily: "Playfair Black, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+  const playfairFontRegular = {
+    fontFamily: "Playfair Regular, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+    fontSize: "16px",
+  };
+  return (
+    <Transition
+      items={location}
+      keys={(location) => location.pathname}
+      from={{ opacity: 0 }}
+      enter={{ opacity: 1 }}
+      leave={{ opacity: 0 }}
+      config={{ duration: 1000 }}
+    >
+      {(style, item) => (
+        <animated.div
+          style={{
+            ...style,
+            width: "100%",
+            backgroundColor: "#F3EEE3",
+            minHeight: "100vh",
+          }}
+        >
+          <div className="mt-[-20px]">
+            <div className="bg-[#F3EEE3] pb-2">
+              <p className="ml-6 text-left relative">
+                <span
+                  style={playfairFontBlack}
+                  className="text-[#C4B27D] text-lg"
+                >
+                  04
+                </span>
+                <span
+                  style={playfairFontBlack}
+                  className="text-[#C4B27D] absolute top-1 left-6 text-xs underline"
+                >
+                  04
                 </span>
               </p>
             </div>
@@ -515,29 +646,26 @@ const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
                         style={playfairFontRegular}
                         className="decoration-black	 text-xs tracking-wider text-justify"
                       >
-                        Maintaining traditional working methods helps us to keep
-                        in touch with the land, a connection that defines us as
-                        farmers. At the estate, we also raise Criollo horses,
-                        the famous Argentine breed. In addition to using
-                        tractors and other machinery that improve the efficiency
-                        of certain tasks, working with animals is a way of
-                        respecting and caring for nature in all our
-                        interventions, always working towards producing the best
-                        possible flavor. <br />
+                        Maintaining traditional working methods helps us never
+                        lose sight of the connection with the land, a connection
+                        that defines us as farmers. On the estate, we have
+                        Criollo horses, an Argentine breed. In addition to using
+                        tractors and machinery for efficiency in specific tasks,
+                        working with animals is a form of respect and care for
+                        nature. It seeks to be rewarded with the best flavor.
                         <br />
-                        Horses also provide manure, which goes into the compost
-                        we use at the vineyard: it is added to organic waste
-                        from the wine barrels and vats and everything consumed
-                        at the house. This is the fertilizer for the fruits and
-                        vegetables we grow for ourselves, our gardens and, of
-                        course, our vineyard. <br />
                         <br />
-                        <strong>
-                          But horses are also a way of life: living with horses
-                          slows things down, allowing us perspective and to
-                          connect with nature, to go through life in a more
-                          relaxed and profound way.
-                        </strong>
+                        Furthermore, the horses play a role in fertilization,
+                        contributing to the compost we produce on the estate:
+                        their manure combines with organic residues from wine
+                        production and household consumption. This serves as
+                        fertilizer for the fruits and vegetables we grow for
+                        ourselves, as well as for our gardens and, of course,
+                        the vineyard. But horses also embody a way of life:
+                        <br />
+                        Living with horses slows things down, allowing us to
+                        decelerate and connect with nature, exploring the land
+                        at a more leisurely and profound pace.
                       </p>
                     </div>
                   </div>

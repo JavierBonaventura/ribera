@@ -80,7 +80,7 @@ const LifeWater = () => {
                     style={playfairFontBlack}
                     className="text-base md:text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
                   >
-                    Life Water
+                    Water of Life
                   </h2>
                 </div>
               </div>
@@ -93,35 +93,34 @@ const LifeWater = () => {
                     style={playfairFontRegular}
                     className="text-[#000000] text-xs lg:text-base lg:leading-7 tracking-wider text-justify"
                   >
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Labore pariatur ratione facere quis? Ea asperiores facilis
-                    optio, adipisci voluptates iste expedita earum beatae quam
-                    consequuntur iure consequatur laborum cupiditate totam!
-                    Doloremque asperiores, aliquam qui, perferendis numquam
-                    expedita quaerat vero iure quidem deserunt quam! Harum
-                    quaerat ipsam accusamus maxime rem impedit, dolorum soluta,
-                    dolor, quia odit reiciendis. Cumque dolorum voluptatum
-                    suscipit. Atque, enim officiis tenetur voluptas commodi nemo
-                    voluptates illo aliquam ducimus voluptatem quo qui minima
-                    veniam, consequatur ullam voluptatum ex omnis eum ipsum!
-                    Minima, mollitia porro. A non repellendus dolorum? Delectus,
-                    iure! Possimus sed odio aspernatur aliquid officia quis at
-                    quisquam magnam neque, voluptates provident nesciunt error
-                    hic adipisci excepturi. Aut veniam minus nemo possimus
-                    recusandae animi nisi nam dolore! Doloribus qui quisquam
-                    culpa mollitia quia officia. Laboriosam voluptatibus fuga
-                    necessitatibus quibusdam beatae ad, aperiam nemo pariatur
-                    dolorum deleniti aspernatur exercitationem illum iusto
-                    dolores, id impedit hic quae eos officia! Explicabo,
-                    architecto eos, reiciendis facilis, tempora in dolor
-                    assumenda quisquam repellat qui iusto. Maiores deleniti
-                    reiciendis ad, molestias dolorum similique ex placeat,
-                    consequuntur exercitationem hic corporis accusamus aperiam
-                    modi expedita? Id nulla quidem cupiditate saepe magni,
-                    eveniet molestiae vel, suscipit ex eum quibusdam ducimus.
-                    Dolores aliquid nam enim sed laboriosam ex similique
-                    excepturi ipsum, neque perferendis placeat deserunt vel?
-                    Fuga?
+                    The countess planted the vineyard at the highest point of
+                    the barda, an unexplored location where no one had even
+                    considered such an endeavor before. It required transporting
+                    water for irrigation using pumps, incurring significant
+                    costs. Until then, productions in the Rio Negro valley were
+                    carried out alongside the river, with water drawn through
+                    channels and gates - an economical flood irrigation system.{" "}
+                    <br />
+                    <br />
+                    Yet, the countess decided to plant at this elevated site
+                    because she believed that what would be produced there would
+                    be worth the effort. Without calculating costs, she embarked
+                    on building a system of pumps that transported water three
+                    kilometers uphill. When we finally took over the vineyard,
+                    we trusted that renewable energy, perhaps wind or solar,
+                    would eventually transform this cost into something
+                    reasonable in the short term. Regardless, the risk was worth
+                    taking. <br />
+                    <br />
+                    Some time later, a local man spoke to us about water. This
+                    kind gentleman, Facundo Catriel, told us that abundant water
+                    could be found at the base of the ridge. Although it seemed
+                    unlikely, we decided to drill some wells. Water surged forth
+                    with force. These wells now produce around 200,000 liters
+                    per hour, significantly reducing our costs. We listened to
+                    nature and special individuals. Today, Ribera del Cuarzo
+                    follows a virtuous cycle of respecting the environment, and
+                    the reward is a wine that never ceases to astonish us.
                   </p>
                 </div>
               </div>
