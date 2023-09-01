@@ -94,13 +94,13 @@ const LifeWater = () => {
                     className="text-[#000000] text-xs lg:text-base lg:leading-7 tracking-wider text-justify"
                   >
                     The countess planted the vineyard at the highest point of
-                    the barda, an unexplored location where no one had even
-                    considered such an endeavor before. It required transporting
-                    water for irrigation using pumps, incurring significant
-                    costs. Until then, productions in the Rio Negro valley were
-                    carried out alongside the river, with water drawn through
-                    channels and gates - an economical flood irrigation system.{" "}
-                    <br />
+                    the <i>barda</i>, an unexplored location where no one had
+                    even considered such an endeavor before. It required
+                    transporting water for irrigation using pumps, incurring
+                    significant costs. Until then, productions in the Río Negro
+                    valley were carried out alongside the river, with water
+                    drawn through channels and gates - an economical flood
+                    irrigation system. <br />
                     <br />
                     Yet, the countess decided to plant at this elevated site
                     because she believed that what would be produced there would

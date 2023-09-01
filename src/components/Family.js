@@ -176,7 +176,7 @@ const Family = () => {
                         <strong>
                           Melchor Concha y Toro started his winery in 1883
                         </strong>
-                        , only a few years after Jose Menendez had started his
+                        , only a few years after Jose Menéndez had started his
                         wool producing and shipping company in far away
                         Patagonia. <br />
                         <br /> Stories of how these two individuals worked hard
@@ -319,7 +319,7 @@ const Family = () => {
                   class="text-[#000000] text-xs lg:text-lg pt-2 px-10 tracking-wider text-center "
                   style={playfairFontRegular}
                 >
-                  <i>Felipe José Menendez Arguelles</i>
+                  <i>Felipe José Menéndez Arguelles</i>
                 </p>
               </div>
 

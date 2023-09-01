@@ -96,7 +96,7 @@ const LifeWater = () => {
                     the <i>barda</i>, an unexplored location where no one had
                     even considered such an endeavor before. It required
                     transporting water for irrigation using pumps, incurring
-                    significant costs. Until then, productions in the Rio Negro
+                    significant costs. Until then, productions in the Río Negro
                     valley were carried out alongside the river, with water
                     drawn through channels and gates - an economical flood
                     irrigation system.
@@ -150,7 +150,7 @@ const LifeWater = () => {
                       the <i>barda</i>, an unexplored location where no one had
                       even considered such an endeavor before. It required
                       transporting water for irrigation using pumps, incurring
-                      significant costs. Until then, productions in the Rio
+                      significant costs. Until then, productions in the Río
                       Negro valley were carried out alongside the river, with
                       water drawn through channels and gates - an economical
                       flood irrigation system.

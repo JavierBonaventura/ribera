@@ -100,8 +100,8 @@ const ConstructionPage = () => {
                 >
                   The Araucana Vineyard is much more than just unique. Located
                   in Ribera del Cuarzo, no other vineyard in Patagonia or the
-                  world can boast of being so close to the barda or enjoying
-                  such privacy. <br /> <br />
+                  world can boast of being so close to the <i>barda</i> or
+                  enjoying such privacy. <br /> <br />
                   The soils of Araucana are predominantly aeolian, meticulously
                   shaped over countless eras by wind erosion. Enriched with
                   volcanic ash and potassium, and with a high content of calcium

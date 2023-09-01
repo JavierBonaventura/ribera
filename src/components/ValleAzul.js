@@ -134,7 +134,7 @@ const ValleAzul = () => {
                       other nearby places in Patagonia where to produce an equal
                       taste. We finally concluded the conditions in Valle Azul
                       were perfect. <br /> <br />
-                      An extraordinary coincidence brought Menendez together
+                      An extraordinary coincidence brought Menéndez together
                       with the Countess 10 years after having tasted that first
                       memorable glass. Touched by Felipe´s passion and
                       commitment, the Countess granted us the privilege to start

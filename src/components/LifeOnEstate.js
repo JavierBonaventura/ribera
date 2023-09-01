@@ -363,10 +363,10 @@ const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
                         style={playfairFontRegular}
                         className="decoration-black	 text-xs tracking-wider text-justify"
                       >
-                        The Rio Negro is the largest river in Patagonia. The
+                        The Río Negro is the largest river in Patagonia. The
                         Limay and Neuquén rivers collect water and minerals from
                         mountain melt before flowing towards the center and east
-                        of the country, ultimately merging to form the Rio
+                        of the country, ultimately merging to form the Río
                         Negro. <br />
                         <br /> This river flows into the sea south of Buenos
                         Aires Province, in a small town called El Cóndor. It
