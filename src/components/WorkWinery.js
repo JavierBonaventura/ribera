@@ -5,7 +5,7 @@ import hambur from "../images/menu-hambur.png";
 import winesPreservationSlide1 from "../images/fermentation-2.jpg";
 import winesPreservationSlide2 from "../images/aging-1.jpg";
 import winesPreservationSlide3 from "../images/blending-1.jpg";
-import winesPreservationSlide4 from "../images/bottling.jpeg";
+import winesPreservationSlide4 from "../images/bottling2.jpg";
 import winesPreservationSlide5 from "../images/cellaring.jpg";
 import flechaIzquierda from "../images/flechaIzquierda.jpg";
 import flechaDerecha from "../images/flechaDerecha.jpg";

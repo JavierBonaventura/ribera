@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import workVineyardSlide1 from "../images/fermentation-2.jpg";
 import workVineyardSlide2 from "../images/aging-1.jpg";
 import workVineyardSlide3 from "../images/blending-1.jpg";
-import workVineyardSlide4 from "../images/bottling.jpeg";
+import workVineyardSlide4 from "../images/bottling2.jpg";
 import workVineyardSlide5 from "../images/cellaring.jpg";
 import leftArrowImage from "../images/flechaIzquierda.png";
 import rightArrowImage from "../images/flechaDerecha.png";

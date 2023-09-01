@@ -3,7 +3,7 @@ import workVineyardSlide0 from "../images/generica-vineyard.jpg";
 import workVineyardSlide1 from "../images/pruning.jpg";
 import workVineyardSlide2 from "../images/trellising.jpg";
 import workVineyardSlide3 from "../images/disbudding.jpg";
-import workVineyardSlide4 from "../images/workVineyardSlide4.jpg";
+import workVineyardSlide4 from "../images/harvest.jpg";
 import workVineyardSlide5 from "../images/weeds.jpg";
 import workVineyardSlide6 from "../images/ancient.jpg";
 import leftArrowImage from "../images/flechaIzquierda.png";

@@ -6,7 +6,7 @@ import workVineyardSlide1 from "../images/generica-vineyard.jpg";
 import workVineyardSlide2 from "../images/pruning.jpg";
 import workVineyardSlide3 from "../images/trellising.jpg";
 import workVineyardSlide4 from "../images/disbudding.jpg";
-import workVineyardSlide5 from "../images/workVineyardSlide4.jpg";
+import workVineyardSlide5 from "../images/harvest.jpg";
 import workVineyardSlide6 from "../images/weeds.jpg";
 import workVineyardSlide7 from "../images/ancient.jpg";
 import flechaIzquierda from "../images/flechaIzquierda.jpg";
