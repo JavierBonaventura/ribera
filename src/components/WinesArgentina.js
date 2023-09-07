@@ -235,16 +235,16 @@ function Araucana() {
                 {/* wine 1 */}
                 <div className="flex flex-col justify-center items-center gap-y-5 md:gap-y-0 ">
                   <div className="flex flex-col md:flex-row gap-y-5">
-                    <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center relative">
+                    <div className="w-1/3 md:w-full mx-auto md:flex md:justify-center relative ">
                       <img
                         src={araucanaWine}
                         alt=""
-                        className="w-full md:w-1/3 z-50"
+                        className="w-full md:w-1/4 z-50"
                       />
                       <img
                         src={logoTransparencia}
                         alt=""
-                        className="absolute top-24 contenido-dinamico-contact md:w-[30rem]"
+                        className="absolute top-24  w-[21rem]"
                       />
                     </div>
 
@@ -351,12 +351,12 @@ function Araucana() {
                       <img
                         src={pinotWine}
                         alt=""
-                        className="w-full md:w-1/3 z-50"
+                        className="w-full md:w-1/4 z-50"
                       />
                       <img
                         src={logoTransparencia}
                         alt=""
-                        className="absolute top-24 contenido-dinamico-contact md:w-[30rem]"
+                        className="absolute top-24 contenido-dinamico-contact md:w-[21rem]"
                       />
                     </div>
                     <div className="flex flex-col gap-y-2 md:hidden w-2/3 mx-auto">
@@ -468,12 +468,12 @@ function Araucana() {
                       <img
                         src={araucanaMalbec}
                         alt=""
-                        className="w-full md:w-1/3 z-50"
+                        className="w-full md:w-1/4 z-50"
                       />
                       <img
                         src={logoTransparencia}
                         alt=""
-                        className="absolute top-24 contenido-dinamico-contact md:w-[30rem]"
+                        className="absolute top-24 contenido-dinamico-contact md:w-[21rem]"
                       />
                     </div>
                     <div className="flex md:hidden flex-col  gap-y-2 w-2/3 mx-auto">
@@ -576,12 +576,12 @@ function Araucana() {
                       <img
                         src={araucanaAzul}
                         alt=""
-                        className="w-full md:w-1/3 z-50"
+                        className="w-full md:w-1/4 z-50"
                       />
                       <img
                         src={logoTransparencia}
                         alt=""
-                        className="absolute top-24 contenido-dinamico-contact md:w-[30rem]"
+                        className="absolute top-24 contenido-dinamico-contact md:w-[21rem] md:mr-2"
                       />
                     </div>
                     <div className="flex md:hidden flex-col gap-y-2 w-2/3 mx-auto">
@@ -694,27 +694,27 @@ function Araucana() {
 
             <div className="bg-[#231F20] px-5 pt-10 flex flex-col gap-y-8">
               <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
-                <div className="w-full md:w-3/4 md:mx-auto md:border md:border-[#C4B27D] md:py-8 ">
-                  <div className="grid grid-cols-3 gap-x-4 md:gap-x-0 md:w-3/4 md:mx-auto">
+                <div className="w-full md:w-3/4 md:mx-auto border border-[#C4B27D] py-4 md:py-20">
+                  <div className="grid grid-cols-3 w-3/4 mx-auto">
                     <div className="flex gap-y-4 md:gap-y-0 flex-col ">
                       <img
                         src={riberaClasico}
                         alt=""
-                        className="w-full mx-auto md:w-full"
+                        className="w-full mx-auto md:w-3/4"
                       />
                     </div>
                     <div className="flex gap-y-4 md:gap-y-0 flex-col ">
                       <img
                         src={riberaEspecial}
                         alt=""
-                        className="w-full mx-auto md:w-full"
+                        className="w-full mx-auto md:w-3/4"
                       />
                     </div>
-                    <div className="flex gap-y-4  md:gap-y-0 flex-col">
+                    <div className="flex gap-y-4 md:gap-y-0 flex-col">
                       <img
                         src={riberaReserva}
                         alt=""
-                        className="w-full mx-auto md:w-full"
+                        className="w-full mx-auto md:w-3/4"
                       />
                     </div>
                   </div>
@@ -735,7 +735,7 @@ function Araucana() {
               <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 py-20">
                 <div class="flex justify-center">
                   <a
-                    className={`border border-[#C4B27D] rounded-full p-7 ${
+                    className={`border border-[#C4B27D] rounded-full p-7 md:p-8 ${
                       igHovered
                         ? "bg-[#C4B27D] transition-bg ease-in-out duration-200"
                         : "bg-transparent transition-bg ease-in-out duration-200"
@@ -748,7 +748,7 @@ function Araucana() {
                     <img
                       src={iconIg}
                       alt=""
-                      className={`w-5 ${
+                      className={`w-5 md:w-7 ${
                         igHovered ? "filter brightness-200" : ""
                       }`}
                     />
