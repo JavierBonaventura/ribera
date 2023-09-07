@@ -60,7 +60,7 @@ const CarouselSlider = () => {
     "PRUNING",
     "TYING",
     "TOPPING",
-    "HARVERST",
+    "HARVEST",
     "WEEDS",
     "ANCIENT TECHNIQUES",
   ];
