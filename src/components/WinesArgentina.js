@@ -694,7 +694,7 @@ function Araucana() {
 
             <div className="bg-[#231F20] px-5 pt-10 flex flex-col gap-y-8">
               <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
-                <div className="w-full md:w-3/4 md:mx-auto md:border md:border-[#C4B27D] md:py-8 md:border-opacity-30">
+                <div className="w-full md:w-3/4 md:mx-auto md:border md:border-[#C4B27D] md:py-8 ">
                   <div className="grid grid-cols-3 gap-x-4 md:gap-x-0 md:w-3/4 md:mx-auto">
                     <div className="flex gap-y-4 md:gap-y-0 flex-col ">
                       <img
@@ -721,7 +721,7 @@ function Araucana() {
                 </div>
               </div>
               <Link to="/winesworld#posicion0">
-                <div className="flex justify-center md:-mt-12">
+                <div className="flex justify-center md:pt-6">
                   <a href="" style={robotoFontRegular}>
                     <span className="uppercase text-xs md:text-xl md:border md:border-transparent md:hover:border-transparent transition ease-in-out duration-500 text-[#F3EEE3] tracking-widest bg-[#C4B27D] md:hover:bg-[#F3EEE3] md:hover:text-[#C4B27D] rounded-md p-2 md:py-2 md:px-8">
                       View wines in the world
