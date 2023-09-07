@@ -61,7 +61,11 @@ const ConstructionPage = () => {
                   </div>
                   <div class="mt-4">
                     <Link to="/MenuHamburguesa">
-                      <img src={hambur} alt="" className="w-7 " />
+                      <img
+                        src={hambur}
+                        alt=""
+                        className="w-7 hover:scale-90 transition ease-in-out duration-500"
+                      />
                     </Link>
                   </div>
                 </div>

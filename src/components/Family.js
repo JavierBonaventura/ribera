@@ -83,7 +83,11 @@ const Family = () => {
                   </div>
                   <div class="mt-4">
                     <Link to="/MenuHamburguesa">
-                      <img src={hambur} alt="" className="w-7" />
+                      <img
+                        src={hambur}
+                        alt=""
+                        className="w-7 hover:scale-90 transition ease-in-out duration-500"
+                      />
                     </Link>
                   </div>
                 </div>
@@ -138,10 +142,14 @@ const Family = () => {
               <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
                 <div ref={posicionRef} id="posicion"></div>
                 <div className="flex flex-col md:flex-row md:py-20">
-                  <div class="w-full xl:w-9/12 mx-auto px-4 md:px-0">
-                    <img src={paisaje} alt="" className="shadow-2xl" />
+                  <div class="w-full xl:w-1/2 mx-auto px-4 md:px-0">
+                    <img
+                      src={paisaje}
+                      alt=""
+                      className="w-full object-cover shadow-2xl"
+                    />
                   </div>
-                  <div class="flex flex-col gap-y-2 md:gap-y-5 w-full xl:w-3/4 mx-auto px-10 xl:px-24 pt-10 pb-32 md:pt-20 md:pb-0 ">
+                  <div class="flex flex-col gap-y-2 md:gap-y-5 w-full xl:w-1/2 mx-auto px-10 xl:px-24 pt-10 pb-32 md:pt-8  md:pb-0 ">
                     <div className="flex flex-col md:gap-y-2">
                       <h1
                         style={playfairFontBlack}
@@ -158,7 +166,7 @@ const Family = () => {
                         </span>
                       </h2>
                     </div>
-                    <div>
+                    <div className="flex flex-col gap-y-3">
                       <p
                         class="text-justify tracking-wider text-black text-xs lg:text-base lg:leading-7"
                         style={playfairFontRegular}
@@ -170,38 +178,54 @@ const Family = () => {
                         </strong>
                         . Stemming from two very different origins, Bodega
                         Ribera del Cuarzo seems to be the synthesis of those two
-                        powerful forces. <br />
-                        <br />
+                        powerful forces.
+                      </p>
+                      <p
+                        class="text-justify tracking-wider text-black text-xs lg:text-base lg:leading-7"
+                        style={playfairFontRegular}
+                      >
                         “On my grandmother's side,{" "}
                         <strong>
                           Melchor Concha y Toro started his winery in 1883
                         </strong>
                         , only a few years after Jose Menéndez had started his
                         wool producing and shipping company in far away
-                        Patagonia. <br />
-                        <br /> Stories of how these two individuals worked hard
-                        to create their ventures intertwine in dinner
-                        conversations over generations. <br /> <br />I have come
-                        to believe that the coincidence of these two pioneers,
-                        having thousands of miles apart but almost at the same
-                        time successfully developed their companies, was the
-                        mysterious merging force that led to the creation of
-                        Bodega Ribera del Cuarzo.
+                        Patagonia.
+                      </p>
+                      <p
+                        class="text-justify tracking-wider text-black text-xs lg:text-base lg:leading-7"
+                        style={playfairFontRegular}
+                      >
+                        Stories of how these two individuals worked hard to
+                        create their ventures intertwine in dinner conversations
+                        over generations.
+                      </p>
+                      <p
+                        class="text-justify tracking-wider text-black text-xs lg:text-base lg:leading-7"
+                        style={playfairFontRegular}
+                      >
+                        I have come to believe that the coincidence of these two
+                        pioneers, having thousands of miles apart but almost at
+                        the same time successfully developed their companies,
+                        was the mysterious merging force that led to the
+                        creation of Bodega Ribera del Cuarzo.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="relative ">
-                <img
-                  src={carruajeHistory}
-                  alt=""
-                  className="w-6/12 2xl:w-4/12 mx-auto contenido-dinamico absolute  right-4 2xl:right-44 -bottom-5 lg:-bottom-20 shadow-custom"
-                />
+              <div className="relative">
+                <div className="w-6/12 2xl:w-[40%] contenido-dinamico absolute right-4 2xl:right-44 -bottom-5 lg:-bottom-16 shadow-custom">
+                  <img
+                    src={carruajeHistory}
+                    alt=""
+                    className="w-full mx-auto"
+                  />
+                </div>
 
                 <span
-                  className="contenido-dinamico absolute  text-white bottom-56 md:-bottom-5 lg:bottom-[-4.5rem] right-14 2xl:right-52 text-sm lg:text-lg "
+                  className="contenido-dinamico absolute  text-white bottom-56 md:-bottom-5 lg:bottom-[-4rem] right-14 2xl:right-52 text-sm lg:text-lg "
                   style={playfairFontItalic}
                 >
                   Sunset at Valle Azul
@@ -218,9 +242,9 @@ const Family = () => {
                         />
                       </div>
 
-                      <div class="flex flex-col gap-y-2 md:gap-y-5 pt-5 pb-12 md:py-32 md:pr-52 lg:pr-60 xl:pl-24 xl:pr-72 w-full 2xl:px-0 2xl:w-2/4 mx-auto px-10 md:px-0 ">
+                      <div class="flex flex-col mx-auto w-full 2xl:w-3/5 gap-y-2 md:gap-y-5 pt-5 pb-12 md:py-24 xl:py-16 2xl:py-32 md:pr-52 lg:pr-60 xl:pl-24 xl:pr-72  px-10 md:px-0 2xl:pl-0 2xl:pr-28">
                         <p
-                          class="text-right-justify tracking-wider text-[#ffffff] text-xs lg:text-base lg:leading-7"
+                          class="text-right-justify tracking-wider text-[#ffffff] text-xs lg:text-base lg:leading-7 "
                           style={playfairFontRegular}
                         >
                           Patagonia was the place where we spent the summers of
