@@ -239,17 +239,17 @@ const MenuDesktop = () => {
             <div className="w-full h-full">
               <div class="w-full h-full p-2.5 relative flex flex-col justify-center items-center">
                 {/* lineas horizontales exteriores */}
-                <div class="w-0 h-0.5 bg-[#F3EEE3] brightness-50 absolute top-0 left-0 animate-line-left"></div>
-                <div class="w-0 h-0.5 bg-[#F3EEE3] brightness-50 absolute bottom-0 left-0 animate-line-left"></div>
+                <div class="w-0 h-0.5 bg-[#F3EEE3] bg-opacity-50  absolute top-0 left-0 animate-line-left"></div>
+                <div class="w-0 h-0.5 bg-[#F3EEE3] bg-opacity-50  absolute bottom-0 left-0 animate-line-left"></div>
 
-                <div class="w-0 h-0.5 bg-[#F3EEE3] brightness-50  absolute top-0 right-0 animate-line-right"></div>
-                <div class="w-0 h-0.5 bg-[#F3EEE3] brightness-50 absolute bottom-0 right-0 animate-line-right"></div>
+                <div class="w-0 h-0.5 bg-[#F3EEE3] bg-opacity-50   absolute top-0 right-0 animate-line-right"></div>
+                <div class="w-0 h-0.5 bg-[#F3EEE3] bg-opacity-50  absolute bottom-0 right-0 animate-line-right"></div>
                 {/* lineas verticales exteriores  */}
-                <div class="w-0.5 bg-[#F3EEE3] brightness-50 absolute vertical-line-top-left"></div>
-                <div class="w-0.5 bg-[#F3EEE3] brightness-50 absolute vertical-line-top-right"></div>
-                <div class="w-0.5 bg-[#F3EEE3] brightness-50  absolute vertical-line-bottom-left"></div>
-                <div class="w-0.5 bg-[#F3EEE3] brightness-50 absolute vertical-line-bottom-right"></div>
-                <div className="w-full h-full border-2 border-[#F3EEE3] brightness-50 relative inset-0 animate-border-delay">
+                <div class="w-0.5 bg-[#F3EEE3] bg-opacity-50  absolute vertical-line-top-left"></div>
+                <div class="w-0.5 bg-[#F3EEE3] bg-opacity-50  absolute vertical-line-top-right"></div>
+                <div class="w-0.5 bg-[#F3EEE3] bg-opacity-50   absolute vertical-line-bottom-left"></div>
+                <div class="w-0.5 bg-[#F3EEE3] bg-opacity-50  absolute vertical-line-bottom-right"></div>
+                <div className="w-full h-full border-2 border-[#F3EEE3]  border-opacity-80  relative inset-0 animate-border-delay">
                   <div className="flex justify-end items-center pr-4 py-5 ">
                     <Link
                       to="/MenuHamburguesa"
