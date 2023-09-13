@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import workVineyardSlide0 from "../images/generica-vineyard.jpg";
+import workVineyardSlide0 from "../images/generica-vineyard.png";
 import workVineyardSlide1 from "../images/pruning.jpg";
 import workVineyardSlide2 from "../images/trellising.jpg";
-import workVineyardSlide3 from "../images/disbudding.jpg";
+import workVineyardSlide3 from "../images/topping.png";
 import workVineyardSlide4 from "../images/harvest.jpg";
-import workVineyardSlide5 from "../images/weeds.jpg";
+import workVineyardSlide5 from "../images/weeds.png";
 import workVineyardSlide6 from "../images/ancient.jpg";
 import leftArrowImage from "../images/flechaIzquierda.png";
 import rightArrowImage from "../images/flechaDerecha.png";
@@ -198,14 +198,14 @@ const CarouselSlider = () => {
         >
           <img src={leftArrowImage} alt="izquierda" />
         </button>
-        <div className=" w-32 container max-w-screen-xl xl:max-w-screen-2xl py-1/2 fixed -top-60 left-72 right-0  md:px-5 2xl:px-0 absolute inset-0 flex items-center justify-center ">
+        <div className="w-32 container max-w-screen-xl xl:max-w-screen-2xl py-1/2 fixed top-[-10.2rem] left-72 right-0  md:px-5 2xl:px-0 absolute inset-0 flex items-center justify-center  ">
           <p
             style={playfairFontBlack}
-            className=" uppercase text-[#C4B27D] text-2xl mb-8"
+            className=" uppercase text-[#C4B27D] text-2xl "
           >
             {" "}
             {"0" + (currentImageIndex + 1)}{" "}
-            <sup className="text-base underline align-middle	">7</sup>
+            <sup className="text-base underline align-middles">7</sup>
           </p>
         </div>
         <div className="w-96 container  mx-auto max-w-screen-xl xl:max-w-screen-2xl  py-1/2 fixed -top-32 left-0 right-0  md:px-5 2xl:px-0 absolute inset-0 flex items-center justify-center ">
@@ -219,7 +219,7 @@ const CarouselSlider = () => {
         <div className=" w-2/4  container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-1/2 fixed top-40 left-0 right-0  md:px-5 2xl:px-0 absolute inset-0 flex items-center justify-center ">
           <p
             style={playfairFontRegular}
-            className=" text-[#ffffff] text-base leading-7 tracking-wider text-center mb-14"
+            className=" text-[#ffffff] text-base leading-7 tracking-wider text-center mb-8"
           >
             {paragraphs[currentImageIndex]}
           </p>

@@ -192,7 +192,7 @@ const CarouselSlider = () => {
         >
           <img src={leftArrowImage} alt="izquierda" />
         </button>
-        <div className=" w-32 container  py-1/2 fixed -top-60 left-72 right-0  px-5 absolute inset-0 flex items-center justify-center ">
+        <div className=" w-32 container  py-1/2 fixed top-[-8rem] left-72 right-0  px-5 absolute inset-0 flex items-center justify-center ">
           <p
             style={playfairFontBlack}
             className=" uppercase text-[#C4B27D] text-2xl mb-8"
@@ -202,7 +202,7 @@ const CarouselSlider = () => {
             <sup className="text-base underline align-middle	">5</sup>
           </p>
         </div>
-        <div className="w-96 container mx-auto   max-w-screen-xl  2xl:max-w-screen-2xl py-1/2 fixed -top-32 left-0 right-0  px-5 absolute inset-0 flex items-center justify-center ">
+        <div className="w-96  container mx-auto   max-w-screen-xl  2xl:max-w-screen-2xl py-1/2 fixed -top-32 left-0 right-0  px-5 absolute inset-0 flex items-center justify-center ">
           <p
             style={robotoFontRegular}
             className=" uppercase text-[#C4B27D] text-2xl mb-8"
@@ -210,10 +210,10 @@ const CarouselSlider = () => {
             {title[currentImageIndex]}
           </p>
         </div>
-        <div className="w-2/4 container max-w-screen-xl mx-auto  xl:max-w-screen-2xl py-1/2 fixed top-40 left-0 right-0 md:px-5 2xl:px-0 absolute inset-0 flex items-center justify-center ">
+        <div className="w-2/4 container  max-w-screen-xl mx-auto  xl:max-w-screen-2xl py-1/2 fixed top-40 left-0 right-0 md:px-5 2xl:px-0 absolute inset-0 flex items-center justify-center ">
           <p
             style={playfairFontRegular}
-            className=" text-[#ffffff] text-base leading-7 tracking-wider text-center mb-14"
+            className=" text-[#ffffff] text-base leading-7 tracking-wider text-center mb-8"
           >
             {paragraphs[currentImageIndex]}
           </p>

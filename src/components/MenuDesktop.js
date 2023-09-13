@@ -559,7 +559,7 @@ const MenuDesktop = () => {
                             href=""
                             className="hover:text-[#C4B27D]  duration-300 transition ease-in-out tracking-widest"
                           >
-                            News
+                            Press
                           </a>
                         </div>
                       </div>
@@ -573,7 +573,7 @@ const MenuDesktop = () => {
                         />
                         <a
                           target="_blank"
-                          href="https://www.google.com.ar/maps/place/39%C2%B011'17.0%22S+66%C2%B052'26.0%22W/@-39.1880556,-66.8738889,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-39.1880556!4d-66.8738889?entry=ttu"
+                          href="https://www.google.com.ar/maps/place/39%C2%B011'17.0%22S+66%C2%B052'26.0%22W/@-39.1880556,-66.8738889,853m/data=!3m1!1e3!4m4!3m3!8m2!3d-39.1880556!4d-66.8738889!5m1!1e1?entry=ttu"
                           className="flex flex-col text-center"
                         >
                           <span className="uppercase tracking-[0.17em] text-xs lg:text-sm ">

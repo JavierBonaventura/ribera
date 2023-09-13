@@ -12,7 +12,7 @@ import araucanaMalbec from "../images/araucana-malbec-wine-1.png";
 import araucanaAzul from "../images/araucana-azul-wine-1.png";
 import araucanaPinot from "../images/araucana-pino-wine-1.png";
 import logoTransparencia from "../images/Isologo-transparencia.svg";
-import cava from "../images/cava.jpg";
+import portada from "../images/wines-portada.png";
 import iconIg from "../images/icon-ig.png";
 import { useSpring, Transition, animated } from "@react-spring/web";
 
@@ -198,11 +198,11 @@ function RioCiervos() {
                   </h2>
                 </div>
                 <div className=" flex flex-col gap-y-5 contenido-dinamico-contact">
-                  <div className="px-4">
+                  <div className="px-4 w-full  md:w-4/6 mx-auto">
                     <img
-                      src={cava}
+                      src={portada}
                       alt=""
-                      className="w-full  md:w-5/6 mx-auto shadow-custom"
+                      className="w-full object-cover shadow-custom"
                     />
                   </div>
 

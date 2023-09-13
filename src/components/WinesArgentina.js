@@ -12,7 +12,7 @@ import riberaClasico from "../images/ribera-clasico-wine-1.png";
 import riberaEspecial from "../images/ribera-especial-wine-1.png";
 import riberaReserva from "../images/ribera-reserva-wine-1.png";
 import logoTransparencia from "../images/Isologo-transparencia.svg";
-import cava from "../images/cava.jpg";
+import portada from "../images/wines-portada.png";
 import iconIg from "../images/icon-ig.png";
 import { useSpring, Transition, animated } from "@react-spring/web";
 
@@ -208,11 +208,11 @@ function Araucana() {
                   </h2>
                 </div>
                 <div className=" flex flex-col gap-y-5 contenido-dinamico-contact">
-                  <div className="px-4">
+                  <div className="px-4 w-full md:w-4/6  mx-auto">
                     <img
-                      src={cava}
+                      src={portada}
                       alt=""
-                      className="w-full md:w-5/6 mx-auto shadow-custom"
+                      className="w-full shadow-custom object-cover"
                     />
                   </div>
 

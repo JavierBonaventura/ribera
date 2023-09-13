@@ -6,7 +6,7 @@ import hambur from "../images/menu-hambur.png";
 import ilustrationHistory from "../images/dibujofamily.png";
 import arrowDown from "../images/arrow-down.png";
 import carruajeHistory from "../images/carruaje-history.jpg";
-import paisaje from "../images/paisaje-family-3.jpg";
+import familia from "../images/familia-felipe.png";
 import iconIg from "../images/icon-ig.png";
 import felipe from "../images/felipe.jpg";
 import "../App.css";
@@ -144,7 +144,7 @@ const Family = () => {
                 <div className="flex flex-col md:flex-row md:py-20">
                   <div class="w-full xl:w-1/2 mx-auto px-4 md:px-0">
                     <img
-                      src={paisaje}
+                      src={familia}
                       alt=""
                       className="w-full object-cover shadow-2xl"
                     />

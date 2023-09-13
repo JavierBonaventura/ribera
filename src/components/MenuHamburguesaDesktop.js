@@ -412,7 +412,7 @@ const MenuHamburguesaDesktop = () => {
                       </div>
                       <div>
                         <span className="text-[#F3EEE3] hover:text-[#c4b27d] transition ease-in-out duration-300">
-                          <a href="">News</a>
+                          <a href="">Press</a>
                         </span>
                       </div>
                     </div>
@@ -487,7 +487,7 @@ const MenuHamburguesaDesktop = () => {
                             href=""
                             className="hover:text-[#c4b27d]  duration-300 transition ease-in-out tracking-widest"
                           >
-                            News
+                            Press
                           </a>
                         </div>
                       </div>

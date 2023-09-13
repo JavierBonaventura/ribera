@@ -4,8 +4,7 @@ import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
 import ilustracionSpirit from "../images/dibujoaraucana.png";
 import paisajeAraucana from "../images/paisaje-araucana-1.jpg";
-import paisajeAraucana2 from "../images/paisaje-araucana-2.jpg";
-import paisajeAraucana3 from "../images/paisaje-araucana-3.jpg";
+import paisajeAraucanaDron from "../images/paisaje-araucana-dron.jpg";
 import iconIg from "../images/icon-ig.png";
 import "../App.css";
 import { useLocation } from "react-router-dom";
@@ -89,7 +88,7 @@ const ConstructionPage = () => {
                   </div>
                   <div class="relative flex justify-center items-center  md:pt-0 px-4 md:px-0">
                     <img
-                      src={paisajeAraucana3}
+                      src={paisajeAraucana}
                       alt=""
                       class="w-full object-cover md:w-2/3 mx-auto shadow-2xl"
                     />
@@ -117,7 +116,7 @@ const ConstructionPage = () => {
 
               <div className="container mx-auto px-4  max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
                 <img
-                  src={paisajeAraucana2}
+                  src={paisajeAraucanaDron}
                   alt=""
                   className="w-full md:w-2/3 mx-auto shadow-2xl"
                 />
