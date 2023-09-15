@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { Transition } from "@react-spring/web";
 import { useSpring, animated } from "@react-spring/web";
 import { useLocation } from "react-router-dom";
+import "../App.css";
 
 const MenuHamburguesaDesktop = () => {
   const [igHovered, setIgHovered] = useState(false);
@@ -153,17 +154,31 @@ const MenuHamburguesaDesktop = () => {
             className={`h-screen bg-[imagen] bg-no-repeat bg-cover bg-center relative p-5`}
             style={{ backgroundImage: `url(${fondoHamburguesaDesktop})` }}
           >
-            <div className="w-full h-full">
+            {/* <div className="w-full h-full">
               <div className="border border-[#F3EEE3] w-full h-full p-2 relative flex flex-col justify-center items-center">
-                <div className="w-full h-full border border-[#F3EEE3] flex flex-col justify-start relative gap-y-8 2xl:gap-y-24 pt-24 2xl:pt-36">
-                  <div className="flex justify-end items-center absolute top-3 right-3">
+                <div className="w-full h-full border border-[#F3EEE3] flex flex-col justify-start relative gap-y-8 2xl:gap-y-24 pt-24 2xl:pt-36"> */}
+                     <div className="w-full h-full">
+              <div class="w-full h-full p-2.5 relative flex flex-col justify-center items-center ">
+                {/* lineas horizontales exteriores */}
+                <div class="w-0 h-0.5 bg-[#F3EEE3] bg-opacity-50  absolute top-0 left-0 animate-line-left"></div>
+                <div class="w-0 h-0.5 bg-[#F3EEE3] bg-opacity-50  absolute bottom-0 left-0 animate-line-left"></div>
+
+                <div class="w-0 h-0.5 bg-[#F3EEE3] bg-opacity-50   absolute top-0 right-0 animate-line-right"></div>
+                <div class="w-0 h-0.5 bg-[#F3EEE3] bg-opacity-50  absolute bottom-0 right-0 animate-line-right"></div>
+                {/* lineas verticales exteriores  */}
+                <div class="w-0.5 bg-[#F3EEE3] bg-opacity-50  absolute vertical-line-top-left"></div>
+                <div class="w-0.5 bg-[#F3EEE3] bg-opacity-50  absolute vertical-line-top-right"></div>
+                <div class="w-0.5 bg-[#F3EEE3] bg-opacity-50   absolute vertical-line-bottom-left"></div>
+                <div class="w-0.5 bg-[#F3EEE3] bg-opacity-50  absolute vertical-line-bottom-right"></div>
+                <div className="w-full h-full border-2 border-[#F3EEE3]  border-opacity-80  relative inset-0 animate-border-delay">
+                  <div className="flex justify-end items-center absolute top-3 right-3 ">
                     <Link to="/">
                       <div className=" bg-transparent border border-[#c4b27d] rounded-full p-3 transition ease-in-out duration-500 hover:scale-90">
                         <img src={x} alt="" className="w-2" />
                       </div>
                     </Link>
                   </div>
-                  <div className="flex justify-center">
+                  <div className="flex justify-center gap-y-8 2xl:gap-y-24 pt-24 2xl:pt-36">
                     <Link to="/">
                       <img
                         src={logoDesktop}

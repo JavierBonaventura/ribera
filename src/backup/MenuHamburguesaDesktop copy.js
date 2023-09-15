@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import fondoHamburguesaDesktop from "../images/fondoHamburguesaDesktop.png";
-import logoDesktop from "../images/logo.svg";
+import logoDesktop from "../images/logo-home-mob.png";
 import logo from "../images/logo.svg";
-import close from "../images/icon-close.svg";
+import x from "../images/x.png";
 import iconIg from "../images/icon-ig-form.svg";
 import { Link } from "react-router-dom";
 import { Transition } from "@react-spring/web";
@@ -10,9 +10,25 @@ import { useSpring, animated } from "@react-spring/web";
 import { useLocation } from "react-router-dom";
 
 const MenuHamburguesaDesktop = () => {
-  const location = useLocation();
+  const [igHovered, setIgHovered] = useState(false);
+  const handleMouseEnter = () => {
+    setIgHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIgHovered(false);
+  };
 
   const [isMenu1Hovered, setMenu1Hovered] = useState(false);
+  const [isMenu2Hovered, setMenu2Hovered] = useState(false);
+  const [isMenu3Hovered, setMenu3Hovered] = useState(false);
+
+  const [isMenu1Visible, setMenu1Visible] = useState(true);
+  const [isMenu2Visible, setMenu2Visible] = useState(true);
+  const [isMenu3Visible, setMenu3Visible] = useState(true);
+
+  const location = useLocation();
+
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
     fontWeight: "normal",
@@ -26,12 +42,39 @@ const MenuHamburguesaDesktop = () => {
   };
 
   const handleMenu1Hover = () => {
-    console.log("test");
     setMenu1Hovered(true);
+    setMenu2Visible(false);
+    setMenu3Visible(false);
   };
 
   const handleMenu1Leave = () => {
     setMenu1Hovered(false);
+    setMenu2Visible(true);
+    setMenu3Visible(true);
+  };
+
+  const handleMenu2Hover = () => {
+    setMenu2Hovered(true);
+    setMenu1Visible(false);
+    setMenu3Visible(false);
+  };
+
+  const handleMenu2Leave = () => {
+    setMenu2Hovered(false);
+    setMenu1Visible(true);
+    setMenu3Visible(true);
+  };
+
+  const handleMenu3Hover = () => {
+    setMenu3Hovered(true);
+    setMenu1Visible(false);
+    setMenu2Visible(false);
+  };
+
+  const handleMenu3Leave = () => {
+    setMenu3Hovered(false);
+    setMenu1Visible(true);
+    setMenu2Visible(true);
   };
   const [mostrarMenu1, setMostrarMenu1] = useState(false);
   const [mostrarMenu2, setMostrarMenu2] = useState(false);
@@ -110,67 +153,22 @@ const MenuHamburguesaDesktop = () => {
             className={`h-screen bg-[imagen] bg-no-repeat bg-cover bg-center relative p-5`}
             style={{ backgroundImage: `url(${fondoHamburguesaDesktop})` }}
           >
-            <div className="flex justify-end items-center absolute top-0 right-0 hidden">
-              <Link to="/">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="80"
-                  height="80"
-                  viewBox="0 0 100 100"
-                >
-                  <circle
-                    cx="50"
-                    cy="50"
-                    r="16"
-                    stroke="#C3B17D"
-                    fill="transparent"
-                    strokeWidth="2"
-                  />
-                  <line
-                    x1="44"
-                    y1="44"
-                    x2="56"
-                    y2="56"
-                    stroke="#C3B17D"
-                    strokeWidth="2"
-                  />
-                  <line
-                    x1="44"
-                    y1="56"
-                    x2="56"
-                    y2="44"
-                    stroke="#C3B17D"
-                    strokeWidth="2"
-                  />
-                </svg>
-              </Link>
-            </div>
-
-            <div className="w-full h-full ">
-              <div className="border border-[#F2ECE1] w-full h-full p-2 relative flex flex-col justify-center items-center">
-                <div className="w-full h-full border border-[#F2ECE1]  flex flex-col justify-center relative">
-                  <div className="left-1/2 z-50 top-2 transform -translate-x-1/2 max-w-screen-xl  2xl:max-w-screen-2xl container mx-auto absolute ">
-                    <header className="py-10  px-5 md:px-0 md:py-2 ">
-                      <div class="flex justify-between items-center">
-                        <div class="w-28">
-                          <Link to="/">
-                            <img src={logo} alt="" className="w-full " />
-                          </Link>
-                        </div>
-                        <div class="">
-                          <Link to="/">
-                            <img src={close} alt="" className="w-14" />
-                          </Link>
-                        </div>
+            <div className="w-full h-full">
+              <div className="border border-[#F3EEE3] w-full h-full p-2 relative flex flex-col justify-center items-center">
+                <div className="w-full h-full border border-[#F3EEE3] flex flex-col justify-start relative gap-y-8 2xl:gap-y-24 pt-24 2xl:pt-36">
+                  <div className="flex justify-end items-center absolute top-3 right-3">
+                    <Link to="/">
+                      <div className=" bg-transparent border border-[#c4b27d] rounded-full p-3 transition ease-in-out duration-500 hover:scale-90">
+                        <img src={x} alt="" className="w-2" />
                       </div>
-                    </header>
+                    </Link>
                   </div>
-                  <div className="flex justify-center py-0 2xl:pb-5 hidden">
+                  <div className="flex justify-center">
                     <Link to="/">
                       <img
                         src={logoDesktop}
                         alt="Logo"
-                        className="w-40 2xl:w-44"
+                        className="w-32 lg:w-44"
                       />
                     </Link>
                   </div>
@@ -180,15 +178,21 @@ const MenuHamburguesaDesktop = () => {
                       id="menu1"
                       onMouseEnter={handleMenu1Hover}
                       onMouseLeave={handleMenu1Leave}
-                      className="flex flex-col items-center w-full gap-y-8"
+                      className={`flex flex-col items-center w-full transition-opacity duration-500 gap-y-8  ${
+                        isMenu2Hovered || isMenu3Hovered
+                          ? "opacity-30"
+                          : "opacity-100"
+                      }`}
                     >
                       <p
                         style={playfairFontRegular}
-                        className="menu-desk-hambur sombra-menu"
+                        className={`menu-desk sombra-menu tracking-wider ${
+                          isMenu1Hovered ? "text-[#f3eee3]" : "text-[#c4b27d]"
+                        }`}
                       >
                         History
                       </p>
-                      <ul className="text-center space-y-1.5">
+                      <ul className="text-center space-y-0 lg:space-y-1.5">
                         <li>
                           <Link to="/family" style={robotoFontRegular}>
                             <span className="subMenu tracking-widest">
@@ -208,15 +212,23 @@ const MenuHamburguesaDesktop = () => {
 
                     <div
                       id="menu2"
-                      className="flex flex-col items-center w-full gap-y-8"
+                      onMouseEnter={handleMenu2Hover}
+                      onMouseLeave={handleMenu2Leave}
+                      className={`flex flex-col items-center w-full transition-opacity duration-500 gap-y-8  ${
+                        isMenu1Hovered || isMenu3Hovered
+                          ? "opacity-30"
+                          : "opacity-100"
+                      }`}
                     >
                       <p
                         style={playfairFontRegular}
-                        className="menu-desk-hambur sombra-menu text-center"
+                        className={`text-center menu-desk sombra-menu tracking-wider ${
+                          isMenu2Hovered ? "text-[#f3eee3]" : "text-[#c4b27d]"
+                        }`}
                       >
                         Patagonian Spirit
                       </p>
-                      <ul className="text-center space-y-1.5">
+                      <ul className="text-center space-y-0 lg:space-y-1.5">
                         <li>
                           <Link
                             to="/araucanavineyard"
@@ -251,24 +263,33 @@ const MenuHamburguesaDesktop = () => {
                         <li>
                           <Link to="/lifewater" style={robotoFontRegular}>
                             <span className="subMenu tracking-widest">
-                              LIFE WATER
+                              WATER OF LIFE
                             </span>
                           </Link>
                         </li>
                       </ul>
                     </div>
+
                     <div
                       id="menu3"
-                      className="flex flex-col items-center w-full gap-y-8"
+                      onMouseEnter={handleMenu3Hover}
+                      onMouseLeave={handleMenu3Leave}
+                      className={`flex flex-col items-center w-full transition-opacity duration-500 gap-y-8 ${
+                        isMenu1Hovered || isMenu2Hovered
+                          ? "opacity-30"
+                          : "opacity-100"
+                      }`}
                     >
                       <p
                         style={playfairFontRegular}
-                        className="menu-desk-hambur sombra-menu"
+                        className={`text-center menu-desk sombra-menu tracking-wider ${
+                          isMenu3Hovered ? "text-[#f3eee3]" : "text-[#c4b27d]"
+                        }`}
                       >
                         Wines
                       </p>
                       <animated.div style={dropdownAnimation3}>
-                        <ul className="text-center space-y-1.5">
+                        <ul className="text-center space-y-0 lg:space-y-1">
                           <li>
                             <p style={robotoFontRegular} onClick={opcion4}>
                               <span className="!mb-0 subMenu tracking-widest">
@@ -297,7 +318,7 @@ const MenuHamburguesaDesktop = () => {
                                 </Link>
                               </li>
                               <li>
-                                <Link to="/winesargentina#posicion1">
+                                <Link to="/winesargentina#posicion2">
                                   <p style={robotoFontRegular}>
                                     <span className="subMenu tracking-widest">
                                       Araucana Río de los Ciervos Pinot Noir
@@ -306,7 +327,7 @@ const MenuHamburguesaDesktop = () => {
                                 </Link>
                               </li>
                               <li>
-                                <Link to="/winesargentina#posicion2">
+                                <Link to="/winesargentina#posicion3">
                                   <p style={robotoFontRegular}>
                                     <span className="subMenu tracking-widest">
                                       Araucana Malbec
@@ -315,7 +336,7 @@ const MenuHamburguesaDesktop = () => {
                                 </Link>
                               </li>
                               <li>
-                                <Link to="/winesargentina#posicion3">
+                                <Link to="/winesargentina#posicion4">
                                   <p style={robotoFontRegular}>
                                     <span className="subMenu tracking-widest">
                                       Araucana Azul
@@ -378,20 +399,20 @@ const MenuHamburguesaDesktop = () => {
                   </div>
 
                   <div
-                    className="flex flex-col gap-y-4 justify-center w-2/3 2xl:w-1/3 mx-auto pt-5 2xl:pt-10"
+                    className="hidden flex flex-col gap-y-4 justify-center w-2/3 2xl:w-1/3 mx-auto pt-5 2xl:pt-10"
                     style={robotoFontRegular}
                   >
                     <div className="w-full flex justify-center items-center gap-x-16 text-sm lg:text-xl tracking-widest">
                       <div>
                         <Link to="/contacto" style={robotoFontRegular}>
-                          <span className="text-[#F2ECE1] hover:text-[#cab57e] transition ease-in-out duration-300">
+                          <span className="text-[#F3EEE3] hover:text-[#c4b27d] transition ease-in-out duration-300">
                             Contact
                           </span>
                         </Link>
                       </div>
                       <div>
-                        <span className="text-[#F2ECE1] hover:text-[#cab57e] transition ease-in-out duration-300">
-                          <a href="">News</a>
+                        <span className="text-[#F3EEE3] hover:text-[#c4b27d] transition ease-in-out duration-300">
+                          <a href="">Press</a>
                         </span>
                       </div>
                     </div>
@@ -400,55 +421,84 @@ const MenuHamburguesaDesktop = () => {
                         <h1 className="text-center  text-[#c4b27d] ">
                           <i>Our distribution office</i>
                         </h1>
-                        <p className="text-center uppercase font-semibold text-[#F2ECE1] hover:text-[#cab57e]  tracking-widest transition ease-in-out duration-300">
+                        <p className="text-center uppercase font-semibold text-[#F3EEE3] hover:text-[#c4b27d]  tracking-widest transition ease-in-out duration-300">
                           Casa Pirque
                         </p>
                       </a>
                     </div>
                   </div>
-                  <div className="absolute px-5  bottom-5 w-full container mx-auto max-w-screen-xl 2xl:max-w-screen-2xl left-1/2 transform -translate-x-1/2">
-                    <div className="flex justify-around items-center w-full text-[#F2ECE1]">
-                      <div className="w-1/3 flex justify-start items-center">
+
+                  <div className="absolute md:px-5 bottom-5 w-full container mx-auto max-w-screen-xl xl:max-w-screen-2xl 2xl:max-w-none left-1/2 transform -translate-x-1/2">
+                    <div className="flex flex-row-reverse justify-around items-center w-full text-[#F3EEE3]">
+                      <div className="w-1/3 flex justify-end items-center">
                         <a
                           href="https://www.instagram.com/riberadelcuarzo/"
                           target="_blank"
+                          onMouseEnter={handleMouseEnter}
+                          onMouseLeave={handleMouseLeave}
                         >
-                          <img
-                            src={iconIg}
-                            alt="LogoIg"
-                            className="w-4 lg:w-5"
-                          />
+                          <div className="p-4 border border-white rounded-full hover:border-[#d6c69b] transition duration-300 ease-in-out">
+                            <img
+                              src={iconIg}
+                              alt="LogoIg"
+                              className={`w-5 ${
+                                igHovered ? "filter-invert" : ""
+                              }`}
+                            />
+                          </div>
                         </a>
                       </div>
                       <div
-                        className="flex justify-center items-center w-1/3 gap-x-20 text-sm lg:text-base"
+                        className="flex justify-center items-end md:w-2/4 lg:w-1/3 gap-x-5 xl:gap-x-10 text-sm"
                         style={robotoFontRegular}
                       >
-                        <div>
+                        <div className=" ">
+                          <Link
+                            to="/contacto"
+                            className="hover:text-[#c4b27d]  duration-300 transition ease-in-out uppercase tracking-widest"
+                            style={robotoFontRegular}
+                          >
+                            Contact
+                          </Link>
+                        </div>
+
+                        <div className="" style={robotoFontRegular}>
                           <a
                             href=""
-                            className="hover:text-[#cab57e] duration-300 transition ease-in-out"
+                            className="hover:text-[#c4b27d]  duration-300 transition ease-in-out"
                           >
-                            Fact Sheet
+                            <a
+                              target="_blank"
+                              href="https://casapirque.com.ar/"
+                              className="flex flex-col items-center "
+                            >
+                              <span className="text-center">
+                                <i>Our distribution office</i>
+                              </span>
+                              <span className="uppercase tracking-widest text-center">
+                                Casa Pirque
+                              </span>
+                            </a>
                           </a>
                         </div>
-                        <div>
+
+                        <div className="uppercase">
                           <a
                             href=""
-                            className="hover:text-[#cab57e] duration-300 transition ease-in-out"
+                            className="hover:text-[#c4b27d]  duration-300 transition ease-in-out tracking-widest"
                           >
-                            Virtual Tour
+                            Press
                           </a>
                         </div>
                       </div>
                       <div
-                        className="flex justify-end items-center w-1/3 cursor-default gap-x-5 text-sm lg:text-base"
+                        className="flex justify-start items-center w-1/3 cursor-default gap-x-5 text-sm lg:text-base"
                         style={robotoFontRegular}
                       >
-                        <span className="font-bold text-[#c4b27d] cursor-pointer">
+                        <span className="font-bold text-[#c4b27d] cursor-pointer tracking-widest">
                           english
                         </span>
-                        <span className="text-[#F2ECE1] hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300">
+                        <span className="text-[#F3EEE3] hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest">
                           spanish
                         </span>
                       </div>
