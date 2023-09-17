@@ -15,43 +15,6 @@ import { useLocation } from "react-router-dom";
 import "../App.css";
 
 const MenuDesktop = () => {
-
-  // inicio codigo para retrasar la aparicion del logo
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsVisible(true);
-    }, 500);
-
-    return () => clearTimeout(timeout);
-  }, []);
-  // fin codigo para retrasar la aparicion del logo
-
-    // inicio codigo para retrasar la aparicion de los titulos
-    const [isVisible2, setIsVisible2] = useState(false);
-
-    useEffect(() => {
-      const timeout = setTimeout(() => {
-        setIsVisible2(true);
-      }, 1000);
-  
-      return () => clearTimeout(timeout);
-    }, []);
-    // fin codigo para retrasar la aparicion de los titulos
-
-        // inicio codigo para retrasar la aparicion del sub menu
-        const [isVisible3, setIsVisible3] = useState(false);
-
-        useEffect(() => {
-          const timeout = setTimeout(() => {
-            setIsVisible3(true);
-          }, 1300);
-      
-          return () => clearTimeout(timeout);
-        }, []);
-        // fin codigo para retrasar la aparicion de los titulos
-
   const [igHovered, setIgHovered] = useState(false);
   const handleMouseEnter = () => {
     setIgHovered(true);
@@ -302,21 +265,19 @@ const MenuDesktop = () => {
                       />
                     </Link>
                   </div>
-                  <div
-                    className={`transition-opacity duration-1000 ${
-                      isVisible ? "opacity-100" : "opacity-0"
-                    }`}
-                  >
-                    <div className="flex justify-center py-10 2xl:pb-24 2xl:pt-24">
-                      <Link to="/">
-                        <img
-                          src={logoDesktop}
-                          alt="Logo"
-                          className="w-32 lg:w-44"
-                        />
-                      </Link>
-                    </div>
-                  </div>
+                  <div className="flex justify-center py-10 2xl:pb-24 2xl:pt-24">
+      <div
+        className={`w-32 lg:w-44 animated ${mostrarContenido ? 'fadeIn' : ''}`}
+      >
+        <Link to="/">
+          <img
+            src={logoDesktop}
+            alt="Logo"
+            className="w-full h-auto"
+          />
+        </Link>
+      </div>
+    </div>
 
                   <div className="flex justify-center w-full xl:w-3/4 2xl:px-28 mx-auto ">
                     <div
@@ -329,15 +290,16 @@ const MenuDesktop = () => {
                           : "opacity-100"
                       }`}
                     >
-<p
-  style={playfairFontRegular}
-  className={`menu-desk sombra-menu tracking-wider ${
-    isMenu1Hovered ? "text-[#F3EEE3]" : "text-[#c4b27d]"
-  } ${isVisible2 ? "opacity-100 transition-opacity duration-500" : "opacity-0 transition-opacity duration-500"}`}
->
+                      <p
+                        style={playfairFontRegular}
+                        className={`menu-desk sombra-menu tracking-wider ${
+                          isMenu1Hovered ? "text-[#F3EEE3]" : "text-[#c4b27d]"
+                        }`}
+                      >
                         History
                       </p>
-                      <ul className={`text-center space-y-0 lg:space-y-1.5 transition-opacity duration-500 ${isVisible3 ? "opacity-100" : "opacity-0"}`}>                        <li>
+                      <ul className="text-center space-y-0 lg:space-y-1.5">
+                        <li>
                           <Link to="/family" style={robotoFontRegular}>
                             <span className="subMenu tracking-widest">
                               FAMILY
@@ -364,15 +326,15 @@ const MenuDesktop = () => {
                           : "opacity-100"
                       }`}
                     >
-<p
-  style={playfairFontRegular}
-  className={`text-center menu-desk sombra-menu tracking-wider ${
-    isMenu2Hovered ? "text-[#f3eee3]" : "text-[#c4b27d]"
-  } transition-opacity duration-500 ${isVisible2 ? "opacity-100" : "opacity-0"}`}
->
+                      <p
+                        style={playfairFontRegular}
+                        className={`text-center menu-desk sombra-menu  tracking-wider ${
+                          isMenu2Hovered ? "text-[#f3eee3]" : "text-[#c4b27d]"
+                        }`}
+                      >
                         Patagonian Spirit
                       </p>
-                      <ul className={`text-center space-y-0 lg:space-y-1.5 transition-opacity duration-500 ${isVisible3 ? "opacity-100" : "opacity-0"}`}>
+                      <ul className="text-center space-y-0 lg:space-y-1.5">
                         <li>
                           <Link
                             to="/araucanavineyard"
@@ -424,16 +386,16 @@ const MenuDesktop = () => {
                           : "opacity-100"
                       }`}
                     >
-<p
-  style={playfairFontRegular}
-  className={`text-center menu-desk sombra-menu tracking-wider ${
-    isMenu3Hovered ? "text-[#f3eee3]" : "text-[#c4b27d]"
-  } transition-opacity duration-500 ${isVisible2 ? "opacity-100" : "opacity-0"}`}
->
+                      <p
+                        style={playfairFontRegular}
+                        className={`text-center menu-desk sombra-menu  tracking-wider ${
+                          isMenu3Hovered ? "text-[#f3eee3]" : "text-[#c4b27d]"
+                        }`}
+                      >
                         Wines
                       </p>
                       <animated.div style={dropdownAnimation3}>
-                      <ul className={`text-center space-y-0 lg:space-y-1 transition-opacity duration-500 ${isVisible3 ? "opacity-100" : "opacity-0"}`}>
+                        <ul className="text-center space-y-0 lg:space-y-1">
                           <li>
                             <p style={robotoFontRegular} onClick={opcion4}>
                               <span className="!mb-0 subMenu tracking-widest">

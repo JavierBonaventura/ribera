@@ -460,3 +460,17 @@ img {
 .animate-border-delay {
   animation: appear-border 3s forwards; /* 3s de retraso */
 }
+
+
+
+/* aparicion de logo gradual */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px); /* Otras transformaciones que desees */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Otras transformaciones que desees */
+  }
+}
