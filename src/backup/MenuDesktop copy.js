@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import { Transition } from "@react-spring/web";
 import { useSpring, animated } from "@react-spring/web";
 import { useLocation } from "react-router-dom";
+import "../App.css";
 
 const MenuDesktop = () => {
   const [igHovered, setIgHovered] = useState(false);
@@ -236,8 +237,19 @@ const MenuDesktop = () => {
             ></video>
 
             <div className="w-full h-full">
-              <div className="border border-[#F3EEE3] w-full h-full p-2 relative flex flex-col justify-center items-center">
-                <div className="w-full h-full border border-[#F3EEE3] relative">
+              <div class="w-full h-full p-2.5 relative flex flex-col justify-center items-center">
+                {/* lineas horizontales exteriores */}
+                <div class="w-0 h-0.5 bg-[#F3EEE3] bg-opacity-50  absolute top-0 left-0 animate-line-left"></div>
+                <div class="w-0 h-0.5 bg-[#F3EEE3] bg-opacity-50  absolute bottom-0 left-0 animate-line-left"></div>
+
+                <div class="w-0 h-0.5 bg-[#F3EEE3] bg-opacity-50   absolute top-0 right-0 animate-line-right"></div>
+                <div class="w-0 h-0.5 bg-[#F3EEE3] bg-opacity-50  absolute bottom-0 right-0 animate-line-right"></div>
+                {/* lineas verticales exteriores  */}
+                <div class="w-0.5 bg-[#F3EEE3] bg-opacity-50  absolute vertical-line-top-left"></div>
+                <div class="w-0.5 bg-[#F3EEE3] bg-opacity-50  absolute vertical-line-top-right"></div>
+                <div class="w-0.5 bg-[#F3EEE3] bg-opacity-50   absolute vertical-line-bottom-left"></div>
+                <div class="w-0.5 bg-[#F3EEE3] bg-opacity-50  absolute vertical-line-bottom-right"></div>
+                <div className="w-full h-full border-2 border-[#F3EEE3]  border-opacity-80  relative inset-0 animate-border-delay">
                   <div className="flex justify-end items-center pr-4 py-5 ">
                     <Link
                       to="/MenuHamburguesa"
@@ -254,14 +266,18 @@ const MenuDesktop = () => {
                     </Link>
                   </div>
                   <div className="flex justify-center py-10 2xl:pb-24 2xl:pt-24">
-                    <Link to="/">
-                      <img
-                        src={logoDesktop}
-                        alt="Logo"
-                        className="w-32 lg:w-44"
-                      />
-                    </Link>
-                  </div>
+      <div
+        className={`w-32 lg:w-44 animated ${mostrarContenido ? 'fadeIn' : ''}`}
+      >
+        <Link to="/">
+          <img
+            src={logoDesktop}
+            alt="Logo"
+            className="w-full h-auto"
+          />
+        </Link>
+      </div>
+    </div>
 
                   <div className="flex justify-center w-full xl:w-3/4 2xl:px-28 mx-auto ">
                     <div
@@ -547,7 +563,7 @@ const MenuDesktop = () => {
                             href=""
                             className="hover:text-[#C4B27D]  duration-300 transition ease-in-out tracking-widest"
                           >
-                            News
+                            Press
                           </a>
                         </div>
                       </div>
@@ -561,7 +577,7 @@ const MenuDesktop = () => {
                         />
                         <a
                           target="_blank"
-                          href="https://www.google.com.ar/maps/place/39%C2%B011'17.0%22S+66%C2%B052'26.0%22W/@-39.1880556,-66.8738889,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-39.1880556!4d-66.8738889?entry=ttu"
+                          href="https://www.google.com.ar/maps/place/39%C2%B011'17.0%22S+66%C2%B052'26.0%22W/@-39.1880556,-66.8738889,853m/data=!3m1!1e3!4m4!3m3!8m2!3d-39.1880556!4d-66.8738889!5m1!1e1?entry=ttu"
                           className="flex flex-col text-center"
                         >
                           <span className="uppercase tracking-[0.17em] text-xs lg:text-sm ">

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import workVineyardSlide0 from "../images/generica-vineyard.png";
 import workVineyardSlide1 from "../images/pruning.jpg";
 import workVineyardSlide2 from "../images/trellising.jpg";
@@ -13,42 +13,6 @@ import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
 
 const CarouselSlider = () => {
-  // inicio codigo para retrasar la aparicion del titulo
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsVisible(true);
-    }, 500);
-
-    return () => clearTimeout(timeout);
-  }, []);
-  // fin codigo para retrasar la aparicion del titulo
-
-  // inicio codigo para retrasar la aparicion del parrafo
-  const [isVisible2, setIsVisible2] = useState(false);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsVisible2(true);
-    }, 700);
-
-    return () => clearTimeout(timeout);
-  }, []);
-  // fin codigo para retrasar la aparicion del parrafo
-
-  // inicio codigo para demorar la aparcion de la imagen al inciio
-  const [opacity, setOpacity] = useState(0);
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setOpacity(100);
-    }, 800);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  // fin codigo para demorar la aparcion de la imagen al inciio
-
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
     fontWeight: "normal",
@@ -143,13 +107,7 @@ const CarouselSlider = () => {
           id="pataginan"
           className="container max-w-screen-xl xl:max-w-screen-2xl mx-auto md:px-5 2xl:px-0 py-10 fixed top-28 left-0 right-0 z-50"
         >
-          <div
-            className={`flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0 ${
-              isVisible
-                ? "opacity-100 transition-opacity duration-500"
-                : "opacity-0 transition-opacity duration-500"
-            }`}
-          >
+          <div class="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0">
             <h1
               class="text-[#ffffff] text-lg tracking-widest"
               style={playfairFontItalic}
@@ -165,15 +123,11 @@ const CarouselSlider = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-10 left-0 right-0 flex justify-center z-50">
-          {renderIndicators()}
-        </div>
-
         {images.map((image, index) => (
           <div
             key={index}
-            className={`w-full ${
-              activeIndex === index ? "slide-active" : "slide-exit"
+            className={`w-full  ${
+              activeIndex === index ? "visible" : "invisible"
             }`}
             style={{
               position: activeIndex === index ? "relative" : "absolute",
@@ -182,8 +136,18 @@ const CarouselSlider = () => {
             <img
               src={image}
               alt={`Image ${index + 1}`}
-              className={`w-full h-screen object-cover brightness-50 fade-transition opacity-${opacity}`}
+              className={`w-full h-screen object-cover  ${
+                activeIndex === index
+                  ? "fade-transition brightness-50 opacity-100"
+                  : "fade-transition opacity-0"
+              }`}
             />
+
+            {activeIndex === index && (
+              <div className="absolute bottom-10 left-0 right-0 flex justify-center">
+                {renderIndicators()}
+              </div>
+            )}
           </div>
         ))}
       </div>
@@ -252,16 +216,10 @@ const CarouselSlider = () => {
             {title[currentImageIndex]}
           </p>
         </div>
-        <div
-          className={`w-2/4 container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-1/2 fixed top-40 left-0 right-0 md:px-5 2xl:px-0 absolute inset-0 flex items-center justify-center ${
-            isVisible2
-              ? "opacity-100 transition-opacity duration-500"
-              : "opacity-0 transition-opacity duration-500"
-          }`}
-        >
+        <div className=" w-2/4  container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-1/2 fixed top-40 left-0 right-0  md:px-5 2xl:px-0 absolute inset-0 flex items-center justify-center ">
           <p
             style={playfairFontRegular}
-            className="text-[#ffffff] text-base leading-7 tracking-wider text-center mb-8"
+            className=" text-[#ffffff] text-base leading-7 tracking-wider text-center mb-8"
           >
             {paragraphs[currentImageIndex]}
           </p>
