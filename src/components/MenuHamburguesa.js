@@ -408,7 +408,7 @@ const Home = () => {
                   style={roboto}
                   className="uppercase footerItems tracking-widest  hover:underline"
                 >
-                  News
+                  Press
                 </p>
               </div>
               <div className=" w-full  text-center flex flex-col gap-y-5 text-sm ">

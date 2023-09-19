@@ -6,6 +6,7 @@ import hambur from "../images/menu-hambur.png";
 import ilustrationHistory from "../images/dibujofamily.png";
 import arrowDown from "../images/arrow-down.png";
 import carruajeHistory from "../images/carruaje-history.jpg";
+import familiaCaballos from "../images/family-caballos.jpg";
 import familia from "../images/familia-felipe.png";
 import iconIg from "../images/icon-ig.png";
 import felipe from "../images/felipe.jpg";
@@ -94,8 +95,8 @@ const Family = () => {
               </header>
 
               <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
-                <div class="pt-24 md:pb-10 lg:pt-24 2xl:pt-36 md:h-screen flex flex-col gap-y-5 2xl:gap-y-10">
-                  <div class="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0">
+                <div class="pt-24 pb-24 md:pb-10 lg:pt-24 2xl:pt-36  flex flex-col gap-y-2 xl:gap-y-5">
+                  <div class="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0 ">
                     <h1
                       style={playfairFontItalic}
                       class="text-[#5f5f5e] text-xs md:text-lg tracking-widest"
@@ -109,20 +110,27 @@ const Family = () => {
                       Family
                     </h2>
                   </div>
-                  <div class="relative flex justify-center items-center pt-5 md:pt-0">
+                  <div class="relative flex justify-center items-center ">
                     <img
                       src={ilustrationHistory}
                       alt=""
-                      class="w-full md:w-[45rem] xl:w-[46rem] 2xl:w-7/12  "
+                      class="w-7/12 md:w-3/12"
                     />
                     <h1
                       style={playfairFontExtraBold}
-                      class="text-[#C4B27D] text-5xl absolute font-bold md:text-7xl xl:text-8xl md:pt-40"
+                      class="text-[#C4B27D] text-2xl pt-10 absolute font-bold sm:text-4xl 2xl:text-5xl sm:pt-20 lg:pt-24 "
                     >
                       1883 - 2023
                     </h1>
                   </div>
-                  <div className="py-28 md:py-0">
+                  <div class="flex justify-center items-center  md:pt-0 px-4 md:px-0 bg">
+                    <img
+                      src={familiaCaballos}
+                      alt=""
+                      class="w-full md:w-10/12 xl:w-8/12 shadow-2xl"
+                    />
+                  </div>
+                  <div className="py-28 md:py-0 hidden">
                     <div className="flex justify-center">
                       <div
                         className="border border-[#C3B17D] rounded-full p-6 md:p-6 relative flex justify-center items-center hover:scale-90 transition ease-in-out duration-500 cursor-pointer"

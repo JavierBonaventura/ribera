@@ -15,7 +15,6 @@ import { useLocation } from "react-router-dom";
 import "../App.css";
 
 const MenuDesktop = () => {
-
   // inicio codigo para retrasar la aparicion del logo
   const [isVisible, setIsVisible] = useState(false);
 
@@ -28,29 +27,29 @@ const MenuDesktop = () => {
   }, []);
   // fin codigo para retrasar la aparicion del logo
 
-    // inicio codigo para retrasar la aparicion de los titulos
-    const [isVisible2, setIsVisible2] = useState(false);
+  // inicio codigo para retrasar la aparicion de los titulos
+  const [isVisible2, setIsVisible2] = useState(false);
 
-    useEffect(() => {
-      const timeout = setTimeout(() => {
-        setIsVisible2(true);
-      }, 1000);
-  
-      return () => clearTimeout(timeout);
-    }, []);
-    // fin codigo para retrasar la aparicion de los titulos
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsVisible2(true);
+    }, 1000);
 
-        // inicio codigo para retrasar la aparicion del sub menu
-        const [isVisible3, setIsVisible3] = useState(false);
+    return () => clearTimeout(timeout);
+  }, []);
+  // fin codigo para retrasar la aparicion de los titulos
 
-        useEffect(() => {
-          const timeout = setTimeout(() => {
-            setIsVisible3(true);
-          }, 1300);
-      
-          return () => clearTimeout(timeout);
-        }, []);
-        // fin codigo para retrasar la aparicion de los titulos
+  // inicio codigo para retrasar la aparicion del sub menu
+  const [isVisible3, setIsVisible3] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsVisible3(true);
+    }, 1300);
+
+    return () => clearTimeout(timeout);
+  }, []);
+  // fin codigo para retrasar la aparicion de los titulos
 
   const [igHovered, setIgHovered] = useState(false);
   const handleMouseEnter = () => {
@@ -329,15 +328,25 @@ const MenuDesktop = () => {
                           : "opacity-100"
                       }`}
                     >
-<p
-  style={playfairFontRegular}
-  className={`menu-desk sombra-menu tracking-wider ${
-    isMenu1Hovered ? "text-[#F3EEE3]" : "text-[#c4b27d]"
-  } ${isVisible2 ? "opacity-100 transition-opacity duration-500" : "opacity-0 transition-opacity duration-500"}`}
->
+                      <p
+                        style={playfairFontRegular}
+                        className={`menu-desk sombra-menu tracking-wider ${
+                          isMenu1Hovered ? "text-[#F3EEE3]" : "text-[#c4b27d]"
+                        } ${
+                          isVisible2
+                            ? "opacity-100 transition-opacity duration-500"
+                            : "opacity-0 transition-opacity duration-500"
+                        }`}
+                      >
                         History
                       </p>
-                      <ul className={`text-center space-y-0 lg:space-y-1.5 transition-opacity duration-500 ${isVisible3 ? "opacity-100" : "opacity-0"}`}>                        <li>
+                      <ul
+                        className={`text-center space-y-0 lg:space-y-1.5 transition-opacity duration-500 ${
+                          isVisible3 ? "opacity-100" : "opacity-0"
+                        }`}
+                      >
+                        {" "}
+                        <li>
                           <Link to="/family" style={robotoFontRegular}>
                             <span className="subMenu tracking-widest">
                               FAMILY
@@ -364,15 +373,21 @@ const MenuDesktop = () => {
                           : "opacity-100"
                       }`}
                     >
-<p
-  style={playfairFontRegular}
-  className={`text-center menu-desk sombra-menu tracking-wider ${
-    isMenu2Hovered ? "text-[#f3eee3]" : "text-[#c4b27d]"
-  } transition-opacity duration-500 ${isVisible2 ? "opacity-100" : "opacity-0"}`}
->
+                      <p
+                        style={playfairFontRegular}
+                        className={`text-center menu-desk sombra-menu tracking-wider ${
+                          isMenu2Hovered ? "text-[#f3eee3]" : "text-[#c4b27d]"
+                        } transition-opacity duration-500 ${
+                          isVisible2 ? "opacity-100" : "opacity-0"
+                        }`}
+                      >
                         Patagonian Spirit
                       </p>
-                      <ul className={`text-center space-y-0 lg:space-y-1.5 transition-opacity duration-500 ${isVisible3 ? "opacity-100" : "opacity-0"}`}>
+                      <ul
+                        className={`text-center space-y-0 lg:space-y-1.5 transition-opacity duration-500 ${
+                          isVisible3 ? "opacity-100" : "opacity-0"
+                        }`}
+                      >
                         <li>
                           <Link
                             to="/araucanavineyard"
@@ -424,16 +439,22 @@ const MenuDesktop = () => {
                           : "opacity-100"
                       }`}
                     >
-<p
-  style={playfairFontRegular}
-  className={`text-center menu-desk sombra-menu tracking-wider ${
-    isMenu3Hovered ? "text-[#f3eee3]" : "text-[#c4b27d]"
-  } transition-opacity duration-500 ${isVisible2 ? "opacity-100" : "opacity-0"}`}
->
+                      <p
+                        style={playfairFontRegular}
+                        className={`text-center menu-desk sombra-menu tracking-wider ${
+                          isMenu3Hovered ? "text-[#f3eee3]" : "text-[#c4b27d]"
+                        } transition-opacity duration-500 ${
+                          isVisible2 ? "opacity-100" : "opacity-0"
+                        }`}
+                      >
                         Wines
                       </p>
                       <animated.div style={dropdownAnimation3}>
-                      <ul className={`text-center space-y-0 lg:space-y-1 transition-opacity duration-500 ${isVisible3 ? "opacity-100" : "opacity-0"}`}>
+                        <ul
+                          className={`text-center space-y-0 lg:space-y-1 transition-opacity duration-500 ${
+                            isVisible3 ? "opacity-100" : "opacity-0"
+                          }`}
+                        >
                           <li>
                             <p style={robotoFontRegular} onClick={opcion4}>
                               <span className="!mb-0 subMenu tracking-widest">

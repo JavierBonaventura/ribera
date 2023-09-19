@@ -360,7 +360,7 @@ const Home = () => {
                   style={robotoFontRegular}
                   className="footerItems tracking-widest"
                 >
-                  News
+                  Press
                 </p>
               </div>
 

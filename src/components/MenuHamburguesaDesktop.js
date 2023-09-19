@@ -157,8 +157,8 @@ const MenuHamburguesaDesktop = () => {
             {/* <div className="w-full h-full">
               <div className="border border-[#F3EEE3] w-full h-full p-2 relative flex flex-col justify-center items-center">
                 <div className="w-full h-full border border-[#F3EEE3] flex flex-col justify-start relative gap-y-8 2xl:gap-y-24 pt-24 2xl:pt-36"> */}
-                     <div className="w-full h-full">
-              <div class="w-full h-full p-2.5 relative flex flex-col justify-center items-center ">
+            <div className="w-full h-full">
+              <div class="w-full h-full p-2.5 relative flex flex-col justify-center items-center">
                 {/* lineas horizontales exteriores */}
                 <div class="w-0 h-0.5 bg-[#F3EEE3] bg-opacity-50  absolute top-0 left-0 animate-line-left"></div>
                 <div class="w-0 h-0.5 bg-[#F3EEE3] bg-opacity-50  absolute bottom-0 left-0 animate-line-left"></div>
@@ -170,15 +170,15 @@ const MenuHamburguesaDesktop = () => {
                 <div class="w-0.5 bg-[#F3EEE3] bg-opacity-50  absolute vertical-line-top-right"></div>
                 <div class="w-0.5 bg-[#F3EEE3] bg-opacity-50   absolute vertical-line-bottom-left"></div>
                 <div class="w-0.5 bg-[#F3EEE3] bg-opacity-50  absolute vertical-line-bottom-right"></div>
-                <div className="w-full h-full border-2 border-[#F3EEE3]  border-opacity-80  relative inset-0 animate-border-delay">
-                  <div className="flex justify-end items-center absolute top-3 right-3 ">
+                <div className="w-full h-full border-2 border-[#F3EEE3]  border-opacity-80  relative inset-0 animate-border-delay ">
+                  <div className="flex justify-end items-center absolute top-3 right-3">
                     <Link to="/">
                       <div className=" bg-transparent border border-[#c4b27d] rounded-full p-3 transition ease-in-out duration-500 hover:scale-90">
                         <img src={x} alt="" className="w-2" />
                       </div>
                     </Link>
                   </div>
-                  <div className="flex justify-center gap-y-8 2xl:gap-y-24 pt-24 2xl:pt-36">
+                  <div className="flex justify-center py-10 md:pt-24 2xl:pb-24 2xl:pt-36 ">
                     <Link to="/">
                       <img
                         src={logoDesktop}
@@ -188,7 +188,7 @@ const MenuHamburguesaDesktop = () => {
                     </Link>
                   </div>
 
-                  <div className="flex justify-center w-full xl:w-3/4 2xl:px-28 mx-auto">
+                  <div className="flex justify-center w-full xl:w-3/4 2xl:px-28 mx-auto ">
                     <div
                       id="menu1"
                       onMouseEnter={handleMenu1Hover}
