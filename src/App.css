@@ -495,3 +495,31 @@ img {
 }
 
 
+/* animacion para que aparezcan las letras de a una  */
+
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px); /* Desplazamiento hacia abajo */
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.letter-show {
+  opacity: 1;
+  transform: translateY(0); /* Sin desplazamiento */
+}
+
+/* mas animacion  */
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-40px) translateY(60px); /* Añade traslación en el eje Y */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0); /* Añade traslación en el eje Y */
+  }
+}
+

@@ -144,35 +144,29 @@ const CarouselSlider = () => {
   const [animatedWords, setAnimatedWords] = useState([]);
 
   useEffect(() => {
-    // Dividir el párrafo en palabras de la diapositiva actual
-    const words = paragraphs[currentImageIndex].split(" ");
+   // Dividir el párrafo en palabras
+   const words = paragraphs[currentImageIndex].split(" ");
     
-    // Iniciar la animación palabra por palabra
-    let animationDelay = 0;
-    const animatedWordsArray = words.map((word, index) => {
-      animationDelay += 0.02; // Puedes ajustar el retraso de animación según tus preferencias.
-      return (
-        <span
-          key={index}
-          style={{
-            animation: `fadeInRight 1s ease ${animationDelay}s both`,
-            display: "inline-block",
-            whiteSpace: "pre", // Esto conservará los espacios en blanco
-          }}
-        >
-          {word}{" "} {/* Agrega un espacio después de cada palabra */}
-        </span>
-      );
-    });
-  
-    setAnimatedWords(animatedWordsArray);
-  }, [paragraphs, currentImageIndex]);
-  
-  // Restablecer la animación cuando cambies de diapositiva
-  useEffect(() => {
-    setAnimatedWords([]); // Limpiar palabras animadas al cambiar de diapositiva
-  }, [currentImageIndex]);
-  
+   // Iniciar la animación palabra por palabra
+   let animationDelay = 0;
+   const animatedWordsArray = words.map((word, index) => {
+     animationDelay += 0.02; // Puedes ajustar el retraso de animación según tus preferencias.
+     return (
+       <span
+         key={index}
+         style={{
+           animation: `fadeInRight 1s ease ${animationDelay}s both`,
+           display: "inline-block",
+           whiteSpace: "pre", // Esto conservará los espacios en blanco
+         }}
+       >
+         {word}{" "} {/* Agrega un espacio después de cada palabra */}
+       </span>
+     );
+   });
+
+   setAnimatedWords(animatedWordsArray);
+ }, [paragraphs, currentImageIndex]);
 
 
 
