@@ -474,25 +474,42 @@ img {
     transform: translateY(0); /* Otras transformaciones que desees */
   }
 }
-/* Clase para hacer la imagen saliente más pequeña */
-.slide-exit {
-  transform: scale(0.3);
-  opacity: 0;
-  transition: transform 1.5s ease, opacity 1.5s ease;
+
+/* Establece una transición para suavizar los cambios de opacidad y transformación */
+.slide-transition {
+  transition: opacity 1.6s ease-in-out, transform 1.6s ease-in-out;
 }
 
-/* Clase para hacer la imagen entrante más grande */
+/* Define la animación de entrada desde el margen izquierdo con opacidad */
 .slide-enter {
-  transform: scale(1);
-  opacity: 0;
+  opacity: 0; /* Empieza con opacidad 0 */
+  transform: translateX(-100%) scale(0.1); /* Cambia el valor de scale según tus necesidades */
 }
+
+/* Define la animación de salida hacia la derecha con opacidad */
+.slide-exit {
+  opacity: 0; /* Termina con opacidad 0 */
+  transform: translateX(100%) scale(0.1);
+}
+
+.slide-exit-left {
+  opacity: 0; /* Termina con opacidad 0 */
+  transform: translateX(-100%) scale(0.1);
+}
+
+
+
+
 
 /* Clase para establecer la imagen activa */
-.slide-active {
-  transform: scale(1);
+/* .slide-active {
+  transform: translateX(0);
   opacity: 1;
   transition: transform 1.5s ease, opacity 1.5s ease;
-}
+} */
+
+
+
 
 
 /* animacion para que aparezcan las letras de a una  */

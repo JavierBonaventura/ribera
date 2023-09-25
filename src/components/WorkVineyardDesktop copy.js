@@ -123,6 +123,7 @@ const CarouselSlider = () => {
   ];
   const [activeIndex, setActiveIndex] = useState(0);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   const handlePrevClick = () => {
     setActiveIndex(
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
@@ -131,12 +132,11 @@ const CarouselSlider = () => {
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
   };
-  
+
   const handleNextClick = () => {
     setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
-  
 
 
   // inicio animacion para demorar aparicion parrafo
@@ -247,23 +247,22 @@ const CarouselSlider = () => {
         </div>
 
         {images.map((image, index) => (
-  <div
-    key={index}
-    className={`w-full ${
-      activeIndex === index ? "slide-active" : "slide-exit"
-    } slide-transition`}
-    style={{
-      position: activeIndex === index ? "relative" : "absolute",
-    }}
-  >
-    <img
-      src={image}
-      alt={`Image ${index + 1}`}
-      className={`w-full h-screen object-cover brightness-50 fade-transition opacity-${opacity}`}
-    />
-  </div>
-))}
-
+          <div
+            key={index}
+            className={`w-full ${
+              activeIndex === index ? "slide-active" : "slide-exit"
+            }`}
+            style={{
+              position: activeIndex === index ? "relative" : "absolute",
+            }}
+          >
+            <img
+              src={image}
+              alt={`Image ${index + 1}`}
+              className={`w-full h-screen object-cover brightness-50 fade-transition opacity-${opacity}`}
+            />
+          </div>
+        ))}
       </div>
     );
   };
