@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import workVineyardSlide0 from "../images/generica-vineyard.png";
 import workVineyardSlide1 from "../images/pruning.jpg";
 import workVineyardSlide2 from "../images/trellising.jpg";
@@ -13,6 +13,63 @@ import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
 
 const CarouselSlider = () => {
+
+  // inicio codigo para retrasar la aparicion del titulo
+  const titleText = "work in the vineyard";
+  const [titleLetters, setTitleLetters] = useState([]);
+  const [tiempoLetras, setTiempoLetras] = useState(-1);
+
+  useEffect(() => {
+    // Divide la palabra en letras
+    const letters = titleText.split("");
+    setTitleLetters(letters);
+
+    // Muestra cada letra con un retraso
+    letters.forEach((letter, index) => {
+      setTimeout(() => {
+        setTiempoLetras(index);
+      }, 100 + index * 50); // Ajusta el tiempo entre letras aquí
+    });
+  }, []);
+    // inicio codigo para retrasar la aparicion del titulo
+
+  
+  // inicio codigo para retrasar la aparicion del titulo
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsVisible(true);
+    }, 500);
+
+    return () => clearTimeout(timeout);
+  }, []);
+  // fin codigo para retrasar la aparicion del titulo
+
+  // inicio codigo para retrasar la aparicion del parrafo
+  const [isVisible2, setIsVisible2] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsVisible2(true);
+    }, 700);
+
+    return () => clearTimeout(timeout);
+  }, []);
+  // fin codigo para retrasar la aparicion del parrafo
+
+  // inicio codigo para demorar la aparcion de la imagen al inciio
+  const [opacity, setOpacity] = useState(0);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setOpacity(100);
+    }, 800);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  // fin codigo para demorar la aparcion de la imagen al inciio
+
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
     fontWeight: "normal",
@@ -81,6 +138,60 @@ const CarouselSlider = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
+
+// Animación para demorar la aparición del párrafo
+const [animatedWords, setAnimatedWords] = useState([]);
+const [currentParagraph, setCurrentParagraph] = useState('');
+ useEffect(() => {
+    // Actualizar el párrafo actual cuando cambie currentImageIndex
+    setCurrentParagraph(paragraphs[currentImageIndex]);
+
+    // Llamar a la función de animación aquí, después de que currentParagraph se haya actualizado
+    startWordAnimation();
+  }, [currentImageIndex, paragraphs]);
+
+  const startWordAnimation = () => {
+    // Dividir el párrafo en palabras
+    const words = currentParagraph.split(" ");
+
+    // Iniciar la animación palabra por palabra
+    let animationDelay = 0;
+    const animatedWordsArray = words.map((word, index) => {
+      animationDelay += 0.2;
+      return (
+        <span
+          key={index}
+          style={{
+            animation: `fadeInRight 1s ease ${animationDelay}s both`,
+            display: "inline-block",
+            whiteSpace: "pre",
+          }}
+        >
+          {word}{" "}
+        </span>
+      );
+    });
+
+    setAnimatedWords(animatedWordsArray);
+  };
+
+
+ useEffect(() => {
+  // Actualizar el párrafo actual cuando cambie currentImageIndex
+  setCurrentParagraph(paragraphs[currentImageIndex]);
+}, [currentImageIndex, paragraphs]);
+
+
+
+  // fin animacion para demorar aparicion parrafo
+
+
+
+
+
+
+
+
   const renderImages = () => {
     return (
       <div className="transition-all ease-in-out duration-500 relative bg-[#000000]">
@@ -107,7 +218,13 @@ const CarouselSlider = () => {
           id="pataginan"
           className="container max-w-screen-xl xl:max-w-screen-2xl mx-auto md:px-5 2xl:px-0 py-10 fixed top-28 left-0 right-0 z-50"
         >
-          <div class="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0">
+          <div
+            className={`flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0 ${
+              isVisible
+                ? "opacity-100 transition-opacity duration-500"
+                : "opacity-0 transition-opacity duration-500"
+            }`}
+          >
             <h1
               class="text-[#ffffff] text-lg tracking-widest"
               style={playfairFontItalic}
@@ -115,19 +232,30 @@ const CarouselSlider = () => {
               <i style={playfairFontItalic}>Patagonian Spirit</i>
             </h1>
             <h2
-              style={playfairFontBlack}
-              className="text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
-            >
-              WORK IN THE VINEYARD
-            </h2>
+        style={playfairFontBlack}
+        className="text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
+      >
+        {titleLetters.map((letter, index) => (
+          <span
+            key={index}
+            className={`letter ${tiempoLetras >= index ? "letter-show" : ""}`}
+          >
+            {letter}
+          </span>
+        ))}
+      </h2>
           </div>
+        </div>
+
+        <div className="absolute bottom-10 left-0 right-0 flex justify-center z-50">
+          {renderIndicators()}
         </div>
 
         {images.map((image, index) => (
           <div
             key={index}
-            className={`w-full  ${
-              activeIndex === index ? "visible" : "invisible"
+            className={`w-full ${
+              activeIndex === index ? "slide-active" : "slide-exit"
             }`}
             style={{
               position: activeIndex === index ? "relative" : "absolute",
@@ -136,18 +264,8 @@ const CarouselSlider = () => {
             <img
               src={image}
               alt={`Image ${index + 1}`}
-              className={`w-full h-screen object-cover  ${
-                activeIndex === index
-                  ? "fade-transition brightness-50 opacity-100"
-                  : "fade-transition opacity-0"
-              }`}
+              className={`w-full h-screen object-cover brightness-50 fade-transition opacity-${opacity}`}
             />
-
-            {activeIndex === index && (
-              <div className="absolute bottom-10 left-0 right-0 flex justify-center">
-                {renderIndicators()}
-              </div>
-            )}
           </div>
         ))}
       </div>
@@ -177,7 +295,6 @@ const CarouselSlider = () => {
       </div>
     );
   };
-
   return (
     <div className="relative">
       <div className="overflow-hidden">
@@ -216,12 +333,18 @@ const CarouselSlider = () => {
             {title[currentImageIndex]}
           </p>
         </div>
-        <div className=" w-2/4  container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-1/2 fixed top-40 left-0 right-0  md:px-5 2xl:px-0 absolute inset-0 flex items-center justify-center ">
+        <div
+          className={`w-2/4 container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-1/2 fixed top-40 left-0 right-0 md:px-5 2xl:px-0 absolute inset-0 flex items-center justify-center ${
+            isVisible2
+              ? "opacity-100 transition-opacity duration-500"
+              : "opacity-0 transition-opacity duration-500"
+          }`}
+        >
           <p
             style={playfairFontRegular}
-            className=" text-[#ffffff] text-base leading-7 tracking-wider text-center mb-8"
+            className="text-[#ffffff] text-base leading-7 tracking-wider text-center mb-8"
           >
-            {paragraphs[currentImageIndex]}
+            {animatedWords}
           </p>
         </div>
         <button
@@ -242,6 +365,7 @@ const CarouselSlider = () => {
       </div>
     </div>
   );
+
 };
 
 export default CarouselSlider;
