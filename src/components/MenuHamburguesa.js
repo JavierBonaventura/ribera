@@ -272,7 +272,7 @@ const Home = () => {
                     <li>
                       <Link to="/lifewater" style={robotoFontRegular}>
                         <span className="subMenu tracking-widest">
-                          WATER OF LIFE
+                          WATER FOR LIFE
                         </span>
                       </Link>
                     </li>
@@ -384,7 +384,7 @@ const Home = () => {
                           <Link to="/winesworld#posicion3">
                             <p style={robotoFontRegular}>
                               <span className="subMenu tracking-widest">
-                                Ribera del Cuarzo Reserva Estibada
+                                Ribera del Cuarzo Gran Reserva
                               </span>
                             </p>
                           </Link>

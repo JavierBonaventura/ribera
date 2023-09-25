@@ -3,14 +3,14 @@ import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
-import riberaClasicoWine from "../images/ribera-clasico-wine-1.png";
+import riberaClasicoWine from "../images/ribera-clasico.png";
 import iconDownload from "../images/icon-download.png";
-import riberaEspecial from "../images/ribera-especial-wine-1.png";
-import riberaReserva from "../images/ribera-reserva-wine-1.png";
-import araucanaWine from "../images/araucana-rio-wine-1.png";
-import araucanaMalbec from "../images/araucana-malbec-wine-1.png";
-import araucanaAzul from "../images/araucana-azul-wine-1.png";
-import araucanaPinot from "../images/araucana-pino-wine-1.png";
+import riberaEspecial from "../images/ribera-especial.png";
+import riberaReserva from "../images/ribera-reserva.png";
+import araucanaWine from "../images/araucana-rio-ciervos.png";
+import araucanaMalbec from "../images/araucana-malbec.png";
+import araucanaAzul from "../images/araucana-azul.png";
+import araucanaPinot from "../images/araucana-pinot-noir.png";
 import logoTransparencia from "../images/Isologo-transparencia.svg";
 import portada from "../images/wines-portada.png";
 import iconIg from "../images/icon-ig.png";
@@ -459,7 +459,7 @@ function RioCiervos() {
                       >
                         <span className="text-base md:text-3xl">
                           Ribera del Cuarzo <br />{" "}
-                          <span className="font-bold">RESERVA ESTIBADA</span>
+                          <span className="font-bold">GRAN RESERVA</span>
                         </span>
                       </h1>
                       <h4
@@ -480,7 +480,7 @@ function RioCiervos() {
                         >
                           <span className="text-base md:text-[1.35rem] md:leading-[1.75rem]">
                             Ribera del Cuarzo <br />{" "}
-                            <span className="font-bold">RESERVA ESTIBADA</span>
+                            <span className="font-bold">GRAN RESERVA</span>
                           </span>
                         </h1>
                         <h4
@@ -497,10 +497,10 @@ function RioCiervos() {
                           className="text-[#F3EEE3] text-xs tracking-wider text-justify md:text-base"
                           style={playfairFontRegular}
                         >
-                          Reserva estibada is a barrel blend. We select the
-                          barrels that show the most elegance from the Southern
-                          sector of the vineyard, where the higher limestone
-                          content results in greater power and expression.
+                          Gran Reserva is a barrel blend. We select the barrels
+                          that show the most elegance from the Southern sector
+                          of the vineyard, where the higher limestone content
+                          results in greater power and expression.
                         </p>
                       </div>
 

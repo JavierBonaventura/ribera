@@ -519,20 +519,14 @@ const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
                         Criollo horses, an Argentine breed. In addition to using
                         tractors and machinery for efficiency in specific tasks,
                         working with animals is a form of respect and care for
-                        nature. It seeks to be rewarded with the best flavor.
-                        <br />
-                        <br />
-                        Furthermore, the horses play a role in fertilization,
-                        contributing to the compost we produce on the estate:
-                        their manure combines with organic residues from wine
-                        production and household consumption. This serves as
-                        fertilizer for the fruits and vegetables we grow for
-                        ourselves, as well as for our gardens and, of course,
-                        the vineyard. But horses also embody a way of life:
+                        nature. It seeks to be rewarded with the best flavor.{" "}
                         <br /> <br />
-                        Living with horses slows things down, allowing us to
-                        decelerate and connect with nature, exploring the land
-                        at a more leisurely and profound pace.
+                        Furthermore, the horses play a role in fertilization,
+                        contributing to the compost we produce on the estate.
+                        But horses also embody a way of life: Living with horses
+                        slows things down, allowing us to decelerate and connect
+                        with nature, to explore the land at a more measured and
+                        profound pace.
                       </p>
                     </div>
                   </div>
