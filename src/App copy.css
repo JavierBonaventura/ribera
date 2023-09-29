@@ -477,10 +477,8 @@ img {
 
 /* Establece una transición para suavizar los cambios de opacidad y transformación */
 .slide-transition {
-  transition: opacity 1s ease-in-out, transform 0.8s ease-in-out;
+  transition: opacity 1.6s ease-in-out, transform 1.6s ease-in-out;
 }
-
-
 
 /* Define la animación de entrada desde el margen izquierdo con opacidad */
 .slide-enter {
@@ -500,116 +498,15 @@ img {
 }
 
 
-/* Ocultar la barra de desplazamiento vertical */
-.carousel-slider {
-  overflow-y: hidden;
-}
 
-/* Si deseas ocultar la barra de desplazamiento horizontal */
-.carousel-slider {
-  overflow-x: hidden;
-}
 
 
 /* Clase para establecer la imagen activa */
-.slide-active {
+/* .slide-active {
   transform: translateX(0);
   opacity: 1;
   transition: transform 1.5s ease, opacity 1.5s ease;
-}
-
-/* clases para transicion de imagenes */
-.class-when-condition-1-next-is-true {
-  transform: scale(0.7);
-  
-}
-.class-when-condition-2-next-is-true {
-  transform: translateX(100%) scale(0.7);
-}
-
-.class-when-condition-3-next-is-true {
-  opacity: 0;
-  transform: translateX(-100%) scale(0.7);
-  transition: opacity 0s ease-in-out, transform 0s ease-in-out;
-}
-
-.class-when-condition-4-next-is-true {
-  transform: translateX(0%) scale(0.7);
-  overflow-x: hidden;
-}
-
-
-
-.class-when-condition-1-prev-is-true {
-  transform: scale(0.5);
-}
-.class-when-condition-2-prev-is-true {
-  transform: translateX(-100%) scale(0.7);
-}
-
-.class-when-condition-3-prev-is-true {
-  opacity: 0;
-  transform: translateX(100%) scale(0.7);
-  transition: opacity 1s ease-in-out, transform 0s ease-in-out;
-}
-
-.class-when-condition-4-prev-is-true {
-  transform: translateX(0%) scale(0.7);
-  overflow-x: hidden;
-}
-
-
-/* clases para transicion de titulos */
-
-.slide-transition-tittle {
-  transition: opacity 1s ease-in-out, transform 0.4s ease-in-out;
-}
-
-.class-when-conditionTitle-1-next-is-true {
-  transform: translateY(20%) scale(0.7);
-  
-}
-.class-when-conditionTitle-2-next-is-true {
-  transform: translateX(200%) translateY(20%) scale(0.7);
-  opacity: 0;
- 
-}
-
-.class-when-conditionTitle-3-next-is-true {
-  opacity: 0;
-  transform: translateX(-200%) translateY(20%) scale(0.7);
-  transition: opacity 0s ease-in-out, transform 0s ease-in-out;
-}
-
-.class-when-conditionTitle-4-next-is-true {
-  transform: translateX(0%) translateY(20%) scale(0.7);
-  overflow-x: hidden;
-}
-
-
-
-.class-when-conditionTitle-1-prev-is-true {
-  transform: translateY(20%) scale(0.7);
-}
-.class-when-conditionTitle-2-prev-is-true {
-  transform: translateX(-200%) translateY(20%) scale(0.7);
-  opacity: 0;
-}
-
-.class-when-conditionTitle-3-prev-is-true {
-  opacity: 0;
-  transform: translateX(200%) translateY(20%) scale(0.7);
-  transition: opacity 0s ease-in-out, transform 0s ease-in-out;
-}
-
-.class-when-conditionTitle-4-prev-is-true {
-  transform: translateX(0%) translateY(20%) scale(0.7);
-  overflow-x: hidden;
-}
-
-
-
-
+} */
 
 
 

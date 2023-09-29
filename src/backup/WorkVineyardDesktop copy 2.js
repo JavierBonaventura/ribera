@@ -13,13 +13,12 @@ import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
 
 const CarouselSlider = () => {
-
   // inicio codigo para retrasar la aparicion del titulo
-  const titleText = "work in the vineyard";
+    const titleText = "work in the vineyard";
   const [titleLetters, setTitleLetters] = useState([]);
   const [tiempoLetras, setTiempoLetras] = useState(-1);
 
-  useEffect(() => {
+ useEffect(() => {
     // Divide la palabra en letras
     const letters = titleText.split("");
     setTitleLetters(letters);
@@ -31,9 +30,12 @@ const CarouselSlider = () => {
       }, 100 + index * 50); // Ajusta el tiempo entre letras aquí
     });
   }, []);
-    // inicio codigo para retrasar la aparicion del titulo
-
   
+  
+
+
+  // inicio codigo para retrasar la aparicion del titulo
+
   // inicio codigo para retrasar la aparicion del titulo
   const [isVisible, setIsVisible] = useState(false);
 
@@ -123,7 +125,6 @@ const CarouselSlider = () => {
   ];
   const [activeIndex, setActiveIndex] = useState(0);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
   const handlePrevClick = () => {
     setActiveIndex(
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
@@ -138,48 +139,41 @@ const CarouselSlider = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
-
   // inicio animacion para demorar aparicion parrafo
 
   const [animatedWords, setAnimatedWords] = useState([]);
 
   useEffect(() => {
-   // Dividir el párrafo en palabras
-   const words = paragraphs[currentImageIndex].split(" ");
-    
-   // Iniciar la animación palabra por palabra
-   let animationDelay = 0;
-   const animatedWordsArray = words.map((word, index) => {
-     animationDelay += 0.02; // Puedes ajustar el retraso de animación según tus preferencias.
-     return (
-       <span
-         key={index}
-         style={{
-           animation: `fadeInRight 1s ease ${animationDelay}s both`,
-           display: "inline-block",
-           whiteSpace: "pre", // Esto conservará los espacios en blanco
-         }}
-       >
-         {word}{" "} {/* Agrega un espacio después de cada palabra */}
-       </span>
-     );
-   });
+    // Dividir el párrafo en palabras de la diapositiva actual
+    const words = paragraphs[currentImageIndex].split(" ");
 
-   setAnimatedWords(animatedWordsArray);
- }, [paragraphs, currentImageIndex]);
+    // Iniciar la animación palabra por palabra
+    let animationDelay = 0;
+    const animatedWordsArray = words.map((word, index) => {
+      animationDelay += 0.02; // Puedes ajustar el retraso de animación según tus preferencias.
+      return (
+        <span
+          key={index}
+          style={{
+            animation: `fadeInRight 1s ease ${animationDelay}s both`,
+            display: "inline-block",
+            whiteSpace: "pre", // Esto conservará los espacios en blanco
+          }}
+        >
+          {word} {/* Agrega un espacio después de cada palabra */}
+        </span>
+      );
+    });
 
+    setAnimatedWords(animatedWordsArray);
+  }, [paragraphs, currentImageIndex]);
 
-
-
+  // Restablecer la animación cuando cambies de diapositiva
+  useEffect(() => {
+    setAnimatedWords([]); // Limpiar palabras animadas al cambiar de diapositiva
+  }, [currentImageIndex]);
 
   // fin animacion para demorar aparicion parrafo
-
-
-
-
-
-
-
 
   const renderImages = () => {
     return (
@@ -221,18 +215,20 @@ const CarouselSlider = () => {
               <i style={playfairFontItalic}>Patagonian Spirit</i>
             </h1>
             <h2
-        style={playfairFontBlack}
-        className="text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
-      >
-        {titleLetters.map((letter, index) => (
-          <span
-            key={index}
-            className={`letter ${tiempoLetras >= index ? "letter-show" : ""}`}
-          >
-            {letter}
-          </span>
-        ))}
-      </h2>
+              style={playfairFontBlack}
+              className="text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
+            >
+              {titleLetters.map((letter, index) => (
+                <span
+                  key={index}
+                  className={`letter ${
+                    tiempoLetras >= index ? "letter-show" : ""
+                  }`}
+                >
+                  {letter}
+                </span>
+              ))}
+            </h2>
           </div>
         </div>
 
@@ -245,7 +241,7 @@ const CarouselSlider = () => {
             key={index}
             className={`w-full ${
               activeIndex === index ? "slide-active" : "slide-exit"
-            }`}
+            } slide-transition`}
             style={{
               position: activeIndex === index ? "relative" : "absolute",
             }}
@@ -330,12 +326,12 @@ const CarouselSlider = () => {
               : "opacity-0 transition-opacity duration-500"
           }`}
         >
-  <p
-      style={playfairFontRegular}
-      className="text-[#ffffff] text-base leading-7 tracking-wider text-center mb-8"
-    >
-      {animatedWords}
-    </p>
+          <p
+            style={playfairFontRegular}
+            className="text-[#ffffff] text-base leading-7 tracking-wider text-center mb-8"
+          >
+            {animatedWords}
+          </p>
         </div>
         <button
           aria-label="next"

@@ -13,27 +13,8 @@ import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
 
 const CarouselSlider = () => {
-
-  // inicio codigo para retrasar la aparicion del titulo
-  const titleText = "work in the vineyard";
-  const [titleLetters, setTitleLetters] = useState([]);
-  const [tiempoLetras, setTiempoLetras] = useState(-1);
-
-  useEffect(() => {
-    // Divide la palabra en letras
-    const letters = titleText.split("");
-    setTitleLetters(letters);
-
-    // Muestra cada letra con un retraso
-    letters.forEach((letter, index) => {
-      setTimeout(() => {
-        setTiempoLetras(index);
-      }, 100 + index * 50); // Ajusta el tiempo entre letras aquí
-    });
-  }, []);
-    // inicio codigo para retrasar la aparicion del titulo
-
-  
+ 
+ 
   // inicio codigo para retrasar la aparicion del titulo
   const [isVisible, setIsVisible] = useState(false);
 
@@ -113,7 +94,7 @@ const CarouselSlider = () => {
     "Maintaining traditional work methods helps us never lose sight of our connection with the land, which defines us as farmers. In addition to using tractors and other machinery to be efficient in specific tasks, working with animals like our Criollo horses, an Argentine breed, is a form of respect and care for nature, seeking to be rewarded with the finest flavor.",
   ];
   const title = [
-    "",
+    "TITLE 1",
     "PRUNING",
     "TYING",
     "TOPPING",
@@ -124,20 +105,59 @@ const CarouselSlider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const handlePrevClick = () => {
+    setcondition1Prev(true);
+    setTimeout(() => {
+      setcondition1Prev(false);
+      setcondition2Prev(true);
+      setTimeout(() => {
+        setCurrentSlide((prevSlide) =>
+        prevSlide === 0 ? images.length - 1 : prevSlide - 1
+      );
+        setcondition2Prev(false);
+        setcondition3Prev(true); // Activar condition3Prev en la nueva imagen
+        setTimeout(() => {
+          setcondition3Prev(false);
+          setcondition4Prev(true); // Activar condition4Prev en la nueva imagen
+          setTimeout(() => {
+            setcondition4Prev(false);
+      
+          }, 800);
+        }, 100);
+      }, 800);
+    }, 800);
     setActiveIndex(
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
     setCurrentImageIndex(
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
+    
   };
-  
+
   const handleNextClick = () => {
     setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    setcondition1Next(true);
+    setTimeout(() => {
+      setcondition1Next(false);
+      setcondition2Next(true);
+      setTimeout(() => {
+        setCurrentSlide((prevSlide) =>
+        prevSlide === images.length - 1 ? 0 : prevSlide + 1
+      );
+        setcondition2Next(false);
+        setcondition3Next(true); // Activar condition3Next en la nueva imagen
+        setTimeout(() => {
+          setcondition3Next(false);
+          setcondition4Next(true); // Activar condition4Next en la nueva imagen
+          setTimeout(() => {
+            setcondition4Next(false);
+      
+          }, 800);
+        }, 100);
+      }, 800);
+    }, 800);
   };
-  
-
 
   // inicio animacion para demorar aparicion parrafo
 
@@ -146,7 +166,7 @@ const CarouselSlider = () => {
   useEffect(() => {
     // Dividir el párrafo en palabras de la diapositiva actual
     const words = paragraphs[currentImageIndex].split(" ");
-    
+
     // Iniciar la animación palabra por palabra
     let animationDelay = 0;
     const animatedWordsArray = words.map((word, index) => {
@@ -160,30 +180,32 @@ const CarouselSlider = () => {
             whiteSpace: "pre", // Esto conservará los espacios en blanco
           }}
         >
-          {word}{" "} {/* Agrega un espacio después de cada palabra */}
+          {word} {/* Agrega un espacio después de cada palabra */}
         </span>
       );
     });
-  
+
     setAnimatedWords(animatedWordsArray);
   }, [paragraphs, currentImageIndex]);
-  
+
   // Restablecer la animación cuando cambies de diapositiva
   useEffect(() => {
     setAnimatedWords([]); // Limpiar palabras animadas al cambiar de diapositiva
   }, [currentImageIndex]);
-  
-
-
-
-
 
   // fin animacion para demorar aparicion parrafo
 
 
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [condition1Next, setcondition1Next] = useState(false);
+  const [condition2Next, setcondition2Next] = useState(false);
+  const [condition3Next, setcondition3Next] = useState(false);
+  const [condition4Next, setcondition4Next] = useState(false);
 
-
-
+  const [condition1Prev, setcondition1Prev] = useState(false);
+  const [condition2Prev, setcondition2Prev] = useState(false);
+  const [condition3Prev, setcondition3Prev] = useState(false);
+  const [condition4Prev, setcondition4Prev] = useState(false);
 
 
 
@@ -227,18 +249,11 @@ const CarouselSlider = () => {
               <i style={playfairFontItalic}>Patagonian Spirit</i>
             </h1>
             <h2
-        style={playfairFontBlack}
-        className="text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
-      >
-        {titleLetters.map((letter, index) => (
-          <span
-            key={index}
-            className={`letter ${tiempoLetras >= index ? "letter-show" : ""}`}
-          >
-            {letter}
-          </span>
-        ))}
-      </h2>
+              style={playfairFontBlack}
+              className="text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
+            >
+              WORK IN THE VINEYARD
+            </h2>
           </div>
         </div>
 
@@ -246,24 +261,30 @@ const CarouselSlider = () => {
           {renderIndicators()}
         </div>
 
-        {images.map((image, index) => (
-  <div
-    key={index}
-    className={`w-full ${
-      activeIndex === index ? "slide-active" : "slide-exit"
-    } slide-transition`}
-    style={{
-      position: activeIndex === index ? "relative" : "absolute",
-    }}
-  >
-    <img
-      src={image}
-      alt={`Image ${index + 1}`}
-      className={`w-full h-screen object-cover brightness-50 fade-transition opacity-${opacity}`}
-    />
-  </div>
-))}
 
+
+        <img
+        src={images[currentSlide]}       
+        className={`w-full h-screen object-cover brightness-50 fade-transition opacity-${opacity} ${
+          condition1Next
+            ? "class-when-condition-1-next-is-true"
+            : condition2Next
+            ? "class-when-condition-2-next-is-true"
+            : condition3Next
+            ? "class-when-condition-3-next-is-true"
+            : condition4Next
+            ? "class-when-condition-4-next-is-true"
+            : condition1Prev
+            ? "class-when-condition-1-prev-is-true"
+            : condition2Prev
+            ? "class-when-condition-2-prev-is-true"
+            : condition3Prev
+            ? "class-when-condition-3-prev-is-true"
+            : condition4Prev
+            ? "class-when-condition-4-prev-is-true"
+            : "class-when-neither-condition-is-true"
+        } slide-transition`}
+      />
       </div>
     );
   };
@@ -325,9 +346,30 @@ const CarouselSlider = () => {
         <div className="w-96 container  mx-auto max-w-screen-xl xl:max-w-screen-2xl  py-1/2 fixed -top-32 left-0 right-0  md:px-5 2xl:px-0 absolute inset-0 flex items-center justify-center ">
           <p
             style={robotoFontRegular}
-            className=" uppercase text-[#C4B27D] text-2xl mb-8"
+            className={`uppercase text-[#C4B27D] text-2xl mb-8 ${
+              condition1Next
+                ? "class-when-conditionTitle-1-next-is-true"
+                : condition2Next
+                ? "class-when-conditionTitle-2-next-is-true"
+                : condition3Next
+                ? "class-when-conditionTitle-3-next-is-true"
+                : condition4Next
+                ? "class-when-conditionTitle-4-next-is-true"
+                : condition1Prev
+                ? "class-when-conditionTitle-1-prev-is-true"
+                : condition2Prev
+                ? "class-when-conditionTitle-2-prev-is-true"
+                : condition3Prev
+                ? "class-when-conditionTitle-3-prev-is-true"
+                : condition4Prev
+                ? "class-when-conditionTitle-4-prev-is-true"
+                : "class-when-neither-condition-is-true"
+            } slide-transition`}
           >
-            {title[currentImageIndex]}
+           
+        {title[currentSlide]}       
+       
+     
           </p>
         </div>
         <div
@@ -337,12 +379,12 @@ const CarouselSlider = () => {
               : "opacity-0 transition-opacity duration-500"
           }`}
         >
-  <p
-      style={playfairFontRegular}
-      className="text-[#ffffff] text-base leading-7 tracking-wider text-center mb-8"
-    >
-      {animatedWords}
-    </p>
+          <p
+            style={playfairFontRegular}
+            className="text-[#ffffff] text-base leading-7 tracking-wider text-center mb-8"
+          >
+            {animatedWords}
+          </p>
         </div>
         <button
           aria-label="next"
