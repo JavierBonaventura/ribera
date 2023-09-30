@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
@@ -14,43 +14,6 @@ import "../App.css";
 import { Transition, animated } from "@react-spring/web";
 
 const Family = () => {
-  // inicio codigo para retrasar la aparicion de History
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsVisible(true);
-    }, 800);
-
-    return () => clearTimeout(timeout);
-  }, []);
-  // fin codigo para retrasar la aparicion de History
-
-  // inicio codigo para retrasar la aparicion de los titulos
-  const [isVisible2, setIsVisible2] = useState(false);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsVisible2(true);
-    }, 1000);
-
-    return () => clearTimeout(timeout);
-  }, []);
-  // fin codigo para retrasar la aparicion de los titulos
-
-  // inicio codigo para retrasar la aparicion del sub menu
-  const [isVisible3, setIsVisible3] = useState(false);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsVisible3(true);
-    }, 1300);
-
-    return () => clearTimeout(timeout);
-  }, []);
-  // fin codigo para retrasar la aparicion de los titulos
-
-  
   const [igHovered, setIgHovered] = useState(false);
   const handleMouseEnter = () => {
     setIgHovered(true);
@@ -136,30 +99,18 @@ const Family = () => {
                   <div class="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0 ">
                     <h1
                       style={playfairFontItalic}
-                      className={`text-[#5f5f5e] text-xs md:text-lg tracking-widest ${
-                        isVisible
-                          ? "opacity-100 transition-opacity duration-500"
-                          : "opacity-0 transition-opacity duration-500"
-                      }`}
+                      class="text-[#5f5f5e] text-xs md:text-lg tracking-widest"
                     >
-
                       <i style={playfairFontItalic}>History</i>
                     </h1>
                     <h2
-        style={playfairFontBlack}
-        className={`text-base md:text-2xl text-[#C4B27D] tracking-wider uppercase ${
-          isVisible2 ? 'appear-from-bottom' : 'invisible'
-        }`}
-      >
-        Family
-      </h2>
+                      style={playfairFontBlack}
+                      className="text-base md:text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
+                    >
+                      Family
+                    </h2>
                   </div>
-                  <div className={`relative flex justify-center items-center ${
-                        isVisible3
-                          ? "opacity-100 transition-opacity duration-500"
-                          : "opacity-0 transition-opacity duration-500"
-                      }`}>
-                  
+                  <div class="relative flex justify-center items-center ">
                     <img
                       src={ilustrationHistory}
                       alt=""

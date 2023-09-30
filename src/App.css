@@ -643,3 +643,21 @@ img {
   }
 }
 
+
+
+/* componente family */
+/* TuComponente.css */
+
+/* TuComponente.css */
+
+.invisible {
+  transform: scaleY(0);
+  transform-origin: bottom center; /* Establecer el origen en la base inferior */
+  transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+}
+
+.appear-from-bottom {
+  transform: scaleY(1);
+  transform-origin: bottom center; /* Establecer el origen en la base inferior */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
