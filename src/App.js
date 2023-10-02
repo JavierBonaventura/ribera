@@ -26,8 +26,8 @@ import MenuHamburguesa from "./components/MenuHamburguesa";
 import MenuHamburguesaDesktop from "./components/MenuHamburguesaDesktop";
 import ValleAzul from "./components/ValleAzul";
 import FormularioContacto from "./components/FormularioContacto";
+import Press from "./components/Press";
 import "./App.css";
-
 
 function App() {
   return (
@@ -95,7 +95,6 @@ const AppContent = () => {
               />
             )}
             <Routes location={item}>
-
               {windowWidth < 768 ? (
                 <Route path="/" element={<Menu />} />
               ) : (
@@ -125,6 +124,7 @@ const AppContent = () => {
               )}
 
               <Route path="/lifewater" element={<LifeWater />} />
+              <Route path="/press" element={<Press />} />
               <Route path="/lifewaterread" element={<LifeWaterRead />} />
               <Route path="/winesworld" element={<WinesWorld />} />
               <Route path="/winesargentina" element={<WinesArgentina />} />

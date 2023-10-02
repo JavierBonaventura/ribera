@@ -618,12 +618,13 @@ const MenuDesktop = () => {
                         </div>
 
                         <div className="uppercase">
-                          <a
+                          <Link
+                            to="/Press"
                             href=""
                             className="hover:text-[#C4B27D]  duration-300 transition ease-in-out tracking-widest"
                           >
                             Press
-                          </a>
+                          </Link>
                         </div>
                       </div>
                       <div

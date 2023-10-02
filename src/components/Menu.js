@@ -356,12 +356,13 @@ const Home = () => {
                   Contact
                 </Link>
 
-                <p
+                <Link
+                  to="/press"
                   style={robotoFontRegular}
                   className="footerItems tracking-widest"
                 >
                   Press
-                </p>
+                </Link>
               </div>
 
               <div className="container mx-auto flex justify-center">

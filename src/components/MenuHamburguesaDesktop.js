@@ -426,9 +426,12 @@ const MenuHamburguesaDesktop = () => {
                         </Link>
                       </div>
                       <div>
-                        <span className="text-[#F3EEE3] hover:text-[#c4b27d] transition ease-in-out duration-300">
-                          <a href="">Press</a>
-                        </span>
+                        <Link
+                          to="/press"
+                          className="text-[#F3EEE3] hover:text-[#c4b27d] transition ease-in-out duration-300"
+                        >
+                          <span>Press</span>
+                        </Link>
                       </div>
                     </div>
                     <div className="w-full flex justify-center items-center text-base">
@@ -498,12 +501,13 @@ const MenuHamburguesaDesktop = () => {
                         </div>
 
                         <div className="uppercase">
-                          <a
+                          <Link
+                            to="/press"
                             href=""
                             className="hover:text-[#c4b27d]  duration-300 transition ease-in-out tracking-widest"
                           >
                             Press
-                          </a>
+                          </Link>
                         </div>
                       </div>
                       <div

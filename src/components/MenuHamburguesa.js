@@ -404,12 +404,13 @@ const Home = () => {
                 >
                   Contact
                 </Link>
-                <p
+                <Link
+                  to="/press"
                   style={roboto}
                   className="uppercase footerItems tracking-widest  hover:underline"
                 >
                   Press
-                </p>
+                </Link>
               </div>
               <div className=" w-full  text-center flex flex-col gap-y-5 text-sm ">
                 <div
