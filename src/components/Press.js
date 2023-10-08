@@ -340,15 +340,15 @@ function Press() {
                           className="text-sm lg:text-base"
                           style={playfairFontItalic}
                         >
-                        {anioVisible === 0
-      ? fechas2020[1]
-      : anioVisible === 1
-      ? fechas2021[1]
-      : anioVisible === 2
-      ? fechas2022[1]
-      : anioVisible === 3
-      ? fechas2023[1]
-      : ""}
+                          {anioVisible === 0
+                            ? fechas2020[1]
+                            : anioVisible === 1
+                            ? fechas2021[1]
+                            : anioVisible === 2
+                            ? fechas2022[1]
+                            : anioVisible === 3
+                            ? fechas2023[1]
+                            : ""}
                         </span>
                       </div>
                       <div>
@@ -386,14 +386,14 @@ function Press() {
                           style={playfairFontItalic}
                         >
                           {anioVisible === 0
-      ? fechas2020[2]
-      : anioVisible === 1
-      ? fechas2021[2]
-      : anioVisible === 2
-      ? fechas2022[2]
-      : anioVisible === 3
-      ? fechas2023[2]
-      : ""}
+                            ? fechas2020[2]
+                            : anioVisible === 1
+                            ? fechas2021[2]
+                            : anioVisible === 2
+                            ? fechas2022[2]
+                            : anioVisible === 3
+                            ? fechas2023[2]
+                            : ""}
                         </span>
                       </div>
                       <div>

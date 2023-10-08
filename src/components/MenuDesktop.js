@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-import fondoDesktop from "../images/fondoDesktop.png";
 import videoDesktop from "../images/videoHome.mp4";
 import videoHistory from "../images/videoHistory.mp4";
 import videoWines from "../images/videoWines.mp4";

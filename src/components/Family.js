@@ -11,6 +11,7 @@ import familia from "../images/familia-felipe.png";
 import iconIg from "../images/icon-ig.png";
 import felipe from "../images/felipe.jpg";
 import "../App.css";
+import SliderFamily from "./SliderFamily";
 import { Transition, animated } from "@react-spring/web";
 
 const Family = () => {
@@ -50,7 +51,6 @@ const Family = () => {
   }, []);
   // fin codigo para retrasar la aparicion de los titulos
 
-  
   const [igHovered, setIgHovered] = useState(false);
   const handleMouseEnter = () => {
     setIgHovered(true);
@@ -142,24 +142,24 @@ const Family = () => {
                           : "opacity-0 transition-opacity duration-500"
                       }`}
                     >
-
                       <i style={playfairFontItalic}>History</i>
                     </h1>
                     <h2
-        style={playfairFontBlack}
-        className={`text-base md:text-2xl text-[#C4B27D] tracking-wider uppercase ${
-          isVisible2 ? 'appear-from-bottom' : 'invisible'
-        }`}
-      >
-        Family
-      </h2>
+                      style={playfairFontBlack}
+                      className={`text-base md:text-2xl text-[#C4B27D] tracking-wider uppercase ${
+                        isVisible2 ? "appear-from-bottom" : "invisible"
+                      }`}
+                    >
+                      Family
+                    </h2>
                   </div>
-                  <div className={`relative flex justify-center items-center ${
-                        isVisible3
-                          ? "opacity-100 transition-opacity duration-500"
-                          : "opacity-0 transition-opacity duration-500"
-                      }`}>
-                  
+                  <div
+                    className={`relative flex justify-center items-center ${
+                      isVisible3
+                        ? "opacity-100 transition-opacity duration-500"
+                        : "opacity-0 transition-opacity duration-500"
+                    }`}
+                  >
                     <img
                       src={ilustrationHistory}
                       alt=""
@@ -403,7 +403,7 @@ const Family = () => {
                   <i>Felipe José Menéndez Arguelles</i>
                 </p>
               </div>
-
+              <SliderFamily />
               <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 py-20 ">
                 <div class="flex justify-center">
                   <a

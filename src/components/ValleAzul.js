@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
@@ -11,6 +11,43 @@ import { useLocation } from "react-router-dom";
 import { Transition, animated } from "@react-spring/web";
 
 const ValleAzul = () => {
+ // inicio codigo para retrasar la aparicion de History
+ const [isVisible, setIsVisible] = useState(false);
+
+ useEffect(() => {
+   const timeout = setTimeout(() => {
+     setIsVisible(true);
+   }, 800);
+
+   return () => clearTimeout(timeout);
+ }, []);
+ // fin codigo para retrasar la aparicion de History
+
+ // inicio codigo para retrasar la aparicion de los titulos
+ const [isVisible2, setIsVisible2] = useState(false);
+
+ useEffect(() => {
+   const timeout = setTimeout(() => {
+     setIsVisible2(true);
+   }, 1000);
+
+   return () => clearTimeout(timeout);
+ }, []);
+ // fin codigo para retrasar la aparicion de los titulos
+
+ // inicio codigo para retrasar la aparicion del sub menu
+ const [isVisible3, setIsVisible3] = useState(false);
+
+ useEffect(() => {
+   const timeout = setTimeout(() => {
+     setIsVisible3(true);
+   }, 1300);
+
+   return () => clearTimeout(timeout);
+ }, []);
+ // fin codigo para retrasar la aparicion de los titulos
+
+
   const [igHovered, setIgHovered] = useState(false);
   const handleMouseEnter = () => {
     setIgHovered(true);
@@ -72,15 +109,21 @@ const ValleAzul = () => {
               <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 ">
                 <div class="pt-24 2xl:pt-36 flex flex-col gap-y-5 2xl:gap-y-10 ">
                   <div class="flex flex-col justify-center items-center md:mt-0 md:gap-y-0">
-                    <h1
+                  <h1
                       style={playfairFontItalic}
-                      class="text-[#5f5f5e] text-xs md:text-lg tracking-widest"
+                      className={`text-[#5f5f5e] text-xs md:text-lg tracking-widest ${
+                        isVisible
+                          ? "opacity-100 transition-opacity duration-500"
+                          : "opacity-0 transition-opacity duration-500"
+                      }`}
                     >
                       <i style={playfairFontItalic}>History</i>
                     </h1>
                     <h2
                       style={playfairFontBlack}
-                      className="text-base md:text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
+                      className={`text-base md:text-2xl text-[#C4B27D] tracking-wider uppercase ${
+                        isVisible2 ? "appear-from-bottom" : "invisible"
+                      }`}
                     >
                       Valle azul
                     </h2>

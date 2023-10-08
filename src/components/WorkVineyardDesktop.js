@@ -13,8 +13,6 @@ import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
 
 const CarouselSlider = () => {
- 
- 
   // inicio codigo para retrasar la aparicion del titulo
   const [isVisible, setIsVisible] = useState(false);
 
@@ -102,17 +100,15 @@ const CarouselSlider = () => {
     "WEEDS",
     "ANCIENT TECHNIQUES",
   ];
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const handlePrevClick = () => {
+
+  // codigo para cambiar de slide cuando se presionan los indicadores
+  const handlePrevClickIndicators = (index) => {
     setcondition1Prev(true);
     setTimeout(() => {
       setcondition1Prev(false);
       setcondition2Prev(true);
       setTimeout(() => {
-        setCurrentSlide((prevSlide) =>
-        prevSlide === 0 ? images.length - 1 : prevSlide - 1
-      );
+        setCurrentSlide(index);
         setcondition2Prev(false);
         setcondition3Prev(true); // Activar condition3Prev en la nueva imagen
         setTimeout(() => {
@@ -120,7 +116,57 @@ const CarouselSlider = () => {
           setcondition4Prev(true); // Activar condition4Prev en la nueva imagen
           setTimeout(() => {
             setcondition4Prev(false);
-      
+          }, 800);
+        }, 100);
+      }, 800);
+    }, 800);
+    setActiveIndex(index);
+    setCurrentImageIndex(index);
+  };
+
+  const handleNextClickIndicators = (index) => {
+    setcondition1Next(true);
+    setTimeout(() => {
+      setcondition1Next(false);
+      setcondition2Next(true);
+      setTimeout(() => {
+        setCurrentSlide(index);
+        setcondition2Next(false);
+        setcondition3Next(true); // Activar condition3Next en la nueva imagen
+        setTimeout(() => {
+          setcondition3Next(false);
+          setcondition4Next(true); // Activar condition4Next en la nueva imagen
+          setTimeout(() => {
+            setcondition4Next(false);
+          }, 800);
+        }, 100);
+      }, 800);
+    }, 800);
+    setActiveIndex(index);
+    setCurrentImageIndex(index);
+  };
+
+  // fin codigo para indicadores
+
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const handlePrevClick = () => {
+    setcondition1Prev(true);
+    setTimeout(() => {
+      setcondition1Prev(false);
+      setcondition2Prev(true);
+      setTimeout(() => {
+        setCurrentSlide((prevSlide) =>
+          prevSlide === 0 ? images.length - 1 : prevSlide - 1
+        );
+        setcondition2Prev(false);
+        setcondition3Prev(true); // Activar condition3Prev en la nueva imagen
+        setTimeout(() => {
+          setcondition3Prev(false);
+          setcondition4Prev(true); // Activar condition4Prev en la nueva imagen
+          setTimeout(() => {
+            setcondition4Prev(false);
           }, 800);
         }, 100);
       }, 800);
@@ -131,7 +177,6 @@ const CarouselSlider = () => {
     setCurrentImageIndex(
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
-    
   };
 
   const handleNextClick = () => {
@@ -143,8 +188,8 @@ const CarouselSlider = () => {
       setcondition2Next(true);
       setTimeout(() => {
         setCurrentSlide((prevSlide) =>
-        prevSlide === images.length - 1 ? 0 : prevSlide + 1
-      );
+          prevSlide === images.length - 1 ? 0 : prevSlide + 1
+        );
         setcondition2Next(false);
         setcondition3Next(true); // Activar condition3Next en la nueva imagen
         setTimeout(() => {
@@ -152,7 +197,6 @@ const CarouselSlider = () => {
           setcondition4Next(true); // Activar condition4Next en la nueva imagen
           setTimeout(() => {
             setcondition4Next(false);
-      
           }, 800);
         }, 100);
       }, 800);
@@ -195,7 +239,6 @@ const CarouselSlider = () => {
 
   // fin animacion para demorar aparicion parrafo
 
-
   const [currentSlide, setCurrentSlide] = useState(0);
   const [condition1Next, setcondition1Next] = useState(false);
   const [condition2Next, setcondition2Next] = useState(false);
@@ -206,8 +249,6 @@ const CarouselSlider = () => {
   const [condition2Prev, setcondition2Prev] = useState(false);
   const [condition3Prev, setcondition3Prev] = useState(false);
   const [condition4Prev, setcondition4Prev] = useState(false);
-
-
 
   const renderImages = () => {
     return (
@@ -258,43 +299,64 @@ const CarouselSlider = () => {
         </div>
 
         <div className="absolute bottom-10 left-0 right-0 flex justify-center z-50">
-          {renderIndicators()}
+          {RenderIndicators()}
         </div>
 
-
-
         <img
-        src={images[currentSlide]}       
-        className={`w-full h-screen object-cover brightness-50 fade-transition opacity-${opacity} ${
-          condition1Next
-            ? "class-when-condition-1-next-is-true"
-            : condition2Next
-            ? "class-when-condition-2-next-is-true"
-            : condition3Next
-            ? "class-when-condition-3-next-is-true"
-            : condition4Next
-            ? "class-when-condition-4-next-is-true"
-            : condition1Prev
-            ? "class-when-condition-1-prev-is-true"
-            : condition2Prev
-            ? "class-when-condition-2-prev-is-true"
-            : condition3Prev
-            ? "class-when-condition-3-prev-is-true"
-            : condition4Prev
-            ? "class-when-condition-4-prev-is-true"
-            : "class-when-neither-condition-is-true"
-        } slide-transition`}
-      />
+          src={images[currentSlide]}
+          className={`w-full h-screen object-cover brightness-50 fade-transition opacity-${opacity} ${
+            condition1Next
+              ? "class-when-condition-1-next-is-true"
+              : condition2Next
+              ? "class-when-condition-2-next-is-true"
+              : condition3Next
+              ? "class-when-condition-3-next-is-true"
+              : condition4Next
+              ? "class-when-condition-4-next-is-true"
+              : condition1Prev
+              ? "class-when-condition-1-prev-is-true"
+              : condition2Prev
+              ? "class-when-condition-2-prev-is-true"
+              : condition3Prev
+              ? "class-when-condition-3-prev-is-true"
+              : condition4Prev
+              ? "class-when-condition-4-prev-is-true"
+              : "class-when-neither-condition-is-true"
+          } slide-transition`}
+        />
       </div>
     );
   };
 
-  const renderIndicators = () => {
+  const RenderIndicators = () => {
+    const handleIndicatorClick = (index) => {
+      if (index < activeIndex) {
+        handlePrevClickIndicators(index); 
+      } else if (index > activeIndex) {
+        handleNextClickIndicators(index); 
+      }
+    };
+
+    const [hoveredIndex, setHoveredIndex] = useState(null);
+
+    const handleIndicatorHover = (index) => {
+      setHoveredIndex(index);
+    };
+
+    const handleIndicatorLeave = () => {
+      setHoveredIndex(null);
+    };
+
     return (
       <div className="flex mt-1 ">
         {images.map((_, index) => (
-          <div key={index} className="relative mx-5">
-            {" "}
+          <div
+            key={index}
+            className="relative mx-5"
+            onMouseEnter={() => handleIndicatorHover(index)}
+            onMouseLeave={handleIndicatorLeave}
+            onClick={() => handleIndicatorClick(index)} // Agregar evento de clic
+          >
             <div
               className={`w-2 h-2 rounded-full ${
                 activeIndex === index ? "bg-[#C4B27D]" : "bg-[#C4B27D]"
@@ -306,6 +368,27 @@ const CarouselSlider = () => {
                   style={{ top: "-10px", left: "-10px" }}
                 ></div>
               )}
+              <div
+                className={`absolute w-7 h-7 rounded-full border-2 border-[#C4B27D] transition-opacity ${
+                  hoveredIndex === index ? "opacity-100" : "opacity-0"
+                }`}
+                style={{
+                  top: "-10px",
+                  left: "-10px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  transitionDuration: "0.5s", 
+                  cursor: "pointer"
+                }}
+              >
+                <div
+                  className="absolute top-[-30px] text-[#C4B27D]"
+                  style={{ whiteSpace: "nowrap" }}
+                >
+                  {title[index]}
+                </div>
+              </div>
             </div>
           </div>
         ))}
@@ -366,10 +449,7 @@ const CarouselSlider = () => {
                 : "class-when-neither-condition-is-true"
             } slide-transition`}
           >
-           
-        {title[currentSlide]}       
-       
-     
+            {title[currentSlide]}
           </p>
         </div>
         <div

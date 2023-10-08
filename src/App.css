@@ -541,7 +541,7 @@ img {
 
 
 .class-when-condition-1-prev-is-true {
-  transform: scale(0.5);
+  transform: scale(0.7);
 }
 .class-when-condition-2-prev-is-true {
   transform: translateX(-100%) scale(0.7);
@@ -661,3 +661,6 @@ img {
   transform-origin: bottom center; /* Establecer el origen en la base inferior */
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
+
+
+/* efecto d hover sobre los indicadores del slider */
