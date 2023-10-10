@@ -22,6 +22,7 @@ import LifeWater from "./components/LifeWater";
 import LifeWaterRead from "./components/LifeWater-read";
 import WinesWorld from "./components/WinesWorld";
 import WinesArgentina from "./components/WinesArgentina";
+import AraucanaRioCiervos from "./components/AraucanaRioCiervos";
 import MenuHamburguesa from "./components/MenuHamburguesa";
 import MenuHamburguesaDesktop from "./components/MenuHamburguesaDesktop";
 import ValleAzul from "./components/ValleAzul";
@@ -128,6 +129,10 @@ const AppContent = () => {
               <Route path="/lifewaterread" element={<LifeWaterRead />} />
               <Route path="/winesworld" element={<WinesWorld />} />
               <Route path="/winesargentina" element={<WinesArgentina />} />
+              <Route
+                path="/AraucanaRioCiervos"
+                element={<AraucanaRioCiervos />}
+              />
               {windowWidth < 768 ? (
                 <Route path="/menuhamburguesa" element={<MenuHamburguesa />} />
               ) : (
