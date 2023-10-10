@@ -92,7 +92,7 @@ const CarouselSlider = () => {
     "Maintaining traditional work methods helps us never lose sight of our connection with the land, which defines us as farmers. In addition to using tractors and other machinery to be efficient in specific tasks, working with animals like our Criollo horses, an Argentine breed, is a form of respect and care for nature, seeking to be rewarded with the finest flavor.",
   ];
   const title = [
-    "TITLE 1",
+    "",
     "PRUNING",
     "TYING",
     "TOPPING",
@@ -331,9 +331,9 @@ const CarouselSlider = () => {
   const RenderIndicators = () => {
     const handleIndicatorClick = (index) => {
       if (index < activeIndex) {
-        handlePrevClickIndicators(index); 
+        handlePrevClickIndicators(index);
       } else if (index > activeIndex) {
-        handleNextClickIndicators(index); 
+        handleNextClickIndicators(index);
       }
     };
 
@@ -378,8 +378,8 @@ const CarouselSlider = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  transitionDuration: "0.5s", 
-                  cursor: "pointer"
+                  transitionDuration: "0.5s",
+                  cursor: "pointer",
                 }}
               >
                 <div
@@ -400,10 +400,8 @@ const CarouselSlider = () => {
   const [percentage, setPercentage] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
-
   const [percentageRight, setPercentageRight] = useState(0);
   const [isHoveredRight, setIsHoveredRight] = useState(false);
-
 
   useEffect(() => {
     if (isHovered) {
@@ -429,8 +427,6 @@ const CarouselSlider = () => {
     }
   }, [percentage, isHovered]);
 
-
-
   useEffect(() => {
     if (isHoveredRight) {
       const intervalRight = setInterval(() => {
@@ -455,11 +451,10 @@ const CarouselSlider = () => {
     }
   }, [percentageRight, isHoveredRight]);
 
+  const imageWidth = 90;
+  const imageHeight = 90;
 
-  const imageWidth = 90; 
-  const imageHeight = 90; 
-
-    // fin codigo para dibujar circulo en botones
+  // fin codigo para dibujar circulo en botones
 
   return (
     <div className="relative">
@@ -480,33 +475,33 @@ const CarouselSlider = () => {
           }}
         >
           {/* <img src={leftArrowImage} alt="izquierda" /> */}
-          <div >
-      <svg
-        width="200"
-        height="200"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        <circle
-          cx="100"
-          cy="100"
-          r="44"
-          fill="none"
-          stroke="#C4B27D"
-          strokeWidth="3"
-          strokeDasharray="502"
-          strokeDashoffset={502 - (502 * percentage) / 100}
-        />
-        <image
-          x={(200 - imageWidth) / 2} 
-          y={(200 - imageHeight) / 2} 
-          width={imageWidth}
-          height={imageHeight}
-          xlinkHref={leftArrowImage}
-          opacity="0.7"
-        />
-      </svg>
-    </div>
+          <div>
+            <svg
+              width="200"
+              height="200"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              <circle
+                cx="100"
+                cy="100"
+                r="44"
+                fill="none"
+                stroke="#C4B27D"
+                strokeWidth="3"
+                strokeDasharray="502"
+                strokeDashoffset={502 - (502 * percentage) / 100}
+              />
+              <image
+                x={(200 - imageWidth) / 2}
+                y={(200 - imageHeight) / 2}
+                width={imageWidth}
+                height={imageHeight}
+                xlinkHref={leftArrowImage}
+                opacity="0.7"
+              />
+            </svg>
+          </div>
         </button>
         <div className="w-32 container max-w-screen-xl xl:max-w-screen-2xl py-1/2 fixed top-[-10.2rem] left-72 right-0  md:px-5 2xl:px-0 absolute inset-0 flex items-center justify-center  ">
           <p
@@ -572,33 +567,33 @@ const CarouselSlider = () => {
           }}
         >
           {/* <img src={rightArrowImage} alt="derecha" /> */}
-          <div >
-      <svg
-        width="200"
-        height="200"
-        onMouseEnter={() => setIsHoveredRight(true)}
-        onMouseLeave={() => setIsHoveredRight(false)}
-      >
-        <circle
-          cx="100"
-          cy="100"
-          r="44"
-          fill="none"
-          stroke="#C4B27D"
-          strokeWidth="3"
-          strokeDasharray="502"
-          strokeDashoffset={502 - (502 * percentageRight) / 100}
-        />
-        <image
-          x={(200 - imageWidth) / 2} 
-          y={(200 - imageHeight) / 2} 
-          width={imageWidth}
-          height={imageHeight}
-          xlinkHref={rightArrowImage}
-          opacity="0.7"
-        />
-      </svg>
-    </div>
+          <div>
+            <svg
+              width="200"
+              height="200"
+              onMouseEnter={() => setIsHoveredRight(true)}
+              onMouseLeave={() => setIsHoveredRight(false)}
+            >
+              <circle
+                cx="100"
+                cy="100"
+                r="44"
+                fill="none"
+                stroke="#C4B27D"
+                strokeWidth="3"
+                strokeDasharray="502"
+                strokeDashoffset={502 - (502 * percentageRight) / 100}
+              />
+              <image
+                x={(200 - imageWidth) / 2}
+                y={(200 - imageHeight) / 2}
+                width={imageWidth}
+                height={imageHeight}
+                xlinkHref={rightArrowImage}
+                opacity="0.7"
+              />
+            </svg>
+          </div>
         </button>
       </div>
     </div>

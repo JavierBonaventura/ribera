@@ -193,7 +193,7 @@ const CarouselSlider = () => {
         <div className=" w-2/4 container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-1/2 fixed top-40 left-0 right-0 md:px-5 2xl:px-0 absolute inset-0 flex items-center justify-center ">
           <p
             style={playfairFontRegular}
-            className=" text-[#ffffff] text-base leading-7tracking-wider text-center mb-8"
+            className=" text-[#ffffff] text-base leading-7 tracking-wider text-center mb-8 "
           >
             {paragraphs[currentImageIndex]}
           </p>

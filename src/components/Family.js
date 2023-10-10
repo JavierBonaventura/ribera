@@ -328,52 +328,6 @@ const Family = () => {
                 </div>
               </div>
 
-              <div class="bg-[#212121] hidden">
-                <div class="pt-32 pb-5 md:pb-10">
-                  <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl">
-                    <div className="flex flex-col md:flex-row-reverse">
-                      <div class="-mt-52 px-4 md:px-0 md:mt-0">
-                        <img
-                          src={carruajeHistory}
-                          alt=""
-                          class="w-full object-cover md:w-9/12 mx-auto"
-                        />
-                      </div>
-                      <p
-                        class="text-justify tracking-wider text-[#ffffff] text-xs pt-10 px-10 md:px-32 md:w-3/4 mx-auto lg:text-base 2xl:text-lg"
-                        style={playfairFontRegular}
-                      >
-                        Patagonia was the place where we spent the summers of my
-                        childhood and where I had traveled many times in my
-                        youth. It was always a place where I truly found myself
-                        at home. Amidst the wind flat topped hills, the enormous
-                        open spaces and the gigantic mountains where distances
-                        are dwarfed only by an infinite sky the idea of setting
-                        up a winery little by little started to materialize.
-                        <br />
-                        <br />
-                        My career in wines started when, as a very young person,
-                        I joined the winery of Dr. Nicolas Catena and at his
-                        side discovered the fascinating world of wine which has
-                        become my life. I Iearned from him every detail of how
-                        to cultivate the best grapes, how to produce the best
-                        wines and above all how to never ever relinquish in the
-                        pursuit of excellence. <br />
-                        <br />
-                        Finally, the day arrived—the moment when I could merge
-                        my love for my Patagonian homeland with the unwavering
-                        passion for wine instilled within me since childhood.
-                        This unique opportunity, which we tirelessly pursue each
-                        day, is embodied in the name of Bodega Ribera del
-                        Cuarzo. Here, we strive to craft the finest wines,
-                        honoring our heritage and expressing the essence of our
-                        beloved land.”
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
               <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 pt-10 md:pt-20 lg:pt-32 xl:pt-40 2xl:pt-60">
                 <div className="w-full md:w-2/5 mx-auto flex flex-col gap-y-5 xl:gap-y-16">
                   <div className="px-10 md:px-0">
@@ -393,7 +347,7 @@ const Family = () => {
                   <img
                     src={felipe}
                     alt=""
-                    className="px-4 md:px-0 md:shadow-custom"
+                    className="px-4 md:px-0 lg:shadow-2xl"
                   />
                 </div>
                 <p
