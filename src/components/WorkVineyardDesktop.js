@@ -92,7 +92,7 @@ const CarouselSlider = () => {
     "Maintaining traditional work methods helps us never lose sight of our connection with the land, which defines us as farmers. In addition to using tractors and other machinery to be efficient in specific tasks, working with animals like our Criollo horses, an Argentine breed, is a form of respect and care for nature, seeking to be rewarded with the finest flavor.",
   ];
   const title = [
-    "",
+    "TITLE 1",
     "PRUNING",
     "TYING",
     "TOPPING",
@@ -359,7 +359,7 @@ const CarouselSlider = () => {
           >
             <div
               className={`w-2 h-2 rounded-full ${
-                activeIndex === index ? "bg-[#C4B27D]" : "bg-[#C4B27D]"
+                activeIndex === index ? "bg-[#C4B27D]" : "bg-[#F5F5DC]"
               }`}
             >
               {activeIndex === index && (
@@ -382,6 +382,8 @@ const CarouselSlider = () => {
                   cursor: "pointer",
                 }}
               >
+                <div className="w-2 h-2 rounded-full bg-[#C4B27D]"></div>
+
                 <div
                   className="absolute top-[-30px] text-[#C4B27D]"
                   style={{ whiteSpace: "nowrap" }}
@@ -407,21 +409,21 @@ const CarouselSlider = () => {
     if (isHovered) {
       const interval = setInterval(() => {
         if (percentage < 100) {
-          setPercentage(percentage + 3);
+          setPercentage(percentage + 5);
         } else {
           clearInterval(interval);
         }
-      }, 2);
+      }, 4);
 
       return () => clearInterval(interval);
     } else {
       const interval = setInterval(() => {
         if (percentage !== 0) {
-          setPercentage(percentage - 3);
+          setPercentage(percentage - 5);
         } else {
           clearInterval(interval);
         }
-      }, 2);
+      }, 4);
 
       return () => clearInterval(interval);
     }
@@ -431,21 +433,21 @@ const CarouselSlider = () => {
     if (isHoveredRight) {
       const intervalRight = setInterval(() => {
         if (percentageRight < 100) {
-          setPercentageRight(percentageRight + 3);
+          setPercentageRight(percentageRight + 5);
         } else {
           clearInterval(intervalRight);
         }
-      }, 2);
+      }, 4);
 
       return () => clearInterval(intervalRight);
     } else {
       const intervalRight = setInterval(() => {
         if (percentageRight !== 0) {
-          setPercentageRight(percentageRight - 3);
+          setPercentageRight(percentageRight - 5);
         } else {
           clearInterval(intervalRight);
         }
-      }, 2);
+      }, 4);
 
       return () => clearInterval(intervalRight);
     }

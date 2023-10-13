@@ -359,7 +359,7 @@ const CarouselSlider = () => {
           >
             <div
               className={`w-2 h-2 rounded-full ${
-                activeIndex === index ? "bg-[#C4B27D]" : "bg-[#C4B27D]"
+                activeIndex === index ? "bg-[#C4B27D]" : "bg-black"
               }`}
             >
               {activeIndex === index && (
