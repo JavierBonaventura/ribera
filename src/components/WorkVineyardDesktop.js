@@ -460,12 +460,12 @@ const CarouselSlider = () => {
 
   return (
     <div className="relative">
-      <div className="overflow-hidden">
+      <div className="overflow-hidden ">
         {renderImages()}
 
         <button
           aria-label="previous"
-          className={`w-20 absolute top-[45%] left-20 ${
+          className={`w-20 absolute top-[50%] left-32 ${
             isPrevButtonHovered ? "opacity-100" : "opacity-100"
           }`}
           onClick={handlePrevClick}
@@ -479,14 +479,14 @@ const CarouselSlider = () => {
           {/* <img src={leftArrowImage} alt="izquierda" /> */}
           <div>
             <svg
-              width="200"
-              height="200"
+              width="100"
+              height="100"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
               <circle
-                cx="100"
-                cy="100"
+                cx="50"
+                cy="50"
                 r="44"
                 fill="none"
                 stroke="#C4B27D"
@@ -495,8 +495,8 @@ const CarouselSlider = () => {
                 strokeDashoffset={502 - (502 * percentage) / 100}
               />
               <image
-                x={(200 - imageWidth) / 2}
-                y={(200 - imageHeight) / 2}
+                x={(100 - imageWidth) / 2}
+                y={(100 - imageHeight) / 2}
                 width={imageWidth}
                 height={imageHeight}
                 xlinkHref={leftArrowImage}
@@ -557,7 +557,7 @@ const CarouselSlider = () => {
         </div>
         <button
           aria-label="next"
-          className={`w-20 absolute top-[45%] right-48 ${
+          className={`w-20 absolute top-[50%] right-32 ${
             isNextButtonHovered ? "opacity-100" : "opacity-100"
           }`}
           onClick={handleNextClick}
@@ -571,14 +571,14 @@ const CarouselSlider = () => {
           {/* <img src={rightArrowImage} alt="derecha" /> */}
           <div>
             <svg
-              width="200"
-              height="200"
+              width="100"
+              height="100"
               onMouseEnter={() => setIsHoveredRight(true)}
               onMouseLeave={() => setIsHoveredRight(false)}
             >
               <circle
-                cx="100"
-                cy="100"
+                cx="50"
+                cy="50"
                 r="44"
                 fill="none"
                 stroke="#C4B27D"
@@ -587,8 +587,8 @@ const CarouselSlider = () => {
                 strokeDashoffset={502 - (502 * percentageRight) / 100}
               />
               <image
-                x={(200 - imageWidth) / 2}
-                y={(200 - imageHeight) / 2}
+                x={(100 - imageWidth) / 2}
+                y={(100 - imageHeight) / 2}
                 width={imageWidth}
                 height={imageHeight}
                 xlinkHref={rightArrowImage}

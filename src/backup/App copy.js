@@ -8,25 +8,26 @@ import {
 } from "react-router-dom";
 import { Transition, animated, config } from "@react-spring/web";
 
-import Menu from "../components/Menu";
-import MenuDesktop from "../components/MenuDesktop";
-import Family from "../components/Family";
-import AraucanaVineyard from "../components/AraucanaVineyard";
-import WorkVineyard from "../components/WorkVineyard";
-import WorkVineyardDesktop from "../components/WorkVineyardDesktop";
-import WorkWinery from "../components/WorkWinery";
-import WorkWineryDesktop from "../components/WorkWineryDesktop";
-import LifeOnEstate from "../components/LifeOnEstate";
-import LifeOnEstateDesktop from "../components/LifeOnEstateDesktop";
-import LifeWater from "../components/LifeWater";
-import LifeWaterRead from "../components/LifeWater-read";
-import WinesWorld from "../components/WinesWorld";
-import WinesArgentina from "../components/WinesArgentina";
-import MenuHamburguesa from "../components/MenuHamburguesa";
-import MenuHamburguesaDesktop from "../components/MenuHamburguesaDesktop";
-import ValleAzul from "../components/ValleAzul";
-import FormularioContacto from "../components/FormularioContacto";
-import Press from "../components/Press";
+import Menu from "./components/Menu";
+import MenuDesktop from "./components/MenuDesktop";
+import Family from "./components/Family";
+import AraucanaVineyard from "./components/AraucanaVineyard";
+import WorkVineyard from "./components/WorkVineyard";
+import WorkVineyardDesktop from "./components/WorkVineyardDesktop";
+import WorkWinery from "./components/WorkWinery";
+import WorkWineryDesktop from "./components/WorkWineryDesktop";
+import LifeOnEstate from "./components/LifeOnEstate";
+import LifeOnEstateDesktop from "./components/LifeOnEstateDesktop";
+import LifeWater from "./components/LifeWater";
+import LifeWaterRead from "./components/LifeWater-read";
+import WinesWorld from "./components/WinesWorld";
+import WinesArgentina from "./components/WinesArgentina";
+import AraucanaRioCiervos from "./components/AraucanaRioCiervos";
+import MenuHamburguesa from "./components/MenuHamburguesa";
+import MenuHamburguesaDesktop from "./components/MenuHamburguesaDesktop";
+import ValleAzul from "./components/ValleAzul";
+import FormularioContacto from "./components/FormularioContacto";
+import Press from "./components/Press";
 import "./App.css";
 
 function App() {
@@ -128,6 +129,10 @@ const AppContent = () => {
               <Route path="/lifewaterread" element={<LifeWaterRead />} />
               <Route path="/winesworld" element={<WinesWorld />} />
               <Route path="/winesargentina" element={<WinesArgentina />} />
+              <Route
+                path="/AraucanaRioCiervos"
+                element={<AraucanaRioCiervos />}
+              />
               {windowWidth < 768 ? (
                 <Route path="/menuhamburguesa" element={<MenuHamburguesa />} />
               ) : (
