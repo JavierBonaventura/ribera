@@ -7,15 +7,7 @@ import iconIg from "../images/icon-ig.png";
 import leftArrowImage from "../images/flechaIzquierda.png";
 import rightArrowImage from "../images/flechaDerecha.png";
 
-// incluir las imagenes por anio
-import bgNota1_2020 from "../images/nota-press-1.png";
-import bgNota2_2020 from "../images/nota-press-2.png";
-import bgNota3_2020 from "../images/nota-press-3.png";
-
-import bgNota1_2021 from "../images/nota-press-3.png";
-import bgNota2_2021 from "../images/nota-press-1.png";
-import bgNota3_2021 from "../images/nota-press-2.png";
-
+// incluir las imagenes por año
 import bgNota1_2022 from "../images/nota-press-1.png";
 import bgNota2_2022 from "../images/nota-press-2.png";
 import bgNota3_2022 from "../images/nota-press-3.png";
@@ -28,26 +20,20 @@ import { Transition, animated } from "@react-spring/web";
 
 import "../App.css";
 function Press() {
-  const [anioVisible, setAnioVisible] = useState(0);
+  const [anoVisible, setAnoVisible] = useState(0);
 
-  const anios = ["2020", "2021", "2022", "2023"];
-
-  const fechas2020 = [
-    "31 de Agosto 2020",
-    "22 de Mayo 2020",
-    "13 de Abril 2020",
-  ];
-
-  const fechas2021 = [
-    "31 de Agosto 2021",
-    "22 de Mayo 2021",
-    "13 de Abril 2021",
-  ];
+  const anos = ["2022", "2023"];
 
   const fechas2022 = [
     "31 de Agosto 2022",
     "22 de Mayo 2022",
-    "13 de Abril 2022",
+    "07 de Enero 2022",
+  ];
+
+  const titular2022 = [
+    "Entre la barda, un río magnífico y vinos imponentes: un viaje hacia la bodega patagónica Casa Pirque, en Valle Azul",
+    "Entre la barda, un río magnífico y vinos imponentes: un viaje hacia la bodega patagónica Casa Pirque, en Valle Azul",
+    "Entre la barda, un río magnífico y vinos imponentes: un viaje hacia la bodega patagónica Casa Pirque, en Valle Azul",
   ];
 
   const fechas2023 = [
@@ -56,23 +42,29 @@ function Press() {
     "13 de Abril 2023",
   ];
 
+  const titular2023 = [
+    "Entre la barda, un río magnífico y vinos imponentes: un viaje hacia la bodega patagónica Casa Pirque, en Valle Azul",
+    "Entre la barda, un río magnífico y vinos imponentes: un viaje hacia la bodega patagónica Casa Pirque, en Valle Azul",
+    "Entre la barda, un río magnífico y vinos imponentes: un viaje hacia la bodega patagónica Casa Pirque, en Valle Azul",
+  ];
+
   // funcion para avanzar y retroceder en anios
 
   const handlePrevClick = () => {
-    if (anioVisible > 0) {
-      setAnioVisible(anioVisible - 1);
+    if (anoVisible > 0) {
+      setAnoVisible(anoVisible - 1);
     } else {
       // Si ya estás en el primer año, al hacer clic en "Prev" deberías ir al último año.
-      setAnioVisible(anios.length - 1);
+      setAnoVisible(anos.length - 1);
     }
   };
 
   const handleNextClick = () => {
-    if (anioVisible < anios.length - 1) {
-      setAnioVisible(anioVisible + 1);
+    if (anoVisible < anos.length - 1) {
+      setAnoVisible(anoVisible + 1);
     } else {
       // Si ya estás en el último año, al hacer clic en "Next" deberías volver al primer año.
-      setAnioVisible(0);
+      setAnoVisible(0);
     }
   };
 
@@ -119,42 +111,8 @@ function Press() {
 
   let bgNotasPrensa1, bgNotasPrensa2, bgNotasPrensa3;
 
-  switch (anioVisible) {
-    case 0:
-      bgNotasPrensa1 = {
-        backgroundImage: `url(${bgNota1_2020})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      };
-      bgNotasPrensa2 = {
-        backgroundImage: `url(${bgNota2_2020})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      };
-      bgNotasPrensa3 = {
-        backgroundImage: `url(${bgNota3_2020})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      };
-      break;
+  switch (anoVisible) {
     case 1:
-      bgNotasPrensa1 = {
-        backgroundImage: `url(${bgNota1_2021})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      };
-      bgNotasPrensa2 = {
-        backgroundImage: `url(${bgNota2_2021})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      };
-      bgNotasPrensa3 = {
-        backgroundImage: `url(${bgNota3_2021})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      };
-      break;
-    case 2:
       bgNotasPrensa1 = {
         backgroundImage: `url(${bgNota1_2022})`,
         backgroundSize: "cover",
@@ -171,7 +129,7 @@ function Press() {
         backgroundRepeat: "no-repeat",
       };
       break;
-    case 3:
+    case 2:
       bgNotasPrensa1 = {
         backgroundImage: `url(${bgNota1_2023})`,
         backgroundSize: "cover",
@@ -189,19 +147,19 @@ function Press() {
       };
       break;
     default:
-      // En caso de un valor no esperado de anioVisible, puedes asignar una imagen predeterminada o manejarlo como desees.
+      // En caso de un valor no esperado de añoVisible, puedes asignar una imagen predeterminada o manejarlo como desees.
       bgNotasPrensa1 = {
-        backgroundImage: `url(${bgNota1_2020})`,
+        backgroundImage: `url(${bgNota1_2022})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       };
       bgNotasPrensa2 = {
-        backgroundImage: `url(${bgNota2_2020})`,
+        backgroundImage: `url(${bgNota2_2022})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       };
       bgNotasPrensa3 = {
-        backgroundImage: `url(${bgNota3_2020})`,
+        backgroundImage: `url(${bgNota3_2022})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       };
@@ -240,9 +198,9 @@ function Press() {
               </div>
             </header>
 
-            <div className="bg-[#231F20]">
+            <div className="bg-[#000]">
               <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 flex flex-col justify-center items-center pt-24 2xl:pt-36 pb-16 gap-y-5 2xl:gap-y-10">
-                <div class="flex flex-col justify-center items-center  bg-[#231F20] ">
+                <div class="flex flex-col justify-center items-center">
                   <h2
                     style={playfairFontBlack}
                     className="text-base md:text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
@@ -271,7 +229,7 @@ function Press() {
                       className="text-5xl lg:text-9xl text-[#C4B27D]"
                       style={playfairFontBlack}
                     >
-                      {anios[anioVisible]}
+                      {anos[anoVisible]}
                     </h1>
                   </div>
                   <div className="w-12 lg:w-20">
@@ -297,13 +255,9 @@ function Press() {
                           className="text-sm lg:text-base"
                           style={playfairFontItalic}
                         >
-                          {anioVisible === 0
-                            ? fechas2020[0]
-                            : anioVisible === 1
-                            ? fechas2021[0]
-                            : anioVisible === 2
+                          {anoVisible === 0
                             ? fechas2022[0]
-                            : anioVisible === 3
+                            : anoVisible === 1
                             ? fechas2023[0]
                             : ""}
                         </span>
@@ -313,17 +267,18 @@ function Press() {
                           className="text-base lg:text-lg text-[#C4B27D]"
                           style={playfairFontRegular}
                         >
-                          Rescatando el patrimonio del Pinot Noir patagónico
+                          {anoVisible === 0
+                            ? titular2022[0]
+                            : anoVisible === 1
+                            ? titular2023[0]
+                            : ""}
                         </span>
                       </div>
                       <a
                         href=""
-                        className="bg-[#C4B27D] rounded-lg px-3 py-2 flex
-                       justify-center items-center w-24  hover:opacity-90 transition ease-in-out duration-300"
+                        className="bg-transparent border border-[#C4B27D] text-xs text-[#C4B27D] hover:text-white hover:bg-[#C4B27D] rounded-lg px-3 py-2 flex justify-center items-center w-24  hover:opacity-90 transition ease-in-out duration-300"
                       >
-                        <span href="" className="text-xs text-white">
-                          Read more
-                        </span>
+                        Read more
                       </a>
                     </div>
                   </div>
@@ -340,13 +295,9 @@ function Press() {
                           className="text-sm lg:text-base"
                           style={playfairFontItalic}
                         >
-                          {anioVisible === 0
-                            ? fechas2020[1]
-                            : anioVisible === 1
-                            ? fechas2021[1]
-                            : anioVisible === 2
+                          {anoVisible === 0
                             ? fechas2022[1]
-                            : anioVisible === 3
+                            : anoVisible === 1
                             ? fechas2023[1]
                             : ""}
                         </span>
@@ -356,19 +307,18 @@ function Press() {
                           className="text-base lg:text-lg text-[#C4B27D]"
                           style={playfairFontRegular}
                         >
-                          Los mejores del mundo. Cuáles son y cuánto cuestan los
-                          vinos que, por tiempo limitado, podés beber “por copa”
-                          en Buenos Aires
+                          {anoVisible === 0
+                            ? titular2022[1]
+                            : anoVisible === 1
+                            ? titular2023[1]
+                            : ""}
                         </span>
                       </div>
                       <a
                         href=""
-                        className="bg-[#C4B27D] rounded-lg px-3 py-2 flex
-                       justify-center items-center w-24 hover:opacity-90 transition ease-in-out duration-300"
+                        className="bg-transparent border border-[#C4B27D] text-xs text-[#C4B27D] hover:text-white hover:bg-[#C4B27D] rounded-lg px-3 py-2 flex justify-center items-center w-24  hover:opacity-90 transition ease-in-out duration-300"
                       >
-                        <span href="" className="text-xs text-white">
-                          Read more
-                        </span>
+                        Read more
                       </a>
                     </div>
                   </div>
@@ -385,13 +335,9 @@ function Press() {
                           className="text-sm lg:text-base"
                           style={playfairFontItalic}
                         >
-                          {anioVisible === 0
-                            ? fechas2020[2]
-                            : anioVisible === 1
-                            ? fechas2021[2]
-                            : anioVisible === 2
+                          {anoVisible === 0
                             ? fechas2022[2]
-                            : anioVisible === 3
+                            : anoVisible === 1
                             ? fechas2023[2]
                             : ""}
                         </span>
@@ -401,18 +347,18 @@ function Press() {
                           className="text-base lg:text-lg text-[#C4B27D]"
                           style={playfairFontRegular}
                         >
-                          From Penguins to Pinot, a Glimpse at Winemaking in
-                          Patagonia
+                          {anoVisible === 0
+                            ? titular2022[2]
+                            : anoVisible === 1
+                            ? titular2023[2]
+                            : ""}
                         </span>
                       </div>
                       <a
                         href=""
-                        className="bg-[#C4B27D] rounded-lg px-3 py-2 flex
-                       justify-center items-center w-24  hover:opacity-90 transition ease-in-out duration-300"
+                        className="bg-transparent border border-[#C4B27D] text-xs text-[#C4B27D] hover:text-white hover:bg-[#C4B27D] rounded-lg px-3 py-2 flex justify-center items-center w-24  hover:opacity-90 transition ease-in-out duration-300"
                       >
-                        <span href="" className="text-xs text-white">
-                          Read more
-                        </span>
+                        Read more
                       </a>
                     </div>
                   </div>
@@ -420,7 +366,7 @@ function Press() {
               </div>
             </div>
 
-            <div class=" bg-[#231F20]">
+            <div class=" bg-[#000]">
               <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 py-20">
                 <div class="flex justify-center">
                   <a

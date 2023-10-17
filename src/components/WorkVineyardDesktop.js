@@ -92,7 +92,7 @@ const CarouselSlider = () => {
     "Maintaining traditional work methods helps us never lose sight of our connection with the land, which defines us as farmers. In addition to using tractors and other machinery to be efficient in specific tasks, working with animals like our Criollo horses, an Argentine breed, is a form of respect and care for nature, seeking to be rewarded with the finest flavor.",
   ];
   const title = [
-    "TITLE 1",
+    "",
     "PRUNING",
     "TYING",
     "TOPPING",
