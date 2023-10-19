@@ -196,112 +196,111 @@ function Araucana() {
             {/* Img pre footer start */}
 
             {/* Footer bottle start */}
-            <div className="pt-[36rem] md:pt-96 lg:pt-[36rem]">
-              <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 relative">
-                <div
-                  className="flex flex-col md:flex-row absolute bottom-0  text-[#C4B27D] w-full gap-y-10 md:gap-x-32"
-                  style={windsorLight}
-                >
-                  {/* Bottle 1 start */}
-                  <div className="border border-[#C4B27D] px-3 pt-3 md:border-0 md:p-0">
-                    <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
-                      <Link
-                        to=""
-                        className="text-white text-sm lg:text-lg hover:underline"
-                      >
-                        READ MORE
-                      </Link>
-                      <div className="flex flex-col justify-center items-center text-base lg:text-2xl">
-                        <span>ARAUCANA</span>
-                        <span>Pinot Noir</span>
-                      </div>
-                    </div>
-                    <div className="">
-                      <img
-                        src={bottleBottom}
-                        alt=""
-                        className="w-1/2 md:w-auto mx-auto"
-                      />
-                    </div>
-                  </div>
-                  {/* Bottle 1 end */}
 
-                  {/* Bottle 2 start */}
-                  <div className="border border-[#C4B27D] px-3 pt-3 md:border-0 md:p-0">
-                    <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
-                      <Link
-                        to=""
-                        className="text-white text-sm lg:text-lg hover:underline"
-                      >
-                        READ MORE
-                      </Link>
-                      <div className="flex flex-col justify-center items-center text-base lg:text-2xl">
-                        <span>ARAUCANA</span>
-                        <span>Malbec</span>
-                      </div>
-                    </div>
-                    <div className="">
-                      <img
-                        src={bottleBottom}
-                        alt=""
-                        className="w-1/2 md:w-auto mx-auto"
-                      />
+            <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 ">
+              <div
+                className="flex flex-col md:flex-row 0 text-[#C4B27D] w-full gap-y-10 md:gap-x-32"
+                style={windsorLight}
+              >
+                {/* Bottle 1 start */}
+                <div className="border border-[#C4B27D] px-3 pt-3 md:border-0 md:p-0">
+                  <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
+                    <Link
+                      to=""
+                      className="text-white text-sm lg:text-lg hover:underline"
+                    >
+                      READ MORE
+                    </Link>
+                    <div className="flex flex-col justify-center items-center text-base lg:text-2xl">
+                      <span>ARAUCANA</span>
+                      <span>Pinot Noir</span>
                     </div>
                   </div>
-                  {/* Bottle 2 end */}
-
-                  {/* Bottle 3 start */}
-                  <div className="border border-[#C4B27D] px-3 pt-3 md:border-0 md:p-0">
-                    <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
-                      <Link
-                        to=""
-                        className="text-white text-sm lg:text-lg hover:underline"
-                      >
-                        READ MORE
-                      </Link>
-                      <div className="flex flex-col justify-center items-center text-base lg:text-2xl">
-                        <span>ARAUCANA</span>
-                        <span>Azul</span>
-                      </div>
-                    </div>
-                    <div className="">
-                      <img
-                        src={bottleBottom}
-                        alt=""
-                        className="w-1/2 md:w-auto mx-auto"
-                      />
-                    </div>
+                  <div className="">
+                    <img
+                      src={bottleBottom}
+                      alt=""
+                      className="w-1/2 md:w-auto mx-auto"
+                    />
                   </div>
-                  {/* Bottle 3 end */}
-
-                  {/* Bottle 4 start */}
-                  <div className="border border-[#C4B27D] px-3 pt-3 md:border-0 md:p-0">
-                    <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
-                      <Link
-                        to=""
-                        className="text-white text-sm lg:text-lg hover:underline"
-                      >
-                        READ MORE
-                      </Link>
-                      <div className="flex flex-col justify-center items-center text-base lg:text-2xl">
-                        <span>RIBERA DEL CUARZO</span>
-                        <span>Parcela Única</span>
-                      </div>
-                    </div>
-                    <div className="">
-                      <img
-                        src={bottleBottom}
-                        alt=""
-                        className="w-1/2 md:w-auto mx-auto"
-                      />
-                    </div>
-                  </div>
-                  {/* Bottle 4 end */}
                 </div>
+                {/* Bottle 1 end */}
+
+                {/* Bottle 2 start */}
+                <div className="border border-[#C4B27D] px-3 pt-3 md:border-0 md:p-0">
+                  <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
+                    <Link
+                      to=""
+                      className="text-white text-sm lg:text-lg hover:underline"
+                    >
+                      READ MORE
+                    </Link>
+                    <div className="flex flex-col justify-center items-center text-base lg:text-2xl">
+                      <span>ARAUCANA</span>
+                      <span>Malbec</span>
+                    </div>
+                  </div>
+                  <div className="">
+                    <img
+                      src={bottleBottom}
+                      alt=""
+                      className="w-1/2 md:w-auto mx-auto"
+                    />
+                  </div>
+                </div>
+                {/* Bottle 2 end */}
+
+                {/* Bottle 3 start */}
+                <div className="border border-[#C4B27D] px-3 pt-3 md:border-0 md:p-0">
+                  <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
+                    <Link
+                      to=""
+                      className="text-white text-sm lg:text-lg hover:underline"
+                    >
+                      READ MORE
+                    </Link>
+                    <div className="flex flex-col justify-center items-center text-base lg:text-2xl">
+                      <span>ARAUCANA</span>
+                      <span>Azul</span>
+                    </div>
+                  </div>
+                  <div className="">
+                    <img
+                      src={bottleBottom}
+                      alt=""
+                      className="w-1/2 md:w-auto mx-auto"
+                    />
+                  </div>
+                </div>
+                {/* Bottle 3 end */}
+
+                {/* Bottle 4 start */}
+                <div className="border border-[#C4B27D] px-3 pt-3 md:border-0 md:p-0">
+                  <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
+                    <Link
+                      to=""
+                      className="text-white text-sm lg:text-lg hover:underline"
+                    >
+                      READ MORE
+                    </Link>
+                    <div className="flex flex-col justify-center items-center text-base lg:text-2xl">
+                      <span>RIBERA DEL CUARZO</span>
+                      <span>Parcela Única</span>
+                    </div>
+                  </div>
+                  <div className="">
+                    <img
+                      src={bottleBottom}
+                      alt=""
+                      className="w-1/2 md:w-auto mx-auto"
+                    />
+                  </div>
+                </div>
+                {/* Bottle 4 end */}
               </div>
             </div>
-            {/* Footer bottle end */}
           </div>
+          {/* Footer bottle end */}
         </animated.div>
       )}
     </Transition>
