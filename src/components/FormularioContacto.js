@@ -147,8 +147,8 @@ const FormularioContacto = () => {
                     className="pt-6 pb-8 mb-4 md:w-full md:py-0 md:mt-5"
                     style={playfairFontRegular}
                   >
-                    <div className="mb-4 flex">
-                      <div className="mr-2 ">
+                    <div className="mb-4 flex gap-x-10">
+                      <div className=" w-full ">
                         <label
                           className="block text-[#F4EDE2] text-sm md:text-xl "
                           htmlFor="nombre"
@@ -164,7 +164,7 @@ const FormularioContacto = () => {
                           required
                         />
                       </div>
-                      <div className="">
+                      <div className=" w-full">
                         <label
                           className="block text-[#F4EDE2] text-sm md:text-xl"
                           htmlFor="apellido"
@@ -307,7 +307,7 @@ const FormularioContacto = () => {
                   </div>
                   <div className="">
                     <h2 className="text-lg text-[#c4b27d] uppercase md:text-3xl text-center md:text-left">
-                      ¡Follow us!
+                      Follow us!
                     </h2>
                     <a
                       href="https://www.instagram.com/riberadelcuarzo/"
@@ -316,7 +316,7 @@ const FormularioContacto = () => {
                     >
                       <img src={iconIg} alt="" className="w-4" />
                       <h2 className="text-sm  md:text-base ">
-                        @riberadelcuarzo
+                        riberadelcuarzo
                       </h2>
                     </a>
                   </div>

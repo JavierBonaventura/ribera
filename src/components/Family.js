@@ -215,7 +215,7 @@ const Family = () => {
                         1883
                       </h1>
                       <h2
-                        class="uppercase text-[#C4B27D] tracking-wide"
+                        className="uppercase text-[#C4B27D] tracking-wide"
                         style={robotoFontRegular}
                       >
                         <span className="text-sm md:text-xl">

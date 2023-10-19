@@ -4,49 +4,48 @@ import logo from "../images/logo.svg";
 import hambur from "../images/menu-hambur.png";
 import paisajeValle from "../images/paisaje-valle1.png";
 import arrowDown from "../images/arrow-down.png";
-import paisajeHistory from "../images/paisaje-history-1.jpg";
+import paisajeHistory from "../images/vinedo-valle-azul.jpg";
 import iconIg from "../images/icon-ig.png";
 import "../App.css";
 import { useLocation } from "react-router-dom";
 import { Transition, animated } from "@react-spring/web";
 
 const ValleAzul = () => {
- // inicio codigo para retrasar la aparicion de History
- const [isVisible, setIsVisible] = useState(false);
+  // inicio codigo para retrasar la aparicion de History
+  const [isVisible, setIsVisible] = useState(false);
 
- useEffect(() => {
-   const timeout = setTimeout(() => {
-     setIsVisible(true);
-   }, 800);
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsVisible(true);
+    }, 800);
 
-   return () => clearTimeout(timeout);
- }, []);
- // fin codigo para retrasar la aparicion de History
+    return () => clearTimeout(timeout);
+  }, []);
+  // fin codigo para retrasar la aparicion de History
 
- // inicio codigo para retrasar la aparicion de los titulos
- const [isVisible2, setIsVisible2] = useState(false);
+  // inicio codigo para retrasar la aparicion de los titulos
+  const [isVisible2, setIsVisible2] = useState(false);
 
- useEffect(() => {
-   const timeout = setTimeout(() => {
-     setIsVisible2(true);
-   }, 1000);
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsVisible2(true);
+    }, 1000);
 
-   return () => clearTimeout(timeout);
- }, []);
- // fin codigo para retrasar la aparicion de los titulos
+    return () => clearTimeout(timeout);
+  }, []);
+  // fin codigo para retrasar la aparicion de los titulos
 
- // inicio codigo para retrasar la aparicion del sub menu
- const [isVisible3, setIsVisible3] = useState(false);
+  // inicio codigo para retrasar la aparicion del sub menu
+  const [isVisible3, setIsVisible3] = useState(false);
 
- useEffect(() => {
-   const timeout = setTimeout(() => {
-     setIsVisible3(true);
-   }, 1300);
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsVisible3(true);
+    }, 1300);
 
-   return () => clearTimeout(timeout);
- }, []);
- // fin codigo para retrasar la aparicion de los titulos
-
+    return () => clearTimeout(timeout);
+  }, []);
+  // fin codigo para retrasar la aparicion de los titulos
 
   const [igHovered, setIgHovered] = useState(false);
   const handleMouseEnter = () => {
@@ -109,7 +108,7 @@ const ValleAzul = () => {
               <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 ">
                 <div class="pt-24 2xl:pt-36 flex flex-col gap-y-5 2xl:gap-y-10 ">
                   <div class="flex flex-col justify-center items-center md:mt-0 md:gap-y-0">
-                  <h1
+                    <h1
                       style={playfairFontItalic}
                       className={`text-[#5f5f5e] text-xs md:text-lg tracking-widest ${
                         isVisible
@@ -132,7 +131,7 @@ const ValleAzul = () => {
                     <img
                       src={paisajeValle}
                       alt=""
-                      class="w-full object-cover md:w-2/3 mx-auto shadow-2xl"
+                      class="w-full aspect-video object-cover md:w-2/3 mx-auto shadow-2xl"
                     />
                   </div>
                 </div>
@@ -163,7 +162,7 @@ const ValleAzul = () => {
                     <img
                       src={paisajeHistory}
                       alt=""
-                      className="-mb-10 md:-mb-24 w-full shadow-custom"
+                      className="-mb-10 md:-mb-24 w-full shadow-custom aspect-video object-cover"
                     />
                   </div>
                 </div>

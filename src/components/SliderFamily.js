@@ -16,12 +16,12 @@ function SliderFamily() {
 
   const imagenes = [imagen1, imagen2, imagen3, imagen4, imagen5, imagen6];
   const titulos = [
-    "Titulo imagen 1",
-    "Titulo imagen 2",
-    "Titulo imagen 3",
-    "Titulo imagen 4",
-    "Titulo imagen 5",
-    "Titulo imagen 6",
+    "Gallery",
+    "Gallery",
+    "Gallery",
+    "Gallery",
+    "Gallery",
+    "Gallery",
   ];
 
   const handlePrevClick = () => {
@@ -51,17 +51,27 @@ function SliderFamily() {
     fontStyle: "normal",
   };
 
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+    fontSize: "16px",
+  };
+
   return (
     <div className=" overflow-hidden pb-20 md:pb-0">
       <div className="">
         <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 flex flex-col justify-center items-center pt-24 2xl:pt-36 pb-16 gap-y-5 2xl:gap-y-10 ">
           <div class="flex flex-col justify-center items-center bg-[#F3EEE3] ">
-            <h1
-              class="text-[#000000] text-xs lg:text-lg tracking-wider text-center "
-              style={playfairFontRegular}
+            <h2
+              className="uppercase text-[#C4B27D] tracking-wide"
+              style={robotoFontRegular}
             >
-              <i>{titulos[imagenVisible]}</i>
-            </h1>
+              <span className="text-sm md:text-xl">
+                {" "}
+                {titulos[imagenVisible]}
+              </span>
+            </h2>
           </div>
 
           <div className="flex items-center  relative md:px-28">
