@@ -9,6 +9,7 @@ import ImgAraucanaRioCiervos from "../images/araucana-rio-ciervos.png";
 import ImgMarcaAgua from "../images/agua-sombra.png";
 import BgAraucanaRioCiervos from "../images/bg-araucana-rio-ciervos.jpg";
 import bottleBottom from "../images/bottle-bottom.png";
+import bottleBottomPinot from "../images/bottle-bottom-pinot.png";
 
 import "../App.css";
 function Araucana() {
@@ -218,7 +219,7 @@ function Araucana() {
                   </div>
                   <div className="">
                     <img
-                      src={bottleBottom}
+                      src={bottleBottomPinot}
                       alt=""
                       className="w-1/2 md:w-auto mx-auto"
                     />
