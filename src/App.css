@@ -646,9 +646,7 @@ img {
 
 
 /* componente family */
-/* TuComponente.css */
 
-/* TuComponente.css */
 
 .invisible {
   transform: scaleY(0);
@@ -664,3 +662,47 @@ img {
 
 
 /* efecto para dibujar el ciculo del boton del slider */
+
+
+
+
+/*  zoom en la imagen sin afectar su tamaño */
+.contenedor {
+  overflow: hidden;
+  width: 90%;
+  position: relative;
+}
+
+.imagen {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.recuadro-1,
+.recuadro-2 {
+  position: absolute;
+  border: 1px solid white; 
+  pointer-events: none;
+  z-index: 1; 
+}
+
+.recuadro-1 {
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+}
+
+.recuadro-2 {
+  top: 20px; 
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+}
+
+.contenedor:hover .imagen {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}

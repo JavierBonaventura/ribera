@@ -184,18 +184,16 @@ function Araucana() {
             </div>
 
             {/* Img pre footer start */}
-            <div className="flex justify-center items-center h-full pb-12">
-              <div className="container contenedor mx-auto max-w-screen-xl xl:max-w-screen-2xl">
-                <div className="recuadro-1"></div>
-                <div className="recuadro-2"></div>
-                <img
-                  src={BgAraucanaRioCiervos}
-                  className="imagen"
-                  alt="Araucana"
-                />
+            <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 space-y-20 py-10  md:py-32">
+              <div className="py-40 md:py-80 relative" style={bg}>
+                <div className="p-6 absolute top-0 w-full h-full ">
+                  <div className="border w-full h-full "></div>
+                </div>
+                <div className="p-8 absolute top-0 w-full h-full ">
+                  <div className="border w-full h-full "></div>
+                </div>
               </div>
             </div>
-
             {/* Img pre footer start */}
 
             {/* Footer bottle start */}

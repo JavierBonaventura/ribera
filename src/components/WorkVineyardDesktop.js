@@ -492,16 +492,27 @@ const CarouselSlider = () => {
                 stroke="#C4B27D"
                 strokeWidth="3"
                 strokeDasharray="502"
-                strokeDashoffset={502 - (502 * percentage) / 100}
+                strokeDashoffset={502 - (502 * percentage) / -100}
               />
-              <image
+              {/* <image
                 x={(100 - imageWidth) / 2}
                 y={(100 - imageHeight) / 2}
                 width={imageWidth}
                 height={imageHeight}
                 xlinkHref={leftArrowImage}
                 opacity="0.7"
+              /> */}
+              <circle
+                cx="50"
+                cy="50"
+                r="44"
+                stroke="#C4B27D"
+                strokeWidth="1"
+                fill="none"
+                opacity="0.7"
               />
+              <polygon points="40,50 45,45 45,55" fill="#C4B27D" />
+              <circle cx="56" cy="50" r="3" fill="#C4B27D" />
             </svg>
           </div>
         </button>
@@ -586,14 +597,27 @@ const CarouselSlider = () => {
                 strokeDasharray="502"
                 strokeDashoffset={502 - (502 * percentageRight) / 100}
               />
-              <image
+              {/* <image
                 x={(100 - imageWidth) / 2}
                 y={(100 - imageHeight) / 2}
                 width={imageWidth}
                 height={imageHeight}
                 xlinkHref={rightArrowImage}
                 opacity="0.7"
+              /> */}
+              <circle
+                cx="50"
+                cy="50"
+                r="44"
+                stroke="#C4B27D"
+                strokeWidth="1"
+                fill="none"
+                opacity="0.7"
               />
+
+              <polygon points="60,50 55,45 55,55" fill="#C4B27D" />
+
+              <circle cx="44" cy="50" r="3" fill="#C4B27D" />
             </svg>
           </div>
         </button>

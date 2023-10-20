@@ -92,7 +92,7 @@ const CarouselSlider = () => {
     "Maintaining traditional work methods helps us never lose sight of our connection with the land, which defines us as farmers. In addition to using tractors and other machinery to be efficient in specific tasks, working with animals like our Criollo horses, an Argentine breed, is a form of respect and care for nature, seeking to be rewarded with the finest flavor.",
   ];
   const title = [
-    "TITLE 1",
+    "",
     "PRUNING",
     "TYING",
     "TOPPING",
@@ -331,9 +331,9 @@ const CarouselSlider = () => {
   const RenderIndicators = () => {
     const handleIndicatorClick = (index) => {
       if (index < activeIndex) {
-        handlePrevClickIndicators(index); 
+        handlePrevClickIndicators(index);
       } else if (index > activeIndex) {
-        handleNextClickIndicators(index); 
+        handleNextClickIndicators(index);
       }
     };
 
@@ -359,7 +359,7 @@ const CarouselSlider = () => {
           >
             <div
               className={`w-2 h-2 rounded-full ${
-                activeIndex === index ? "bg-[#C4B27D]" : "bg-black"
+                activeIndex === index ? "bg-[#C4B27D]" : "bg-[#F5F5DC]"
               }`}
             >
               {activeIndex === index && (
@@ -378,10 +378,12 @@ const CarouselSlider = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  transitionDuration: "0.5s", 
-                  cursor: "pointer"
+                  transitionDuration: "0.5s",
+                  cursor: "pointer",
                 }}
               >
+                <div className="w-2 h-2 rounded-full bg-[#C4B27D]"></div>
+
                 <div
                   className="absolute top-[-30px] text-[#C4B27D]"
                   style={{ whiteSpace: "nowrap" }}
@@ -396,25 +398,112 @@ const CarouselSlider = () => {
     );
   };
 
+  // inicio codigo para dibujar circulo en botones
+  const [percentage, setPercentage] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const [percentageRight, setPercentageRight] = useState(0);
+  const [isHoveredRight, setIsHoveredRight] = useState(false);
+
+  useEffect(() => {
+    if (isHovered) {
+      const interval = setInterval(() => {
+        if (percentage < 100) {
+          setPercentage(percentage + 5);
+        } else {
+          clearInterval(interval);
+        }
+      }, 4);
+
+      return () => clearInterval(interval);
+    } else {
+      const interval = setInterval(() => {
+        if (percentage !== 0) {
+          setPercentage(percentage - 5);
+        } else {
+          clearInterval(interval);
+        }
+      }, 4);
+
+      return () => clearInterval(interval);
+    }
+  }, [percentage, isHovered]);
+
+  useEffect(() => {
+    if (isHoveredRight) {
+      const intervalRight = setInterval(() => {
+        if (percentageRight < 100) {
+          setPercentageRight(percentageRight + 5);
+        } else {
+          clearInterval(intervalRight);
+        }
+      }, 4);
+
+      return () => clearInterval(intervalRight);
+    } else {
+      const intervalRight = setInterval(() => {
+        if (percentageRight !== 0) {
+          setPercentageRight(percentageRight - 5);
+        } else {
+          clearInterval(intervalRight);
+        }
+      }, 4);
+
+      return () => clearInterval(intervalRight);
+    }
+  }, [percentageRight, isHoveredRight]);
+
+  const imageWidth = 90;
+  const imageHeight = 90;
+
+  // fin codigo para dibujar circulo en botones
+
   return (
     <div className="relative">
-      <div className="overflow-hidden">
+      <div className="overflow-hidden ">
         {renderImages()}
 
         <button
           aria-label="previous"
-          className={`w-20 absolute top-1/2 left-40 ${
-            isPrevButtonHovered ? "opacity-50" : "opacity-100"
+          className={`w-20 absolute top-[50%] left-32 ${
+            isPrevButtonHovered ? "opacity-100" : "opacity-100"
           }`}
           onClick={handlePrevClick}
           onMouseEnter={() => setIsPrevButtonHovered(true)}
           onMouseLeave={() => setIsPrevButtonHovered(false)}
           style={{
             transition: "transform 0.3s",
-            transform: isPrevButtonHovered ? "scale(0.9)" : "scale(1)",
+            transform: isPrevButtonHovered ? "scale(0.95)" : "scale(1)",
           }}
         >
-          <img src={leftArrowImage} alt="izquierda" />
+          {/* <img src={leftArrowImage} alt="izquierda" /> */}
+          <div>
+            <svg
+              width="100"
+              height="100"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              <circle
+                cx="50"
+                cy="50"
+                r="44"
+                fill="none"
+                stroke="#C4B27D"
+                strokeWidth="3"
+                strokeDasharray="502"
+                strokeDashoffset={502 - (502 * percentage) / 100}
+              />
+              <image
+                x={(100 - imageWidth) / 2}
+                y={(100 - imageHeight) / 2}
+                width={imageWidth}
+                height={imageHeight}
+                xlinkHref={leftArrowImage}
+                opacity="0.7"
+              />
+            </svg>
+          </div>
         </button>
         <div className="w-32 container max-w-screen-xl xl:max-w-screen-2xl py-1/2 fixed top-[-10.2rem] left-72 right-0  md:px-5 2xl:px-0 absolute inset-0 flex items-center justify-center  ">
           <p
@@ -468,18 +557,45 @@ const CarouselSlider = () => {
         </div>
         <button
           aria-label="next"
-          className={`w-20 absolute top-1/2 right-40 ${
-            isNextButtonHovered ? "opacity-50" : "opacity-100"
+          className={`w-20 absolute top-[50%] right-32 ${
+            isNextButtonHovered ? "opacity-100" : "opacity-100"
           }`}
           onClick={handleNextClick}
           onMouseEnter={() => setIsNextButtonHovered(true)}
           onMouseLeave={() => setIsNextButtonHovered(false)}
           style={{
             transition: "transform 0.3s",
-            transform: isNextButtonHovered ? "scale(0.9)" : "scale(1)",
+            transform: isNextButtonHovered ? "scale(0.95)" : "scale(1)",
           }}
         >
-          <img src={rightArrowImage} alt="derecha" />
+          {/* <img src={rightArrowImage} alt="derecha" /> */}
+          <div>
+            <svg
+              width="100"
+              height="100"
+              onMouseEnter={() => setIsHoveredRight(true)}
+              onMouseLeave={() => setIsHoveredRight(false)}
+            >
+              <circle
+                cx="50"
+                cy="50"
+                r="44"
+                fill="none"
+                stroke="#C4B27D"
+                strokeWidth="3"
+                strokeDasharray="502"
+                strokeDashoffset={502 - (502 * percentageRight) / 100}
+              />
+              <image
+                x={(100 - imageWidth) / 2}
+                y={(100 - imageHeight) / 2}
+                width={imageWidth}
+                height={imageHeight}
+                xlinkHref={rightArrowImage}
+                opacity="0.7"
+              />
+            </svg>
+          </div>
         </button>
       </div>
     </div>
