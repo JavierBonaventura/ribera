@@ -13,6 +13,46 @@ import bottleBottomPinot from "../images/bottle-bottom-pinot.png";
 
 import "../App.css";
 function Araucana() {
+  // retraso de apariciones
+
+  // inicio codigo para retrasar la aparicion de wines
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsVisible(true);
+    }, 800);
+
+    return () => clearTimeout(timeout);
+  }, []);
+  // fin codigo para retrasar la aparicion de History
+
+  // inicio codigo para retrasar la aparicion de IN ARGENTINA
+  const [isVisible2, setIsVisible2] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsVisible2(true);
+    }, 1000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+  // fin codigo para retrasar la aparicion de los titulos
+
+  // inicio codigo para retrasar la aparicion de la foto del vino
+  const [isVisible3, setIsVisible3] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsVisible3(true);
+    }, 1300);
+
+    return () => clearTimeout(timeout);
+  }, []);
+  // fin codigo para retrasar la aparicion de los titulos
+
+  // fin retraso de apariciones
+
   const bg = {
     backgroundImage: `url(${BgAraucanaRioCiervos})`, // Establece la imagen de fondo a bmw
     backgroundSize: "cover", // Ajusta el tamaño de la imagen de fondo según el contenedor
@@ -98,14 +138,21 @@ function Araucana() {
               {/* Titular start */}
               <div class="flex flex-col justify-center items-center">
                 <h1
-                  class="text-xs md:text-lg tracking-widest text-[#F3EEE3]"
                   style={playfairFontItalic}
+                  className={`text-xs md:text-lg tracking-widest text-[#F3EEE3] ${
+                    isVisible
+                      ? "opacity-100 transition-opacity duration-500"
+                      : "opacity-0 transition-opacity duration-500"
+                  }`}
                 >
                   <i style={playfairFontItalic}>Wines</i>
                 </h1>
                 <h2
                   style={playfairFontBlack}
-                  className="text-base md:text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
+                  className={`text-base md:text-2xl text-[#C4B27D] text-center tracking-wider uppercase ${
+                    isVisible2 ? "appear-from-bottom" : "invisible"
+                  }`}
+
                 >
                   In Argentina
                 </h2>
@@ -116,10 +163,16 @@ function Araucana() {
               <div>
                 {/* img wine start */}
                 <div className="w-32 md:w-52 mx-auto relative flex justify-center items-start py-16 md:py-24">
+                  
                   <img
                     src={ImgAraucanaRioCiervos}
                     alt=""
-                    className="w-full z-50"
+                   
+                    className={`w-full z-50 ${
+                      isVisible3
+                        ? "opacity-100 transition-opacity duration-500"
+                        : "opacity-0 transition-opacity duration-500"
+                    }`}
                   />
                   <div className=" absolute w-[20rem] md:w-[29rem] ">
                     <img src={ImgMarcaAgua} alt="" className="w-full " />
