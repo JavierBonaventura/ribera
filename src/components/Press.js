@@ -9,16 +9,15 @@ import rightArrowImage from "../images/flechaDerecha.png";
 import PressTitulares from "./PressTitulares";
 
 // incluir las imagenes por año
-import bgNota1_2022 from "../images/nota-press-1.png";
-import bgNota2_2022 from "../images/nota-press-2.png";
-import bgNota3_2022 from "../images/nota-press-3.png";
+import bgNota1_2022 from "../images/nota-1-2022.png";
+import bgNota2_2022 from "../images/nota-2-2022.png";
+import bgNota3_2022 from "../images/nota-3-2022.jpg";
 
-import bgNota1_2023 from "../images/nota-press-3.png";
-import bgNota2_2023 from "../images/nota-press-1.png";
-import bgNota3_2023 from "../images/nota-press-2.png";
+import bgNota1_2023 from "../images/nota-1-2023.jpg";
+import bgNota2_2023 from "../images/nota-2-2023.png";
+import bgNota3_2023 from "../images/nota-3-2023.jpg";
 
 import { Transition, animated } from "@react-spring/web";
-
 import "../App.css";
 
 function Press() {
@@ -29,26 +28,39 @@ function Press() {
   const anos = ["2022", "2023"];
 
   const fechas2022 = [
-    "31 de Agosto 2022",
-    "22 de Mayo 2022",
-    "07 de Enero 2022",
+    "30 de Diciembre 2022",
+    "13 de Abril 2022",
+    "08 de Febrero 2022",
   ];
 
   const titulares2022 = [
-    "Entre la barda 2022, un río magnífico y vinos imponentes: un viaje hacia la bodega patagónica Casa Pirque, en Valle Azul",
-    "Entre la barda, un río magnífico y vinos imponentes: un viaje hacia la bodega patagónica Casa Pirque, en Valle Azul",
-    "Entre la barda 2022, un río magnífico y vinos imponentes: un viaje hacia la bodega patagónica Casa Pirque, en Valle Azul",
+    "Araucana Azul, un blend con personalidad propia",
+    "From Penguins to Pinot, a Glimpse at Winemaking in Patagonia",
+    "La producción vitivinícola de calidad se abre en todas las direcciones",
+  ];
+
+  const links2022 = [
+    "https://www.onthewineside.com.ar/post/araucana-azul",
+    "https://mag.sommtv.com/2022/04/winemaking-in-patagonia/",
+    "https://www.lanacion.com.ar/revista-brando/de-la-costa-atlantica-al-extremo-sur-el-nuevo-mapa-del-vino-en-la-argentina-nid08022022/",
   ];
 
   const fechas2023 = [
-    "31 de Agosto 2023",
+    "06 de Octubre 2023",
+    "31 de Mayo 2023",
     "22 de Mayo 2023",
-    "13 de Abril 2023",
   ];
 
   const titulares2023 = [
-    "Entre la barda 2023, un río magnífico y vinos imponentes: un viaje hacia la bodega patagónica Casa Pirque, en Valle Azul",
-    "Entre la barda, un río magnífico y vinos imponentes: un viaje hacia la bodega patagónica Casa Pirque, en Valle Azul",
+    "Un viñedo único en Patagonia. Fue plantado en medio del desierto...",
+    "Rescatando el patrimonio del Pinot Noir patagónico",
+    "Los mejores del mundo. Cuáles son y cuánto cuestan los vinos que, por tiempo limitado...",
+  ];
+
+  const links2023 = [
+    "https://www.lanacion.com.ar/sabado/un-vinedo-unico-en-patagonia-fue-plantado-en-medio-del-desierto-por-una-condesa-italiana-apasionada-nid06102023/",
+    "http://www.aasommeliers.com.ar/novedades/n/649/Rescatando-el-patrimonio-del-Pinot-Noir-patag%C3%B3nico",
+    "https://www.lanacion.com.ar/sabado/hasta-400-dolares-la-copa-5-restaurantes-portenos-serviran-por-copa-los-vinos-mas-prestigiosos-de-nid22052023/",
   ];
 
   const imagenes2022 = [bgNota1_2022, bgNota2_2022, bgNota3_2022];
@@ -173,17 +185,17 @@ function Press() {
                   </div>
                 </div>
 
-                <div className="flex flex-col gap-y-20 lg:gap-y-40 py-14 lg:py-32 items-center justify-center px-4">
-                  <PressTitulares
-                    fechas2022={fechas2022}
-                    imagenes2022={imagenes2022}
-                    titulares2022={titulares2022}
-                    fechas2023={fechas2023}
-                    imagenes2023={imagenes2023}
-                    titulares2023={titulares2023}
-                    anoVisible={anoVisible}
-                  />
-                </div>
+                <PressTitulares
+                  fechas2022={fechas2022}
+                  imagenes2022={imagenes2022}
+                  titulares2022={titulares2022}
+                  fechas2023={fechas2023}
+                  imagenes2023={imagenes2023}
+                  titulares2023={titulares2023}
+                  anoVisible={anoVisible}
+                  links2022={links2022}
+                  links2023={links2023}
+                />
               </div>
             </div>
 
