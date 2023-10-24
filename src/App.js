@@ -8,27 +8,34 @@ import {
 } from "react-router-dom";
 import { Transition, animated, config } from "@react-spring/web";
 
+//COMPONENTS//
 import Menu from "./components/Menu";
 import MenuDesktop from "./components/MenuDesktop";
-import Family from "./components/Family";
-import AraucanaVineyard from "./components/AraucanaVineyard";
-import WorkVineyard from "./components/WorkVineyard";
-import WorkVineyardDesktop from "./components/WorkVineyardDesktop";
-import WorkWinery from "./components/WorkWinery";
-import WorkWineryDesktop from "./components/WorkWineryDesktop";
-import LifeOnEstate from "./components/LifeOnEstate";
-import LifeOnEstateDesktop from "./components/LifeOnEstateDesktop";
-import LifeWater from "./components/LifeWater";
-import LifeWaterRead from "./components/LifeWater-read";
-import WinesWorld from "./components/WinesWorld";
-import WinesArgentina from "./components/WinesArgentina";
-import AraucanaRioCiervos from "./components/AraucanaRioCiervos";
 import MenuHamburguesa from "./components/MenuHamburguesa";
 import MenuHamburguesaDesktop from "./components/MenuHamburguesaDesktop";
-import ValleAzul from "./components/ValleAzul";
 import FormularioContacto from "./components/FormularioContacto";
-import Press from "./components/Press";
 import "./App.css";
+
+//PAGES//
+import Family from "./pages/History/Family";
+import ValleAzul from "./pages/History/ValleAzul";
+import AraucanaVineyard from "./pages/PatagonianSpirit/AraucanaVineyard";
+import WorkVineyardDesktop from "./pages/PatagonianSpirit/WorkVineyardDesktop";
+import WorkVineyard from "./pages/PatagonianSpirit/WorkVineyard";
+import WorkWineryDesktop from "./pages/PatagonianSpirit/WorkWineryDesktop";
+import WorkWinery from "./pages/PatagonianSpirit/WorkWinery";
+import LifeOnEstateDesktop from "./pages/PatagonianSpirit/LifeOnEstateDesktop";
+import LifeOnEstate from "./pages/PatagonianSpirit/LifeOnEstate";
+import LifeWater from "./pages/PatagonianSpirit/LifeWater";
+import LifeWaterRead from "./pages/PatagonianSpirit/LifeWater-read";
+import AraucanaRioCiervos from "./pages/WinesArgentina/AraucanaRioCiervos";
+import AraucanaPinotNoir from "./pages/WinesArgentina/AraucanaPinotNoir";
+import AraucanaMalbec from "./pages/WinesArgentina/AraucanaMalbec";
+import AraucanaAzul from "./pages/WinesArgentina/AraucanaAzul";
+import RiberaParcelaUnica from "./pages/WinesWorld/RiberaParcelaUnica";
+import RiberaClasico from "./pages/WinesWorld/RiberaClasico";
+import RiberaEspecial from "./pages/WinesWorld/RiberaEspecial";
+import Press from "./pages/Press/Press";
 
 function App() {
   return (
@@ -127,12 +134,23 @@ const AppContent = () => {
               <Route path="/lifewater" element={<LifeWater />} />
               <Route path="/press" element={<Press />} />
               <Route path="/lifewaterread" element={<LifeWaterRead />} />
-              <Route path="/winesworld" element={<WinesWorld />} />
-              <Route path="/winesargentina" element={<WinesArgentina />} />
+
               <Route
                 path="/AraucanaRioCiervos"
                 element={<AraucanaRioCiervos />}
               />
+              <Route
+                path="/AraucanaPinotNoir"
+                element={<AraucanaPinotNoir />}
+              />
+              <Route path="/AraucanaMalbec" element={<AraucanaMalbec />} />
+              <Route path="/AraucanaAzul" element={<AraucanaAzul />} />
+              <Route
+                path="/RiberaParcelaUnica"
+                element={<RiberaParcelaUnica />}
+              />
+              <Route path="/RiberaClasico" element={<RiberaClasico />} />
+              <Route path="/RiberaEspecial" element={<RiberaEspecial />} />
               {windowWidth < 768 ? (
                 <Route path="/menuhamburguesa" element={<MenuHamburguesa />} />
               ) : (

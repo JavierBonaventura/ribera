@@ -298,16 +298,7 @@ const Home = () => {
                     <animated.div style={dropdownAnimation4}>
                       <ul className="text-center">
                         <li>
-                          <Link to="/winesargentina">
-                            <p style={robotoFontRegular}>
-                              <span className="subMenu tracking-widest">
-                                View all
-                              </span>
-                            </p>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/winesargentina#posicion1">
+                          <Link to="/AraucanaRioCiervos">
                             <p style={robotoFontRegular}>
                               <span className="subMenu tracking-widest">
                                 Araucana Río de los Ciervos Malbec
@@ -316,7 +307,7 @@ const Home = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="/winesargentina#posicion2">
+                          <Link to="/AraucanaPinotNoir">
                             <p style={robotoFontRegular}>
                               <span className="subMenu tracking-widest">
                                 Araucana Río de los Ciervos Pinot Noir
@@ -325,7 +316,7 @@ const Home = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="/winesargentina#posicion3">
+                          <Link to="/AraucanaMalbec">
                             <p style={robotoFontRegular}>
                               <span className="subMenu tracking-widest">
                                 Araucana Malbec
@@ -334,7 +325,7 @@ const Home = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="/winesargentina#posicion4">
+                          <Link to="/AraucanAzul">
                             <p style={robotoFontRegular}>
                               <span className="subMenu tracking-widest">
                                 Araucana Azul
@@ -354,16 +345,7 @@ const Home = () => {
                     <animated.div style={dropdownAnimation5}>
                       <ul className="text-center">
                         <li>
-                          <Link to="/winesworld">
-                            <p style={robotoFontRegular}>
-                              <span className="subMenu tracking-widest">
-                                View all
-                              </span>
-                            </p>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/winesworld#posicion1">
+                          <Link to="/RiberaClasico">
                             <p style={robotoFontRegular}>
                               <span className="subMenu tracking-widest">
                                 Ribera del Cuarzo Clásico
@@ -372,7 +354,7 @@ const Home = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="/winesworld#posicion2">
+                          <Link to="/RiberaEspecial">
                             <p style={robotoFontRegular}>
                               <span className="subMenu tracking-widest">
                                 Ribera del Cuarzo Especial
@@ -381,10 +363,10 @@ const Home = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="/winesworld#posicion3">
+                          <Link to="/RiberaParcelaUnica">
                             <p style={robotoFontRegular}>
                               <span className="subMenu tracking-widest">
-                                Ribera del Cuarzo Gran Reserva
+                                Ribera del Cuarzo Parcela Única
                               </span>
                             </p>
                           </Link>
