@@ -39,7 +39,7 @@ const TitularComponent = ({
           <div className="flex flex-col lg:flex-row lg:gap-x-10 w-full xl:w-2/3 mx-auto bg-purple-600 ">
             <div
               style={{
-                backgroundImage: `url(${imagenesToDisplay[index]})`,
+                backgroundImage: ``,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
               }}
