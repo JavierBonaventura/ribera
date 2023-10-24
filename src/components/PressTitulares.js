@@ -33,24 +33,24 @@ const TitularComponent = ({
     anoVisible === 0 ? links2022 : anoVisible === 1 ? links2023 : [];
 
   return (
-    <div className="flex flex-col gap-y-20 lg:gap-y-40 py-14 lg:py-32 items-center justify-center px-4 w-full">
+    <div className="flex flex-col gap-y-20 lg:gap-y-40 py-14 lg:py-32 items-center justify-center px-4 w-full bg-red-600">
       {titularesToDisplay.map((titular, index) => (
-        <div key={index} className=" w-full">
-          <div className="flex flex-col lg:flex-row lg:gap-x-10 w-full xl:w-2/3 mx-auto ">
+        <div key={index} className="w-full bg-green-500">
+          <div className="flex flex-col lg:flex-row lg:gap-x-10 w-full xl:w-2/3 mx-auto bg-purple-600 ">
             <div
               style={{
                 backgroundImage: `url(${imagenesToDisplay[index]})`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
               }}
-              className="py-28 aspect-video"
+              className="py-28 aspect-video bg-yellow-500 "
               alt={`Image ${index}`}
             />
 
-            <div className="text-[#F3EEE3] w-full  flex flex-col justify-between gap-y-2 lg:gap-y-0 py-2 lg:py-0">
+            <div className="text-[#F3EEE3] w-full  flex flex-col justify-between gap-y-2 lg:gap-y-0 py-2 lg:py-0 bg-blue-800">
               <div>
                 <span
-                  className="text-sm lg:text-base"
+                  className="text-sm lg:text-base bg-gray-500"
                   style={playfairFontItalic}
                 >
                   {fechasToDisplay[index] || ""}
