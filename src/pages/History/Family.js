@@ -142,7 +142,7 @@ const Family = () => {
                           : "opacity-0 transition-opacity duration-500"
                       }`}
                     >
-                      <i style={playfairFontItalic}>Historys</i>
+                      <i style={playfairFontItalic}>History</i>
                     </h1>
                     <h2
                       style={playfairFontBlack}
