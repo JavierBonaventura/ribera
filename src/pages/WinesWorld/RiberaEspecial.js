@@ -7,7 +7,7 @@ import iconDownload from "../../images/icon-download.png";
 import { useSpring, Transition, animated } from "@react-spring/web";
 import ImgRiberaEspecial from "../../images/ribera-especial.png";
 import ImgMarcaAgua from "../../images/agua-sombra.png";
-import BgRiberaEspecial from "../../images/bg-ribera-clasico.jpg";
+import BgRiberaEspecial from "../../images/bg-ribera-especial.jpg";
 import bottleBottom from "../../images/bottle-bottom.png";
 import "../../App.css";
 function Araucana() {
@@ -254,7 +254,7 @@ function Araucana() {
                   <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
                     <Link
                       to="/RiberaClasico"
-                      className="text-white text-sm lg:text-lg hover:underline"
+                      className="text-white text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
                     >
                       READ MORE
                     </Link>
@@ -263,13 +263,13 @@ function Araucana() {
                       <span>Clásico</span>
                     </div>
                   </div>
-                  <div className="">
+                  <Link to="/RiberaClasico">
                     <img
                       src={bottleBottom}
                       alt=""
-                      className="w-1/2 md:w-auto mx-auto"
+                      className="w-1/2 md:w-auto mx-auto hover:scale-110 transition ease-in-out duration-300"
                     />
-                  </div>
+                  </Link>
                 </div>
                 {/* Bottle 1 end */}
 
@@ -278,7 +278,7 @@ function Araucana() {
                   <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
                     <Link
                       to="/RiberaParcelaUnica"
-                      className="text-white text-sm lg:text-lg hover:underline"
+                      className="text-white text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
                     >
                       READ MORE
                     </Link>
@@ -287,13 +287,13 @@ function Araucana() {
                       <span>Parcela Única</span>
                     </div>
                   </div>
-                  <div className="">
+                  <Link to="/RiberaParcelaUnica">
                     <img
                       src={bottleBottom}
                       alt=""
-                      className="w-1/2 md:w-auto mx-auto"
+                      className="w-1/2 md:w-auto mx-auto hover:scale-110 transition ease-in-out duration-300"
                     />
-                  </div>
+                  </Link>
                 </div>
                 {/* Bottle 2 end */}
               </div>
