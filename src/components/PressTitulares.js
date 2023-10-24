@@ -39,11 +39,11 @@ const TitularComponent = ({
           <div className="flex flex-col lg:flex-row lg:gap-x-10 w-full xl:w-2/3 mx-auto bg-purple-600 ">
             <div
               style={{
-                backgroundImage: ``,
+                backgroundImage: `url(${imagenesToDisplay[index]})`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
               }}
-              className="py-28 aspect-video bg-yellow-500 "
+              className="py-28 aspect-square lg:aspect-video bg-yellow-500 "
               alt={`Image ${index}`}
             />
 
