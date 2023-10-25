@@ -11,6 +11,10 @@ import BgAraucanaPinotNoir from "../../images/bg-araucana-pinot-noir.jpg";
 import bottleBottom from "../../images/bottle-bottom.png";
 import "../../App.css";
 function Araucana() {
+  // Desplaza a la parte superior cuando se monta el componente
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
   // retraso de apariciones
 
   // inicio codigo para retrasar la aparicion de wines
