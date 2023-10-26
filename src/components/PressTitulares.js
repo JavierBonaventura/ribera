@@ -68,9 +68,9 @@ const TitularComponent = ({
                   {titular || ""}
                 </span>
               </div>
-              <div>
+              <div className="pt-3">
                 <span
-                  className="text-sm lg:text-base text-[#F3EEE3]"
+                  className="text-xs lg:text-sm text-[#F3EEE3]"
                   style={playfairFontItalic}
                 >
                   {autoresToDisplay[index] || ""}
