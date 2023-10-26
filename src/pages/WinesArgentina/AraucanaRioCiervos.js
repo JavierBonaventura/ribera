@@ -114,7 +114,7 @@ function Araucana() {
     >
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
-          <div className="bg-[#000]">
+          <div className="bg-[#000000e9]">
             <header className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-5 xl:py-10 px-5 2xl:px-0  fixed top-0 left-0 right-0 z-50">
               <div class="flex justify-between items-center">
                 <div class="w-24 md:w-28">
@@ -161,7 +161,7 @@ function Araucana() {
               {/* Wine start */}
               <div>
                 {/* img wine start */}
-                <div className="w-32 md:w-52 mx-auto relative flex justify-center items-start py-16 md:py-24">
+                <div className="w-32 md:w-52 mx-auto relative flex justify-center items-center py-16 md:py-24">
                   <img
                     src={ImgAraucanaRioCiervos}
                     alt=""
@@ -171,7 +171,7 @@ function Araucana() {
                         : "opacity-0 transition-opacity duration-500"
                     }`}
                   />
-                  <div className=" absolute w-[20rem] md:w-[29rem] ">
+                  <div className=" absolute w-[20rem] md:w-[25rem] ">
                     <img src={ImgMarcaAgua} alt="" className="w-full " />
                   </div>
                 </div>
