@@ -30,11 +30,11 @@ function Press() {
   const anos = ["2022", "2023"];
 
   const fechas2023 = [
-    "06 de Octubre 2023",
-    "15 de Septiembre 2023",
-    "06 de Septiembre 2023",
-    "31 de Mayo 2023",
-    "22 de Mayo 2023",
+    "October 6, 2023",
+    "September 15, 2023",
+    "September 06, 2023",
+    "May 31, 2023",
+    "May 22, 2023",
   ];
 
   const titulares2023 = [
@@ -43,6 +43,14 @@ function Press() {
     "Ribera del Cuarzo (Patagonia), primera bodega internacional que plasmará su visión de Rioja",
     "Rescatando el patrimonio del Pinot Noir patagónico",
     "Los mejores del mundo. Cuáles son y cuánto cuestan los vinos que, por tiempo limitado...",
+  ];
+
+  const autores2023 = [
+    "Sebastián A. Ríos / La Nación",
+    "Laura Pintos / ABC",
+    "Alberto Gil / Lo mejor del vino de rioja",
+    "Asociación Argentina de sommeliers",
+    "Sebastián A. Ríos / La Nación",
   ];
 
   const links2023 = [
@@ -54,15 +62,21 @@ function Press() {
   ];
 
   const fechas2022 = [
-    "30 de Diciembre 2022",
-    "13 de Abril 2022",
-    "08 de Febrero 2022",
+    "December 30, 2022",
+    "April 13, 2022",
+    "February 8, 2022",
   ];
 
   const titulares2022 = [
     "Araucana Azul, un blend con personalidad propia",
     "From Penguins to Pinot, a Glimpse at Winemaking in Patagonia",
     "La producción vitivinícola de calidad se abre en todas las direcciones",
+  ];
+
+  const autores2022 = [
+    "Sebastián A. Ríos / On the wine side",
+    "Sorrel Moseley-Williams / Somm tv magazine",
+    "Rodolfo Reich / On the wine side",
   ];
 
   const links2022 = [
@@ -172,7 +186,7 @@ function Press() {
                   </h1>
                 </div>
 
-                <div className=" flex justify-around items-center w-full z-50">
+                <div className=" flex justify-around items-center w-full z-50 b">
                   <div className="w-12 lg:w-20">
                     <img
                       src={leftArrowImage}
@@ -207,6 +221,8 @@ function Press() {
                   imagenes2023={imagenes2023}
                   titulares2023={titulares2023}
                   anoVisible={anoVisible}
+                  autores2022={autores2022}
+                  autores2023={autores2023}
                   links2022={links2022}
                   links2023={links2023}
                 />

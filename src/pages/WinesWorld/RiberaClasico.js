@@ -9,11 +9,12 @@ import ImgRiberaClasico from "../../images/ribera-clasico.png";
 import ImgMarcaAgua from "../../images/agua-sombra.png";
 import BgRiberaClasico from "../../images/bg-ribera-clasico.jpg";
 import bottleBottom from "../../images/bottle-bottom.png";
+import fichaTecnica2021 from "../../fichas/ficha-tecnica-ribera-clasico-2021.pdf";
 import "../../App.css";
 function Araucana() {
   // Desplaza a la parte superior cuando se monta el componente
   useEffect(() => {
-    window.scrollTo(0, 0); 
+    window.scrollTo(0, 0);
   }, []);
   // retraso de apariciones
 
@@ -216,7 +217,11 @@ function Araucana() {
                       <div className="w-2/4 mx-auto">
                         <ul className="text-xs md:text-lg text-[#C4B27D] text-center">
                           <li className="py-2 px-4 ">
-                            <a href="" className="hover:underline">
+                            <a
+                              href={fichaTecnica2021}
+                              target="_blank"
+                              className="hover:underline"
+                            >
                               2021
                             </a>
                           </li>
@@ -266,7 +271,7 @@ function Araucana() {
                     <img
                       src={bottleBottom}
                       alt=""
-                      className="w-1/2 md:w-auto mx-auto hover:scale-110 transition ease-in-out duration-300"
+                      className="w-1/2 md:w-3/4 mx-auto hover:scale-110 transition ease-in-out duration-300"
                     />
                   </Link>
                 </div>
@@ -290,7 +295,7 @@ function Araucana() {
                     <img
                       src={bottleBottom}
                       alt=""
-                      className="w-1/2 md:w-auto mx-auto hover:scale-110 transition ease-in-out duration-300"
+                      className="w-1/2 md:w-3/4 mx-auto hover:scale-110 transition ease-in-out duration-300"
                     />
                   </Link>
                 </div>

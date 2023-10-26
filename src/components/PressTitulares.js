@@ -8,6 +8,8 @@ const TitularComponent = ({
   titulares2023,
   imagenes2023,
   anoVisible,
+  autores2022,
+  autores2023,
   links2022,
   links2023,
 }) => {
@@ -29,6 +31,8 @@ const TitularComponent = ({
     anoVisible === 0 ? titulares2022 : anoVisible === 1 ? titulares2023 : [];
   const imagenesToDisplay =
     anoVisible === 0 ? imagenes2022 : anoVisible === 1 ? imagenes2023 : [];
+  const autoresToDisplay =
+    anoVisible === 0 ? autores2022 : anoVisible === 1 ? autores2023 : [];
   const linksToDisplay =
     anoVisible === 0 ? links2022 : anoVisible === 1 ? links2023 : [];
 
@@ -47,7 +51,7 @@ const TitularComponent = ({
               alt={`Image ${index}`}
             />
 
-            <div className="text-[#F3EEE3] w-full  flex flex-col justify-between gap-y-2 lg:gap-y-0 py-2 lg:py-0 ">
+            <div className="text-[#F3EEE3] w-full  flex flex-col justify-start gap-y-2 lg:gap-y-5 py-2 lg:py-0">
               <div>
                 <span
                   className="text-sm lg:text-base "
@@ -58,10 +62,18 @@ const TitularComponent = ({
               </div>
               <div>
                 <span
-                  className="text-base lg:text-lg text-[#C4B27D]"
+                  className="text-base lg:text-lg text-[#F3EEE3]"
                   style={playfairFontRegular}
                 >
                   {titular || ""}
+                </span>
+              </div>
+              <div>
+                <span
+                  className="text-sm lg:text-base text-[#F3EEE3]"
+                  style={playfairFontItalic}
+                >
+                  {autoresToDisplay[index] || ""}
                 </span>
               </div>
               <a

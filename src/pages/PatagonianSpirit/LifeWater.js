@@ -108,7 +108,7 @@ const LifeWater = () => {
                     <Link to="/lifewaterread">
                       <a
                         href=""
-                        className="text-[#F3EEE3] uppercase bg-[#C4B27D] border border-[#C4B27D] text-lg py-2 px-10 rounded-lg hover:text-[#C4B27D] hover:bg-[#F3EEE3] hover:border-[#F3EEE3] transition ease-in-out  duration-300"
+                        className="text-[#C4B27D] hover:text-[#F3EEE3]  uppercase hover:bg-[#C4B27D] border border-[#C4B27D] text-lg py-2 px-10 rounded-lg   transition ease-in-out  duration-300"
                       >
                         Read more
                       </a>

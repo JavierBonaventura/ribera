@@ -10,11 +10,13 @@ import ImgMarcaAgua from "../../images/agua-sombra.png";
 import BgAraucanaRioCiervos from "../../images/bg-araucana-rio-ciervos.jpg";
 import bottleBottom from "../../images/bottle-bottom.png";
 import bottleBottomPinot from "../../images/bottle-bottom-pinot.png";
+import fichaTecnica2021 from "../../fichas/ficha-tecnica-araucana-rio-ciervos-2021.pdf";
+import fichaTecnica2020 from "../../fichas/ficha-tecnica-araucana-rio-ciervos-2020.pdf";
 import "../../App.css";
 function Araucana() {
   // Desplaza a la parte superior cuando se monta el componente
   useEffect(() => {
-    window.scrollTo(0, 0); 
+    window.scrollTo(0, 0);
   }, []);
   // retraso de apariciones
 
@@ -217,8 +219,21 @@ function Araucana() {
                       <div className="w-2/4 mx-auto">
                         <ul className="text-xs md:text-lg text-[#C4B27D] text-center">
                           <li className="py-2 px-4 ">
-                            <a href="" className="hover:underline">
+                            <a
+                              href={fichaTecnica2021}
+                              target="_blank"
+                              className="hover:underline"
+                            >
                               2021
+                            </a>
+                          </li>
+                          <li className="py-2 px-4 ">
+                            <a
+                              href={fichaTecnica2020}
+                              target="_blank"
+                              className="hover:underline"
+                            >
+                              2020
                             </a>
                           </li>
                         </ul>
@@ -329,7 +344,7 @@ function Araucana() {
                 <div className="border border-[#C4B27D] px-3 pt-3 md:border-0 md:p-0">
                   <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
                     <Link
-                      to="/AraucanaParcelaUnica"
+                      to="/RiberaParcelaUnica"
                       className="text-white text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
                     >
                       READ MORE
@@ -339,7 +354,7 @@ function Araucana() {
                       <span>Parcela Única</span>
                     </div>
                   </div>
-                  <Link to="/AraucanaParcelaUnica">
+                  <Link to="/RiberaParcelaUnica">
                     <img
                       src={bottleBottom}
                       alt=""

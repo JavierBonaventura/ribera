@@ -10,11 +10,13 @@ import ImgMarcaAgua from "../../images/agua-sombra.png";
 import BgAraucanaMalbec from "../../images/bg-araucana-malbec.jpg";
 import bottleBottom from "../../images/bottle-bottom.png";
 import bottleBottomPinot from "../../images/bottle-bottom-pinot.png";
+import fichaTecnica2020 from "../../fichas/ficha-tecnica-araucana-malbec-2020.pdf";
+import fichaTecnica2022 from "../../fichas/ficha-tecnica-araucana-malbec-2022.pdf";
 import "../../App.css";
 function Araucana() {
   // Desplaza a la parte superior cuando se monta el componente
   useEffect(() => {
-    window.scrollTo(0, 0); 
+    window.scrollTo(0, 0);
   }, []);
   // retraso de apariciones
 
@@ -218,18 +220,21 @@ function Araucana() {
                       <div className="w-2/4 mx-auto">
                         <ul className="text-xs md:text-lg text-[#C4B27D] text-center">
                           <li className="py-2 px-4 ">
-                            <a href="" className="hover:underline">
-                              2021
+                            <a
+                              href={fichaTecnica2022}
+                              target="_blank"
+                              className="hover:underline"
+                            >
+                              2022
                             </a>
                           </li>
                           <li className="py-2 px-4 ">
-                            <a href="" className="hover:underline">
+                            <a
+                              href={fichaTecnica2020}
+                              target="_blank"
+                              className="hover:underline"
+                            >
                               2020
-                            </a>
-                          </li>
-                          <li className="py-2 px-4 ">
-                            <a href="" className="hover:underline">
-                              2019
                             </a>
                           </li>
                         </ul>

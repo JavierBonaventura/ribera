@@ -10,11 +10,12 @@ import ImgMarcaAgua from "../../images/agua-sombra.png";
 import BgAraucanaAzul from "../../images/bg-araucana-azul.jpg";
 import bottleBottom from "../../images/bottle-bottom.png";
 import bottleBottomPinot from "../../images/bottle-bottom-pinot.png";
+import fichaTecnica2019 from "../../fichas/ficha-tecnica-araucana-azul-2019.pdf";
 import "../../App.css";
 function Araucana() {
-// Desplaza a la parte superior cuando se monta el componente
+  // Desplaza a la parte superior cuando se monta el componente
   useEffect(() => {
-    window.scrollTo(0, 0); 
+    window.scrollTo(0, 0);
   }, []);
 
   // retraso de apariciones
@@ -218,7 +219,11 @@ function Araucana() {
                       <div className="w-2/4 mx-auto">
                         <ul className="text-xs md:text-lg text-[#C4B27D] text-center">
                           <li className="py-2 px-4 ">
-                            <a href="" className="hover:underline">
+                            <a
+                              href={fichaTecnica2019}
+                              target="_blank"
+                              className="hover:underline"
+                            >
                               2019
                             </a>
                           </li>

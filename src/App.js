@@ -13,7 +13,6 @@ import Menu from "./components/Menu";
 import MenuDesktop from "./components/MenuDesktop";
 import MenuHamburguesa from "./components/MenuHamburguesa";
 import MenuHamburguesaDesktop from "./components/MenuHamburguesaDesktop";
-import FormularioContacto from "./components/FormularioContacto";
 import "./App.css";
 
 //PAGES//
@@ -36,6 +35,7 @@ import RiberaParcelaUnica from "./pages/WinesWorld/RiberaParcelaUnica";
 import RiberaClasico from "./pages/WinesWorld/RiberaClasico";
 import RiberaEspecial from "./pages/WinesWorld/RiberaEspecial";
 import Press from "./pages/Press/Press";
+import FormularioContacto from "./pages/Contact/FormularioContacto";
 
 function App() {
   return (

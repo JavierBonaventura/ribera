@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../App.css";
-import logo from "../images/logo.svg";
-import hambur from "../images/menu-hambur.png";
-import iconIg from "../images/icon-ig-form.png";
+import "../../App.css";
+import logo from "../../images/logo.svg";
+import hambur from "../../images/menu-hambur.png";
+import iconIg from "../../images/icon-ig-form.png";
 import { useLocation } from "react-router-dom";
 import { Transition, animated } from "@react-spring/web";
-import portada from "../images/background-contact-1.png";
+import portada from "../../images/background-contact-1.png";
 import emailjs from "emailjs-com";
 
 const FormularioContacto = () => {
@@ -230,7 +230,7 @@ const FormularioContacto = () => {
                     </div>
                     <div className="flex items-center justify-start">
                       <button
-                        className="bg-[#C4B27D] text-[#F3EEE3] text-sm md:text-xl  hover:bg-[#F3EEE3] hover:text-[#C4B27D] transition ease-in-out duration-300 rounded-md  py-2 px-8 "
+                        className="hover:bg-[#C4B27D] hover:text-[#F3EEE3] border border-[#C4B27D] text-sm md:text-xl text-[#C4B27D] transition ease-in-out duration-300 rounded-md  py-2 px-8 "
                         type="submit"
                         onClick={handleSubmit}
                       >
