@@ -182,7 +182,7 @@ function Press() {
                     class="text-xs md:text-lg tracking-widest text-[#F3EEE3]"
                     style={playfairFontRegular}
                   >
-                    Lorem ipsum dolor sit amet, consectetuer
+                    RIBERA MOMENTS - In the news
                   </h1>
                 </div>
 
