@@ -23,11 +23,15 @@ import { Transition, animated } from "@react-spring/web";
 import "../../App.css";
 
 function Press() {
-  const [anoVisible, setAnoVisible] = useState(0);
 
   // Para que se creen nuevos titulares (componentes) se deben agregar registros en el arreglo titulares2022 o titulares2023
 
-  const anos = ["2022", "2023"];
+  const anos = [2022, 2023];
+
+  // funcion para buscar el ano mas alto
+  const posicionMaxValor = anos.indexOf(Math.max(...anos));
+  const [anoVisible, setAnoVisible] = useState(posicionMaxValor);
+
 
   const fechas2023 = [
     "October 6, 2023",
@@ -94,6 +98,10 @@ function Press() {
     imgNota310523,
     imgNota220523,
   ];
+
+
+
+
 
   // funcion para avanzar y retroceder en anios
 
