@@ -13,8 +13,19 @@ import felipe from "../../images/felipe.jpg";
 import "../../App.css";
 import SliderFamily from "../../components/SliderFamily";
 import { Transition, animated } from "@react-spring/web";
+import { useTranslation } from 'react-i18next';
 
 const Family = () => {
+  // codigo para traducciones
+  const { t, i18n } = useTranslation();
+
+
+  const changeLanguage = (newLanguage) => {
+    i18n.changeLanguage(newLanguage);
+    console.log('Idioma actual:', i18n.language);
+
+  };
+
   // inicio codigo para retrasar la aparicion de History
   const [isVisible, setIsVisible] = useState(false);
 
@@ -111,15 +122,18 @@ const Family = () => {
       {(style, item) => (
         <animated.div style={{ ...style, position: "absolute", width: "100%" }}>
           <div>
-            <body class="bg-[#F3EEE3]">
+            <body className="bg-[#F3EEE3]">
               <header className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-5 xl:py-10 px-5 2xl:px-0  fixed top-0 left-0 right-0 z-50">
-                <div class="flex justify-between items-center  ">
-                  <div class="">
+                <div className="flex justify-between items-center  ">
+                  <div className="">
                     <Link to="/">
                       <img src={logo} alt="" className="w-24 md:w-28" />
                     </Link>
                   </div>
-                  <div class="mt-4">
+                  <div className="mt-4">
+                  <button className="text-right" onClick={() => changeLanguage('en')}>English</button>
+                  <button className="text-right" onClick={() => changeLanguage('es')}>Español</button>
+          
                     <Link to="/MenuHamburguesa">
                       <img
                         src={hambur}
@@ -131,9 +145,9 @@ const Family = () => {
                 </div>
               </header>
 
-              <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
-                <div class="pt-24 pb-24 md:pb-10 lg:pt-24 2xl:pt-36  flex flex-col gap-y-2 xl:gap-y-5">
-                  <div class="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0 ">
+              <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
+                <div className="pt-24 pb-24 md:pb-10 lg:pt-24 2xl:pt-36  flex flex-col gap-y-2 xl:gap-y-5">
+                  <div className="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0 ">
                     <h1
                       style={playfairFontItalic}
                       className={`text-[#5f5f5e] text-xs md:text-lg tracking-widest ${
@@ -142,15 +156,17 @@ const Family = () => {
                           : "opacity-0 transition-opacity duration-500"
                       }`}
                     >
-                      <i style={playfairFontItalic}>History</i>
+                      <i style={playfairFontItalic}>{t('history')}</i>
                     </h1>
+
+
                     <h2
                       style={playfairFontBlack}
                       className={`text-base md:text-2xl text-[#C4B27D] tracking-wider uppercase ${
                         isVisible2 ? "appear-from-bottom" : "invisible"
                       }`}
                     >
-                      Family
+                      {t('family')}
                     </h2>
                   </div>
                   <div
@@ -163,20 +179,20 @@ const Family = () => {
                     <img
                       src={ilustrationHistory}
                       alt=""
-                      class="w-7/12 md:w-3/12"
+                      className="w-7/12 md:w-3/12"
                     />
                     <h1
                       style={playfairFontExtraBold}
-                      class="text-[#C4B27D] text-2xl pt-10 absolute font-bold sm:text-4xl 2xl:text-5xl sm:pt-20 lg:pt-24 "
+                      className="text-[#C4B27D] text-2xl pt-10 absolute font-bold sm:text-4xl 2xl:text-5xl sm:pt-20 lg:pt-24 "
                     >
                       1883 - 2023
                     </h1>
                   </div>
-                  <div class="flex justify-center items-center  md:pt-0 px-4 md:px-0 bg">
+                  <div className="flex justify-center items-center  md:pt-0 px-4 md:px-0 bg">
                     <img
                       src={familiaCaballos}
                       alt=""
-                      class="w-full md:w-10/12 xl:w-8/12 shadow-2xl"
+                      className="w-full md:w-10/12 xl:w-8/12 shadow-2xl"
                     />
                   </div>
                   <div className="py-28 md:py-0 hidden">
@@ -196,21 +212,21 @@ const Family = () => {
                 </div>
               </div>
 
-              <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
+              <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
                 <div ref={posicionRef} id="posicion"></div>
                 <div className="flex flex-col md:flex-row md:py-20">
-                  <div class="w-full xl:w-1/2 mx-auto px-4 md:px-0">
+                  <div className="w-full xl:w-1/2 mx-auto px-4 md:px-0">
                     <img
                       src={familia}
                       alt=""
                       className="w-full object-cover shadow-2xl"
                     />
                   </div>
-                  <div class="flex flex-col gap-y-2 md:gap-y-5 w-full xl:w-1/2 mx-auto px-10 xl:px-24 pt-10 pb-32 md:pt-8  md:pb-0 ">
+                  <div className="flex flex-col gap-y-2 md:gap-y-5 w-full xl:w-1/2 mx-auto px-10 xl:px-24 pt-10 pb-32 md:pt-8  md:pb-0 ">
                     <div className="flex flex-col md:gap-y-2">
                       <h1
                         style={playfairFontBlack}
-                        class="text-[#C4B27D] font-bold text-lg md:text-4xl tracking-wide"
+                        className="text-[#C4B27D] font-bold text-lg md:text-4xl tracking-wide"
                       >
                         1883
                       </h1>
@@ -225,7 +241,7 @@ const Family = () => {
                     </div>
                     <div className="flex flex-col gap-y-3">
                       <p
-                        class="text-justify tracking-wider text-black text-xs lg:text-base lg:leading-7"
+                        className="text-justify tracking-wider text-black text-xs lg:text-base lg:leading-7"
                         style={playfairFontRegular}
                       >
                         We have our{" "}
@@ -238,7 +254,7 @@ const Family = () => {
                         powerful forces.
                       </p>
                       <p
-                        class="text-justify tracking-wider text-black text-xs lg:text-base lg:leading-7"
+                        className="text-justify tracking-wider text-black text-xs lg:text-base lg:leading-7"
                         style={playfairFontRegular}
                       >
                         “On my grandmother's side,{" "}
@@ -250,7 +266,7 @@ const Family = () => {
                         Patagonia.
                       </p>
                       <p
-                        class="text-justify tracking-wider text-black text-xs lg:text-base lg:leading-7"
+                        className="text-justify tracking-wider text-black text-xs lg:text-base lg:leading-7"
                         style={playfairFontRegular}
                       >
                         Stories of how these two individuals worked hard to
@@ -258,7 +274,7 @@ const Family = () => {
                         over generations.
                       </p>
                       <p
-                        class="text-justify tracking-wider text-black text-xs lg:text-base lg:leading-7"
+                        className="text-justify tracking-wider text-black text-xs lg:text-base lg:leading-7"
                         style={playfairFontRegular}
                       >
                         I have come to believe that the coincidence of these two
@@ -288,10 +304,10 @@ const Family = () => {
                   Sunset at Valle Azul
                 </span>
 
-                <div class="bg-[#212121] w-full md:w-2/3">
-                  <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
+                <div className="bg-[#212121] w-full md:w-2/3">
+                  <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
                     <div className="flex flex-col md:flex-row-reverse">
-                      <div class="-mt-20 w-full px-4 md:px-0 md:hidden">
+                      <div className="-mt-20 w-full px-4 md:px-0 md:hidden">
                         <img
                           src={carruajeHistory}
                           alt=""
@@ -299,9 +315,9 @@ const Family = () => {
                         />
                       </div>
 
-                      <div class="flex flex-col mx-auto w-full 2xl:w-3/5 gap-y-2 md:gap-y-5 pt-5 pb-12 md:py-24 xl:py-16 2xl:py-32 md:pr-52 lg:pr-60 xl:pl-24 xl:pr-72  px-10 md:px-0 2xl:pl-0 2xl:pr-28">
+                      <div className="flex flex-col mx-auto w-full 2xl:w-3/5 gap-y-2 md:gap-y-5 pt-5 pb-12 md:py-24 xl:py-16 2xl:py-32 md:pr-52 lg:pr-60 xl:pl-24 xl:pr-72  px-10 md:px-0 2xl:pl-0 2xl:pr-28">
                         <p
-                          class="text-right-justify tracking-wider text-[#ffffff] text-xs lg:text-base lg:leading-7 "
+                          className="text-right-justify tracking-wider text-[#ffffff] text-xs lg:text-base lg:leading-7 "
                           style={playfairFontRegular}
                         >
                           Patagonia was the place where we spent the summers of
@@ -332,7 +348,7 @@ const Family = () => {
                 <div className="w-full md:w-2/5 mx-auto flex flex-col gap-y-5 xl:gap-y-16">
                   <div className="px-10 md:px-0">
                     <p
-                      class="text-justify tracking-wider text-[#000000] text-xs lg:text-base lg:leading-7"
+                      className="text-justify tracking-wider text-[#000000] text-xs lg:text-base lg:leading-7"
                       style={playfairFontRegular}
                     >
                       Finally, the day arrived—the moment when I could merge my
@@ -351,15 +367,15 @@ const Family = () => {
                   />
                 </div>
                 <p
-                  class="text-[#000000] text-xs lg:text-lg pt-2 px-10 tracking-wider text-center "
+                  className="text-[#000000] text-xs lg:text-lg pt-2 px-10 tracking-wider text-center "
                   style={playfairFontRegular}
                 >
                   <i>Felipe José Menéndez Arguelles</i>
                 </p>
               </div>
               <SliderFamily />
-              <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 py-20 ">
-                <div class="flex justify-center">
+              <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 py-20 ">
+                <div className="flex justify-center">
                   <a
                     className={`border border-[#C3B17D] rounded-full p-7 md:p-8 ${
                       igHovered
