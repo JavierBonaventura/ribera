@@ -9,7 +9,6 @@ import ImgRiberaParcela from "../../images/ribera-parcela.png";
 import ImgMarcaAgua from "../../images/agua-sombra.png";
 import BgRiberaParcela from "../../images/bg-ribera-parcela.jpg";
 import bottleBottom from "../../images/bottle-bottom.png";
-import bottleBottomPinot from "../../images/bottle-bottom-pinot.png";
 import fichaTecnica2020 from "../../fichas/ficha-tecnica-ribera-parcela-unica-2020.pdf";
 import "../../App.css";
 function Araucana() {

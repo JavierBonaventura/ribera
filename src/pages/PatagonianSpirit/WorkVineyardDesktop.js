@@ -215,6 +215,7 @@ const CarouselSlider = () => {
       animationDelay += 0.02; // Puedes ajustar el retraso de animación según tus preferencias.
       return (
         <span
+          className="text-xs lg:text-base"
           key={index}
           style={{
             animation: `fadeInRight 1s ease ${animationDelay}s both`,
@@ -272,7 +273,7 @@ const CarouselSlider = () => {
 
         <div
           id="pataginan"
-          className="container max-w-screen-xl xl:max-w-screen-2xl mx-auto md:px-5 2xl:px-0 py-10 fixed top-28 left-0 right-0 z-50"
+          className="container max-w-screen-xl xl:max-w-screen-2xl mx-auto md:px-5 2xl:px-0 xl:py-10 fixed top-28 left-0 right-0 z-50"
         >
           <div
             className={`flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0 ${
@@ -296,13 +297,13 @@ const CarouselSlider = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-10 left-0 right-0 flex justify-center z-50">
+        <div className="absolute bottom-10 left-0 right-0 flex justify-center z-50 ">
           {RenderIndicators()}
         </div>
 
         <img
           src={images[currentSlide]}
-          className={`w-full h-screen object-cover brightness-50 fade-transition opacity-${opacity} ${
+          className={`w-full h-screen object-cover brightness-50 fade-transition bg-yellow-500 opacity-${opacity} ${
             condition1Next
               ? "class-when-condition-1-next-is-true"
               : condition2Next
@@ -346,7 +347,7 @@ const CarouselSlider = () => {
     };
 
     return (
-      <div className="flex mt-1 ">
+      <div className="flex mt-1  ">
         {images.map((_, index) => (
           <div
             key={index}
@@ -457,26 +458,23 @@ const CarouselSlider = () => {
   // fin codigo para dibujar circulo en botones
 
   return (
-    <div className="relative">
+    <div className="relative ">
       <div className="overflow-hidden ">
         {renderImages()}
 
         <button
           aria-label="previous"
-          className={`w-20 absolute top-[50%] left-32 ${
+          className={`w-20 absolute top-[50%] left-10 lg:left-32  scale-75 hover:scale-50 lg:scale-100 lg:hover:scale-95 transition ease-in-out duration-300 ${
             isPrevButtonHovered ? "opacity-100" : "opacity-100"
           }`}
           onClick={handlePrevClick}
           onMouseEnter={() => setIsPrevButtonHovered(true)}
           onMouseLeave={() => setIsPrevButtonHovered(false)}
-          style={{
-            transition: "transform 0.3s",
-            transform: isPrevButtonHovered ? "scale(0.95)" : "scale(1)",
-          }}
         >
           {/* <img src={leftArrowImage} alt="izquierda" /> */}
           <div>
             <svg
+              className=""
               width="100"
               height="100"
               onMouseEnter={() => setIsHovered(true)}
@@ -514,20 +512,20 @@ const CarouselSlider = () => {
             </svg>
           </div>
         </button>
-        <div className="w-32 container max-w-screen-xl xl:max-w-screen-2xl py-1/2 fixed top-[-10.2rem] left-72 right-0  md:px-5 2xl:px-0 absolute inset-0 flex items-center justify-center  ">
+        <div className="w-32 container max-w-screen-xl xl:max-w-screen-2xl  py-1/2 fixed top-[-10.2rem] left-24 lg:left-44  xl:left-72 right-0  md:px-5 2xl:px-0 absolute inset-0 flex items-center justify-center  ">
           <p
             style={playfairFontBlack}
-            className=" uppercase text-[#C4B27D] text-2xl "
+            className=" uppercase text-[#C4B27D] text-base lg:text-2xl "
           >
             {" "}
             {"0" + (currentImageIndex + 1)}{" "}
             <sup className="text-base underline align-middles">7</sup>
           </p>
         </div>
-        <div className="w-96 container  mx-auto max-w-screen-xl xl:max-w-screen-2xl  py-1/2 fixed -top-32 left-0 right-0  md:px-5 2xl:px-0 absolute inset-0 flex items-center justify-center ">
+        <div className="w-96 container mx-auto max-w-screen-xl xl:max-w-screen-2xl  py-1/2 fixed -top-32 left-0 right-0  md:px-5 2xl:px-0 absolute inset-0 flex items-center justify-center  ">
           <p
             style={robotoFontRegular}
-            className={`uppercase text-[#C4B27D] text-2xl mb-8 ${
+            className={`uppercase text-[#C4B27D]  text-2xl mb-8 ${
               condition1Next
                 ? "class-when-conditionTitle-1-next-is-true"
                 : condition2Next
@@ -551,7 +549,7 @@ const CarouselSlider = () => {
           </p>
         </div>
         <div
-          className={`w-2/4 container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-1/2 fixed top-40 left-0 right-0 md:px-5 2xl:px-0 absolute inset-0 flex items-center justify-center ${
+          className={` w-7/12 lg:w-2/4 container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-1/2 fixed top-40 left-0 right-0 lg:px-5 2xl:px-0 absolute inset-0 flex items-center justify-center ${
             isVisible2
               ? "opacity-100 transition-opacity duration-500"
               : "opacity-0 transition-opacity duration-500"
@@ -566,16 +564,12 @@ const CarouselSlider = () => {
         </div>
         <button
           aria-label="next"
-          className={`w-20 absolute top-[50%] right-32 ${
+          className={`w-20 absolute top-[50%] right-10 lg:right-32  scale-75 hover:scale-50 lg:scale-100 lg:hover:scale-95 transition ease-in-out duration-300 ${
             isNextButtonHovered ? "opacity-100" : "opacity-100"
           }`}
           onClick={handleNextClick}
           onMouseEnter={() => setIsNextButtonHovered(true)}
           onMouseLeave={() => setIsNextButtonHovered(false)}
-          style={{
-            transition: "transform 0.3s",
-            transform: isNextButtonHovered ? "scale(0.95)" : "scale(1)",
-          }}
         >
           {/* <img src={rightArrowImage} alt="derecha" /> */}
           <div>

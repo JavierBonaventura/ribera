@@ -1,27 +1,62 @@
 import React, { useState } from "react";
 import leftArrowImage from "../images/flechaIzquierda.png";
 import rightArrowImage from "../images/flechaDerecha.png";
-
-import imagen1 from "../images/cava.jpg";
-import imagen2 from "../images/trellising.jpg";
-import imagen3 from "../images/topping.png";
-import imagen4 from "../images/harvest.jpg";
-import imagen5 from "../images/weeds.png";
-import imagen6 from "../images/ancient.jpg";
-
+import slider1 from "../images/slider-history/WEB_HISTORY_SLIDERS-01.jpg";
+import slider2 from "../images/slider-history/WEB_HISTORY_SLIDERS-02.jpg";
+import slider3 from "../images/slider-history/WEB_HISTORY_SLIDERS-03.jpg";
+import slider4 from "../images/slider-history/WEB_HISTORY_SLIDERS-04.jpg";
+import slider5 from "../images/slider-history/WEB_HISTORY_SLIDERS-05.jpg";
+import slider6 from "../images/slider-history/WEB_HISTORY_SLIDERS-06.jpg";
+import slider7 from "../images/slider-history/WEB_HISTORY_SLIDERS-07.jpg";
+import slider8 from "../images/slider-history/WEB_HISTORY_SLIDERS-08.jpg";
+import slider9 from "../images/slider-history/WEB_HISTORY_SLIDERS-09.jpg";
+import slider10 from "../images/slider-history/WEB_HISTORY_SLIDERS-10.jpg";
+import slider11 from "../images/slider-history/WEB_HISTORY_SLIDERS-11.jpg";
+import slider12 from "../images/slider-history/WEB_HISTORY_SLIDERS-12.jpg";
+import slider13 from "../images/slider-history/WEB_HISTORY_SLIDERS-13.jpg";
+import slider14 from "../images/slider-history/WEB_HISTORY_SLIDERS-14.jpg";
+import slider15 from "../images/slider-history/WEB_HISTORY_SLIDERS-15.jpg";
+import slider16 from "../images/slider-history/WEB_HISTORY_SLIDERS-16.jpg";
+import slider17 from "../images/slider-history/WEB_HISTORY_SLIDERS-17.jpg";
+import slider18 from "../images/slider-history/WEB_HISTORY_SLIDERS-18.jpg";
+import slider19 from "../images/slider-history/WEB_HISTORY_SLIDERS-19.jpg";
+import slider20 from "../images/slider-history/WEB_HISTORY_SLIDERS-20.jpg";
+import slider21 from "../images/slider-history/WEB_HISTORY_SLIDERS-21.jpg";
+import slider22 from "../images/slider-history/WEB_HISTORY_SLIDERS-22.jpg";
+import slider23 from "../images/slider-history/WEB_HISTORY_SLIDERS-23.jpg";
+import slider24 from "../images/slider-history/WEB_HISTORY_SLIDERS-24.jpg";
+import slider25 from "../images/slider-history/WEB_HISTORY_SLIDERS-25.jpg";
 import "../App.css";
 
 function SliderFamily() {
   const [imagenVisible, setimagenVisible] = useState(0);
 
-  const imagenes = [imagen1, imagen2, imagen3, imagen4, imagen5, imagen6];
-  const titulos = [
-    "Gallery",
-    "Gallery",
-    "Gallery",
-    "Gallery",
-    "Gallery",
-    "Gallery",
+  const imagenes = [
+    slider1,
+    slider2,
+    slider3,
+    slider4,
+    slider5,
+    slider6,
+    slider7,
+    slider8,
+    slider9,
+    slider10,
+    slider11,
+    slider12,
+    slider13,
+    slider14,
+    slider15,
+    slider16,
+    slider17,
+    slider18,
+    slider19,
+    slider20,
+    slider21,
+    slider22,
+    slider23,
+    slider24,
+    slider25,
   ];
 
   const handlePrevClick = () => {
@@ -40,11 +75,6 @@ function SliderFamily() {
     }
   };
 
-  const playfairFontRegular = {
-    fontFamily: "Playfair Regular, sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
     fontWeight: "normal",
@@ -67,10 +97,7 @@ function SliderFamily() {
               className="uppercase text-[#C4B27D] tracking-wide"
               style={robotoFontRegular}
             >
-              <span className="text-sm md:text-xl">
-                {" "}
-                {titulos[imagenVisible]}
-              </span>
+              <span className="text-sm md:text-xl">GALLERY</span>
             </h2>
           </div>
 

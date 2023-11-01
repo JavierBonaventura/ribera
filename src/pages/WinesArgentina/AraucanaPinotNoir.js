@@ -8,6 +8,7 @@ import { useSpring, Transition, animated } from "@react-spring/web";
 import ImgAraucanaPinotNoir from "../../images/araucana-pinot-noir.png";
 import ImgMarcaAgua from "../../images/agua-sombra.png";
 import BgAraucanaPinotNoir from "../../images/bg-araucana-pinot-noir.jpg";
+import fichaTecnica2020 from "../../fichas/ficha-tecnica-araucana-pinot-2020.pdf";
 import bottleBottom from "../../images/bottle-bottom.png";
 
 import "../../App.css";
@@ -218,7 +219,10 @@ function Araucana() {
                       <div className="w-2/4 mx-auto">
                         <ul className="text-xs md:text-lg text-[#C4B27D] text-center">
                           <li className="py-2 px-4 ">
-                            <a href="" className="hover:underline">
+                            <a
+                              href={fichaTecnica2020}
+                              className="hover:underline"
+                            >
                               2020
                             </a>
                           </li>

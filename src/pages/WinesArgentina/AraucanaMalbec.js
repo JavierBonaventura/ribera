@@ -10,7 +10,9 @@ import ImgMarcaAgua from "../../images/agua-sombra.png";
 import BgAraucanaMalbec from "../../images/bg-araucana-malbec.jpg";
 import bottleBottom from "../../images/bottle-bottom.png";
 import bottleBottomPinot from "../../images/bottle-bottom-pinot.png";
+import fichaTecnica2019 from "../../fichas/ficha-tecnica-araucana-malbec-2019.pdf";
 import fichaTecnica2020 from "../../fichas/ficha-tecnica-araucana-malbec-2020.pdf";
+import fichaTecnica2021 from "../../fichas/ficha-tecnica-araucana-malbec-2021.pdf";
 import fichaTecnica2022 from "../../fichas/ficha-tecnica-araucana-malbec-2022.pdf";
 import "../../App.css";
 function Araucana() {
@@ -230,11 +232,29 @@ function Araucana() {
                           </li>
                           <li className="py-2 px-4 ">
                             <a
+                              href={fichaTecnica2021}
+                              target="_blank"
+                              className="hover:underline"
+                            >
+                              2021
+                            </a>
+                          </li>
+                          <li className="py-2 px-4 ">
+                            <a
                               href={fichaTecnica2020}
                               target="_blank"
                               className="hover:underline"
                             >
                               2020
+                            </a>
+                          </li>
+                          <li className="py-2 px-4 ">
+                            <a
+                              href={fichaTecnica2019}
+                              target="_blank"
+                              className="hover:underline"
+                            >
+                              2019
                             </a>
                           </li>
                         </ul>
