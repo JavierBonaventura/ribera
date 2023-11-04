@@ -8,8 +8,17 @@ import close from "../images/icon-close.svg";
 import x from "../images/x.png";
 import { useLocation } from "react-router-dom";
 import { Transition } from "@react-spring/web";
+import { useTranslation } from 'react-i18next';
+
 
 const Home = () => {
+      // codigo para traducciones
+      const { t, i18n } = useTranslation();
+      const changeLanguage = (newLanguage) => {
+        i18n.changeLanguage(newLanguage);
+        console.log('Idioma actual:', i18n.language);
+      };
+  
   const location = useLocation();
 
   const roboto = {
@@ -409,10 +418,10 @@ const Home = () => {
               </div>
             </div>
             <div className="text-[#f3eee3] text-sm flex gap-x-5 pt-10">
-              <span className="font-bold text-[#c4b27d] cursor-pointer tracking-widest">
+              <span className="font-bold text-[#c4b27d] cursor-pointer tracking-widest" onClick={() => changeLanguage('en')}>
                 english
               </span>
-              <span className="text-[#f3eee3] hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest">
+              <span className="text-[#f3eee3] hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest"  onClick={() => changeLanguage('es')}>
                 spanish
               </span>
             </div>

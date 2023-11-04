@@ -36,12 +36,43 @@ import RiberaClasico from "./pages/WinesWorld/RiberaClasico";
 import RiberaEspecial from "./pages/WinesWorld/RiberaEspecial";
 import Press from "./pages/Press/Press";
 import FormularioContacto from "./pages/Contact/FormularioContacto";
+import AgeConfirmationPopup from "./AgeConfirmationPopup";
+
+
+
+// function App() {
+//   return (
+//     <Router>
+//       <div>
+//         <AppContent />
+//       </div>
+//     </Router>
+//   );
+// }
 
 function App() {
+  const [showAgeConfirmation, setShowAgeConfirmation] = useState(true);
+  const [isAdult, setIsAdult] = useState(false);
+  const [showAccessDeniedMessage, setShowAccessDeniedMessage] = useState(false);
+
+  const handleAgeConfirmed = (isAdult) => {
+    setIsAdult(isAdult);
+    setShowAgeConfirmation(false);
+    if (!isAdult) {
+      setShowAccessDeniedMessage(true);
+    }
+  };
+
   return (
     <Router>
       <div>
-        <AppContent />
+        {showAgeConfirmation && <AgeConfirmationPopup onAgeConfirmed={handleAgeConfirmed} />}
+        {isAdult && !showAccessDeniedMessage && <AppContent />}
+        {showAccessDeniedMessage && (
+          <div>
+            <p>No puedes visitar el sitio por ser menor de 18 años.</p>
+          </div>
+        )}
       </div>
     </Router>
   );

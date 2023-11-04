@@ -16,12 +16,7 @@ import { Transition, animated } from "@react-spring/web";
 import { useTranslation } from 'react-i18next';
 
 const Family = () => {
-  // codigo para traducciones
   const { t, i18n } = useTranslation();
-  const changeLanguage = (newLanguage) => {
-    i18n.changeLanguage(newLanguage);
-    console.log('Idioma actual:', i18n.language);
-  };
 
   // inicio codigo para retrasar la aparicion de History
   const [isVisible, setIsVisible] = useState(false);
@@ -128,8 +123,6 @@ const Family = () => {
                     </Link>
                   </div>
                   <div className="mt-4">
-                  <button className="text-right" onClick={() => changeLanguage('en')}>English</button>
-                  <button className="text-right" onClick={() => changeLanguage('es')}>Español</button>
           
                     <Link to="/MenuHamburguesa">
                       <img

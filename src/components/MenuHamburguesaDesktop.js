@@ -8,8 +8,17 @@ import { Transition } from "@react-spring/web";
 import { useSpring, animated } from "@react-spring/web";
 import { useLocation } from "react-router-dom";
 import "../App.css";
+import { useTranslation } from 'react-i18next';
+
 
 const MenuHamburguesaDesktop = () => {
+    // codigo para traducciones
+    const { t, i18n } = useTranslation();
+    const changeLanguage = (newLanguage) => {
+      i18n.changeLanguage(newLanguage);
+      console.log('Idioma actual:', i18n.language);
+    };
+
   // inicio codigo para retrasar la aparicion del logo
   const [isVisible, setIsVisible] = useState(false);
 
@@ -559,10 +568,10 @@ const MenuHamburguesaDesktop = () => {
                         className="flex justify-start items-center w-1/3 cursor-default gap-x-5 text-sm lg:text-base"
                         style={robotoFontRegular}
                       >
-                        <span className="font-bold text-[#c4b27d] cursor-pointer tracking-widest">
+                        <span className="font-bold text-[#c4b27d] cursor-pointer tracking-widest" onClick={() => changeLanguage('en')}>
                           english
                         </span>
-                        <span className="text-[#F3EEE3] hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest">
+                        <span className="text-[#F3EEE3] hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest"  onClick={() => changeLanguage('es')}>
                           spanish
                         </span>
                       </div>
