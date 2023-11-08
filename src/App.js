@@ -39,31 +39,45 @@ import Press from "./pages/Press/Press";
 import FormularioContacto from "./pages/Contact/FormularioContacto";
 import AgeConfirmationPopup from "./AgeConfirmationPopup";
 
-// function App() {
-//   return (
-//     <Router>
-//       <div>
-//         <AppContent />
-//       </div>
-//     </Router>
-//   );
-// }
-
 function App() {
   const [showAgeConfirmation, setShowAgeConfirmation] = useState(true);
   const [isAdult, setIsAdult] = useState(false);
   const [showAccessDeniedMessage, setShowAccessDeniedMessage] = useState(false);
+  const [countdown, setCountdown] = useState(10);
+  const [showAgeConfirmationAfterCountdown, setShowAgeConfirmationAfterCountdown] = useState(false);
 
   const handleAgeConfirmed = (isAdult) => {
     setIsAdult(isAdult);
     setShowAgeConfirmation(false);
+    setShowAgeConfirmationAfterCountdown(false); 
     if (!isAdult) {
       setShowAccessDeniedMessage(true);
+      setCountdown(10);
     }
   };
 
+  useEffect(() => {
+    let timer;
+    if (showAccessDeniedMessage) {
+      // Iniciar el contador solo si showAccessDeniedMessage es true
+      timer = setInterval(() => {
+        if (countdown > 0) {
+          setCountdown(countdown - 1);
+        }
+      }, 1000);
+      if (countdown === 0) {
+        setShowAgeConfirmationAfterCountdown(true);
+        setShowAccessDeniedMessage(false);
+      }
+    }
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, [showAccessDeniedMessage, countdown]);
+
   const playfairFontExtraBold = {
-    fontFamily: "Playfair ExtraBold , sans-serif",
+    fontFamily: "Playfair ExtraBold, sans-serif",
     fontWeight: "normal",
     fontStyle: "normal",
   };
@@ -74,21 +88,24 @@ function App() {
         {showAgeConfirmation && (
           <AgeConfirmationPopup onAgeConfirmed={handleAgeConfirmed} />
         )}
-        {isAdult && !showAccessDeniedMessage && <AppContent />}
-        {showAccessDeniedMessage && (
-          <div className=" bg-gray-950 w-full h-full fixed flex flex-col items-center justify-center">
+        {showAgeConfirmationAfterCountdown && (
+          <AgeConfirmationPopup onAgeConfirmed={handleAgeConfirmed} />
+        )}
+        {isAdult && !showAccessDeniedMessage && !showAgeConfirmationAfterCountdown && <AppContent />}
+        {showAccessDeniedMessage && !showAgeConfirmationAfterCountdown && (
+          <div className="bg-gray-950 w-full h-full fixed flex flex-col items-center justify-center">
             <div className="flex flex-col justify-center items-center gap-y-5">
               <div>
                 <img src={logoDesktop} alt="" className="w-32 md:w-44" />
               </div>
               <div className="flex flex-col gap-y-7">
                 <p
-                  className="text-[#F3EEE3] text-center text-lg md:text-2xl  tracking-widest leading-7"
+                  className="text-[#F3EEE3] text-center text-lg md:text-2xl tracking-widest leading-7"
                   style={playfairFontExtraBold}
                 >
-                  You cannot visit the site because <br /> you are under 18
-                  years of age.
+                  You cannot visit the site because <br /> you are under 18 years of age.
                 </p>
+                <p  className="text-[#F3EEE3] text-center text-lg md:text-2xl tracking-widest leading-7"  style={playfairFontExtraBold}>Redirecting in {countdown} seconds...</p>
               </div>
             </div>
           </div>
