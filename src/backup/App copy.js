@@ -10,34 +10,34 @@ import { Transition, animated, config } from "@react-spring/web";
 import logoDesktop from "../src/images/logo-home-mob.png";
 
 //COMPONENTS//
-import Menu from "./components/Menu";
-import MenuDesktop from "./components/MenuDesktop";
-import MenuHamburguesa from "./components/MenuHamburguesa";
-import MenuHamburguesaDesktop from "./components/MenuHamburguesaDesktop";
+import Menu from "../components/Menu";
+import MenuDesktop from "../components/MenuDesktop";
+import MenuHamburguesa from "../components/MenuHamburguesa";
+import MenuHamburguesaDesktop from "../components/MenuHamburguesaDesktop";
 import "./App.css";
 
 //PAGES//
-import Family from "./pages/History/Family";
-import ValleAzul from "./pages/History/ValleAzul";
-import AraucanaVineyard from "./pages/PatagonianSpirit/AraucanaVineyard";
-import WorkVineyardDesktop from "./pages/PatagonianSpirit/WorkVineyardDesktop";
-import WorkVineyard from "./pages/PatagonianSpirit/WorkVineyard";
-import WorkWineryDesktop from "./pages/PatagonianSpirit/WorkWineryDesktop";
-import WorkWinery from "./pages/PatagonianSpirit/WorkWinery";
-import LifeOnEstateDesktop from "./pages/PatagonianSpirit/LifeOnEstateDesktop";
-import LifeOnEstate from "./pages/PatagonianSpirit/LifeOnEstate";
-import LifeWater from "./pages/PatagonianSpirit/LifeWater";
-import LifeWaterRead from "./pages/PatagonianSpirit/LifeWater-read";
-import AraucanaRioCiervos from "./pages/WinesArgentina/AraucanaRioCiervos";
-import AraucanaPinotNoir from "./pages/WinesArgentina/AraucanaPinotNoir";
-import AraucanaMalbec from "./pages/WinesArgentina/AraucanaMalbec";
-import AraucanaAzul from "./pages/WinesArgentina/AraucanaAzul";
-import RiberaParcelaUnica from "./pages/WinesWorld/RiberaParcelaUnica";
-import RiberaClasico from "./pages/WinesWorld/RiberaClasico";
-import RiberaEspecial from "./pages/WinesWorld/RiberaEspecial";
-import Press from "./pages/Press/Press";
-import FormularioContacto from "./pages/Contact/FormularioContacto";
-import AgeConfirmationPopup from "./AgeConfirmationPopup";
+import Family from "../pages/History/Family";
+import ValleAzul from "../pages/History/ValleAzul";
+import AraucanaVineyard from "../pages/PatagonianSpirit/AraucanaVineyard";
+import WorkVineyardDesktop from "../pages/PatagonianSpirit/WorkVineyardDesktop";
+import WorkVineyard from "../pages/PatagonianSpirit/WorkVineyard";
+import WorkWineryDesktop from "../pages/PatagonianSpirit/WorkWineryDesktop";
+import WorkWinery from "../pages/PatagonianSpirit/WorkWinery";
+import LifeOnEstateDesktop from "../pages/PatagonianSpirit/LifeOnEstateDesktop";
+import LifeOnEstate from "../pages/PatagonianSpirit/LifeOnEstate";
+import LifeWater from "../pages/PatagonianSpirit/LifeWater";
+import LifeWaterRead from "../pages/PatagonianSpirit/LifeWater-read";
+import AraucanaRioCiervos from "../pages/WinesArgentina/AraucanaRioCiervos";
+import AraucanaPinotNoir from "../pages/WinesArgentina/AraucanaPinotNoir";
+import AraucanaMalbec from "../pages/WinesArgentina/AraucanaMalbec";
+import AraucanaAzul from "../pages/WinesArgentina/AraucanaAzul";
+import RiberaParcelaUnica from "../pages/WinesWorld/RiberaParcelaUnica";
+import RiberaClasico from "../pages/WinesWorld/RiberaClasico";
+import RiberaEspecial from "../pages/WinesWorld/RiberaEspecial";
+import Press from "../pages/Press/Press";
+import FormularioContacto from "../pages/Contact/FormularioContacto";
+import AgeConfirmationPopup from "../AgeConfirmationPopup";
 
 // function App() {
 //   return (

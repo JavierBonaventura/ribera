@@ -1,52 +1,107 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
-import logo from "../images/logo.svg";
-import hambur from "../images/menu-hambur.png";
-import iconIg from "../images/icon-ig.png";
-import leftArrowImage from "../images/flechaIzquierda.png";
-import rightArrowImage from "../images/flechaDerecha.png";
+import logo from "../../images/logo.svg";
+import hambur from "../../images/menu-hambur.png";
+import iconIg from "../../images/icon-ig.png";
+import leftArrowImage from "../../images/flechaIzquierda.png";
+import rightArrowImage from "../../images/flechaDerecha.png";
+import PressTitulares from "../../components/PressTitulares";
 
 // incluir las imagenes por año
-import bgNota1_2022 from "../images/nota-press-1.png";
-import bgNota2_2022 from "../images/nota-press-2.png";
-import bgNota3_2022 from "../images/nota-press-3.png";
+import bgNota1_2022 from "../../images/nota-1-2022.png";
+import bgNota2_2022 from "../../images/nota-2-2022.png";
+import bgNota3_2022 from "../../images/nota-3-2022.jpg";
 
-import bgNota1_2023 from "../images/nota-press-3.png";
-import bgNota2_2023 from "../images/nota-press-1.png";
-import bgNota3_2023 from "../images/nota-press-2.png";
+import imgNota061023 from "../../images/nota-1-2023.jpg";
+import imgNota150923 from "../../images/nota-5-2023.jpg";
+import imgNota060923 from "../../images/nota-4-2023.jpg";
+import imgNota310523 from "../../images/nota-2-2023.png";
+import imgNota220523 from "../../images/nota-3-2023.jpg";
 
 import { Transition, animated } from "@react-spring/web";
+import "../../App.css";
 
-import "../App.css";
 function Press() {
-  const [anoVisible, setAnoVisible] = useState(0);
 
-  const anos = ["2022", "2023"];
+  // Para que se creen nuevos titulares (componentes) se deben agregar registros en el arreglo titulares2022 o titulares2023
 
-  const fechas2022 = [
-    "31 de Agosto 2022",
-    "22 de Mayo 2022",
-    "07 de Enero 2022",
-  ];
+  const anos = [2022, 2023];
 
-  const titular2022 = [
-    "Entre la barda, un río magnífico y vinos imponentes: un viaje hacia la bodega patagónica Casa Pirque, en Valle Azul",
-    "Entre la barda, un río magnífico y vinos imponentes: un viaje hacia la bodega patagónica Casa Pirque, en Valle Azul",
-    "Entre la barda, un río magnífico y vinos imponentes: un viaje hacia la bodega patagónica Casa Pirque, en Valle Azul",
-  ];
+  // funcion para buscar el ano mas alto
+  const posicionMaxValor = anos.indexOf(Math.max(...anos));
+  const [anoVisible, setAnoVisible] = useState(posicionMaxValor);
+
 
   const fechas2023 = [
-    "31 de Agosto 2023",
-    "22 de Mayo 2023",
-    "13 de Abril 2023",
+    "October 6, 2023",
+    "September 15, 2023",
+    "September 06, 2023",
+    "May 31, 2023",
+    "May 22, 2023",
   ];
 
-  const titular2023 = [
-    "Entre la barda, un río magnífico y vinos imponentes: un viaje hacia la bodega patagónica Casa Pirque, en Valle Azul",
-    "Entre la barda, un río magnífico y vinos imponentes: un viaje hacia la bodega patagónica Casa Pirque, en Valle Azul",
-    "Entre la barda, un río magnífico y vinos imponentes: un viaje hacia la bodega patagónica Casa Pirque, en Valle Azul",
+  const titulares2023 = [
+    "Un viñedo único en Patagonia. Fue plantado en medio del desierto...",
+    "Se elabora en el Valle Azul, una improbable zona de Río Negro descubierta por una condesa y conquistada por una nueva generación de bodegueros argentinos",
+    "Ribera del Cuarzo (Patagonia), primera bodega internacional que plasmará su visión de Rioja",
+    "Rescatando el patrimonio del Pinot Noir patagónico",
+    "Los mejores del mundo. Cuáles son y cuánto cuestan los vinos que, por tiempo limitado...",
   ];
+
+  const autores2023 = [
+    "Sebastián A. Ríos / La Nación",
+    "Laura Pintos / ABC",
+    "Alberto Gil / Lo mejor del vino de rioja",
+    "Asociación Argentina de sommeliers",
+    "Sebastián A. Ríos / La Nación",
+  ];
+
+  const links2023 = [
+    "https://www.lanacion.com.ar/sabado/un-vinedo-unico-en-patagonia-fue-plantado-en-medio-del-desierto-por-una-condesa-italiana-apasionada-nid06102023/",
+    "https://www.abc.es/gastronomia/vinos/ribera-cuarzo-vino-viento-patagonico-20230915152541-nt_amp.html",
+    "https://www.lomejordelvinoderioja.com/ribera-cuarzo-patagonia-primera-bodega-internacional-plasmara-20230907191252-nt_amp.html",
+    "http://www.aasommeliers.com.ar/novedades/n/649/Rescatando-el-patrimonio-del-Pinot-Noir-patag%C3%B3nico",
+    "https://www.lanacion.com.ar/sabado/hasta-400-dolares-la-copa-5-restaurantes-portenos-serviran-por-copa-los-vinos-mas-prestigiosos-de-nid22052023/",
+  ];
+
+  const fechas2022 = [
+    "December 30, 2022",
+    "April 13, 2022",
+    "February 8, 2022",
+  ];
+
+  const titulares2022 = [
+    "Araucana Azul, un blend con personalidad propia",
+    "From Penguins to Pinot, a Glimpse at Winemaking in Patagonia",
+    "La producción vitivinícola de calidad se abre en todas las direcciones",
+  ];
+
+  const autores2022 = [
+    "Sebastián A. Ríos / On the wine side",
+    "Sorrel Moseley-Williams / Somm tv magazine",
+    "Rodolfo Reich / On the wine side",
+  ];
+
+  const links2022 = [
+    "https://www.onthewineside.com.ar/post/araucana-azul",
+    "https://mag.sommtv.com/2022/04/winemaking-in-patagonia/",
+    "https://www.lanacion.com.ar/revista-brando/de-la-costa-atlantica-al-extremo-sur-el-nuevo-mapa-del-vino-en-la-argentina-nid08022022/",
+  ];
+
+  const imagenes2022 = [bgNota1_2022, bgNota2_2022, bgNota3_2022];
+
+  const imagenes2023 = [
+    imgNota061023,
+    imgNota150923,
+    imgNota060923,
+    imgNota310523,
+    imgNota220523,
+  ];
+
+
+
+
 
   // funcion para avanzar y retroceder en anios
 
@@ -84,87 +139,11 @@ function Press() {
     fontStyle: "normal",
   };
 
-  const robotoFontRegular = {
-    fontFamily: "Roboto Regular , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-    fontSize: "16px",
-  };
-
-  const bondiniFontRegular = {
-    fontFamily: "Bondini, sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-
-  const playfairFontItalic = {
-    fontFamily: "Playfair Italic, serif",
-    fontWeight: "normal",
-    fontStyle: "italic",
-  };
-
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
     fontWeight: "normal",
     fontStyle: "normal",
   };
-
-  let bgNotasPrensa1, bgNotasPrensa2, bgNotasPrensa3;
-
-  switch (anoVisible) {
-    case 1:
-      bgNotasPrensa1 = {
-        backgroundImage: `url(${bgNota1_2022})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      };
-      bgNotasPrensa2 = {
-        backgroundImage: `url(${bgNota2_2022})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      };
-      bgNotasPrensa3 = {
-        backgroundImage: `url(${bgNota3_2022})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      };
-      break;
-    case 2:
-      bgNotasPrensa1 = {
-        backgroundImage: `url(${bgNota1_2023})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      };
-      bgNotasPrensa2 = {
-        backgroundImage: `url(${bgNota2_2023})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      };
-      bgNotasPrensa3 = {
-        backgroundImage: `url(${bgNota3_2023})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      };
-      break;
-    default:
-      // En caso de un valor no esperado de añoVisible, puedes asignar una imagen predeterminada o manejarlo como desees.
-      bgNotasPrensa1 = {
-        backgroundImage: `url(${bgNota1_2022})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      };
-      bgNotasPrensa2 = {
-        backgroundImage: `url(${bgNota2_2022})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      };
-      bgNotasPrensa3 = {
-        backgroundImage: `url(${bgNota3_2022})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      };
-      break;
-  }
 
   return (
     <Transition
@@ -179,7 +158,7 @@ function Press() {
         <animated.div style={{ ...style, width: "100%" }}>
           <div>
             <div id="posicion0"></div>
-            <header className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-5 xl:py-10 px-5 2xl:px-0  fixed top-0 left-0 right-0 z-50">
+            <header className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-5 xl:py-10 px-5 2xl:px-0  fixed top-0 left-0 right-0 ">
               <div class="flex justify-between items-center">
                 <div class="w-24 md:w-28">
                   <Link to="/">
@@ -211,11 +190,11 @@ function Press() {
                     class="text-xs md:text-lg tracking-widest text-[#F3EEE3]"
                     style={playfairFontRegular}
                   >
-                    Lorem ipsum dolor sit amet, consectetuer
+                    RIBERA MOMENTS - In the news
                   </h1>
                 </div>
 
-                <div className=" flex justify-around items-center w-full">
+                <div className=" flex justify-around items-center w-full z-50 b">
                   <div className="w-12 lg:w-20">
                     <img
                       src={leftArrowImage}
@@ -242,127 +221,19 @@ function Press() {
                   </div>
                 </div>
 
-                <div className="flex flex-col gap-y-20 lg:gap-y-40 py-14 lg:py-32 items-center justify-center px-4">
-                  <div className="flex flex-col lg:flex-row w-full lg:gap-x-10 ">
-                    <div
-                      style={bgNotasPrensa1}
-                      className="aspect-video object-cover w-full lg:w-1/3
-                       "
-                    ></div>
-                    <div className="text-[#F3EEE3] w-full lg:w-2/3 flex flex-col justify-between gap-y-2 lg:gap-y-0 py-2 lg:py-0">
-                      <div>
-                        <span
-                          className="text-sm lg:text-base"
-                          style={playfairFontItalic}
-                        >
-                          {anoVisible === 0
-                            ? fechas2022[0]
-                            : anoVisible === 1
-                            ? fechas2023[0]
-                            : ""}
-                        </span>
-                      </div>
-                      <div>
-                        <span
-                          className="text-base lg:text-lg text-[#C4B27D]"
-                          style={playfairFontRegular}
-                        >
-                          {anoVisible === 0
-                            ? titular2022[0]
-                            : anoVisible === 1
-                            ? titular2023[0]
-                            : ""}
-                        </span>
-                      </div>
-                      <a
-                        href=""
-                        className="bg-transparent border border-[#C4B27D] text-xs text-[#C4B27D] hover:text-white hover:bg-[#C4B27D] rounded-lg px-3 py-2 flex justify-center items-center w-24  hover:opacity-90 transition ease-in-out duration-300"
-                      >
-                        Read more
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col lg:flex-row w-full lg:gap-x-10 ">
-                    <div
-                      style={bgNotasPrensa2}
-                      className="aspect-video object-cover w-full lg:w-1/3
-                       "
-                    ></div>
-                    <div className="text-[#F3EEE3] w-full lg:w-2/3 flex flex-col justify-between gap-y-2 lg:gap-y-0 py-2 lg:py-0">
-                      <div>
-                        <span
-                          className="text-sm lg:text-base"
-                          style={playfairFontItalic}
-                        >
-                          {anoVisible === 0
-                            ? fechas2022[1]
-                            : anoVisible === 1
-                            ? fechas2023[1]
-                            : ""}
-                        </span>
-                      </div>
-                      <div>
-                        <span
-                          className="text-base lg:text-lg text-[#C4B27D]"
-                          style={playfairFontRegular}
-                        >
-                          {anoVisible === 0
-                            ? titular2022[1]
-                            : anoVisible === 1
-                            ? titular2023[1]
-                            : ""}
-                        </span>
-                      </div>
-                      <a
-                        href=""
-                        className="bg-transparent border border-[#C4B27D] text-xs text-[#C4B27D] hover:text-white hover:bg-[#C4B27D] rounded-lg px-3 py-2 flex justify-center items-center w-24  hover:opacity-90 transition ease-in-out duration-300"
-                      >
-                        Read more
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col lg:flex-row w-full lg:gap-x-10 ">
-                    <div
-                      style={bgNotasPrensa3}
-                      className="aspect-video object-cover w-full lg:w-1/3
-                       "
-                    ></div>
-                    <div className="text-[#F3EEE3] w-full lg:w-2/3 flex flex-col justify-between  gap-y-2 lg:gap-y-0 py-2 lg:py-0">
-                      <div>
-                        <span
-                          className="text-sm lg:text-base"
-                          style={playfairFontItalic}
-                        >
-                          {anoVisible === 0
-                            ? fechas2022[2]
-                            : anoVisible === 1
-                            ? fechas2023[2]
-                            : ""}
-                        </span>
-                      </div>
-                      <div>
-                        <span
-                          className="text-base lg:text-lg text-[#C4B27D]"
-                          style={playfairFontRegular}
-                        >
-                          {anoVisible === 0
-                            ? titular2022[2]
-                            : anoVisible === 1
-                            ? titular2023[2]
-                            : ""}
-                        </span>
-                      </div>
-                      <a
-                        href=""
-                        className="bg-transparent border border-[#C4B27D] text-xs text-[#C4B27D] hover:text-white hover:bg-[#C4B27D] rounded-lg px-3 py-2 flex justify-center items-center w-24  hover:opacity-90 transition ease-in-out duration-300"
-                      >
-                        Read more
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                <PressTitulares
+                  fechas2022={fechas2022}
+                  imagenes2022={imagenes2022}
+                  titulares2022={titulares2022}
+                  fechas2023={fechas2023}
+                  imagenes2023={imagenes2023}
+                  titulares2023={titulares2023}
+                  anoVisible={anoVisible}
+                  autores2022={autores2022}
+                  autores2023={autores2023}
+                  links2022={links2022}
+                  links2023={links2023}
+                />
               </div>
             </div>
 
