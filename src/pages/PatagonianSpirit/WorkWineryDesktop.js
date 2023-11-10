@@ -288,7 +288,7 @@ const CarouselSlider = () => {
               style={playfairFontBlack}
               className="text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
             >
-              WORK IN THE VINEYARD
+              WORK IN THE WINERY
             </h2>
           </div>
         </div>

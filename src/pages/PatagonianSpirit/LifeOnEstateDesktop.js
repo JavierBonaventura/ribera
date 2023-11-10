@@ -67,11 +67,7 @@ const CarouselSlider = () => {
 
   const [isPrevButtonHovered, setIsPrevButtonHovered] = useState(false);
   const [isNextButtonHovered, setIsNextButtonHovered] = useState(false);
-  const images = [
-    workVineyardSlide1,
-    workVineyardSlide2,
-    workVineyardSlide3,
-  ];
+  const images = [workVineyardSlide1, workVineyardSlide2, workVineyardSlide3];
   const paragraphs = [
     "Countess Noemi Marone Cinzano discovered this unparalleled place and laid the foundation for what is now Bodega Ribera del Cuarzo. As in all Italian estates, she built a house by the winery. With Patagonian style and appealing architecture, a small garden overlooks the valley that flows into the river. The house is where we rest after a day's work and where we gather with family to enjoy and celebrate. It's also where we think, plan, and decide alongside those who help us carry out production. We share meals, as it has become our home.",
     "The Río Negro is the largest river in Patagonia. The Limay and Neuquén rivers collect water and minerals from mountain melt before flowing towards the center and east of the country, ultimately merging to form the Río Negro. This river flows into the sea south of Buenos Aires Province, in a small town called El Cóndor. It meanders between two imposing barda walls, one to the north and another to the south, formed over millions of years. In 1860, Estanislao Ceballos described them as river terraces, and they provide invaluable contributions of calcium carbonate, stone, quartz, and ashes. Today, the river runs through this valley, a valley nestled between bardas.",
@@ -272,7 +268,7 @@ const CarouselSlider = () => {
               style={playfairFontBlack}
               className="text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
             >
-              WORK IN THE VINEYARD
+              LIFE ON THE ESTATE
             </h2>
           </div>
         </div>
