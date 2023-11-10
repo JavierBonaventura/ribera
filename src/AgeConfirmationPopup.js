@@ -1,5 +1,6 @@
 import React from "react";
 import logoDesktop from "../src/images/logo-home-mob.png";
+import bgPopup from "../src/images/bg-popup.png";
 import { Link } from "react-router-dom";
 
 function AgeConfirmationPopup({ onAgeConfirmed }) {
@@ -26,7 +27,15 @@ function AgeConfirmationPopup({ onAgeConfirmed }) {
   };
 
   return (
-    <div className=" bg-gray-950 w-full h-full fixed flex flex-col items-center justify-center">
+    <div
+      className=" w-full h-full fixed flex flex-col items-center justify-center"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${bgPopup})`,
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
+    >
       <div className="flex flex-col justify-center items-center gap-y-5">
         <div>
           <img src={logoDesktop} alt="" className="w-32 md:w-44" />
