@@ -228,6 +228,7 @@ const AppContent = () => {
                 />
               )}
               <Route path="/contacto" element={<FormularioContacto />} />
+
             </Routes>
           </animated.div>
         )}

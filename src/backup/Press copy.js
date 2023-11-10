@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
@@ -6,7 +6,7 @@ import hambur from "../../images/menu-hambur.png";
 import iconIg from "../../images/icon-ig.png";
 import leftArrowImage from "../../images/flechaIzquierda.png";
 import rightArrowImage from "../../images/flechaDerecha.png";
-import PressTitulares from "../../components/PressTitulares";
+import PressTitulares from "../components/PressTitulares";
 
 // incluir las imagenes por año
 import bgNota1_2022 from "../../images/nota-1-2022.png";
@@ -23,15 +23,174 @@ import { Transition, animated } from "@react-spring/web";
 import "../../App.css";
 
 function Press() {
-
   // Para que se creen nuevos titulares (componentes) se deben agregar registros en el arreglo titulares2022 o titulares2023
+
+  // inicio codigo para retrasar la aparicion del titulo
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsVisible(true);
+    }, 500);
+
+    return () => clearTimeout(timeout);
+  }, []);
+  // fin codigo para retrasar la aparicion del titulo
+
+  // inicio codigo para retrasar la aparicion del parrafo
+  const [isVisible2, setIsVisible2] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsVisible2(true);
+    }, 700);
+
+    return () => clearTimeout(timeout);
+  }, []);
+  // fin codigo para retrasar la aparicion del parrafo
+  // inicio codigo para retrasar la aparicion del sub menu
+  const [isVisible3, setIsVisible3] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsVisible3(true);
+    }, 1300);
+
+    return () => clearTimeout(timeout);
+  }, []);
+  // fin codigo para retrasar la aparicion de los titulos
+
+  // inicio codigo para dibujar circulo en botones
+  const [percentage, setPercentage] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const [percentageRight, setPercentageRight] = useState(0);
+  const [isHoveredRight, setIsHoveredRight] = useState(false);
+
+  const [isPrevButtonHovered, setIsPrevButtonHovered] = useState(false);
+  const [isNextButtonHovered, setIsNextButtonHovered] = useState(false);
+
+  // useEffect(() => {
+  //   if (isHovered) {
+  //     const interval = setInterval(() => {
+  //       if (percentage < 100) {
+  //         setPercentage(percentage + 1);
+  //       } else {
+  //         clearInterval(interval);
+  //       }
+  //     }, 4);
+
+  //     return () => clearInterval(interval);
+  //   } else {
+  //     const interval = setInterval(() => {
+  //       if (percentage !== 0) {
+  //         setPercentage(percentage - 1);
+  //       } else {
+  //         clearInterval(interval);
+  //       }
+  //     }, 4);
+
+  //     return () => clearInterval(interval);
+  //   }
+  // }, [percentage, isHovered]);
+
+  useEffect(() => {
+    // Verificar si es un dispositivo móvil
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+    if (!isMobile) {
+      // Efecto solo si no es un dispositivo móvil
+      if (isHovered) {
+        const interval = setInterval(() => {
+          if (percentage < 100) {
+            setPercentage((prevPercentage) => prevPercentage + 2);
+          } else {
+            clearInterval(interval);
+          }
+        }, 4);
+
+        return () => clearInterval(interval);
+      } else {
+        const interval = setInterval(() => {
+          if (percentage !== 0) {
+            setPercentage((prevPercentage) => prevPercentage - 2);
+          } else {
+            clearInterval(interval);
+          }
+        }, 4);
+
+        return () => clearInterval(interval);
+      }
+    }
+    return undefined;
+  }, [percentage, isHovered]);
+
+  // useEffect(() => {
+  //   if (isHoveredRight) {
+  //     const intervalRight = setInterval(() => {
+  //       if (percentageRight < 100) {
+  //         setPercentageRight(percentageRight + 1);
+  //       } else {
+  //         clearInterval(intervalRight);
+  //       }
+  //     }, 4);
+
+  //     return () => clearInterval(intervalRight);
+  //   } else {
+  //     const intervalRight = setInterval(() => {
+  //       if (percentageRight !== 0) {
+  //         setPercentageRight(percentageRight - 1);
+  //       } else {
+  //         clearInterval(intervalRight);
+  //       }
+  //     }, 4);
+
+  //     return () => clearInterval(intervalRight);
+  //   }
+  // }, [percentageRight, isHoveredRight]);
+
+  useEffect(() => {
+    // Verificar si es un dispositivo móvil
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+    if (!isMobile) {
+      // Efecto solo si no es un dispositivo móvil
+      if (isHoveredRight) {
+        const intervalRight = setInterval(() => {
+          if (percentageRight < 100) {
+            setPercentageRight((prevPercentageRight) => prevPercentageRight + 2);
+          } else {
+            clearInterval(intervalRight);
+          }
+        }, 4);
+
+        return () => clearInterval(intervalRight);
+      } else {
+        const intervalRight = setInterval(() => {
+          if (percentageRight !== 0) {
+            setPercentageRight((prevPercentageRight) => prevPercentageRight - 2);
+          } else {
+            clearInterval(intervalRight);
+          }
+        }, 4);
+
+        return () => clearInterval(intervalRight);
+      }
+    }
+    return undefined;
+  }, [percentageRight, isHoveredRight]);
+
+
+  const imageWidth = 90;
+  const imageHeight = 90;
+
+  // fin codigo para dibujar circulo en botones
 
   const anos = [2022, 2023];
 
   // funcion para buscar el ano mas alto
   const posicionMaxValor = anos.indexOf(Math.max(...anos));
   const [anoVisible, setAnoVisible] = useState(posicionMaxValor);
-
 
   const fechas2023 = [
     "October 6, 2023",
@@ -98,10 +257,6 @@ function Press() {
     imgNota310523,
     imgNota220523,
   ];
-
-
-
-
 
   // funcion para avanzar y retroceder en anios
 
@@ -182,12 +337,20 @@ function Press() {
                 <div class="flex flex-col justify-center items-center">
                   <h2
                     style={playfairFontBlack}
-                    className="text-base md:text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
+                    className={`text-base md:text-2xl text-[#C4B27D] text-center tracking-wider uppercase ${
+                      isVisible
+                        ? "opacity-100 transition-opacity duration-500"
+                        : "opacity-0 transition-opacity duration-500"
+                    }`}
                   >
                     Press
                   </h2>
                   <h1
-                    class="text-xs md:text-lg tracking-widest text-[#F3EEE3]"
+                    class={` text-xs md:text-lg tracking-widest text-[#F3EEE3]  ${
+                      isVisible2
+                        ? "opacity-100 transition-opacity duration-500"
+                        : "opacity-0 transition-opacity duration-500"
+                    }`}
                     style={playfairFontRegular}
                   >
                     RIBERA MOMENTS - In the news
@@ -196,28 +359,125 @@ function Press() {
 
                 <div className=" flex justify-around items-center w-full z-50 b">
                   <div className="w-12 lg:w-20">
-                    <img
-                      src={leftArrowImage}
-                      className="w-full hover:scale-90 transition ease-in-out duration-300 cursor-pointer"
-                      alt="izquierda"
+                    <button
+                      aria-label="previous"
+                      className={`w-20 absolute left-10 lg:left-32  scale-75  lg:scale-100 lg:hover:scale-95 transition ease-in-out duration-300 ${
+                        isPrevButtonHovered ? "opacity-100" : "opacity-100"
+                      }`}
+
+
                       onClick={handlePrevClick}
-                    />
+                      onMouseEnter={() => setIsPrevButtonHovered(true)}
+                      onMouseLeave={() => setIsPrevButtonHovered(false)}
+                    >
+                      {/* <img src={leftArrowImage} alt="izquierda" /> */}
+                      <div>
+                        <svg
+                          className=""
+                          width="100"
+                          height="100"
+                          onMouseEnter={() => setIsHovered(true)}
+                          onMouseLeave={() => setIsHovered(false)}
+                        >
+                          <circle
+                            cx="50"
+                            cy="50"
+                            r="44"
+                            fill="none"
+                            stroke="#C4B27D"
+                            strokeWidth="3"
+                            strokeDasharray="502"
+                            strokeDashoffset={502 - (502 * percentage) / -100}
+                          />
+                                      {/* <image
+                            x={(100 - imageWidth) / 2}
+                            y={(100 - imageHeight) / 2}
+                            width={imageWidth}
+                            height={imageHeight}
+                            xlinkHref={leftArrowImage}
+                            opacity="0.7"
+                          /> */}
+                          <circle
+                            cx="50"
+                            cy="50"
+                            r="44"
+                            stroke="#C4B27D"
+                            strokeWidth="1"
+                            fill="none"
+                            opacity="0.7"
+                          />
+                          <polygon points="40,50 45,45 45,55" fill="#C4B27D" />
+                          <circle cx="56" cy="50" r="3" fill="#C4B27D" />
+                        </svg>
+                      </div>
+                    </button>
                   </div>
                   <div>
                     <h1
-                      className="text-5xl lg:text-9xl text-[#C4B27D]"
+                      className={`text-5xl lg:text-9xl text-[#C4B27D] ${
+                        isVisible3
+                          ? "opacity-100 transition-opacity duration-500"
+                          : "opacity-0 transition-opacity duration-500"
+                      }`}
                       style={playfairFontBlack}
                     >
                       {anos[anoVisible]}
                     </h1>
                   </div>
                   <div className="w-12 lg:w-20">
-                    <img
-                      src={rightArrowImage}
-                      alt="derecha"
-                      className="w-full hover:scale-90 transition ease-in-out duration-300 cursor-pointer"
+                    <button
+                      aria-label="next"
+                      className={`w-20 absolute lg:right-32 right-12  scale-75  lg:scale-100 lg:hover:scale-95 transition ease-in-out duration-300 ${
+                        isNextButtonHovered ? "opacity-100" : "opacity-100"
+                      }`}
                       onClick={handleNextClick}
-                    />
+                      onMouseEnter={() => setIsNextButtonHovered(true)}
+                      onMouseLeave={() => setIsNextButtonHovered(false)}
+                    >
+                      {/* <img src={rightArrowImage} alt="derecha" /> */}
+                      <div>
+                        <svg
+                          width="100"
+                          height="100"
+                          onMouseEnter={() => setIsHoveredRight(true)}
+                          onMouseLeave={() => setIsHoveredRight(false)}
+                        >
+                          <circle
+                            cx="50"
+                            cy="50"
+                            r="44"
+                            fill="none"
+                            stroke="#C4B27D"
+                            strokeWidth="3"
+                            strokeDasharray="502"
+                            strokeDashoffset={
+                              502 - (502 * percentageRight) / 100
+                            }
+                          />
+                          {/* <image
+                x={(100 - imageWidth) / 2}
+                y={(100 - imageHeight) / 2}
+                width={imageWidth}
+                height={imageHeight}
+                xlinkHref={rightArrowImage}
+                opacity="0.7"
+              /> */}
+                          <circle
+                            cx="50"
+                            cy="50"
+                            r="44"
+                            stroke="#C4B27D"
+                            strokeWidth="1"
+                            fill="none"
+                            opacity="0.7"
+                          />
+
+                          <polygon points="60,50 55,45 55,55" fill="#C4B27D" />
+
+                          <circle cx="44" cy="50" r="3" fill="#C4B27D" />
+                        </svg>
+                      </div>
+                    </button>
                   </div>
                 </div>
 

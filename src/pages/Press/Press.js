@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import hambur from "../../images/menu-hambur.png";
 import iconIg from "../../images/icon-ig.png";
-import leftArrowImage from "../../images/flechaIzquierda.png";
-import rightArrowImage from "../../images/flechaDerecha.png";
 import PressTitulares from "../../components/PressTitulares";
 
 // incluir las imagenes por año
@@ -48,6 +46,7 @@ function Press() {
     return () => clearTimeout(timeout);
   }, []);
   // fin codigo para retrasar la aparicion del parrafo
+
   // inicio codigo para retrasar la aparicion del sub menu
   const [isVisible3, setIsVisible3] = useState(false);
 
@@ -70,52 +69,124 @@ function Press() {
   const [isPrevButtonHovered, setIsPrevButtonHovered] = useState(false);
   const [isNextButtonHovered, setIsNextButtonHovered] = useState(false);
 
+  const [nextYear, setNextYear] = useState(null);
+  const [isTransitioning, setTransitioning] = useState(false);
+
   useEffect(() => {
-    if (isHovered) {
-      const interval = setInterval(() => {
-        if (percentage < 100) {
-          setPercentage(percentage + 1);
-        } else {
-          clearInterval(interval);
-        }
-      }, 4);
-
-      return () => clearInterval(interval);
-    } else {
-      const interval = setInterval(() => {
-        if (percentage !== 0) {
-          setPercentage(percentage - 1);
-        } else {
-          clearInterval(interval);
-        }
-      }, 4);
-
-      return () => clearInterval(interval);
+    if (true) {
+      setTransitioning(true);
+      setTimeout(() => {
+        setNextYear(null);
+        setTransitioning(false);
+      }, 500);
     }
+  }, [nextYear]);
+
+  // funcion para avanzar y retroceder en anios
+
+  const incrementYear = () => {
+    setNextYear(anoVisible === anos.length - 1 ? 0 : anoVisible + 1);
+    setAnoVisibleSinDemora(
+      anoVisibleSinDemora === anos.length - 1 ? 0 : anoVisibleSinDemora + 1
+    );
+    setTimeout(() => {
+      setAnoVisible(anoVisible === anos.length - 1 ? 0 : anoVisible + 1);
+    }, 550);
+  };
+
+  const decrementYear = () => {
+    setNextYear(anoVisible === 0 ? anos.length - 1 : anoVisible - 1);
+    setAnoVisibleSinDemora(
+      anoVisibleSinDemora === 0 ? anos.length - 1 : anoVisibleSinDemora - 1
+    );
+
+    setTimeout(() => {
+      setAnoVisible(anoVisible === 0 ? anos.length - 1 : anoVisible - 1);
+    }, 550);
+  };
+
+  // funcion para separar los anos en digitos
+
+  const renderYearDigits = () => {
+    const digits = anos[anoVisible].toString();
+
+    return digits.split("").map((digit, index) => (
+      <span
+        key={index}
+        className={`digit ${
+          isTransitioning ? "transition-out" : "transition-in"
+        }`}
+        style={{ transitionDelay: `${index * 0.1}s` }}
+      >
+        {digit}
+      </span>
+    ));
+  };
+
+  useEffect(() => {
+    // Codigo para verificar si es un dispositivo móvil
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+    if (!isMobile) {
+      // Efecto solo si no es un dispositivo móvil
+      if (isHovered) {
+        const interval = setInterval(() => {
+          if (percentage < 100) {
+            setPercentage((prevPercentage) => prevPercentage + 2);
+          } else {
+            clearInterval(interval);
+          }
+        }, 4);
+
+        return () => clearInterval(interval);
+      } else {
+        const interval = setInterval(() => {
+          if (percentage !== 0) {
+            setPercentage((prevPercentage) => prevPercentage - 2);
+          } else {
+            clearInterval(interval);
+          }
+        }, 4);
+
+        return () => clearInterval(interval);
+      }
+    }
+    return undefined;
   }, [percentage, isHovered]);
 
   useEffect(() => {
-    if (isHoveredRight) {
-      const intervalRight = setInterval(() => {
-        if (percentageRight < 100) {
-          setPercentageRight(percentageRight + 1);
-        } else {
-          clearInterval(intervalRight);
-        }
-      }, 4);
+    // Codigo para verificar si es un dispositivo móvil
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
-      return () => clearInterval(intervalRight);
-    } else {
-      const intervalRight = setInterval(() => {
-        if (percentageRight !== 0) {
-          setPercentageRight(percentageRight - 1);
-        } else {
-          clearInterval(intervalRight);
-        }
-      }, 4);
+    if (!isMobile) {
+      // Efecto solo si no es un dispositivo móvil
+      if (isHoveredRight) {
+        const intervalRight = setInterval(() => {
+          if (percentageRight < 100) {
+            setPercentageRight(
+              (prevPercentageRight) => prevPercentageRight + 2
+            );
+          } else {
+            clearInterval(intervalRight);
+          }
+        }, 4);
 
-      return () => clearInterval(intervalRight);
+        return () => clearInterval(intervalRight);
+      } else {
+        const intervalRight = setInterval(() => {
+          if (percentageRight !== 0) {
+            setPercentageRight(
+              (prevPercentageRight) => prevPercentageRight - 2
+            );
+          } else {
+            clearInterval(intervalRight);
+          }
+        }, 4);
+
+        return () => clearInterval(intervalRight);
+      }
     }
+    return undefined;
   }, [percentageRight, isHoveredRight]);
 
   const imageWidth = 90;
@@ -125,9 +196,11 @@ function Press() {
 
   const anos = [2022, 2023];
 
-  // funcion para buscar el ano mas alto
+  // funcion para buscar el ano mas alto asi se muestra ese primero
   const posicionMaxValor = anos.indexOf(Math.max(...anos));
   const [anoVisible, setAnoVisible] = useState(posicionMaxValor);
+  const [anoVisibleSinDemora, setAnoVisibleSinDemora] =
+    useState(posicionMaxValor);
 
   const fechas2023 = [
     "October 6, 2023",
@@ -194,26 +267,6 @@ function Press() {
     imgNota310523,
     imgNota220523,
   ];
-
-  // funcion para avanzar y retroceder en anios
-
-  const handlePrevClick = () => {
-    if (anoVisible > 0) {
-      setAnoVisible(anoVisible - 1);
-    } else {
-      // Si ya estás en el primer año, al hacer clic en "Prev" deberías ir al último año.
-      setAnoVisible(anos.length - 1);
-    }
-  };
-
-  const handleNextClick = () => {
-    if (anoVisible < anos.length - 1) {
-      setAnoVisible(anoVisible + 1);
-    } else {
-      // Si ya estás en el último año, al hacer clic en "Next" deberías volver al primer año.
-      setAnoVisible(0);
-    }
-  };
 
   const [igHovered, setIgHovered] = useState(false);
   const handleMouseEnter = () => {
@@ -298,14 +351,15 @@ function Press() {
                   <div className="w-12 lg:w-20">
                     <button
                       aria-label="previous"
-                      className={`w-20 absolute left-10 lg:left-32  scale-75 hover:scale-50 lg:scale-100 lg:hover:scale-95 transition ease-in-out duration-300 ${
+                      className={`w-20 absolute left-10 lg:left-32  scale-75  lg:scale-100 lg:hover:scale-95 transition ease-in-out duration-300 ${
                         isPrevButtonHovered ? "opacity-100" : "opacity-100"
                       }`}
-                      onClick={handlePrevClick}
+                      onClick={() => {
+                        decrementYear();
+                      }}
                       onMouseEnter={() => setIsPrevButtonHovered(true)}
                       onMouseLeave={() => setIsPrevButtonHovered(false)}
                     >
-                      {/* <img src={leftArrowImage} alt="izquierda" /> */}
                       <div>
                         <svg
                           className=""
@@ -324,14 +378,7 @@ function Press() {
                             strokeDasharray="502"
                             strokeDashoffset={502 - (502 * percentage) / -100}
                           />
-                          {/* <image
-                x={(100 - imageWidth) / 2}
-                y={(100 - imageHeight) / 2}
-                width={imageWidth}
-                height={imageHeight}
-                xlinkHref={leftArrowImage}
-                opacity="0.7"
-              /> */}
+
                           <circle
                             cx="50"
                             cy="50"
@@ -349,27 +396,28 @@ function Press() {
                   </div>
                   <div>
                     <h1
-                      className={`text-5xl lg:text-9xl text-[#C4B27D] ${
+                      className={`year-container text-5xl lg:text-9xl text-[#C4B27D] ${
                         isVisible3
                           ? "opacity-100 transition-opacity duration-500"
                           : "opacity-0 transition-opacity duration-500"
                       }`}
                       style={playfairFontBlack}
                     >
-                      {anos[anoVisible]}
+                      {renderYearDigits()}
                     </h1>
                   </div>
                   <div className="w-12 lg:w-20">
                     <button
                       aria-label="next"
-                      className={`w-20 absolute lg:right-32  scale-75 hover:scale-50 lg:scale-100 lg:hover:scale-95 transition ease-in-out duration-300 ${
+                      className={`w-20 absolute lg:right-32 right-12  scale-75  lg:scale-100 lg:hover:scale-95 transition ease-in-out duration-300 ${
                         isNextButtonHovered ? "opacity-100" : "opacity-100"
                       }`}
-                      onClick={handleNextClick}
+                      onClick={() => {
+                        incrementYear();
+                      }}
                       onMouseEnter={() => setIsNextButtonHovered(true)}
                       onMouseLeave={() => setIsNextButtonHovered(false)}
                     >
-                      {/* <img src={rightArrowImage} alt="derecha" /> */}
                       <div>
                         <svg
                           width="100"
@@ -389,14 +437,6 @@ function Press() {
                               502 - (502 * percentageRight) / 100
                             }
                           />
-                          {/* <image
-                x={(100 - imageWidth) / 2}
-                y={(100 - imageHeight) / 2}
-                width={imageWidth}
-                height={imageHeight}
-                xlinkHref={rightArrowImage}
-                opacity="0.7"
-              /> */}
                           <circle
                             cx="50"
                             cy="50"
@@ -424,6 +464,7 @@ function Press() {
                   imagenes2023={imagenes2023}
                   titulares2023={titulares2023}
                   anoVisible={anoVisible}
+                  anoVisibleSinDemora={anoVisibleSinDemora}
                   autores2022={autores2022}
                   autores2023={autores2023}
                   links2022={links2022}

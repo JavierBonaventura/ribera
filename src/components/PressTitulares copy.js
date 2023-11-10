@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from "react";
 
 const TitularComponent = ({
   fechas2022,
@@ -8,28 +8,12 @@ const TitularComponent = ({
   titulares2023,
   imagenes2023,
   anoVisible,
-  anoVisibleSinDemora,
   autores2022,
   autores2023,
   links2022,
   links2023,
+  isVisible4,
 }) => {
-
-
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    // Ocultar el contenido por 1 segundo al cambiar anoVisible
-    setIsVisible(false);
-    const timeout = setTimeout(() => {
-      setIsVisible(true);
-    }, 1000);
-
-    return () => clearTimeout(timeout);
-  }, [anoVisibleSinDemora]);
-
-
-
   const playfairFontItalic = {
     fontFamily: "Playfair Italic, serif",
     fontWeight: "normal",
@@ -54,14 +38,14 @@ const TitularComponent = ({
     anoVisible === 0 ? links2022 : anoVisible === 1 ? links2023 : [];
 
   return (
-    <div
-    className={`flex flex-col gap-y-20 lg:gap-y-40 py-14 lg:py-32 items-center justify-center px-4 w-full ${
-      isVisible
-        ? 'opacity-100 transition-opacity duration-500'
-        : 'opacity-0 transition-opacity duration-500'
-    }`}
-  >
 
+  
+
+    <div className={`flex flex-col gap-y-20 lg:gap-y-40 py-14 lg:py-32 items-center justify-center px-4 w-full ${
+      isVisible4
+        ? "opacity-100 transition-opacity duration-500"
+        : "opacity-0 transition-opacity duration-500"
+    }`}>
       {titularesToDisplay.map((titular, index) => (
         <div key={index} className="w-full">
           <div className="flex flex-col lg:flex-row lg:gap-x-10 w-full xl:w-2/3 mx-auto">
