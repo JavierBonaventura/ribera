@@ -26,9 +26,11 @@ import slider22 from "../images/slider-history/WEB_HISTORY_SLIDERS-22.jpg";
 import slider23 from "../images/slider-history/WEB_HISTORY_SLIDERS-23.jpg";
 import slider24 from "../images/slider-history/WEB_HISTORY_SLIDERS-24.jpg";
 import slider25 from "../images/slider-history/WEB_HISTORY_SLIDERS-25.jpg";
+import { useTranslation } from "react-i18next";
 import "../App.css";
 
 function SliderFamily() {
+  const { t, i18n } = useTranslation();
   const [imagenVisible, setimagenVisible] = useState(0);
 
   const imagenes = [
@@ -97,7 +99,12 @@ function SliderFamily() {
               className="uppercase text-[#C4B27D] tracking-wide"
               style={robotoFontRegular}
             >
-              <span className="text-sm md:text-xl">GALLERY</span>
+              <span
+                className="text-sm md:text-xl uppercase"
+                dangerouslySetInnerHTML={{
+                  __html: t("history.family.titleGallery"),
+                }}
+              ></span>
             </h2>
           </div>
 

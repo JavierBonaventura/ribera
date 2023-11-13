@@ -7,8 +7,10 @@ import hambur from "../images/hambur-claro.png";
 import iconIg from "../images/icon-ig-form.png";
 import { useLocation } from "react-router-dom";
 import { Transition } from "@react-spring/web";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const { t, i18n } = useTranslation();
   const location = useLocation();
 
   const playfairFontRegular = {
@@ -160,20 +162,23 @@ const Home = () => {
                   className="menu sombra-menu"
                   onClick={opcion1}
                 >
-                  History
+                  {t("menu.titleA")}
                 </p>
                 <animated.div style={dropdownAnimation1}>
                   <ul className="text-center space-y-1.5">
                     <li>
                       <Link to="/family" style={robotoFontRegular}>
-                        <span className="subMenu tracking-widest">FAMILY</span>
+                        <span className="subMenu tracking-widest uppercase">
+                          {" "}
+                          {t("menu.optionA1")}
+                        </span>
                       </Link>
                     </li>
 
                     <li>
                       <Link to="/valleazul" style={robotoFontRegular}>
-                        <span className="subMenu tracking-widest">
-                          VALLE AZUL, PATAGONIA
+                        <span className="subMenu tracking-widest uppercase">
+                          {t("menu.optionA2")}
                         </span>
                       </Link>
                     </li>
@@ -185,42 +190,42 @@ const Home = () => {
                   className="menu sombra-menu"
                   onClick={opcion2}
                 >
-                  Patagonian Spirit
+                  {t("menu.titleB")}
                 </p>
                 <animated.div style={dropdownAnimation2}>
                   <ul className="text-center space-y-1.5">
                     <li>
                       <Link to="/araucanavineyard" style={robotoFontRegular}>
-                        <span className="subMenu tracking-widest">
-                          ARAUCANA VINEYARD
+                        <span className="subMenu tracking-widest uppercase">
+                          {t("menu.optionB1")}
                         </span>
                       </Link>
                     </li>
                     <li>
                       <Link to="/workvineyard" style={robotoFontRegular}>
-                        <span className="subMenu tracking-widest">
-                          WORK IN THE VINEYARD
+                        <span className="subMenu tracking-widest uppercase">
+                          {t("menu.optionB2")}
                         </span>
                       </Link>
                     </li>
                     <li>
                       <Link to="/workwinery" style={robotoFontRegular}>
-                        <span className="subMenu tracking-widest">
-                          WORK IN THE WINERY
+                        <span className="subMenu tracking-widest uppercase">
+                          {t("menu.optionB3")}
                         </span>
                       </Link>
                     </li>
                     <li>
                       <Link to="/lifeonestate" style={robotoFontRegular}>
-                        <span className="subMenu tracking-widest">
-                          LIFE ON THE ESTATE
+                        <span className="subMenu tracking-widest uppercase">
+                          {t("menu.optionB4")}
                         </span>
                       </Link>
                     </li>
                     <li>
                       <Link to="/lifewater" style={robotoFontRegular}>
-                        <span className="subMenu tracking-widest">
-                          WATER FOR LIFE
+                        <span className="subMenu tracking-widest uppercase">
+                          {t("menu.optionB5")}
                         </span>
                       </Link>
                     </li>
@@ -232,14 +237,14 @@ const Home = () => {
                   className="menu sombra-menu"
                   onClick={opcion3}
                 >
-                  Wines
+                  {t("menu.titleC")}
                 </p>
                 <animated.div style={dropdownAnimation3}>
                   <ul className="text-center space-y-1.5">
                     <li>
                       <p style={robotoFontRegular} onClick={opcion4}>
-                        <span className="!mb-0 subMenu tracking-widest">
-                          IN ARGENTINA
+                        <span className="!mb-0 subMenu tracking-widest uppercase">
+                          {t("menu.optionC1")}
                         </span>
                       </p>
                     </li>
@@ -294,11 +299,11 @@ const Home = () => {
                     </animated.div>
                     <li>
                       <p
-                        className="!mb-0 subMenu tracking-widest"
+                        className="!mb-0 subMenu tracking-widest uppercase"
                         style={robotoFontRegular}
                         onClick={opcion5}
                       >
-                        IN THE WORLD
+                        {t("menu.optionC2")}
                       </p>
                     </li>
                     <animated.div style={dropdownAnimation5}>
@@ -343,7 +348,7 @@ const Home = () => {
                   className="footerItems tracking-widest"
                   style={robotoFontRegular}
                 >
-                  Contact
+                  {t("menu.footerOptionA")}
                 </Link>
 
                 <Link
@@ -351,7 +356,7 @@ const Home = () => {
                   style={robotoFontRegular}
                   className="footerItems tracking-widest"
                 >
-                  Press
+                  {t("menu.footerOptionC")}
                 </Link>
               </div>
 

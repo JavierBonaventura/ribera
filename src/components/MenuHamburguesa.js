@@ -218,13 +218,16 @@ const Home = () => {
                   className="menu sombra-menu"
                   onClick={opcion1}
                 >
-                  History
+                  {t("menu.titleA")}
                 </p>
                 <animated.div style={dropdownAnimation1}>
                   <ul className="text-center space-y-1.5">
                     <li>
                       <Link to="/family" style={robotoFontRegular}>
-                        <span className="subMenu tracking-widest">FAMILY</span>
+                        <span className="subMenu tracking-widest uppercase">
+                          {" "}
+                          {t("menu.optionA1")}
+                        </span>
                       </Link>
                     </li>
 
@@ -232,8 +235,8 @@ const Home = () => {
                       {" "}
                       <Link to="/valleazul" style={robotoFontRegular}>
                         {" "}
-                        <span className="subMenu tracking-widest">
-                          VALLE AZUL, PATAGONIA
+                        <span className="subMenu tracking-widest uppercase">
+                          {t("menu.optionA2")}
                         </span>
                       </Link>
                     </li>
@@ -245,42 +248,42 @@ const Home = () => {
                   className="menu sombra-menu px-2 "
                   onClick={opcion2}
                 >
-                  Patagonian Spirit
+                  {t("menu.titleB")}
                 </p>
                 <animated.div style={dropdownAnimation2}>
                   <ul className="text-center space-y-1.5">
                     <li>
                       <Link to="/araucanavineyard" style={robotoFontRegular}>
-                        <span className="subMenu tracking-widest">
-                          ARAUCANA VINEYARD
+                        <span className="subMenu tracking-widest uppercase">
+                          {t("menu.optionB1")}
                         </span>
                       </Link>
                     </li>
                     <li>
                       <Link to="/workvineyard" style={robotoFontRegular}>
-                        <span className="subMenu tracking-widest">
-                          WORK IN THE VINEYARD
+                        <span className="subMenu tracking-widest uppercase">
+                          {t("menu.optionB2")}
                         </span>
                       </Link>
                     </li>
                     <li>
                       <Link to="/workwinery" style={robotoFontRegular}>
-                        <span className="subMenu tracking-widest">
-                          WORK IN THE WINERY
+                        <span className="subMenu tracking-widest uppercase">
+                          {t("menu.optionB3")}
                         </span>
                       </Link>
                     </li>
                     <li>
                       <Link to="/lifeonestate" style={robotoFontRegular}>
-                        <span className="subMenu tracking-widest">
-                          LIFE ON THE ESTATE
+                        <span className="subMenu tracking-widest uppercase">
+                          {t("menu.optionB4")}
                         </span>
                       </Link>
                     </li>
                     <li>
                       <Link to="/lifewater" style={robotoFontRegular}>
-                        <span className="subMenu tracking-widest">
-                          WATER FOR LIFE
+                        <span className="subMenu tracking-widest uppercase">
+                          {t("menu.optionB5")}
                         </span>
                       </Link>
                     </li>
@@ -292,14 +295,14 @@ const Home = () => {
                   className="menu sombra-menu"
                   onClick={opcion3}
                 >
-                  Wines
+                  {t("menu.titleC")}
                 </p>
                 <animated.div style={dropdownAnimation3}>
                   <ul className="text-center space-y-1.5">
                     <li>
                       <p style={robotoFontRegular} onClick={opcion4}>
-                        <span className="!mb-0 subMenu tracking-widest">
-                          WINES IN ARGENTINA
+                        <span className="!mb-0 subMenu tracking-widest uppercase">
+                          {t("menu.optionC1")}
                         </span>
                       </p>
                     </li>
@@ -354,8 +357,8 @@ const Home = () => {
                     </animated.div>
                     <li>
                       <p style={robotoFontRegular} onClick={opcion5}>
-                        <span className="!mb-0 subMenu tracking-widest">
-                          WINES IN THE WORLD
+                        <span className="!mb-0 subMenu tracking-widest uppercase">
+                          {t("menu.optionC2")}
                         </span>
                       </p>
                     </li>
@@ -401,14 +404,14 @@ const Home = () => {
                   className="uppercase footerItems tracking-widest hover:underline"
                   style={roboto}
                 >
-                  Contact
+                  {t("menu.footerOptionA")}
                 </Link>
                 <Link
                   to="/press"
                   style={roboto}
                   className="uppercase footerItems tracking-widest  hover:underline"
                 >
-                  Press
+                  {t("menu.footerOptionC")}
                 </Link>
               </div>
               <div className=" w-full  text-center flex flex-col gap-y-5 text-sm ">
@@ -418,7 +421,7 @@ const Home = () => {
                 >
                   <a href="https://casapirque.com.ar" target="_blank">
                     <h1 className="text-center pb-2 text-[#8B8A8B]">
-                      <i>Our distribution office</i>
+                      <i> {t("menu.footerOptionB")}</i>
                     </h1>
                     <p className="text-center uppercase">Casa Pirque</p>
                   </a>

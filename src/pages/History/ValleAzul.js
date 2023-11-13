@@ -8,8 +8,10 @@ import iconIg from "../../images/icon-ig.png";
 import "../../App.css";
 import { useLocation } from "react-router-dom";
 import { Transition, animated } from "@react-spring/web";
+import { useTranslation } from "react-i18next";
 
 const ValleAzul = () => {
+  const { t, i18n } = useTranslation();
   // inicio codigo para retrasar la aparicion de History
   const [isVisible, setIsVisible] = useState(false);
 
@@ -115,7 +117,9 @@ const ValleAzul = () => {
                           : "opacity-0 transition-opacity duration-500"
                       }`}
                     >
-                      <i style={playfairFontItalic}>History</i>
+                      <i style={playfairFontItalic}>
+                        {t("history.valleAzul.title")}
+                      </i>
                     </h1>
                     <h2
                       style={playfairFontBlack}
@@ -123,7 +127,7 @@ const ValleAzul = () => {
                         isVisible2 ? "appear-from-bottom" : "invisible"
                       }`}
                     >
-                      Valle azul
+                      {t("history.valleAzul.subtitle")}
                     </h2>
                   </div>
                   <div class="relative flex justify-center items-center md:pt-0 px-4 md:px-0">
@@ -141,17 +145,10 @@ const ValleAzul = () => {
                   <p
                     class="text-[#000000]  tracking-wider text-justify px-10 md:px-14 lg:px-20 xl:px-32 md:w-3/4 mx-auto text-xs lg:text-base lg:leading-7"
                     style={playfairFontRegular}
-                  >
-                    The story of this winery started in 2001, when italian
-                    countess Noemi Marone Cinzano discovered this far away land,
-                    planted a 5 hectares vineyard at the foot of the{" "}
-                    <i>barda</i> (a specific patagonian landscape, a steep cliff
-                    or hill made of a dark grain of volcanic rock, with plenty
-                    of quartz, carbonate calcium and calcareous) and began
-                    producing wine in a Burgundy style - the winery built right
-                    by the vineyard with small concrete open top pools for craft
-                    production, employing pigeage.
-                  </p>
+                    dangerouslySetInnerHTML={{
+                      __html: t("history.valleAzul.firstParagraph"),
+                    }}
+                  ></p>
                 </div>
               </div>
 
@@ -173,19 +170,10 @@ const ValleAzul = () => {
                     <p
                       class="text-[#000000] tracking-wider text-justify px-10 md:px-14 lg:px-20 xl:px-32 md:w-3/4 mx-auto text-xs lg:text-base lg:leading-7"
                       style={playfairFontRegular}
-                    >
-                      When we first tasted the 2008 vintage, we knew Noemi had
-                      found a real terroir. During ten years we explored all
-                      other nearby places in Patagonia where to produce an equal
-                      taste. We finally concluded the conditions in Valle Azul
-                      were perfect. <br /> <br />
-                      An extraordinary coincidence brought Menéndez together
-                      with the Countess 10 years after having tasted that first
-                      memorable glass. Touched by Felipe´s passion and
-                      commitment, the Countess granted us the privilege to start
-                      producing our wines at that very land she had discovered.
-                      In 2018, Bodega Ribera del Cuarzo was born.
-                    </p>
+                      dangerouslySetInnerHTML={{
+                        __html: t("history.valleAzul.secondParagraph"),
+                      }}
+                    ></p>
                   </div>
                 </div>
               </div>

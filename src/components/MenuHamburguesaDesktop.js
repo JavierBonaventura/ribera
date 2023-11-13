@@ -257,25 +257,24 @@ const MenuHamburguesaDesktop = () => {
                             : "opacity-0 transition-opacity duration-500"
                         }`}
                       >
-                        History
+                        {t("menu.titleA")}
                       </p>
                       <ul
                         className={`text-center space-y-0 lg:space-y-1.5 transition-opacity duration-500 ${
                           isVisible3 ? "opacity-100" : "opacity-0"
                         }`}
                       >
-                        {" "}
                         <li>
                           <Link to="/family" style={robotoFontRegular}>
-                            <span className="subMenu tracking-widest">
-                              FAMILY
+                            <span className="subMenu tracking-widest uppercase">
+                              {t("menu.optionA1")}
                             </span>
                           </Link>
                         </li>
                         <li>
                           <Link to="/valleazul" style={robotoFontRegular}>
-                            <span className="subMenu tracking-widest">
-                              VALLE AZUL, PATAGONIA
+                            <span className="subMenu tracking-widest uppercase">
+                              {t("menu.optionA2")}
                             </span>
                           </Link>
                         </li>
@@ -300,7 +299,7 @@ const MenuHamburguesaDesktop = () => {
                           isVisible2 ? "opacity-100" : "opacity-0"
                         }`}
                       >
-                        Patagonian Spirit
+                        {t("menu.titleB")}
                       </p>
                       <ul
                         className={`text-center space-y-0 lg:space-y-1.5 transition-opacity duration-500 ${
@@ -313,36 +312,39 @@ const MenuHamburguesaDesktop = () => {
                             to="/araucanavineyard"
                             style={robotoFontRegular}
                           >
-                            <span className="subMenu tracking-widest">
-                              ARAUCANA VINEYARD
+                            <span className="subMenu tracking-widest uppercase">
+                              {t("menu.optionB1")}
                             </span>
                           </Link>
                         </li>
                         <li>
                           <Link to="/workvineyard" style={robotoFontRegular}>
-                            <span className="subMenu tracking-widest">
-                              WORK IN THE VINEYARD
+                            <span className="subMenu tracking-widest uppercase">
+                              {t("menu.optionB2")}
                             </span>
                           </Link>
                         </li>
                         <li>
                           <Link to="/workwinery" style={robotoFontRegular}>
-                            <span className="subMenu tracking-widest">
-                              WORK IN THE WINERY
+                            <span
+                              className="subMenu tracking-widest uppercase
+                            "
+                            >
+                              {t("menu.optionB3")}
                             </span>
                           </Link>
                         </li>
                         <li>
                           <Link to="/lifeonestate" style={robotoFontRegular}>
-                            <span className="subMenu tracking-widest">
-                              LIFE ON THE ESTATE
+                            <span className="subMenu tracking-widest uppercase">
+                              {t("menu.optionB4")}
                             </span>
                           </Link>
                         </li>
                         <li>
                           <Link to="/lifewater" style={robotoFontRegular}>
-                            <span className="subMenu tracking-widest">
-                              WATER FOR LIFE
+                            <span className="subMenu tracking-widest uppercase">
+                              {t("menu.optionB5")}
                             </span>
                           </Link>
                         </li>
@@ -367,7 +369,7 @@ const MenuHamburguesaDesktop = () => {
                           isVisible2 ? "opacity-100" : "opacity-0"
                         }`}
                       >
-                        Wines
+                        {t("menu.titleC")}
                       </p>
                       <animated.div style={dropdownAnimation3}>
                         <ul
@@ -378,8 +380,8 @@ const MenuHamburguesaDesktop = () => {
                           {" "}
                           <li>
                             <p style={robotoFontRegular} onClick={opcion4}>
-                              <span className="!mb-0 subMenu tracking-widest">
-                                IN ARGENTINA
+                              <span className="!mb-0 subMenu tracking-widest uppercase">
+                                {t("menu.optionC1")}
                               </span>
                             </p>
                           </li>
@@ -434,8 +436,8 @@ const MenuHamburguesaDesktop = () => {
                           </animated.div>
                           <li>
                             <p style={robotoFontRegular} onClick={opcion5}>
-                              <span className="!mb-0 subMenu tracking-widest">
-                                IN THE WORLD
+                              <span className="!mb-0 subMenu tracking-widest uppercase">
+                                {t("menu.optionC2")}
                               </span>
                             </p>
                           </li>
@@ -475,39 +477,6 @@ const MenuHamburguesaDesktop = () => {
                     </div>
                   </div>
 
-                  <div
-                    className="hidden flex flex-col gap-y-4 justify-center w-2/3 2xl:w-1/3 mx-auto pt-5 2xl:pt-10"
-                    style={robotoFontRegular}
-                  >
-                    <div className="w-full flex justify-center items-center gap-x-16 text-sm lg:text-xl tracking-widest">
-                      <div>
-                        <Link to="/contacto" style={robotoFontRegular}>
-                          <span className="text-[#F3EEE3] hover:text-[#c4b27d] transition ease-in-out duration-300">
-                            Contact
-                          </span>
-                        </Link>
-                      </div>
-                      <div>
-                        <Link
-                          to="/press"
-                          className="text-[#F3EEE3] hover:text-[#c4b27d] transition ease-in-out duration-300"
-                        >
-                          <span>Press</span>
-                        </Link>
-                      </div>
-                    </div>
-                    <div className="w-full flex justify-center items-center text-base">
-                      <a href="https://casapirque.com.ar" target="_blank">
-                        <h1 className="text-center  text-[#c4b27d] ">
-                          <i>Our distribution office</i>
-                        </h1>
-                        <p className="text-center uppercase font-semibold text-[#F3EEE3] hover:text-[#c4b27d]  tracking-widest transition ease-in-out duration-300">
-                          Casa Pirque
-                        </p>
-                      </a>
-                    </div>
-                  </div>
-
                   <div className="absolute md:px-5 bottom-5 w-full container mx-auto max-w-screen-xl xl:max-w-screen-2xl 2xl:max-w-none left-1/2 transform -translate-x-1/2">
                     <div className="flex flex-row-reverse justify-around items-center w-full text-[#F3EEE3]">
                       <div className="w-1/3 flex justify-end items-center">
@@ -538,7 +507,7 @@ const MenuHamburguesaDesktop = () => {
                             className="hover:text-[#c4b27d]  duration-300 transition ease-in-out uppercase tracking-widest"
                             style={robotoFontRegular}
                           >
-                            Contact
+                            {t("menu.footerOptionA")}
                           </Link>
                         </div>
 
@@ -553,7 +522,7 @@ const MenuHamburguesaDesktop = () => {
                               className="flex flex-col items-center "
                             >
                               <span className="text-center">
-                                <i>Our distribution office</i>
+                                <i> {t("menu.footerOptionB")}</i>
                               </span>
                               <span className="uppercase tracking-widest text-center">
                                 Casa Pirque
@@ -568,7 +537,7 @@ const MenuHamburguesaDesktop = () => {
                             href=""
                             className="hover:text-[#c4b27d]  duration-300 transition ease-in-out tracking-widest"
                           >
-                            Press
+                            {t("menu.footerOptionC")}
                           </Link>
                         </div>
                       </div>

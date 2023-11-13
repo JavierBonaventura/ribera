@@ -13,7 +13,7 @@ import felipe from "../../images/felipe.jpg";
 import "../../App.css";
 import SliderFamily from "../../components/SliderFamily";
 import { Transition, animated } from "@react-spring/web";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 const Family = () => {
   const { t, i18n } = useTranslation();
@@ -123,7 +123,6 @@ const Family = () => {
                     </Link>
                   </div>
                   <div className="mt-4">
-          
                     <Link to="/MenuHamburguesa">
                       <img
                         src={hambur}
@@ -146,9 +145,10 @@ const Family = () => {
                           : "opacity-0 transition-opacity duration-500"
                       }`}
                     >
-                      <i style={playfairFontItalic}>{t('history')}</i>
+                      <i style={playfairFontItalic}>
+                        {t("history.family.title")}
+                      </i>
                     </h1>
-
 
                     <h2
                       style={playfairFontBlack}
@@ -156,7 +156,7 @@ const Family = () => {
                         isVisible2 ? "appear-from-bottom" : "invisible"
                       }`}
                     >
-                      {t('family')}
+                      {t("history.family.subtitle")}
                     </h2>
                   </div>
                   <div
@@ -225,7 +225,7 @@ const Family = () => {
                         style={robotoFontRegular}
                       >
                         <span className="text-sm md:text-xl">
-                          Roots in patagonia
+                          {t("history.family.titleFirstParagraph")}
                         </span>
                       </h2>
                     </div>
@@ -233,46 +233,31 @@ const Family = () => {
                       <p
                         className="text-justify tracking-wider text-black text-xs lg:text-base lg:leading-7"
                         style={playfairFontRegular}
-                      >
-                        We have our{" "}
-                        <strong>
-                          roots in Patagonia and in winemaking stretching back
-                          over 150 years
-                        </strong>
-                        . Stemming from two very different origins, Bodega
-                        Ribera del Cuarzo seems to be the synthesis of those two
-                        powerful forces.
-                      </p>
+                        dangerouslySetInnerHTML={{
+                          __html: t("history.family.firstParagraphA"),
+                        }}
+                      />
                       <p
                         className="text-justify tracking-wider text-black text-xs lg:text-base lg:leading-7"
                         style={playfairFontRegular}
-                      >
-                        “On my grandmother's side,{" "}
-                        <strong>
-                          Melchor Concha y Toro started his winery in 1883
-                        </strong>
-                        , only a few years after Jose Menéndez had started his
-                        wool producing and shipping company in far away
-                        Patagonia.
-                      </p>
+                        dangerouslySetInnerHTML={{
+                          __html: t("history.family.firstParagraphB"),
+                        }}
+                      />
                       <p
                         className="text-justify tracking-wider text-black text-xs lg:text-base lg:leading-7"
                         style={playfairFontRegular}
-                      >
-                        Stories of how these two individuals worked hard to
-                        create their ventures intertwine in dinner conversations
-                        over generations.
-                      </p>
+                        dangerouslySetInnerHTML={{
+                          __html: t("history.family.firstParagraphC"),
+                        }}
+                      />
                       <p
                         className="text-justify tracking-wider text-black text-xs lg:text-base lg:leading-7"
                         style={playfairFontRegular}
-                      >
-                        I have come to believe that the coincidence of these two
-                        pioneers, having thousands of miles apart but almost at
-                        the same time successfully developed their companies,
-                        was the mysterious merging force that led to the
-                        creation of Bodega Ribera del Cuarzo.
-                      </p>
+                        dangerouslySetInnerHTML={{
+                          __html: t("history.family.firstParagraphD"),
+                        }}
+                      />
                     </div>
                   </div>
                 </div>
@@ -290,9 +275,10 @@ const Family = () => {
                 <span
                   className="contenido-dinamico absolute  text-white bottom-56 md:-bottom-5 lg:bottom-[-4rem] right-14 2xl:right-52 text-sm lg:text-lg "
                   style={playfairFontItalic}
-                >
-                  Sunset at Valle Azul
-                </span>
+                  dangerouslySetInnerHTML={{
+                    __html: t("history.family.altImg"),
+                  }}
+                ></span>
 
                 <div className="bg-[#212121] w-full md:w-2/3">
                   <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
@@ -309,25 +295,10 @@ const Family = () => {
                         <p
                           className="text-right-justify tracking-wider text-[#ffffff] text-xs lg:text-base lg:leading-7 "
                           style={playfairFontRegular}
-                        >
-                          Patagonia was the place where we spent the summers of
-                          my childhood and where I had traveled many times in my
-                          youth. It was always a place where I truly found
-                          myself at home. Amidst the wind flat topped hills, the
-                          enormous open spaces and the gigantic mountains where
-                          distances are dwarfed only by an infinite sky the idea
-                          of setting up a winery little by little started to
-                          materialize.
-                          <br />
-                          <br />
-                          My career in wines started when, as a very young
-                          person, I joined the winery of Dr. Nicolas Catena and
-                          at his side discovered the fascinating world of wine
-                          which has become my life. I Iearned from him every
-                          detail of how to cultivate the best grapes, how to
-                          produce the best wines and above all how to never ever
-                          relinquish in the pursuit of excellence.
-                        </p>
+                          dangerouslySetInnerHTML={{
+                            __html: t("history.family.secondParagraph"),
+                          }}
+                        ></p>
                       </div>
                     </div>
                   </div>
@@ -340,15 +311,10 @@ const Family = () => {
                     <p
                       className="text-justify tracking-wider text-[#000000] text-xs lg:text-base lg:leading-7"
                       style={playfairFontRegular}
-                    >
-                      Finally, the day arrived—the moment when I could merge my
-                      love for my Patagonian homeland with the unwavering
-                      passion for wine instilled within me since childhood. This
-                      unique opportunity, which we tirelessly pursue each day,
-                      is embodied in the name of Bodega Ribera del Cuarzo. Here,
-                      we strive to craft the finest wines, honoring our heritage
-                      and expressing the essence of our beloved land.”
-                    </p>
+                      dangerouslySetInnerHTML={{
+                        __html: t("history.family.thirdParagraph"),
+                      }}
+                    ></p>
                   </div>
                   <img
                     src={felipe}

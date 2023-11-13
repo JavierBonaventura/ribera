@@ -8,8 +8,10 @@ import { useLocation } from "react-router-dom";
 import { Transition, animated } from "@react-spring/web";
 import portada from "../../images/background-contact-1.png";
 import emailjs from "emailjs-com";
+import { useTranslation } from "react-i18next";
 
 const FormularioContacto = () => {
+  const { t, i18n } = useTranslation();
   // Incio variables paraa manejar el estado del envio del mail
   const [isEmailSent, setIsEmailSent] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
@@ -122,7 +124,7 @@ const FormularioContacto = () => {
                   class="uppercase text-[#c4b27d] text-3xl tracking-wider text-center"
                   style={playfairFontBold}
                 >
-                  Contact
+                  {t("contact.title")}
                 </h1>
               </div>
               {/*TITULAR DESK START*/}
@@ -135,7 +137,7 @@ const FormularioContacto = () => {
                     class="uppercase text-[#c4b27d] text-xl tracking-wider text-center"
                     style={playfairFontBold}
                   >
-                    Contact
+                    {t("contact.title")}
                   </h1>
                 </div>
                 {/*TITULAR MOB END*/}
@@ -153,7 +155,7 @@ const FormularioContacto = () => {
                           className="block text-[#F4EDE2] text-sm md:text-xl "
                           htmlFor="nombre"
                         >
-                          Name
+                          {t("contact.inputFormA")}
                         </label>
                         <input
                           className="text-sm md:text-base bg-transparent md:py-1 border-b border-b-white rounded-none border-t-0 border-l-0 border-r-0 w-full text-[#F4EDE2] leading-tight"
@@ -169,7 +171,7 @@ const FormularioContacto = () => {
                           className="block text-[#F4EDE2] text-sm md:text-xl"
                           htmlFor="apellido"
                         >
-                          Last name
+                          {t("contact.inputFormB")}
                         </label>
                         <input
                           className="text-sm md:text-base bg-transparent  md:py-1 border-b border-b-white rounded-none border-t-0 border-l-0 border-r-0  w-full text-[#F4EDE2] leading-tight"
@@ -186,7 +188,7 @@ const FormularioContacto = () => {
                         className="block text-[#F4EDE2] text-sm md:text-xl"
                         htmlFor="email"
                       >
-                        E-mail
+                        {t("contact.inputFormC")}
                       </label>
                       <input
                         className="text-sm md:text-base bg-transparent md:py-1 border-b border-b-white rounded-none border-t-0 border-l-0 border-r-0 w-full text-[#F4EDE2] leading-tight"
@@ -202,7 +204,7 @@ const FormularioContacto = () => {
                         className="block text-[#F4EDE2] text-sm md:text-xl"
                         htmlFor="pais"
                       >
-                        Country
+                        {t("contact.inputFormD")}
                       </label>
                       <input
                         className="text-sm md:text-base bg-transparent md:py-1 border-b border-b-white rounded-none border-t-0 border-l-0 border-r-0  w-full text-[#F4EDE2] leading-tight"
@@ -218,7 +220,7 @@ const FormularioContacto = () => {
                         className="block text-[#F4EDE2] text-sm md:text-xl mb-2"
                         htmlFor="consulta"
                       >
-                        Message
+                        {t("contact.inputFormE")}
                       </label>
                       <textarea
                         className="text-sm md:text-base border-b border-b-white rounded-none border-t-0 border-l-0 border-r-0 bg-transparent  w-full pb-14  text-[#F4EDE2] leading-tight"
@@ -234,7 +236,7 @@ const FormularioContacto = () => {
                         type="submit"
                         onClick={handleSubmit}
                       >
-                        Send
+                        {t("contact.btnForm")}
                       </button>
                     </div>
                     {/* Inicio Muestra pop up y borra el contenido del formulario */}
@@ -275,7 +277,7 @@ const FormularioContacto = () => {
                 >
                   <div className="flex flex-col gap-y-2  ">
                     <h2 className="text-lg text-[#c4b27d] md:text-3xl text-center md:text-left">
-                      Our offices
+                      {t("contact.titleA")}
                     </h2>
                     <a
                       href="https://www.google.com/maps/place/Ortiz+de+Ocampo+3302,+C1425+CABA/@-34.5750298,-58.4035604,17z/data=!3m1!4b1!4m6!3m5!1s0x95bcb5d7344eecc7:0x17bb52293d552009!8m2!3d-34.5750342!4d-58.4009855!16s%2Fg%2F11qpp9y2jx?hl=es&entry=ttu"
@@ -290,7 +292,7 @@ const FormularioContacto = () => {
                   </div>
                   <div className="flex flex-col gap-y-2">
                     <h2 className="text-lg text-[#c4b27d] md:text-3xl text-center md:text-left">
-                      Our winery
+                      {t("contact.titleB")}
                     </h2>
                     <a
                       href="https://www.google.com.ar/maps/place/39%C2%B011'17.0%22S+66%C2%B052'26.0%22W/@-39.1880556,-66.8760829,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x7cfe3f53aaf18eb2!8m2!3d-39.1880556!4d-66.8738889"
@@ -307,7 +309,7 @@ const FormularioContacto = () => {
                   </div>
                   <div className="">
                     <h2 className="text-lg text-[#c4b27d] uppercase md:text-3xl text-center md:text-left">
-                      Follow us!
+                      {t("contact.titleC")}
                     </h2>
                     <a
                       href="https://www.instagram.com/riberadelcuarzo/"

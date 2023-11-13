@@ -11,9 +11,11 @@ import { Link } from "react-router-dom";
 import { Transition } from "@react-spring/web";
 import { useSpring, animated } from "@react-spring/web";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "../App.css";
 
 const MenuDesktop = () => {
+  const { t, i18n } = useTranslation();
   // inicio codigo para retrasar la aparicion del logo
   const [isVisible, setIsVisible] = useState(false);
 
@@ -337,7 +339,7 @@ const MenuDesktop = () => {
                             : "opacity-0 transition-opacity duration-500"
                         }`}
                       >
-                        History
+                        {t("menu.titleA")}
                       </p>
                       <ul
                         className={`text-center space-y-0 lg:space-y-1.5 transition-opacity duration-500 ${
@@ -347,15 +349,15 @@ const MenuDesktop = () => {
                         {" "}
                         <li>
                           <Link to="/family" style={robotoFontRegular}>
-                            <span className="subMenu tracking-widest">
-                              FAMILY
+                            <span className="subMenu tracking-widest uppercase">
+                              {t("menu.optionA1")}
                             </span>
                           </Link>
                         </li>
                         <li>
                           <Link to="/valleazul" style={robotoFontRegular}>
-                            <span className="subMenu tracking-widest">
-                              VALLE AZUL, PATAGONIA
+                            <span className="subMenu tracking-widest uppercase">
+                              {t("menu.optionA2")}
                             </span>
                           </Link>
                         </li>
@@ -380,7 +382,7 @@ const MenuDesktop = () => {
                           isVisible2 ? "opacity-100" : "opacity-0"
                         }`}
                       >
-                        Patagonian Spirit
+                        {t("menu.titleB")}
                       </p>
                       <ul
                         className={`text-center space-y-0 lg:space-y-1.5 transition-opacity duration-500 ${
@@ -392,36 +394,36 @@ const MenuDesktop = () => {
                             to="/araucanavineyard"
                             style={robotoFontRegular}
                           >
-                            <span className="subMenu tracking-widest">
-                              ARAUCANA VINEYARD
+                            <span className="subMenu tracking-widest uppercase">
+                              {t("menu.optionB1")}
                             </span>
                           </Link>
                         </li>
                         <li>
                           <Link to="/workvineyard" style={robotoFontRegular}>
-                            <span className="subMenu tracking-widest">
-                              WORK IN THE VINEYARD
+                            <span className="subMenu tracking-widest uppercase">
+                              {t("menu.optionB2")}
                             </span>
                           </Link>
                         </li>
                         <li>
                           <Link to="/workwinery" style={robotoFontRegular}>
-                            <span className="subMenu tracking-widest">
-                              WORK IN THE WINERY
+                            <span className="subMenu tracking-widest uppercase">
+                              {t("menu.optionB3")}
                             </span>
                           </Link>
                         </li>
                         <li>
                           <Link to="/lifeonestate" style={robotoFontRegular}>
-                            <span className="subMenu tracking-widest">
-                              LIFE ON THE ESTATE
+                            <span className="subMenu tracking-widest uppercase">
+                              {t("menu.optionB4")}
                             </span>
                           </Link>
                         </li>
                         <li>
                           <Link to="/lifewater" style={robotoFontRegular}>
-                            <span className="subMenu tracking-widest">
-                              WATER FOR LIFE
+                            <span className="subMenu tracking-widest uppercase">
+                              {t("menu.optionB5")}
                             </span>
                           </Link>
                         </li>
@@ -446,7 +448,7 @@ const MenuDesktop = () => {
                           isVisible2 ? "opacity-100" : "opacity-0"
                         }`}
                       >
-                        Wines
+                        {t("menu.titleC")}
                       </p>
                       <animated.div style={dropdownAnimation3}>
                         <ul
@@ -456,8 +458,8 @@ const MenuDesktop = () => {
                         >
                           <li>
                             <p style={robotoFontRegular} onClick={opcion4}>
-                              <span className="!mb-0 subMenu tracking-widest">
-                                IN ARGENTINA
+                              <span className="!mb-0 subMenu tracking-widest uppercase">
+                                {t("menu.optionC1")}
                               </span>
                             </p>
                           </li>
@@ -512,8 +514,8 @@ const MenuDesktop = () => {
                           </animated.div>
                           <li>
                             <p style={robotoFontRegular} onClick={opcion5}>
-                              <span className="!mb-0 subMenu tracking-widest">
-                                IN THE WORLD
+                              <span className="!mb-0 subMenu tracking-widest uppercase">
+                                {t("menu.optionC2")}
                               </span>
                             </p>
                           </li>
@@ -583,7 +585,7 @@ const MenuDesktop = () => {
                             className="hover:text-[#C4B27D]  duration-300 transition ease-in-out uppercase tracking-widest"
                             style={robotoFontRegular}
                           >
-                            Contact
+                            {t("menu.footerOptionA")}
                           </Link>
                         </div>
 
@@ -598,7 +600,7 @@ const MenuDesktop = () => {
                               className="flex flex-col items-center "
                             >
                               <span className="text-center">
-                                <i>Our distribution office</i>
+                                <i> {t("menu.footerOptionB")}</i>
                               </span>
                               <span className="uppercase tracking-widest text-center">
                                 Casa Pirque
@@ -607,13 +609,13 @@ const MenuDesktop = () => {
                           </a>
                         </div>
 
-                        <div className="uppercase">
+                        <div className="">
                           <Link
                             to="/Press"
                             href=""
-                            className="hover:text-[#C4B27D]  duration-300 transition ease-in-out tracking-widest"
+                            className="hover:text-[#C4B27D]  duration-300 transition ease-in-out tracking-widest uppercase"
                           >
-                            Press
+                            {t("menu.footerOptionC")}
                           </Link>
                         </div>
                       </div>
