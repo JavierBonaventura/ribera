@@ -184,8 +184,10 @@ function Araucana() {
                       style={windsorLight}
                     >
                       <span className="text-base md:text-[1.35rem] md:leading-[1.75rem]">
-                        Araucana <br />{" "}
-                        <span className="font-bold">Río de los Ciervos</span>
+                        Araucana <br />
+                        <span className="font-bold">
+                          Río de los Ciervos Malbec
+                        </span>
                       </span>
                     </h1>
 
@@ -269,7 +271,7 @@ function Araucana() {
                 style={windsorLight}
               >
                 {/* Bottle 1 start */}
-                <div className="border border-[#C4B27D] px-3 pt-3 md:border-0 md:p-0">
+                <div className="border border-[#C4B27D] flex flex-col justify-between px-3 pt-3 md:border-0 md:p-0">
                   <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
                     <Link
                       to="/AraucanaPinotNoir"
@@ -279,6 +281,7 @@ function Araucana() {
                     </Link>
                     <div className="flex flex-col justify-center items-center text-base lg:text-2xl">
                       <span>ARAUCANA</span>
+                      <span>RÍO DE LOS CIERVOS</span>
                       <span>Pinot Noir</span>
                     </div>
                   </div>
@@ -293,7 +296,7 @@ function Araucana() {
                 {/* Bottle 1 end */}
 
                 {/* Bottle 2 start */}
-                <div className="border border-[#C4B27D] px-3 pt-3 md:border-0 md:p-0">
+                <div className="border flex flex-col justify-between border-[#C4B27D] px-3 pt-3 md:border-0 md:p-0">
                   <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
                     <Link
                       to="/AraucanaMalbec"
@@ -317,7 +320,7 @@ function Araucana() {
                 {/* Bottle 2 end */}
 
                 {/* Bottle 3 start */}
-                <div className="border border-[#C4B27D] px-3 pt-3 md:border-0 md:p-0">
+                <div className="border border-[#C4B27D] flex flex-col justify-between px-3 pt-3 md:border-0 md:p-0">
                   <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
                     <Link
                       to="/AraucanaAzul"
@@ -341,10 +344,10 @@ function Araucana() {
                 {/* Bottle 3 end */}
 
                 {/* Bottle 4 start */}
-                <div className="border border-[#C4B27D] px-3 pt-3 md:border-0 md:p-0">
+                <div className="border border-[#C4B27D] flex flex-col justify-between px-3 pt-3 md:border-0 md:p-0">
                   <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
                     <Link
-                      to="/RiberaParcelaUnica"
+                      to="/RiberaParcelaUnicaArg"
                       className="text-white text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
                     >
                       READ MORE
@@ -354,7 +357,7 @@ function Araucana() {
                       <span>Parcela Única</span>
                     </div>
                   </div>
-                  <Link to="/RiberaParcelaUnica">
+                  <Link to="/RiberaParcelaUnicaArg">
                     <img
                       src={bottleBottom}
                       alt=""

@@ -8,16 +8,15 @@ import { Transition } from "@react-spring/web";
 import { useSpring, animated } from "@react-spring/web";
 import { useLocation } from "react-router-dom";
 import "../App.css";
-import { useTranslation } from 'react-i18next';
-
+import { useTranslation } from "react-i18next";
 
 const MenuHamburguesaDesktop = () => {
-    // codigo para traducciones
-    const { t, i18n } = useTranslation();
-    const changeLanguage = (newLanguage) => {
-      i18n.changeLanguage(newLanguage);
-      console.log('Idioma actual:', i18n.language);
-    };
+  // codigo para traducciones
+  const { t, i18n } = useTranslation();
+  const changeLanguage = (newLanguage) => {
+    i18n.changeLanguage(newLanguage);
+    console.log("Idioma actual:", i18n.language);
+  };
 
   // inicio codigo para retrasar la aparicion del logo
   const [isVisible, setIsVisible] = useState(false);
@@ -422,6 +421,15 @@ const MenuHamburguesaDesktop = () => {
                                   </p>
                                 </Link>
                               </li>
+                              <li>
+                                <Link to="/RiberaParcelaUnicaArg">
+                                  <p style={robotoFontRegular}>
+                                    <span className="subMenu tracking-widest">
+                                      Ribera del Cuarzo Parcela Única
+                                    </span>
+                                  </p>
+                                </Link>
+                              </li>
                             </ul>
                           </animated.div>
                           <li>
@@ -452,7 +460,7 @@ const MenuHamburguesaDesktop = () => {
                                 </Link>
                               </li>
                               <li>
-                                <Link to="/RiberaParcelaUnica">
+                                <Link to="/RiberaParcelaUnicaWorld">
                                   <p style={robotoFontRegular}>
                                     <span className="subMenu tracking-widest">
                                       Ribera del Cuarzo Parcela Única
@@ -568,10 +576,16 @@ const MenuHamburguesaDesktop = () => {
                         className="flex justify-start items-center w-1/3 cursor-default gap-x-5 text-sm lg:text-base"
                         style={robotoFontRegular}
                       >
-                        <span className="font-bold text-[#c4b27d] cursor-pointer tracking-widest" onClick={() => changeLanguage('en')}>
+                        <span
+                          className="font-bold text-[#c4b27d] cursor-pointer tracking-widest"
+                          onClick={() => changeLanguage("en")}
+                        >
                           english
                         </span>
-                        <span className="text-[#F3EEE3] hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest"  onClick={() => changeLanguage('es')}>
+                        <span
+                          className="text-[#F3EEE3] hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest"
+                          onClick={() => changeLanguage("es")}
+                        >
                           spanish
                         </span>
                       </div>

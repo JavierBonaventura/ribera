@@ -32,7 +32,8 @@ import AraucanaRioCiervos from "./pages/WinesArgentina/AraucanaRioCiervos";
 import AraucanaPinotNoir from "./pages/WinesArgentina/AraucanaPinotNoir";
 import AraucanaMalbec from "./pages/WinesArgentina/AraucanaMalbec";
 import AraucanaAzul from "./pages/WinesArgentina/AraucanaAzul";
-import RiberaParcelaUnica from "./pages/WinesWorld/RiberaParcelaUnica";
+import RiberaParcelaUnicaWorld from "./pages/WinesWorld/RiberaParcelaUnica";
+import RiberaParcelaUnicaArg from "./pages/WinesArgentina/RiberaParcelaUnica";
 import RiberaClasico from "./pages/WinesWorld/RiberaClasico";
 import RiberaEspecial from "./pages/WinesWorld/RiberaEspecial";
 import Press from "./pages/Press/Press";
@@ -44,12 +45,15 @@ function App() {
   const [isAdult, setIsAdult] = useState(false);
   const [showAccessDeniedMessage, setShowAccessDeniedMessage] = useState(false);
   const [countdown, setCountdown] = useState(10);
-  const [showAgeConfirmationAfterCountdown, setShowAgeConfirmationAfterCountdown] = useState(false);
+  const [
+    showAgeConfirmationAfterCountdown,
+    setShowAgeConfirmationAfterCountdown,
+  ] = useState(false);
 
   const handleAgeConfirmed = (isAdult) => {
     setIsAdult(isAdult);
     setShowAgeConfirmation(false);
-    setShowAgeConfirmationAfterCountdown(false); 
+    setShowAgeConfirmationAfterCountdown(false);
     if (!isAdult) {
       setShowAccessDeniedMessage(true);
       setCountdown(10);
@@ -91,7 +95,9 @@ function App() {
         {showAgeConfirmationAfterCountdown && (
           <AgeConfirmationPopup onAgeConfirmed={handleAgeConfirmed} />
         )}
-        {isAdult && !showAccessDeniedMessage && !showAgeConfirmationAfterCountdown && <AppContent />}
+        {isAdult &&
+          !showAccessDeniedMessage &&
+          !showAgeConfirmationAfterCountdown && <AppContent />}
         {showAccessDeniedMessage && !showAgeConfirmationAfterCountdown && (
           <div className="bg-gray-950 w-full h-full fixed flex flex-col items-center justify-center">
             <div className="flex flex-col justify-center items-center gap-y-5">
@@ -103,9 +109,15 @@ function App() {
                   className="text-[#F3EEE3] text-center text-lg md:text-2xl tracking-widest leading-7"
                   style={playfairFontExtraBold}
                 >
-                  You cannot visit the site because <br /> you are under 18 years of age.
+                  You cannot visit the site because <br /> you are under 18
+                  years of age.
                 </p>
-                <p  className="text-[#F3EEE3] text-center text-lg md:text-2xl tracking-widest leading-7"  style={playfairFontExtraBold}>Redirecting in {countdown} seconds...</p>
+                <p
+                  className="text-[#F3EEE3] text-center text-lg md:text-2xl tracking-widest leading-7"
+                  style={playfairFontExtraBold}
+                >
+                  Redirecting in {countdown} seconds...
+                </p>
               </div>
             </div>
           </div>
@@ -214,8 +226,12 @@ const AppContent = () => {
               <Route path="/AraucanaMalbec" element={<AraucanaMalbec />} />
               <Route path="/AraucanaAzul" element={<AraucanaAzul />} />
               <Route
-                path="/RiberaParcelaUnica"
-                element={<RiberaParcelaUnica />}
+                path="/RiberaParcelaUnicaWorld"
+                element={<RiberaParcelaUnicaWorld />}
+              />
+              <Route
+                path="/RiberaParcelaUnicaArg"
+                element={<RiberaParcelaUnicaArg />}
               />
               <Route path="/RiberaClasico" element={<RiberaClasico />} />
               <Route path="/RiberaEspecial" element={<RiberaEspecial />} />
@@ -228,7 +244,6 @@ const AppContent = () => {
                 />
               )}
               <Route path="/contacto" element={<FormularioContacto />} />
-
             </Routes>
           </animated.div>
         )}

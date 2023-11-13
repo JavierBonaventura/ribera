@@ -219,7 +219,7 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
                         style={robotoFontRegular}
                         className="decoration-black	text-[#C4B27D]  text-xs leading-6 pb-3 tracking-wide"
                       >
-                        THE HOUSE BY THE WINERY
+                        THE HOUSE AT THE WINERY
                       </p>
                       <p
                         style={playfairFontRegular}

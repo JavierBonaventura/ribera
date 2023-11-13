@@ -184,7 +184,9 @@ function Araucana() {
                     >
                       <span className="text-base md:text-[1.35rem] md:leading-[1.75rem]">
                         Araucana <br />{" "}
-                        <span className="font-bold">Pinot Noir</span>
+                        <span className="font-bold">
+                          Río de los Ciervos Pinot Noir
+                        </span>
                       </span>
                     </h1>
 
@@ -192,11 +194,12 @@ function Araucana() {
                       className="text-[#F3EEE3] text-xs md:text-base tracking-wider text-justify md:text-justify"
                       style={playfairFontRegular}
                     >
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Eligendi, tempora possimus quisquam dolor iste temporibus
-                      mollitia? Corporis fugit aliquam, eos tenetur ipsa, ipsam
-                      laudantium debitis repudiandae assumenda sequi
-                      perspiciatis quam.
+                      The grapes for Río de los Ciervos Pinot Noir come from
+                      vineyards planted over 50 years ago in the Mainqué area.
+                      This wine was born from the desire to preserve old
+                      vineyards in the region. With very little production and
+                      low yields, this is Bodega Ribera del Cuarzo´s latest
+                      release.
                     </p>
                   </div>
                   {/* titular wine end */}
@@ -221,6 +224,7 @@ function Araucana() {
                           <li className="py-2 px-4 ">
                             <a
                               href={fichaTecnica2020}
+                              target="_blank"
                               className="hover:underline"
                             >
                               2020
@@ -259,7 +263,7 @@ function Araucana() {
                 style={windsorLight}
               >
                 {/* Bottle 1 start */}
-                <div className="border border-[#C4B27D] px-3 pt-3 md:border-0 md:p-0">
+                <div className="border border-[#C4B27D] flex flex-col justify-between px-3 pt-3 md:border-0 md:p-0">
                   <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
                     <Link
                       to="/AraucanaRioCiervos"
@@ -269,7 +273,8 @@ function Araucana() {
                     </Link>
                     <div className="flex flex-col justify-center items-center text-base lg:text-2xl">
                       <span>ARAUCANA</span>
-                      <span>Río de los Ciervos</span>
+                      <span>RÍO DE LOS CIERVOS</span>
+                      <span>Malbec</span>
                     </div>
                   </div>
                   <Link to="/AraucanaRioCiervos">
@@ -283,7 +288,7 @@ function Araucana() {
                 {/* Bottle 1 end */}
 
                 {/* Bottle 2 start */}
-                <div className="border border-[#C4B27D] px-3 pt-3 md:border-0 md:p-0">
+                <div className="border border-[#C4B27D] flex flex-col justify-between px-3 pt-3 md:border-0 md:p-0">
                   <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
                     <Link
                       to="/AraucanaMalbec"
@@ -307,7 +312,7 @@ function Araucana() {
                 {/* Bottle 2 end */}
 
                 {/* Bottle 3 start */}
-                <div className="border border-[#C4B27D] px-3 pt-3 md:border-0 md:p-0">
+                <div className="border border-[#C4B27D] flex flex-col justify-between px-3 pt-3 md:border-0 md:p-0">
                   <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
                     <Link
                       to="/AraucanaAzul"
@@ -331,10 +336,10 @@ function Araucana() {
                 {/* Bottle 3 end */}
 
                 {/* Bottle 4 start */}
-                <div className="border border-[#C4B27D] px-3 pt-3 md:border-0 md:p-0">
+                <div className="border border-[#C4B27D] flex flex-col justify-between px-3 pt-3 md:border-0 md:p-0">
                   <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
                     <Link
-                      to="/RiberaParcelaUnica"
+                      to="/RiberaParcelaUnicaArg"
                       className="text-white text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
                     >
                       READ MORE
@@ -344,7 +349,7 @@ function Araucana() {
                       <span>Parcela Única</span>
                     </div>
                   </div>
-                  <Link to="/RiberaParcelaUnica">
+                  <Link to="/RiberaParcelaUnicaArg">
                     <img
                       src={bottleBottom}
                       alt=""

@@ -281,6 +281,15 @@ const Home = () => {
                             </p>
                           </Link>
                         </li>
+                        <li>
+                          <Link to="/RiberaParcelaUnicaArg">
+                            <p style={robotoFontRegular}>
+                              <span className="subMenu tracking-widest">
+                                Ribera del Cuarzo Parcela Única
+                              </span>
+                            </p>
+                          </Link>
+                        </li>
                       </ul>
                     </animated.div>
                     <li>
@@ -313,7 +322,7 @@ const Home = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="/RiberaParcelaUnica">
+                          <Link to="/RiberaParcelaUnicaWorld">
                             <p style={robotoFontRegular}>
                               <span className="subMenu tracking-widest">
                                 Ribera del Cuarzo Parcela Única

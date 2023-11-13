@@ -5,11 +5,12 @@ import logo from "../../images/logo.svg";
 import hambur from "../../images/menu-hambur.png";
 import iconDownload from "../../images/icon-download.png";
 import { useSpring, Transition, animated } from "@react-spring/web";
-import ImgRiberaClasico from "../../images/ribera-clasico.png";
+import ImgRiberaParcela from "../../images/ribera-parcela.png";
 import ImgMarcaAgua from "../../images/agua-sombra.png";
-import BgRiberaClasico from "../../images/bg-ribera-clasico.jpg";
+import BgRiberaParcela from "../../images/bg-ribera-parcela.jpg";
 import bottleBottom from "../../images/bottle-bottom.png";
-import fichaTecnica2021 from "../../fichas/ficha-tecnica-ribera-clasico-2021.pdf";
+import bottleBottomPinot from "../../images/bottle-bottom-pinot.png";
+import fichaTecnica2020 from "../../fichas/ficha-tecnica-ribera-parcela-unica-2020.pdf";
 import "../../App.css";
 function Araucana() {
   // Desplaza a la parte superior cuando se monta el componente
@@ -151,7 +152,7 @@ function Araucana() {
                     isVisible2 ? "appear-from-bottom" : "invisible"
                   }`}
                 >
-                  In the World
+                  In Argentina
                 </h2>
               </div>
               {/* Titular end */}
@@ -161,7 +162,7 @@ function Araucana() {
                 {/* img wine start */}
                 <div className="w-32 md:w-52 mx-auto relative flex justify-center items-center py-16 md:py-24">
                   <img
-                    src={ImgRiberaClasico}
+                    src={ImgRiberaParcela}
                     alt=""
                     className={`w-full z-50 ${
                       isVisible3
@@ -183,7 +184,7 @@ function Araucana() {
                     >
                       <span className="text-base md:text-[1.35rem] md:leading-[1.75rem]">
                         Ribera del Cuarzo <br />{" "}
-                        <span className="font-bold">Clásico</span>
+                        <span className="font-bold">Parcela Única</span>
                       </span>
                     </h1>
 
@@ -191,10 +192,16 @@ function Araucana() {
                       className="text-[#F3EEE3] text-xs md:text-base tracking-wider text-justify md:text-justify"
                       style={playfairFontRegular}
                     >
-                      Clásico Malbec's grapes come from 8 vineyards located
-                      along both sides of the river. Through this wine, we aim
-                      to showcase the diversity of the classic area of the Rio
-                      Negro valley.
+                      Parcela Única represents the culmination of our finest
+                      grapes, carefully selected from the prime plot nestled
+                      within the Araucana Vineyard, situated in the Southwest
+                      quadrant. Here, the elevated limestone composition imparts
+                      a heightened potency and an unparalleled depth of
+                      expression. It is in this very section of the vineyard
+                      that our grapes endure the most challenging conditions,
+                      braving relentless winds. It is precisely these
+                      adversities that give rise to the exquisite intensity and
+                      finesse that distinguish our wine.
                     </p>
                   </div>
                   {/* titular wine end */}
@@ -218,11 +225,11 @@ function Araucana() {
                         <ul className="text-xs md:text-lg text-[#C4B27D] text-center">
                           <li className="py-2 px-4 ">
                             <a
-                              href={fichaTecnica2021}
+                              href={fichaTecnica2020}
                               target="_blank"
                               className="hover:underline"
                             >
-                              2021
+                              2020
                             </a>
                           </li>
                         </ul>
@@ -241,7 +248,11 @@ function Araucana() {
                 <div className="w-full aspect-video h-auto xl:h-[40rem]">
                   <div className="recuadro-1"></div>
                   <div className="recuadro-2"></div>
-                  <img src={BgRiberaClasico} className="imagen " alt="Ribera" />
+                  <img
+                    src={BgRiberaParcela}
+                    className="imagen "
+                    alt="Araucana"
+                  />
                 </div>
               </div>
             </div>
@@ -250,56 +261,110 @@ function Araucana() {
             {/* Footer bottle start */}
             <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 !pt-20 md:!pt-40 ">
               <div
-                className="flex flex-col md:flex-row  text-[#C4B27D] w-full gap-y-10 md:gap-x-32 justify-center"
+                className="flex flex-col md:flex-row 0 text-[#C4B27D] w-full gap-y-10 md:gap-x-32 justify-center"
                 style={windsorLight}
               >
                 {/* Bottle 1 start */}
-                <div className="border border-[#C4B27D] px-3 pt-3 md:border-0 md:p-0">
+                <div className="border border-[#C4B27D] flex flex-col justify-between px-3 pt-3 md:border-0 md:p-0">
                   <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
                     <Link
-                      to="/RiberaEspecial"
+                      to="/AraucanaRioCiervos"
                       className="text-white text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
                     >
                       READ MORE
                     </Link>
                     <div className="flex flex-col justify-center items-center text-base lg:text-2xl">
-                      <span>RIBERA DEL CUARZO</span>
-                      <span>Especial</span>
+                      <span>ARAUCANA</span>
+                      <span>RÍO DE LOS CIERVOS</span>
+                      <span>Malbec</span>
                     </div>
                   </div>
-                  <Link to="/RiberaEspecial">
+                  <Link to="/AraucanaRioCiervos">
                     <img
                       src={bottleBottom}
                       alt=""
-                      className="w-1/2 md:w-3/4 mx-auto hover:scale-110 transition ease-in-out duration-300"
+                      className="w-1/2 md:w-auto mx-auto hover:scale-110 transition ease-in-out duration-300"
                     />
                   </Link>
                 </div>
                 {/* Bottle 1 end */}
 
                 {/* Bottle 2 start */}
-                <div className="border border-[#C4B27D] px-3 pt-3 md:border-0 md:p-0">
+
+                <div className="border border-[#C4B27D] flex flex-col justify-between px-3 pt-3 md:border-0 md:p-0">
                   <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
                     <Link
-                      to="/RiberaParcelaUnicaWorld"
+                      to="/AraucanaPinotNoir"
                       className="text-white text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
                     >
                       READ MORE
                     </Link>
                     <div className="flex flex-col justify-center items-center text-base lg:text-2xl">
-                      <span>RIBERA DEL CUARZO</span>
-                      <span>Parcela Única</span>
+                      <span>ARAUCANA</span>
+                      <span>RÍO DE LOS CIERVOS</span>
+                      <span>Pinot Noir</span>
                     </div>
                   </div>
-                  <Link to="/RiberaParcelaUnicaWorld">
+                  <Link to="/AraucanaPinotNoir">
                     <img
-                      src={bottleBottom}
+                      src={bottleBottomPinot}
                       alt=""
-                      className="w-1/2 md:w-3/4 mx-auto hover:scale-110 transition ease-in-out duration-300"
+                      className="w-1/2 md:w-auto mx-auto hover:scale-110 transition ease-in-out duration-300"
                     />
                   </Link>
                 </div>
+
                 {/* Bottle 2 end */}
+
+                {/* Bottle 3 start */}
+                <div className="border border-[#C4B27D] flex flex-col justify-between px-3 pt-3 md:border-0 md:p-0">
+                  <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
+                    <Link
+                      to="/AraucanaMalbec"
+                      className="text-white text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
+                    >
+                      READ MORE
+                    </Link>
+                    <div className="flex flex-col justify-center items-center text-base lg:text-2xl">
+                      <span>ARAUCANA</span>
+                      <span>Malbec</span>
+                    </div>
+                  </div>
+                  <Link to="/AraucanaMalbec">
+                    <img
+                      src={bottleBottom}
+                      alt=""
+                      className="w-1/2 md:w-auto mx-auto hover:scale-110 transition ease-in-out duration-300"
+                    />
+                  </Link>
+                </div>
+
+                {/* Bottle 3 end */}
+
+                {/* Bottle 4 start */}
+
+                <div className="border border-[#C4B27D] flex flex-col justify-between px-3 pt-3 md:border-0 md:p-0">
+                  <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
+                    <Link
+                      to="/AraucanaAzul"
+                      className="text-white text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
+                    >
+                      READ MORE
+                    </Link>
+                    <div className="flex flex-col justify-center items-center text-base lg:text-2xl">
+                      <span>ARAUCANA</span>
+                      <span>Azul</span>
+                    </div>
+                  </div>
+                  <Link to="/AraucanaAzul">
+                    <img
+                      src={bottleBottom}
+                      alt=""
+                      className="w-1/2 md:w-auto mx-auto hover:scale-110 transition ease-in-out duration-300"
+                    />
+                  </Link>
+                </div>
+                {/* Bottle 4 end */}
               </div>
             </div>
           </div>
