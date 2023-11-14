@@ -18,9 +18,11 @@ import imgNota310523 from "../../images/nota-2-2023.png";
 import imgNota220523 from "../../images/nota-3-2023.jpg";
 
 import { Transition, animated } from "@react-spring/web";
+import { useTranslation } from "react-i18next";
 import "../../App.css";
 
 function Press() {
+  const { t, i18n } = useTranslation();
   // Para que se creen nuevos titulares (componentes) se deben agregar registros en el arreglo titulares2022 o titulares2023
 
   // inicio codigo para retrasar la aparicion del titulo
@@ -333,7 +335,7 @@ function Press() {
                         : "opacity-0 transition-opacity duration-500"
                     }`}
                   >
-                    Press
+                    {t("press.title")}
                   </h2>
                   <h1
                     class={` text-xs md:text-lg tracking-widest text-[#F3EEE3]  ${
@@ -343,7 +345,7 @@ function Press() {
                     }`}
                     style={playfairFontRegular}
                   >
-                    RIBERA MOMENTS - In the news
+                    {t("press.subtitle")}
                   </h1>
                 </div>
 

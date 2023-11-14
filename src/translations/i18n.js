@@ -34,6 +34,12 @@ i18n.use(initReactI18next).init({
           inputFormE: "Message",
           btnForm: "Send",
         },
+        press: {
+          title: "Press",
+          subtitle: "RIBERA MOMENTS - In the news",
+          date: "",
+          btn: "Read more",
+        },
         history: {
           family: {
             title: "History",
@@ -71,7 +77,7 @@ i18n.use(initReactI18next).init({
           titleA: "Historia",
           optionA1: "Familia",
           optionA2: "Valle Azul, Patagonia",
-          titleB: "Espíritu patagónico",
+          titleB: "Espíritu Patagónico",
           optionB1: "El Viñedo araucana",
           optionB2: "Trabajo en la viña",
           optionB3: "Trabajo en bodega",
@@ -95,6 +101,12 @@ i18n.use(initReactI18next).init({
           inputFormD: "País",
           inputFormE: "Mensaje",
           btnForm: "Enviar",
+        },
+        press: {
+          title: "Prensa",
+          subtitle: "-",
+          date: "",
+          btn: "Leer más",
         },
         history: {
           family: {

@@ -259,7 +259,7 @@ function Araucana() {
             {/* Footer bottle start */}
             <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 !pt-20 md:!pt-40 ">
               <div
-                className="flex flex-col md:flex-row 0 text-[#C4B27D] w-full gap-y-10 md:gap-x-32"
+                className="flex flex-col md:flex-row 0 text-[#C4B27D] w-full gap-y-10 md:gap-x-20 2xl:gap-x-32"
                 style={windsorLight}
               >
                 {/* Bottle 1 start */}
@@ -271,10 +271,9 @@ function Araucana() {
                     >
                       READ MORE
                     </Link>
-                    <div className="flex flex-col justify-center items-center text-base lg:text-2xl">
+                    <div className="flex flex-col justify-center items-center text-base lg:text-xl xl:text-2xl text-center">
                       <span>ARAUCANA</span>
-                      <span>RÍO DE LOS CIERVOS</span>
-                      <span>Malbec</span>
+                      <span>Río de los Ciervos Malbec</span>
                     </div>
                   </div>
                   <Link to="/AraucanaRioCiervos">
@@ -296,7 +295,7 @@ function Araucana() {
                     >
                       READ MORE
                     </Link>
-                    <div className="flex flex-col justify-center items-center text-base lg:text-2xl">
+                    <div className="flex flex-col justify-center items-center text-base lg:text-xl xl:text-2xl text-center">
                       <span>ARAUCANA</span>
                       <span>Malbec</span>
                     </div>
@@ -320,7 +319,7 @@ function Araucana() {
                     >
                       READ MORE
                     </Link>
-                    <div className="flex flex-col justify-center items-center text-base lg:text-2xl">
+                    <div className="flex flex-col justify-center items-center text-base lg:text-xl xl:text-2xl text-center">
                       <span>ARAUCANA</span>
                       <span>Azul</span>
                     </div>
@@ -344,7 +343,7 @@ function Araucana() {
                     >
                       READ MORE
                     </Link>
-                    <div className="flex flex-col justify-center items-center text-base lg:text-2xl">
+                    <div className="flex flex-col justify-center items-center text-base lg:text-xl xl:text-2xl text-center">
                       <span>RIBERA DEL CUARZO</span>
                       <span>Parcela Única</span>
                     </div>
