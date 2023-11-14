@@ -8,8 +8,10 @@ import iconIg from "../../images/icon-ig.png";
 import "../../App.css";
 import { useLocation } from "react-router-dom";
 import { Transition, animated } from "@react-spring/web";
+import { useTranslation } from "react-i18next";
 
 const ConstructionPage = () => {
+  const { t, i18n } = useTranslation();
   // inicio codigo para retrasar la aparicion de History
   const [isVisible, setIsVisible] = useState(false);
 
@@ -116,7 +118,7 @@ const ConstructionPage = () => {
                           : "opacity-0 transition-opacity duration-500"
                       }`}
                     >
-                      <i style={playfairFontItalic}>Patagonian Spirit</i>
+                      <i style={playfairFontItalic}>{t("patagonian.title")}</i>
                     </h1>
                     <h2
                       style={playfairFontBlack}
@@ -124,7 +126,7 @@ const ConstructionPage = () => {
                         isVisible2 ? "appear-from-bottom" : "invisible"
                       }`}
                     >
-                      Araucana Vineyard
+                      {t("patagonian.araucanaVineyard.title")}
                     </h2>
                   </div>
                   <div class="relative flex justify-center items-center  md:pt-0 px-4 md:px-0">
@@ -141,18 +143,10 @@ const ConstructionPage = () => {
                 <p
                   class="text-[#000000] tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto text-xs  lg:text-base lg:leading-7 md:pt-5"
                   style={playfairFontRegular}
-                >
-                  The Araucana Vineyard is much more than just unique. Located
-                  in Ribera del Cuarzo, no other vineyard in Patagonia or the
-                  world can boast of being so close to the <i>barda</i> or
-                  enjoying such privacy. <br /> <br />
-                  The soils of Araucana are predominantly aeolian, meticulously
-                  shaped over countless eras by wind erosion. Enriched with
-                  volcanic ash and potassium, and with a high content of calcium
-                  carbonate, they have a crucial and remarkably uncommon
-                  chemical composition, not only for Patagonia but for the
-                  world.
-                </p>
+                  dangerouslySetInnerHTML={{
+                    __html: t("patagonian.araucanaVineyard.firstParagraph"),
+                  }}
+                ></p>
               </div>
 
               <div className="container mx-auto px-4  max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
@@ -167,13 +161,10 @@ const ConstructionPage = () => {
                 <p
                   class="text-[#000000] tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto text-xs  lg:text-base lg:leading-7"
                   style={playfairFontRegular}
-                >
-                  Adding to its singularity is the <i>barda</i> (river terrace).
-                  The texture of the surface is due to a combination of quartz
-                  and calcium carbonate, locally known as "Indian cement." As it
-                  erodes and integrates into the soil, it transfers its
-                  exceptional qualities to our grapes.
-                </p>
+                  dangerouslySetInnerHTML={{
+                    __html: t("patagonian.araucanaVineyard.secondParagraph"),
+                  }}
+                ></p>
 
                 <div class="py-20">
                   <div class="flex justify-center">

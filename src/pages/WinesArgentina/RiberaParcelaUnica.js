@@ -11,8 +11,10 @@ import BgRiberaParcela from "../../images/bg-ribera-parcela.jpg";
 import bottleBottom from "../../images/bottle-bottom.png";
 import bottleBottomPinot from "../../images/bottle-bottom-pinot.png";
 import fichaTecnica2020 from "../../fichas/ficha-tecnica-ribera-parcela-unica-2020.pdf";
+import { useTranslation } from "react-i18next";
 import "../../App.css";
 function Araucana() {
+  const { t, i18n } = useTranslation();
   // Desplaza a la parte superior cuando se monta el componente
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -144,7 +146,7 @@ function Araucana() {
                       : "opacity-0 transition-opacity duration-500"
                   }`}
                 >
-                  <i style={playfairFontItalic}>Wines</i>
+                  <i style={playfairFontItalic}>{t("wines.title")}</i>
                 </h1>
                 <h2
                   style={playfairFontBlack}
@@ -152,7 +154,7 @@ function Araucana() {
                     isVisible2 ? "appear-from-bottom" : "invisible"
                   }`}
                 >
-                  In Argentina
+                  {t("wines.argentina.title")}
                 </h2>
               </div>
               {/* Titular end */}
@@ -192,16 +194,7 @@ function Araucana() {
                       className="text-[#F3EEE3] text-xs md:text-base tracking-wider text-justify md:text-justify"
                       style={playfairFontRegular}
                     >
-                      Parcela Única represents the culmination of our finest
-                      grapes, carefully selected from the prime plot nestled
-                      within the Araucana Vineyard, situated in the Southwest
-                      quadrant. Here, the elevated limestone composition imparts
-                      a heightened potency and an unparalleled depth of
-                      expression. It is in this very section of the vineyard
-                      that our grapes endure the most challenging conditions,
-                      braving relentless winds. It is precisely these
-                      adversities that give rise to the exquisite intensity and
-                      finesse that distinguish our wine.
+                      {t("wines.world.riberaParcela.paragraph")}
                     </p>
                   </div>
                   {/* titular wine end */}
@@ -216,7 +209,7 @@ function Araucana() {
                           <img src={iconDownload} alt="" className="w-full" />
                         </div>
                         <span className="ml-2 text-xs md:text-lg text-[#C4B27D] tracking-wider">
-                          Download Technical Sheet
+                          {t("wines.btnSheet")}
                         </span>
                       </a>
                     </div>
@@ -269,9 +262,9 @@ function Araucana() {
                   <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
                     <Link
                       to="/AraucanaRioCiervos"
-                      className="text-white text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
+                      className="text-white uppercase text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
                     >
-                      READ MORE
+                      {t("wines.btnFooter")}
                     </Link>
                     <div className="flex flex-col justify-center items-center text-base lg:text-xl xl:text-2xl text-center">
                       <span>ARAUCANA</span>
@@ -293,9 +286,9 @@ function Araucana() {
                   <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
                     <Link
                       to="/AraucanaPinotNoir"
-                      className="text-white text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
+                      className="text-white uppercase text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
                     >
-                      READ MORE
+                      {t("wines.btnFooter")}
                     </Link>
                     <div className="flex flex-col justify-center items-center text-base lg:text-xl xl:text-2xl text-center">
                       <span>ARAUCANA</span>
@@ -317,9 +310,9 @@ function Araucana() {
                   <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
                     <Link
                       to="/AraucanaMalbec"
-                      className="text-white text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
+                      className="text-white uppercase text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
                     >
-                      READ MORE
+                      {t("wines.btnFooter")}
                     </Link>
                     <div className="flex flex-col justify-center items-center text-base lg:text-xl xl:text-2xl text-center">
                       <span>ARAUCANA</span>
@@ -341,9 +334,9 @@ function Araucana() {
                   <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
                     <Link
                       to="/AraucanaAzul"
-                      className="text-white text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
+                      className="text-white uppercase text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
                     >
-                      READ MORE
+                      {t("wines.btnFooter")}
                     </Link>
                     <div className="flex flex-col justify-center items-center text-base lg:text-xl xl:text-2xl text-center">
                       <span>ARAUCANA</span>

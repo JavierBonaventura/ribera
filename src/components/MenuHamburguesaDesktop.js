@@ -13,9 +13,11 @@ import { useTranslation } from "react-i18next";
 const MenuHamburguesaDesktop = () => {
   // codigo para traducciones
   const { t, i18n } = useTranslation();
+  const [activeButton, setActiveButton] = useState("en");
   const changeLanguage = (newLanguage) => {
     i18n.changeLanguage(newLanguage);
     console.log("Idioma actual:", i18n.language);
+    setActiveButton(newLanguage);
   };
 
   // inicio codigo para retrasar la aparicion del logo
@@ -545,17 +547,30 @@ const MenuHamburguesaDesktop = () => {
                         className="flex justify-start items-center w-1/3 cursor-default gap-x-5 text-sm lg:text-base"
                         style={robotoFontRegular}
                       >
+                        {/* Span para "English" */}
                         <span
-                          className="font-bold text-[#c4b27d] cursor-pointer tracking-widest"
+                          id="en"
+                          className={`hover:text-[#c4b27d] hidden  cursor-pointer transition ease-in-out duration-300 tracking-widest ${
+                            activeButton === "en"
+                              ? "text-[#c4b27d] font-bold "
+                              : "text-[#F3EEE3]"
+                          }`}
                           onClick={() => changeLanguage("en")}
                         >
-                          english
+                          English
                         </span>
+
+                        {/* Span para "Spanish" */}
                         <span
-                          className="text-[#F3EEE3] hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest"
+                          id="es"
+                          className={`hover:text-[#c4b27d] hidden cursor-pointer transition ease-in-out duration-300 tracking-widest ${
+                            activeButton === "es"
+                              ? "text-[#c4b27d] font-bold"
+                              : "text-[#F3EEE3]"
+                          }`}
                           onClick={() => changeLanguage("es")}
                         >
-                          spanish
+                          Spanish
                         </span>
                       </div>
                     </div>

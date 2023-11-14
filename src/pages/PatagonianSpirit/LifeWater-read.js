@@ -6,8 +6,10 @@ import close from "../../images/close-life.png";
 import "../../App.css";
 import { useLocation } from "react-router-dom";
 import { Transition, animated } from "@react-spring/web";
+import { useTranslation } from "react-i18next";
 
 const LifeWater = () => {
+  const { t, i18n } = useTranslation();
   const location = useLocation();
 
   const playfairFontItalic = {
@@ -77,13 +79,13 @@ const LifeWater = () => {
                     style={playfairFontItalic}
                     class="text-[#5f5f5e] text-xs md:text-lg tracking-widest"
                   >
-                    <i style={playfairFontItalic}>Patagonian Spirit</i>
+                    <i style={playfairFontItalic}> {t("patagonian.title")}</i>
                   </h1>
                   <h2
                     style={playfairFontBlack}
                     className="text-base md:text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
                   >
-                    Water of Life
+                    {t("patagonian.waterLife.title")}
                   </h2>
                 </div>
               </div>
@@ -95,36 +97,10 @@ const LifeWater = () => {
                   <p
                     style={playfairFontRegular}
                     className="text-[#000000] text-xs lg:text-base lg:leading-7 tracking-wider text-justify"
-                  >
-                    The countess planted the vineyard at the highest point of
-                    the <i>barda</i>, an unexplored location where no one had
-                    even considered such an endeavor before. It required
-                    transporting water for irrigation using pumps, incurring
-                    significant costs. Until then, productions in the Río Negro
-                    valley were carried out alongside the river, with water
-                    drawn through channels and gates - an economical flood
-                    irrigation system. <br />
-                    <br />
-                    Yet, the countess decided to plant at this elevated site
-                    because she believed that what would be produced there would
-                    be worth the effort. Without calculating costs, she embarked
-                    on building a system of pumps that transported water three
-                    kilometers uphill. When we finally took over the vineyard,
-                    we trusted that renewable energy, perhaps wind or solar,
-                    would eventually transform this cost into something
-                    reasonable in the short term. Regardless, the risk was worth
-                    taking. <br />
-                    <br />
-                    Some time later, a local man spoke to us about water. This
-                    kind gentleman, Facundo Catriel, told us that abundant water
-                    could be found at the base of the ridge. Although it seemed
-                    unlikely, we decided to drill some wells. Water surged forth
-                    with force. These wells now produce around 200,000 liters
-                    per hour, significantly reducing our costs. We listened to
-                    nature and special individuals. Today, Ribera del Cuarzo
-                    follows a virtuous cycle of respecting the environment, and
-                    the reward is a wine that never ceases to astonish us.
-                  </p>
+                    dangerouslySetInnerHTML={{
+                      __html: t("patagonian.waterLife.readParagraph"),
+                    }}
+                  ></p>
                 </div>
               </div>
             </div>

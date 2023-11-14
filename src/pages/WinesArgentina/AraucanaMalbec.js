@@ -14,8 +14,10 @@ import fichaTecnica2019 from "../../fichas/ficha-tecnica-araucana-malbec-2019.pd
 import fichaTecnica2020 from "../../fichas/ficha-tecnica-araucana-malbec-2020.pdf";
 import fichaTecnica2021 from "../../fichas/ficha-tecnica-araucana-malbec-2021.pdf";
 import fichaTecnica2022 from "../../fichas/ficha-tecnica-araucana-malbec-2022.pdf";
+import { useTranslation } from "react-i18next";
 import "../../App.css";
 function Araucana() {
+  const { t, i18n } = useTranslation();
   // Desplaza a la parte superior cuando se monta el componente
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -147,7 +149,7 @@ function Araucana() {
                       : "opacity-0 transition-opacity duration-500"
                   }`}
                 >
-                  <i style={playfairFontItalic}>Wines</i>
+                  <i style={playfairFontItalic}>{t("wines.title")}</i>
                 </h1>
                 <h2
                   style={playfairFontBlack}
@@ -155,7 +157,8 @@ function Araucana() {
                     isVisible2 ? "appear-from-bottom" : "invisible"
                   }`}
                 >
-                  In Argentina
+                  {" "}
+                  {t("wines.argentina.title")}
                 </h2>
               </div>
               {/* Titular end */}
@@ -195,11 +198,7 @@ function Araucana() {
                       className="text-[#F3EEE3] text-xs md:text-base tracking-wider text-justify md:text-justify"
                       style={playfairFontRegular}
                     >
-                      Araucana Malbec comes from our 5ha Araucana Vineyard that
-                      has unique and distinctive characteristics. Calcareous
-                      soils, cool nights, and strong winds, are constant
-                      challenges for our vines, which leads to wines with
-                      excellent concentration and marked natural acidity.
+                      {t("wines.argentina.araucanaMalbec.paragraph")}
                     </p>
                   </div>
                   {/* titular wine end */}
@@ -214,7 +213,7 @@ function Araucana() {
                           <img src={iconDownload} alt="" className="w-full" />
                         </div>
                         <span className="ml-2 text-xs md:text-lg text-[#C4B27D] tracking-wider">
-                          Download Technical Sheet
+                          {t("wines.btnSheet")}
                         </span>
                       </a>
                     </div>
@@ -294,9 +293,9 @@ function Araucana() {
                   <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
                     <Link
                       to="/AraucanaPinotNoir"
-                      className="text-white text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
+                      className="text-white uppercase text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
                     >
-                      READ MORE
+                      {t("wines.btnFooter")}
                     </Link>
                     <div className="flex flex-col justify-center items-center text-base  lg:text-xl xl:text-2xl text-center">
                       <span>ARAUCANA</span>
@@ -318,9 +317,9 @@ function Araucana() {
                   <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
                     <Link
                       to="/AraucanaRioCiervos"
-                      className="text-white text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
+                      className="text-white uppercase text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
                     >
-                      READ MORE
+                      {t("wines.btnFooter")}
                     </Link>
                     <div className="flex flex-col justify-center items-center text-base  lg:text-xl xl:text-2xl text-center">
                       <span>ARAUCANA</span>
@@ -342,9 +341,9 @@ function Araucana() {
                   <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
                     <Link
                       to="/AraucanaAzul"
-                      className="text-white text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
+                      className="text-white uppercase text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
                     >
-                      READ MORE
+                      {t("wines.btnFooter")}
                     </Link>
                     <div className="flex flex-col justify-center items-center  text-base  lg:text-xl xl:text-2xl text-center">
                       <span>ARAUCANA</span>
@@ -366,9 +365,9 @@ function Araucana() {
                   <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
                     <Link
                       to="/RiberaParcelaUnicaArg"
-                      className="text-white text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
+                      className="text-white uppercase text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
                     >
-                      READ MORE
+                      {t("wines.btnFooter")}
                     </Link>
                     <div className="flex flex-col justify-center items-center text-base lg:text-xl xl:text-2xl text-center">
                       <span>RIBERA DEL CUARZO</span>

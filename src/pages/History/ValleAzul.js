@@ -117,9 +117,7 @@ const ValleAzul = () => {
                           : "opacity-0 transition-opacity duration-500"
                       }`}
                     >
-                      <i style={playfairFontItalic}>
-                        {t("history.valleAzul.title")}
-                      </i>
+                      <i style={playfairFontItalic}>{t("history.title")}</i>
                     </h1>
                     <h2
                       style={playfairFontBlack}
@@ -127,7 +125,7 @@ const ValleAzul = () => {
                         isVisible2 ? "appear-from-bottom" : "invisible"
                       }`}
                     >
-                      {t("history.valleAzul.subtitle")}
+                      {t("history.valleAzul.title")}
                     </h2>
                   </div>
                   <div class="relative flex justify-center items-center md:pt-0 px-4 md:px-0">

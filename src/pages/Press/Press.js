@@ -205,11 +205,11 @@ function Press() {
     useState(posicionMaxValor);
 
   const fechas2023 = [
-    "October 6, 2023",
-    "September 15, 2023",
-    "September 06, 2023",
-    "May 31, 2023",
-    "May 22, 2023",
+    t("press.date.2023.5"),
+    t("press.date.2023.4"),
+    t("press.date.2023.3"),
+    t("press.date.2023.2"),
+    t("press.date.2023.1"),
   ];
 
   const titulares2023 = [
@@ -237,9 +237,9 @@ function Press() {
   ];
 
   const fechas2022 = [
-    "December 30, 2022",
-    "April 13, 2022",
-    "February 8, 2022",
+    t("press.date.2022.3"),
+    t("press.date.2022.2"),
+    t("press.date.2022.1"),
   ];
 
   const titulares2022 = [

@@ -145,9 +145,7 @@ const Family = () => {
                           : "opacity-0 transition-opacity duration-500"
                       }`}
                     >
-                      <i style={playfairFontItalic}>
-                        {t("history.family.title")}
-                      </i>
+                      <i style={playfairFontItalic}>{t("history.title")}</i>
                     </h1>
 
                     <h2
@@ -156,7 +154,7 @@ const Family = () => {
                         isVisible2 ? "appear-from-bottom" : "invisible"
                       }`}
                     >
-                      {t("history.family.subtitle")}
+                      {t("history.family.title")}
                     </h2>
                   </div>
                   <div

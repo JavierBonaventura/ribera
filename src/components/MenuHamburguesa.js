@@ -430,13 +430,13 @@ const Home = () => {
             </div>
             <div className="text-[#f3eee3] text-sm flex gap-x-5 pt-10">
               <span
-                className="font-bold text-[#c4b27d] cursor-pointer tracking-widest"
+                className="font-bold hidden text-[#c4b27d] cursor-pointer tracking-widest"
                 onClick={() => changeLanguage("en")}
               >
                 english
               </span>
               <span
-                className="text-[#f3eee3] hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest"
+                className="text-[#f3eee3] hidden hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest"
                 onClick={() => changeLanguage("es")}
               >
                 spanish
