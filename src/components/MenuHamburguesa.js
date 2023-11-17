@@ -13,9 +13,11 @@ import { useTranslation } from "react-i18next";
 const Home = () => {
   // codigo para traducciones
   const { t, i18n } = useTranslation();
+  const [activeButton, setActiveButton] = useState("en");
   const changeLanguage = (newLanguage) => {
     i18n.changeLanguage(newLanguage);
     console.log("Idioma actual:", i18n.language);
+    setActiveButton(newLanguage);
   };
 
   const location = useLocation();
@@ -430,13 +432,21 @@ const Home = () => {
             </div>
             <div className="text-[#f3eee3] text-sm flex gap-x-5 pt-10">
               <span
-                className="font-bold hidden text-[#c4b27d] cursor-pointer tracking-widest"
+                className={`hover:text-[#c4b27d]   cursor-pointer transition ease-in-out duration-300 tracking-widest ${
+                  activeButton === "en"
+                    ? "text-[#c4b27d] font-bold "
+                    : "text-[#F3EEE3]"
+                }`}
                 onClick={() => changeLanguage("en")}
               >
                 english
               </span>
               <span
-                className="text-[#f3eee3] hidden hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest"
+                className={`hover:text-[#c4b27d]  cursor-pointer transition ease-in-out duration-300 tracking-widest ${
+                  activeButton === "es"
+                    ? "text-[#c4b27d] font-bold"
+                    : "text-[#F3EEE3]"
+                }`}
                 onClick={() => changeLanguage("es")}
               >
                 spanish

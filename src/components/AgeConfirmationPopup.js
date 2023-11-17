@@ -1,9 +1,10 @@
 import React from "react";
-import logoDesktop from "../src/images/logo-home-mob.png";
-import bgPopup from "../src/images/bg-popup.png";
-import { Link } from "react-router-dom";
+import logoDesktop from "../../src/images/logo-home-mob.png";
+import bgPopup from "../../src/images/bg-popup.png";
+import { useTranslation } from "react-i18next";
 
 function AgeConfirmationPopup({ onAgeConfirmed }) {
+  const { t, i18n } = useTranslation();
   const handleAgeConfirmed = (isAdult) => {
     onAgeConfirmed(isAdult);
   };
@@ -45,24 +46,25 @@ function AgeConfirmationPopup({ onAgeConfirmed }) {
             className="text-[#c4b27d] text-center text-xl  md:text-3xl tracking-wide"
             style={playfairFontItalic}
           >
-            Welcome
+            {t("popup.title")}
           </h1>
           <p
             className="text-[#F3EEE3] text-center text-lg md:text-2xl  tracking-widest leading-7"
             style={playfairFontExtraBold}
-          >
-            Are you of legal drinking age <br /> in your country?
-          </p>
+            dangerouslySetInnerHTML={{
+              __html: t("popup.text"),
+            }}
+          ></p>
           <div
             className="text-[#F3EEE3] flex justify-center gap-x-5 text-base md:text-xl  "
             style={playfairFontRegular}
           >
             <div className="bg-transparent py-0.5 px-4 border border-[#c4b27d] hover:bg-[#c4b27d] transition ease-in-out duration-300">
               <button
-                className="tracking-widest"
+                className="tracking-widest  uppercase"
                 onClick={() => handleAgeConfirmed(true)}
               >
-                YES
+                {t("popup.btnOk")}
               </button>
             </div>
             <div className="bg-transparent py-0.5 px-5 border border-[#c4b27d] hover:bg-[#c4b27d] transition ease-in-out duration-300">

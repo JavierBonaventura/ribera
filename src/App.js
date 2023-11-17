@@ -14,6 +14,7 @@ import Menu from "./components/Menu";
 import MenuDesktop from "./components/MenuDesktop";
 import MenuHamburguesa from "./components/MenuHamburguesa";
 import MenuHamburguesaDesktop from "./components/MenuHamburguesaDesktop";
+import AgeConfirmationPopup from "./components/AgeConfirmationPopup";
 import "./App.css";
 
 //PAGES//
@@ -38,7 +39,6 @@ import RiberaClasico from "./pages/WinesWorld/RiberaClasico";
 import RiberaEspecial from "./pages/WinesWorld/RiberaEspecial";
 import Press from "./pages/Press/Press";
 import FormularioContacto from "./pages/Contact/FormularioContacto";
-import AgeConfirmationPopup from "./AgeConfirmationPopup";
 
 function App() {
   const [showAgeConfirmation, setShowAgeConfirmation] = useState(true);

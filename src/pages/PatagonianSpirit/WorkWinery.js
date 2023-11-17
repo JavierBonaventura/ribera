@@ -522,7 +522,7 @@ const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
                         We believe in the magic of crafting exceptional wines
                         through the alchemy of blending. Our passion for the art
                         of winemaking leads us to explore two unique approaches:
-                        co-fermentations and the traditional blending technique.{" "}
+                        co-fermentations and the traditional blending technique.
                         <br />
                         <br />
                         We prefer to work with co-fermentations, a technique we

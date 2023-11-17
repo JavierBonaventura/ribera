@@ -550,7 +550,7 @@ const MenuHamburguesaDesktop = () => {
                         {/* Span para "English" */}
                         <span
                           id="en"
-                          className={`hover:text-[#c4b27d] hidden  cursor-pointer transition ease-in-out duration-300 tracking-widest ${
+                          className={`hover:text-[#c4b27d]   cursor-pointer transition ease-in-out duration-300 tracking-widest ${
                             activeButton === "en"
                               ? "text-[#c4b27d] font-bold "
                               : "text-[#F3EEE3]"
@@ -563,7 +563,7 @@ const MenuHamburguesaDesktop = () => {
                         {/* Span para "Spanish" */}
                         <span
                           id="es"
-                          className={`hover:text-[#c4b27d] hidden cursor-pointer transition ease-in-out duration-300 tracking-widest ${
+                          className={`hover:text-[#c4b27d]  cursor-pointer transition ease-in-out duration-300 tracking-widest ${
                             activeButton === "es"
                               ? "text-[#c4b27d] font-bold"
                               : "text-[#F3EEE3]"

@@ -22,6 +22,11 @@ i18n.use(initReactI18next).init({
           footerOptionB: "Our distribution office",
           footerOptionC: "Press",
         },
+        popup: {
+          title: "Welcome",
+          text: "Are you of legal drinking age <br /> in your country?",
+          btnOk: "Yes",
+        },
         contact: {
           title: "Contact",
           titleA: "Our offices",
@@ -93,41 +98,67 @@ i18n.use(initReactI18next).init({
           workVineyard: {
             title: "Work in the Vineyard",
             titleSlider1: "-",
-            paragraphSlider1: "",
+            paragraphSlider1:
+              "In our work, all the naturally organic components that the vineyard allows us to take and preserve come into play. The Patagonian wind is a key factor, and the constant breeze along with low ambient humidity conditions combine as a natural mechanism for disease control. The entire vineyard surface features biological corridors that generate a free and natural circulation of permanent flora and fauna, benefiting further from the isolated estate situation without other surrounding crops.",
+            paragraphSlider1Mobile:
+              "In our work, all the naturally organic components that the vineyard allows us to take and preserve come into play. The Patagonian wind is a key factor, and the constant breeze along with low ambient humidity conditions combine as a natural mechanism for disease control. The entire vineyard surface features biological corridors that generate a free and natural circulation of permanent flora and fauna, benefiting further from the isolated estate situation without other surrounding crops. Our philosophy revolves around nurturing plants to self-regulate throughout their growth cycle, intervening as little as possible and providing support so they can make decisions autonomously. Our role is to guide them towards their maximum expression and quality.",
             titleSlider2: "Pruning",
-            paragraphSlider2: "",
+            paragraphSlider2:
+              "We embrace traditional vineyard management techniques, such as Guyot pruning, using bilateral cane. This pruning method enables the plants to regulate their resources to achieve a better balance between root growth and fruit development.",
             titleSlider3: "Tying",
-            paragraphSlider3: "",
+            paragraphSlider3:
+              "In this process, we use plant-based and biodegradable materials in an effort to respect the environment as much as possible.",
             titleSlider4: "Topping",
-            paragraphSlider4: "",
+            paragraphSlider4:
+              "Controlled growth management favors minimal intervention, leading to better plant balance and reduced use of human and mechanical resources.",
             titleSlider5: "Harvest",
-            paragraphSlider5: "",
+            paragraphSlider5:
+              "Harvesting in our vineyard is a meticulous process carried out manually and in several stages. The unique characteristics of each subsection within our five-hectare estate, with different grape varieties and maturation cycles, require harvesting at distinct times.",
             titleSlider6: "Weeds",
-            paragraphSlider61: "",
+            paragraphSlider6:
+              "We implement traditional control methods, avoiding the use of herbicides. Between rows, we prioritize the development of our pastures and the natural flora of the environment.",
             titleSlider7: "Ancient Techniques",
-            paragraphSlider7: "",
+            paragraphSlider7:
+              "Maintaining traditional work methods helps us never lose sight of our connection with the land, which defines us as farmers. In addition to using tractors and other machinery to be efficient in specific tasks, working with animals like our Criollo horses, an Argentine breed, is a form of respect and care for nature, seeking to be rewarded with the finest flavor.",
           },
           workWinery: {
             title: "Work in the Winery",
             titleSlider1: "Fermentation",
-            paragraphSlider1: "",
+            paragraphSlider1:
+              "Fermentation takes place in open-top concrete pools, each with a capacity of about 2000 kilograms, where we work very small and select batches from the vineyard. During the process, the tasks performed are respectful and careful, with minimal intervention, aimed at achieving spontaneous fermentation with vineyard-specific or certified organic yeasts. We do not use additives or clarifiers. We follow traditional methods such as manual pressing and délestage, especially with our Malbec grapes, and gentle remontage during the final stages. Maceration times are short, between 12 and 13 days, because we believe that longer times are counterproductive for expressing the freshness of our terroir.",
+            paragraphSlider1Mobile:
+              "Fermentation takes place in open-top concrete pools, each with a capacity of about 2000 kilograms, where we work very small and select batches from the vineyard. <br /><br /> During the process, the tasks performed are respectful and careful, with minimal intervention, aimed at achieving spontaneous fermentation with vineyard-specific or certified organic yeasts. We do not use additives or clarifiers. <br /> <br /> We follow traditional methods such as manual pressing and délestage, especially with our Malbec grapes, and gentle remontage during the final stages. <br /> <br /> Maceration times are short, between 12 and 13 days, because we believe that longer times are counterproductive for expressing the freshness of our terroir.",
             titleSlider2: "Aging",
-            paragraphSlider2: "",
+            paragraphSlider2:
+              "Each batch or small grape vinification will dictate whether aging will be entirely done in barrels or if a portion will be done in concrete tanks or stainless steel vessels. There are wines we want to preserve the fruit in more, and others where we believe adding complexity with wood is necessary. Generally, 70 percent is in used barrels, 100 percent French oak, as we seek a delicate balance and to avoid overwhelming the wines with wood.",
             titleSlider3: "Blending",
-            paragraphSlider3: "",
+            paragraphSlider3:
+              "We believe in the magic of crafting exceptional wines through the alchemy of blending. Our passion for the art of winemaking leads us to explore two unique approaches: co-fermentations and the traditional blending technique. We prefer to work with co-fermentations, a technique we find more enriching as it captures the very essence of our terroir. From the moment different grape varieties and parcels enter our cellar, a shared journey begins that spans the entire process. Ultimately, our goal is to merge the past and the future in every bottle we present.",
+            paragraphSlider3Mobile:
+              "We believe in the magic of crafting exceptional wines through the alchemy of blending. Our passion for the art of winemaking leads us to explore two unique approaches: co-fermentations and the traditional blending technique. <br /><br /> We prefer to work with co-fermentations, a technique we find more enriching as it captures the very essence of our terroir. From the moment different grape varieties and parcels enter our cellar, a shared journey begins that spans the entire process. Ultimately, our goal is to merge the past and the future in every bottle we present.",
             titleSlider4: "Bottling and Labeling",
-            paragraphSlider4: "",
-            titleSlider5: "",
-            paragraphSlider5: "Cellaring",
+            paragraphSlider4:
+              "We are highly respectful of the bottling and labeling process to adhere to the highest standards. During bottling, we carry out filtration to protect the wine without affecting it significantly, and we maintain strict control during bottling, ensuring safety and quality standards so that the wine, once bottled, evolves and expresses itself at its best.",
+
+            titleSlider5: "Cellaring",
+            paragraphSlider5:
+              "We believe it's crucial for the wines to undergo a period of bottle aging before reaching the market. Our wines have shown us that they improve significantly with the passing of the years, and this aging period serves as a library and study area. We continuously taste and compare the stored vintages with new ones, learning how our wines evolve based on our practices in each harvest. The evolution is excellent: our wines greatly improve over time in the bottle, which is why aging is so important for us.",
           },
           lifeEstate: {
             title: "Life on the Estate",
             titleSlider1: "The house at the Winery",
-            paragraphSlider1: "",
+            paragraphSlider1:
+              "Countess Noemi Marone Cinzano discovered this unparalleled place and laid the foundation for what is now Bodega Ribera del Cuarzo. As in all Italian estates, she built a house by the winery. With Patagonian style and appealing architecture, a small garden overlooks the valley that flows into the river. The house is where we rest after a day's work and where we gather with family to enjoy and celebrate. It's also where we think, plan, and decide alongside those who help us carry out production. We share meals, as it has become our home.",
             titleSlider2: "The River",
-            paragraphSlider2: "",
+            paragraphSlider2:
+              "The Río Negro is the largest river in Patagonia. The Limay and Neuquén rivers collect water and minerals from mountain melt before flowing towards the center and east of the country, ultimately merging to form the Río Negro. This river flows into the sea south of Buenos Aires Province, in a small town called El Cóndor. It meanders between two imposing barda walls, one to the north and another to the south, formed over millions of years. In 1860, Estanislao Ceballos described them as river terraces, and they provide invaluable contributions of calcium carbonate, stone, quartz, and ashes. Today, the river runs through this valley, a valley nestled between bardas.",
+            paragraphSlider2Mobile:
+              "The Río Negro is the largest river in Patagonia. The Limay and Neuquén rivers collect water and minerals from mountain melt before flowing towards the center and east of the country, ultimately merging to form the Río Negro. <br /> <br /> This river flows into the sea south of Buenos Aires Province, in a small town called El Cóndor. It meanders between two imposing barda walls, one to the north and another to the south, formed over millions of years. In 1860, Estanislao Ceballos described them as river terraces, and they provide invaluable contributions of calcium carbonate, stone, quartz, and ashes. Today, the river runs through this valley, a valley nestled between <i>bardas</i>.",
             titleSlider3: "The Horses",
-            paragraphSlider3: "",
+            paragraphSlider3:
+              "Maintaining traditional working methods helps us never lose sight of the connection with the land, a connection that defines us as farmers. On the estate, we have Criollo horses, an Argentine breed. In addition to using tractors and machinery for efficiency in specific tasks, working with animals is a form of respect and care for nature. It seeks to be rewarded with the best flavor. Furthermore, the horses play a role in fertilization, contributing to the compost we produce on the estate. But horses also embody a way of life: Living with horses slows things down, allowing us to decelerate and connect with nature, to explore the land at a more measured and profound pace.",
+            paragraphSlider3Mobile:
+              "Maintaining traditional working methods helps us never lose sight of the connection with the land, a connection that defines us as farmers. On the estate, we have Criollo horses, an Argentine breed. In addition to using tractors and machinery for efficiency in specific tasks, working with animals is a form of respect and care for nature. It seeks to be rewarded with the best flavor.<br /> <br /> Furthermore, the horses play a role in fertilization, contributing to the compost we produce on the estate. But horses also embody a way of life: Living with horses slows things down, allowing us to decelerate and connect with nature, to explore the land at a more measured and profound pace.",
           },
           waterLife: {
             title: "Water of Life",
@@ -202,6 +233,11 @@ i18n.use(initReactI18next).init({
           footerOptionB: "Oficina de distribución",
           footerOptionC: "Prensa",
         },
+        popup: {
+          title: "Bienvenido",
+          text: "¿Es usted mayor de edad para beber en su país?",
+          btnOk: "Si",
+        },
         contact: {
           title: "Contacto",
           titleA: "Nuestras oficinas",
@@ -264,6 +300,7 @@ i18n.use(initReactI18next).init({
             title: "-",
             titleSlider1: "-",
             paragraphSlider1: "-",
+            paragraphSlider1Mobile: "-",
             titleSlider2: "-",
             paragraphSlider2: "-",
             titleSlider3: "-",
@@ -281,10 +318,12 @@ i18n.use(initReactI18next).init({
             title: "-",
             titleSlider1: "-",
             paragraphSlider1: "-",
+            paragraphSlider1Mobile: "-",
             titleSlider2: "-",
             paragraphSlider2: "-",
             titleSlider3: "-",
             paragraphSlider3: "-",
+            paragraphSlider3Mobile: "-",
             titleSlider4: "-",
             paragraphSlider4: "-",
             titleSlider5: "-",
