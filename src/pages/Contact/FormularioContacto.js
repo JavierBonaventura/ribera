@@ -48,7 +48,7 @@ const FormularioContacto = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://backend-ribera.vercel.app/enviar-correo", {
+      const response = await axios.post("https://backend-ribera.vercel.app/enviar-correo", {
         // const response = await axios.post("http://localhost:5000/api/enviar-correo", {
 
       nombre,
@@ -69,7 +69,7 @@ const FormularioContacto = () => {
 
       // Maneja el estado según la respuesta del backend
     } catch (error) {
-      console.error("Error al enviar la solicitud: version1", error);
+      console.error("Error al enviar la solicitud: version2", error);
       // Maneja el error si la solicitud no se puede completar
     }
   };
