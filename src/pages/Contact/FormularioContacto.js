@@ -69,7 +69,7 @@ const FormularioContacto = () => {
 
       // Maneja el estado según la respuesta del backend
     } catch (error) {
-      console.error("Error al enviar la solicitud:", error);
+      console.error("Error al enviar la solicitud: version1", error);
       // Maneja el error si la solicitud no se puede completar
     }
   };
