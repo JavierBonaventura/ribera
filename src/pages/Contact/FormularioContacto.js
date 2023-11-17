@@ -48,8 +48,10 @@ const FormularioContacto = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("https:/backend-ribera.vercel.app/enviar-correo", {
-        nombre,
+      const response = await axios.post("https://backend-ribera.vercel.app/api/enviar-correo", {
+        // const response = await axios.post("http://localhost:5000/api/enviar-correo", {
+
+      nombre,
         email,
         consulta,
       });
