@@ -1,14 +1,22 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../App.css";
-import logo from "../images/logo.svg";
-import hambur from "../images/menu-hambur.png";
-import iconIg from "../images/icon-ig-form.png";
+import "../../App.css";
+import logo from "../../images/logo.svg";
+import hambur from "../../images/menu-hambur.png";
+import iconIg from "../../images/icon-ig-form.png";
 import { useLocation } from "react-router-dom";
 import { Transition, animated } from "@react-spring/web";
-import portada from "../images/background-contact.jpg";
+import portada from "../../images/background-contact-1.png";
+import emailjs from "emailjs-com";
+import { useTranslation } from "react-i18next";
 
 const FormularioContacto = () => {
+  const { t, i18n } = useTranslation();
+  // Incio variables paraa manejar el estado del envio del mail
+  const [isEmailSent, setIsEmailSent] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+  // Fin variables paraa manejar el estado del envio del mail
+
   const location = useLocation();
 
   const playfairFontRegular = {
@@ -23,23 +31,52 @@ const FormularioContacto = () => {
     fontStyle: "normal",
   };
 
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+    fontSize: "16px",
+  };
+
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
   const [email, setEmail] = useState("");
   const [pais, setPais] = useState("");
   const [consulta, setConsulta] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Aquí puedes realizar cualquier acción con los datos del formulario, como enviarlos a un servidor
-    console.log({
-      nombre,
-      apellido,
-      email,
-      pais,
-      consulta,
-    });
+    // Inicio configuracion del envio del Meil - Solo para EmailJS
+    try {
+      const templateParams = {
+        from_name: nombre,
+        to_name: "Recipient Name",
+        message: consulta,
+        reply_to: email,
+      };
+
+      await emailjs.send(
+        "service_1x02jcj",
+        "template_uirwv2e",
+        templateParams,
+        "fbb72gDufjJSqmZn9"
+      );
+
+      console.log("Correo enviado exitosamente");
+      setIsEmailSent(true);
+      setShowPopup(true);
+      // Limpia los campos del formulario
+      setNombre("");
+      setApellido("");
+      setEmail("");
+      setPais("");
+      setConsulta("");
+    } catch (error) {
+      console.error("Error al enviar el correo:", error);
+    }
+    // Inicio configuracion del envio del Meil - Solo para EmailJS
   };
+
   return (
     <Transition
       items={location}
@@ -74,7 +111,7 @@ const FormularioContacto = () => {
               <img
                 src={portada}
                 alt=""
-                className=" mx-auto object-cover w-3/4"
+                className="mx-auto object-cover w-3/4"
               />
             </div>
             {/*PORTADA DESK END*/}
@@ -87,7 +124,7 @@ const FormularioContacto = () => {
                   class="uppercase text-[#c4b27d] text-3xl tracking-wider text-center"
                   style={playfairFontBold}
                 >
-                  Contact
+                  {t("contact.title")}
                 </h1>
               </div>
               {/*TITULAR DESK START*/}
@@ -100,7 +137,7 @@ const FormularioContacto = () => {
                     class="uppercase text-[#c4b27d] text-xl tracking-wider text-center"
                     style={playfairFontBold}
                   >
-                    Contact
+                    {t("contact.title")}
                   </h1>
                 </div>
                 {/*TITULAR MOB END*/}
@@ -112,13 +149,13 @@ const FormularioContacto = () => {
                     className="pt-6 pb-8 mb-4 md:w-full md:py-0 md:mt-5"
                     style={playfairFontRegular}
                   >
-                    <div className="mb-4 flex">
-                      <div className="mr-2 ">
+                    <div className="mb-4 flex gap-x-10">
+                      <div className=" w-full ">
                         <label
                           className="block text-[#F4EDE2] text-sm md:text-xl "
                           htmlFor="nombre"
                         >
-                          Name
+                          {t("contact.inputFormA")}
                         </label>
                         <input
                           className="text-sm md:text-base bg-transparent md:py-1 border-b border-b-white rounded-none border-t-0 border-l-0 border-r-0 w-full text-[#F4EDE2] leading-tight"
@@ -129,12 +166,12 @@ const FormularioContacto = () => {
                           required
                         />
                       </div>
-                      <div className="">
+                      <div className=" w-full">
                         <label
                           className="block text-[#F4EDE2] text-sm md:text-xl"
                           htmlFor="apellido"
                         >
-                          Last name
+                          {t("contact.inputFormB")}
                         </label>
                         <input
                           className="text-sm md:text-base bg-transparent  md:py-1 border-b border-b-white rounded-none border-t-0 border-l-0 border-r-0  w-full text-[#F4EDE2] leading-tight"
@@ -151,7 +188,7 @@ const FormularioContacto = () => {
                         className="block text-[#F4EDE2] text-sm md:text-xl"
                         htmlFor="email"
                       >
-                        E-mail
+                        {t("contact.inputFormC")}
                       </label>
                       <input
                         className="text-sm md:text-base bg-transparent md:py-1 border-b border-b-white rounded-none border-t-0 border-l-0 border-r-0 w-full text-[#F4EDE2] leading-tight"
@@ -167,7 +204,7 @@ const FormularioContacto = () => {
                         className="block text-[#F4EDE2] text-sm md:text-xl"
                         htmlFor="pais"
                       >
-                        Country
+                        {t("contact.inputFormD")}
                       </label>
                       <input
                         className="text-sm md:text-base bg-transparent md:py-1 border-b border-b-white rounded-none border-t-0 border-l-0 border-r-0  w-full text-[#F4EDE2] leading-tight"
@@ -183,7 +220,7 @@ const FormularioContacto = () => {
                         className="block text-[#F4EDE2] text-sm md:text-xl mb-2"
                         htmlFor="consulta"
                       >
-                        Message
+                        {t("contact.inputFormE")}
                       </label>
                       <textarea
                         className="text-sm md:text-base border-b border-b-white rounded-none border-t-0 border-l-0 border-r-0 bg-transparent  w-full pb-14  text-[#F4EDE2] leading-tight"
@@ -195,12 +232,40 @@ const FormularioContacto = () => {
                     </div>
                     <div className="flex items-center justify-start">
                       <button
-                        className="bg-[#C4B27D] text-[#F2ECE1] text-sm md:text-xl  hover:bg-[#F2ECE1] hover:text-[#C4B27D] transition ease-in-out duration-300 rounded-md  py-2 px-8 "
+                        className="hover:bg-[#C4B27D] hover:text-[#F3EEE3] border border-[#C4B27D] text-sm md:text-xl text-[#C4B27D] transition ease-in-out duration-300 rounded-md  py-2 px-8 "
                         type="submit"
+                        onClick={handleSubmit}
                       >
-                        Send
+                        {t("contact.btnForm")}
                       </button>
                     </div>
+                    {/* Inicio Muestra pop up y borra el contenido del formulario */}
+                    {showPopup && (
+                      <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-50">
+                        <div
+                          className="bg-[#F3EEE3] p-4 rounded-md text-center w-64"
+                          style={robotoFontRegular}
+                        >
+                          {isEmailSent ? (
+                            <p className="text-[#000000]">
+                              Email sent successfully
+                            </p>
+                          ) : (
+                            <p className="text-red-600">
+                              There was an error sending the email
+                            </p>
+                          )}
+                          <div className="mt-4"></div>
+                          <button
+                            className="mx-auto p-1 bg-[#C4B27D] text-[#F3EEE3] text-sm md:text-base hover:bg-[#F3EEE3] hover:text-[#C4B27D] transition ease-in-out duration-300 rounded-md border border-[#C4B27D] "
+                            onClick={() => setShowPopup(false)}
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    )}
+                    {/* fin Muestra pop up y borra el contenido del formulario */}
                   </form>
                 </div>
                 {/*INPUTS END*/}
@@ -212,7 +277,7 @@ const FormularioContacto = () => {
                 >
                   <div className="flex flex-col gap-y-2  ">
                     <h2 className="text-lg text-[#c4b27d] md:text-3xl text-center md:text-left">
-                      Our offices
+                      {t("contact.titleA")}
                     </h2>
                     <a
                       href="https://www.google.com/maps/place/Ortiz+de+Ocampo+3302,+C1425+CABA/@-34.5750298,-58.4035604,17z/data=!3m1!4b1!4m6!3m5!1s0x95bcb5d7344eecc7:0x17bb52293d552009!8m2!3d-34.5750342!4d-58.4009855!16s%2Fg%2F11qpp9y2jx?hl=es&entry=ttu"
@@ -227,7 +292,7 @@ const FormularioContacto = () => {
                   </div>
                   <div className="flex flex-col gap-y-2">
                     <h2 className="text-lg text-[#c4b27d] md:text-3xl text-center md:text-left">
-                      Our winery
+                      {t("contact.titleB")}
                     </h2>
                     <a
                       href="https://www.google.com.ar/maps/place/39%C2%B011'17.0%22S+66%C2%B052'26.0%22W/@-39.1880556,-66.8760829,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x7cfe3f53aaf18eb2!8m2!3d-39.1880556!4d-66.8738889"
@@ -235,7 +300,7 @@ const FormularioContacto = () => {
                       target="_blank"
                     >
                       <h3 className="text-sm md:text-base text-center md:text-left">
-                        Route Prov.Nro 7 KM 12
+                        Ruta Prov.Nro 7 KM 12
                         <br />
                         Valle Azul, El Cuy, Río Negro.
                         <br className="hidden md:block" /> CP: 8336
@@ -244,7 +309,7 @@ const FormularioContacto = () => {
                   </div>
                   <div className="">
                     <h2 className="text-lg text-[#c4b27d] uppercase md:text-3xl text-center md:text-left">
-                      ¡Follow us!
+                      {t("contact.titleC")}
                     </h2>
                     <a
                       href="https://www.instagram.com/riberadelcuarzo/"
@@ -253,7 +318,7 @@ const FormularioContacto = () => {
                     >
                       <img src={iconIg} alt="" className="w-4" />
                       <h2 className="text-sm  md:text-base ">
-                        @riberadelcuarzo
+                        riberadelcuarzo
                       </h2>
                     </a>
                   </div>

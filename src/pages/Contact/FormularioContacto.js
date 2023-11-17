@@ -7,8 +7,8 @@ import iconIg from "../../images/icon-ig-form.png";
 import { useLocation } from "react-router-dom";
 import { Transition, animated } from "@react-spring/web";
 import portada from "../../images/background-contact-1.png";
-import emailjs from "emailjs-com";
 import { useTranslation } from "react-i18next";
+import axios from "axios";
 
 const FormularioContacto = () => {
   const { t, i18n } = useTranslation();
@@ -46,22 +46,15 @@ const FormularioContacto = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Inicio configuracion del envio del Meil - Solo para EmailJS
+
     try {
-      const templateParams = {
-        from_name: nombre,
-        to_name: "Recipient Name",
-        message: consulta,
-        reply_to: email,
-      };
+      const response = await axios.post("https:/backend-ribera.vercel.app/enviar-correo", {
+        nombre,
+        email,
+        consulta,
+      });
 
-      await emailjs.send(
-        "service_1x02jcj",
-        "template_uirwv2e",
-        templateParams,
-        "fbb72gDufjJSqmZn9"
-      );
-
+      console.log(response.data);      
       console.log("Correo enviado exitosamente");
       setIsEmailSent(true);
       setShowPopup(true);
@@ -71,10 +64,12 @@ const FormularioContacto = () => {
       setEmail("");
       setPais("");
       setConsulta("");
+
+      // Maneja el estado según la respuesta del backend
     } catch (error) {
-      console.error("Error al enviar el correo:", error);
+      console.error("Error al enviar la solicitud:", error);
+      // Maneja el error si la solicitud no se puede completar
     }
-    // Inicio configuracion del envio del Meil - Solo para EmailJS
   };
 
   return (
