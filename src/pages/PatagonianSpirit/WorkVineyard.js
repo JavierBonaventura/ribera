@@ -15,8 +15,10 @@ import iconIg from "../../images/icon-ig.png";
 import "../../App.css";
 import { useLocation } from "react-router-dom";
 import { Transition, animated } from "@react-spring/web";
+import { useTranslation } from "react-i18next";
 
 function Header() {
+  const { t, i18n } = useTranslation();
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
     fontWeight: "normal",
@@ -52,13 +54,13 @@ function Header() {
               style={playfairFontItalic}
               className="italic text-xs text-[#5f5f5e] text-center tracking-widest"
             >
-              <i style={playfairFontItalic}>Patagonian Spirit</i>
+              <i style={playfairFontItalic}>{t("patagonian.title")}</i>
             </h1>
             <h2
               style={playfairFontBlack}
               className="text-base text-[#C4B27D] text-center tracking-wider uppercase"
             >
-              WORK IN THE VINEYARD
+              {t("patagonian.workVineyard.title")}
             </h2>
           </div>
         </div>
@@ -163,6 +165,7 @@ const WorkVineyard = () => {
 };
 
 const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
+  const { t, i18n } = useTranslation();
   const location = useLocation();
 
   const playfairFontRegular = {
@@ -257,20 +260,7 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
                         class="text-[#000000] text-xs tracking-wider text-justify"
                         style={playfairFontRegular}
                       >
-                        In our work, all the naturally organic components that
-                        the vineyard allows us to take and preserve come into
-                        play. The Patagonian wind is a key factor, and the
-                        constant breeze along with low ambient humidity
-                        conditions combine as a natural mechanism for disease
-                        control. The entire vineyard surface features biological
-                        corridors that generate a free and natural circulation
-                        of permanent flora and fauna, benefiting further from
-                        the isolated estate situation without other surrounding
-                        crops. Our philosophy revolves around nurturing plants
-                        to self-regulate throughout their growth cycle,
-                        intervening as little as possible and providing support
-                        so they can make decisions autonomously. Our role is to
-                        guide them towards their maximum expression and quality.
+                        {t("patagonian.workVineyard.paragraphSlider1Mobile")}
                       </p>
                     </div>
                   </div>
@@ -298,6 +288,7 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
 };
 
 const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
+  const { t, i18n } = useTranslation();
   const location = useLocation();
 
   const playfairFontRegular = {
@@ -390,19 +381,15 @@ const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
                     <div className="w-4/5 mx-auto">
                       <p
                         style={robotoFontRegular}
-                        className="decoration-black	text-[#C4B27D]  text-xs leading-6 pb-3 tracking-wide"
+                        className="decoration-black	text-[#C4B27D]  text-xs leading-6 pb-3 tracking-wide uppercase"
                       >
-                        PRUNING
+                        {t("patagonian.workVineyard.titleSlider2")}
                       </p>
                       <p
                         class="text-[#000000] text-xs tracking-wider text-justify"
                         style={playfairFontRegular}
                       >
-                        We embrace traditional vineyard management techniques,
-                        such as Guyot pruning, using bilateral cane. This
-                        pruning method enables the plants to regulate their
-                        resources to achieve a better balance between root
-                        growth and fruit development.
+                        {t("patagonian.workVineyard.paragraphSlider2")}
                       </p>
                     </div>
                   </div>
@@ -430,6 +417,7 @@ const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
 };
 
 const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
+  const { t, i18n } = useTranslation();
   const location = useLocation();
 
   const playfairFontRegular = {
@@ -523,17 +511,15 @@ const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
                     <div className="w-4/5 mx-auto">
                       <p
                         style={robotoFontRegular}
-                        className="decoration-black	text-[#C4B27D]  text-xs leading-6 pb-3 tracking-wide"
+                        className="decoration-black	text-[#C4B27D]  text-xs leading-6 pb-3 tracking-wide uppercase"
                       >
-                        TYING
+                        {t("patagonian.workVineyard.titleSlider3")}
                       </p>
                       <p
                         class="text-[#000000] text-xs tracking-wider text-justify"
                         style={playfairFontRegular}
                       >
-                        In this process, we use plant-based and biodegradable
-                        materials in an effort to respect the environment as
-                        much as possible.
+                        {t("patagonian.workVineyard.paragraphSlider3")}
                       </p>
                     </div>
                   </div>
@@ -561,6 +547,7 @@ const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
 };
 
 const Screen4 = ({ currentScreen, handleNext, handlePrev }) => {
+  const { t, i18n } = useTranslation();
   const location = useLocation();
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
@@ -649,17 +636,15 @@ const Screen4 = ({ currentScreen, handleNext, handlePrev }) => {
                     <div className="w-4/5 mx-auto">
                       <p
                         style={robotoFontRegular}
-                        className="decoration-black	text-[#C4B27D]  text-xs leading-6 pb-3 tracking-wide"
+                        className="decoration-black	text-[#C4B27D]  text-xs leading-6 pb-3 tracking-wide uppercase"
                       >
-                        TOPPING
+                        {t("patagonian.workVineyard.titleSlider4")}
                       </p>
                       <p
                         class="text-[#000000] text-xs tracking-wider text-justify"
                         style={playfairFontRegular}
                       >
-                        Controlled growth management favors minimal
-                        intervention, leading to better plant balance and
-                        reduced use of human and mechanical resources.
+                        {t("patagonian.workVineyard.paragraphSlider4")}
                       </p>
                     </div>
                   </div>
@@ -687,6 +672,7 @@ const Screen4 = ({ currentScreen, handleNext, handlePrev }) => {
 };
 
 const Screen5 = ({ currentScreen, handleNext, handlePrev }) => {
+  const { t, i18n } = useTranslation();
   const location = useLocation();
 
   const playfairFontRegular = {
@@ -776,19 +762,15 @@ const Screen5 = ({ currentScreen, handleNext, handlePrev }) => {
                     <div className="w-4/5 mx-auto">
                       <p
                         style={robotoFontRegular}
-                        className="decoration-black	text-[#C4B27D]  text-xs leading-6 pb-3 tracking-wide"
+                        className="decoration-black	text-[#C4B27D]  text-xs leading-6 pb-3 tracking-wide uppercase"
                       >
-                        HARVEST
+                        {t("patagonian.workVineyard.titleSlider5")}
                       </p>
                       <p
                         class="text-[#000000] text-xs tracking-wider text-justify"
                         style={playfairFontRegular}
                       >
-                        Harvesting in our vineyard is a meticulous process
-                        carried out manually and in several stages. The unique
-                        characteristics of each subsection within our
-                        five-hectare estate, with different grape varieties and
-                        maturation cycles, require harvesting at distinct times.
+                        {t("patagonian.workVineyard.paragraphSlider5")}
                       </p>
                     </div>
                   </div>
@@ -816,6 +798,7 @@ const Screen5 = ({ currentScreen, handleNext, handlePrev }) => {
 };
 
 const Screen6 = ({ currentScreen, handleNext, handlePrev }) => {
+  const { t, i18n } = useTranslation();
   const location = useLocation();
 
   const playfairFontRegular = {
@@ -905,18 +888,15 @@ const Screen6 = ({ currentScreen, handleNext, handlePrev }) => {
                     <div className="w-4/5 mx-auto">
                       <p
                         style={robotoFontRegular}
-                        className="decoration-black	text-[#C4B27D]  text-xs leading-6 pb-3 tracking-wide"
+                        className="decoration-black	text-[#C4B27D]  text-xs leading-6 pb-3 tracking-wide uppercase"
                       >
-                        WEEDS
+                        {t("patagonian.workVineyard.titleSlider6")}
                       </p>
                       <p
                         class="text-[#000000] text-xs tracking-wider text-justify"
                         style={playfairFontRegular}
                       >
-                        We implement traditional control methods, avoiding the
-                        use of herbicides. Between rows, we prioritize the
-                        development of our pastures and the natural flora of the
-                        environment.
+                        {t("patagonian.workVineyard.paragraphSlider6")}
                       </p>
                     </div>
                   </div>
@@ -944,6 +924,7 @@ const Screen6 = ({ currentScreen, handleNext, handlePrev }) => {
 };
 
 const Screen7 = ({ currentScreen, handleNext, handlePrev }) => {
+  const { t, i18n } = useTranslation();
   const location = useLocation();
 
   const playfairFontRegular = {
@@ -1033,21 +1014,15 @@ const Screen7 = ({ currentScreen, handleNext, handlePrev }) => {
                     <div className="w-4/5 mx-auto">
                       <p
                         style={robotoFontRegular}
-                        className="decoration-black	text-[#C4B27D]  text-xs leading-6 pb-3 tracking-wide"
+                        className="decoration-black	text-[#C4B27D]  text-xs leading-6 pb-3 tracking-wide uppercase"
                       >
-                        ANCIENT TECHNIQUES
+                        {t("patagonian.workVineyard.titleSlider7")}
                       </p>
                       <p
                         class="text-[#000000] text-xs tracking-wider text-justify"
                         style={playfairFontRegular}
                       >
-                        Maintaining traditional work methods helps us never lose
-                        sight of our connection with the land, which defines us
-                        as farmers. In addition to using tractors and other
-                        machinery to be efficient in specific tasks, working
-                        with animals like our Criollo horses, an Argentine
-                        breed, is a form of respect and care for nature, seeking
-                        to be rewarded with the finest flavor.
+                        {t("patagonian.workVineyard.paragraphSlider7")}
                       </p>
                     </div>
                   </div>

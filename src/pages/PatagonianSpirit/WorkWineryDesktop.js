@@ -7,8 +7,10 @@ import workVineyardSlide5 from "../../images/cellaring.jpg";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import hambur from "../../images/menu-hambur.png";
+import { useTranslation } from "react-i18next";
 
 const CarouselSlider = () => {
+  const { t, i18n } = useTranslation();
   // inicio codigo para retrasar la aparicion del titulo
   const [isVisible, setIsVisible] = useState(false);
 
@@ -77,22 +79,18 @@ const CarouselSlider = () => {
     workVineyardSlide5,
   ];
   const paragraphs = [
-    "Fermentation takes place in open-top concrete pools, each with a capacity of about 2000 kilograms, where we work very small and select batches from the vineyard. During the process, the tasks performed are respectful and careful, with minimal intervention, aimed at achieving spontaneous fermentation with vineyard-specific or certified organic yeasts. We do not use additives or clarifiers. We follow traditional methods such as manual pressing and délestage, especially with our Malbec grapes, and gentle remontage during the final stages. Maceration times are short, between 12 and 13 days, because we believe that longer times are counterproductive for expressing the freshness of our terroir.",
-
-    "Each batch or small grape vinification will dictate whether aging will be entirely done in barrels or if a portion will be done in concrete tanks or stainless steel vessels. There are wines we want to preserve the fruit in more, and others where we believe adding complexity with wood is necessary. Generally, 70 percent is in used barrels, 100 percent French oak, as we seek a delicate balance and to avoid overwhelming the wines with wood.",
-
-    "We believe in the magic of crafting exceptional wines through the alchemy of blending. Our passion for the art of winemaking leads us to explore two unique approaches: co-fermentations and the traditional blending technique. We prefer to work with co-fermentations, a technique we find more enriching as it captures the very essence of our terroir. From the moment different grape varieties and parcels enter our cellar, a shared journey begins that spans the entire process. Ultimately, our goal is to merge the past and the future in every bottle we present.",
-
-    "We are highly respectful of the bottling and labeling process to adhere to the highest standards. During bottling, we carry out filtration to protect the wine without affecting it significantly, and we maintain strict control during bottling, ensuring safety and quality standards so that the wine, once bottled, evolves and expresses itself at its best.",
-
-    "We believe it's crucial for the wines to undergo a period of bottle aging before reaching the market. Our wines have shown us that they improve significantly with the passing of the years, and this aging period serves as a library and study area. We continuously taste and compare the stored vintages with new ones, learning how our wines evolve based on our practices in each harvest. The evolution is excellent: our wines greatly improve over time in the bottle, which is why aging is so important for us.",
+    t("patagonian.workWinery.paragraphSlider1"),
+    t("patagonian.workWinery.paragraphSlider2"),
+    t("patagonian.workWinery.paragraphSlider3"),
+    t("patagonian.workWinery.paragraphSlider4"),
+    t("patagonian.workWinery.paragraphSlider5"),
   ];
   const title = [
-    "FERMENTATION",
-    "AGING",
-    "BLENDING",
-    "BOTTLING AND LABELING",
-    "CELLARING",
+    t("patagonian.workWinery.titleSlider1"),
+    t("patagonian.workWinery.titleSlider2"),
+    t("patagonian.workWinery.titleSlider3"),
+    t("patagonian.workWinery.titleSlider4"),
+    t("patagonian.workWinery.titleSlider5"),
   ];
 
   // codigo para cambiar de slide cuando se presionan los indicadores
@@ -282,18 +280,18 @@ const CarouselSlider = () => {
               class="text-[#ffffff] text-lg tracking-widest"
               style={playfairFontItalic}
             >
-              <i style={playfairFontItalic}>Patagonian Spirit</i>
+              <i style={playfairFontItalic}>{t("patagonian.title")}</i>
             </h1>
             <h2
               style={playfairFontBlack}
               className="text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
             >
-              WORK IN THE WINERY
+              {t("patagonian.workWinery.title")}
             </h2>
           </div>
         </div>
 
-        <div className="absolute bottom-10 left-0 right-0 flex justify-center z-50 ">
+        <div className="absolute bottom-10 left-0 right-0 flex justify-center z-50 uppercase">
           {RenderIndicators()}
         </div>
 

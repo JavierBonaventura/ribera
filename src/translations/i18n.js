@@ -127,7 +127,7 @@ i18n.use(initReactI18next).init({
             paragraphSlider1:
               "Fermentation takes place in open-top concrete pools, each with a capacity of about 2000 kilograms, where we work very small and select batches from the vineyard. During the process, the tasks performed are respectful and careful, with minimal intervention, aimed at achieving spontaneous fermentation with vineyard-specific or certified organic yeasts. We do not use additives or clarifiers. We follow traditional methods such as manual pressing and délestage, especially with our Malbec grapes, and gentle remontage during the final stages. Maceration times are short, between 12 and 13 days, because we believe that longer times are counterproductive for expressing the freshness of our terroir.",
             paragraphSlider1Mobile:
-              "Fermentation takes place in open-top concrete pools, each with a capacity of about 2000 kilograms, where we work very small and select batches from the vineyard. <br /><br /> During the process, the tasks performed are respectful and careful, with minimal intervention, aimed at achieving spontaneous fermentation with vineyard-specific or certified organic yeasts. We do not use additives or clarifiers. <br /> <br /> We follow traditional methods such as manual pressing and délestage, especially with our Malbec grapes, and gentle remontage during the final stages. <br /> <br /> Maceration times are short, between 12 and 13 days, because we believe that longer times are counterproductive for expressing the freshness of our terroir.",
+              "Fermentation takes place in open-top concrete pools, each with a capacity of about 2000 kilograms, where we work very small and select batches from the vineyard. <br /><br /> During the process, the tasks performed are respectful and careful, with minimal intervention, aimed at achieving spontaneous fermentation with vineyard-specific or certified organic yeasts. We do not use additives or clarifiers. <br><br> We follow traditional methods such as manual pressing and délestage, especially with our Malbec grapes, and gentle remontage during the final stages. <br /> <br /> Maceration times are short, between 12 and 13 days, because we believe that longer times are counterproductive for expressing the freshness of our terroir.",
             titleSlider2: "Aging",
             paragraphSlider2:
               "Each batch or small grape vinification will dictate whether aging will be entirely done in barrels or if a portion will be done in concrete tanks or stainless steel vessels. There are wines we want to preserve the fruit in more, and others where we believe adding complexity with wood is necessary. Generally, 70 percent is in used barrels, 100 percent French oak, as we seek a delicate balance and to avoid overwhelming the wines with wood.",
@@ -221,14 +221,14 @@ i18n.use(initReactI18next).init({
           optionA1: "Familia",
           optionA2: "Valle Azul, Patagonia",
           titleB: "Espíritu Patagónico",
-          optionB1: "El Viñedo araucana",
+          optionB1: "Viñedo araucana",
           optionB2: "Trabajo en la viña",
           optionB3: "Trabajo en bodega",
           optionB4: "La vida en la finca",
           optionB5: "Agua de vida",
           titleC: "Vinos",
-          optionC1: "En el mundo",
-          optionC2: "En Argentina",
+          optionC1: "En Argentina",
+          optionC2: "En el mundo",
           footerOptionA: "Contacto",
           footerOptionB: "Oficina de distribución",
           footerOptionC: "Prensa",
@@ -252,7 +252,7 @@ i18n.use(initReactI18next).init({
         },
         press: {
           title: "Prensa",
-          subtitle: "-",
+          subtitle: "MOMENTOS RIBERA - En las noticias",
           date: {
             2023: {
               5: "6 de Octubre de 2023",
@@ -273,112 +273,155 @@ i18n.use(initReactI18next).init({
           title: "Historia",
           family: {
             title: "Familia",
-            titleFirstParagraph: "-",
-            firstParagraphA: "-",
-            firstParagraphB: "-",
-            firstParagraphC: "-",
-            firstParagraphD: "-",
-            secondParagraph: "-",
+            titleFirstParagraph: "Raíces en la patagonia",
+            firstParagraphA:
+              "<strong>Nuestras raíces en la Patagonia y en la tradición vitivinícola se remontan a más de 150 años.</strong> Provenientes de dos orígenes muy diferentes, Bodega Ribera del Cuarzo parece ser la síntesis de esas dos poderosas fuerzas.",
+            firstParagraphB:
+              "“Por el lado de mi abuela, <strong>Melchor Concha y Toro fundó su bodega en 1883</strong>, solo unos años después de que José Menéndez hubiera comenzado su empresa de producción y envío de lana en la lejana Patagonia.",
+            firstParagraphC:
+              "Las historias de cómo estos dos individuos trabajaron arduamente para crear sus emprendimientos se entrelazan en las conversaciones de cena familiar a lo largo de las generaciones.",
+            firstParagraphD:
+              "He llegado a creer que la coincidencia de estos dos pioneros, que tuvieron éxito en el desarrollo de sus empresas a miles de millas de distancia, pero casi al mismo tiempo, fue la misteriosa fuerza que condujo a la creación de Bodega Ribera del Cuarzo.",
+            secondParagraph:
+              "La Patagonia fue el lugar donde pasé los veranos de mi infancia y al que viajé muchas veces en mi juventud. Siempre fue un lugar donde me sentí verdaderamente en casa. En medio de las colinas de cima plana azotadas por el viento, los enormes espacios abiertos y las gigantescas montañas donde las distancias se ven empequeñecidas por un cielo infinito, la idea de establecer una bodega poco a poco comenzó a materializarse.<br> <br> Mi carrera en el mundo del vino comenzó cuando, siendo muy joven, me uní a la bodega del Doctor Nicolás Catena y descubrí, a su lado, el fascinante mundo del vino, que se ha convertido en mi vida. Aprendí de él cada detalle sobre cómo cultivar las mejores uvas, cómo producir los mejores vinos y, sobre todo, cómo nunca renunciar en la búsqueda de la excelencia.",
             altImg: "-",
-            thirdParagraph: "-",
-            titleGallery: "Galeria",
+            thirdParagraph:
+              "Finalmente, llegó el día, el momento en el que pude fusionar mi amor por mi tierra patagónica con la pasión inquebrantable por el vino inculcada en mí desde la infancia. Esta oportunidad única, que perseguimos incansablemente cada día, se encarna en el nombre de Bodega Ribera del Cuarzo. Aquí nos esforzamos por elaborar los mejores vinos, honrando nuestro legado y expresando la esencia de nuestra amada tierra”",
+            titleGallery: "Galería",
           },
           valleAzul: {
             title: "Valle Azul",
-            firstParagraph: "-",
-            secondParagraph: "-",
+            firstParagraph:
+              "La historia de esta bodega comenzó en 2001, cuando la condesa italiana Noemí Marone Cinzano descubrió esta tierra lejana, plantó un viñedo de cinco hectáreas al pie de la barda (un paisaje muy patagónico que se refiere a la ladera acantilada compuesta por grano oscuro de roca volcánica, con abundante cuarzo, carbonato de calcio y caliza), y comenzó a producir vino al estilo Borgoña. La bodega se construyó justo al lado del viñedo, con pequeñas piscinas de concreto abiertas para la producción artesanal, empleando el pisoneo (“pigeage”).",
+            secondParagraph:
+              "Cuando probamos por primera vez la cosecha 2008, supimos que Noemí había descubierto un verdadero terroir. Durante diez años, exploramos todos los lugares cercanos en la Patagonia donde poder producir un sabor similar. Finalmente, llegamos a la conclusión de que las condiciones en Valle Azul eran perfectas.<br><br>Una extraordinaria coincidencia reunió a Menéndez con la condesa 10 años después de haber probado aquella primera copa memorable. Conmovida por la pasión y el compromiso de Felipe, la condesa le otorgó el privilegio de comenzar a producir vinos en esa misma tierra que ella había descubierto. En 2018, nació Bodega Ribera del Cuarzo.",
           },
         },
         patagonian: {
           title: "Espíritu Patagónico",
           araucanaVineyard: {
-            title: "-",
-            firstParagraph: "-",
-            secondParagraph: "-",
+            title: "Viñedo Araucana",
+            firstParagraph:
+              "El viñedo Araucana es mucho más que único. Ubicado en Ribera del Cuarzo, ningún otro viñedo en la Patagonia ni en el mundo, puede presumir de estar tan cerca de la barda o de disfrutar de tanta privacidad.<br><br>Los suelos de Araucana son predominantemente eólicos, moldeados meticulosamente a lo largo de incontables eras por la erosión del viento. Enriquecidos con ceniza y potasio volcánico y alto contenido de carbonato de calcio, poseen una composición química crucial y notablemente poco común, no solo para la Patagonia, sino para el mundo.",
+            secondParagraph:
+              "Añadiendo a su singularidad se encuentra la barda. La textura de la superficie se debe a una combinación de cuarzo y carbonato de calcio, conocida localmente como cemento indio. A medida que se erosiona e integra en el suelo, transfiere sus cualidades excepcionales a nuestras uvas.",
           },
           workVineyard: {
-            title: "-",
+            title: "Trabajo en la viña",
             titleSlider1: "-",
-            paragraphSlider1: "-",
-            paragraphSlider1Mobile: "-",
-            titleSlider2: "-",
-            paragraphSlider2: "-",
-            titleSlider3: "-",
-            paragraphSlider3: "-",
-            titleSlider4: "-",
-            paragraphSlider4: "-",
-            titleSlider5: "-",
-            paragraphSlider5: "-",
-            titleSlider6: "-",
-            paragraphSlider61: "-",
-            titleSlider7: "-",
-            paragraphSlider7: "-",
+            paragraphSlider1:
+              "En nuestro trabajo intervienen todos los componentes naturalmente orgánicos que el viñedo nos permite tomar y conservar. El viento de la Patagonia es un factor clave. La brisa constante junto con las condiciones de baja humedad ambiente se combinan como un mecanismo natural de control de enfermedades. Toda la superficie del viñedo tiene corredores biológicos que generan una circulación libre y natural de flora y fauna permanente, que también se beneficia por la situación de aislamiento de la finca, sin otros cultivos circundantes.",
+            paragraphSlider1Mobile:
+              "En nuestro trabajo intervienen todos los componentes naturalmente orgánicos que el viñedo nos permite tomar y conservar. El viento de la Patagonia es un factor clave. La brisa constante junto con las condiciones de baja humedad ambiente se combinan como un mecanismo natural de control de enfermedades. Toda la superficie del viñedo tiene corredores biológicos que generan una circulación libre y natural de flora y fauna permanente, que también se beneficia por la situación de aislamiento de la finca, sin otros cultivos circundantes. ",
+            titleSlider2: "Poda",
+            paragraphSlider2:
+              "Abrazamos técnicas tradicionales de manejo de viñedos, como la poda Guyot, a pitón y cargador, que facilita la autorregulación de las plantas en su crecimiento. Este sistema les permite regular sus recursos para lograr un mejor equilibrio raíz-crecimiento-fruta.",
+            titleSlider3: "Atada",
+            paragraphSlider3:
+              "En este proceso utilizamos materiales vegetales y biodegradables en un esfuerzo por respetar el medio ambiente tanto como sea posible.",
+            titleSlider4: "Despampanada",
+            paragraphSlider4:
+              "El manejo controlado del crecimiento favorece la intervención mínima, impacta en un mayor equilibrio de las plantas, y en un menor uso de recursos humanos y mecánicos.",
+            titleSlider5: "Cosecha",
+            paragraphSlider5:
+              "La cosecha en nuestro viñedo es un proceso meticuloso que realizamos en forma manual y en varias etapas. Las características únicas de cada subsector dentro de nuestra finca de cinco hectáreas, con diferentes variedades y ciclos de maduración de las uvas, requieren ser cosechados en momentos distintos.",
+            titleSlider6: "Malezas",
+            paragraphSlider61:
+              "Implementamos métodos tradicionales de control evitando el uso de herbicidas y, entre hileras, priorizamos el desarrollo de nuestras pasturas y la flora natural del monte.",
+            titleSlider7: "Técnicas antiguas",
+            paragraphSlider7:
+              "Mantener los métodos de trabajo tradicionales nos ayuda a no perder nunca de vista la conexión con la tierra, que nos define, ya que somos agricultores. Además de utilizar tractores y otras máquinas para ser eficientes en determinadas tareas, trabajar con animales como nuestros caballos criollos, la raza argentina, es una forma de respeto y de cuidado a la naturaleza, buscando que nos premie con el mejor sabor. ",
           },
           workWinery: {
-            title: "-",
-            titleSlider1: "-",
-            paragraphSlider1: "-",
-            paragraphSlider1Mobile: "-",
-            titleSlider2: "-",
-            paragraphSlider2: "-",
-            titleSlider3: "-",
-            paragraphSlider3: "-",
-            paragraphSlider3Mobile: "-",
-            titleSlider4: "-",
-            paragraphSlider4: "-",
-            titleSlider5: "-",
-            paragraphSlider5: "-",
+            title: "Trabajo en bodega",
+            titleSlider1: "Fermentación",
+            paragraphSlider1:
+              "La fermentación se realiza en vasijas de hormigón abiertas en la parte superior, de unos 2000 kilos cada una, con lotes muy pequeños y seleccionados en el viñedo. Durante el proceso, los trabajos que se realizan son respetuosos y cuidadosos, con una intervención mínima, y orientados a lograr una fermentación espontánea, con levaduras propias del viñedo o certificadas orgánicas. No utilizamos aditivos ni clarificantes. Seguimos métodos tradicionales como el prensado manual y délestage, especialmente, con nuestras uvas Malbec, y suave remontaje durante las etapas finales. Los tiempos de maceración son cortos porque queremos expresar la frescura que tiene el nuestro terroir.",
+            paragraphSlider1Mobile:
+              "La fermentación se realiza en vasijas de hormigón abiertas en la parte superior, de unos 2000 kilos cada una, con lotes muy pequeños y seleccionados en el viñedo.<br><br> Durante el proceso, los trabajos que se realizan son respetuosos y cuidadosos, con una intervención mínima, y orientados a lograr una fermentación espontánea, con levaduras propias del viñedo o certificadas orgánicas. No utilizamos aditivos ni clarificantes.<br><br> Seguimos métodos tradicionales como el prensado manual y délestage, especialmente, con nuestras uvas Malbec, y suave remontaje durante las etapas finales.<br><br> Los tiempos de maceración son cortos porque queremos expresar la frescura que tiene el nuestro terroir.",
+            titleSlider2: "Crianza",
+            paragraphSlider2:
+              "Cada lote o pequeña vinificación de uva nos dictará si la crianza se realizará por completo en barricas, o si alguna parte se hará en las piletas de hormigón o en tanques de acero inoxidable.  Hay vinos a los que queremos protegerles más la fruta, y otros a los que creemos que hay que darles más complejidad con madera. Generalmente, el 70% es en barricas usadas, 100% de roble francés. Buscamos un equilibrio delicado y evitar que los vinos se vean abrumados por la madera.",
+            titleSlider3: "Blending",
+            paragraphSlider3:
+              "Creemos en la magia de crear vinos excepcionales a través de la alquimia del blending. Nuestra pasión por el arte del vino nos lleva a explorar dos enfoques únicos: las co-fermentaciones y la técnica tradicional del blending. Preferimos trabajar con co-fermentaciones, una técnica que consideramos más enriquecedora, ya que capta la esencia misma de nuestro terroir. Desde el momento en que las distintas variedades y parcelas ingresan a nuestra bodega, comienza un viaje compartido que recorre todo el proceso. En última instancia, nuestro objetivo es fusionar el pasado y el futuro en cada botella que presentamos.",
+            paragraphSlider3Mobile:
+              "Creemos en la magia de crear vinos excepcionales a través de la alquimia del blending. Nuestra pasión por el arte del vino nos lleva a explorar dos enfoques únicos: las co-fermentaciones y la técnica tradicional del blending. Preferimos trabajar con co-fermentaciones, una técnica que consideramos más enriquecedora, ya que capta la esencia misma de nuestro terroir.<br><br> Desde el momento en que las distintas variedades y parcelas ingresan a nuestra bodega, comienza un viaje compartido que recorre todo el proceso. En última instancia, nuestro objetivo es fusionar el pasado y el futuro en cada botella que presentamos.",
+            titleSlider4: "Embotellado y etiquetado",
+            paragraphSlider4:
+              "Somos muy respetuosos y cuidamos al máximo el momento de embotellado y  etiquetado para cumplir con los estándares más estrictos.  En el embotellado hacemos una filtración para proteger el vino sin afectarlo mucho, y tenemos un estricto control durante el fraccionamiento, cuidando los estándares de inocuidad y de calidad, para que ese vino una vez que entre en botella tenga la mejor evolución y expresión posible.",
+            titleSlider5: "Estiba",
+            paragraphSlider5:
+              "Creemos que es muy importante que los vinos tengan un plazo de evolución en botella antes de llegar al mercado. Nuestros vinos ya nos han demostrado que van creciendo mucho con los años. La estiba también nos sirve de biblioteca, de área de estudio. Permanentemente probamos y comparamos las cosechas que tenemos guardadas con las nuevas y, de esa forma, vamos aprendiendo cómo evolucionan nuestros vinos en base a lo que venimos haciendo en cada una de las cosechas.",
           },
           lifeEstate: {
-            title: "-",
-            titleSlider1: "-",
-            paragraphSlider1: "-",
-            titleSlider2: "-",
-            paragraphSlider2: "-",
-            titleSlider3: "-",
-            paragraphSlider3: "-",
+            title: "La vida en la finca",
+            titleSlider1: "La casa junto a la bodega",
+            paragraphSlider1:
+              "La condesa Noemí Marone Cinzano encontró este lugar inigualable y construyó las bases de lo que hoy es Bodega Ribera del Cuarzo. Como en todas las fincas italianas, dispuso edificar una casa junto a la bodega. De estilo patagónico y una arquitectura agradable, con un pequeño jardín cuya vista vuela sobre el valle que desemboca en el río, la casa es el lugar donde descansamos después del día de trabajo, y donde nos reunimos en familia a disfrutar y a pasar las Fiestas. Allí también pensamos, planificamos y decidimos junto a quienes nos ayudan a llevar adelante la producción, compartimos con ellos la mesa de lo que ya es nuestro hogar.",
+            titleSlider2: "El río",
+            paragraphSlider2:
+              "El río Negro es el más grande de la Patagonia. Los ríos Limay y Neuquén se cargan con agua y minerales provenientes del deshielo de las montañas antes de fluir hacia el centro y este del país. Finalmente, se unen para formar el Río Negro que desemboca en el mar al sur de la provincia de Buenos Aires, en un pequeño pueblo llamado El Cóndor. Fluye entre dos grandes bardas, una al norte y otra al sur, que se formaron a lo largo de millones de años. En 1860, Estanislao Ceballos las describió como terrazas fluviales (river terraces), y contribuyen de manera invaluable con carbonato de calcio, piedra, cuarzo y cenizas. ",
+            paragraphSlider2Mobile:
+              "El río Negro es el más grande de la Patagonia. Los ríos Limay y Neuquén se cargan con agua y minerales provenientes del deshielo de las montañas antes de fluir hacia el centro y este del país. Finalmente, se unen para formar el Río Negro que desemboca en el mar al sur de la provincia de Buenos Aires, en un pequeño pueblo llamado El Cóndor.<br><br> Fluye entre dos grandes bardas, una al norte y otra al sur, que se formaron a lo largo de millones de años. En 1860, Estanislao Ceballos las describió como terrazas fluviales (river terraces), y contribuyen de manera invaluable con carbonato de calcio, piedra, cuarzo y cenizas. ",
+            titleSlider3: "Los caballos",
+            paragraphSlider3:
+              "Mantener los métodos de trabajo tradicionales nos ayuda a nunca perder de vista la conexión con la tierra, conexión que nos define como agricultores. En la finca tenemos caballos criollos, la raza argentina. Además de utilizar tractores y otras máquinas que nos ayudan a ser eficientes para determinadas tareas, trabajar con animales es una forma de respeto y de cuidado en el proceso de intervenir la naturaleza. Los caballos, además, cumplen la función de abonar, contribuyendo al compost que producimos en la finca. Pero los caballos,además, son una forma de vida: vivir a caballo ralentiza las cosas, permite desacelerar y conectar con la naturaleza, recorrer el lugar de forma más pausada y profunda.",
+            paragraphSlider3Mobile:
+              "Mantener los métodos de trabajo tradicionales nos ayuda a nunca perder de vista la conexión con la tierra, conexión que nos define como agricultores. En la finca tenemos caballos criollos, la raza argentina. Además de utilizar tractores y otras máquinas que nos ayudan a ser eficientes para determinadas tareas, trabajar con animales es una forma de respeto y de cuidado en el proceso de intervenir la naturaleza.<br><br> Los caballos, además, cumplen la función de abonar, contribuyendo al compost que producimos en la finca. Pero los caballos,además, son una forma de vida: vivir a caballo ralentiza las cosas, permite desacelerar y conectar con la naturaleza, recorrer el lugar de forma más pausada y profunda.",
           },
           waterLife: {
-            title: "-",
-            subtitle: "-",
-            firstParagraph: "-",
+            title: "Agua de vida",
+            subtitle: "Agua",
+            firstParagraph:
+              "La condesa plantó el viñedo en la parte más alta de la barda, un lugar inexplorado en el que nadie antes había siquiera pensado: requería llevar hasta allí agua para riego utilizando bombas con un costo enorme. Hasta entonces, las producciones en el valle de Río Negro se habían hecho  siempre al margen del río del que se toma agua por medio de canales y compuertas, un sistema de riego económico: riego por inundación.",
             btn: "Leer más",
-            readParagraph: "-",
-            mobileParagraph: "-",
+            readParagraph:
+              "La condesa plantó el viñedo en la parte más alta de la barda, un lugar inexplorado en el que nadie antes había siquiera pensado: requería llevar hasta allí agua para riego utilizando bombas con un costo enorme. Hasta entonces, las producciones en el valle de Río Negro se habían hecho  siempre al margen del río del que se toma agua por medio de canales y compuertas, un sistema de riego económico: riego por inundación.<br><br>Y, sin embargo, la condesa decidió plantar ahí arriba porque apostó a que lo que produciría valdría el esfuerzo. Sin hacer ningún cálculo de costos se lanzó a construir un sistema de bombas que llevó el agua tres kilómetros hacia arriba. Cuando al fin pudimos hacernos cargo del viñedo, confiamos en que, en el corto plazo, alguna energía renovable, quizás eólica o solar, nos permitiría transformar ese costo en algo razonable. En cualquier caso, el riesgo valía la pena.<br><br>Tiempo después, un hombre local nos habló sobre el agua. Este amable hombre, Facundo Catriel, nos dijo que se podía encontrar abundante agua al pie de la barda. Aunque parecía poco factible, decidimos perforar algunos pozos. El agua brotó y fluyó a la superficie con fuerza. Estos pozos hoy producen alrededor de 200.000 litros por hora, lo que reduce significativamente nuestros costos. Escuchamos a la naturaleza y a personas especiales. Hoy en día, Ribera del Cuarzo sigue un ciclo virtuoso de respeto por el medio ambiente, y la recompensa es un vino que nunca deja de sorprendernos.",
+            mobileParagraph:
+              "La condesa plantó el viñedo en la parte más alta de la barda, un lugar inexplorado en el que nadie antes había siquiera pensado: requería llevar hasta allí agua para riego utilizando bombas con un costo enorme. Hasta entonces, las producciones en el valle de Río Negro se habían hecho  siempre al margen del río del que se toma agua por medio de canales y compuertas, un sistema de riego económico: riego por inundación.<br><br>Y, sin embargo, la condesa decidió plantar ahí arriba porque apostó a que lo que produciría valdría el esfuerzo. Sin hacer ningún cálculo de costos se lanzó a construir un sistema de bombas que llevó el agua tres kilómetros hacia arriba. Cuando al fin pudimos hacernos cargo del viñedo, confiamos en que, en el corto plazo, alguna energía renovable, quizás eólica o solar, nos permitiría transformar ese costo en algo razonable. En cualquier caso, el riesgo valía la pena.<br><br>Tiempo después, un hombre local nos habló sobre el agua. Este amable hombre, Facundo Catriel, nos dijo que se podía encontrar abundante agua al pie de la barda. Aunque parecía poco factible, decidimos perforar algunos pozos. El agua brotó y fluyó a la superficie con fuerza. Estos pozos hoy producen alrededor de 200.000 litros por hora, lo que reduce significativamente nuestros costos. Escuchamos a la naturaleza y a personas especiales. Hoy en día, Ribera del Cuarzo sigue un ciclo virtuoso de respeto por el medio ambiente, y la recompensa es un vino que nunca deja de sorprendernos.",
           },
         },
         wines: {
           title: "Vinos",
-          btnSheet: "-",
+          btnSheet: "Descargar ficha tecnica",
           btnFooter: "Leer más",
           argentina: {
-            title: "-",
+            title: "En Argentina",
             araucanaRioMalbec: {
-              paragraph: "-",
+              paragraph:
+                "Las uvas de Río de los Ciervos provienen de 8 viñedos ubicados a lo largo de los 200 km a ambos lados del río. A través de este vino, nuestro objetivo es mostrar la diversidad de la zona clásica del valle del Río Negro.",
             },
             araucanaRioPinot: {
-              paragraph: "-",
+              paragraph:
+                "Las uvas para el Río de los Ciervos Pinot Noir provienen de viñedos plantados hace más de 50 años en la zona de Mainqué. Este vino nació del deseo de preservar viñedos antiguos en la región. Con una producción muy limitada y bajos rendimientos, este es el último lanzamiento de Bodega Ribera del Cuarzo.",
             },
             araucanaMalbec: {
-              paragraph: "-",
+              paragraph:
+                "ARAUCANA MALBEC proviene de nuestro viñedo Araucana de 5 hectáreas, que posee características únicas y distintivas. Suelos calcáreos, noches frías y vientos constantes son desafíos permanentes para nuestras vides, las cuales responden generando una excelente concentración y una marcada acidez.",
             },
             araucanaAzul: {
-              paragraph: "-",
+              paragraph:
+                "Araucana AZUL es un blend de barricas. Seleccionamos las barricas que demuestran mayor elegancia del sector Sur del viñedo, donde el mayor contenido de carbonato de calcio brinda una mayor potencia y expresión.",
             },
             riberaParcela: {
-              paragraph: "-",
+              paragraph:
+                "Parcela Única representa la culminación de nuestras mejores uvas, cuidadosamente seleccionadas de la parcela más especial ubicada dentro del Viñedo Araucana, situado en el cuadrante suroeste. Aquí, la composición elevada de carbonato de calcio confiere una potencia elevada y una profundidad de expresión inigualable. Es en esta sección específica del viñedo donde nuestras uvas enfrentan las condiciones más extremas, desafiando vientos implacables. Son precisamente estas adversidades las que dan lugar a la exquisita intensidad y finura que distinguen a nuestro vino.",
             },
           },
           world: {
-            title: "-",
+            title: "En el mundo",
             riberaClasico: {
-              paragraph: "-",
+              paragraph:
+                "Las uvas de Clasico Malbec provienen de 8 viñedos ubicados a lo largo de los 200 km a ambos lados del río. A través de este vino, nuestro objetivo es mostrar la diversidad de la zona clásica del valle del Río Negro.",
             },
             riberaEspecial: {
-              paragraph: "-",
+              paragraph:
+                "Ribera del Cuarzo ESPECIAL proviene de nuestro Viñedo Araucana de 5 hectáreas, que posee características únicas y distintivas. Los suelos calcáreos, las noches frías y los vientos constantes son desafíos permanentes para nuestras vides, las cuales responden generando una excelente concentración y una marcada acidez.",
             },
             riberaParcela: {
-              paragraph: "-",
+              paragraph:
+                "Parcela Única representa la culminación de nuestras mejores uvas, cuidadosamente seleccionadas de la parcela más especial ubicada dentro del Viñedo Araucana, situado en el cuadrante suroeste. Aquí, la composición elevada de carbonato de calcio confiere una potencia elevada y una profundidad de expresión inigualable. Es en esta sección específica del viñedo donde nuestras uvas enfrentan las condiciones más extremas, desafiando vientos implacables. Son precisamente estas adversidades las que dan lugar a la exquisita intensidad y finura que distinguen a nuestro vino.",
             },
           },
         },

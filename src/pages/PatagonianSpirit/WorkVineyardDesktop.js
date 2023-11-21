@@ -9,8 +9,10 @@ import workVineyardSlide6 from "../../images/ancient.jpg";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import hambur from "../../images/menu-hambur.png";
+import { useTranslation } from "react-i18next";
 
 const CarouselSlider = () => {
+  const { t, i18n } = useTranslation();
   // inicio codigo para retrasar la aparicion del titulo
   const [isVisible, setIsVisible] = useState(false);
 
@@ -81,22 +83,28 @@ const CarouselSlider = () => {
     workVineyardSlide6,
   ];
   const paragraphs = [
-    "In our work, all the naturally organic components that the vineyard allows us to take and preserve come into play. The Patagonian wind is a key factor, and the constant breeze along with low ambient humidity conditions combine as a natural mechanism for disease control. The entire vineyard surface features biological corridors that generate a free and natural circulation of permanent flora and fauna, benefiting further from the isolated estate situation without other surrounding crops.",
-    "We embrace traditional vineyard management techniques, such as Guyot pruning, using bilateral cane. This pruning method enables the plants to regulate their resources to achieve a better balance between root growth and fruit development.",
-    "In this process, we use plant-based and biodegradable materials in an effort to respect the environment as much as possible.",
-    "Controlled growth management favors minimal intervention, leading to better plant balance and reduced use of human and mechanical resources.",
-    "Harvesting in our vineyard is a meticulous process carried out manually and in several stages. The unique characteristics of each subsection within our five-hectare estate, with different grape varieties and maturation cycles, require harvesting at distinct times.",
-    "We implement traditional control methods, avoiding the use of herbicides. Between rows, we prioritize the development of our pastures and the natural flora of the environment.",
-    "Maintaining traditional work methods helps us never lose sight of our connection with the land, which defines us as farmers. In addition to using tractors and other machinery to be efficient in specific tasks, working with animals like our Criollo horses, an Argentine breed, is a form of respect and care for nature, seeking to be rewarded with the finest flavor.",
+    t("patagonian.workVineyard.paragraphSlider1"),
+
+    t("patagonian.workVineyard.paragraphSlider2"),
+
+    t("patagonian.workVineyard.paragraphSlider3"),
+
+    t("patagonian.workVineyard.paragraphSlider4"),
+
+    t("patagonian.workVineyard.paragraphSlider5"),
+
+    t("patagonian.workVineyard.paragraphSlider6"),
+
+    t("patagonian.workVineyard.paragraphSlider7"),
   ];
   const title = [
     "",
-    "PRUNING",
-    "TYING",
-    "TOPPING",
-    "HARVEST",
-    "WEEDS",
-    "ANCIENT TECHNIQUES",
+    t("patagonian.workVineyard.titleSlider2"),
+    t("patagonian.workVineyard.titleSlider3"),
+    t("patagonian.workVineyard.titleSlider4"),
+    t("patagonian.workVineyard.titleSlider5"),
+    t("patagonian.workVineyard.titleSlider6"),
+    t("patagonian.workVineyard.titleSlider7"),
   ];
 
   // codigo para cambiar de slide cuando se presionan los indicadores
@@ -286,18 +294,18 @@ const CarouselSlider = () => {
               class="text-[#ffffff] text-lg tracking-widest"
               style={playfairFontItalic}
             >
-              <i style={playfairFontItalic}>Patagonian Spirit</i>
+              <i style={playfairFontItalic}>{t("patagonian.title")}</i>
             </h1>
             <h2
               style={playfairFontBlack}
               className="text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
             >
-              WORK IN THE VINEYARD
+              {t("patagonian.workVineyard.title")}
             </h2>
           </div>
         </div>
 
-        <div className="absolute bottom-10 left-0 right-0 flex justify-center z-50 ">
+        <div className="absolute bottom-10 left-0 right-0 flex justify-center z-50 uppercase">
           {RenderIndicators()}
         </div>
 

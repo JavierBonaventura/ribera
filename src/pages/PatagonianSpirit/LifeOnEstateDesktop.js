@@ -5,8 +5,10 @@ import workVineyardSlide3 from "../../images/hourses.jpg";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import hambur from "../../images/menu-hambur.png";
+import { useTranslation } from "react-i18next";
 
 const CarouselSlider = () => {
+  const { t, i18n } = useTranslation();
   // inicio codigo para retrasar la aparicion del titulo
   const [isVisible, setIsVisible] = useState(false);
 
@@ -69,11 +71,15 @@ const CarouselSlider = () => {
   const [isNextButtonHovered, setIsNextButtonHovered] = useState(false);
   const images = [workVineyardSlide1, workVineyardSlide2, workVineyardSlide3];
   const paragraphs = [
-    "Countess Noemi Marone Cinzano discovered this unparalleled place and laid the foundation for what is now Bodega Ribera del Cuarzo. As in all Italian estates, she built a house by the winery. With Patagonian style and appealing architecture, a small garden overlooks the valley that flows into the river. The house is where we rest after a day's work and where we gather with family to enjoy and celebrate. It's also where we think, plan, and decide alongside those who help us carry out production. We share meals, as it has become our home.",
-    "The Río Negro is the largest river in Patagonia. The Limay and Neuquén rivers collect water and minerals from mountain melt before flowing towards the center and east of the country, ultimately merging to form the Río Negro. This river flows into the sea south of Buenos Aires Province, in a small town called El Cóndor. It meanders between two imposing barda walls, one to the north and another to the south, formed over millions of years. In 1860, Estanislao Ceballos described them as river terraces, and they provide invaluable contributions of calcium carbonate, stone, quartz, and ashes. Today, the river runs through this valley, a valley nestled between bardas.",
-    "Maintaining traditional working methods helps us never lose sight of the connection with the land, a connection that defines us as farmers. On the estate, we have Criollo horses, an Argentine breed. In addition to using tractors and machinery for efficiency in specific tasks, working with animals is a form of respect and care for nature. It seeks to be rewarded with the best flavor. Furthermore, the horses play a role in fertilization, contributing to the compost we produce on the estate. But horses also embody a way of life: Living with horses slows things down, allowing us to decelerate and connect with nature, to explore the land at a more measured and profound pace.",
+    t("patagonian.lifeEstate.paragraphSlider1"),
+    t("patagonian.lifeEstate.paragraphSlider2"),
+    t("patagonian.lifeEstate.paragraphSlider3"),
   ];
-  const title = ["THE HOUSE AT THE WINERY", "THE RIVER", "THE HORSES"];
+  const title = [
+    t("patagonian.lifeEstate.titleSlider1"),
+    t("patagonian.lifeEstate.titleSlider2"),
+    t("patagonian.lifeEstate.titleSlider3"),
+  ];
 
   // codigo para cambiar de slide cuando se presionan los indicadores
   const handlePrevClickIndicators = (index) => {
@@ -262,18 +268,18 @@ const CarouselSlider = () => {
               class="text-[#ffffff] text-lg tracking-widest"
               style={playfairFontItalic}
             >
-              <i style={playfairFontItalic}>Patagonian Spirit</i>
+              <i style={playfairFontItalic}>{t("patagonian.title")}</i>
             </h1>
             <h2
               style={playfairFontBlack}
               className="text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
             >
-              LIFE ON THE ESTATE
+              {t("patagonian.lifeEstate.title")}
             </h2>
           </div>
         </div>
 
-        <div className="absolute bottom-10 left-0 right-0 flex justify-center z-50 ">
+        <div className="absolute bottom-10 left-0 right-0 flex justify-center z-50 uppercase">
           {RenderIndicators()}
         </div>
 

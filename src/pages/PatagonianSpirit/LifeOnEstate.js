@@ -11,9 +11,11 @@ import { Transition, animated } from "@react-spring/web";
 import flechaIzquierda from "../../images/flechaIzquierda.jpg";
 import flechaDerecha from "../../images/flechaDerecha.jpg";
 import iconIg from "../../images/icon-ig.png";
+import { useTranslation } from "react-i18next";
 import "../../App.css";
 
 function Header() {
+  const { t, i18n } = useTranslation();
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
     fontWeight: "normal",
@@ -49,13 +51,13 @@ function Header() {
               style={playfairFontItalic}
               className="text-xs text-[#5f5f5e] text-center tracking-widest"
             >
-              <i style={playfairFontItalic}>Patagonian Spirit</i>
+              <i style={playfairFontItalic}>{t("patagonian.title")}</i>
             </h1>
             <h2
               style={playfairFontBlack}
-              className="font-bold text-base text-[#C4B27D] text-center tracking-wider"
+              className="font-bold text-base text-[#C4B27D] text-center tracking-wider uppercase"
             >
-              LIFE ON THE ESTATE
+              {t("patagonian.lifeEstate.title")}
             </h2>
           </div>
         </div>
@@ -129,6 +131,7 @@ const LifeOnEstate = () => {
 };
 
 const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
+  const { t, i18n } = useTranslation();
   const location = useLocation();
 
   const playfairFontBlack = {
@@ -217,24 +220,15 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
                     <div className="w-4/5 mx-auto">
                       <p
                         style={robotoFontRegular}
-                        className="decoration-black	text-[#C4B27D]  text-xs leading-6 pb-3 tracking-wide"
+                        className="decoration-black	text-[#C4B27D]  text-xs leading-6 pb-3 tracking-wide uppercase"
                       >
-                        THE HOUSE AT THE WINERY
+                        {t("patagonian.lifeEstate.titleSlider1")}
                       </p>
                       <p
                         style={playfairFontRegular}
                         className="decoration-black	 text-xs tracking-wider text-justify"
                       >
-                        Countess Noemi Marone Cinzano discovered this
-                        unparalleled place and laid the foundation for what is
-                        now Bodega Ribera del Cuarzo. As in all Italian estates,
-                        she built a house by the winery. With Patagonian style
-                        and appealing architecture, a small garden overlooks the
-                        valley that flows into the river. The house is where we
-                        rest after a day's work and where we gather with family
-                        to enjoy and celebrate. It's also where we think, plan,
-                        and decide alongside those who help us carry out
-                        production. We share meals, as it has become our home.
+                        {t("patagonian.lifeEstate.paragraphSlider1")}
                       </p>
                     </div>
                   </div>
@@ -262,6 +256,7 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
 };
 
 const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
+  const { t, i18n } = useTranslation();
   const location = useLocation();
 
   const playfairFontBlack = {
@@ -354,29 +349,19 @@ const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
                     <div className="w-4/5 mx-auto">
                       <p
                         style={robotoFontRegular}
-                        className="decoration-black	text-[#C4B27D] text-xs leading-6 pb-3 tracking-wide"
+                        className="decoration-black	text-[#C4B27D] text-xs leading-6 pb-3 tracking-wide uppercase"
                       >
-                        THE RIVER
+                        {t("patagonian.lifeEstate.titleSlider2")}
                       </p>
                       <p
                         style={playfairFontRegular}
                         className="decoration-black	 text-xs tracking-wider text-justify"
-                      >
-                        The Río Negro is the largest river in Patagonia. The
-                        Limay and Neuquén rivers collect water and minerals from
-                        mountain melt before flowing towards the center and east
-                        of the country, ultimately merging to form the Río
-                        Negro. <br />
-                        <br /> This river flows into the sea south of Buenos
-                        Aires Province, in a small town called El Cóndor. It
-                        meanders between two imposing barda walls, one to the
-                        north and another to the south, formed over millions of
-                        years. In 1860, Estanislao Ceballos described them as
-                        river terraces, and they provide invaluable
-                        contributions of calcium carbonate, stone, quartz, and
-                        ashes. Today, the river runs through this valley, a
-                        valley nestled between <i>bardas</i>.
-                      </p>
+                        dangerouslySetInnerHTML={{
+                          __html: t(
+                            "patagonian.lifeEstate.paragraphSlider2Mobile"
+                          ),
+                        }}
+                      ></p>
                     </div>
                   </div>
                   <div className="container mx-auto flex flex-col justify-center  items-center">
@@ -412,6 +397,7 @@ const Screen2 = ({ currentScreen, handleNext, handlePrev }) => {
 };
 
 const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
+  const { t, i18n } = useTranslation();
   const location = useLocation();
 
   const playfairFontBlack = {
@@ -504,29 +490,19 @@ const Screen3 = ({ currentScreen, handleNext, handlePrev }) => {
                     <div className="w-4/5 mx-auto">
                       <p
                         style={robotoFontRegular}
-                        className="decoration-black	text-[#C4B27D]  text-xs leading-6 pb-3 tracking-wide"
+                        className="decoration-black	text-[#C4B27D]  text-xs leading-6 pb-3 tracking-wide uppercase"
                       >
-                        THE HORSES
+                        {t("patagonian.lifeEstate.titleSlider3")}
                       </p>
                       <p
                         style={playfairFontRegular}
                         className="decoration-black	 text-xs tracking-wider text-justify"
-                      >
-                        Maintaining traditional working methods helps us never
-                        lose sight of the connection with the land, a connection
-                        that defines us as farmers. On the estate, we have
-                        Criollo horses, an Argentine breed. In addition to using
-                        tractors and machinery for efficiency in specific tasks,
-                        working with animals is a form of respect and care for
-                        nature. It seeks to be rewarded with the best flavor.{" "}
-                        <br /> <br />
-                        Furthermore, the horses play a role in fertilization,
-                        contributing to the compost we produce on the estate.
-                        But horses also embody a way of life: Living with horses
-                        slows things down, allowing us to decelerate and connect
-                        with nature, to explore the land at a more measured and
-                        profound pace.
-                      </p>
+                        dangerouslySetInnerHTML={{
+                          __html: t(
+                            "patagonian.lifeEstate.paragraphSlider3Mobile"
+                          ),
+                        }}
+                      ></p>
                     </div>
                   </div>
                 </div>
