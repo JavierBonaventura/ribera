@@ -11,7 +11,6 @@ import slider7 from "../images/slider-history/WEB_HISTORY_SLIDERS-07.jpg";
 import slider8 from "../images/slider-history/WEB_HISTORY_SLIDERS-08.jpg";
 import slider9 from "../images/slider-history/WEB_HISTORY_SLIDERS-09.jpg";
 import slider10 from "../images/slider-history/WEB_HISTORY_SLIDERS-10.jpg";
-import slider11 from "../images/slider-history/WEB_HISTORY_SLIDERS-11.jpg";
 import slider12 from "../images/slider-history/WEB_HISTORY_SLIDERS-12.jpg";
 import slider13 from "../images/slider-history/WEB_HISTORY_SLIDERS-13.jpg";
 import slider14 from "../images/slider-history/WEB_HISTORY_SLIDERS-14.jpg";
@@ -44,7 +43,6 @@ function SliderFamily() {
     slider8,
     slider9,
     slider10,
-    slider11,
     slider12,
     slider13,
     slider14,
