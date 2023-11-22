@@ -11,13 +11,19 @@ import BgAraucanaMalbec from "../../images/bg-araucana-malbec.jpg";
 import bottleBottom from "../../images/bottle-bottom.png";
 import bottleBottomPinot from "../../images/bottle-bottom-pinot.png";
 import fichaTecnica2019 from "../../fichas/ficha-tecnica-araucana-malbec-2019.pdf";
+import fichaTecnica2019es from "../../fichas/ficha-tecnica-araucana-malbec-2019-es.pdf";
 import fichaTecnica2020 from "../../fichas/ficha-tecnica-araucana-malbec-2020.pdf";
+import fichaTecnica2020es from "../../fichas/ficha-tecnica-araucana-malbec-2020-es.pdf";
 import fichaTecnica2021 from "../../fichas/ficha-tecnica-araucana-malbec-2021.pdf";
+import fichaTecnica2021es from "../../fichas/ficha-tecnica-araucana-malbec-2021-es.pdf";
 import fichaTecnica2022 from "../../fichas/ficha-tecnica-araucana-malbec-2022.pdf";
 import { useTranslation } from "react-i18next";
 import "../../App.css";
 function Araucana() {
   const { t, i18n } = useTranslation();
+  //Obtener el idioma seleccionado
+  const idiomaSeleccionado = i18n.language;
+
   // Desplaza a la parte superior cuando se monta el componente
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -157,7 +163,6 @@ function Araucana() {
                     isVisible2 ? "appear-from-bottom" : "invisible"
                   }`}
                 >
-                  {" "}
                   {t("wines.argentina.title")}
                 </h2>
               </div>
@@ -231,7 +236,11 @@ function Araucana() {
                           </li>
                           <li className="py-2 px-4 ">
                             <a
-                              href={fichaTecnica2021}
+                              href={
+                                idiomaSeleccionado === "en"
+                                  ? fichaTecnica2021
+                                  : fichaTecnica2021es
+                              }
                               target="_blank"
                               className="hover:underline"
                             >
@@ -240,7 +249,11 @@ function Araucana() {
                           </li>
                           <li className="py-2 px-4 ">
                             <a
-                              href={fichaTecnica2020}
+                              href={
+                                idiomaSeleccionado === "en"
+                                  ? fichaTecnica2020
+                                  : fichaTecnica2020es
+                              }
                               target="_blank"
                               className="hover:underline"
                             >
@@ -249,7 +262,11 @@ function Araucana() {
                           </li>
                           <li className="py-2 px-4 ">
                             <a
-                              href={fichaTecnica2019}
+                              href={
+                                idiomaSeleccionado === "en"
+                                  ? fichaTecnica2019
+                                  : fichaTecnica2019es
+                              }
                               target="_blank"
                               className="hover:underline"
                             >
@@ -306,7 +323,7 @@ function Araucana() {
                     <img
                       src={bottleBottomPinot}
                       alt=""
-                      className="w-1/2 md:w-auto mx-auto hover:scale-110 transition ease-in-out duration-300"
+                      className="w-1/2 md:w-auto mx-auto transform hover:-translate-y-1 transition ease-in-out duration-300"
                     />
                   </Link>
                 </div>
@@ -330,7 +347,7 @@ function Araucana() {
                     <img
                       src={bottleBottom}
                       alt=""
-                      className="w-1/2 md:w-auto mx-auto hover:scale-110 transition ease-in-out duration-300"
+                      className="w-1/2 md:w-auto mx-auto transform hover:-translate-y-1 transition ease-in-out duration-300"
                     />
                   </Link>
                 </div>
@@ -354,7 +371,7 @@ function Araucana() {
                     <img
                       src={bottleBottom}
                       alt=""
-                      className="w-1/2 md:w-auto mx-auto hover:scale-110 transition ease-in-out duration-300"
+                      className="w-1/2 md:w-auto mx-auto transform hover:-translate-y-1 transition ease-in-out duration-300"
                     />
                   </Link>
                 </div>
@@ -378,7 +395,7 @@ function Araucana() {
                     <img
                       src={bottleBottom}
                       alt=""
-                      className="w-1/2 md:w-auto mx-auto hover:scale-110 transition ease-in-out duration-300"
+                      className="w-1/2 md:w-auto mx-auto transform hover:-translate-y-1 transition ease-in-out duration-300"
                     />
                   </Link>
                 </div>

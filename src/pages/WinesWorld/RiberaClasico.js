@@ -10,10 +10,14 @@ import ImgMarcaAgua from "../../images/agua-sombra.png";
 import BgRiberaClasico from "../../images/bg-ribera-clasico.jpg";
 import bottleBottom from "../../images/bottle-bottom.png";
 import fichaTecnica2021 from "../../fichas/ficha-tecnica-ribera-clasico-2021.pdf";
+import fichaTecnica2021es from "../../fichas/ficha-tecnica-ribera-clasico-2021-es.pdf";
 import { useTranslation } from "react-i18next";
 import "../../App.css";
 function Araucana() {
   const { t, i18n } = useTranslation();
+  //Obtener el idioma seleccionado
+  const idiomaSeleccionado = i18n.language;
+
   // Desplaza a la parte superior cuando se monta el componente
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -217,7 +221,11 @@ function Araucana() {
                         <ul className="text-xs md:text-lg text-[#C4B27D] text-center">
                           <li className="py-2 px-4 ">
                             <a
-                              href={fichaTecnica2021}
+                              href={
+                                idiomaSeleccionado === "en"
+                                  ? fichaTecnica2021
+                                  : fichaTecnica2021es
+                              }
                               target="_blank"
                               className="hover:underline"
                             >
@@ -270,7 +278,7 @@ function Araucana() {
                     <img
                       src={bottleBottom}
                       alt=""
-                      className="w-1/2 md:w-3/4 mx-auto hover:scale-110 transition ease-in-out duration-300"
+                      className="w-1/2 md:w-3/4 mx-auto transform hover:-translate-y-1 transition ease-in-out duration-300"
                     />
                   </Link>
                 </div>
@@ -294,7 +302,7 @@ function Araucana() {
                     <img
                       src={bottleBottom}
                       alt=""
-                      className="w-1/2 md:w-3/4 mx-auto hover:scale-110 transition ease-in-out duration-300"
+                      className="w-1/2 md:w-3/4 mx-auto transform hover:-translate-y-1 transition ease-in-out duration-300"
                     />
                   </Link>
                 </div>

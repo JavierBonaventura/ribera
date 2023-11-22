@@ -275,7 +275,7 @@ function Araucana() {
                     <img
                       src={bottleBottomPinot}
                       alt=""
-                      className="w-1/2 md:w-auto mx-auto hover:scale-110 transition ease-in-out duration-300"
+                      className="w-1/2 md:w-auto mx-auto transform hover:-translate-y-1 transition ease-in-out duration-300"
                     />
                   </Link>
                 </div>
@@ -299,7 +299,7 @@ function Araucana() {
                     <img
                       src={bottleBottom}
                       alt=""
-                      className="w-1/2 md:w-auto mx-auto hover:scale-110 transition ease-in-out duration-300"
+                      className="w-1/2 md:w-auto mx-auto transform hover:-translate-y-1 transition ease-in-out duration-300"
                     />
                   </Link>
                 </div>
@@ -323,7 +323,7 @@ function Araucana() {
                     <img
                       src={bottleBottom}
                       alt=""
-                      className="w-1/2 md:w-auto mx-auto hover:scale-110 transition ease-in-out duration-300"
+                      className="w-1/2 md:w-auto mx-auto transform hover:-translate-y-1 transition ease-in-out duration-300"
                     />
                   </Link>
                 </div>
@@ -347,7 +347,7 @@ function Araucana() {
                     <img
                       src={bottleBottom}
                       alt=""
-                      className="w-1/2 md:w-auto mx-auto hover:scale-110 transition ease-in-out duration-300"
+                      className="w-1/2 md:w-auto mx-auto transform hover:-translate-y-1 transition ease-in-out duration-300"
                     />
                   </Link>
                 </div>
