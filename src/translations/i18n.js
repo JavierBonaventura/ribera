@@ -384,7 +384,7 @@ i18n.use(initReactI18next).init({
         },
         wines: {
           title: "Vinos",
-          btnSheet: "Descargar ficha tecnica",
+          btnSheet: "Descargar Ficha Técnica",
           btnFooter: "Leer más",
           argentina: {
             title: "En Argentina",
