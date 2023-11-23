@@ -432,7 +432,7 @@ const Home = () => {
             </div>
             <div className="text-[#f3eee3] text-sm flex gap-x-5 pt-10">
               <span
-                className={`hover:text-[#c4b27d] hidden cursor-pointer transition ease-in-out duration-300 tracking-widest ${
+                className={`hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest ${
                   activeButton === "en"
                     ? "text-[#c4b27d] font-bold "
                     : "text-[#F3EEE3]"
@@ -442,7 +442,7 @@ const Home = () => {
                 english
               </span>
               <span
-                className={`hover:text-[#c4b27d] hidden cursor-pointer transition ease-in-out duration-300 tracking-widest ${
+                className={`hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest ${
                   activeButton === "es"
                     ? "text-[#c4b27d] font-bold"
                     : "text-[#F3EEE3]"
