@@ -10,10 +10,13 @@ import ImgMarcaAgua from "../../images/agua-sombra.png";
 import BgRiberaEspecial from "../../images/bg-ribera-especial.jpg";
 import bottleBottom from "../../images/bottle-bottom.png";
 import fichaTecnica2022 from "../../fichas/ficha-tecnica-ribera-especial-2022.pdf";
+import fichaTecnica2022es from "../../fichas/ficha-tecnica-ribera-especial-2022-es.pdf";
 import { useTranslation } from "react-i18next";
 import "../../App.css";
 function Araucana() {
   const { t, i18n } = useTranslation();
+  //Obtener el idioma seleccionado
+  const idiomaSeleccionado = i18n.language;
   // Desplaza a la parte superior cuando se monta el componente
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -217,7 +220,11 @@ function Araucana() {
                         <ul className="text-xs md:text-lg text-[#C4B27D] text-center">
                           <li className="py-2 px-4 ">
                             <a
-                              href={fichaTecnica2022}
+                              href={
+                                idiomaSeleccionado === "en"
+                                  ? fichaTecnica2022
+                                  : fichaTecnica2022es
+                              }
                               target="_blank"
                               className="hover:underline"
                             >
