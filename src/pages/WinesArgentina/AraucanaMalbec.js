@@ -17,10 +17,12 @@ import fichaTecnica2020es from "../../fichas/ficha-tecnica-araucana-malbec-2020-
 import fichaTecnica2021 from "../../fichas/ficha-tecnica-araucana-malbec-2021.pdf";
 import fichaTecnica2021es from "../../fichas/ficha-tecnica-araucana-malbec-2021-es.pdf";
 import fichaTecnica2022 from "../../fichas/ficha-tecnica-araucana-malbec-2022.pdf";
+import fichaTecnica2022es from "../../fichas/ficha-tecnica-araucana-malbec-2022-es.pdf";
 import { useTranslation } from "react-i18next";
 import "../../App.css";
 function Araucana() {
   const { t, i18n } = useTranslation();
+
   //Obtener el idioma seleccionado
   const idiomaSeleccionado = i18n.language;
 
@@ -227,7 +229,11 @@ function Araucana() {
                         <ul className="text-xs md:text-lg text-[#C4B27D] text-center">
                           <li className="py-2 px-4 ">
                             <a
-                              href={fichaTecnica2022}
+                              href={
+                                idiomaSeleccionado === "en"
+                                  ? fichaTecnica2022
+                                  : fichaTecnica2022es
+                              }
                               target="_blank"
                               className="hover:underline"
                             >

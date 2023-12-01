@@ -11,10 +11,13 @@ import BgAraucanaAzul from "../../images/bg-araucana-azul.jpg";
 import bottleBottom from "../../images/bottle-bottom.png";
 import bottleBottomPinot from "../../images/bottle-bottom-pinot.png";
 import fichaTecnica2019 from "../../fichas/ficha-tecnica-araucana-azul-2019.pdf";
+import fichaTecnica2019es from "../../fichas/ficha-tecnica-araucana-azul-2019-es.pdf";
 import { useTranslation } from "react-i18next";
 import "../../App.css";
 function Araucana() {
   const { t, i18n } = useTranslation();
+  //Obtener el idioma seleccionado
+  const idiomaSeleccionado = i18n.language;
   // Desplaza a la parte superior cuando se monta el componente
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -218,7 +221,11 @@ function Araucana() {
                         <ul className="text-xs md:text-lg text-[#C4B27D] text-center">
                           <li className="py-2 px-4 ">
                             <a
-                              href={fichaTecnica2019}
+                              href={
+                                idiomaSeleccionado === "en"
+                                  ? fichaTecnica2019
+                                  : fichaTecnica2019es
+                              }
                               target="_blank"
                               className="hover:underline"
                             >
