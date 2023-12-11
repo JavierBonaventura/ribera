@@ -216,7 +216,7 @@ function Araucana() {
                       </a>
                     </div>
                     <animated.div style={dropdownAnimation1}>
-                      <div className="w-2/4 mx-auto">
+                      <div className="w-2/4 mx-auto pt-4">
                         <ul className="text-xs md:text-lg text-[#C4B27D] text-center">
                           <li className="py-2 px-4 ">
                             <a

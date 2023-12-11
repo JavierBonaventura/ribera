@@ -18,6 +18,12 @@ const MenuDesktop = () => {
   const { t, i18n } = useTranslation();
   // inicio codigo para retrasar la aparicion del logo
   const [isVisible, setIsVisible] = useState(false);
+  const [activeButton, setActiveButton] = useState("en");
+  const changeLanguage = (newLanguage) => {
+    i18n.changeLanguage(newLanguage);
+    console.log("Idioma actual:", i18n.language);
+    setActiveButton(newLanguage);
+  };
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -287,7 +293,36 @@ const MenuDesktop = () => {
                 <div class="w-0.5 bg-[#F3EEE3] bg-opacity-50   absolute vertical-line-bottom-left"></div>
                 <div class="w-0.5 bg-[#F3EEE3] bg-opacity-50  absolute vertical-line-bottom-right"></div>
                 <div className="w-full h-full border-2 border-[#F3EEE3]  border-opacity-80  relative inset-0 animate-border-delay">
-                  <div className="flex justify-end items-center pr-4 py-5 ">
+                  <div className="flex justify-between items-center pr-4 py-5">
+                    <div
+                      className="cursor-default gap-x-5 text-sm lg:text-base space-x-2 ml-4"
+                      style={robotoFontRegular}
+                    >
+                      {/* Span para "English" */}
+                      <span
+                        id="en"
+                        className={`hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest ${
+                          activeButton === "en"
+                            ? "text-[#c4b27d] font-bold "
+                            : "text-[#F3EEE3]"
+                        }`}
+                        onClick={() => changeLanguage("en")}
+                      >
+                        English
+                      </span>
+                      {/* Span para "Spanish" */}
+                      <span
+                        id="es"
+                        className={`hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest ${
+                          activeButton === "es"
+                            ? "text-[#c4b27d] font-bold"
+                            : "text-[#F3EEE3]"
+                        }`}
+                        onClick={() => changeLanguage("es")}
+                      >
+                        Spanish
+                      </span>
+                    </div>
                     <Link
                       to="/MenuHamburguesa"
                       onMouseEnter={handlehamburMouseEnter}
@@ -318,12 +353,12 @@ const MenuDesktop = () => {
                     </div>
                   </div>
 
-                  <div className="flex justify-center w-full xl:w-3/4 2xl:px-28 mx-auto ">
+                  <div className="flex justify-center w-full xl:w-3/4 2xl:px-28 mx-auto">
                     <div
                       id="menu1"
                       onMouseEnter={handleMenu1Hover}
                       onMouseLeave={handleMenu1Leave}
-                      className={`flex flex-col items-center w-full transition-opacity duration-500 gap-y-8   ${
+                      className={`flex flex-col items-center w-full transition-opacity duration-500 gap-y-8  ${
                         isMenu2Hovered || isMenu3Hovered
                           ? "opacity-30"
                           : "opacity-100"

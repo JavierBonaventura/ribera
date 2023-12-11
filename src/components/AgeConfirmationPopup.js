@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import logoDesktop from "../../src/images/logo-home-mob.png";
 import bgPopup from "../../src/images/bg-popup.png";
 import { useTranslation } from "react-i18next";
 
 function AgeConfirmationPopup({ onAgeConfirmed }) {
   const { t, i18n } = useTranslation();
+  const [activeButton, setActiveButton] = useState("en");
+  const changeLanguage = (newLanguage) => {
+    i18n.changeLanguage(newLanguage);
+    console.log("Idioma actual:", i18n.language);
+    setActiveButton(newLanguage);
+  };
   const handleAgeConfirmed = (isAdult) => {
     onAgeConfirmed(isAdult);
   };
@@ -59,15 +65,15 @@ function AgeConfirmationPopup({ onAgeConfirmed }) {
             className="text-[#F3EEE3] flex justify-center gap-x-5 text-base md:text-xl  "
             style={playfairFontRegular}
           >
-            <div className="bg-transparent py-0.5 px-4 border border-[#c4b27d] hover:bg-[#c4b27d] transition ease-in-out duration-300">
+            <div className="bg-transparent py-0.5 w-16 border border-[#c4b27d] hover:bg-[#c4b27d] transition ease-in-out duration-300 flex justify-center">
               <button
-                className="tracking-widest  uppercase"
+                className="tracking-widest  uppercase "
                 onClick={() => handleAgeConfirmed(true)}
               >
                 {t("popup.btnOk")}
               </button>
             </div>
-            <div className="bg-transparent py-0.5 px-5 border border-[#c4b27d] hover:bg-[#c4b27d] transition ease-in-out duration-300">
+            <div className="bg-transparent py-0.5 w-16 border border-[#c4b27d] hover:bg-[#c4b27d] transition ease-in-out duration-300 flex justify-center">
               <button
                 className="tracking-widest"
                 onClick={() => handleAgeConfirmed(false)}
@@ -77,6 +83,33 @@ function AgeConfirmationPopup({ onAgeConfirmed }) {
             </div>
           </div>
         </div>
+      </div>
+      <div className=" cursor-default gap-x-5 text-sm lg:text-base space-x-4 absolute bottom-10">
+        {/* Span para "English" */}
+        <span
+          id="en"
+          className={`hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest ${
+            activeButton === "en"
+              ? "text-[#c4b27d] font-bold "
+              : "text-[#F3EEE3]"
+          }`}
+          onClick={() => changeLanguage("en")}
+        >
+          English
+        </span>
+
+        {/* Span para "Spanish" */}
+        <span
+          id="es"
+          className={`hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest ${
+            activeButton === "es"
+              ? "text-[#c4b27d] font-bold"
+              : "text-[#F3EEE3]"
+          }`}
+          onClick={() => changeLanguage("es")}
+        >
+          Spanish
+        </span>
       </div>
     </div>
   );

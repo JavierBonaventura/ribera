@@ -74,7 +74,7 @@ function Araucana() {
   const [showDropdown1, setShowDropdown1] = useState(false);
 
   const dropdownAnimation1 = useSpring({
-    height: showDropdown1 ? "120px" : "0px",
+    height: showDropdown1 ? "140px" : "0px",
     opacity: showDropdown1 ? 1 : 0,
     overflow: "hidden",
     config: { duration: 500 },
@@ -225,7 +225,7 @@ function Araucana() {
                       </a>
                     </div>
                     <animated.div style={dropdownAnimation1}>
-                      <div className="w-2/4 mx-auto">
+                      <div className="w-2/4 mx-auto pt-4">
                         <ul className="text-xs md:text-lg text-[#C4B27D] text-center">
                           <li className="py-2 px-4 ">
                             <a

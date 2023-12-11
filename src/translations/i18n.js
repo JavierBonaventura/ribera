@@ -235,7 +235,7 @@ i18n.use(initReactI18next).init({
         },
         popup: {
           title: "Bienvenido",
-          text: "¿Es usted mayor de edad para beber en su país?",
+          text: "¿Es usted mayor de edad <br> para beber en su país?",
           btnOk: "Si",
         },
         contact: {
@@ -326,7 +326,7 @@ i18n.use(initReactI18next).init({
             paragraphSlider5:
               "La cosecha en nuestro viñedo es un proceso meticuloso que realizamos en forma manual y en varias etapas. Las características únicas de cada subsector dentro de nuestra finca de cinco hectáreas, con diferentes variedades y ciclos de maduración de las uvas, requieren ser cosechados en momentos distintos.",
             titleSlider6: "Malezas",
-            paragraphSlider61:
+            paragraphSlider6:
               "Implementamos métodos tradicionales de control evitando el uso de herbicidas y, entre hileras, priorizamos el desarrollo de nuestras pasturas y la flora natural del monte.",
             titleSlider7: "Técnicas antiguas",
             paragraphSlider7:
@@ -402,7 +402,7 @@ i18n.use(initReactI18next).init({
             },
             araucanaAzul: {
               paragraph:
-                "Araucana AZUL es un blend de barricas. Seleccionamos las barricas que demuestran mayor elegancia del sector Sur del viñedo, donde el mayor contenido de carbonato de calcio brinda una mayor potencia y expresión.",
+                "Araucana AZUL es un blend de barricas. Seleccionamos las barricas que demuestran mayor elegancia del sector sur del viñedo, donde el mayor contenido de carbonato de calcio brinda una mayor potencia y expresión.",
             },
             riberaParcela: {
               paragraph:

@@ -197,7 +197,7 @@ const CarouselSlider = () => {
       animationDelay += 0.02; // Puedes ajustar el retraso de animación según tus preferencias.
       return (
         <span
-          className="text-xs lg:text-base"
+          className="text-xs leading-3 lg:leading-normal lg:text-sm xl:text-base"
           key={index}
           style={{
             animation: `fadeInRight 1s ease ${animationDelay}s both`,
@@ -539,7 +539,7 @@ const CarouselSlider = () => {
         >
           <p
             style={playfairFontRegular}
-            className="text-[#ffffff] text-base leading-7 tracking-wider text-center mb-8"
+            className="text-[#ffffff] leading-5 xl:leading-7 tracking-wider text-center mb-8 xl:mb-2"
           >
             {animatedWords}
           </p>

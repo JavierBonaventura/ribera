@@ -12,6 +12,12 @@ import { useTranslation } from "react-i18next";
 const Home = () => {
   const { t, i18n } = useTranslation();
   const location = useLocation();
+  const [activeButton, setActiveButton] = useState("en");
+  const changeLanguage = (newLanguage) => {
+    i18n.changeLanguage(newLanguage);
+    console.log("Idioma actual:", i18n.language);
+    setActiveButton(newLanguage);
+  };
 
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
@@ -358,6 +364,29 @@ const Home = () => {
                 >
                   {t("menu.footerOptionC")}
                 </Link>
+                <div className="text-[#f3eee3] text-sm flex gap-x-5 pt-10">
+                  {" "}
+                  <span
+                    className={`hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest ${
+                      activeButton === "en"
+                        ? "text-[#c4b27d] font-bold "
+                        : "text-[#F3EEE3]"
+                    }`}
+                    onClick={() => changeLanguage("en")}
+                  >
+                    english
+                  </span>
+                  <span
+                    className={`hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest ${
+                      activeButton === "es"
+                        ? "text-[#c4b27d] font-bold"
+                        : "text-[#F3EEE3]"
+                    }`}
+                    onClick={() => changeLanguage("es")}
+                  >
+                    spanish
+                  </span>
+                </div>
               </div>
 
               <div className="container mx-auto flex justify-center">

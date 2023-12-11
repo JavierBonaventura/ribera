@@ -199,7 +199,7 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
               </p>
             </div>
 
-            <div className="container mx-auto flex flex-col justify-center  items-center">
+            <div className="container mx-auto flex flex-col justify-center  items-center ">
               <div>
                 <img src={winesPreservationSlide1} alt="" className="w-full" />
               </div>
