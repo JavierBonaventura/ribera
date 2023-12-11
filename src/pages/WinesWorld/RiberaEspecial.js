@@ -249,7 +249,7 @@ function Araucana() {
                   <div className="recuadro-2"></div>
                   <img
                     src={BgRiberaEspecial}
-                    className="imagen "
+                    className="imagen  absolute xl:top-[-100px] 2xl:top-[-170px]"
                     alt="Ribera"
                   />
                 </div>

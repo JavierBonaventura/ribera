@@ -248,7 +248,11 @@ function Araucana() {
                 <div className="w-full aspect-video h-auto xl:h-[40rem]">
                   <div className="recuadro-1"></div>
                   <div className="recuadro-2"></div>
-                  <img src={BgRiberaClasico} className="imagen " alt="Ribera" />
+                  <img
+                    src={BgRiberaClasico}
+                    className="imagen  absolute xl:top-[-140px] 2xl:top-[-220px]"
+                    alt="Ribera"
+                  />
                 </div>
               </div>
             </div>

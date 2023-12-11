@@ -250,7 +250,7 @@ function Araucana() {
                   <div className="recuadro-2"></div>
                   <img
                     src={BgAraucanaAzul}
-                    className="imagen "
+                    className="imagen  absolute xl:top-[-70px] 2xl:top-[-200px]"
                     alt="Araucana"
                   />
                 </div>
