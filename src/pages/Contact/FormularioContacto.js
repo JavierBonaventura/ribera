@@ -47,17 +47,22 @@ const FormularioContacto = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      const response = await axios.post("https://backend-ribera.vercel.app/enviar-correo", {
-        // const response = await axios.post("http://localhost:5000/api/enviar-correo", {
+    const apiUrl =
+      "https://back-ribera-gl7lw5cfra-uc.a.run.app/api/contact-forms";
 
-      nombre,
-        email,
-        consulta,
+    try {
+      const response = await axios.post(apiUrl, {
+        data: {
+          name: nombre,
+          lastName: apellido, // Asumo que 'apellido' es tu variable correspondiente
+          email,
+          country: pais, // Asumo que 'pais' es tu variable correspondiente
+          message: consulta,
+        },
       });
 
-      console.log(response.data);      
-      console.log("Correo enviado exitosamente");
+      console.log(response.data);
+      console.log("Solicitud enviada exitosamente");
       setIsEmailSent(true);
       setShowPopup(true);
       // Limpia los campos del formulario
@@ -69,7 +74,7 @@ const FormularioContacto = () => {
 
       // Maneja el estado según la respuesta del backend
     } catch (error) {
-      console.error("Error al enviar la solicitud: version2", error);
+      console.error("Error al enviar la solicitud:", error);
       // Maneja el error si la solicitud no se puede completar
     }
   };

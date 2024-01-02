@@ -39,6 +39,8 @@ import RiberaClasico from "./pages/WinesWorld/RiberaClasico";
 import RiberaEspecial from "./pages/WinesWorld/RiberaEspecial";
 import Press from "./pages/Press/Press";
 import FormularioContacto from "./pages/Contact/FormularioContacto";
+import TestWine from "./pages/WinesArgentina/testWine";
+import NewTest from "./pages/WinesArgentina/newTest";
 
 function App() {
   const [showAgeConfirmation, setShowAgeConfirmation] = useState(true);
@@ -224,6 +226,8 @@ const AppContent = () => {
                 element={<AraucanaPinotNoir />}
               />
               <Route path="/AraucanaMalbec" element={<AraucanaMalbec />} />
+              <Route path="/vinos/:slug" element={<TestWine />} />
+              <Route path="/newtest" element={<NewTest />} />
               <Route path="/AraucanaAzul" element={<AraucanaAzul />} />
               <Route
                 path="/RiberaParcelaUnicaWorld"
