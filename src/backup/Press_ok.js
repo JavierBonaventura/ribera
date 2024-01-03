@@ -4,15 +4,27 @@ import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import hambur from "../../images/menu-hambur.png";
 import iconIg from "../../images/icon-ig.png";
-import SubPressList from './SubPressList'; // Ajusta la ruta según tu estructura de archivos
+import PressTitulares from "./PressTitulares";
+
+// incluir las imagenes por año
+import bgNota1_2022 from "../../images/nota-1-2022.png";
+import bgNota2_2022 from "../../images/nota-2-2022.png";
+import bgNota3_2022 from "../../images/nota-3-2022.jpg";
+
+import imgNota091223 from "../../images/nota-6-2023.jpg";
+import imgNota061023 from "../../images/nota-1-2023.jpg";
+import imgNota150923 from "../../images/nota-5-2023.jpg";
+import imgNota060923 from "../../images/nota-4-2023.jpg";
+import imgNota310523 from "../../images/nota-2-2023.png";
+import imgNota220523 from "../../images/nota-3-2023.jpg";
+
 import { Transition, animated } from "@react-spring/web";
 import { useTranslation } from "react-i18next";
 import "../../App.css";
 
 function Press() {
-
-// Idioma
   const { t, i18n } = useTranslation();
+  // Para que se creen nuevos titulares (componentes) se deben agregar registros en el arreglo titulares2022 o titulares2023
 
   // inicio codigo para retrasar la aparicion del titulo
   const [isVisible, setIsVisible] = useState(false);
@@ -73,36 +85,46 @@ function Press() {
     }
   }, [nextYear]);
 
-  // funcion parar recargar la funcion de cambio de ano
+  // funcion para avanzar y retroceder en anios
 
   const incrementYear = () => {
-    setNextYear(1);
+    setNextYear(anoVisible === anos.length - 1 ? 0 : anoVisible + 1);
+    setAnoVisibleSinDemora(
+      anoVisibleSinDemora === anos.length - 1 ? 0 : anoVisibleSinDemora + 1
+    );
+    setTimeout(() => {
+      setAnoVisible(anoVisible === anos.length - 1 ? 0 : anoVisible + 1);
+    }, 550);
   };
 
   const decrementYear = () => {
-    setNextYear(1);
+    setNextYear(anoVisible === 0 ? anos.length - 1 : anoVisible - 1);
+    setAnoVisibleSinDemora(
+      anoVisibleSinDemora === 0 ? anos.length - 1 : anoVisibleSinDemora - 1
+    );
+
+    setTimeout(() => {
+      setAnoVisible(anoVisible === 0 ? anos.length - 1 : anoVisible - 1);
+    }, 550);
   };
+
+  // funcion para separar los anos en digitos
 
   const renderYearDigits = () => {
-    if (currentYear !== null) {
-      const digits = currentYear.toString();
-  
-      return digits.split("").map((digit, index) => (
-        <span
-          key={index}
-          className={`digit ${
-            isTransitioning ? "transition-out" : "transition-in"
-          }`}
-          style={{ transitionDelay: `${index * 0.1}s` }}
-        >
-          {digit}
-        </span>
-      ));
-    } else {
-      return null; // You can return a default value or handle the case when currentYear is null
-    }
-  };
+    const digits = anos[anoVisible].toString();
 
+    return digits.split("").map((digit, index) => (
+      <span
+        key={index}
+        className={`digit ${
+          isTransitioning ? "transition-out" : "transition-in"
+        }`}
+        style={{ transitionDelay: `${index * 0.1}s` }}
+      >
+        {digit}
+      </span>
+    ));
+  };
 
   useEffect(() => {
     // Codigo para verificar si es un dispositivo móvil
@@ -175,44 +197,109 @@ function Press() {
 
   // fin codigo para dibujar circulo en botones
 
+  // const anos = [2022, 2023];
 
   // inicio codigo para consultar por los anos de los titulares por API
-  const [presses, setPresses] = useState([]);
-  const [currentYear, setCurrentYear] = useState(null);
-
+  const [anos, setAnos] = useState([]);
   useEffect(() => {
-    const fetchData = async () => {
+    const obtenerAnosDesdeAPI = async () => {
       try {
-        const response = await fetch('https://back-ribera-gl7lw5cfra-uc.a.run.app/api/presses?populate=mainImage');
+        const response = await fetch('https://back-ribera-gl7lw5cfra-uc.a.run.app/api/presses');
         const data = await response.json();
-        setPresses(data.data);
 
-        const highestYear = Math.max(
-          ...data.data.map((press) => new Date(press.attributes.date).getFullYear())
-        );
-        setCurrentYear(highestYear);
+        // Extraer los años del campo "date" de cada elemento en el array "data"
+        const nuevosAnos = data.data.map(item => new Date(item.attributes.date).getFullYear());
+
+        // Eliminar duplicados (opcional)
+        const anosUnicos = [...new Set(nuevosAnos)];
+
+        // Actualizar el estado con los años únicos
+        setAnos(anosUnicos);
+        console.log(anos)
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error('Error al obtener datos desde la API:', error);
       }
     };
 
-    fetchData();
-  }, []);
+    obtenerAnosDesdeAPI();
+  }, []); // El array vacío asegura que se ejecute solo una vez al montar el componente
 
-  const [selectedYear, setSelectedYear] = useState(null);
-  const navigateYear = (step) => {
-    const years = Array.from(new Set(presses.map((press) => new Date(press.attributes.date).getFullYear())));
-    const currentIndex = years.indexOf(currentYear);
-    const newIndex = (currentIndex + step + years.length) % years.length;
-  
-    setSelectedYear(years[newIndex]);
-  
-    // Demora de un segundo antes de actualizar el año seleccionado
-    setTimeout(() => {
-      setCurrentYear(years[newIndex]);
-    }, 1000);
-  };
+  // funcion para buscar el ano mas alto asi se muestra ese primero
+  const posicionMaxValor = anos.indexOf(Math.max(...anos));
+  const [anoVisible, setAnoVisible] = useState(posicionMaxValor);
+  const [anoVisibleSinDemora, setAnoVisibleSinDemora] =
+    useState(posicionMaxValor);
 
+  const fechas2023 = [
+    t("press.date.2023.6"),
+    t("press.date.2023.5"),
+    t("press.date.2023.4"),
+    t("press.date.2023.3"),
+    t("press.date.2023.2"),
+    t("press.date.2023.1"),
+  ];
+
+  const titulares2023 = [
+    "Vinos únicos y exóticos en un lugar exclusivo de la Patagonia argentina",
+    "Un viñedo único en Patagonia. Fue plantado en medio del desierto...",
+    "Se elabora en el Valle Azul, una improbable zona de Río Negro descubierta por una condesa y conquistada por una nueva generación de bodegueros argentinos",
+    "Ribera del Cuarzo (Patagonia), primera bodega internacional que plasmará su visión de Rioja",
+    "Rescatando el patrimonio del Pinot Noir patagónico",
+    "Los mejores del mundo. Cuáles son y cuánto cuestan los vinos que, por tiempo limitado...",
+  ];
+
+  const autores2023 = [
+    "Leandro Gambetta / Ambito",
+    "Sebastián A. Ríos / La Nación",
+    "Laura Pintos / ABC",
+    "Alberto Gil / Lo mejor del vino de rioja",
+    "Asociación Argentina de sommeliers",
+    "Sebastián A. Ríos / La Nación",
+  ];
+
+  const links2023 = [
+    "https://www.ambito.com/lifestyle/vinos-unicos-y-exoticos-un-lugar-exclusivo-la-patagonia-argentina-n5894013",
+    "https://www.lanacion.com.ar/sabado/un-vinedo-unico-en-patagonia-fue-plantado-en-medio-del-desierto-por-una-condesa-italiana-apasionada-nid06102023/",
+    "https://www.abc.es/gastronomia/vinos/ribera-cuarzo-vino-viento-patagonico-20230915152541-nt_amp.html",
+    "https://www.lomejordelvinoderioja.com/ribera-cuarzo-patagonia-primera-bodega-internacional-plasmara-20230907191252-nt_amp.html",
+    "http://www.aasommeliers.com.ar/novedades/n/649/Rescatando-el-patrimonio-del-Pinot-Noir-patag%C3%B3nico",
+    "https://www.lanacion.com.ar/sabado/hasta-400-dolares-la-copa-5-restaurantes-portenos-serviran-por-copa-los-vinos-mas-prestigiosos-de-nid22052023/",
+  ];
+
+  const imagenes2023 = [
+    imgNota091223,
+    imgNota061023,
+    imgNota150923,
+    imgNota060923,
+    imgNota310523,
+    imgNota220523,
+  ];
+
+  const fechas2022 = [
+    t("press.date.2022.3"),
+    t("press.date.2022.2"),
+    t("press.date.2022.1"),
+  ];
+
+  const titulares2022 = [
+    "Araucana Azul, un blend con personalidad propia",
+    "From Penguins to Pinot, a Glimpse at Winemaking in Patagonia",
+    "La producción vitivinícola de calidad se abre en todas las direcciones",
+  ];
+
+  const autores2022 = [
+    "Sebastián A. Ríos / On the wine side",
+    "Sorrel Moseley-Williams / Somm tv magazine",
+    "Rodolfo Reich / On the wine side",
+  ];
+
+  const links2022 = [
+    "https://www.onthewineside.com.ar/post/araucana-azul",
+    "https://mag.sommtv.com/2022/04/winemaking-in-patagonia/",
+    "https://www.lanacion.com.ar/revista-brando/de-la-costa-atlantica-al-extremo-sur-el-nuevo-mapa-del-vino-en-la-argentina-nid08022022/",
+  ];
+
+  const imagenes2022 = [bgNota1_2022, bgNota2_2022, bgNota3_2022];
 
   const [igHovered, setIgHovered] = useState(false);
   const handleMouseEnter = () => {
@@ -235,10 +322,6 @@ function Press() {
     fontWeight: "normal",
     fontStyle: "normal",
   };
-
-
- 
-  
 
   return (
     <Transition
@@ -305,8 +388,7 @@ function Press() {
                         isPrevButtonHovered ? "opacity-100" : "opacity-100"
                       }`}
                       onClick={() => {
-                        navigateYear(-1);
-                        decrementYear()
+                        decrementYear();
                       }}
                       onMouseEnter={() => setIsPrevButtonHovered(true)}
                       onMouseLeave={() => setIsPrevButtonHovered(false)}
@@ -364,8 +446,7 @@ function Press() {
                         isNextButtonHovered ? "opacity-100" : "opacity-100"
                       }`}
                       onClick={() => {
-                        navigateYear(1);
-                        incrementYear()
+                        incrementYear();
                       }}
                       onMouseEnter={() => setIsNextButtonHovered(true)}
                       onMouseLeave={() => setIsNextButtonHovered(false)}
@@ -408,9 +489,20 @@ function Press() {
                   </div>
                 </div>
 
-                {currentYear && (
-        <SubPressList year={selectedYear} presses={presses.filter((press) => new Date(press.attributes.date).getFullYear() === currentYear)} />
-      )}
+                <PressTitulares
+                  fechas2022={fechas2022}
+                  imagenes2022={imagenes2022}
+                  titulares2022={titulares2022}
+                  fechas2023={fechas2023}
+                  imagenes2023={imagenes2023}
+                  titulares2023={titulares2023}
+                  anoVisible={anoVisible}
+                  anoVisibleSinDemora={anoVisibleSinDemora}
+                  autores2022={autores2022}
+                  autores2023={autores2023}
+                  links2022={links2022}
+                  links2023={links2023}
+                />
               </div>
             </div>
 

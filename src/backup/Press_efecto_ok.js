@@ -4,15 +4,27 @@ import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import hambur from "../../images/menu-hambur.png";
 import iconIg from "../../images/icon-ig.png";
-import SubPressList from './SubPressList'; // Ajusta la ruta según tu estructura de archivos
+import PressTitulares from "./PressTitulares";
+
+// incluir las imagenes por año
+import bgNota1_2022 from "../../images/nota-1-2022.png";
+import bgNota2_2022 from "../../images/nota-2-2022.png";
+import bgNota3_2022 from "../../images/nota-3-2022.jpg";
+
+import imgNota091223 from "../../images/nota-6-2023.jpg";
+import imgNota061023 from "../../images/nota-1-2023.jpg";
+import imgNota150923 from "../../images/nota-5-2023.jpg";
+import imgNota060923 from "../../images/nota-4-2023.jpg";
+import imgNota310523 from "../../images/nota-2-2023.png";
+import imgNota220523 from "../../images/nota-3-2023.jpg";
+
 import { Transition, animated } from "@react-spring/web";
 import { useTranslation } from "react-i18next";
 import "../../App.css";
 
 function Press() {
-
-// Idioma
   const { t, i18n } = useTranslation();
+  // Para que se creen nuevos titulares (componentes) se deben agregar registros en el arreglo titulares2022 o titulares2023
 
   // inicio codigo para retrasar la aparicion del titulo
   const [isVisible, setIsVisible] = useState(false);
@@ -73,36 +85,37 @@ function Press() {
     }
   }, [nextYear]);
 
-  // funcion parar recargar la funcion de cambio de ano
+  // funcion para avanzar y retroceder en anios
 
   const incrementYear = () => {
     setNextYear(1);
+
+
   };
 
   const decrementYear = () => {
     setNextYear(1);
+
+
   };
+
+  // funcion para separar los anos en digitos
 
   const renderYearDigits = () => {
-    if (currentYear !== null) {
-      const digits = currentYear.toString();
-  
-      return digits.split("").map((digit, index) => (
-        <span
-          key={index}
-          className={`digit ${
-            isTransitioning ? "transition-out" : "transition-in"
-          }`}
-          style={{ transitionDelay: `${index * 0.1}s` }}
-        >
-          {digit}
-        </span>
-      ));
-    } else {
-      return null; // You can return a default value or handle the case when currentYear is null
-    }
-  };
+    const digits = (1234).toString();
 
+    return digits.split("").map((digit, index) => (
+      <span
+        key={index}
+        className={`digit ${
+          isTransitioning ? "transition-out" : "transition-in"
+        }`}
+        style={{ transitionDelay: `${index * 0.1}s` }}
+      >
+        {digit}
+      </span>
+    ));
+  };
 
   useEffect(() => {
     // Codigo para verificar si es un dispositivo móvil
@@ -175,43 +188,21 @@ function Press() {
 
   // fin codigo para dibujar circulo en botones
 
+  const anos = [2022, 2023];
 
   // inicio codigo para consultar por los anos de los titulares por API
-  const [presses, setPresses] = useState([]);
-  const [currentYear, setCurrentYear] = useState(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('https://back-ribera-gl7lw5cfra-uc.a.run.app/api/presses?populate=mainImage');
-        const data = await response.json();
-        setPresses(data.data);
+  // funcion para buscar el ano mas alto asi se muestra ese primero
+  const posicionMaxValor = anos.indexOf(Math.max(...anos));
+  const [anoVisible, setAnoVisible] = useState(posicionMaxValor);
+  const [anoVisibleSinDemora, setAnoVisibleSinDemora] =
+    useState(posicionMaxValor);
 
-        const highestYear = Math.max(
-          ...data.data.map((press) => new Date(press.attributes.date).getFullYear())
-        );
-        setCurrentYear(highestYear);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
 
-    fetchData();
-  }, []);
 
-  const [selectedYear, setSelectedYear] = useState(null);
-  const navigateYear = (step) => {
-    const years = Array.from(new Set(presses.map((press) => new Date(press.attributes.date).getFullYear())));
-    const currentIndex = years.indexOf(currentYear);
-    const newIndex = (currentIndex + step + years.length) % years.length;
-  
-    setSelectedYear(years[newIndex]);
-  
-    // Demora de un segundo antes de actualizar el año seleccionado
-    setTimeout(() => {
-      setCurrentYear(years[newIndex]);
-    }, 1000);
-  };
+
+
+
 
 
   const [igHovered, setIgHovered] = useState(false);
@@ -235,10 +226,6 @@ function Press() {
     fontWeight: "normal",
     fontStyle: "normal",
   };
-
-
- 
-  
 
   return (
     <Transition
@@ -305,8 +292,7 @@ function Press() {
                         isPrevButtonHovered ? "opacity-100" : "opacity-100"
                       }`}
                       onClick={() => {
-                        navigateYear(-1);
-                        decrementYear()
+                        decrementYear();
                       }}
                       onMouseEnter={() => setIsPrevButtonHovered(true)}
                       onMouseLeave={() => setIsPrevButtonHovered(false)}
@@ -364,8 +350,7 @@ function Press() {
                         isNextButtonHovered ? "opacity-100" : "opacity-100"
                       }`}
                       onClick={() => {
-                        navigateYear(1);
-                        incrementYear()
+                        incrementYear();
                       }}
                       onMouseEnter={() => setIsNextButtonHovered(true)}
                       onMouseLeave={() => setIsNextButtonHovered(false)}
@@ -408,9 +393,7 @@ function Press() {
                   </div>
                 </div>
 
-                {currentYear && (
-        <SubPressList year={selectedYear} presses={presses.filter((press) => new Date(press.attributes.date).getFullYear() === currentYear)} />
-      )}
+                
               </div>
             </div>
 

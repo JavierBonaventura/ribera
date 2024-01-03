@@ -4,217 +4,39 @@ import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import hambur from "../../images/menu-hambur.png";
 import iconIg from "../../images/icon-ig.png";
-import SubPressList from './SubPressList'; // Ajusta la ruta según tu estructura de archivos
+import PressTitulares from "../components/PressTitulares";
 import { Transition, animated } from "@react-spring/web";
 import { useTranslation } from "react-i18next";
 import "../../App.css";
 
-function Press() {
+const PressComponent = () => {
 
-// Idioma
+  // Location
+
+  const locationAnimacion = useLocation();
+
+  // Idioma
   const { t, i18n } = useTranslation();
 
-  // inicio codigo para retrasar la aparicion del titulo
-  const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsVisible(true);
-    }, 500);
-
-    return () => clearTimeout(timeout);
-  }, []);
-  // fin codigo para retrasar la aparicion del titulo
-
-  // inicio codigo para retrasar la aparicion del parrafo
-  const [isVisible2, setIsVisible2] = useState(false);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsVisible2(true);
-    }, 700);
-
-    return () => clearTimeout(timeout);
-  }, []);
-  // fin codigo para retrasar la aparicion del parrafo
-
-  // inicio codigo para retrasar la aparicion del sub menu
-  const [isVisible3, setIsVisible3] = useState(false);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsVisible3(true);
-    }, 1300);
-
-    return () => clearTimeout(timeout);
-  }, []);
-  // fin codigo para retrasar la aparicion de los titulos
-
-  // inicio codigo para dibujar circulo en botones
-  const [percentage, setPercentage] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
-
-  const [percentageRight, setPercentageRight] = useState(0);
-  const [isHoveredRight, setIsHoveredRight] = useState(false);
-
-  const [isPrevButtonHovered, setIsPrevButtonHovered] = useState(false);
-  const [isNextButtonHovered, setIsNextButtonHovered] = useState(false);
-
-  const [nextYear, setNextYear] = useState(null);
-  const [isTransitioning, setTransitioning] = useState(false);
-
-  useEffect(() => {
-    if (true) {
-      setTransitioning(true);
-      setTimeout(() => {
-        setNextYear(null);
-        setTransitioning(false);
-      }, 500);
-    }
-  }, [nextYear]);
-
-  // funcion parar recargar la funcion de cambio de ano
-
-  const incrementYear = () => {
-    setNextYear(1);
+  // Fonts
+    
+  const playfairFontRegular = {
+    fontFamily: "Playfair Regular, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+  };
+  const playfairFontBlack = {
+    fontFamily: "Playfair Black, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
   };
 
-  const decrementYear = () => {
-    setNextYear(1);
-  };
-
-  const renderYearDigits = () => {
-    if (currentYear !== null) {
-      const digits = currentYear.toString();
-  
-      return digits.split("").map((digit, index) => (
-        <span
-          key={index}
-          className={`digit ${
-            isTransitioning ? "transition-out" : "transition-in"
-          }`}
-          style={{ transitionDelay: `${index * 0.1}s` }}
-        >
-          {digit}
-        </span>
-      ));
-    } else {
-      return null; // You can return a default value or handle the case when currentYear is null
-    }
-  };
-
-
-  useEffect(() => {
-    // Codigo para verificar si es un dispositivo móvil
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
-
-    if (!isMobile) {
-      // Efecto solo si no es un dispositivo móvil
-      if (isHovered) {
-        const interval = setInterval(() => {
-          if (percentage < 100) {
-            setPercentage((prevPercentage) => prevPercentage + 2);
-          } else {
-            clearInterval(interval);
-          }
-        }, 4);
-
-        return () => clearInterval(interval);
-      } else {
-        const interval = setInterval(() => {
-          if (percentage !== 0) {
-            setPercentage((prevPercentage) => prevPercentage - 2);
-          } else {
-            clearInterval(interval);
-          }
-        }, 4);
-
-        return () => clearInterval(interval);
-      }
-    }
-    return undefined;
-  }, [percentage, isHovered]);
-
-  useEffect(() => {
-    // Codigo para verificar si es un dispositivo móvil
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
-
-    if (!isMobile) {
-      // Efecto solo si no es un dispositivo móvil
-      if (isHoveredRight) {
-        const intervalRight = setInterval(() => {
-          if (percentageRight < 100) {
-            setPercentageRight(
-              (prevPercentageRight) => prevPercentageRight + 2
-            );
-          } else {
-            clearInterval(intervalRight);
-          }
-        }, 4);
-
-        return () => clearInterval(intervalRight);
-      } else {
-        const intervalRight = setInterval(() => {
-          if (percentageRight !== 0) {
-            setPercentageRight(
-              (prevPercentageRight) => prevPercentageRight - 2
-            );
-          } else {
-            clearInterval(intervalRight);
-          }
-        }, 4);
-
-        return () => clearInterval(intervalRight);
-      }
-    }
-    return undefined;
-  }, [percentageRight, isHoveredRight]);
-
-  const imageWidth = 90;
-  const imageHeight = 90;
-
-  // fin codigo para dibujar circulo en botones
-
-
-  // inicio codigo para consultar por los anos de los titulares por API
-  const [presses, setPresses] = useState([]);
-  const [currentYear, setCurrentYear] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('https://back-ribera-gl7lw5cfra-uc.a.run.app/api/presses?populate=mainImage');
-        const data = await response.json();
-        setPresses(data.data);
-
-        const highestYear = Math.max(
-          ...data.data.map((press) => new Date(press.attributes.date).getFullYear())
-        );
-        setCurrentYear(highestYear);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  const [selectedYear, setSelectedYear] = useState(null);
-  const navigateYear = (step) => {
-    const years = Array.from(new Set(presses.map((press) => new Date(press.attributes.date).getFullYear())));
-    const currentIndex = years.indexOf(currentYear);
-    const newIndex = (currentIndex + step + years.length) % years.length;
-  
-    setSelectedYear(years[newIndex]);
-  
-    // Demora de un segundo antes de actualizar el año seleccionado
-    setTimeout(() => {
-      setCurrentYear(years[newIndex]);
-    }, 1000);
-  };
-
+  // Hover State for logos
 
   const [igHovered, setIgHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
   const handleMouseEnter = () => {
     setIgHovered(true);
   };
@@ -222,23 +44,67 @@ function Press() {
     setIgHovered(false);
   };
 
-  const locationAnimacion = useLocation();
+  // Codigo para botones de Prev / Next
+  const [percentage, setPercentage] = useState(0);
 
-  const playfairFontRegular = {
-    fontFamily: "Playfair Regular, sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
+  const [percentageRight, setPercentageRight] = useState(0);
+  const [isHoveredRight, setIsHoveredRight] = useState(false);
+
+  const [isPrevButtonHovered, setIsPrevButtonHovered] = useState(false);
+  const [isNextButtonHovered, setIsNextButtonHovered] = useState(false);
+
+
+// Consulta a la API
+
+  const [pressData, setPressData] = useState([]);
+  const [years, setYears] = useState([]);
+  const [currentYear, setCurrentYear] = useState(0);
+  const apiUrl = 'https://back-ribera-gl7lw5cfra-uc.a.run.app/api/presses';
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+
+      const uniqueYears = Array.from(
+        new Set(data.data.map((item) => new Date(item.attributes.date).getFullYear()))
+      );
+
+      const maxYear = Math.max(...uniqueYears);
+      setYears(uniqueYears);
+      setCurrentYear(maxYear);
+
+      const pressByYear = data.data.filter(
+        (item) => new Date(item.attributes.date).getFullYear() === maxYear
+      );
+
+      setPressData(pressByYear);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
   };
 
-  const playfairFontBlack = {
-    fontFamily: "Playfair Black, sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
+  // Funcion para cambio de ano Siguiente
+
+  const handleNextYear = () => {
+    const nextYear = years[years.indexOf(currentYear) + 1];
+    setCurrentYear(nextYear);
+    console.log(currentYear)
   };
 
+  // Funcion para cambio de ano anterior
 
- 
-  
+  const handlePreviousYear = () => {
+    const prevYear = years[years.indexOf(currentYear) - 1];
+    setCurrentYear(prevYear);
+    console.log(currentYear)
+
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
 
   return (
     <Transition
@@ -278,7 +144,7 @@ function Press() {
                   <h2
                     style={playfairFontBlack}
                     className={`text-base md:text-2xl text-[#C4B27D] text-center tracking-wider uppercase ${
-                      isVisible
+                      true
                         ? "opacity-100 transition-opacity duration-500"
                         : "opacity-0 transition-opacity duration-500"
                     }`}
@@ -287,7 +153,7 @@ function Press() {
                   </h2>
                   <h1
                     class={` text-xs md:text-lg tracking-widest text-[#F3EEE3]  ${
-                      isVisible2
+                      true
                         ? "opacity-100 transition-opacity duration-500"
                         : "opacity-0 transition-opacity duration-500"
                     }`}
@@ -305,8 +171,7 @@ function Press() {
                         isPrevButtonHovered ? "opacity-100" : "opacity-100"
                       }`}
                       onClick={() => {
-                        navigateYear(-1);
-                        decrementYear()
+                        handlePreviousYear();
                       }}
                       onMouseEnter={() => setIsPrevButtonHovered(true)}
                       onMouseLeave={() => setIsPrevButtonHovered(false)}
@@ -348,13 +213,13 @@ function Press() {
                   <div>
                     <h1
                       className={`year-container text-5xl lg:text-9xl text-[#C4B27D] ${
-                        isVisible3
+                        true
                           ? "opacity-100 transition-opacity duration-500"
                           : "opacity-0 transition-opacity duration-500"
                       }`}
                       style={playfairFontBlack}
                     >
-                      {renderYearDigits()}
+                      {currentYear}
                     </h1>
                   </div>
                   <div className="w-12 lg:w-20">
@@ -364,8 +229,7 @@ function Press() {
                         isNextButtonHovered ? "opacity-100" : "opacity-100"
                       }`}
                       onClick={() => {
-                        navigateYear(1);
-                        incrementYear()
+                        handleNextYear();
                       }}
                       onMouseEnter={() => setIsNextButtonHovered(true)}
                       onMouseLeave={() => setIsNextButtonHovered(false)}
@@ -408,11 +272,12 @@ function Press() {
                   </div>
                 </div>
 
-                {currentYear && (
-        <SubPressList year={selectedYear} presses={presses.filter((press) => new Date(press.attributes.date).getFullYear() === currentYear)} />
-      )}
+
               </div>
             </div>
+
+
+            <PressTitulares pressData={pressData} currentYear={currentYear} />
 
             <div class=" bg-[#000]">
               <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 py-20">
@@ -444,6 +309,27 @@ function Press() {
       )}
     </Transition>
   );
-}
 
-export default Press;
+  // return (
+  //   <div>
+  //     <h1>Press Releases for {currentYear}</h1>
+  //     <ul>
+  //       {pressData.map((press) => (
+  //         <li key={press.id}>
+  //           <p>{press.attributes.title}</p>
+  //           <p>{press.attributes.author}</p>
+  //           <p>{press.attributes.date}</p>
+  //         </li>
+  //       ))}
+  //     </ul>
+  //     <button onClick={handlePreviousYear} disabled={!years.includes(currentYear - 1)}>
+  //       Previous Year
+  //     </button>
+  //     <button onClick={handleNextYear} disabled={!years.includes(currentYear + 1)}>
+  //       Next Year
+  //     </button>
+  //   </div>
+  // );
+};
+
+export default PressComponent;

@@ -4,15 +4,14 @@ import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import hambur from "../../images/menu-hambur.png";
 import iconIg from "../../images/icon-ig.png";
-import SubPressList from './SubPressList'; // Ajusta la ruta según tu estructura de archivos
+import SubPressList from '../pages/Press/SubPressList'; // Ajusta la ruta según tu estructura de archivos
 import { Transition, animated } from "@react-spring/web";
 import { useTranslation } from "react-i18next";
 import "../../App.css";
 
 function Press() {
-
-// Idioma
   const { t, i18n } = useTranslation();
+  // Para que se creen nuevos titulares (componentes) se deben agregar registros en el arreglo titulares2022 o titulares2023
 
   // inicio codigo para retrasar la aparicion del titulo
   const [isVisible, setIsVisible] = useState(false);
@@ -72,36 +71,6 @@ function Press() {
       }, 500);
     }
   }, [nextYear]);
-
-  // funcion parar recargar la funcion de cambio de ano
-
-  const incrementYear = () => {
-    setNextYear(1);
-  };
-
-  const decrementYear = () => {
-    setNextYear(1);
-  };
-
-  const renderYearDigits = () => {
-    if (currentYear !== null) {
-      const digits = currentYear.toString();
-  
-      return digits.split("").map((digit, index) => (
-        <span
-          key={index}
-          className={`digit ${
-            isTransitioning ? "transition-out" : "transition-in"
-          }`}
-          style={{ transitionDelay: `${index * 0.1}s` }}
-        >
-          {digit}
-        </span>
-      ));
-    } else {
-      return null; // You can return a default value or handle the case when currentYear is null
-    }
-  };
 
 
   useEffect(() => {
@@ -175,6 +144,7 @@ function Press() {
 
   // fin codigo para dibujar circulo en botones
 
+  // const anos = [2022, 2023];
 
   // inicio codigo para consultar por los anos de los titulares por API
   const [presses, setPresses] = useState([]);
@@ -183,7 +153,7 @@ function Press() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://back-ribera-gl7lw5cfra-uc.a.run.app/api/presses?populate=mainImage');
+        const response = await fetch('https://back-ribera-gl7lw5cfra-uc.a.run.app/api/presses');
         const data = await response.json();
         setPresses(data.data);
 
@@ -199,18 +169,12 @@ function Press() {
     fetchData();
   }, []);
 
-  const [selectedYear, setSelectedYear] = useState(null);
   const navigateYear = (step) => {
     const years = Array.from(new Set(presses.map((press) => new Date(press.attributes.date).getFullYear())));
     const currentIndex = years.indexOf(currentYear);
     const newIndex = (currentIndex + step + years.length) % years.length;
-  
-    setSelectedYear(years[newIndex]);
-  
-    // Demora de un segundo antes de actualizar el año seleccionado
-    setTimeout(() => {
-      setCurrentYear(years[newIndex]);
-    }, 1000);
+
+    setCurrentYear(years[newIndex]);
   };
 
 
@@ -235,10 +199,6 @@ function Press() {
     fontWeight: "normal",
     fontStyle: "normal",
   };
-
-
- 
-  
 
   return (
     <Transition
@@ -306,7 +266,6 @@ function Press() {
                       }`}
                       onClick={() => {
                         navigateYear(-1);
-                        decrementYear()
                       }}
                       onMouseEnter={() => setIsPrevButtonHovered(true)}
                       onMouseLeave={() => setIsPrevButtonHovered(false)}
@@ -354,7 +313,7 @@ function Press() {
                       }`}
                       style={playfairFontBlack}
                     >
-                      {renderYearDigits()}
+                      {currentYear}
                     </h1>
                   </div>
                   <div className="w-12 lg:w-20">
@@ -365,7 +324,6 @@ function Press() {
                       }`}
                       onClick={() => {
                         navigateYear(1);
-                        incrementYear()
                       }}
                       onMouseEnter={() => setIsNextButtonHovered(true)}
                       onMouseLeave={() => setIsNextButtonHovered(false)}
@@ -409,7 +367,7 @@ function Press() {
                 </div>
 
                 {currentYear && (
-        <SubPressList year={selectedYear} presses={presses.filter((press) => new Date(press.attributes.date).getFullYear() === currentYear)} />
+        <SubPressList year={currentYear} presses={presses.filter((press) => new Date(press.attributes.date).getFullYear() === currentYear)} />
       )}
               </div>
             </div>
