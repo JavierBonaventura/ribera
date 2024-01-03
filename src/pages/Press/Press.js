@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import hambur from "../../images/menu-hambur.png";
 import iconIg from "../../images/icon-ig.png";
-import SubPressList from './SubPressList'; // Ajusta la ruta según tu estructura de archivos
+import SubPressList from './SubPressList'; 
 import { Transition, animated } from "@react-spring/web";
 import { useTranslation } from "react-i18next";
 import "../../App.css";
@@ -99,7 +99,7 @@ function Press() {
         </span>
       ));
     } else {
-      return null; // You can return a default value or handle the case when currentYear is null
+      return null; 
     }
   };
 
