@@ -227,7 +227,7 @@ const AppContent = () => {
               />
               <Route path="/AraucanaMalbec" element={<AraucanaMalbec />} />
               <Route path="/vinos/:slug" element={<TestWine />} />
-              <Route path="/newtest" element={<NewTest />} />
+              <Route path="/newtest/:slug" element={<NewTest />} />
               <Route path="/AraucanaAzul" element={<AraucanaAzul />} />
               <Route
                 path="/RiberaParcelaUnicaWorld"
