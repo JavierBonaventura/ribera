@@ -1,28 +1,30 @@
 import React, { useState, useRef, useEffect } from "react";
-import fondoHamburguesaDesktop from "../images/fondoHamburguesaDesktop.png";
-import logoDesktop from "../images/logo-home-mob.png";
-import x from "../images/x.png";
+import videoDesktop from "../images/videoHome.mp4";
+import videoHistory from "../images/videoHistory.mp4";
+import videoWines from "../images/videoWines.mp4";
+import videoPatagonian from "../images/videoPatagonian.mp4";
+import logoDesktop from "../images/logoDesktop-01.png";
+import hambur from "../images/hambur-claro.png";
 import iconIg from "../images/icon-ig-form.svg";
+import iconUbi from "../images/icon-ubi.png";
 import { Link } from "react-router-dom";
 import { Transition } from "@react-spring/web";
 import { useSpring, animated } from "@react-spring/web";
-import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import axios from "axios";
+import { useLocation, useParams } from "react-router-dom";
 import "../App.css";
 
-const MenuHamburguesaDesktop = () => {
-  // codigo para traducciones
+const MenuDesktop = () => {
   const { t, i18n } = useTranslation();
+  // inicio codigo para retrasar la aparicion del logo
+  const [isVisible, setIsVisible] = useState(false);
   const [activeButton, setActiveButton] = useState("en");
   const changeLanguage = (newLanguage) => {
     i18n.changeLanguage(newLanguage);
     console.log("Idioma actual:", i18n.language);
     setActiveButton(newLanguage);
   };
-
-  // inicio codigo para retrasar la aparicion del logo
-  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -65,6 +67,15 @@ const MenuHamburguesaDesktop = () => {
   const handleMouseLeave = () => {
     setIgHovered(false);
   };
+  const [hamburHovered, sethamburHovered] = useState(false);
+  const handlehamburMouseEnter = () => {
+    sethamburHovered(true);
+  };
+
+  const handlehamburMouseLeave = () => {
+    sethamburHovered(false);
+  };
+  const [currentVideo, setCurrentVideo] = useState(videoDesktop);
 
   const [isMenu1Hovered, setMenu1Hovered] = useState(false);
   const [isMenu2Hovered, setMenu2Hovered] = useState(false);
@@ -73,6 +84,48 @@ const MenuHamburguesaDesktop = () => {
   const [isMenu1Visible, setMenu1Visible] = useState(true);
   const [isMenu2Visible, setMenu2Visible] = useState(true);
   const [isMenu3Visible, setMenu3Visible] = useState(true);
+
+  const handleMenu1Hover = () => {
+    setMenu1Hovered(true);
+    setMenu2Visible(false);
+    setMenu3Visible(false);
+    setCurrentVideo(videoHistory);
+  };
+
+  const handleMenu1Leave = () => {
+    setMenu1Hovered(false);
+    setMenu2Visible(true);
+    setMenu3Visible(true);
+    setCurrentVideo(videoDesktop);
+  };
+
+  const handleMenu2Hover = () => {
+    setMenu2Hovered(true);
+    setMenu1Visible(false);
+    setMenu3Visible(false);
+    setCurrentVideo(videoPatagonian);
+  };
+
+  const handleMenu2Leave = () => {
+    setMenu2Hovered(false);
+    setMenu1Visible(true);
+    setMenu3Visible(true);
+    setCurrentVideo(videoDesktop);
+  };
+
+  const handleMenu3Hover = () => {
+    setMenu3Hovered(true);
+    setMenu1Visible(false);
+    setMenu2Visible(false);
+    setCurrentVideo(videoWines);
+  };
+
+  const handleMenu3Leave = () => {
+    setMenu3Hovered(false);
+    setMenu1Visible(true);
+    setMenu2Visible(true);
+    setCurrentVideo(videoDesktop);
+  };
 
   const location = useLocation();
 
@@ -88,41 +141,6 @@ const MenuHamburguesaDesktop = () => {
     fontStyle: "normal",
   };
 
-  const handleMenu1Hover = () => {
-    setMenu1Hovered(true);
-    setMenu2Visible(false);
-    setMenu3Visible(false);
-  };
-
-  const handleMenu1Leave = () => {
-    setMenu1Hovered(false);
-    setMenu2Visible(true);
-    setMenu3Visible(true);
-  };
-
-  const handleMenu2Hover = () => {
-    setMenu2Hovered(true);
-    setMenu1Visible(false);
-    setMenu3Visible(false);
-  };
-
-  const handleMenu2Leave = () => {
-    setMenu2Hovered(false);
-    setMenu1Visible(true);
-    setMenu3Visible(true);
-  };
-
-  const handleMenu3Hover = () => {
-    setMenu3Hovered(true);
-    setMenu1Visible(false);
-    setMenu2Visible(false);
-  };
-
-  const handleMenu3Leave = () => {
-    setMenu3Hovered(false);
-    setMenu1Visible(true);
-    setMenu2Visible(true);
-  };
   const [mostrarMenu1, setMostrarMenu1] = useState(false);
   const [mostrarMenu2, setMostrarMenu2] = useState(false);
   const [mostrarMenu3, setMostrarMenu3] = useState(true);
@@ -185,49 +203,56 @@ const MenuHamburguesaDesktop = () => {
     }
   };
 
-  // CONEXION APIREST
+  // Codigo para que los videos esten en reproduccion aunque esten con clase hidden
 
-  //Variable para el idioma//
+  const videoRef1 = useRef(null);
+  const videoRef2 = useRef(null);
+  const videoRef3 = useRef(null);
+  const videoRef4 = useRef(null);
+  useEffect(() => {
+    // Función para iniciar la reproducción de un video si está cargado
+    const playHiddenVideo = (videoRef) => {
+      if (videoRef && videoRef.current) {
+        if (!videoRef.current.paused && videoRef.current.currentTime > 0) {
+          // Si el video ya está reproduciéndose, no hagas nada
+          return;
+        }
+        videoRef.current.play();
+      }
+    };
+
+    // Iniciar la reproducción de los videos ocultos
+    playHiddenVideo(videoRef2);
+    playHiddenVideo(videoRef3);
+    playHiddenVideo(videoRef4);
+  }, []);
+
   const idiomaSeleccionado = i18n.language;
   console.log(idiomaSeleccionado);
+  const [menuData, setMenuData] = useState(null);
 
-  const [menuArgData, setMenuArgData] = useState(null);
-  const [menuWorldData, setMenuWorldData] = useState(null);
-
-  //Api wines menu//
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://back-ribera-gl7lw5cfra-uc.a.run.app/api/wines?populate=wines_categories&locale=${idiomaSeleccionado}`
+          `https://back-ribera-gl7lw5cfra-uc.a.run.app/api/wines?populate=wines_categories&locale=${idiomaSeleccionado}
+          `
         );
 
-        const wineData = response.data.data;
-
         // Filtrar solo los vinos cuya categoría sea "In Argentina" o "En Argentina"
-        const filteredMenuArgData = filterWinesByCategory(wineData, [
-          "In Argentina",
-          "En Argentina",
-        ]);
-        setMenuArgData(filteredMenuArgData);
+        const filteredMenuData = response.data.data.filter((wine) =>
+          wine.attributes.wines_categories.data.some(
+            (category) =>
+              category.attributes.name === "In Argentina" ||
+              category.attributes.name === "En Argentina"
+          )
+        );
 
-        // Filtrar solo los vinos cuya categoría sea "In the world" o "En el mundo"
-        const filteredMenuWorldData = filterWinesByCategory(wineData, [
-          "In the world",
-          "En el mundo",
-        ]);
-        setMenuWorldData(filteredMenuWorldData);
+        setMenuData(filteredMenuData);
       } catch (error) {
         console.error("Error al llamar a la API", error);
       }
     };
-
-    const filterWinesByCategory = (wines, categories) =>
-      wines.filter((wine) =>
-        wine.attributes.wines_categories.data.some((category) =>
-          categories.includes(category.attributes.name)
-        )
-      );
 
     fetchData();
   }, [idiomaSeleccionado]);
@@ -243,13 +268,48 @@ const MenuHamburguesaDesktop = () => {
     >
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
-          <div
-            className={`h-screen bg-[imagen] bg-no-repeat bg-cover bg-center relative p-5`}
-            style={{ backgroundImage: `url(${fondoHamburguesaDesktop})` }}
-          >
-            {/* <div className="w-full h-full">
-              <div className="border border-[#F3EEE3] w-full h-full p-2 relative flex flex-col justify-center items-center">
-                <div className="w-full h-full border border-[#F3EEE3] flex flex-col justify-start relative gap-y-8 2xl:gap-y-24 pt-24 2xl:pt-36"> */}
+          <div className="h-screen relative p-5">
+            <video
+              ref={videoRef1}
+              className={`video-background ${
+                isMenu1Hovered || isMenu2Hovered || isMenu3Hovered
+                  ? "hidden"
+                  : ""
+              }`}
+              autoPlay
+              muted
+              loop
+              playsInline
+              src={videoDesktop}
+            ></video>
+            <video
+              ref={videoRef2}
+              className={`video-background ${isMenu1Hovered ? "" : "hidden"}`}
+              autoPlay
+              muted
+              loop
+              playsInline
+              src={videoHistory}
+            ></video>
+            <video
+              ref={videoRef3}
+              className={`video-background ${isMenu2Hovered ? "" : "hidden"}`}
+              autoPlay
+              muted
+              loop
+              playsInline
+              src={videoPatagonian}
+            ></video>
+            <video
+              ref={videoRef4}
+              className={`video-background ${isMenu3Hovered ? "" : "hidden"}`}
+              autoPlay
+              muted
+              loop
+              playsInline
+              src={videoWines}
+            ></video>
+
             <div className="w-full h-full">
               <div class="w-full h-full p-2.5 relative flex flex-col justify-center items-center">
                 {/* lineas horizontales exteriores */}
@@ -263,12 +323,49 @@ const MenuHamburguesaDesktop = () => {
                 <div class="w-0.5 bg-[#F3EEE3] bg-opacity-50  absolute vertical-line-top-right"></div>
                 <div class="w-0.5 bg-[#F3EEE3] bg-opacity-50   absolute vertical-line-bottom-left"></div>
                 <div class="w-0.5 bg-[#F3EEE3] bg-opacity-50  absolute vertical-line-bottom-right"></div>
-                <div className="w-full h-full border-2 border-[#F3EEE3]  border-opacity-80  relative inset-0 animate-border-delay ">
-                  <div className="flex justify-end items-center absolute top-3 right-3">
-                    <Link to="/">
-                      <div className=" bg-transparent border border-[#c4b27d] rounded-full p-3 transition ease-in-out duration-500 hover:scale-90">
-                        <img src={x} alt="" className="w-2" />
-                      </div>
+                <div className="w-full h-full border-2 border-[#F3EEE3]  border-opacity-80  relative inset-0 animate-border-delay">
+                  <div className="flex justify-between items-center pr-4 py-5">
+                    <div
+                      className="cursor-default gap-x-5 text-sm lg:text-base space-x-2 ml-4"
+                      style={robotoFontRegular}
+                    >
+                      {/* Span para "English" */}
+                      <span
+                        id="en"
+                        className={`hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest ${
+                          activeButton === "en"
+                            ? "text-[#c4b27d] font-bold "
+                            : "text-[#F3EEE3]"
+                        }`}
+                        onClick={() => changeLanguage("en")}
+                      >
+                        English
+                      </span>
+                      {/* Span para "Spanish" */}
+                      <span
+                        id="es"
+                        className={`hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest ${
+                          activeButton === "es"
+                            ? "text-[#c4b27d] font-bold"
+                            : "text-[#F3EEE3]"
+                        }`}
+                        onClick={() => changeLanguage("es")}
+                      >
+                        Spanish
+                      </span>
+                    </div>
+                    <Link
+                      to="/MenuHamburguesa"
+                      onMouseEnter={handlehamburMouseEnter}
+                      onMouseLeave={handlehamburMouseLeave}
+                    >
+                      <img
+                        src={hambur}
+                        alt="Hamburger"
+                        className={`w-6 cursor-pointer hover:scale-90 transition ease-in-out duration-500 ${
+                          hamburHovered ? "filterHambur" : ""
+                        }`}
+                      />
                     </Link>
                   </div>
                   <div
@@ -276,7 +373,7 @@ const MenuHamburguesaDesktop = () => {
                       isVisible ? "opacity-100" : "opacity-0"
                     }`}
                   >
-                    <div className="flex justify-center py-10 md:pt-24 2xl:pb-24 2xl:pt-36 ">
+                    <div className="flex justify-center py-10 2xl:pb-24 2xl:pt-24">
                       <Link to="/">
                         <img
                           src={logoDesktop}
@@ -286,7 +383,8 @@ const MenuHamburguesaDesktop = () => {
                       </Link>
                     </div>
                   </div>
-                  <div className="flex justify-center w-full xl:w-3/4 2xl:px-28 mx-auto ">
+
+                  <div className="flex justify-center w-full xl:w-3/4 2xl:px-28 mx-auto">
                     <div
                       id="menu1"
                       onMouseEnter={handleMenu1Hover}
@@ -314,6 +412,7 @@ const MenuHamburguesaDesktop = () => {
                           isVisible3 ? "opacity-100" : "opacity-0"
                         }`}
                       >
+                        {" "}
                         <li>
                           <Link to="/family" style={robotoFontRegular}>
                             <span className="subMenu tracking-widest uppercase">
@@ -356,7 +455,6 @@ const MenuHamburguesaDesktop = () => {
                           isVisible3 ? "opacity-100" : "opacity-0"
                         }`}
                       >
-                        {" "}
                         <li>
                           <Link
                             to="/araucanavineyard"
@@ -376,10 +474,7 @@ const MenuHamburguesaDesktop = () => {
                         </li>
                         <li>
                           <Link to="/workwinery" style={robotoFontRegular}>
-                            <span
-                              className="subMenu tracking-widest uppercase
-                            "
-                            >
+                            <span className="subMenu tracking-widest uppercase">
                               {t("menu.optionB3")}
                             </span>
                           </Link>
@@ -436,11 +531,11 @@ const MenuHamburguesaDesktop = () => {
                           </li>
                           <animated.div style={dropdownAnimation4}>
                             <ul className="text-center">
-                              {menuArgData &&
-                                menuArgData.map((wine) => (
+                              {menuData &&
+                                menuData.map((wine) => (
                                   <li key={wine.id}>
                                     <Link
-                                      to={`/wines-in-argentina/${wine.attributes.slug}`}
+                                      to={`/vinotest/${wine.attributes.slug}`}
                                     >
                                       <div style={robotoFontRegular}>
                                         <span className="subMenu tracking-widest familyName">
@@ -462,21 +557,33 @@ const MenuHamburguesaDesktop = () => {
                           </li>
                           <animated.div style={dropdownAnimation5}>
                             <ul className="text-center">
-                              {menuWorldData &&
-                                menuWorldData.map((wine) => (
-                                  <li key={wine.id}>
-                                    <Link
-                                      to={`/wines-in-world/${wine.attributes.slug}`}
-                                    >
-                                      <div style={robotoFontRegular}>
-                                        <span className="subMenu tracking-widest familyName">
-                                          {wine.attributes.familyName}{" "}
-                                          {wine.attributes.name}
-                                        </span>
-                                      </div>
-                                    </Link>
-                                  </li>
-                                ))}
+                              <li>
+                                <Link to="/RiberaClasico">
+                                  <p style={robotoFontRegular}>
+                                    <span className="subMenu tracking-widest">
+                                      Ribera del Cuarzo Clásico
+                                    </span>
+                                  </p>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/RiberaEspecial">
+                                  <p style={robotoFontRegular}>
+                                    <span className="subMenu tracking-widest">
+                                      Ribera del Cuarzo Especial
+                                    </span>
+                                  </p>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/RiberaParcelaUnicaWorld">
+                                  <p style={robotoFontRegular}>
+                                    <span className="subMenu tracking-widest">
+                                      Ribera del Cuarzo Parcela Única
+                                    </span>
+                                  </p>
+                                </Link>
+                              </li>
                             </ul>
                           </animated.div>
                         </ul>
@@ -484,15 +591,16 @@ const MenuHamburguesaDesktop = () => {
                     </div>
                   </div>
 
-                  <div className="absolute md:px-5 bottom-5 w-full container mx-auto max-w-screen-xl xl:max-w-screen-2xl 2xl:max-w-none left-1/2 transform -translate-x-1/2">
-                    <div className="flex flex-row-reverse justify-around items-center w-full text-[#F3EEE3]">
-                      <div className="w-1/3 flex justify-end items-center">
+                  <div className="absolute bottom-5 md:px-5  w-full container mx-auto max-w-screen-xl xl:max-w-screen-2xl  2xl:max-w-none  left-1/2 transform -translate-x-1/2">
+                    <div className="flex flex-row-reverse justify-around items-end w-full text-[#F3EEE3]">
+                      <div className="w-1/3  flex justify-end items-center ">
                         <a
                           href="https://www.instagram.com/riberadelcuarzo/"
                           target="_blank"
                           onMouseEnter={handleMouseEnter}
                           onMouseLeave={handleMouseLeave}
                         >
+                          {" "}
                           <div className="p-4 border border-white rounded-full hover:border-[#d6c69b] transition duration-300 ease-in-out">
                             <img
                               src={iconIg}
@@ -511,7 +619,7 @@ const MenuHamburguesaDesktop = () => {
                         <div className=" ">
                           <Link
                             to="/contacto"
-                            className="hover:text-[#c4b27d]  duration-300 transition ease-in-out uppercase tracking-widest"
+                            className="hover:text-[#C4B27D]  duration-300 transition ease-in-out uppercase tracking-widest"
                             style={robotoFontRegular}
                           >
                             {t("menu.footerOptionA")}
@@ -521,7 +629,7 @@ const MenuHamburguesaDesktop = () => {
                         <div className="" style={robotoFontRegular}>
                           <a
                             href=""
-                            className="hover:text-[#c4b27d]  duration-300 transition ease-in-out"
+                            className="hover:text-[#C4B27D]  duration-300 transition ease-in-out"
                           >
                             <a
                               target="_blank"
@@ -538,45 +646,36 @@ const MenuHamburguesaDesktop = () => {
                           </a>
                         </div>
 
-                        <div className="uppercase">
+                        <div className="">
                           <Link
-                            to="/press"
+                            to="/Press"
                             href=""
-                            className="hover:text-[#c4b27d]  duration-300 transition ease-in-out tracking-widest"
+                            className="hover:text-[#C4B27D]  duration-300 transition ease-in-out tracking-widest uppercase"
                           >
                             {t("menu.footerOptionC")}
                           </Link>
                         </div>
                       </div>
                       <div
-                        className="flex justify-start items-center w-1/3 cursor-default gap-x-5 text-sm lg:text-base"
-                        style={robotoFontRegular}
+                        className="flex flex-col justify-center items-start w-1/3 cursor-default "
+                        style={playfairFontRegular}
                       >
-                        {/* Span para "English" */}
-                        <span
-                          id="en"
-                          className={`hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest ${
-                            activeButton === "en"
-                              ? "text-[#c4b27d] font-bold "
-                              : "text-[#F3EEE3]"
-                          }`}
-                          onClick={() => changeLanguage("en")}
+                        <img
+                          src={iconUbi}
+                          className="w-4 absolute -top-3 left-[3.7rem]"
+                        />
+                        <a
+                          target="_blank"
+                          href="https://www.google.com.ar/maps/place/39%C2%B011'17.0%22S+66%C2%B052'26.0%22W/@-39.1880556,-66.8738889,853m/data=!3m1!1e3!4m4!3m3!8m2!3d-39.1880556!4d-66.8738889!5m1!1e1?entry=ttu"
+                          className="flex flex-col text-center"
                         >
-                          English
-                        </span>
-
-                        {/* Span para "Spanish" */}
-                        <span
-                          id="es"
-                          className={`hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest ${
-                            activeButton === "es"
-                              ? "text-[#c4b27d] font-bold"
-                              : "text-[#F3EEE3]"
-                          }`}
-                          onClick={() => changeLanguage("es")}
-                        >
-                          Spanish
-                        </span>
+                          <span className="uppercase tracking-[0.17em] text-xs lg:text-sm ">
+                            Río Negro
+                          </span>
+                          <span className="text-xs tracking-tighter">
+                            Patagonia Argentina
+                          </span>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -590,4 +689,4 @@ const MenuHamburguesaDesktop = () => {
   );
 };
 
-export default MenuHamburguesaDesktop;
+export default MenuDesktop;

@@ -12,6 +12,7 @@ import { Transition } from "@react-spring/web";
 import { useSpring, animated } from "@react-spring/web";
 import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import axios from "axios";
 import "../App.css";
 
 const MenuDesktop = () => {
@@ -225,6 +226,53 @@ const MenuDesktop = () => {
     playHiddenVideo(videoRef3);
     playHiddenVideo(videoRef4);
   }, []);
+
+  // CONEXION APIREST
+
+  //Variable para el idioma//
+  const idiomaSeleccionado = i18n.language;
+  console.log(idiomaSeleccionado);
+
+  const [menuArgData, setMenuArgData] = useState(null);
+  const [menuWorldData, setMenuWorldData] = useState(null);
+
+  //Api wines menu//
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          `https://back-ribera-gl7lw5cfra-uc.a.run.app/api/wines?populate=wines_categories&locale=${idiomaSeleccionado}`
+        );
+
+        const wineData = response.data.data;
+
+        // Filtrar solo los vinos cuya categoría sea "In Argentina" o "En Argentina"
+        const filteredMenuArgData = filterWinesByCategory(wineData, [
+          "In Argentina",
+          "En Argentina",
+        ]);
+        setMenuArgData(filteredMenuArgData);
+
+        // Filtrar solo los vinos cuya categoría sea "In the world" o "En el mundo"
+        const filteredMenuWorldData = filterWinesByCategory(wineData, [
+          "In the world",
+          "En el mundo",
+        ]);
+        setMenuWorldData(filteredMenuWorldData);
+      } catch (error) {
+        console.error("Error al llamar a la API", error);
+      }
+    };
+
+    const filterWinesByCategory = (wines, categories) =>
+      wines.filter((wine) =>
+        wine.attributes.wines_categories.data.some((category) =>
+          categories.includes(category.attributes.name)
+        )
+      );
+
+    fetchData();
+  }, [idiomaSeleccionado]);
 
   return (
     <Transition
@@ -500,51 +548,21 @@ const MenuDesktop = () => {
                           </li>
                           <animated.div style={dropdownAnimation4}>
                             <ul className="text-center">
-                              <li>
-                                <Link to="/AraucanaRioCiervos">
-                                  <p style={robotoFontRegular}>
-                                    <span className="subMenu tracking-widest">
-                                      Araucana Río de los Ciervos Malbec
-                                    </span>
-                                  </p>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link to="/AraucanaPinotNoir">
-                                  <p style={robotoFontRegular}>
-                                    <span className="subMenu tracking-widest">
-                                      Araucana Río de los Ciervos Pinot Noir
-                                    </span>
-                                  </p>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link to="/AraucanaMalbec">
-                                  <p style={robotoFontRegular}>
-                                    <span className="subMenu tracking-widest">
-                                      Araucana Malbec
-                                    </span>
-                                  </p>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link to="/AraucanaAzul">
-                                  <p style={robotoFontRegular}>
-                                    <span className="subMenu tracking-widest">
-                                      Araucana Azul
-                                    </span>
-                                  </p>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link to="/RiberaParcelaUnicaArg">
-                                  <p style={robotoFontRegular}>
-                                    <span className="subMenu tracking-widest">
-                                      Ribera del Cuarzo Parcela Única
-                                    </span>
-                                  </p>
-                                </Link>
-                              </li>
+                              {menuArgData &&
+                                menuArgData.map((wine) => (
+                                  <li key={wine.id}>
+                                    <Link
+                                      to={`/wines-in-argentina/${wine.attributes.slug}`}
+                                    >
+                                      <div style={robotoFontRegular}>
+                                        <span className="subMenu tracking-widest familyName">
+                                          {wine.attributes.familyName}{" "}
+                                          {wine.attributes.name}
+                                        </span>
+                                      </div>
+                                    </Link>
+                                  </li>
+                                ))}
                             </ul>
                           </animated.div>
                           <li>
@@ -556,33 +574,21 @@ const MenuDesktop = () => {
                           </li>
                           <animated.div style={dropdownAnimation5}>
                             <ul className="text-center">
-                              <li>
-                                <Link to="/RiberaClasico">
-                                  <p style={robotoFontRegular}>
-                                    <span className="subMenu tracking-widest">
-                                      Ribera del Cuarzo Clásico
-                                    </span>
-                                  </p>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link to="/RiberaEspecial">
-                                  <p style={robotoFontRegular}>
-                                    <span className="subMenu tracking-widest">
-                                      Ribera del Cuarzo Especial
-                                    </span>
-                                  </p>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link to="/RiberaParcelaUnicaWorld">
-                                  <p style={robotoFontRegular}>
-                                    <span className="subMenu tracking-widest">
-                                      Ribera del Cuarzo Parcela Única
-                                    </span>
-                                  </p>
-                                </Link>
-                              </li>
+                              {menuWorldData &&
+                                menuWorldData.map((wine) => (
+                                  <li key={wine.id}>
+                                    <Link
+                                      to={`/wines-in-world/${wine.attributes.slug}`}
+                                    >
+                                      <div style={robotoFontRegular}>
+                                        <span className="subMenu tracking-widest familyName">
+                                          {wine.attributes.familyName}{" "}
+                                          {wine.attributes.name}
+                                        </span>
+                                      </div>
+                                    </Link>
+                                  </li>
+                                ))}
                             </ul>
                           </animated.div>
                         </ul>

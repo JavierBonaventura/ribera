@@ -40,7 +40,10 @@ import RiberaEspecial from "./pages/WinesWorld/RiberaEspecial";
 import Press from "./pages/Press/Press";
 import FormularioContacto from "./pages/Contact/FormularioContacto";
 import TestWine from "./pages/WinesArgentina/testWine";
-import NewTest from "./pages/WinesArgentina/newTest";
+import VinoTest from "./testing/vinoTest";
+import MenuTest from "./testing/menuTest";
+import WinesInArgentina from "./pages/WinesArgentina/wines-in-argentina";
+import WinesInWorld from "./pages/WinesWorld/wines-in-world";
 
 function App() {
   const [showAgeConfirmation, setShowAgeConfirmation] = useState(true);
@@ -227,7 +230,6 @@ const AppContent = () => {
               />
               <Route path="/AraucanaMalbec" element={<AraucanaMalbec />} />
               <Route path="/vinos/:slug" element={<TestWine />} />
-              <Route path="/newtest/:slug" element={<NewTest />} />
               <Route path="/AraucanaAzul" element={<AraucanaAzul />} />
               <Route
                 path="/RiberaParcelaUnicaWorld"
@@ -248,6 +250,14 @@ const AppContent = () => {
                 />
               )}
               <Route path="/contacto" element={<FormularioContacto />} />
+
+              <Route path="/vinotest/:slug" element={<VinoTest />} />
+              <Route path="/menutest" element={<MenuTest />} />
+              <Route
+                path="/wines-in-argentina/:slug"
+                element={<WinesInArgentina />}
+              />
+              <Route path="/wines-in-world/:slug" element={<WinesInWorld />} />
             </Routes>
           </animated.div>
         )}
