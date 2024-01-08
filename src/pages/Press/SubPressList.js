@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 const SubPressList = ({ year, presses }) => {
-  // console.log("en ano es " + year)
-  // console.log(presses)
   const { t, i18n } = useTranslation();
 
   const [isVisible, setIsVisible] = useState(false);
@@ -17,18 +15,6 @@ const SubPressList = ({ year, presses }) => {
 
     return () => clearTimeout(timeout);
   }, [year]);
-
-
-// Filter presses for the year 2024
-const filteredPresses = presses.filter((press) => {
-  const pressYear = new Date(press.attributes.date).getFullYear();
-  return pressYear === year;
-});
-
-console.log("el nuevo arreglo es", filteredPresses);
-
-
-
 
   const playfairFontItalic = {
     fontFamily: "Playfair Italic, serif",
@@ -50,7 +36,7 @@ console.log("el nuevo arreglo es", filteredPresses);
           : "opacity-0 transition-opacity duration-500"
       }`}
     >
-      {filteredPresses.map((press) => (
+      {presses.map((press) => (
         <div key={press.id} className="w-full">
           <div className="flex flex-col lg:flex-row lg:gap-x-10 w-full xl:w-2/3 mx-auto">
             <div
