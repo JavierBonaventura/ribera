@@ -379,8 +379,8 @@ function Araucana() {
                 {/* Bottle 4 end */}
               </div>
             </div>
+            {/* Footer bottle end */}
           </div>
-          {/* Footer bottle end */}
         </animated.div>
       )}
     </Transition>

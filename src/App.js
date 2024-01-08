@@ -29,19 +29,8 @@ import LifeOnEstateDesktop from "./pages/PatagonianSpirit/LifeOnEstateDesktop";
 import LifeOnEstate from "./pages/PatagonianSpirit/LifeOnEstate";
 import LifeWater from "./pages/PatagonianSpirit/LifeWater";
 import LifeWaterRead from "./pages/PatagonianSpirit/LifeWater-read";
-import AraucanaRioCiervos from "./pages/WinesArgentina/AraucanaRioCiervos";
-import AraucanaPinotNoir from "./pages/WinesArgentina/AraucanaPinotNoir";
-import AraucanaMalbec from "./pages/WinesArgentina/AraucanaMalbec";
-import AraucanaAzul from "./pages/WinesArgentina/AraucanaAzul";
-import RiberaParcelaUnicaWorld from "./pages/WinesWorld/RiberaParcelaUnica";
-import RiberaParcelaUnicaArg from "./pages/WinesArgentina/RiberaParcelaUnica";
-import RiberaClasico from "./pages/WinesWorld/RiberaClasico";
-import RiberaEspecial from "./pages/WinesWorld/RiberaEspecial";
 import Press from "./pages/Press/Press";
 import FormularioContacto from "./pages/Contact/FormularioContacto";
-import TestWine from "./pages/WinesArgentina/testWine";
-import VinoTest from "./testing/vinoTest";
-import MenuTest from "./testing/menuTest";
 import WinesInArgentina from "./pages/WinesArgentina/wines-in-argentina";
 import WinesInWorld from "./pages/WinesWorld/wines-in-world";
 
@@ -220,27 +209,6 @@ const AppContent = () => {
               <Route path="/press" element={<Press />} />
               <Route path="/lifewaterread" element={<LifeWaterRead />} />
 
-              <Route
-                path="/AraucanaRioCiervos"
-                element={<AraucanaRioCiervos />}
-              />
-              <Route
-                path="/AraucanaPinotNoir"
-                element={<AraucanaPinotNoir />}
-              />
-              <Route path="/AraucanaMalbec" element={<AraucanaMalbec />} />
-              <Route path="/vinos/:slug" element={<TestWine />} />
-              <Route path="/AraucanaAzul" element={<AraucanaAzul />} />
-              <Route
-                path="/RiberaParcelaUnicaWorld"
-                element={<RiberaParcelaUnicaWorld />}
-              />
-              <Route
-                path="/RiberaParcelaUnicaArg"
-                element={<RiberaParcelaUnicaArg />}
-              />
-              <Route path="/RiberaClasico" element={<RiberaClasico />} />
-              <Route path="/RiberaEspecial" element={<RiberaEspecial />} />
               {windowWidth < 768 ? (
                 <Route path="/menuhamburguesa" element={<MenuHamburguesa />} />
               ) : (
@@ -251,8 +219,6 @@ const AppContent = () => {
               )}
               <Route path="/contacto" element={<FormularioContacto />} />
 
-              <Route path="/vinotest/:slug" element={<VinoTest />} />
-              <Route path="/menutest" element={<MenuTest />} />
               <Route
                 path="/wines-in-argentina/:slug"
                 element={<WinesInArgentina />}

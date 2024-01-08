@@ -95,30 +95,62 @@ function WinesInArgentina() {
   const { t, i18n } = useTranslation();
   //Obtener el idioma seleccionado
   const idiomaSeleccionado = i18n.language;
-  console.log(idiomaSeleccionado);
-  console.log(idiomaSeleccionado);
 
   const { slug } = useParams();
-  console.log(slug);
   const [wineData, setWineData] = useState(null);
+  const [allRelatedImages, setAllRelatedImages] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://back-ribera-gl7lw5cfra-uc.a.run.app/api/wines?populate=mainBottleImage%2C%20secondaryImage%2C%20technicalSheet%2C%20relatedImage%20&filters%5Bslug%5D=${slug}&locale=${idiomaSeleccionado}`
+          `https://back-ribera-gl7lw5cfra-uc.a.run.app/api/wines?populate=mainBottleImage%2C%20secondaryImage%2C%20technicalSheet%2C%20relatedImage%2C%20wines_categories%20&filters%5Bslug%5D=${slug}&locale=${idiomaSeleccionado}`
         );
 
-        // Incorpora la información de la API aquí
-        const fetchedWineData = response.data.data[0]; // Selecciona el primer elemento del array data
+        const fetchedWineData = response.data.data[0];
         setWineData(fetchedWineData);
       } catch (error) {
         console.error("Error al llamar a la API", error);
       }
     };
 
+    const fetchAllRelatedImages = async () => {
+      try {
+        const response = await axios.get(
+          `https://back-ribera-gl7lw5cfra-uc.a.run.app/api/wines?populate=wines_categories%2CrelatedImage&locale=${idiomaSeleccionado}`
+        );
+
+        const currentWineCategory = "In Argentina" && "En Argentina";
+
+        const fetchedImages = response.data.data
+          .filter(
+            (wine) =>
+              wine.attributes.slug !== slug &&
+              wine.attributes.wines_categories.data.some(
+                (category) => category.attributes.name === currentWineCategory
+              )
+          )
+          .map((wine) => ({
+            id: wine.id,
+            imageUrl: wine.attributes.relatedImage.data.attributes.url,
+            imageName: wine.attributes.relatedImage.data.attributes.name,
+            imageFamilyName: wine.attributes.familyName,
+            imageName: wine.attributes.name,
+            slugName: wine.attributes.slug,
+          }));
+
+        setAllRelatedImages(fetchedImages);
+      } catch (error) {
+        console.error(
+          "Error al llamar a la API para imágenes relacionadas",
+          error
+        );
+      }
+    };
+
     fetchData();
-  }, []);
+    fetchAllRelatedImages();
+  }, [slug, wineData, idiomaSeleccionado]);
 
   return (
     <Transition
@@ -182,8 +214,7 @@ function WinesInArgentina() {
                   <div className="w-32 md:w-52 mx-auto relative flex justify-center items-center py-16 md:py-24">
                     <img
                       src={
-                        wineData.attributes.mainBottleImage.data.attributes
-                          .formats.small.url
+                        wineData.attributes.mainBottleImage.data.attributes.url
                       }
                       alt={
                         wineData.attributes.mainBottleImage.data.attributes.name
@@ -278,8 +309,7 @@ function WinesInArgentina() {
                     <div className="recuadro-2"></div>
                     <img
                       src={
-                        wineData.attributes.secondaryImage.data.attributes
-                          .formats.large.url
+                        wineData.attributes.secondaryImage.data.attributes.url
                       }
                       className="imagen  absolute xl:top-[-70px] 2xl:top-[-200px]"
                       alt={
@@ -291,6 +321,46 @@ function WinesInArgentina() {
               </div>
             )}
             {/* Img pre footer start */}
+
+            {/* Footer bottle start */}
+            <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 !pt-20 md:!pt-40 ">
+              <div
+                className="flex flex-col md:flex-row  text-[#C4B27D] w-full gap-y-10 md:gap-x-20 2xl:gap-x-32 justify-center"
+                style={windsorLight}
+              >
+                {/* Bottle start */}
+                {allRelatedImages.map((image) => (
+                  <div
+                    key={image.id}
+                    className="border border-[#C4B27D] flex flex-col justify-between px-3 pt-3 md:border-0 md:p-0"
+                  >
+                    <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
+                      <Link
+                        to={`/wines-in-argentina/${image.slugName}`}
+                        className="text-white uppercase text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
+                      >
+                        {t("wines.btnFooter")}
+                      </Link>
+                      <div className="flex flex-col justify-center items-center text-base lg:text-xl xl:text-2xl text-center">
+                        <span className="uppercase">
+                          {image.imageFamilyName}
+                        </span>
+                        <span>{image.imageName}</span>
+                      </div>
+                    </div>
+                    <Link to="">
+                      <img
+                        src={image.imageUrl}
+                        alt={image.imageName}
+                        className="w-1/2 md:w-full mx-auto transform hover:-translate-y-1 transition ease-in-out duration-300"
+                      />
+                    </Link>
+                  </div>
+                ))}
+                {/* Bottle end */}
+              </div>
+            </div>
+            {/* Footer bottle end */}
           </div>
         </animated.div>
       )}

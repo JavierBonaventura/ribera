@@ -24,7 +24,7 @@ const TuComponente = () => {
         const fetchedWineData = response.data.data[0];
         setWineData(fetchedWineData);
       } catch (error) {
-        console.error("Error al llamar a la API para detalles del vino", error);
+        console.error("Error al llamar a la API", error);
       }
     };
 
