@@ -199,7 +199,7 @@ function Press() {
     fetchData();
   }, []);
 
-  const [selectedYear, setSelectedYear] = useState(null);
+  const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
   const navigateYear = (step) => {
     const years = Array.from(new Set(presses.map((press) => new Date(press.attributes.date).getFullYear())));
     const currentIndex = years.indexOf(currentYear);
@@ -212,6 +212,7 @@ function Press() {
       setCurrentYear(years[newIndex]);
     }, 1000);
   };
+  
 
 
   const [igHovered, setIgHovered] = useState(false);

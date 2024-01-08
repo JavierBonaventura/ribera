@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 const SubPressList = ({ year, presses }) => {
+  console.log("en ano es " + year)
+  console.log(presses)
   const { t, i18n } = useTranslation();
 
   const [isVisible, setIsVisible] = useState(false);
