@@ -188,8 +188,14 @@ function Press() {
         setPresses(data.data);
 
         const highestYear = Math.max(
-          ...data.data.map((press) => new Date(press.attributes.date).getFullYear())
-        );
+          ...data.data
+              .map(press => {
+                  const partes = press.attributes.date.split('-');
+                  const year = parseInt(partes[0], 10);
+                  return isNaN(year) ? -Infinity : year;
+              })
+      );
+
         setCurrentYear(highestYear);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -201,15 +207,34 @@ function Press() {
 
   const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
   const navigateYear = (step) => {
-    const years = Array.from(new Set(presses.map((press) => new Date(press.attributes.date).getFullYear())));
-    const currentIndex = years.indexOf(currentYear);
-    const newIndex = (currentIndex + step + years.length) % years.length;
+    
+   
+    const yearsSet = new Set();
+
+    presses.forEach(press => {
+      const partes = press.attributes.date.split('-');
+      const ano = parseInt(partes[0], 10);
+      yearsSet.add(ano);
+    });
+
+    // Convertir el conjunto a un arreglo y ordenarlo si es necesario
+    const uniqueYearsArray = Array.from(yearsSet).sort();
+
+    setUniqueYears(uniqueYearsArray);
+    
+    
+    
+    
+    
+    // console.log(uniqueYearsArray);
+    const currentIndex = uniqueYearsArray.indexOf(currentYear);
+    const newIndex = (currentIndex + step + uniqueYearsArray.length) % uniqueYearsArray.length;
   
-    setSelectedYear(years[newIndex]);
+    setSelectedYear(uniqueYearsArray[newIndex]);
   
     // Demora de un segundo antes de actualizar el año seleccionado
     setTimeout(() => {
-      setCurrentYear(years[newIndex]);
+      setCurrentYear(uniqueYearsArray[newIndex]);
     }, 1000);
   };
   
@@ -238,7 +263,34 @@ function Press() {
   };
 
 
- 
+//  funcion paraw contruir un arreglo con los anos disponibles
+
+  const [uniqueYears, setUniqueYears] = useState([]); 
+
+  useEffect(() => {
+   
+    const yearsSet = new Set();
+
+    presses.forEach(press => {
+      const partes = press.attributes.date.split('-');
+      const ano = parseInt(partes[0], 10);
+      yearsSet.add(ano);
+    });
+
+    // Convertir el conjunto a un arreglo y ordenarlo si es necesario
+    const uniqueYearsArray = Array.from(yearsSet).sort();
+
+    setUniqueYears(uniqueYearsArray);
+  }, [presses]);
+
+// filtro para pasar al componente hijo el arreglo ya filtrado por ano
+
+  const filteredPresses = presses.filter(press => {
+    var partes = press.attributes.date.split('-');
+    var ano = parseInt(partes[0], 10);
+    return ano === currentYear;
+  });
+
   
 
   return (
@@ -410,7 +462,7 @@ function Press() {
                 </div>
 
                 {currentYear && (
-        <SubPressList year={selectedYear} presses={presses.filter((press) => new Date(press.attributes.date).getFullYear() === currentYear)} />
+        <SubPressList year={selectedYear} presses={filteredPresses} />
       )}
               </div>
             </div>

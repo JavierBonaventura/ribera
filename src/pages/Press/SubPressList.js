@@ -2,6 +2,17 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 const SubPressList = ({ year, presses }) => {
+
+  // Filtro del arreglo por en ano seleccionado
+const filteredPresses = presses.filter(press => {
+  var partes = press.attributes.date.split('-');
+  var ano = parseInt(partes[0], 10)
+  return ano === year;
+});
+
+
+
+
   const { t, i18n } = useTranslation();
 
   const [isVisible, setIsVisible] = useState(false);
@@ -36,7 +47,7 @@ const SubPressList = ({ year, presses }) => {
           : "opacity-0 transition-opacity duration-500"
       }`}
     >
-      {presses.map((press) => (
+      {filteredPresses.map((press) => (
         <div key={press.id} className="w-full">
           <div className="flex flex-col lg:flex-row lg:gap-x-10 w-full xl:w-2/3 mx-auto">
             <div
