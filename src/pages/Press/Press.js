@@ -410,7 +410,7 @@ function Press() {
                 </div>
 
                 {currentYear && (
-        <SubPressList year={selectedYear} presses={presses.filter((press) => new Date(press.attributes.date).getFullYear() === currentYear)} />
+        <SubPressList year={selectedYear} presses={presses.filter((press) => new Date(press.attributes.date).getFullYear() === selectedYear)} />
       )}
               </div>
             </div>
