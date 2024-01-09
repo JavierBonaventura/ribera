@@ -461,9 +461,12 @@ function Press() {
                   </div>
                 </div>
 
-                {currentYear && (
-        <SubPressList year={currentYear} presses={filteredPresses} />
-      )}
+              
+  <SubPressList year={selectedYear !== null ? selectedYear : currentYear} presses={filteredPresses} />
+
+
+
+
               </div>
             </div>
 
