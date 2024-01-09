@@ -120,7 +120,7 @@ function WinesInWorld() {
           `https://back-ribera-gl7lw5cfra-uc.a.run.app/api/wines?populate=wines_categories%2CrelatedImage&locale=${idiomaSeleccionado}`
         );
 
-        const currentWineCategory = "In the world" && "En el mundo";
+        const currentWineCategory = "In the world";
 
         const fetchedImages = response.data.data
           .filter(

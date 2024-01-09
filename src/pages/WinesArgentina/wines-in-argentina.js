@@ -48,8 +48,14 @@ function WinesInArgentina() {
   const locationAnimacion = useLocation();
   const [showDropdown1, setShowDropdown1] = useState(false);
 
+  const { slug } = useParams();
   const dropdownAnimation1 = useSpring({
-    height: showDropdown1 ? "100px" : "0px",
+    height:
+      slug === "malbec" && showDropdown1
+        ? "200px"
+        : showDropdown1
+        ? "100px"
+        : "0px",
     opacity: showDropdown1 ? 1 : 0,
     overflow: "hidden",
     config: { duration: 500 },
@@ -95,8 +101,6 @@ function WinesInArgentina() {
   const { t, i18n } = useTranslation();
   //Obtener el idioma seleccionado
   const idiomaSeleccionado = i18n.language;
-
-  const { slug } = useParams();
   const [wineData, setWineData] = useState(null);
   const [allRelatedImages, setAllRelatedImages] = useState([]);
 
@@ -120,7 +124,7 @@ function WinesInArgentina() {
           `https://back-ribera-gl7lw5cfra-uc.a.run.app/api/wines?populate=wines_categories%2CrelatedImage&locale=${idiomaSeleccionado}`
         );
 
-        const currentWineCategory = "In Argentina" && "En Argentina";
+        const currentWineCategory = "In Argentina";
 
         const fetchedImages = response.data.data
           .filter(
