@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 const SubPressList = ({ year, presses }) => {
+  console.log(year)
+  console.log(presses)
 
   // Filtro del arreglo por en ano seleccionado
 const filteredPresses = presses.filter(press => {

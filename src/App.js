@@ -36,7 +36,7 @@ import WinesInWorld from "./pages/WinesWorld/wines-in-world";
 
 function App() {
   const [showAgeConfirmation, setShowAgeConfirmation] = useState(true);
-  const [isAdult, setIsAdult] = useState(false);
+  const [isAdult, setIsAdult] = useState(true);
   const [showAccessDeniedMessage, setShowAccessDeniedMessage] = useState(false);
   const [countdown, setCountdown] = useState(10);
   const [

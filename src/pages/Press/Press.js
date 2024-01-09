@@ -205,7 +205,7 @@ function Press() {
     fetchData();
   }, []);
 
-  const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
+  const [selectedYear, setSelectedYear] = useState(null);
   const navigateYear = (step) => {
     
    
@@ -462,7 +462,7 @@ function Press() {
                 </div>
 
                 {currentYear && (
-        <SubPressList year={selectedYear} presses={filteredPresses} />
+        <SubPressList year={currentYear} presses={filteredPresses} />
       )}
               </div>
             </div>
