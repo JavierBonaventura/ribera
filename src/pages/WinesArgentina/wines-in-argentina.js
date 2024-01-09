@@ -154,7 +154,7 @@ function WinesInArgentina() {
 
     fetchData();
     fetchAllRelatedImages();
-  }, [slug, wineData, idiomaSeleccionado]);
+  }, [slug, idiomaSeleccionado]);
 
   return (
     <Transition
