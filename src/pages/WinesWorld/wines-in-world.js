@@ -348,7 +348,7 @@ function WinesInWorld() {
                         <span>{image.imageName}</span>
                       </div>
                     </div>
-                    <Link to="">
+                    <Link to={`/wines-in-world/${image.slugName}`}>
                       <img
                         src={image.imageUrl}
                         alt={image.imageName}

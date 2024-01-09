@@ -17,7 +17,6 @@ const MenuHamburguesaDesktop = () => {
   const [activeButton, setActiveButton] = useState("en");
   const changeLanguage = (newLanguage) => {
     i18n.changeLanguage(newLanguage);
-    console.log("Idioma actual:", i18n.language);
     setActiveButton(newLanguage);
   };
 
@@ -189,8 +188,6 @@ const MenuHamburguesaDesktop = () => {
 
   //Variable para el idioma//
   const idiomaSeleccionado = i18n.language;
-  console.log(idiomaSeleccionado);
-
   const [menuArgData, setMenuArgData] = useState(null);
   const [menuWorldData, setMenuWorldData] = useState(null);
 

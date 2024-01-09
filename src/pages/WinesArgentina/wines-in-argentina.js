@@ -352,7 +352,7 @@ function WinesInArgentina() {
                         <span>{image.imageName}</span>
                       </div>
                     </div>
-                    <Link to="">
+                    <Link to={`/wines-in-argentina/${image.slugName}`}>
                       <img
                         src={image.imageUrl}
                         alt={image.imageName}
