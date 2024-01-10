@@ -183,41 +183,41 @@ const AppContent = () => {
                 <Route path="/" element={<MenuDesktop />} />
               )}
               <Route path="/family" element={<Family />} />
-              <Route path="/valleazul" element={<ValleAzul />} />
+              <Route path="/valle-azul" element={<ValleAzul />} />
 
-              <Route path="/araucanavineyard" element={<AraucanaVineyard />} />
-
-              {windowWidth < 768 ? (
-                <Route path="/workvineyard" element={<WorkVineyard />} />
-              ) : (
-                <Route path="/workvineyard" element={<WorkVineyardDesktop />} />
-              )}
+              <Route path="/araucana-vineyard" element={<AraucanaVineyard />} />
 
               {windowWidth < 768 ? (
-                <Route path="/workwinery" element={<WorkWinery />} />
-              ) : (
-                <Route path="/workwinery" element={<WorkWineryDesktop />} />
-              )}
-
-              {windowWidth < 768 ? (
-                <Route path="/lifeonestate" element={<LifeOnEstate />} />
-              ) : (
-                <Route path="/lifeonestate" element={<LifeOnEstateDesktop />} />
-              )}
-
-              <Route path="/lifewater" element={<LifeWater />} />
-              <Route path="/press" element={<Press />} />
-              <Route path="/lifewaterread" element={<LifeWaterRead />} />
-
-              {windowWidth < 768 ? (
-                <Route path="/menuhamburguesa" element={<MenuHamburguesa />} />
+                <Route path="/work-vineyard" element={<WorkVineyard />} />
               ) : (
                 <Route
-                  path="/menuhamburguesa"
-                  element={<MenuHamburguesaDesktop />}
+                  path="/work-vineyard"
+                  element={<WorkVineyardDesktop />}
                 />
               )}
-              <Route path="/contacto" element={<FormularioContacto />} />
+
+              {windowWidth < 768 ? (
+                <Route path="/work-winery" element={<WorkWinery />} />
+              ) : (
+                <Route path="/work-winery" element={<WorkWineryDesktop />} />
+              )}
+
+              {windowWidth < 768 ? (
+                <Route path="/life-estate" element={<LifeOnEstate />} />
+              ) : (
+                <Route path="/life-estate" element={<LifeOnEstateDesktop />} />
+              )}
+
+              <Route path="/water-life" element={<LifeWater />} />
+              <Route path="/press" element={<Press />} />
+              <Route path="/water-life-read" element={<LifeWaterRead />} />
+
+              {windowWidth < 768 ? (
+                <Route path="/menu" element={<MenuHamburguesa />} />
+              ) : (
+                <Route path="/menu" element={<MenuHamburguesaDesktop />} />
+              )}
+              <Route path="/contact" element={<FormularioContacto />} />
 
               <Route
                 path="/wines-in-argentina/:slug"

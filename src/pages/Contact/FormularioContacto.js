@@ -100,7 +100,7 @@ const FormularioContacto = () => {
                   </Link>
                 </div>
                 <div class="mt-4">
-                  <Link to="/MenuHamburguesa">
+                  <Link to="/menu">
                     <img src={hambur} alt="" className="w-7" />
                   </Link>
                 </div>

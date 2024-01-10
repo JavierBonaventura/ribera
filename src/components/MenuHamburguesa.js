@@ -279,7 +279,7 @@ const Home = () => {
 
                     <li>
                       {" "}
-                      <Link to="/valleazul" style={robotoFontRegular}>
+                      <Link to="/valle-azul" style={robotoFontRegular}>
                         {" "}
                         <span className="subMenu tracking-widest uppercase">
                           {t("menu.optionA2")}
@@ -299,35 +299,35 @@ const Home = () => {
                 <animated.div style={dropdownAnimation2}>
                   <ul className="text-center space-y-1.5">
                     <li>
-                      <Link to="/araucanavineyard" style={robotoFontRegular}>
+                      <Link to="/araucana-vineyard" style={robotoFontRegular}>
                         <span className="subMenu tracking-widest uppercase">
                           {t("menu.optionB1")}
                         </span>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/workvineyard" style={robotoFontRegular}>
+                      <Link to="/work-vineyard" style={robotoFontRegular}>
                         <span className="subMenu tracking-widest uppercase">
                           {t("menu.optionB2")}
                         </span>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/workwinery" style={robotoFontRegular}>
+                      <Link to="/work-winery" style={robotoFontRegular}>
                         <span className="subMenu tracking-widest uppercase">
                           {t("menu.optionB3")}
                         </span>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/lifeonestate" style={robotoFontRegular}>
+                      <Link to="/life-estate" style={robotoFontRegular}>
                         <span className="subMenu tracking-widest uppercase">
                           {t("menu.optionB4")}
                         </span>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/lifewater" style={robotoFontRegular}>
+                      <Link to="/water-life" style={robotoFontRegular}>
                         <span className="subMenu tracking-widest uppercase">
                           {t("menu.optionB5")}
                         </span>
@@ -404,7 +404,7 @@ const Home = () => {
             <div className=" w-full px-20 text-center flex flex-col gap-y-5 pt-14 ">
               <div className=" flex justify-center gap-x-10 text-base">
                 <Link
-                  to="/contacto"
+                  to="/contact"
                   className="uppercase footerItems tracking-widest hover:underline"
                   style={roboto}
                 >

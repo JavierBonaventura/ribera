@@ -193,7 +193,7 @@ const Home = () => {
           <div className="containerHome  background  pt-8">
             <div className="w-full grid justify-items-end pr-6 ">
               <div className="w-6">
-                <Link to="/MenuHamburguesa">
+                <Link to="/menu">
                   <img src={hambur} alt="" className="w-full" />
                 </Link>
               </div>
@@ -225,7 +225,7 @@ const Home = () => {
                     </li>
 
                     <li>
-                      <Link to="/valleazul" style={robotoFontRegular}>
+                      <Link to="/valle-azul" style={robotoFontRegular}>
                         <span className="subMenu tracking-widest uppercase">
                           {t("menu.optionA2")}
                         </span>
@@ -244,35 +244,35 @@ const Home = () => {
                 <animated.div style={dropdownAnimation2}>
                   <ul className="text-center space-y-1.5">
                     <li>
-                      <Link to="/araucanavineyard" style={robotoFontRegular}>
+                      <Link to="/araucana-vineyard" style={robotoFontRegular}>
                         <span className="subMenu tracking-widest uppercase">
                           {t("menu.optionB1")}
                         </span>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/workvineyard" style={robotoFontRegular}>
+                      <Link to="/work-vineyard" style={robotoFontRegular}>
                         <span className="subMenu tracking-widest uppercase">
                           {t("menu.optionB2")}
                         </span>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/workwinery" style={robotoFontRegular}>
+                      <Link to="/work-winery" style={robotoFontRegular}>
                         <span className="subMenu tracking-widest uppercase">
                           {t("menu.optionB3")}
                         </span>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/lifeonestate" style={robotoFontRegular}>
+                      <Link to="/life-estate" style={robotoFontRegular}>
                         <span className="subMenu tracking-widest uppercase">
                           {t("menu.optionB4")}
                         </span>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/lifewater" style={robotoFontRegular}>
+                      <Link to="/water-life" style={robotoFontRegular}>
                         <span className="subMenu tracking-widest uppercase">
                           {t("menu.optionB5")}
                         </span>
@@ -351,7 +351,7 @@ const Home = () => {
             <div className="flex flex-col text-center gap-y-20 text-sm">
               <div className="flex flex-col gap-y-4 ">
                 <Link
-                  to="/contacto"
+                  to="/contact"
                   className="footerItems tracking-widest"
                   style={robotoFontRegular}
                 >

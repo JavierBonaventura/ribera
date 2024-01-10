@@ -57,7 +57,7 @@ const LifeWater = () => {
                     </Link>
                   </div>
                   <div class="mt-4">
-                    <Link to="/MenuHamburguesa">
+                    <Link to="/menu">
                       <img
                         src={hambur}
                         alt=""
@@ -100,7 +100,7 @@ const LifeWater = () => {
                     }}
                   ></p>
                   <div className="flex justify-center items-center ">
-                    <Link to="/lifewaterread">
+                    <Link to="/water-life-read">
                       <a
                         href=""
                         className="text-[#C4B27D] hover:text-[#F3EEE3]  uppercase hover:bg-[#C4B27D] border border-[#C4B27D] text-lg py-2 px-10 rounded-lg   transition ease-in-out  duration-300"

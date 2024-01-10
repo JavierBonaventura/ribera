@@ -319,7 +319,7 @@ const MenuHamburguesaDesktop = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="/valleazul" style={robotoFontRegular}>
+                          <Link to="/valle-azul" style={robotoFontRegular}>
                             <span className="subMenu tracking-widest uppercase">
                               {t("menu.optionA2")}
                             </span>
@@ -356,7 +356,7 @@ const MenuHamburguesaDesktop = () => {
                         {" "}
                         <li>
                           <Link
-                            to="/araucanavineyard"
+                            to="/araucana-vineyard"
                             style={robotoFontRegular}
                           >
                             <span className="subMenu tracking-widest uppercase">
@@ -365,14 +365,14 @@ const MenuHamburguesaDesktop = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="/workvineyard" style={robotoFontRegular}>
+                          <Link to="/work-vineyard" style={robotoFontRegular}>
                             <span className="subMenu tracking-widest uppercase">
                               {t("menu.optionB2")}
                             </span>
                           </Link>
                         </li>
                         <li>
-                          <Link to="/workwinery" style={robotoFontRegular}>
+                          <Link to="/work-winery" style={robotoFontRegular}>
                             <span
                               className="subMenu tracking-widest uppercase
                             "
@@ -382,14 +382,14 @@ const MenuHamburguesaDesktop = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="/lifeonestate" style={robotoFontRegular}>
+                          <Link to="/life-estate" style={robotoFontRegular}>
                             <span className="subMenu tracking-widest uppercase">
                               {t("menu.optionB4")}
                             </span>
                           </Link>
                         </li>
                         <li>
-                          <Link to="/lifewater" style={robotoFontRegular}>
+                          <Link to="/water-life" style={robotoFontRegular}>
                             <span className="subMenu tracking-widest uppercase">
                               {t("menu.optionB5")}
                             </span>
@@ -507,7 +507,7 @@ const MenuHamburguesaDesktop = () => {
                       >
                         <div className=" ">
                           <Link
-                            to="/contacto"
+                            to="/contact"
                             className="hover:text-[#c4b27d]  duration-300 transition ease-in-out uppercase tracking-widest"
                             style={robotoFontRegular}
                           >

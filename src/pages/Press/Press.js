@@ -4,14 +4,13 @@ import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import hambur from "../../images/menu-hambur.png";
 import iconIg from "../../images/icon-ig.png";
-import SubPressList from './SubPressList'; 
+import SubPressList from "./SubPressList";
 import { Transition, animated } from "@react-spring/web";
 import { useTranslation } from "react-i18next";
 import "../../App.css";
 
 function Press() {
-
-// Idioma
+  // Idioma
   const { t, i18n } = useTranslation();
 
   // inicio codigo para retrasar la aparicion del titulo
@@ -86,7 +85,7 @@ function Press() {
   const renderYearDigits = () => {
     if (currentYear !== null) {
       const digits = currentYear.toString();
-  
+
       return digits.split("").map((digit, index) => (
         <span
           key={index}
@@ -99,10 +98,9 @@ function Press() {
         </span>
       ));
     } else {
-      return null; 
+      return null;
     }
   };
-
 
   useEffect(() => {
     // Codigo para verificar si es un dispositivo móvil
@@ -175,7 +173,6 @@ function Press() {
 
   // fin codigo para dibujar circulo en botones
 
-
   // inicio codigo para consultar por los anos de los titulares por API
   const [presses, setPresses] = useState([]);
   const [currentYear, setCurrentYear] = useState(null);
@@ -183,22 +180,23 @@ function Press() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://back-ribera-gl7lw5cfra-uc.a.run.app/api/presses?populate=mainImage');
+        const response = await fetch(
+          "https://back-ribera-gl7lw5cfra-uc.a.run.app/api/presses?populate=mainImage"
+        );
         const data = await response.json();
         setPresses(data.data);
 
         const highestYear = Math.max(
-          ...data.data
-              .map(press => {
-                  const partes = press.attributes.date.split('-');
-                  const year = parseInt(partes[0], 10);
-                  return isNaN(year) ? -Infinity : year;
-              })
-      );
+          ...data.data.map((press) => {
+            const partes = press.attributes.date.split("-");
+            const year = parseInt(partes[0], 10);
+            return isNaN(year) ? -Infinity : year;
+          })
+        );
 
         setCurrentYear(highestYear);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       }
     };
 
@@ -207,12 +205,10 @@ function Press() {
 
   const [selectedYear, setSelectedYear] = useState(null);
   const navigateYear = (step) => {
-    
-   
     const yearsSet = new Set();
 
-    presses.forEach(press => {
-      const partes = press.attributes.date.split('-');
+    presses.forEach((press) => {
+      const partes = press.attributes.date.split("-");
       const ano = parseInt(partes[0], 10);
       yearsSet.add(ano);
     });
@@ -221,24 +217,19 @@ function Press() {
     const uniqueYearsArray = Array.from(yearsSet).sort();
 
     setUniqueYears(uniqueYearsArray);
-    
-    
-    
-    
-    
+
     // console.log(uniqueYearsArray);
     const currentIndex = uniqueYearsArray.indexOf(currentYear);
-    const newIndex = (currentIndex + step + uniqueYearsArray.length) % uniqueYearsArray.length;
-  
+    const newIndex =
+      (currentIndex + step + uniqueYearsArray.length) % uniqueYearsArray.length;
+
     setSelectedYear(uniqueYearsArray[newIndex]);
-  
+
     // Demora de un segundo antes de actualizar el año seleccionado
     setTimeout(() => {
       setCurrentYear(uniqueYearsArray[newIndex]);
     }, 1000);
   };
-  
-
 
   const [igHovered, setIgHovered] = useState(false);
   const handleMouseEnter = () => {
@@ -262,17 +253,15 @@ function Press() {
     fontStyle: "normal",
   };
 
+  //  funcion paraw contruir un arreglo con los anos disponibles
 
-//  funcion paraw contruir un arreglo con los anos disponibles
-
-  const [uniqueYears, setUniqueYears] = useState([]); 
+  const [uniqueYears, setUniqueYears] = useState([]);
 
   useEffect(() => {
-   
     const yearsSet = new Set();
 
-    presses.forEach(press => {
-      const partes = press.attributes.date.split('-');
+    presses.forEach((press) => {
+      const partes = press.attributes.date.split("-");
       const ano = parseInt(partes[0], 10);
       yearsSet.add(ano);
     });
@@ -283,15 +272,13 @@ function Press() {
     setUniqueYears(uniqueYearsArray);
   }, [presses]);
 
-// filtro para pasar al componente hijo el arreglo ya filtrado por ano
+  // filtro para pasar al componente hijo el arreglo ya filtrado por ano
 
-  const filteredPresses = presses.filter(press => {
-    var partes = press.attributes.date.split('-');
+  const filteredPresses = presses.filter((press) => {
+    var partes = press.attributes.date.split("-");
     var ano = parseInt(partes[0], 10);
     return ano === currentYear;
   });
-
-  
 
   return (
     <Transition
@@ -314,7 +301,7 @@ function Press() {
                   </Link>
                 </div>
                 <div class="mt-4">
-                  <Link to="/MenuHamburguesa">
+                  <Link to="/menu">
                     <img
                       src={hambur}
                       alt=""
@@ -359,7 +346,7 @@ function Press() {
                       }`}
                       onClick={() => {
                         navigateYear(-1);
-                        decrementYear()
+                        decrementYear();
                       }}
                       onMouseEnter={() => setIsPrevButtonHovered(true)}
                       onMouseLeave={() => setIsPrevButtonHovered(false)}
@@ -418,7 +405,7 @@ function Press() {
                       }`}
                       onClick={() => {
                         navigateYear(1);
-                        incrementYear()
+                        incrementYear();
                       }}
                       onMouseEnter={() => setIsNextButtonHovered(true)}
                       onMouseLeave={() => setIsNextButtonHovered(false)}
@@ -461,12 +448,10 @@ function Press() {
                   </div>
                 </div>
 
-              
-  <SubPressList year={selectedYear !== null ? selectedYear : currentYear} presses={filteredPresses} />
-
-
-
-
+                <SubPressList
+                  year={selectedYear !== null ? selectedYear : currentYear}
+                  presses={filteredPresses}
+                />
               </div>
             </div>
 
