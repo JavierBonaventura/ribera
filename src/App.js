@@ -34,6 +34,8 @@ import FormularioContacto from "./pages/Contact/FormularioContacto";
 import WinesInArgentina from "./pages/WinesArgentina/wines-in-argentina";
 import WinesInWorld from "./pages/WinesWorld/wines-in-world";
 
+import Test from "./testing/vinoTest";
+
 function App() {
   const [showAgeConfirmation, setShowAgeConfirmation] = useState(true);
   const [isAdult, setIsAdult] = useState(false);
@@ -182,10 +184,13 @@ const AppContent = () => {
               ) : (
                 <Route path="/" element={<MenuDesktop />} />
               )}
-              <Route path="/family" element={<Family />} />
-              <Route path="/valle-azul" element={<ValleAzul />} />
+              <Route path="/history1/:slug" element={<Family />} />
+              <Route path="/history2/:slug" element={<ValleAzul />} />
 
-              <Route path="/araucana-vineyard" element={<AraucanaVineyard />} />
+              <Route
+                path="patagonian-spirit/:slug"
+                element={<AraucanaVineyard />}
+              />
 
               {windowWidth < 768 ? (
                 <Route path="/work-vineyard" element={<WorkVineyard />} />
@@ -224,6 +229,7 @@ const AppContent = () => {
                 element={<WinesInArgentina />}
               />
               <Route path="/wines-in-world/:slug" element={<WinesInWorld />} />
+              <Route path="/test/:slug" element={<Test />} />
             </Routes>
           </animated.div>
         )}

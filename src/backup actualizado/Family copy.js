@@ -1,18 +1,23 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { Transition, animated } from "@react-spring/web";
-import { useTranslation } from "react-i18next";
-import axios from "axios";
-import { useParams } from "react-router-dom";
-import SliderFamily from "../../components/SliderFamily";
 import logo from "../../images/logo.svg";
 import hambur from "../../images/menu-hambur.png";
+import ilustrationHistory from "../../images/dibujofamily.png";
 import arrowDown from "../../images/arrow-down.png";
+import carruajeHistory from "../../images/carruaje-history.jpg";
+import familiaCaballos from "../../images/family-caballos.jpg";
+import familia from "../../images/familia-felipe.png";
 import iconIg from "../../images/icon-ig.png";
+import felipe from "../../images/felipe.jpg";
 import "../../App.css";
+import SliderFamily from "../components/SliderFamily";
+import { Transition, animated } from "@react-spring/web";
+import { useTranslation } from "react-i18next";
 
 const Family = () => {
+  const { t, i18n } = useTranslation();
+
   // inicio codigo para retrasar la aparicion de History
   const [isVisible, setIsVisible] = useState(false);
 
@@ -82,6 +87,13 @@ const Family = () => {
     fontStyle: "normal",
   };
 
+  const robotoFontRegular = {
+    fontFamily: "Roboto Regular , sans-serif",
+    fontWeight: "normal",
+    fontStyle: "normal",
+    fontSize: "16px",
+  };
+
   const posicionRef = useRef(null);
 
   const handleClick = () => {
@@ -89,37 +101,6 @@ const Family = () => {
       posicionRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
-
-  //API REST
-  const { t, i18n } = useTranslation();
-  const idiomaSeleccionado = i18n.language;
-
-  const { slug } = useParams();
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          `https://back-ribera-gl7lw5cfra-uc.a.run.app/api/pages?populate=bloques%2C%20bloques.image%2C%20bloques.gallery&filters%5Bslug%5D=${slug}&locale=${idiomaSeleccionado}`
-        );
-        setData(response.data);
-      } catch (error) {
-        setError(error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  if (error) {
-    return <div>Error al cargar los datos</div>;
-  }
-
-  if (!data) {
-    return <div>Cargando...</div>;
-  }
 
   return (
     <Transition
@@ -153,9 +134,8 @@ const Family = () => {
                 </div>
               </header>
 
-              <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 ">
-                <div className="pt-24 pb-24 md:pb-10 lg:pt-24 2xl:pt-36  flex flex-col gap-y-2 xl:gap-y-5 ">
-                  {/* title section start*/}
+              <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
+                <div className="pt-24 pb-24 md:pb-10 lg:pt-24 2xl:pt-36  flex flex-col gap-y-2 xl:gap-y-5">
                   <div className="flex flex-col justify-center items-center mt-10 md:mt-0 md:gap-y-0 ">
                     <h1
                       style={playfairFontItalic}
@@ -177,21 +157,15 @@ const Family = () => {
                       {t("history.family.title")}
                     </h2>
                   </div>
-                  {/* title section end*/}
-
-                  {/* img year start*/}
                   <div
-                    className={`relative  flex justify-center items-center ${
+                    className={`relative flex justify-center items-center ${
                       isVisible3
                         ? "opacity-100 transition-opacity duration-500"
                         : "opacity-0 transition-opacity duration-500"
                     }`}
                   >
                     <img
-                      src={
-                        data.data[0]?.attributes?.bloques[0]?.image.data
-                          .attributes.url
-                      }
+                      src={ilustrationHistory}
                       alt=""
                       className="w-7/12 md:w-3/12"
                     />
@@ -199,26 +173,17 @@ const Family = () => {
                       style={playfairFontExtraBold}
                       className="text-[#C4B27D] text-2xl pt-10 absolute font-bold sm:text-4xl 2xl:text-5xl sm:pt-20 lg:pt-24 "
                     >
-                      {data.data[0]?.attributes?.bloques[0]?.title}
+                      1883 - 2023
                     </h1>
                   </div>
-                  {/* img year end*/}
-
-                  {/* major img start*/}
-                  <div className="flex justify-center items-center  md:pt-0 px-4 md:px-0 bg ">
+                  <div className="flex justify-center items-center  md:pt-0 px-4 md:px-0 bg">
                     <img
-                      src={
-                        data.data[0]?.attributes?.bloques[1]?.image.data
-                          .attributes.url
-                      }
+                      src={familiaCaballos}
                       alt=""
                       className="w-full md:w-10/12 xl:w-8/12 shadow-2xl"
                     />
                   </div>
-                  {/* major img end*/}
-
-                  {/* btn down start (esta hidden por pedido del cliente)*/}
-                  <div className="py-28 md:py-0 hidden ">
+                  <div className="py-28 md:py-0 hidden">
                     <div className="flex justify-center">
                       <div
                         className="border border-[#C3B17D] rounded-full p-6 md:p-6 relative flex justify-center items-center hover:scale-90 transition ease-in-out duration-500 cursor-pointer"
@@ -232,44 +197,74 @@ const Family = () => {
                       </div>
                     </div>
                   </div>
-                  {/* btn down end*/}
                 </div>
               </div>
 
-              {/* col text img 1 start*/}
-              <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 ">
+              <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
                 <div ref={posicionRef} id="posicion"></div>
                 <div className="flex flex-col md:flex-row md:py-20">
-                  <div className="w-full xl:w-1/2 mx-auto px-4 md:px-0 ">
+                  <div className="w-full xl:w-1/2 mx-auto px-4 md:px-0">
                     <img
-                      src={
-                        data.data[0]?.attributes?.bloques[2]?.image?.data[0]
-                          ?.attributes?.url
-                      }
+                      src={familia}
                       alt=""
                       className="w-full object-cover shadow-2xl"
                     />
                   </div>
-                  <div className="flex flex-col gap-y-2 md:gap-y-5 w-full xl:w-1/2 mx-auto px-10 xl:px-24 pt-10 pb-32 md:pt-8  md:pb-0  ">
-                    <div
-                      className="col-image-text-1"
-                      dangerouslySetInnerHTML={{
-                        __html: data.data[0]?.attributes?.bloques[2]?.text,
-                      }}
-                    />
+                  <div className="flex flex-col gap-y-2 md:gap-y-5 w-full xl:w-1/2 mx-auto px-10 xl:px-24 pt-10 pb-32 md:pt-8  md:pb-0 ">
+                    <div className="flex flex-col md:gap-y-2">
+                      <h1
+                        style={playfairFontBlack}
+                        className="text-[#C4B27D] font-bold text-lg md:text-4xl tracking-wide"
+                      >
+                        1883
+                      </h1>
+                      <h2
+                        className="uppercase text-[#C4B27D] tracking-wide"
+                        style={robotoFontRegular}
+                      >
+                        <span className="text-sm md:text-xl">
+                          {t("history.family.titleFirstParagraph")}
+                        </span>
+                      </h2>
+                    </div>
+                    <div className="flex flex-col gap-y-3">
+                      <p
+                        className="text-justify tracking-wider text-black text-xs lg:text-base lg:leading-7"
+                        style={playfairFontRegular}
+                        dangerouslySetInnerHTML={{
+                          __html: t("history.family.firstParagraphA"),
+                        }}
+                      />
+                      <p
+                        className="text-justify tracking-wider text-black text-xs lg:text-base lg:leading-7"
+                        style={playfairFontRegular}
+                        dangerouslySetInnerHTML={{
+                          __html: t("history.family.firstParagraphB"),
+                        }}
+                      />
+                      <p
+                        className="text-justify tracking-wider text-black text-xs lg:text-base lg:leading-7"
+                        style={playfairFontRegular}
+                        dangerouslySetInnerHTML={{
+                          __html: t("history.family.firstParagraphC"),
+                        }}
+                      />
+                      <p
+                        className="text-justify tracking-wider text-black text-xs lg:text-base lg:leading-7"
+                        style={playfairFontRegular}
+                        dangerouslySetInnerHTML={{
+                          __html: t("history.family.firstParagraphD"),
+                        }}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-              {/* col text img 1 end*/}
 
-              {/* col text img 2 start*/}
-              <div className="relative ">
+              <div className="relative">
                 <div className="w-6/12 2xl:w-[40%] contenido-dinamico absolute right-4 2xl:right-44 -bottom-5 lg:-bottom-16 shadow-custom">
                   <img
-                    src={
-                      data.data[0]?.attributes?.bloques[3]?.image?.data[0]
-                        ?.attributes?.url
-                    }
+                    src={carruajeHistory}
                     alt=""
                     className="w-full mx-auto"
                   />
@@ -279,9 +274,7 @@ const Family = () => {
                   className="contenido-dinamico absolute  text-white bottom-56 md:-bottom-5 lg:bottom-[-4rem] right-14 2xl:right-52 text-sm lg:text-lg "
                   style={playfairFontItalic}
                   dangerouslySetInnerHTML={{
-                    __html:
-                      data.data[0]?.attributes?.bloques[3]?.image?.data[0]
-                        ?.attributes?.caption,
+                    __html: t("history.family.altImg"),
                   }}
                 ></span>
 
@@ -290,10 +283,7 @@ const Family = () => {
                     <div className="flex flex-col md:flex-row-reverse">
                       <div className="-mt-20 w-full px-4 md:px-0 md:hidden">
                         <img
-                          src={
-                            data.data[0]?.attributes?.bloques[3]?.image?.data[0]
-                              ?.attributes?.url
-                          }
+                          src={carruajeHistory}
                           alt=""
                           className="w-full md:w-9/12 mx-auto shadow-2xl "
                         />
@@ -304,7 +294,7 @@ const Family = () => {
                           className="text-right-justify tracking-wider text-[#ffffff] text-xs lg:text-base lg:leading-7 "
                           style={playfairFontRegular}
                           dangerouslySetInnerHTML={{
-                            __html: data.data[0]?.attributes?.bloques[3]?.text,
+                            __html: t("history.family.secondParagraph"),
                           }}
                         ></p>
                       </div>
@@ -312,25 +302,20 @@ const Family = () => {
                   </div>
                 </div>
               </div>
-              {/* col text img 2 end*/}
 
-              {/* vertical text img 1 start*/}
-              <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 pt-10 md:pt-20 lg:pt-32 xl:pt-40 2xl:pt-60 ">
+              <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 pt-10 md:pt-20 lg:pt-32 xl:pt-40 2xl:pt-60">
                 <div className="w-full md:w-2/5 mx-auto flex flex-col gap-y-5 xl:gap-y-16">
                   <div className="px-10 md:px-0">
                     <p
                       className="text-justify tracking-wider text-[#000000] text-xs lg:text-base lg:leading-7"
                       style={playfairFontRegular}
                       dangerouslySetInnerHTML={{
-                        __html: data.data[0]?.attributes?.bloques[4]?.text,
+                        __html: t("history.family.thirdParagraph"),
                       }}
                     ></p>
                   </div>
                   <img
-                    src={
-                      data.data[0]?.attributes?.bloques[4]?.image?.data
-                        ?.attributes?.url
-                    }
+                    src={felipe}
                     alt=""
                     className="px-4 md:px-0 lg:shadow-2xl"
                   />
@@ -339,21 +324,10 @@ const Family = () => {
                   className="text-[#000000] text-xs lg:text-lg pt-2 px-10 tracking-wider text-center "
                   style={playfairFontRegular}
                 >
-                  <i>
-                    {
-                      data.data[0]?.attributes?.bloques[4]?.image?.data
-                        ?.attributes?.caption
-                    }
-                  </i>
+                  <i>Felipe José Menéndez Arguelles</i>
                 </p>
               </div>
-              {/* vertical text img 1 end*/}
-
-              {/* gallery start*/}
               <SliderFamily />
-              {/* gallery end*/}
-
-              {/* social media start*/}
               <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 py-20 ">
                 <div className="flex justify-center">
                   <a
@@ -377,7 +351,6 @@ const Family = () => {
                   </a>
                 </div>
               </div>
-              {/* social media end*/}
             </body>
           </div>
         </animated.div>

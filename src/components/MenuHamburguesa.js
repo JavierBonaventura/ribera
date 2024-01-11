@@ -180,6 +180,15 @@ const Home = () => {
 
     fetchData();
   }, [idiomaSeleccionado]);
+
+  //Api family slug//
+  let slugFamily;
+
+  if (idiomaSeleccionado === "en") {
+    slugFamily = "family";
+  } else if (idiomaSeleccionado === "es") {
+    slugFamily = "family-es";
+  }
   return (
     <Transition
       items={location}
@@ -269,7 +278,10 @@ const Home = () => {
                 <animated.div style={dropdownAnimation1}>
                   <ul className="text-center space-y-1.5">
                     <li>
-                      <Link to="/family" style={robotoFontRegular}>
+                      <Link
+                        to={`/history/${slugFamily}`}
+                        style={robotoFontRegular}
+                      >
                         <span className="subMenu tracking-widest uppercase">
                           {" "}
                           {t("menu.optionA1")}

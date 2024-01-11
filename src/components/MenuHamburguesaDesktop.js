@@ -229,6 +229,15 @@ const MenuHamburguesaDesktop = () => {
     fetchData();
   }, [idiomaSeleccionado]);
 
+  //Api family slug//
+  let slugFamily;
+
+  if (idiomaSeleccionado === "en") {
+    slugFamily = "family";
+  } else if (idiomaSeleccionado === "es") {
+    slugFamily = "family-es";
+  }
+
   return (
     <Transition
       items={location}
@@ -312,7 +321,10 @@ const MenuHamburguesaDesktop = () => {
                         }`}
                       >
                         <li>
-                          <Link to="/family" style={robotoFontRegular}>
+                          <Link
+                            to={`/history/${slugFamily}`}
+                            style={robotoFontRegular}
+                          >
                             <span className="subMenu tracking-widest uppercase">
                               {t("menu.optionA1")}
                             </span>

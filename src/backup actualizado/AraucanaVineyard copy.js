@@ -1,18 +1,17 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
-import { Transition, animated } from "@react-spring/web";
-import { useTranslation } from "react-i18next";
-import axios from "axios";
-import { useParams } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import hambur from "../../images/menu-hambur.png";
 import paisajeAraucana from "../../images/paisaje-araucana-1.jpg";
 import paisajeAraucanaDron from "../../images/paisaje-araucana-dron.jpg";
 import iconIg from "../../images/icon-ig.png";
 import "../../App.css";
+import { useLocation } from "react-router-dom";
+import { Transition, animated } from "@react-spring/web";
+import { useTranslation } from "react-i18next";
 
 const ConstructionPage = () => {
+  const { t, i18n } = useTranslation();
   // inicio codigo para retrasar la aparicion de History
   const [isVisible, setIsVisible] = useState(false);
 
@@ -76,37 +75,6 @@ const ConstructionPage = () => {
     fontStyle: "normal",
   };
 
-  //API REST
-  const { t, i18n } = useTranslation();
-  const idiomaSeleccionado = i18n.language;
-
-  const { slug } = useParams();
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          `https://back-ribera-gl7lw5cfra-uc.a.run.app/api/pages?populate=bloques%2C%20bloques.image&filters%5Bslug%5D=${slug}&locale=${idiomaSeleccionado}`
-        );
-        setData(response.data);
-      } catch (error) {
-        setError(error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  if (error) {
-    return <div>Error al cargar los datos</div>;
-  }
-
-  if (!data) {
-    return <div>Cargando...</div>;
-  }
-
   return (
     <Transition
       items={location}
@@ -161,55 +129,42 @@ const ConstructionPage = () => {
                       {t("patagonian.araucanaVineyard.title")}
                     </h2>
                   </div>
-                  {/* major img start*/}
                   <div class="relative flex justify-center items-center  md:pt-0 px-4 md:px-0">
                     <img
-                      src={
-                        data.data[0]?.attributes?.bloques[0]?.image?.data
-                          ?.attributes?.url
-                      }
+                      src={paisajeAraucana}
                       alt=""
                       class="w-full object-cover md:w-2/3 mx-auto shadow-2xl"
                     />
                   </div>
-                  {/* major img end*/}
                 </div>
               </div>
-              {/* paragraph 1 start*/}
+
               <div class="container mx-auto py-5 md:py-12 xl:py-12  max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 ">
                 <p
                   class="text-[#000000] tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto text-xs  lg:text-base lg:leading-7 md:pt-5"
                   style={playfairFontRegular}
                   dangerouslySetInnerHTML={{
-                    __html: data.data[0]?.attributes?.bloques[0]?.text,
+                    __html: t("patagonian.araucanaVineyard.firstParagraph"),
                   }}
                 ></p>
               </div>
-              {/* paragraph 1 end*/}
 
-              {/* major img 2 start*/}
               <div className="container mx-auto px-4  max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
                 <img
-                  src={
-                    data.data[0]?.attributes?.bloques[1]?.image?.data
-                      ?.attributes?.url
-                  }
+                  src={paisajeAraucanaDron}
                   alt=""
                   className="w-full md:w-2/3 mx-auto shadow-2xl"
                 />
               </div>
-              {/* major img 2 end*/}
 
               <div class="container mx-auto pt-5 md:pt-12 max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
-                {/* paragraph 2 start*/}
                 <p
                   class="text-[#000000] tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto text-xs  lg:text-base lg:leading-7"
                   style={playfairFontRegular}
                   dangerouslySetInnerHTML={{
-                    __html: data.data[0]?.attributes?.bloques[1]?.text,
+                    __html: t("patagonian.araucanaVineyard.secondParagraph"),
                   }}
                 ></p>
-                {/* paragraph 2 end*/}
 
                 <div class="py-20">
                   <div class="flex justify-center">

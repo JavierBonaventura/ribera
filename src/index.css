@@ -93,3 +93,66 @@ code {
 .sombra-menu {
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
+
+/* styles for "Family" start */
+
+.col-image-text-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .col-image-text-1 {
+    row-gap: 0.5rem;
+  }
+}
+.col-image-text-1 h1 {
+  color: #c4b27d;
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  letter-spacing: 0.025em;
+  font-family: "Playfair Black";
+}
+
+@media (min-width: 768px) {
+  .col-image-text-1 h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+.col-image-text-1 h2 {
+  color: #c4b27d;
+  letter-spacing: 0.025em;
+  font-family: "Roboto";
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .col-image-text-1 h2 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+.col-image-text-1 p {
+  text-align: justify;
+  font-family: "Playfair Regular";
+  letter-spacing: 0.05em;
+  color: black;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding-top: 8px;
+}
+
+@media (min-width: 1024px) {
+  .col-image-text-1 p {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    padding-top: 11px;
+  }
+}
+
+/* styles for "Family" end */

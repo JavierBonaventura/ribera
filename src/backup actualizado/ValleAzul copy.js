@@ -1,18 +1,17 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import logo from "../../images/logo.svg";
+import hambur from "../../images/menu-hambur.png";
+import paisajeValle from "../../images/paisaje-valle1.png";
+import paisajeHistory from "../../images/vinedo-valle-azul.jpg";
+import iconIg from "../../images/icon-ig.png";
+import "../../App.css";
 import { useLocation } from "react-router-dom";
 import { Transition, animated } from "@react-spring/web";
 import { useTranslation } from "react-i18next";
-import axios from "axios";
-import { useParams } from "react-router-dom";
-import logo from "../../images/logo.svg";
-import hambur from "../../images/menu-hambur.png";
-import paisajeAraucana from "../../images/paisaje-araucana-1.jpg";
-import paisajeAraucanaDron from "../../images/paisaje-araucana-dron.jpg";
-import iconIg from "../../images/icon-ig.png";
-import "../../App.css";
 
-const ConstructionPage = () => {
+const ValleAzul = () => {
+  const { t, i18n } = useTranslation();
   // inicio codigo para retrasar la aparicion de History
   const [isVisible, setIsVisible] = useState(false);
 
@@ -56,7 +55,6 @@ const ConstructionPage = () => {
   const handleMouseLeave = () => {
     setIgHovered(false);
   };
-
   const location = useLocation();
 
   const playfairFontBlack = {
@@ -76,37 +74,6 @@ const ConstructionPage = () => {
     fontStyle: "normal",
   };
 
-  //API REST
-  const { t, i18n } = useTranslation();
-  const idiomaSeleccionado = i18n.language;
-
-  const { slug } = useParams();
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          `https://back-ribera-gl7lw5cfra-uc.a.run.app/api/pages?populate=bloques%2C%20bloques.image&filters%5Bslug%5D=${slug}&locale=${idiomaSeleccionado}`
-        );
-        setData(response.data);
-      } catch (error) {
-        setError(error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  if (error) {
-    return <div>Error al cargar los datos</div>;
-  }
-
-  if (!data) {
-    return <div>Cargando...</div>;
-  }
-
   return (
     <Transition
       items={location}
@@ -119,9 +86,9 @@ const ConstructionPage = () => {
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
           <div>
-            <body class="bg-[#F3EEE3] ">
+            <body class="bg-[#F3EEE3]">
               <header className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-5 xl:py-10 px-5 2xl:px-0 fixed top-0 left-0 right-0 z-50">
-                <div class="flex justify-between items-center">
+                <div class="flex justify-between items-center  ">
                   <div class="">
                     <Link to="/">
                       <img src={logo} alt="" className="w-24 md:w-28" />
@@ -139,8 +106,8 @@ const ConstructionPage = () => {
                 </div>
               </header>
 
-              <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
-                <div class="pt-24 md:pb-0 lg:pt-24 2xl:pt-36 flex flex-col gap-y-5 2xl:gap-y-10">
+              <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 ">
+                <div class="pt-24 2xl:pt-36 flex flex-col gap-y-5 2xl:gap-y-10 ">
                   <div class="flex flex-col justify-center items-center md:mt-0 md:gap-y-0">
                     <h1
                       style={playfairFontItalic}
@@ -150,7 +117,7 @@ const ConstructionPage = () => {
                           : "opacity-0 transition-opacity duration-500"
                       }`}
                     >
-                      <i style={playfairFontItalic}>{t("patagonian.title")}</i>
+                      <i style={playfairFontItalic}>{t("history.title")}</i>
                     </h1>
                     <h2
                       style={playfairFontBlack}
@@ -158,65 +125,64 @@ const ConstructionPage = () => {
                         isVisible2 ? "appear-from-bottom" : "invisible"
                       }`}
                     >
-                      {t("patagonian.araucanaVineyard.title")}
+                      {t("history.valleAzul.title")}
                     </h2>
                   </div>
-                  {/* major img start*/}
-                  <div class="relative flex justify-center items-center  md:pt-0 px-4 md:px-0">
+                  <div class="relative flex justify-center items-center md:pt-0 px-4 md:px-0">
                     <img
-                      src={
-                        data.data[0]?.attributes?.bloques[0]?.image?.data
-                          ?.attributes?.url
-                      }
+                      src={paisajeValle}
                       alt=""
-                      class="w-full object-cover md:w-2/3 mx-auto shadow-2xl"
+                      class="w-full aspect-video object-cover md:w-2/3 mx-auto shadow-2xl"
                     />
                   </div>
-                  {/* major img end*/}
                 </div>
               </div>
-              {/* paragraph 1 start*/}
-              <div class="container mx-auto py-5 md:py-12 xl:py-12  max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 ">
-                <p
-                  class="text-[#000000] tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto text-xs  lg:text-base lg:leading-7 md:pt-5"
-                  style={playfairFontRegular}
-                  dangerouslySetInnerHTML={{
-                    __html: data.data[0]?.attributes?.bloques[0]?.text,
-                  }}
-                ></p>
+
+              <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
+                <div class="pt-5 pb-10 flex flex-col gap-y-5">
+                  <p
+                    class="text-[#000000]  tracking-wider text-justify px-10 md:px-14 lg:px-20 xl:px-32 md:w-3/4 mx-auto text-xs lg:text-base lg:leading-7"
+                    style={playfairFontRegular}
+                    dangerouslySetInnerHTML={{
+                      __html: t("history.valleAzul.firstParagraph"),
+                    }}
+                  ></p>
+                </div>
               </div>
-              {/* paragraph 1 end*/}
 
-              {/* major img 2 start*/}
-              <div className="container mx-auto px-4  max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
-                <img
-                  src={
-                    data.data[0]?.attributes?.bloques[1]?.image?.data
-                      ?.attributes?.url
-                  }
-                  alt=""
-                  className="w-full md:w-2/3 mx-auto shadow-2xl"
-                />
+              <div class=" bg-[#212121] ">
+                <div class="container mx-auto  max-w-screen-xl xl:max-w-screen-2xl py-5 px-4 md:px-5 2xl:px-0 ">
+                  <div className=" w-full md:w-2/3 mx-auto">
+                    <img
+                      src={paisajeHistory}
+                      alt=""
+                      className="-mb-10 md:-mb-24 w-full shadow-custom aspect-video object-cover"
+                    />
+                  </div>
+                </div>
               </div>
-              {/* major img 2 end*/}
 
-              <div class="container mx-auto pt-5 md:pt-12 max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
-                {/* paragraph 2 start*/}
-                <p
-                  class="text-[#000000] tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto text-xs  lg:text-base lg:leading-7"
-                  style={playfairFontRegular}
-                  dangerouslySetInnerHTML={{
-                    __html: data.data[0]?.attributes?.bloques[1]?.text,
-                  }}
-                ></p>
-                {/* paragraph 2 end*/}
+              <div class="container mx-auto  max-w-screen-xl xl:max-w-screen-2xl bg-[#F3EEE3] md:px-5 2xl:px-0">
+                <div class="pt-10 md:pt-24 flex flex-col gap-y-5">
+                  <div class="">
+                    <p
+                      class="text-[#000000] tracking-wider text-justify px-10 md:px-14 lg:px-20 xl:px-32 md:w-3/4 mx-auto text-xs lg:text-base lg:leading-7"
+                      style={playfairFontRegular}
+                      dangerouslySetInnerHTML={{
+                        __html: t("history.valleAzul.secondParagraph"),
+                      }}
+                    ></p>
+                  </div>
+                </div>
+              </div>
 
+              <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl bg-[#F3EEE3] md:px-5 2xl:px-0 ">
                 <div class="py-20">
                   <div class="flex justify-center">
                     <a
-                      className={`border border-[#C3B17D] rounded-full p-7 md:p-8 ${
+                      className={`border border-[#C4B27D] rounded-full p-7 md:p-8 ${
                         igHovered
-                          ? "bg-[#C3B17D] transition-bg ease-in-out duration-200"
+                          ? "bg-[#C4B27D] transition-bg ease-in-out duration-200"
                           : "bg-transparent transition-bg ease-in-out duration-200"
                       }`}
                       href="https://www.instagram.com/riberadelcuarzo/"
@@ -227,10 +193,10 @@ const ConstructionPage = () => {
                       <img
                         src={iconIg}
                         alt=""
-                        className={`w-5 md:w-7 ${
+                        className={`w-5 md:w-7  ${
                           igHovered ? "filter brightness-200" : ""
                         }`}
-                      />
+                      />{" "}
                     </a>
                   </div>
                 </div>
@@ -243,4 +209,4 @@ const ConstructionPage = () => {
   );
 };
 
-export default ConstructionPage;
+export default ValleAzul;

@@ -271,6 +271,33 @@ const MenuDesktop = () => {
     fetchData();
   }, [idiomaSeleccionado]);
 
+  //Api family slug//
+  let slugFamily;
+
+  if (idiomaSeleccionado === "en") {
+    slugFamily = "family";
+  } else if (idiomaSeleccionado === "es") {
+    slugFamily = "family-es";
+  }
+
+  //Api valle slug//
+  let slugValle;
+
+  if (idiomaSeleccionado === "en") {
+    slugValle = "valle-azul";
+  } else if (idiomaSeleccionado === "es") {
+    slugValle = "valle-azul-es";
+  }
+
+  //Api araucana slug//
+  let slugAraucana;
+
+  if (idiomaSeleccionado === "en") {
+    slugAraucana = "araucana-vineyard";
+  } else if (idiomaSeleccionado === "es") {
+    slugAraucana = "araucana-vineyard-es";
+  }
+
   return (
     <Transition
       items={location}
@@ -426,16 +453,21 @@ const MenuDesktop = () => {
                           isVisible3 ? "opacity-100" : "opacity-0"
                         }`}
                       >
-                        {" "}
                         <li>
-                          <Link to="/family" style={robotoFontRegular}>
+                          <Link
+                            to={`/history1/${slugFamily}`}
+                            style={robotoFontRegular}
+                          >
                             <span className="subMenu tracking-widest uppercase">
                               {t("menu.optionA1")}
                             </span>
                           </Link>
                         </li>
                         <li>
-                          <Link to="/valle-azul" style={robotoFontRegular}>
+                          <Link
+                            to={`/history2/${slugValle}`}
+                            style={robotoFontRegular}
+                          >
                             <span className="subMenu tracking-widest uppercase">
                               {t("menu.optionA2")}
                             </span>
@@ -471,7 +503,7 @@ const MenuDesktop = () => {
                       >
                         <li>
                           <Link
-                            to="/araucana-vineyard"
+                            to={`/patagonian-spirit/${slugAraucana}`}
                             style={robotoFontRegular}
                           >
                             <span className="subMenu tracking-widest uppercase">

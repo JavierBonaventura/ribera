@@ -1,101 +1,66 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import leftArrowImage from "../images/flechaIzquierda.png";
 import rightArrowImage from "../images/flechaDerecha.png";
-import slider1 from "../images/slider-history/WEB_HISTORY_SLIDERS-01.jpg";
-import slider2 from "../images/slider-history/WEB_HISTORY_SLIDERS-02.jpg";
-import slider3 from "../images/slider-history/WEB_HISTORY_SLIDERS-03.jpg";
-import slider4 from "../images/slider-history/WEB_HISTORY_SLIDERS-04.jpg";
-import slider5 from "../images/slider-history/WEB_HISTORY_SLIDERS-05.jpg";
-import slider6 from "../images/slider-history/WEB_HISTORY_SLIDERS-06.jpg";
-import slider7 from "../images/slider-history/WEB_HISTORY_SLIDERS-07.jpg";
-import slider8 from "../images/slider-history/WEB_HISTORY_SLIDERS-08.jpg";
-import slider9 from "../images/slider-history/WEB_HISTORY_SLIDERS-09.jpg";
-import slider10 from "../images/slider-history/WEB_HISTORY_SLIDERS-10.jpg";
-import slider12 from "../images/slider-history/WEB_HISTORY_SLIDERS-12.jpg";
-import slider13 from "../images/slider-history/WEB_HISTORY_SLIDERS-13.jpg";
-import slider14 from "../images/slider-history/WEB_HISTORY_SLIDERS-14.jpg";
-import slider15 from "../images/slider-history/WEB_HISTORY_SLIDERS-15.jpg";
-import slider16 from "../images/slider-history/WEB_HISTORY_SLIDERS-16.jpg";
-import slider17 from "../images/slider-history/WEB_HISTORY_SLIDERS-17.jpg";
-import slider18 from "../images/slider-history/WEB_HISTORY_SLIDERS-18.jpg";
-import slider19 from "../images/slider-history/WEB_HISTORY_SLIDERS-19.jpg";
-import slider20 from "../images/slider-history/WEB_HISTORY_SLIDERS-20.jpg";
-import slider21 from "../images/slider-history/WEB_HISTORY_SLIDERS-21.jpg";
-import slider22 from "../images/slider-history/WEB_HISTORY_SLIDERS-22.jpg";
-import slider23 from "../images/slider-history/WEB_HISTORY_SLIDERS-23.jpg";
-import slider24 from "../images/slider-history/WEB_HISTORY_SLIDERS-24.jpg";
-import slider25 from "../images/slider-history/WEB_HISTORY_SLIDERS-25.jpg";
+import axios from "axios";
 import { useTranslation } from "react-i18next";
 import "../App.css";
 
 function SliderFamily() {
   const { t, i18n } = useTranslation();
-  const [imagenVisible, setimagenVisible] = useState(0);
+  const [imagenVisible, setImagenVisible] = useState(0);
+  const [galeria, setGaleria] = useState([]);
 
-  const imagenes = [
-    slider1,
-    slider2,
-    slider3,
-    slider4,
-    slider5,
-    slider6,
-    slider7,
-    slider8,
-    slider9,
-    slider10,
-    slider12,
-    slider13,
-    slider14,
-    slider15,
-    slider16,
-    slider17,
-    slider18,
-    slider19,
-    slider20,
-    slider21,
-    slider22,
-    slider23,
-    slider24,
-    slider25,
-  ];
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "https://back-ribera-gl7lw5cfra-uc.a.run.app/api/pages?populate=bloques.gallery&filters%5Bslug%5D=family"
+        );
+
+        const galeriaAPI = response.data.data[0]?.attributes?.bloques.find(
+          (bloque) => bloque.__component === "global.gallery"
+        );
+
+        if (galeriaAPI) {
+          setGaleria(galeriaAPI.gallery.data);
+        }
+      } catch (error) {
+        console.error("Error al obtener datos de la API:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const handlePrevClick = () => {
     if (imagenVisible > 0) {
-      setimagenVisible(imagenVisible - 1);
+      setImagenVisible(imagenVisible - 1);
     } else {
-      setimagenVisible(imagenes.length - 1);
+      setImagenVisible(galeria.length - 1);
     }
   };
 
   const handleNextClick = () => {
-    if (imagenVisible < imagenes.length - 1) {
-      setimagenVisible(imagenVisible + 1);
+    if (imagenVisible < galeria.length - 1) {
+      setImagenVisible(imagenVisible + 1);
     } else {
-      setimagenVisible(0);
+      setImagenVisible(0);
     }
-  };
-
-  const playfairFontBlack = {
-    fontFamily: "Playfair Black, sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-  };
-
-  const robotoFontRegular = {
-    fontFamily: "Roboto Regular , sans-serif",
-    fontWeight: "normal",
-    fontStyle: "normal",
-    fontSize: "16px",
   };
 
   return (
     <div className=" overflow-hidden pb-20 md:pb-0">
       <div className="">
         <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 flex flex-col justify-center items-center pt-24 2xl:pt-36 pb-16 gap-y-5 2xl:gap-y-10 ">
-          <div class="flex flex-col justify-center items-center bg-[#F3EEE3] ">
+          <div className="flex flex-col justify-center items-center bg-[#F3EEE3] ">
             <h2
               className="uppercase text-[#C4B27D] tracking-wide"
-              style={robotoFontRegular}
+              style={{
+                fontFamily: "Roboto Regular , sans-serif",
+                fontWeight: "normal",
+                fontStyle: "normal",
+                fontSize: "16px",
+              }}
             >
               <span
                 className="text-sm md:text-xl uppercase"
@@ -117,9 +82,9 @@ function SliderFamily() {
             </div>
             <div className="">
               <img
-                className="px-4 md:px-0 lg:shadow-2xl  md:max-w-md lg:max-w-lg xl:max-w-2xl aspect-video object-cover " // Clases para limitar el ancho y alto
-                style={playfairFontBlack}
-                src={imagenes[imagenVisible]}
+                className="px-4 md:px-0 lg:shadow-2xl  md:max-w-md lg:max-w-lg xl:max-w-2xl aspect-video object-cover "
+                src={galeria[imagenVisible]?.attributes.url}
+                alt={`imagen-${imagenVisible}`}
               />
             </div>
             <div className="w-10 sm:w-16 absolute right-32 md:right-10 xl:right-0 top-64 sm:top-[27rem] md:top-auto">
