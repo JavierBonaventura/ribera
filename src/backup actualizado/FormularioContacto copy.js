@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../App.css";
 import logo from "../../images/logo.svg";
@@ -9,9 +9,9 @@ import { Transition, animated } from "@react-spring/web";
 import portada from "../../images/background-contact-1.png";
 import { useTranslation } from "react-i18next";
 import axios from "axios";
-import { useParams } from "react-router-dom";
 
 const FormularioContacto = () => {
+  const { t, i18n } = useTranslation();
   // Incio variables paraa manejar el estado del envio del mail
   const [isEmailSent, setIsEmailSent] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
@@ -37,8 +37,6 @@ const FormularioContacto = () => {
     fontStyle: "normal",
     fontSize: "16px",
   };
-
-  //API REST POST FORM
 
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
@@ -80,37 +78,6 @@ const FormularioContacto = () => {
       // Maneja el error si la solicitud no se puede completar
     }
   };
-
-  //API REST GET
-  const { t, i18n } = useTranslation();
-  const idiomaSeleccionado = i18n.language;
-
-  const { slug } = useParams();
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          `https://back-ribera-gl7lw5cfra-uc.a.run.app/api/pages?populate=bloques%2C%20bloques.Link&filters%5Bslug%5D=${slug}&locale=${idiomaSeleccionado}`
-        );
-        setData(response.data);
-      } catch (error) {
-        setError(error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  if (error) {
-    return <div>Error al cargar los datos: {error.message}</div>;
-  }
-
-  if (!data) {
-    return <div>Cargando...</div>;
-  }
 
   return (
     <Transition
@@ -312,47 +279,48 @@ const FormularioContacto = () => {
                 >
                   <div className="flex flex-col gap-y-2  ">
                     <h2 className="text-lg text-[#c4b27d] md:text-3xl text-center md:text-left">
-                      {data?.data[0]?.attributes?.bloques[0]?.label}
+                      {t("contact.titleA")}
                     </h2>
-
                     <a
-                      href={data?.data[0]?.attributes?.bloques[0]?.Link.href}
+                      href="https://www.google.com/maps/place/Ortiz+de+Ocampo+3302,+C1425+CABA/@-34.5750298,-58.4035604,17z/data=!3m1!4b1!4m6!3m5!1s0x95bcb5d7344eecc7:0x17bb52293d552009!8m2!3d-34.5750342!4d-58.4009855!16s%2Fg%2F11qpp9y2jx?hl=es&entry=ttu"
                       target="_blank"
                       className="hover:underline"
                     >
-                      <h3 className="text-sm md:text-base text-center md:text-left pr-72">
-                        {data?.data[0]?.attributes?.bloques[0]?.Link.text}
+                      <h3 className="text-sm md:text-base text-center md:text-left">
+                        Ortiz de Ocampo 3302 <br />
+                        Buenos Aires, Argentina
                       </h3>
                     </a>
                   </div>
-
                   <div className="flex flex-col gap-y-2">
                     <h2 className="text-lg text-[#c4b27d] md:text-3xl text-center md:text-left">
-                      {data?.data[0]?.attributes?.bloques[1]?.label}
+                      {t("contact.titleB")}
                     </h2>
                     <a
-                      href={data?.data[0]?.attributes?.bloques[1]?.Link.href}
+                      href="https://www.google.com.ar/maps/place/39%C2%B011'17.0%22S+66%C2%B052'26.0%22W/@-39.1880556,-66.8760829,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x7cfe3f53aaf18eb2!8m2!3d-39.1880556!4d-66.8738889"
                       className="hover:underline"
                       target="_blank"
                     >
-                      <h3 className="text-sm md:text-base text-center md:text-left pr-60">
-                        {data?.data[0]?.attributes?.bloques[1]?.Link.text}
+                      <h3 className="text-sm md:text-base text-center md:text-left">
+                        Ruta Prov.Nro 7 KM 12
+                        <br />
+                        Valle Azul, El Cuy, Río Negro.
+                        <br className="hidden md:block" /> CP: 8336
                       </h3>
                     </a>
                   </div>
-
                   <div className="">
                     <h2 className="text-lg text-[#c4b27d] uppercase md:text-3xl text-center md:text-left">
-                      {data?.data[0]?.attributes?.bloques[2]?.label}
+                      {t("contact.titleC")}
                     </h2>
                     <a
-                      href={data?.data[0]?.attributes?.bloques[2]?.Link.href}
+                      href="https://www.instagram.com/riberadelcuarzo/"
                       target="_blank"
                       className="flex items-center mx-auto justify-center gap-x-1 text-sm hover:underline md:justify-start"
                     >
                       <img src={iconIg} alt="" className="w-4" />
                       <h2 className="text-sm  md:text-base ">
-                        {data?.data[0]?.attributes?.bloques[2]?.Link.text}
+                        riberadelcuarzo
                       </h2>
                     </a>
                   </div>

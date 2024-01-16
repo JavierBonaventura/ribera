@@ -7,8 +7,6 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import hambur from "../../images/menu-hambur.png";
-import paisajeAraucana from "../../images/paisaje-araucana-1.jpg";
-import paisajeAraucanaDron from "../../images/paisaje-araucana-dron.jpg";
 import iconIg from "../../images/icon-ig.png";
 import "../../App.css";
 

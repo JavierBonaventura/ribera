@@ -222,14 +222,14 @@ const AppContent = () => {
               ) : (
                 <Route path="/menu" element={<MenuHamburguesaDesktop />} />
               )}
-              <Route path="/contact" element={<FormularioContacto />} />
+              <Route path="/:slug" element={<FormularioContacto />} />
 
               <Route
                 path="/wines-in-argentina/:slug"
                 element={<WinesInArgentina />}
               />
               <Route path="/wines-in-world/:slug" element={<WinesInWorld />} />
-              <Route path="/test/:slug" element={<Test />} />
+              <Route path="/test" element={<Test />} />
             </Routes>
           </animated.div>
         )}

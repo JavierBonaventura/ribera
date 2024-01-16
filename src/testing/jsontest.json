@@ -1,149 +1,50 @@
 {
   "data": [
     {
-      "id": 5,
+      "id": 1,
       "attributes": {
-        "title": "Valle azul",
-        "slug": "valle-azul",
+        "title": "Contact",
+        "slug": "contact",
         "subtitle": null,
-        "createdAt": "2024-01-11T17:52:15.781Z",
-        "updatedAt": "2024-01-11T17:58:27.745Z",
-        "publishedAt": "2024-01-11T17:58:27.729Z",
+        "createdAt": "2024-01-09T20:55:00.660Z",
+        "updatedAt": "2024-01-11T20:14:25.347Z",
+        "publishedAt": "2024-01-09T20:56:09.611Z",
         "locale": "en",
         "bloques": [
           {
-            "id": 3,
-            "__component": "global.vertical-image-text",
-            "text": "<p><span style=\"color:rgb(0,0,0);font-family:&quot;Playfair Regular&quot;, sans-serif;\">The story of this winery started in 2001, when italian countess Noemi Marone Cinzano discovered this far away land, planted a 5 hectares vineyard at the foot of the </span><i>barda</i><span style=\"color:rgb(0,0,0);font-family:&quot;Playfair Regular&quot;, sans-serif;\"> (a specific patagonian landscape, a steep cliff or hill made of a dark grain of volcanic rock, with plenty of quartz, carbonate calcium and calcareous) and began producing wine in a Burgundy style - the winery built right by the vineyard with small concrete open top pools for craft production, employing pigeage.</span></p>",
-            "image": {
-              "data": {
-                "id": 155,
-                "attributes": {
-                  "name": "paisaje-valle1.png",
-                  "alternativeText": null,
-                  "caption": null,
-                  "width": 900,
-                  "height": 506,
-                  "formats": {
-                    "small": {
-                      "ext": ".png",
-                      "url": "https://storage.googleapis.com/strapi-ribera-back-prod/small_paisaje_valle1_bbd75bca05/small_paisaje_valle1_bbd75bca05.png",
-                      "hash": "small_paisaje_valle1_bbd75bca05",
-                      "mime": "image/png",
-                      "name": "small_paisaje-valle1.png",
-                      "path": null,
-                      "size": 201.5,
-                      "width": 500,
-                      "height": 281
-                    },
-                    "medium": {
-                      "ext": ".png",
-                      "url": "https://storage.googleapis.com/strapi-ribera-back-prod/medium_paisaje_valle1_bbd75bca05/medium_paisaje_valle1_bbd75bca05.png",
-                      "hash": "medium_paisaje_valle1_bbd75bca05",
-                      "mime": "image/png",
-                      "name": "medium_paisaje-valle1.png",
-                      "path": null,
-                      "size": 415.01,
-                      "width": 750,
-                      "height": 422
-                    },
-                    "thumbnail": {
-                      "ext": ".png",
-                      "url": "https://storage.googleapis.com/strapi-ribera-back-prod/thumbnail_paisaje_valle1_bbd75bca05/thumbnail_paisaje_valle1_bbd75bca05.png",
-                      "hash": "thumbnail_paisaje_valle1_bbd75bca05",
-                      "mime": "image/png",
-                      "name": "thumbnail_paisaje-valle1.png",
-                      "path": null,
-                      "size": 54.52,
-                      "width": 245,
-                      "height": 138
-                    }
-                  },
-                  "hash": "paisaje_valle1_bbd75bca05",
-                  "ext": ".png",
-                  "mime": "image/png",
-                  "size": 125.63,
-                  "url": "https://storage.googleapis.com/strapi-ribera-back-prod/paisaje_valle1_bbd75bca05/paisaje_valle1_bbd75bca05.png",
-                  "previewUrl": null,
-                  "provider": "@strapi-community/strapi-provider-upload-google-cloud-storage",
-                  "provider_metadata": null,
-                  "createdAt": "2024-01-11T17:54:20.074Z",
-                  "updatedAt": "2024-01-11T17:54:20.074Z"
-                }
-              }
+            "id": 1,
+            "__component": "global.contact-info",
+            "label": "Our offices",
+            "Link": {
+              "id": 41,
+              "text": "Ortiz de Ocampo 3302 Buenos Aires, Argentina",
+              "href": "https://www.google.com/maps/place/Ortiz+de+Ocampo+3302,+C1425+CABA/@-34.5750298,-58.4035604,17z/data=!3m1!4b1!4m6!3m5!1s0x95bcb5d7344eecc7:0x17bb52293d552009!8m2!3d-34.5750342!4d-58.4009855!16s%2Fg%2F11qpp9y2jx?hl=es&entry=ttu",
+              "isExternal": true,
+              "target": "_blank"
             }
           },
           {
-            "id": 4,
-            "__component": "global.vertical-image-text",
-            "text": "<p style=\"margin-left:auto;text-align:justify;\">When we first tasted the 2008 vintage, we knew Noemi had found a real terroir. During ten years we explored all other nearby places in Patagonia where to produce an equal taste. We finally concluded the conditions in Valle Azul were perfect.<br><br>An extraordinary coincidence brought Menéndez together with the Countess 10 years after having tasted that first memorable glass. Touched by Felipe´s passion and commitment, the Countess granted us the privilege to start producing our wines at that very land she had discovered. In 2018, Bodega Ribera del Cuarzo was born.</p>",
-            "image": {
-              "data": {
-                "id": 156,
-                "attributes": {
-                  "name": "vinedo-valle-azul.jpg",
-                  "alternativeText": null,
-                  "caption": null,
-                  "width": 7086,
-                  "height": 4724,
-                  "formats": {
-                    "large": {
-                      "ext": ".jpg",
-                      "url": "https://storage.googleapis.com/strapi-ribera-back-prod/large_vinedo_valle_azul_88716b9263/large_vinedo_valle_azul_88716b9263.jpg",
-                      "hash": "large_vinedo_valle_azul_88716b9263",
-                      "mime": "image/jpeg",
-                      "name": "large_vinedo-valle-azul.jpg",
-                      "path": null,
-                      "size": 100.08,
-                      "width": 1000,
-                      "height": 667
-                    },
-                    "small": {
-                      "ext": ".jpg",
-                      "url": "https://storage.googleapis.com/strapi-ribera-back-prod/small_vinedo_valle_azul_88716b9263/small_vinedo_valle_azul_88716b9263.jpg",
-                      "hash": "small_vinedo_valle_azul_88716b9263",
-                      "mime": "image/jpeg",
-                      "name": "small_vinedo-valle-azul.jpg",
-                      "path": null,
-                      "size": 31.2,
-                      "width": 500,
-                      "height": 333
-                    },
-                    "medium": {
-                      "ext": ".jpg",
-                      "url": "https://storage.googleapis.com/strapi-ribera-back-prod/medium_vinedo_valle_azul_88716b9263/medium_vinedo_valle_azul_88716b9263.jpg",
-                      "hash": "medium_vinedo_valle_azul_88716b9263",
-                      "mime": "image/jpeg",
-                      "name": "medium_vinedo-valle-azul.jpg",
-                      "path": null,
-                      "size": 60.37,
-                      "width": 750,
-                      "height": 500
-                    },
-                    "thumbnail": {
-                      "ext": ".jpg",
-                      "url": "https://storage.googleapis.com/strapi-ribera-back-prod/thumbnail_vinedo_valle_azul_88716b9263/thumbnail_vinedo_valle_azul_88716b9263.jpg",
-                      "hash": "thumbnail_vinedo_valle_azul_88716b9263",
-                      "mime": "image/jpeg",
-                      "name": "thumbnail_vinedo-valle-azul.jpg",
-                      "path": null,
-                      "size": 9.05,
-                      "width": 234,
-                      "height": 156
-                    }
-                  },
-                  "hash": "vinedo_valle_azul_88716b9263",
-                  "ext": ".jpg",
-                  "mime": "image/jpeg",
-                  "size": 1681.26,
-                  "url": "https://storage.googleapis.com/strapi-ribera-back-prod/vinedo_valle_azul_88716b9263/vinedo_valle_azul_88716b9263.jpg",
-                  "previewUrl": null,
-                  "provider": "@strapi-community/strapi-provider-upload-google-cloud-storage",
-                  "provider_metadata": null,
-                  "createdAt": "2024-01-11T17:54:51.174Z",
-                  "updatedAt": "2024-01-11T17:54:51.174Z"
-                }
-              }
+            "id": 2,
+            "__component": "global.contact-info",
+            "label": "Our winery",
+            "Link": {
+              "id": 42,
+              "text": " Ruta Prov.Nro 7 KM 12 Valle Azul, El Cuy, Río Negro. CP: 8336",
+              "href": "https://www.google.com.ar/maps/place/39%C2%B011'17.0%22S+66%C2%B052'26.0%22W/@-39.1880556,-66.8760829,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x7cfe3f53aaf18eb2!8m2!3d-39.1880556!4d-66.8738889",
+              "isExternal": true,
+              "target": "_blank"
+            }
+          },
+          {
+            "id": 3,
+            "__component": "global.contact-info",
+            "label": "FOLLOW US!",
+            "Link": {
+              "id": 43,
+              "text": "riberadelcuarzo",
+              "href": "https://www.instagram.com/riberadelcuarzo/",
+              "isExternal": true,
+              "target": "_blank"
             }
           }
         ]

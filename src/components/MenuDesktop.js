@@ -298,6 +298,15 @@ const MenuDesktop = () => {
     slugAraucana = "araucana-vineyard-es";
   }
 
+  //Api contact//
+  let slugContact;
+
+  if (idiomaSeleccionado === "en") {
+    slugContact = "contact";
+  } else if (idiomaSeleccionado === "es") {
+    slugContact = "contact-es";
+  }
+
   return (
     <Transition
       items={location}
@@ -651,7 +660,7 @@ const MenuDesktop = () => {
                       >
                         <div className=" ">
                           <Link
-                            to="/contact"
+                            to={`/${slugContact}`}
                             className="hover:text-[#C4B27D]  duration-300 transition ease-in-out uppercase tracking-widest"
                             style={robotoFontRegular}
                           >
