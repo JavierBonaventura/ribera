@@ -2,12 +2,19 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import hambur from "../../images/menu-hambur.png";
+import workVineyardSlide1 from "../../images/generica-vineyard.png";
+import workVineyardSlide2 from "../../images/pruning.jpg";
+import workVineyardSlide3 from "../../images/trellising.jpg";
+import workVineyardSlide4 from "../../images/topping.png";
+import workVineyardSlide5 from "../../images/harvest.jpg";
+import workVineyardSlide6 from "../../images/weeds.png";
+import workVineyardSlide7 from "../../images/ancient.jpg";
 import flechaIzquierda from "../../images/flechaIzquierda.jpg";
 import flechaDerecha from "../../images/flechaDerecha.jpg";
 import iconIg from "../../images/icon-ig.png";
 import "../../App.css";
 import { useLocation } from "react-router-dom";
-import { Transition, animated, useSpring } from "@react-spring/web";
+import { Transition, animated } from "@react-spring/web";
 import { useTranslation } from "react-i18next";
 
 function Header() {
@@ -97,11 +104,12 @@ const WorkVineyard = () => {
             <Header />
 
             <div>
-              <Screen1
-                currentScreen={currentScreen}
-                handleNext={handleNext}
-                handlePrev={handlePrev}
-              />
+                <Screen1
+                  currentScreen={currentScreen}
+                  handleNext={handleNext}
+                  handlePrev={handlePrev}
+                />
+        
             </div>
           </div>
         </animated.div>
@@ -120,59 +128,61 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
   const [title, setTitle] = useState([]);
   const [paragraphs, setParagraphs] = useState([""]);
 
-  // URL de la API
-  const apiUrlEnglish =
-    "https://back-ribera-gl7lw5cfra-uc.a.run.app/api/pages?populate=bloques%2C%20bloques.slide%2C%20bloques.slide.image&filters%5Bslug%5D=work-vineyard&locale=en";
-  const apiUrlSpanish =
-    "https://back-ribera-gl7lw5cfra-uc.a.run.app/api/pages?populate=bloques%2C%20bloques.slide%2C%20bloques.slide.image&filters%5Bslug%5D=work-vineyard-es&locale=es";
-  let apiUrl;
+// URL de la API
+const apiUrlEnglish =
+"https://back-ribera-gl7lw5cfra-uc.a.run.app/api/pages?populate=bloques%2C%20bloques.slide%2C%20bloques.slide.image&filters%5Bslug%5D=work-vineyard&locale=en";
+const apiUrlSpanish =
+"https://back-ribera-gl7lw5cfra-uc.a.run.app/api/pages?populate=bloques%2C%20bloques.slide%2C%20bloques.slide.image&filters%5Bslug%5D=work-vineyard-es&locale=es";
+let apiUrl;
 
-  if (idiomaSeleccionado === "en") {
-    apiUrl = apiUrlEnglish;
-  } else {
-    apiUrl = apiUrlSpanish;
+if (idiomaSeleccionado === "en") {
+apiUrl = apiUrlEnglish;
+} else {
+apiUrl = apiUrlSpanish;
+}
+
+useEffect(() => {
+// Función para quitar las etiquetas HTML de un texto
+const extractTextWithoutTags = (htmlString) => {
+  const tempElement = document.createElement("div");
+  tempElement.innerHTML = htmlString;
+  return tempElement.textContent || tempElement.innerText;
+};
+
+
+
+// Función para realizar la solicitud HTTP y obtener las imágenes
+const fetchImages = async () => {
+  try {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+
+    // Obtener el array de slides
+    const slides = data.data[0].attributes.bloques[0].slide;
+
+    // Obtener las URL de las imágenes
+    const imageUrls = slides.map(
+      (slide) => slide.image.data.attributes.formats.small.url
+    );
+    setImages(imageUrls);
+
+    // Obtener los titulos
+    const titlesContent = slides.map((slide) => slide.title);
+    setTitle(titlesContent);
+
+    // Obtener los párrafos sin etiquetas HTML
+    const textContent = slides.map((slide) =>
+      extractTextWithoutTags(slide.text)
+    );
+    setParagraphs(textContent);
+  } catch (error) {
+    console.error("Error al realizar la solicitud:", error);
   }
+};
 
-  useEffect(() => {
-    // Función para quitar las etiquetas HTML de un texto
-    const extractTextWithoutTags = (htmlString) => {
-      const tempElement = document.createElement("div");
-      tempElement.innerHTML = htmlString;
-      return tempElement.textContent || tempElement.innerText;
-    };
-
-    // Función para realizar la solicitud HTTP y obtener las imágenes
-    const fetchImages = async () => {
-      try {
-        const response = await fetch(apiUrl);
-        const data = await response.json();
-
-        // Obtener el array de slides
-        const slides = data.data[0].attributes.bloques[0].slide;
-
-        // Obtener las URL de las imágenes
-        const imageUrls = slides.map(
-          (slide) => slide.image.data.attributes.formats.small.url
-        );
-        setImages(imageUrls);
-
-        // Obtener los titulos
-        const titlesContent = slides.map((slide) => slide.title);
-        setTitle(titlesContent);
-
-        // Obtener los párrafos sin etiquetas HTML
-        const textContent = slides.map((slide) =>
-          extractTextWithoutTags(slide.text)
-        );
-        setParagraphs(textContent);
-      } catch (error) {
-        console.error("Error al realizar la solicitud:", error);
-      }
-    };
-
-    // Llamar a la función de solicitud cuando el componente se monta
-    fetchImages();
-  }, []); // El segundo argumento [] significa que se ejecutará solo una vez (cuando se monta el componente)
+// Llamar a la función de solicitud cuando el componente se monta
+fetchImages();
+}, [currentScreen]); // El segundo argumento [] significa que se ejecutará solo una vez (cuando se monta el componente)
 
   const playfairFontRegular = {
     fontFamily: "Playfair Regular, sans-serif",
@@ -191,12 +201,6 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
     fontWeight: "normal",
     fontStyle: "normal",
   };
-  const props = useSpring({
-    opacity: 1,
-    from: { opacity: 0 },
-    reset: true,
-    config: { duration: 1500, easing: (t) => t }, // Puedes experimentar con diferentes funciones de easing
-  });
   return (
     <Transition
       items={location}
@@ -222,25 +226,20 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
                   style={playfairFontBlack}
                   className="text-[#C4B27D] text-lg"
                 >
-                  0{currentScreen + 1}
+                  01
                 </span>
                 <span
                   style={playfairFontBlack}
                   className="text-[#C4B27D] absolute top-1 left-6 text-xs underline"
                 >
-                  0{images.length}
+                  07
                 </span>
               </p>
             </div>
 
             <div className="container mx-auto flex flex-col justify-center  items-center">
               <div>
-                <animated.img
-                  className="w-full"
-                  src={images[currentScreen]}
-                  alt={`imagen-${currentScreen}`}
-                  style={{ width: "100vw", height: "100%", ...props }}
-                />
+                <img src={images[currentScreen]} alt="" className="w-full" />
               </div>
             </div>
             <div className="flex justify-center space-x-10 pt-2  bg-[#F3EEE3]">
@@ -305,5 +304,6 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
     </Transition>
   );
 };
+
 
 export default WorkVineyard;
