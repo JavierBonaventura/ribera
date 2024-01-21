@@ -64,23 +64,6 @@ function Header() {
 
 const WorkVineyard = () => {
   const location = useLocation();
-  const [currentScreen, setCurrentScreen] = useState(0);
-
-  const handleNext = () => {
-    if (currentScreen === 6) {
-      setCurrentScreen(0);
-    } else {
-      setCurrentScreen(currentScreen + 1);
-    }
-  };
-
-  const handlePrev = () => {
-    if (currentScreen === 0) {
-      setCurrentScreen(6);
-    } else {
-      setCurrentScreen(currentScreen - 1);
-    }
-  };
 
   return (
     <Transition
@@ -97,11 +80,7 @@ const WorkVineyard = () => {
             <Header />
 
             <div>
-              <Screen1
-                currentScreen={currentScreen}
-                handleNext={handleNext}
-                handlePrev={handlePrev}
-              />
+              <Screen />
             </div>
           </div>
         </animated.div>
@@ -110,9 +89,20 @@ const WorkVineyard = () => {
   );
 };
 
-const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
+const Screen = () => {
   const { t, i18n } = useTranslation();
   const idiomaSeleccionado = i18n.language;
+
+  const [currentScreen, setCurrentScreen] = useState(0);
+  const handleNext = () => {
+    setCurrentScreen((prevScreen) => (prevScreen + 1) % images.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentScreen((prevScreen) =>
+      prevScreen === 0 ? images.length - 1 : prevScreen - 1
+    );
+  };
 
   const location = useLocation();
   // Estadode variables consultas de API
@@ -197,6 +187,8 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
     reset: true,
     config: { duration: 1500, easing: (t) => t }, // Puedes experimentar con diferentes funciones de easing
   });
+
+  console.log(images);
   return (
     <Transition
       items={location}
@@ -235,12 +227,15 @@ const Screen1 = ({ currentScreen, handleNext, handlePrev }) => {
 
             <div className="container mx-auto flex flex-col justify-center  items-center">
               <div>
-                <animated.img
-                  className="w-full"
-                  src={images[currentScreen]}
-                  alt={`imagen-${currentScreen}`}
-                  style={{ width: "100vw", height: "100%", ...props }}
-                />
+                {images ? (
+                  <animated.img
+                    className="w-full"
+                    src={images[currentScreen]}
+                    style={{ width: "100vw", height: "100%", ...props }}
+                  />
+                ) : (
+                  <p>Loading...</p>
+                )}
               </div>
             </div>
             <div className="flex justify-center space-x-10 pt-2  bg-[#F3EEE3]">
