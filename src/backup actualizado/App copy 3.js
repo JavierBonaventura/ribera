@@ -37,25 +37,14 @@ import WinesInWorld from "./pages/WinesWorld/wines-in-world";
 import Test from "./testing/vinoTest";
 
 function App() {
-  const savedIsAdult = localStorage.getItem("isAdult");
   const [showAgeConfirmation, setShowAgeConfirmation] = useState(true);
-  const [isAdult, setIsAdult] = useState(savedIsAdult !== null ? JSON.parse(savedIsAdult) : false);  const [showAccessDeniedMessage, setShowAccessDeniedMessage] = useState(false);
+  const [isAdult, setIsAdult] = useState(false);
+  const [showAccessDeniedMessage, setShowAccessDeniedMessage] = useState(false);
   const [countdown, setCountdown] = useState(10);
   const [
     showAgeConfirmationAfterCountdown,
     setShowAgeConfirmationAfterCountdown,
   ] = useState(false);
-
-
-  useEffect(() => {
-    // Al cargar la aplicación, intenta obtener el valor de isAdult desde localStorage
-    const savedIsAdult = localStorage.getItem("isAdult");
-
-    // Si hay un valor guardado, actualiza el estado con ese valor
-    if (savedIsAdult !== null) {
-      setIsAdult(JSON.parse(savedIsAdult));
-    }
-  }, []);
 
   const handleAgeConfirmed = (isAdult) => {
     setIsAdult(isAdult);
@@ -65,8 +54,6 @@ function App() {
       setShowAccessDeniedMessage(true);
       setCountdown(10);
     }
-    // Almacena el valor de isAdult en localStorage
-    localStorage.setItem("isAdult", JSON.stringify(isAdult));
   };
 
   useEffect(() => {
@@ -95,15 +82,13 @@ function App() {
     fontStyle: "normal",
   };
 
-  console.log(isAdult)
-
   return (
     <Router>
       <div>
-        {!isAdult && showAgeConfirmation && (
+        {showAgeConfirmation && (
           <AgeConfirmationPopup onAgeConfirmed={handleAgeConfirmed} />
         )}
-        {!isAdult && showAgeConfirmationAfterCountdown && (
+        {showAgeConfirmationAfterCountdown && (
           <AgeConfirmationPopup onAgeConfirmed={handleAgeConfirmed} />
         )}
         {isAdult &&
@@ -199,8 +184,8 @@ const AppContent = () => {
               ) : (
                 <Route path="/" element={<MenuDesktop />} />
               )}
-              <Route path="history-family/:slug" element={<Family />} />
-              <Route path="history-valle/:slug" element={<ValleAzul />} />
+              <Route path="history/:slug" element={<Family />} />
+              <Route path="valle/:slug" element={<ValleAzul />} />
 
               <Route
                 path="patagonian-spirit/:slug"
@@ -208,50 +193,29 @@ const AppContent = () => {
               />
 
               {windowWidth < 768 ? (
-                <Route
-                  path="patagonian-spirit/work-vineyard"
-                  element={<WorkVineyard />}
-                />
+                <Route path="/work-vineyard" element={<WorkVineyard />} />
               ) : (
                 <Route
-                  path="patagonian-spirit/work-vineyard"
+                  path="/work-vineyard"
                   element={<WorkVineyardDesktop />}
                 />
               )}
 
               {windowWidth < 768 ? (
-                <Route
-                  path="patagonian-spirit/work-winery"
-                  element={<WorkWinery />}
-                />
+                <Route path="/work-winery" element={<WorkWinery />} />
               ) : (
-                <Route
-                  path="patagonian-spirit/work-winery"
-                  element={<WorkWineryDesktop />}
-                />
+                <Route path="/work-winery" element={<WorkWineryDesktop />} />
               )}
 
               {windowWidth < 768 ? (
-                <Route
-                  path="patagonian-spirit/life-estate"
-                  element={<LifeOnEstate />}
-                />
+                <Route path="/life-estate" element={<LifeOnEstate />} />
               ) : (
-                <Route
-                  path="patagonian-spirit/life-estate"
-                  element={<LifeOnEstateDesktop />}
-                />
+                <Route path="/life-estate" element={<LifeOnEstateDesktop />} />
               )}
 
-              <Route
-                path="patagonian-spirit/water-life"
-                element={<LifeWater />}
-              />
+              <Route path="/water-life" element={<LifeWater />} />
               <Route path="/press" element={<Press />} />
-              <Route
-                path="patagonian-spirit/water-life/water-life-read"
-                element={<LifeWaterRead />}
-              />
+              <Route path="/water-life-read" element={<LifeWaterRead />} />
 
               {windowWidth < 768 ? (
                 <Route path="/menu" element={<MenuHamburguesa />} />

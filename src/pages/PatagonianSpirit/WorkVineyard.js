@@ -152,8 +152,11 @@ const Screen = () => {
 
         // Obtener los párrafos sin etiquetas HTML
         const textContent = slides.map((slide) =>
-          extractTextWithoutTags(slide.text)
+          extractTextWithoutTags(
+            slide.textMobile !== null ? slide.textMobile : slide.text
+          )
         );
+
         setParagraphs(textContent);
       } catch (error) {
         console.error("Error al realizar la solicitud:", error);
@@ -266,7 +269,7 @@ const Screen = () => {
                     <div className="w-4/5 mx-auto">
                       <p
                         style={robotoFontRegular}
-                        className="decoration-black	text-[#C4B27D]  text-xs leading-6 pb-3 tracking-wide"
+                        className="decoration-black	text-[#C4B27D]  text-xs leading-6 pb-3 tracking-wide uppercase"
                       >
                         {title[currentScreen]}
                       </p>
