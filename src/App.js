@@ -38,7 +38,9 @@ import Test from "./testing/vinoTest";
 
 function App() {
   const [showAgeConfirmation, setShowAgeConfirmation] = useState(true);
-  const [isAdult, setIsAdult] = useState(false);
+  // const [isAdult, setIsAdult] = useState(false);
+  const storedIsAdult = localStorage.getItem("isAdult");
+  const [isAdult, setIsAdult] = useState(storedIsAdult ? JSON.parse(storedIsAdult) : false);
   const [showAccessDeniedMessage, setShowAccessDeniedMessage] = useState(false);
   const [countdown, setCountdown] = useState(10);
   const [
@@ -46,10 +48,14 @@ function App() {
     setShowAgeConfirmationAfterCountdown,
   ] = useState(false);
 
+  // Función para manejar la confirmación de edad
+
   const handleAgeConfirmed = (isAdult) => {
     setIsAdult(isAdult);
     setShowAgeConfirmation(false);
     setShowAgeConfirmationAfterCountdown(false);
+    
+    localStorage.setItem("isAdult", JSON.stringify(isAdult));
     if (!isAdult) {
       setShowAccessDeniedMessage(true);
       setCountdown(10);
@@ -75,6 +81,8 @@ function App() {
       clearInterval(timer);
     };
   }, [showAccessDeniedMessage, countdown]);
+
+  
 
   const playfairFontExtraBold = {
     fontFamily: "Playfair ExtraBold, sans-serif",
