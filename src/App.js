@@ -184,8 +184,8 @@ const AppContent = () => {
               ) : (
                 <Route path="/" element={<MenuDesktop />} />
               )}
-              <Route path="/history1/:slug" element={<Family />} />
-              <Route path="/history2/:slug" element={<ValleAzul />} />
+              <Route path="history/:slug" element={<Family />} />
+              <Route path="valle/:slug" element={<ValleAzul />} />
 
               <Route
                 path="patagonian-spirit/:slug"
