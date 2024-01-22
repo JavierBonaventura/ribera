@@ -184,8 +184,8 @@ const AppContent = () => {
               ) : (
                 <Route path="/" element={<MenuDesktop />} />
               )}
-              <Route path="history/:slug" element={<Family />} />
-              <Route path="valle/:slug" element={<ValleAzul />} />
+              <Route path="history-family/:slug" element={<Family />} />
+              <Route path="history-valle/:slug" element={<ValleAzul />} />
 
               <Route
                 path="patagonian-spirit/:slug"
@@ -193,29 +193,50 @@ const AppContent = () => {
               />
 
               {windowWidth < 768 ? (
-                <Route path="/work-vineyard" element={<WorkVineyard />} />
+                <Route
+                  path="patagonian-spirit/work-vineyard"
+                  element={<WorkVineyard />}
+                />
               ) : (
                 <Route
-                  path="/work-vineyard"
+                  path="patagonian-spirit/work-vineyard"
                   element={<WorkVineyardDesktop />}
                 />
               )}
 
               {windowWidth < 768 ? (
-                <Route path="/work-winery" element={<WorkWinery />} />
+                <Route
+                  path="patagonian-spirit/work-winery"
+                  element={<WorkWinery />}
+                />
               ) : (
-                <Route path="/work-winery" element={<WorkWineryDesktop />} />
+                <Route
+                  path="patagonian-spirit/work-winery"
+                  element={<WorkWineryDesktop />}
+                />
               )}
 
               {windowWidth < 768 ? (
-                <Route path="/life-estate" element={<LifeOnEstate />} />
+                <Route
+                  path="patagonian-spirit/life-estate"
+                  element={<LifeOnEstate />}
+                />
               ) : (
-                <Route path="/life-estate" element={<LifeOnEstateDesktop />} />
+                <Route
+                  path="patagonian-spirit/life-estate"
+                  element={<LifeOnEstateDesktop />}
+                />
               )}
 
-              <Route path="/water-life" element={<LifeWater />} />
+              <Route
+                path="patagonian-spirit/water-life"
+                element={<LifeWater />}
+              />
               <Route path="/press" element={<Press />} />
-              <Route path="/water-life-read" element={<LifeWaterRead />} />
+              <Route
+                path="patagonian-spirit/water-life/water-life-read"
+                element={<LifeWaterRead />}
+              />
 
               {windowWidth < 768 ? (
                 <Route path="/menu" element={<MenuHamburguesa />} />

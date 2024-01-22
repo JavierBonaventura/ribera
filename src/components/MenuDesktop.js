@@ -464,7 +464,7 @@ const MenuDesktop = () => {
                       >
                         <li>
                           <Link
-                            to={`/history1/${slugFamily}`}
+                            to={`/history-family/${slugFamily}`}
                             style={robotoFontRegular}
                           >
                             <span className="subMenu tracking-widest uppercase">
@@ -474,7 +474,7 @@ const MenuDesktop = () => {
                         </li>
                         <li>
                           <Link
-                            to={`/history2/${slugValle}`}
+                            to={`/history-valle/${slugValle}`}
                             style={robotoFontRegular}
                           >
                             <span className="subMenu tracking-widest uppercase">
@@ -521,28 +521,40 @@ const MenuDesktop = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="/work-vineyard" style={robotoFontRegular}>
+                          <Link
+                            to="/patagonian-spirit/work-vineyard"
+                            style={robotoFontRegular}
+                          >
                             <span className="subMenu tracking-widest uppercase">
                               {t("menu.optionB2")}
                             </span>
                           </Link>
                         </li>
                         <li>
-                          <Link to="/work-winery" style={robotoFontRegular}>
+                          <Link
+                            to="/patagonian-spirit/work-winery"
+                            style={robotoFontRegular}
+                          >
                             <span className="subMenu tracking-widest uppercase">
                               {t("menu.optionB3")}
                             </span>
                           </Link>
                         </li>
                         <li>
-                          <Link to="/life-estate" style={robotoFontRegular}>
+                          <Link
+                            to="/patagonian-spirit/life-estate"
+                            style={robotoFontRegular}
+                          >
                             <span className="subMenu tracking-widest uppercase">
                               {t("menu.optionB4")}
                             </span>
                           </Link>
                         </li>
                         <li>
-                          <Link to="/water-life" style={robotoFontRegular}>
+                          <Link
+                            to="/patagonian-spirit/water-life"
+                            style={robotoFontRegular}
+                          >
                             <span className="subMenu tracking-widest uppercase">
                               {t("menu.optionB5")}
                             </span>

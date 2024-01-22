@@ -189,6 +189,33 @@ const Home = () => {
   } else if (idiomaSeleccionado === "es") {
     slugFamily = "family-es";
   }
+
+  //Api valle slug//
+  let slugValle;
+
+  if (idiomaSeleccionado === "en") {
+    slugValle = "valle-azul";
+  } else if (idiomaSeleccionado === "es") {
+    slugValle = "valle-azul-es";
+  }
+
+  //Api araucana slug//
+  let slugAraucana;
+
+  if (idiomaSeleccionado === "en") {
+    slugAraucana = "araucana-vineyard";
+  } else if (idiomaSeleccionado === "es") {
+    slugAraucana = "araucana-vineyard-es";
+  }
+
+  //Api contact//
+  let slugContact;
+
+  if (idiomaSeleccionado === "en") {
+    slugContact = "contact";
+  } else if (idiomaSeleccionado === "es") {
+    slugContact = "contact-es";
+  }
   return (
     <Transition
       items={location}
@@ -279,7 +306,7 @@ const Home = () => {
                   <ul className="text-center space-y-1.5">
                     <li>
                       <Link
-                        to={`/history/${slugFamily}`}
+                        to={`/history-family/${slugFamily}`}
                         style={robotoFontRegular}
                       >
                         <span className="subMenu tracking-widest uppercase">
@@ -291,7 +318,10 @@ const Home = () => {
 
                     <li>
                       {" "}
-                      <Link to="/valle-azul" style={robotoFontRegular}>
+                      <Link
+                        to={`/history-valle/${slugValle}`}
+                        style={robotoFontRegular}
+                      >
                         {" "}
                         <span className="subMenu tracking-widest uppercase">
                           {t("menu.optionA2")}
@@ -311,35 +341,50 @@ const Home = () => {
                 <animated.div style={dropdownAnimation2}>
                   <ul className="text-center space-y-1.5">
                     <li>
-                      <Link to="/araucana-vineyard" style={robotoFontRegular}>
+                      <Link
+                        to={`/patagonian-spirit/${slugAraucana}`}
+                        style={robotoFontRegular}
+                      >
                         <span className="subMenu tracking-widest uppercase">
                           {t("menu.optionB1")}
                         </span>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/work-vineyard" style={robotoFontRegular}>
+                      <Link
+                        to="/patagonian-spirit/work-vineyard"
+                        style={robotoFontRegular}
+                      >
                         <span className="subMenu tracking-widest uppercase">
                           {t("menu.optionB2")}
                         </span>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/work-winery" style={robotoFontRegular}>
+                      <Link
+                        to="/patagonian-spirit/work-winery"
+                        style={robotoFontRegular}
+                      >
                         <span className="subMenu tracking-widest uppercase">
                           {t("menu.optionB3")}
                         </span>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/life-estate" style={robotoFontRegular}>
+                      <Link
+                        to="/patagonian-spirit/life-estate"
+                        style={robotoFontRegular}
+                      >
                         <span className="subMenu tracking-widest uppercase">
                           {t("menu.optionB4")}
                         </span>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/water-life" style={robotoFontRegular}>
+                      <Link
+                        to="/patagonian-spirit/water-life"
+                        style={robotoFontRegular}
+                      >
                         <span className="subMenu tracking-widest uppercase">
                           {t("menu.optionB5")}
                         </span>
