@@ -37,25 +37,14 @@ import WinesInWorld from "./pages/WinesWorld/wines-in-world";
 import Test from "./testing/vinoTest";
 
 function App() {
-  const savedIsAdult = localStorage.getItem("isAdult");
   const [showAgeConfirmation, setShowAgeConfirmation] = useState(true);
-  const [isAdult, setIsAdult] = useState(savedIsAdult !== null ? JSON.parse(savedIsAdult) : false);  const [showAccessDeniedMessage, setShowAccessDeniedMessage] = useState(false);
+  const [isAdult, setIsAdult] = useState(false);
+  const [showAccessDeniedMessage, setShowAccessDeniedMessage] = useState(false);
   const [countdown, setCountdown] = useState(10);
   const [
     showAgeConfirmationAfterCountdown,
     setShowAgeConfirmationAfterCountdown,
   ] = useState(false);
-
-
-  useEffect(() => {
-    // Al cargar la aplicación, intenta obtener el valor de isAdult desde localStorage
-    const savedIsAdult = localStorage.getItem("isAdult");
-
-    // Si hay un valor guardado, actualiza el estado con ese valor
-    if (savedIsAdult !== null) {
-      setIsAdult(JSON.parse(savedIsAdult));
-    }
-  }, []);
 
   const handleAgeConfirmed = (isAdult) => {
     setIsAdult(isAdult);
@@ -65,8 +54,6 @@ function App() {
       setShowAccessDeniedMessage(true);
       setCountdown(10);
     }
-    // Almacena el valor de isAdult en localStorage
-    localStorage.setItem("isAdult", JSON.stringify(isAdult));
   };
 
   useEffect(() => {
@@ -95,15 +82,13 @@ function App() {
     fontStyle: "normal",
   };
 
-  console.log(isAdult)
-
   return (
     <Router>
       <div>
-        {!isAdult && showAgeConfirmation && (
+        {showAgeConfirmation && (
           <AgeConfirmationPopup onAgeConfirmed={handleAgeConfirmed} />
         )}
-        {!isAdult && showAgeConfirmationAfterCountdown && (
+        {showAgeConfirmationAfterCountdown && (
           <AgeConfirmationPopup onAgeConfirmed={handleAgeConfirmed} />
         )}
         {isAdult &&

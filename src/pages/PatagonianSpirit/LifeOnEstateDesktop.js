@@ -108,7 +108,7 @@ const CarouselSlider = () => {
 
         // Obtener las URL de las imágenes
         const imageUrls = slides.map(
-          (slide) => slide.image.data.attributes.formats.small.url
+          (slide) => slide.image.data.attributes.url
         );
         setImages(imageUrls);
 
