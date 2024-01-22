@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import workVineyardSlide1 from "../../images/wineYardSlide3.jpg";
+import workVineyardSlide2 from "../../images/wineYardSlide2.jpg";
+import workVineyardSlide3 from "../../images/hourses.jpg";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import hambur from "../../images/menu-hambur.png";
@@ -6,8 +9,6 @@ import { useTranslation } from "react-i18next";
 
 const CarouselSlider = () => {
   const { t, i18n } = useTranslation();
-  const idiomaSeleccionado = i18n.language;
-
   // inicio codigo para retrasar la aparicion del titulo
   const [isVisible, setIsVisible] = useState(false);
 
@@ -44,8 +45,6 @@ const CarouselSlider = () => {
 
   // fin codigo para demorar la aparcion de la imagen al inciio
 
-  // Fuentes
-
   const playfairFontBlack = {
     fontFamily: "Playfair Black, sans-serif",
     fontWeight: "normal",
@@ -70,68 +69,17 @@ const CarouselSlider = () => {
 
   const [isPrevButtonHovered, setIsPrevButtonHovered] = useState(false);
   const [isNextButtonHovered, setIsNextButtonHovered] = useState(false);
-
-  // Estadode variables consultas de API
-  const [images, setImages] = useState([]);
-  const [title, setTitle] = useState([]);
-  const [paragraphs, setParagraphs] = useState([""]);
-
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  // URL de la API
-  const apiUrlEnglish =
-    "https://back-ribera-gl7lw5cfra-uc.a.run.app/api/pages?populate=bloques%2C%20bloques.slide%2C%20bloques.slide.image&filters%5Bslug%5D=work-vineyard&locale=en";
-  const apiUrlSpanish =
-    "https://back-ribera-gl7lw5cfra-uc.a.run.app/api/pages?populate=bloques%2C%20bloques.slide%2C%20bloques.slide.image&filters%5Bslug%5D=work-vineyard-es&locale=es";
-  let apiUrl;
-
-  if (idiomaSeleccionado === "en") {
-    apiUrl = apiUrlEnglish;
-  } else {
-    apiUrl = apiUrlSpanish;
-  }
-
-  useEffect(() => {
-    // Función para quitar las etiquetas HTML de un texto
-    const extractTextWithoutTags = (htmlString) => {
-      const tempElement = document.createElement("div");
-      tempElement.innerHTML = htmlString;
-      return tempElement.textContent || tempElement.innerText;
-    };
-
-    // Función para realizar la solicitud HTTP y obtener las imágenes
-    const fetchImages = async () => {
-      try {
-        const response = await fetch(apiUrl);
-        const data = await response.json();
-
-        // Obtener el array de slides
-        const slides = data.data[0].attributes.bloques[0].slide;
-
-        // Obtener las URL de las imágenes
-        const imageUrls = slides.map(
-          (slide) => slide.image.data.attributes.formats.small.url
-        );
-        setImages(imageUrls);
-
-        // Obtener los titulos
-        const titlesContent = slides.map((slide) => slide.title);
-        setTitle(titlesContent);
-
-        // Obtener los párrafos sin etiquetas HTML
-        const textContent = slides.map((slide) =>
-          extractTextWithoutTags(slide.text)
-        );
-        setParagraphs(textContent);
-      } catch (error) {
-        console.error("Error al realizar la solicitud:", error);
-      }
-    };
-
-    // Llamar a la función de solicitud cuando el componente se monta
-    fetchImages();
-  }, [currentImageIndex]); // El segundo argumento [] significa que se ejecutará solo una vez (cuando se monta el componente)
+  const images = [workVineyardSlide1, workVineyardSlide2, workVineyardSlide3];
+  const paragraphs = [
+    t("patagonian.lifeEstate.paragraphSlider1"),
+    t("patagonian.lifeEstate.paragraphSlider2"),
+    t("patagonian.lifeEstate.paragraphSlider3"),
+  ];
+  const title = [
+    t("patagonian.lifeEstate.titleSlider1"),
+    t("patagonian.lifeEstate.titleSlider2"),
+    t("patagonian.lifeEstate.titleSlider3"),
+  ];
 
   // codigo para cambiar de slide cuando se presionan los indicadores
   const handlePrevClickIndicators = (index) => {
@@ -179,6 +127,9 @@ const CarouselSlider = () => {
   };
 
   // fin codigo para indicadores
+
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const handlePrevClick = () => {
     setcondition1Prev(true);
@@ -323,7 +274,7 @@ const CarouselSlider = () => {
               style={playfairFontBlack}
               className="text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
             >
-              {t("patagonian.workVineyard.title")}
+              {t("patagonian.lifeEstate.title")}
             </h2>
           </div>
         </div>
@@ -521,7 +472,14 @@ const CarouselSlider = () => {
                 strokeDasharray="502"
                 strokeDashoffset={502 - (502 * percentage) / -100}
               />
-
+              {/* <image
+                x={(100 - imageWidth) / 2}
+                y={(100 - imageHeight) / 2}
+                width={imageWidth}
+                height={imageHeight}
+                xlinkHref={leftArrowImage}
+                opacity="0.7"
+              /> */}
               <circle
                 cx="50"
                 cy="50"
@@ -543,9 +501,7 @@ const CarouselSlider = () => {
           >
             {" "}
             {"0" + (currentImageIndex + 1)}{" "}
-            <sup className="text-base underline align-middles">
-              {images.length}
-            </sup>
+            <sup className="text-base underline align-middles">3</sup>
           </p>
         </div>
         <div className="w-96 container mx-auto max-w-screen-xl xl:max-w-screen-2xl  py-1/2 fixed -top-32 left-0 right-0  md:px-5 2xl:px-0 absolute inset-0 flex items-center justify-center  ">
