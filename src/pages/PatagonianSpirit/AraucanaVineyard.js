@@ -77,17 +77,26 @@ const ConstructionPage = () => {
   //API REST
   const { t, i18n } = useTranslation();
   const idiomaSeleccionado = i18n.language;
-
-  const { slug } = useParams();
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
+
+  // URL de la API
+  const apiUrlEnglish =
+    "https://back-ribera-gl7lw5cfra-uc.a.run.app/api/pages?populate=bloques%2C%20bloques.image&filters%5Bslug%5D=araucana-vineyard&locale=en";
+  const apiUrlSpanish =
+    "https://back-ribera-gl7lw5cfra-uc.a.run.app/api/pages?populate=bloques%2C%20bloques.image&filters%5Bslug%5D=araucana-vineyard-es&locale=es";
+  let apiUrl;
+
+  if (idiomaSeleccionado === "en") {
+    apiUrl = apiUrlEnglish;
+  } else {
+    apiUrl = apiUrlSpanish;
+  }
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          `https://back-ribera-gl7lw5cfra-uc.a.run.app/api/pages?populate=bloques%2C%20bloques.image&filters%5Bslug%5D=${slug}&locale=${idiomaSeleccionado}`
-        );
+        const response = await axios.get(apiUrl);
         setData(response.data);
       } catch (error) {
         setError(error);

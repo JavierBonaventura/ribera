@@ -1,51 +1,172 @@
 {
   "data": [
     {
-      "id": 1,
+      "id": 15,
       "attributes": {
-        "title": "Contact",
-        "slug": "contact",
+        "title": "Water for life",
+        "slug": "water-life",
         "subtitle": null,
-        "createdAt": "2024-01-09T20:55:00.660Z",
-        "updatedAt": "2024-01-11T20:14:25.347Z",
-        "publishedAt": "2024-01-09T20:56:09.611Z",
+        "createdAt": "2024-01-15T13:42:22.327Z",
+        "updatedAt": "2024-01-23T20:21:24.246Z",
+        "publishedAt": "2024-01-15T13:42:23.803Z",
         "locale": "en",
         "bloques": [
           {
-            "id": 1,
-            "__component": "global.contact-info",
-            "label": "Our offices",
-            "Link": {
-              "id": 41,
-              "text": "Ortiz de Ocampo 3302 Buenos Aires, Argentina",
-              "href": "https://www.google.com/maps/place/Ortiz+de+Ocampo+3302,+C1425+CABA/@-34.5750298,-58.4035604,17z/data=!3m1!4b1!4m6!3m5!1s0x95bcb5d7344eecc7:0x17bb52293d552009!8m2!3d-34.5750342!4d-58.4009855!16s%2Fg%2F11qpp9y2jx?hl=es&entry=ttu",
-              "isExternal": true,
-              "target": "_blank"
-            }
-          },
-          {
-            "id": 2,
-            "__component": "global.contact-info",
-            "label": "Our winery",
-            "Link": {
-              "id": 42,
-              "text": " Ruta Prov.Nro 7 KM 12 Valle Azul, El Cuy, Río Negro. CP: 8336",
-              "href": "https://www.google.com.ar/maps/place/39%C2%B011'17.0%22S+66%C2%B052'26.0%22W/@-39.1880556,-66.8760829,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x7cfe3f53aaf18eb2!8m2!3d-39.1880556!4d-66.8738889",
-              "isExternal": true,
-              "target": "_blank"
-            }
-          },
-          {
-            "id": 3,
-            "__component": "global.contact-info",
-            "label": "FOLLOW US!",
-            "Link": {
-              "id": 43,
-              "text": "riberadelcuarzo",
-              "href": "https://www.instagram.com/riberadelcuarzo/",
-              "isExternal": true,
-              "target": "_blank"
-            }
+            "id": 19,
+            "__component": "global.slide-show",
+            "slide": [
+              {
+                "id": 43,
+                "title": "WATER",
+                "text": "<p><span style=\"color:hsl( 41, 40%, 92% );font-family:&quot;Playfair Regular&quot;, sans-serif;\">The countess planted the vineyard at the highest point of the </span><span style=\"color:hsl( 41, 40%, 92% );\"><i>barda</i></span><span style=\"color:hsl( 41, 40%, 92% );font-family:&quot;Playfair Regular&quot;, sans-serif;\">, an unexplored location where no one had even considered such an endeavor before. It required transporting water for irrigation using pumps, incurring significant costs. Until then, productions in the Río Negro valley were carried out alongside the river, with water drawn through channels and gates - an economical flood irrigation system.</span></p>",
+                "textMobile": "<p>The countess planted the vineyard at the highest point of the &lt;i&gt;barda&lt;/i&gt;, an unexplored location where no one had even considered such an endeavor before. It required transporting water for irrigation using pumps, incurring significant costs. Until then, productions in the Río Negro valley were carried out alongside the river, with water drawn through channels and gates - an economical flood irrigation system. &lt;br /&gt; &lt;br /&gt;Yet, the countess decided to plant at this elevated site because she believed that what would be produced there would be worth the effort. Without calculating costs, she embarked on building a system of pumps that transported water three kilometers uphill. When we finally took over the vineyard, we trusted that renewable energy, perhaps wind or solar, would eventually transform this cost into something reasonable in the short term. Regardless, the risk was worth taking. &lt;br /&gt; &lt;br /&gt;Some time later, a local man spoke to us about water. This kind gentleman, told us that abundant water could be found at the base of the ridge. Although it seemed unlikely, we decided to drill some wells. Water surged forth with force. These wells now produce around 200,000 liters per hour, significantly reducing our costs. We listened to nature and special individuals. Today, Ribera del Cuarzo follows a virtuous cycle of respecting the environment, and the reward is a wine that never ceases to astonish us.</p>",
+                "image": {
+                  "data": {
+                    "id": 174,
+                    "attributes": {
+                      "name": "background-water.jpg",
+                      "alternativeText": null,
+                      "caption": null,
+                      "width": 8255,
+                      "height": 5503,
+                      "formats": {
+                        "large": {
+                          "ext": ".jpg",
+                          "url": "https://storage.googleapis.com/strapi-ribera-back-prod/large_background_water_df2d4ffda5/large_background_water_df2d4ffda5.jpg",
+                          "hash": "large_background_water_df2d4ffda5",
+                          "mime": "image/jpeg",
+                          "name": "large_background-water.jpg",
+                          "path": null,
+                          "size": 45.53,
+                          "width": 1000,
+                          "height": 667
+                        },
+                        "small": {
+                          "ext": ".jpg",
+                          "url": "https://storage.googleapis.com/strapi-ribera-back-prod/small_background_water_df2d4ffda5/small_background_water_df2d4ffda5.jpg",
+                          "hash": "small_background_water_df2d4ffda5",
+                          "mime": "image/jpeg",
+                          "name": "small_background-water.jpg",
+                          "path": null,
+                          "size": 16.19,
+                          "width": 500,
+                          "height": 333
+                        },
+                        "medium": {
+                          "ext": ".jpg",
+                          "url": "https://storage.googleapis.com/strapi-ribera-back-prod/medium_background_water_df2d4ffda5/medium_background_water_df2d4ffda5.jpg",
+                          "hash": "medium_background_water_df2d4ffda5",
+                          "mime": "image/jpeg",
+                          "name": "medium_background-water.jpg",
+                          "path": null,
+                          "size": 30.06,
+                          "width": 750,
+                          "height": 500
+                        },
+                        "thumbnail": {
+                          "ext": ".jpg",
+                          "url": "https://storage.googleapis.com/strapi-ribera-back-prod/thumbnail_background_water_df2d4ffda5/thumbnail_background_water_df2d4ffda5.jpg",
+                          "hash": "thumbnail_background_water_df2d4ffda5",
+                          "mime": "image/jpeg",
+                          "name": "thumbnail_background-water.jpg",
+                          "path": null,
+                          "size": 5.16,
+                          "width": 234,
+                          "height": 156
+                        }
+                      },
+                      "hash": "background_water_df2d4ffda5",
+                      "ext": ".jpg",
+                      "mime": "image/jpeg",
+                      "size": 509.45,
+                      "url": "https://storage.googleapis.com/strapi-ribera-back-prod/background_water_df2d4ffda5/background_water_df2d4ffda5.jpg",
+                      "previewUrl": null,
+                      "provider": "@strapi-community/strapi-provider-upload-google-cloud-storage",
+                      "provider_metadata": null,
+                      "createdAt": "2024-01-15T13:39:07.298Z",
+                      "updatedAt": "2024-01-19T13:10:52.097Z"
+                    }
+                  }
+                },
+                "imageMobile": {
+                  "data": {
+                    "id": 176,
+                    "attributes": {
+                      "name": "water.png",
+                      "alternativeText": null,
+                      "caption": null,
+                      "width": 768,
+                      "height": 1024,
+                      "formats": {
+                        "large": {
+                          "ext": ".png",
+                          "url": "https://storage.googleapis.com/strapi-ribera-back-prod/large_water_ba4e673033/large_water_ba4e673033.png",
+                          "hash": "large_water_ba4e673033",
+                          "mime": "image/png",
+                          "name": "large_water.png",
+                          "path": null,
+                          "size": 899.06,
+                          "width": 750,
+                          "height": 1000
+                        },
+                        "small": {
+                          "ext": ".png",
+                          "url": "https://storage.googleapis.com/strapi-ribera-back-prod/small_water_ba4e673033/small_water_ba4e673033.png",
+                          "hash": "small_water_ba4e673033",
+                          "mime": "image/png",
+                          "name": "small_water.png",
+                          "path": null,
+                          "size": 264.23,
+                          "width": 375,
+                          "height": 500
+                        },
+                        "medium": {
+                          "ext": ".png",
+                          "url": "https://storage.googleapis.com/strapi-ribera-back-prod/medium_water_ba4e673033/medium_water_ba4e673033.png",
+                          "hash": "medium_water_ba4e673033",
+                          "mime": "image/png",
+                          "name": "medium_water.png",
+                          "path": null,
+                          "size": 558.27,
+                          "width": 563,
+                          "height": 750
+                        },
+                        "thumbnail": {
+                          "ext": ".png",
+                          "url": "https://storage.googleapis.com/strapi-ribera-back-prod/thumbnail_water_ba4e673033/thumbnail_water_ba4e673033.png",
+                          "hash": "thumbnail_water_ba4e673033",
+                          "mime": "image/png",
+                          "name": "thumbnail_water.png",
+                          "path": null,
+                          "size": 34.64,
+                          "width": 117,
+                          "height": 156
+                        }
+                      },
+                      "hash": "water_ba4e673033",
+                      "ext": ".png",
+                      "mime": "image/png",
+                      "size": 197.08,
+                      "url": "https://storage.googleapis.com/strapi-ribera-back-prod/water_ba4e673033/water_ba4e673033.png",
+                      "previewUrl": null,
+                      "provider": "@strapi-community/strapi-provider-upload-google-cloud-storage",
+                      "provider_metadata": null,
+                      "createdAt": "2024-01-22T16:49:22.409Z",
+                      "updatedAt": "2024-01-22T16:49:22.409Z"
+                    }
+                  }
+                }
+              }
+            ],
+            "callToAction": [
+              {
+                "id": 51,
+                "text": "READ MORE",
+                "href": null,
+                "isExternal": true,
+                "target": "_blank"
+              }
+            ]
           }
         ]
       }

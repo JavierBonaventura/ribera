@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import hambur from "../../images/menu-hambur.png";
@@ -8,8 +8,8 @@ import "../../App.css";
 import { useLocation } from "react-router-dom";
 import { Transition, animated } from "@react-spring/web";
 import { useTranslation } from "react-i18next";
+import axios from "axios";
 const LifeWater = () => {
-  const { t, i18n } = useTranslation();
   const location = useLocation();
 
   const playfairFontItalic = {
@@ -35,6 +35,46 @@ const LifeWater = () => {
     fontWeight: "normal",
     fontStyle: "normal",
   };
+
+  //API REST
+  const { t, i18n } = useTranslation();
+  const idiomaSeleccionado = i18n.language;
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+
+  // URL de la API
+  const apiUrlEnglish =
+    "https://back-ribera-gl7lw5cfra-uc.a.run.app/api/pages?populate=bloques.slide%2C%20bloques.slide.image%2C%20bloques.callToAction%2C%20bloques.slide.imageMobile&filters%5Bslug%5D=water-life&locale=en";
+  const apiUrlSpanish =
+    "https://back-ribera-gl7lw5cfra-uc.a.run.app/api/pages?populate=bloques.slide%2C%20bloques.slide.image%2C%20bloques.callToAction%2C%20bloques.slide.imageMobile&filters%5Bslug%5D=water-life-es&locale=es";
+  let apiUrl;
+
+  if (idiomaSeleccionado === "en") {
+    apiUrl = apiUrlEnglish;
+  } else {
+    apiUrl = apiUrlSpanish;
+  }
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(apiUrl);
+        setData(response.data);
+      } catch (error) {
+        setError(error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (error) {
+    return <div>Error al cargar los datos</div>;
+  }
+
+  if (!data) {
+    return <div>Cargando...</div>;
+  }
 
   return (
     <Transition
@@ -80,23 +120,28 @@ const LifeWater = () => {
                     <h2
                       style={playfairFontBlack}
                       className="text-base md:text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
-                    >
-                      {t("patagonian.waterLife.title")}
-                    </h2>
+                      dangerouslySetInnerHTML={{
+                        __html: data.data[0].attributes.title,
+                      }}
+                    ></h2>
                   </div>
                 </div>
 
                 <div className="w-2/4 mx-auto flex flex-col gap-y-14 py-16 2xl:py-40">
                   <p style={robotoFontRegular} className="text-center">
-                    <span className=" uppercase text-[#C4B27D] text-2xl">
-                      {t("patagonian.waterLife.subtitle")}
-                    </span>
+                    <span
+                      className=" uppercase text-[#C4B27D] text-2xl"
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          data.data[0].attributes.bloques[0].slide[0].title,
+                      }}
+                    ></span>
                   </p>
                   <p
                     style={playfairFontRegular}
                     className="text-[#F3EEE3]  text-xs  lg:text-base lg:leading-7 tracking-wider text-center "
                     dangerouslySetInnerHTML={{
-                      __html: t("patagonian.waterLife.firstParagraph"),
+                      __html: data.data[0].attributes.bloques[0].slide[0].text,
                     }}
                   ></p>
                   <div className="flex justify-center items-center ">
@@ -104,9 +149,12 @@ const LifeWater = () => {
                       <a
                         href=""
                         className="text-[#C4B27D] hover:text-[#F3EEE3]  uppercase hover:bg-[#C4B27D] border border-[#C4B27D] text-lg py-2 px-10 rounded-lg   transition ease-in-out  duration-300"
-                      >
-                        {t("patagonian.waterLife.btn")}
-                      </a>
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            data.data[0].attributes.bloques[0].callToAction[0]
+                              .text,
+                        }}
+                      ></a>
                     </Link>
                   </div>
                 </div>
@@ -124,15 +172,19 @@ const LifeWater = () => {
                     <h2
                       style={playfairFontBlack}
                       className="text-base md:text-xl text-[#C4B27D] text-center tracking-wider uppercase"
-                    >
-                      {t("patagonian.waterLife.title")}
-                    </h2>
+                      dangerouslySetInnerHTML={{
+                        __html: data.data[0].attributes.title,
+                      }}
+                    ></h2>
                   </div>
                 </div>
 
                 <div class="px-4 md:px-0 bg-[#F3EEE3]">
                   <img
-                    src={imgWater}
+                    src={
+                      data.data[0].attributes.bloques[0].slide[0].imageMobile
+                        .data.attributes.url
+                    }
                     alt=""
                     class="w-full md:w-2/3 mx-auto shadow-2xl "
                   />
@@ -144,7 +196,9 @@ const LifeWater = () => {
                       class="text-[#000000] tracking-wider text-justify px-10 md:px-32 md:w-3/4 mx-auto  text-xs md:text-base lg:text-lg"
                       style={playfairFontRegular}
                       dangerouslySetInnerHTML={{
-                        __html: t("patagonian.waterLife.mobileParagraph"),
+                        __html:
+                          data.data[0].attributes.bloques[0].slide[0]
+                            .textMobile,
                       }}
                     ></p>
                   </div>

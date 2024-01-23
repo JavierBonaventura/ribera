@@ -84,17 +84,26 @@ const FormularioContacto = () => {
   //API REST GET
   const { t, i18n } = useTranslation();
   const idiomaSeleccionado = i18n.language;
-
-  const { slug } = useParams();
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
+
+  // URL de la API
+  const apiUrlEnglish =
+    "https://back-ribera-gl7lw5cfra-uc.a.run.app/api/pages?populate=bloques%2C%20bloques.Link&filters%5Bslug%5D=contact&locale=en";
+  const apiUrlSpanish =
+    "https://back-ribera-gl7lw5cfra-uc.a.run.app/api/pages?populate=bloques%2C%20bloques.Link&filters%5Bslug%5D=contact-es&locale=es";
+  let apiUrl;
+
+  if (idiomaSeleccionado === "en") {
+    apiUrl = apiUrlEnglish;
+  } else {
+    apiUrl = apiUrlSpanish;
+  }
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          `https://back-ribera-gl7lw5cfra-uc.a.run.app/api/pages?populate=bloques%2C%20bloques.Link&filters%5Bslug%5D=${slug}&locale=${idiomaSeleccionado}`
-        );
+        const response = await axios.get(apiUrl);
         setData(response.data);
       } catch (error) {
         setError(error);

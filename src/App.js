@@ -39,13 +39,15 @@ import Test from "./testing/vinoTest";
 function App() {
   const savedIsAdult = localStorage.getItem("isAdult");
   const [showAgeConfirmation, setShowAgeConfirmation] = useState(true);
-  const [isAdult, setIsAdult] = useState(savedIsAdult !== null ? JSON.parse(savedIsAdult) : false);  const [showAccessDeniedMessage, setShowAccessDeniedMessage] = useState(false);
+  const [isAdult, setIsAdult] = useState(
+    savedIsAdult !== null ? JSON.parse(savedIsAdult) : false
+  );
+  const [showAccessDeniedMessage, setShowAccessDeniedMessage] = useState(false);
   const [countdown, setCountdown] = useState(10);
   const [
     showAgeConfirmationAfterCountdown,
     setShowAgeConfirmationAfterCountdown,
   ] = useState(false);
-
 
   useEffect(() => {
     // Al cargar la aplicación, intenta obtener el valor de isAdult desde localStorage
@@ -95,7 +97,7 @@ function App() {
     fontStyle: "normal",
   };
 
-  console.log(isAdult)
+  console.log(isAdult);
 
   return (
     <Router>
@@ -199,11 +201,11 @@ const AppContent = () => {
               ) : (
                 <Route path="/" element={<MenuDesktop />} />
               )}
-              <Route path="history-family/:slug" element={<Family />} />
-              <Route path="history-valle/:slug" element={<ValleAzul />} />
+              <Route path="history/family" element={<Family />} />
+              <Route path="history/valle-azul" element={<ValleAzul />} />
 
               <Route
-                path="patagonian-spirit/:slug"
+                path="patagonian-spirit/araucana-vineyard"
                 element={<AraucanaVineyard />}
               />
 
@@ -258,7 +260,7 @@ const AppContent = () => {
               ) : (
                 <Route path="/menu" element={<MenuHamburguesaDesktop />} />
               )}
-              <Route path="/:slug" element={<FormularioContacto />} />
+              <Route path="/contact" element={<FormularioContacto />} />
 
               <Route
                 path="/wines-in-argentina/:slug"

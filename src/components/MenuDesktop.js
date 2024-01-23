@@ -271,42 +271,6 @@ const MenuDesktop = () => {
     fetchData();
   }, [idiomaSeleccionado]);
 
-  //Api family slug//
-  let slugFamily;
-
-  if (idiomaSeleccionado === "en") {
-    slugFamily = "family";
-  } else if (idiomaSeleccionado === "es") {
-    slugFamily = "family-es";
-  }
-
-  //Api valle slug//
-  let slugValle;
-
-  if (idiomaSeleccionado === "en") {
-    slugValle = "valle-azul";
-  } else if (idiomaSeleccionado === "es") {
-    slugValle = "valle-azul-es";
-  }
-
-  //Api araucana slug//
-  let slugAraucana;
-
-  if (idiomaSeleccionado === "en") {
-    slugAraucana = "araucana-vineyard";
-  } else if (idiomaSeleccionado === "es") {
-    slugAraucana = "araucana-vineyard-es";
-  }
-
-  //Api contact//
-  let slugContact;
-
-  if (idiomaSeleccionado === "en") {
-    slugContact = "contact";
-  } else if (idiomaSeleccionado === "es") {
-    slugContact = "contact-es";
-  }
-
   return (
     <Transition
       items={location}
@@ -463,10 +427,7 @@ const MenuDesktop = () => {
                         }`}
                       >
                         <li>
-                          <Link
-                            to={`/history-family/${slugFamily}`}
-                            style={robotoFontRegular}
-                          >
+                          <Link to="history/family" style={robotoFontRegular}>
                             <span className="subMenu tracking-widest uppercase">
                               {t("menu.optionA1")}
                             </span>
@@ -474,7 +435,7 @@ const MenuDesktop = () => {
                         </li>
                         <li>
                           <Link
-                            to={`/history-valle/${slugValle}`}
+                            to="history/valle-azul"
                             style={robotoFontRegular}
                           >
                             <span className="subMenu tracking-widest uppercase">
@@ -512,7 +473,7 @@ const MenuDesktop = () => {
                       >
                         <li>
                           <Link
-                            to={`/patagonian-spirit/${slugAraucana}`}
+                            to="patagonian-spirit/araucana-vineyard"
                             style={robotoFontRegular}
                           >
                             <span className="subMenu tracking-widest uppercase">
@@ -672,7 +633,7 @@ const MenuDesktop = () => {
                       >
                         <div className=" ">
                           <Link
-                            to={`/${slugContact}`}
+                            to="/contact"
                             className="hover:text-[#C4B27D]  duration-300 transition ease-in-out uppercase tracking-widest"
                             style={robotoFontRegular}
                           >
