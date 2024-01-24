@@ -427,7 +427,7 @@ const MenuDesktop = () => {
                         }`}
                       >
                         <li>
-                          <Link to="history/family" style={robotoFontRegular}>
+                          <Link to="/history/family" style={robotoFontRegular}>
                             <span className="subMenu tracking-widest uppercase">
                               {t("menu.optionA1")}
                             </span>
@@ -435,7 +435,7 @@ const MenuDesktop = () => {
                         </li>
                         <li>
                           <Link
-                            to="history/valle-azul"
+                            to="/history/valle-azul"
                             style={robotoFontRegular}
                           >
                             <span className="subMenu tracking-widest uppercase">
@@ -473,7 +473,7 @@ const MenuDesktop = () => {
                       >
                         <li>
                           <Link
-                            to="patagonian-spirit/araucana-vineyard"
+                            to="/patagonian-spirit/araucana-vineyard"
                             style={robotoFontRegular}
                           >
                             <span className="subMenu tracking-widest uppercase">

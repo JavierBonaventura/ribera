@@ -181,41 +181,6 @@ const Home = () => {
     fetchData();
   }, [idiomaSeleccionado]);
 
-  //Api family slug//
-  let slugFamily;
-
-  if (idiomaSeleccionado === "en") {
-    slugFamily = "family";
-  } else if (idiomaSeleccionado === "es") {
-    slugFamily = "family-es";
-  }
-
-  //Api valle slug//
-  let slugValle;
-
-  if (idiomaSeleccionado === "en") {
-    slugValle = "valle-azul";
-  } else if (idiomaSeleccionado === "es") {
-    slugValle = "valle-azul-es";
-  }
-
-  //Api araucana slug//
-  let slugAraucana;
-
-  if (idiomaSeleccionado === "en") {
-    slugAraucana = "araucana-vineyard";
-  } else if (idiomaSeleccionado === "es") {
-    slugAraucana = "araucana-vineyard-es";
-  }
-
-  //Api contact//
-  let slugContact;
-
-  if (idiomaSeleccionado === "en") {
-    slugContact = "contact";
-  } else if (idiomaSeleccionado === "es") {
-    slugContact = "contact-es";
-  }
   return (
     <Transition
       items={location}
@@ -305,10 +270,7 @@ const Home = () => {
                 <animated.div style={dropdownAnimation1}>
                   <ul className="text-center space-y-1.5">
                     <li>
-                      <Link
-                        to={`/history-family/${slugFamily}`}
-                        style={robotoFontRegular}
-                      >
+                      <Link to="/history/family" style={robotoFontRegular}>
                         <span className="subMenu tracking-widest uppercase">
                           {" "}
                           {t("menu.optionA1")}
@@ -317,11 +279,7 @@ const Home = () => {
                     </li>
 
                     <li>
-                      {" "}
-                      <Link
-                        to={`/history-valle/${slugValle}`}
-                        style={robotoFontRegular}
-                      >
+                      <Link to="/history/valle-azul" style={robotoFontRegular}>
                         {" "}
                         <span className="subMenu tracking-widest uppercase">
                           {t("menu.optionA2")}
@@ -342,7 +300,7 @@ const Home = () => {
                   <ul className="text-center space-y-1.5">
                     <li>
                       <Link
-                        to={`/patagonian-spirit/${slugAraucana}`}
+                        to="/patagonian-spirit/araucana-vineyard"
                         style={robotoFontRegular}
                       >
                         <span className="subMenu tracking-widest uppercase">

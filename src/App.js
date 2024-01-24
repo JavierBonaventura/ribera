@@ -267,7 +267,6 @@ const AppContent = () => {
                 element={<WinesInArgentina />}
               />
               <Route path="/wines-in-world/:slug" element={<WinesInWorld />} />
-              <Route path="/test" element={<Test />} />
             </Routes>
           </animated.div>
         )}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import hambur from "../../images/menu-hambur.png";
@@ -7,9 +7,13 @@ import "../../App.css";
 import { useLocation } from "react-router-dom";
 import { Transition, animated } from "@react-spring/web";
 import { useTranslation } from "react-i18next";
+import axios from "axios";
+import Loaded from "../../components/Loaded";
+import Error from "../../components/Error";
 
 const LifeWater = () => {
   const { t, i18n } = useTranslation();
+  const idiomaSeleccionado = i18n.language;
   const location = useLocation();
 
   const playfairFontItalic = {
@@ -35,6 +39,51 @@ const LifeWater = () => {
     fontWeight: "normal",
     fontStyle: "normal",
   };
+
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+
+  // URL de la API
+  const apiUrlEnglish =
+    "https://back-ribera-gl7lw5cfra-uc.a.run.app/api/pages?populate=bloques&filters%5Bslug%5D=water-life-read&locale=en";
+  const apiUrlSpanish =
+    "https://back-ribera-gl7lw5cfra-uc.a.run.app/api/pages?populate=bloques&filters%5Bslug%5D=water-life-read-es&locale=es";
+  let apiUrl;
+
+  if (idiomaSeleccionado === "en") {
+    apiUrl = apiUrlEnglish;
+  } else {
+    apiUrl = apiUrlSpanish;
+  }
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(apiUrl);
+        setData(response.data);
+      } catch (error) {
+        setError(error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (error) {
+    return (
+      <div>
+        <Error />
+      </div>
+    );
+  }
+
+  if (!data) {
+    return (
+      <div>
+        <Loaded />
+      </div>
+    );
+  }
 
   return (
     <Transition
@@ -69,7 +118,7 @@ const LifeWater = () => {
 
             <div class="container mx-auto max-w-screen-xl xl:max-w-screen-2xl pt-24 md:px-5 2xl:px-0  ">
               <div class="absolute left-1/2 top-32  hover:scale-90 -translate-x-1/2 z-50  rounded-full transition ease-in-out duration-500">
-                <Link to="/water-life">
+                <Link to="/patagonian-spirit/water-life">
                   <img src={close} alt="" className="w-12 2xl:w-16 " />
                 </Link>
               </div>
@@ -84,9 +133,10 @@ const LifeWater = () => {
                   <h2
                     style={playfairFontBlack}
                     className="text-base md:text-2xl text-[#C4B27D] text-center tracking-wider uppercase"
-                  >
-                    {t("patagonian.waterLife.title")}
-                  </h2>
+                    dangerouslySetInnerHTML={{
+                      __html: data.data[0].attributes.title,
+                    }}
+                  ></h2>
                 </div>
               </div>
             </div>
@@ -98,7 +148,7 @@ const LifeWater = () => {
                     style={playfairFontRegular}
                     className="text-[#000000] text-xs lg:text-base lg:leading-7 tracking-wider text-justify"
                     dangerouslySetInnerHTML={{
-                      __html: t("patagonian.waterLife.readParagraph"),
+                      __html: data.data[0].attributes.bloques[0].text,
                     }}
                   ></p>
                 </div>

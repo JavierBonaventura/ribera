@@ -9,6 +9,8 @@ import "../../App.css";
 import { useLocation } from "react-router-dom";
 import { Transition, animated, useSpring } from "@react-spring/web";
 import { useTranslation } from "react-i18next";
+import Loaded from "../../components/Loaded";
+import Error from "../../components/Error";
 
 function Header() {
   const { t, i18n } = useTranslation();

@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import hambur from "../../images/menu-hambur.png";
 import { useTranslation } from "react-i18next";
+import Loaded from "../../components/Loaded";
+import Error from "../../components/Error";
 
 const CarouselSlider = () => {
   const { t, i18n } = useTranslation();

@@ -9,6 +9,8 @@ import { Transition, animated } from "@react-spring/web";
 import portada from "../../images/background-contact-1.png";
 import { useTranslation } from "react-i18next";
 import axios from "axios";
+import Loaded from "../../components/Loaded";
+import Error from "../../components/Error";
 import { useParams } from "react-router-dom";
 
 const FormularioContacto = () => {
@@ -114,11 +116,19 @@ const FormularioContacto = () => {
   }, []);
 
   if (error) {
-    return <div>Error al cargar los datos: {error.message}</div>;
+    return (
+      <div>
+        <Error />
+      </div>
+    );
   }
 
   if (!data) {
-    return <div>Cargando...</div>;
+    return (
+      <div>
+        <Loaded />
+      </div>
+    );
   }
 
   return (

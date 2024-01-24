@@ -10,6 +10,8 @@ import logo from "../../images/logo.svg";
 import hambur from "../../images/menu-hambur.png";
 import arrowDown from "../../images/arrow-down.png";
 import iconIg from "../../images/icon-ig.png";
+import Loaded from "../../components/Loaded";
+import Error from "../../components/Error";
 import "../../App.css";
 
 const Family = () => {
@@ -123,11 +125,19 @@ const Family = () => {
   }, []);
 
   if (error) {
-    return <div>Error al cargar los datos</div>;
+    return (
+      <div>
+        <Error />
+      </div>
+    );
   }
 
   if (!data) {
-    return <div>Cargando...</div>;
+    return (
+      <div>
+        <Loaded />
+      </div>
+    );
   }
 
   return (

@@ -9,6 +9,9 @@ import { useLocation } from "react-router-dom";
 import { Transition, animated } from "@react-spring/web";
 import { useTranslation } from "react-i18next";
 import axios from "axios";
+import Loaded from "../../components/Loaded";
+import Error from "../../components/Error";
+
 const LifeWater = () => {
   const location = useLocation();
 
@@ -69,11 +72,19 @@ const LifeWater = () => {
   }, []);
 
   if (error) {
-    return <div>Error al cargar los datos</div>;
+    return (
+      <div>
+        <Error />
+      </div>
+    );
   }
 
   if (!data) {
-    return <div>Cargando...</div>;
+    return (
+      <div>
+        <Loaded />
+      </div>
+    );
   }
 
   return (

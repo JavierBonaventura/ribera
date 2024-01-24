@@ -7,8 +7,6 @@ import iconDownload from "../../images/icon-download.png";
 import { useSpring, Transition, animated } from "@react-spring/web";
 import ImgMarcaAgua from "../../images/agua-sombra.png";
 import { useTranslation } from "react-i18next";
-import Loaded from "../../components/Loaded";
-import Error from "../../components/Error";
 import axios from "axios";
 import "../../App.css";
 function WinesInWorld() {
@@ -101,10 +99,6 @@ function WinesInWorld() {
   const { slug } = useParams();
   const [wineData, setWineData] = useState(null);
   const [allRelatedImages, setAllRelatedImages] = useState([]);
-  const [loadingWineData, setLoadingWineData] = useState(true);
-  const [loadingRelatedImages, setLoadingRelatedImages] = useState(true);
-  const [errorWineData, setErrorWineData] = useState(null);
-  const [errorRelatedImages, setErrorRelatedImages] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -116,10 +110,7 @@ function WinesInWorld() {
         const fetchedWineData = response.data.data[0];
         setWineData(fetchedWineData);
       } catch (error) {
-        console.error("Error al llamar a la API para detalles del vino", error);
-        setErrorWineData(error);
-      } finally {
-        setLoadingWineData(false);
+        console.error("Error al llamar a la API", error);
       }
     };
 
@@ -154,31 +145,12 @@ function WinesInWorld() {
           "Error al llamar a la API para imágenes relacionadas",
           error
         );
-        setErrorRelatedImages(error);
-      } finally {
-        setLoadingRelatedImages(false);
       }
     };
 
     fetchData();
     fetchAllRelatedImages();
   }, [slug, idiomaSeleccionado]);
-
-  if (loadingWineData || loadingRelatedImages) {
-    return (
-      <div>
-        <Loaded />
-      </div>
-    ); // Puedes usar un componente de carga aquí
-  }
-
-  if (errorWineData || errorRelatedImages) {
-    return (
-      <div>
-        <Error />
-      </div>
-    ); // Puedes usar un componente de error aquí
-  }
 
   return (
     <Transition

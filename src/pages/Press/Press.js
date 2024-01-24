@@ -7,6 +7,8 @@ import iconIg from "../../images/icon-ig.png";
 import SubPressList from "./SubPressList";
 import { Transition, animated } from "@react-spring/web";
 import { useTranslation } from "react-i18next";
+import Loaded from "../../components/Loaded";
+import Error from "../../components/Error";
 import "../../App.css";
 
 function Press() {
