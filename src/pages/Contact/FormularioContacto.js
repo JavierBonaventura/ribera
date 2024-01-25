@@ -165,7 +165,7 @@ const FormularioContacto = () => {
               <img
                 src={portada}
                 alt=""
-                className="mx-auto object-cover w-3/4"
+                className="mx-auto object-cover w-[63%]"
               />
             </div>
             {/*PORTADA DESK END*/}

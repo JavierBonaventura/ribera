@@ -87,6 +87,27 @@ const LifeWater = () => {
     );
   }
 
+  let imageDeskUrl;
+
+  if (
+    data &&
+    data.data &&
+    data.data[0].attributes &&
+    data.data[0].attributes.bloques &&
+    data.data[0].attributes.bloques[0].slide
+  ) {
+    const slide = data.data[0].attributes.bloques[0].slide[0];
+
+    if (
+      slide &&
+      slide.imageMobile &&
+      slide.imageMobile.data &&
+      slide.imageMobile.data.attributes
+    ) {
+      imageDeskUrl = slide.image.data.attributes.url;
+    }
+  }
+
   return (
     <Transition
       items={location}
@@ -228,6 +249,24 @@ const LifeWater = () => {
                   </div>
                 </div>
               </div>
+              <style>
+                {`
+            @media screen and (min-width: 768px) {
+              .background-life {
+                background-image: url(${imageDeskUrl});
+                background-size: cover;
+                background-position: center;
+                height: 100vh;
+              }
+            }
+
+            @media screen and (min-width: 1540px) {
+              .background-life {
+                height: 100vh;
+              }
+            }
+          `}
+              </style>
             </div>
           </body>
         </animated.div>
