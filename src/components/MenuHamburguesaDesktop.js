@@ -560,6 +560,7 @@ const MenuHamburguesaDesktop = () => {
                           </Link>
                         </div>
                       </div>
+                      (
                       <div
                         className="flex justify-start items-center w-1/3 cursor-default gap-x-5 text-sm lg:text-base"
                         style={robotoFontRegular}
@@ -567,10 +568,10 @@ const MenuHamburguesaDesktop = () => {
                         {/* Span para "English" */}
                         <span
                           id="en"
-                          className={`hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest ${
-                            activeButton === "en"
-                              ? "text-[#c4b27d] font-bold "
-                              : "text-[#F3EEE3]"
+                          className={`text-[#F3EEE3] hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest ${
+                            idiomaSeleccionado === "en"
+                              ? "english text-[#c4b27d]"
+                              : ""
                           }`}
                           onClick={() => changeLanguage("en")}
                         >
@@ -580,10 +581,10 @@ const MenuHamburguesaDesktop = () => {
                         {/* Span para "Spanish" */}
                         <span
                           id="es"
-                          className={`hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest ${
-                            activeButton === "es"
-                              ? "text-[#c4b27d] font-bold"
-                              : "text-[#F3EEE3]"
+                          className={`text-[#F3EEE3] hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest ${
+                            idiomaSeleccionado === "es"
+                              ? "spanish text-[#c4b27d]"
+                              : ""
                           }`}
                           onClick={() => changeLanguage("es")}
                         >

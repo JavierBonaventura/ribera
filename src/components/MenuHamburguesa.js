@@ -448,21 +448,19 @@ const Home = () => {
               </div>
             </div>
             <div className="text-[#f3eee3] text-sm flex gap-x-5 pt-10">
+              {/* Span para "English" */}
               <span
-                className={`hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest ${
-                  activeButton === "en"
-                    ? "text-[#c4b27d] font-bold "
-                    : "text-[#F3EEE3]"
+                className={`text-[#F3EEE3] hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest ${
+                  idiomaSeleccionado === "en" ? "english text-[#c4b27d]" : ""
                 }`}
                 onClick={() => changeLanguage("en")}
               >
                 english
               </span>
+              {/* Span para "Spanish" */}
               <span
-                className={`hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest ${
-                  activeButton === "es"
-                    ? "text-[#c4b27d] font-bold"
-                    : "text-[#F3EEE3]"
+                className={`text-[#F3EEE3] hover:text-[#c4b27d] cursor-pointer transition ease-in-out duration-300 tracking-widest ${
+                  idiomaSeleccionado === "es" ? "spanish text-[#c4b27d]" : ""
                 }`}
                 onClick={() => changeLanguage("es")}
               >
