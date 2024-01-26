@@ -34,8 +34,6 @@ import FormularioContacto from "./pages/Contact/FormularioContacto";
 import WinesInArgentina from "./pages/WinesArgentina/wines-in-argentina";
 import WinesInWorld from "./pages/WinesWorld/wines-in-world";
 
-import Test from "./testing/vinoTest";
-
 function App() {
   const savedIsAdult = localStorage.getItem("isAdult");
   const [showAgeConfirmation, setShowAgeConfirmation] = useState(true);
