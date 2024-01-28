@@ -15,6 +15,7 @@ import MenuDesktop from "./components/MenuDesktop";
 import MenuHamburguesa from "./components/MenuHamburguesa";
 import MenuHamburguesaDesktop from "./components/MenuHamburguesaDesktop";
 import AgeConfirmationPopup from "./components/AgeConfirmationPopup";
+import ErrorRuta from "./components/ErrorRuta"
 import "./App.css";
 
 //PAGES//
@@ -95,7 +96,7 @@ function App() {
     fontStyle: "normal",
   };
 
-  console.log(isAdult);
+  // console.log(isAdult);
 
   return (
     <Router>
@@ -265,6 +266,7 @@ const AppContent = () => {
                 element={<WinesInArgentina />}
               />
               <Route path="/wines-in-world/:slug" element={<WinesInWorld />} />
+              <Route path="*" element={<ErrorRuta />} />
             </Routes>
           </animated.div>
         )}

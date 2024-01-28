@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import hambur from "../../images/menu-hambur.png";
 import iconIg from "../../images/icon-ig.png";
-import SubPressList from "./SubPressList";
+import SubPressList from "../pages/Press/SubPressList";
 import { Transition, animated } from "@react-spring/web";
 import { useTranslation } from "react-i18next";
-import Loaded from "../../components/Loaded";
-import Error from "../../components/Error";
+import Loaded from "../components/Loaded";
+import Error from "../components/Error";
 import "../../App.css";
 
 function Press() {
@@ -178,15 +178,10 @@ function Press() {
   // inicio codigo para consultar por los anos de los titulares por API
   const [presses, setPresses] = useState([]);
   const [currentYear, setCurrentYear] = useState(null);
-  const [dataLoaded, setDataLoaded] = useState(null);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Codigo para simular un retraso en la API
-        // await new Promise(resolve => setTimeout(resolve, 3000));
-
         const response = await fetch(
           "https://back-ribera-gl7lw5cfra-uc.a.run.app/api/presses?populate=mainImage"
         );
@@ -202,10 +197,8 @@ function Press() {
         );
 
         setCurrentYear(highestYear);
-        setDataLoaded(response);
       } catch (error) {
         console.error("Error fetching data:", error);
-        setError(error);
       }
     };
 
@@ -288,22 +281,6 @@ function Press() {
     var ano = parseInt(partes[0], 10);
     return ano === currentYear;
   });
-
-  if (error) {
-    return (
-      <div>
-        <Error />
-      </div>
-    );
-  }
-
-  if (!dataLoaded) {
-    return (
-      <div>
-        <Loaded />
-      </div>
-    );
-  }
 
   return (
     <Transition

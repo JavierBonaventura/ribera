@@ -71,6 +71,8 @@ const CarouselSlider = () => {
   const [isPrevButtonHovered, setIsPrevButtonHovered] = useState(false);
   const [isNextButtonHovered, setIsNextButtonHovered] = useState(false);
   // Estadode variables consultas de API
+  const [dataLoaded, setDataLoaded] = useState(null);
+  const [error, setError] = useState(null);
   const [images, setImages] = useState([]);
   const [title, setTitle] = useState([]);
   const [paragraphs, setParagraphs] = useState([""]);
@@ -102,6 +104,8 @@ const CarouselSlider = () => {
     // Función para realizar la solicitud HTTP y obtener las imágenes
     const fetchImages = async () => {
       try {
+        // Codigo para simular un retraso en la API
+        // await new Promise(resolve => setTimeout(resolve, 3000));
         const response = await fetch(apiUrl);
         const data = await response.json();
 
@@ -123,8 +127,10 @@ const CarouselSlider = () => {
           extractTextWithoutTags(slide.text)
         );
         setParagraphs(textContent);
+        setDataLoaded(response);
       } catch (error) {
         console.error("Error al realizar la solicitud:", error);
+        setError(error);
       }
     };
 
@@ -366,8 +372,6 @@ const CarouselSlider = () => {
       }
     };
 
-    const [hoveredIndex, setHoveredIndex] = useState(null);
-
     const handleIndicatorHover = (index) => {
       setHoveredIndex(index);
     };
@@ -430,6 +434,7 @@ const CarouselSlider = () => {
   // inicio codigo para dibujar circulo en botones
   const [percentage, setPercentage] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const [percentageRight, setPercentageRight] = useState(0);
   const [isHoveredRight, setIsHoveredRight] = useState(false);
@@ -487,6 +492,21 @@ const CarouselSlider = () => {
 
   // fin codigo para dibujar circulo en botones
 
+  if (error) {
+    return (
+      <div>
+        <Error />
+      </div>
+    );
+  }
+
+  if (!dataLoaded) {
+    return (
+      <div>
+        <Loaded />
+      </div>
+    );
+  }
   return (
     <div className="relative ">
       <div className="overflow-hidden ">

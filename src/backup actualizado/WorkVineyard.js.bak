@@ -55,7 +55,7 @@ function Header() {
               style={playfairFontBlack}
               className="text-base text-[#C4B27D] text-center tracking-wider uppercase"
             >
-              {t("patagonian.lifeEstate.title")}
+              {t("patagonian.workVineyard.title")}
             </h2>
           </div>
         </div>
@@ -64,7 +64,7 @@ function Header() {
   );
 }
 
-const LifeOnEstate = () => {
+const WorkVineyard = () => {
   const location = useLocation();
 
   return (
@@ -108,17 +108,15 @@ const Screen = () => {
 
   const location = useLocation();
   // Estadode variables consultas de API
-  const [dataLoaded, setDataLoaded] = useState(null);
-  const [error, setError] = useState(null);
   const [images, setImages] = useState([]);
   const [title, setTitle] = useState([]);
   const [paragraphs, setParagraphs] = useState([""]);
 
   // URL de la API
   const apiUrlEnglish =
-    "https://back-ribera-gl7lw5cfra-uc.a.run.app/api/pages?populate=bloques%2C%20bloques.slide%2C%20bloques.slide.image&filters%5Bslug%5D=life-estate&locale=en";
+    "https://back-ribera-gl7lw5cfra-uc.a.run.app/api/pages?populate=bloques%2C%20bloques.slide%2C%20bloques.slide.image&filters%5Bslug%5D=work-vineyard&locale=en";
   const apiUrlSpanish =
-    "https://back-ribera-gl7lw5cfra-uc.a.run.app/api/pages?populate=bloques%2C%20bloques.slide%2C%20bloques.slide.image&filters%5Bslug%5D=life-estate-es&locale=es";
+    "https://back-ribera-gl7lw5cfra-uc.a.run.app/api/pages?populate=bloques%2C%20bloques.slide%2C%20bloques.slide.image&filters%5Bslug%5D=work-vineyard-es&locale=es";
   let apiUrl;
 
   if (idiomaSeleccionado === "en") {
@@ -138,8 +136,6 @@ const Screen = () => {
     // Función para realizar la solicitud HTTP y obtener las imágenes
     const fetchImages = async () => {
       try {
-        // Codigo para simular un retraso en la API
-        // await new Promise(resolve => setTimeout(resolve, 3000));
         const response = await fetch(apiUrl);
         const data = await response.json();
 
@@ -162,11 +158,10 @@ const Screen = () => {
             slide.textMobile !== null ? slide.textMobile : slide.text
           )
         );
+
         setParagraphs(textContent);
-        setDataLoaded(response);
       } catch (error) {
         console.error("Error al realizar la solicitud:", error);
-        setError(error);
       }
     };
 
@@ -198,21 +193,7 @@ const Screen = () => {
     config: { duration: 1500, easing: (t) => t }, // Puedes experimentar con diferentes funciones de easing
   });
 
-  if (error) {
-    return (
-      <div>
-        <Error />
-      </div>
-    );
-  }
-
-  if (!dataLoaded) {
-    return (
-      <div>
-        <Loaded />
-      </div>
-    );
-  }
+  console.log(images);
   return (
     <Transition
       items={location}
@@ -325,4 +306,4 @@ const Screen = () => {
   );
 };
 
-export default LifeOnEstate;
+export default WorkVineyard;

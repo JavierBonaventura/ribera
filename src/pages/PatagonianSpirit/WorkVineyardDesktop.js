@@ -74,6 +74,8 @@ const CarouselSlider = () => {
   const [isNextButtonHovered, setIsNextButtonHovered] = useState(false);
 
   // Estadode variables consultas de API
+  const [dataLoaded, setDataLoaded] = useState(null);
+  const [error, setError] = useState(null);
   const [images, setImages] = useState([]);
   const [title, setTitle] = useState([]);
   const [paragraphs, setParagraphs] = useState([""]);
@@ -105,6 +107,8 @@ const CarouselSlider = () => {
     // Función para realizar la solicitud HTTP y obtener las imágenes
     const fetchImages = async () => {
       try {
+        // Codigo para simular un retraso en la API
+        // await new Promise(resolve => setTimeout(resolve, 3000));
         const response = await fetch(apiUrl);
         const data = await response.json();
 
@@ -126,8 +130,10 @@ const CarouselSlider = () => {
           extractTextWithoutTags(slide.text)
         );
         setParagraphs(textContent);
+        setDataLoaded(response);
       } catch (error) {
         console.error("Error al realizar la solicitud:", error);
+        setError(error);
       }
     };
 
@@ -286,13 +292,13 @@ const CarouselSlider = () => {
     return (
       <div className="transition-all ease-in-out duration-500 relative bg-[#000000]">
         <header className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl py-5 xl:py-10 px-5 2xl:px-0 fixed top-0 left-0 right-0 z-50">
-          <div class="flex justify-between items-center  ">
-            <div class="">
+          <div className="flex justify-between items-center  ">
+            <div className="">
               <Link to="/">
                 <img src={logo} alt="" className="w-24 md:w-28" />
               </Link>
             </div>
-            <div class="mt-4">
+            <div className="mt-4">
               <Link to="/menu">
                 <img
                   src={hambur}
@@ -316,7 +322,7 @@ const CarouselSlider = () => {
             }`}
           >
             <h1
-              class="text-[#ffffff] text-lg tracking-widest"
+              className="text-[#ffffff] text-lg tracking-widest"
               style={playfairFontItalic}
             >
               <i style={playfairFontItalic}>{t("patagonian.title")}</i>
@@ -368,8 +374,6 @@ const CarouselSlider = () => {
         handleNextClickIndicators(index);
       }
     };
-
-    const [hoveredIndex, setHoveredIndex] = useState(null);
 
     const handleIndicatorHover = (index) => {
       setHoveredIndex(index);
@@ -433,6 +437,7 @@ const CarouselSlider = () => {
   // inicio codigo para dibujar circulo en botones
   const [percentage, setPercentage] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const [percentageRight, setPercentageRight] = useState(0);
   const [isHoveredRight, setIsHoveredRight] = useState(false);
@@ -490,6 +495,21 @@ const CarouselSlider = () => {
 
   // fin codigo para dibujar circulo en botones
 
+  if (error) {
+    return (
+      <div>
+        <Error />
+      </div>
+    );
+  }
+
+  if (!dataLoaded) {
+    return (
+      <div>
+        <Loaded />
+      </div>
+    );
+  }
   return (
     <div className="relative ">
       <div className="overflow-hidden ">

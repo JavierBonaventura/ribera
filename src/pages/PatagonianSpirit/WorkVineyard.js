@@ -108,6 +108,8 @@ const Screen = () => {
 
   const location = useLocation();
   // Estadode variables consultas de API
+  const [dataLoaded, setDataLoaded] = useState(null);
+  const [error, setError] = useState(null);
   const [images, setImages] = useState([]);
   const [title, setTitle] = useState([]);
   const [paragraphs, setParagraphs] = useState([""]);
@@ -136,6 +138,8 @@ const Screen = () => {
     // Función para realizar la solicitud HTTP y obtener las imágenes
     const fetchImages = async () => {
       try {
+        // Codigo para simular un retraso en la API
+        // await new Promise(resolve => setTimeout(resolve, 3000));
         const response = await fetch(apiUrl);
         const data = await response.json();
 
@@ -160,8 +164,10 @@ const Screen = () => {
         );
 
         setParagraphs(textContent);
+        setDataLoaded(response);
       } catch (error) {
         console.error("Error al realizar la solicitud:", error);
+        setError(error);
       }
     };
 
@@ -194,6 +200,21 @@ const Screen = () => {
   });
 
   console.log(images);
+  if (error) {
+    return (
+      <div>
+        <Error />
+      </div>
+    );
+  }
+
+  if (!dataLoaded) {
+    return (
+      <div>
+        <Loaded />
+      </div>
+    );
+  }
   return (
     <Transition
       items={location}
