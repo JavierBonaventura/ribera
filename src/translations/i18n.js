@@ -213,6 +213,11 @@ i18n.use(initReactI18next).init({
             },
           },
         },
+        form: {
+          title: "Email sent successfully",
+          error: "There was an error sending the email",
+          btn: "Close",
+        },
       },
     },
     es: {
@@ -426,6 +431,11 @@ i18n.use(initReactI18next).init({
                 "Parcela Única representa la culminación de nuestras mejores uvas, cuidadosamente seleccionadas de la parcela más especial ubicada dentro del Viñedo Araucana, situado en el cuadrante suroeste. Aquí, la composición elevada de carbonato de calcio confiere una potencia elevada y una profundidad de expresión inigualable. Es en esta sección específica del viñedo donde nuestras uvas enfrentan las condiciones más extremas, desafiando vientos implacables. Son precisamente estas adversidades las que dan lugar a la exquisita intensidad y finura que distinguen a nuestro vino.",
             },
           },
+        },
+        form: {
+          title: "Email enviado correctamente",
+          error: "Hubo un error al enviar el correo electrónico",
+          btn: "Cerrar",
         },
       },
     },
