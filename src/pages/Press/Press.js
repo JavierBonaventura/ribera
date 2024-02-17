@@ -188,7 +188,7 @@ function Press() {
         // await new Promise(resolve => setTimeout(resolve, 3000));
 
         const response = await fetch(
-          "https://back-ribera-gl7lw5cfra-uc.a.run.app/api/presses?populate=mainImage"
+          "https://back-ribera-gl7lw5cfra-uc.a.run.app/api/presses?populate=button%2C%20mainImage"
         );
         const data = await response.json();
         setPresses(data.data);

@@ -40,6 +40,8 @@ const filteredPresses = presses.filter(press => {
     fontWeight: "normal",
     fontStyle: "normal",
   };
+console.log("estos")
+  // console.log(filteredPresses[1].attributes.button[0].href)
 
   return (
     <div
@@ -91,7 +93,7 @@ const filteredPresses = presses.filter(press => {
               </div>
               <div>
                 <a
-                  href={press.attributes.author || ""}
+                  href={press.attributes.button[0].href || ""}
                   target="_blank"
                   className="bg-transparent border border-[#C4B27D] text-xs text-[#C4B27D] hover:text-white hover:bg-[#C4B27D] rounded-lg px-3 py-2 flex justify-center items-center w-24 hover:opacity-90 transition ease-in-out duration-300"
                 >
