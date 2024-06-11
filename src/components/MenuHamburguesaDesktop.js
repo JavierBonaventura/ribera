@@ -560,7 +560,7 @@ const MenuHamburguesaDesktop = () => {
                           </Link>
                         </div>
                       </div>
-                      (
+
                       <div
                         className="flex justify-start items-center w-1/3 cursor-default gap-x-5 text-sm lg:text-base"
                         style={robotoFontRegular}
