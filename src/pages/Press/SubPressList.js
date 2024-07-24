@@ -2,25 +2,28 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 const SubPressList = ({ year, presses }) => {
-  console.log(year)
-  console.log(presses)
+  console.log(year);
+  console.log(presses);
 
-  // Filtro del arreglo por en ano seleccionado
-const filteredPresses = presses.filter(press => {
-  var partes = press.attributes.date.split('-');
-  var ano = parseInt(partes[0], 10)
-  return ano === year;
-});
-
-
-
+  // Filtrar los artículos por el año seleccionado y luego ordenarlos por fecha
+  const filteredPresses = presses
+    .filter((press) => {
+      var partes = press.attributes.date.split("-");
+      var ano = parseInt(partes[0], 10);
+      return ano === year;
+    })
+    .sort((a, b) => {
+      const dateA = new Date(a.attributes.date);
+      const dateB = new Date(b.attributes.date);
+      return dateB - dateA; // Ordenar de más nuevo a más viejo
+    });
 
   const { t, i18n } = useTranslation();
 
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Ocultar el contenido por 1 segundo al cambiar anoVisible
+    // Ocultar el contenido por 1 segundo al cambiar el año
     setIsVisible(false);
     const timeout = setTimeout(() => {
       setIsVisible(true);
@@ -40,8 +43,6 @@ const filteredPresses = presses.filter(press => {
     fontWeight: "normal",
     fontStyle: "normal",
   };
-console.log("estos")
-  // console.log(filteredPresses[1].attributes.button[0].href)
 
   return (
     <div
@@ -56,7 +57,7 @@ console.log("estos")
           <div className="flex flex-col lg:flex-row lg:gap-x-10 w-full xl:w-2/3 mx-auto">
             <div
               style={{
-                backgroundImage: `url(${press.attributes.mainImage.data[0].attributes.url})`,  // Accessing the image URL                backgroundSize: "cover",
+                backgroundImage: `url(${press.attributes.mainImage.data[0].attributes.url})`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
               }}
@@ -64,7 +65,7 @@ console.log("estos")
               alt={`Image ${press.id}`}
             />
 
-            <div className="text-[#F3EEE3] w-full  flex flex-col justify-start gap-y-2 lg:gap-y-7 py-2 lg:py-0 lg:mt-5">
+            <div className="text-[#F3EEE3] w-full flex flex-col justify-start gap-y-2 lg:gap-y-7 py-2 lg:py-0 lg:mt-5">
               <div className="space-y-2">
                 <div>
                   <span
