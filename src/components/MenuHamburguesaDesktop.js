@@ -273,7 +273,7 @@ const MenuHamburguesaDesktop = () => {
                       isVisible ? "opacity-100" : "opacity-0"
                     }`}
                   >
-                    <div className="flex justify-center py-10 md:pt-24 2xl:pb-24 2xl:pt-36 ">
+                    <div className="flex justify-center py-10 md:pt-24 2xl:pb-10 2xl:pt-36 ">
                       <Link to="/">
                         <img
                           src={logoDesktop}

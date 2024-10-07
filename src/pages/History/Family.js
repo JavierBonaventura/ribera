@@ -224,7 +224,7 @@ const Family = () => {
                   {/* img year end*/}
 
                   {/* major img start*/}
-                  <div className="flex justify-center items-center  md:pt-0 px-4 md:px-0 bg ">
+                  <div className="flex flex-col space-y-4 justify-center items-center  md:pt-0 px-4 md:px-0">
                     <img
                       src={
                         data.data[0]?.attributes?.bloques[1]?.image.data
@@ -233,6 +233,23 @@ const Family = () => {
                       alt=""
                       className="w-full md:w-10/12 xl:w-8/12 shadow-2xl"
                     />
+                    <div
+                      className="w-full md:w-10/12 xl:w-8/12 tetx"
+                      style={playfairFontRegular}
+                    >
+                      <p className="text-[#000000] text-xs lg:text-base tracking-wider">
+                        <i>
+                          <span className="underline">From upper left:</span>{" "}
+                          José Menéndez, María Behety, Julio Menéndez.<br></br>
+                          <span className="underline">
+                            From bottom left:
+                          </span>{" "}
+                          Melchor Concha y Toro, Emiliana Concha y Toro, Luz
+                          Ossa Marriage of Julio Menéndez Prendez and María de
+                          la Luz Rosa Ossa.
+                        </i>
+                      </p>
+                    </div>
                   </div>
                   {/* major img end*/}
 
@@ -256,7 +273,7 @@ const Family = () => {
               </div>
 
               {/* col text img 1 start*/}
-              <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0 ">
+              <div className="container mx-auto max-w-screen-xl xl:max-w-screen-2xl md:px-5 2xl:px-0">
                 <div ref={posicionRef} id="posicion"></div>
                 <div className="flex flex-col md:flex-row md:py-20">
                   <div className="w-full xl:w-1/2 mx-auto px-4 md:px-0 ">
