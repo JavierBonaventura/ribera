@@ -239,14 +239,11 @@ const Family = () => {
                     >
                       <p className="text-[#000000] text-xs lg:text-base tracking-wider">
                         <i>
-                          <span className="underline">From upper left:</span>{" "}
-                          José Menéndez, María Behety, Julio Menéndez.<br></br>
-                          <span className="underline">
-                            From bottom left:
-                          </span>{" "}
-                          Melchor Concha y Toro, Emiliana Concha y Toro, Luz
-                          Ossa Marriage of Julio Menéndez Prendez and María de
-                          la Luz Rosa Ossa.
+                          {t("history.epigrafeUno")}
+                          <br></br>
+                          <span className="">
+                            {t("history.epigrafeDos")}
+                          </span>
                         </i>
                       </p>
                     </div>

@@ -61,6 +61,8 @@ i18n.use(initReactI18next).init({
         },
         history: {
           title: "History",
+          epigrafeUno: "From upper left: José Menéndez, María Behety, Julio Menéndez.",
+          epigrafeDos: "From bottom left: Melchor Concha y Toro, Emiliana Concha y Toro, Luz Ossa Marriage of Julio Menéndez Prendez and María de la Luz Rosa Ossa",
           family: {
             title: "Family",
             titleFirstParagraph: "Roots in patagonia",
@@ -278,6 +280,8 @@ i18n.use(initReactI18next).init({
         },
         history: {
           title: "Historia",
+          epigrafeUno: "Desde la esquina superior izquierda: José Menéndez, María Behety, Julio Menéndez.",
+          epigrafeDos: "Desde la esquina inferior izquierda: Melchor Concha y Toro, Emiliana Concha y Toro, Luz Ossa Matrimonio de Julio Menéndez Prendez y María de la Luz Rosa Ossa",
           family: {
             title: "Familia",
             titleFirstParagraph: "Raíces en la patagonia",
