@@ -241,9 +241,7 @@ const Family = () => {
                         <i>
                           {t("history.epigrafeUno")}
                           <br></br>
-                          <span className="">
-                            {t("history.epigrafeDos")}
-                          </span>
+                          <span className="">{t("history.epigrafeDos")}</span>
                         </i>
                       </p>
                     </div>

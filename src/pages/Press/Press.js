@@ -180,6 +180,19 @@ function Press() {
   const [currentYear, setCurrentYear] = useState(null);
   const [dataLoaded, setDataLoaded] = useState(null);
   const [error, setError] = useState(null);
+  const idiomaSeleccionado = i18n.language;
+  // URL de la API
+  const apiUrlEnglish =
+    "https://back-ribera-gl7lw5cfra-uc.a.run.app/api/presses?populate=button%2C%20mainImage&locale=en";
+  const apiUrlSpanish =
+    "https://back-ribera-gl7lw5cfra-uc.a.run.app/api/presses?populate=button%2C%20mainImage&locale=es";
+  let apiUrl;
+
+  if (idiomaSeleccionado === "en") {
+    apiUrl = apiUrlEnglish;
+  } else {
+    apiUrl = apiUrlSpanish;
+  }
 
   useEffect(() => {
     const fetchData = async () => {
@@ -187,9 +200,7 @@ function Press() {
         // Codigo para simular un retraso en la API
         // await new Promise(resolve => setTimeout(resolve, 3000));
 
-        const response = await fetch(
-          "https://back-ribera-gl7lw5cfra-uc.a.run.app/api/presses?populate=button%2C%20mainImage"
-        );
+        const response = await fetch(apiUrl);
         const data = await response.json();
         setPresses(data.data);
 
