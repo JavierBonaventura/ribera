@@ -16,8 +16,8 @@ i18n.use(initReactI18next).init({
           optionB4: "Life on the Estate",
           optionB5: "Water for Life",
           titleC: "Wines",
-          optionC1: "In Argentina",
-          optionC2: "In the world",
+          optionC1: "Araucana Collection",
+          optionC2: "Ribera del Cuarzo Collection",
           footerOptionA: "Contact",
           footerOptionB: "Our distribution office",
           footerOptionC: "Press",
@@ -61,8 +61,10 @@ i18n.use(initReactI18next).init({
         },
         history: {
           title: "History",
-          epigrafeUno: "From upper left: José Menéndez, María Behety, Julio Menéndez.",
-          epigrafeDos: "From bottom left: Melchor Concha y Toro, Emiliana Concha y Toro, Luz Ossa Marriage of Julio Menéndez Prendez and María de la Luz Rosa Ossa",
+          epigrafeUno:
+            "From upper left: José Menéndez, María Behety, Julio Menéndez.",
+          epigrafeDos:
+            "From bottom left: Melchor Concha y Toro, Emiliana Concha y Toro, Luz Ossa Marriage of Julio Menéndez Prendez and María de la Luz Rosa Ossa",
           family: {
             title: "Family",
             titleFirstParagraph: "Roots in patagonia",
@@ -180,7 +182,7 @@ i18n.use(initReactI18next).init({
           btnSheet: "Download Technical Sheet",
           btnFooter: "Read more",
           argentina: {
-            title: "In Argentina",
+            title: "Araucana Collection",
             araucanaRioMalbec: {
               paragraph:
                 "Río de los Ciervos Malbec´s grapes come from 8 vineyards located along both sides of the river. Through this wine, we aim to showcase the diversity of the classic area of the Rio Negro valley.",
@@ -199,7 +201,7 @@ i18n.use(initReactI18next).init({
             },
           },
           world: {
-            title: "In the world",
+            title: "Ribera del Cuarzo Collection",
             brand: "Ribera del Cuarzo",
             riberaClasico: {
               paragraph:
@@ -235,8 +237,8 @@ i18n.use(initReactI18next).init({
           optionB4: "La vida en la finca",
           optionB5: "Agua de vida",
           titleC: "Vinos",
-          optionC1: "En Argentina",
-          optionC2: "En el mundo",
+          optionC1: "Colección Araucana",
+          optionC2: "Colección Ribera del Cuarzo",
           footerOptionA: "Contacto",
           footerOptionB: "Oficina de distribución",
           footerOptionC: "Prensa",
@@ -280,8 +282,10 @@ i18n.use(initReactI18next).init({
         },
         history: {
           title: "Historia",
-          epigrafeUno: "Desde la esquina superior izquierda: José Menéndez, María Behety, Julio Menéndez.",
-          epigrafeDos: "Desde la esquina inferior izquierda: Melchor Concha y Toro, Emiliana Concha y Toro, Luz Ossa Matrimonio de Julio Menéndez Prendez y María de la Luz Rosa Ossa",
+          epigrafeUno:
+            "Desde la esquina superior izquierda: José Menéndez, María Behety, Julio Menéndez.",
+          epigrafeDos:
+            "Desde la esquina inferior izquierda: Melchor Concha y Toro, Emiliana Concha y Toro, Luz Ossa Matrimonio de Julio Menéndez Prendez y María de la Luz Rosa Ossa",
           family: {
             title: "Familia",
             titleFirstParagraph: "Raíces en la patagonia",
@@ -398,7 +402,7 @@ i18n.use(initReactI18next).init({
           btnSheet: "Descargar Ficha Técnica",
           btnFooter: "Leer más",
           argentina: {
-            title: "En Argentina",
+            title: "Colección Araucana",
             araucanaRioMalbec: {
               paragraph:
                 "Las uvas de Río de los Ciervos provienen de 8 viñedos ubicados a lo largo de los 200 km a ambos lados del río. A través de este vino, nuestro objetivo es mostrar la diversidad de la zona clásica del valle del Río Negro.",
@@ -421,7 +425,7 @@ i18n.use(initReactI18next).init({
             },
           },
           world: {
-            title: "En el mundo",
+            title: "Colección Ribera del Cuarzo",
             riberaClasico: {
               paragraph:
                 "Las uvas de Clasico Malbec provienen de 8 viñedos ubicados a lo largo de los 200 km a ambos lados del río. A través de este vino, nuestro objetivo es mostrar la diversidad de la zona clásica del valle del Río Negro.",

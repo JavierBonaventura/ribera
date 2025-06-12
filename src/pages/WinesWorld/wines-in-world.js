@@ -129,24 +129,38 @@ function WinesInWorld() {
           `https://back-ribera-gl7lw5cfra-uc.a.run.app/api/wines?populate=wines_categories%2CrelatedImage&locale=${idiomaSeleccionado}`
         );
 
-        const currentWineCategory = "In the world";
+        const currentWineCategory = "Ribera del Cuarzo collection";
 
         const fetchedImages = response.data.data
           .filter(
             (wine) =>
+              wine &&
+              wine.attributes &&
               wine.attributes.slug !== slug &&
-              wine.attributes.wines_categories.data.some(
-                (category) => category.attributes.name === currentWineCategory
-              )
+              wine.attributes.wines_categories?.data?.some(
+                (category) =>
+                  category?.attributes?.name === currentWineCategory ||
+                  category?.attributes?.name === "Coleccion Ribera del Cuarzo"
+              ) &&
+              wine.attributes.relatedImage?.data?.attributes?.url
           )
-          .map((wine) => ({
-            id: wine.id,
-            imageUrl: wine.attributes.relatedImage.data.attributes.url,
-            imageName: wine.attributes.relatedImage.data.attributes.name,
-            imageFamilyName: wine.attributes.familyName,
-            imageName: wine.attributes.name,
-            slugName: wine.attributes.slug,
-          }));
+          .map((wine) => {
+            try {
+              return {
+                id: wine.id,
+                imageUrl: wine.attributes.relatedImage.data.attributes.url,
+                imageName:
+                  wine.attributes.relatedImage.data.attributes.name || "",
+                imageFamilyName: wine.attributes.familyName || "",
+                imageName: wine.attributes.name || "",
+                slugName: wine.attributes.slug || "",
+              };
+            } catch (error) {
+              console.error("Error al procesar vino relacionado:", error);
+              return null;
+            }
+          })
+          .filter(Boolean);
 
         setAllRelatedImages(fetchedImages);
       } catch (error) {
@@ -238,30 +252,35 @@ function WinesInWorld() {
               {/* Wine start */}
               <div>
                 {/* img wine start */}
-                {wineData && (
-                  <div className="w-32 md:w-52 mx-auto relative flex justify-center items-center py-16 md:py-24">
-                    <img
-                      src={
-                        wineData.attributes.mainBottleImage.data.attributes.url
-                      }
-                      alt={
-                        wineData.attributes.mainBottleImage.data.attributes.name
-                      }
-                      className={`w-full z-50 ${
-                        isVisible3
-                          ? "opacity-100 transition-opacity duration-500"
-                          : "opacity-0 transition-opacity duration-500"
-                      }`}
-                    />
-                    <div className=" absolute w-[20rem] md:w-[25rem] ">
-                      <img src={ImgMarcaAgua} alt="" className="w-full " />
+                {wineData &&
+                  wineData.attributes &&
+                  wineData.attributes.mainBottleImage &&
+                  wineData.attributes.mainBottleImage.data && (
+                    <div className="w-32 md:w-52 mx-auto relative flex justify-center items-center py-16 md:py-24">
+                      <img
+                        src={
+                          wineData.attributes.mainBottleImage.data.attributes
+                            .url
+                        }
+                        alt={
+                          wineData.attributes.mainBottleImage.data.attributes
+                            .name
+                        }
+                        className={`w-full z-50 ${
+                          isVisible3
+                            ? "opacity-100 transition-opacity duration-500"
+                            : "opacity-0 transition-opacity duration-500"
+                        }`}
+                      />
+                      <div className=" absolute w-[20rem] md:w-[25rem] ">
+                        <img src={ImgMarcaAgua} alt="" className="w-full " />
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
                 {/* img wine end */}
                 <div className="flex flex-col gap-y-5  md:gap-y-14   w-2/4 mx-auto ">
                   {/* titular wine start */}
-                  {wineData && (
+                  {wineData && wineData.attributes && (
                     <div className="space-y-5 md:space-y-14">
                       <h1
                         className="uppercase text-[#C4B27D] text-center tracking-widest"
@@ -279,49 +298,54 @@ function WinesInWorld() {
                         className="text-[#F3EEE3] text-xs md:text-base tracking-wider text-justify md:text-justify"
                         style={playfairFontRegular}
                       >
-                        {wineData.attributes.description[0].children[0].text}
+                        {wineData.attributes.description &&
+                          wineData.attributes.description[0] &&
+                          wineData.attributes.description[0].children &&
+                          wineData.attributes.description[0].children[0] &&
+                          wineData.attributes.description[0].children[0].text}
                       </p>
                     </div>
                   )}
                   {/* titular wine end */}
                   {/* Fichas tecnicas start */}
-                  {wineData && (
-                    <div>
-                      <div className="flex justify-center">
-                        <a
-                          className="border-b border-[#C4B27D] cursor-pointer"
-                          onClick={handleDownloadClick1}
-                        >
-                          <div className="w-2 inline-block">
-                            <img src={iconDownload} alt="" className="w-full" />
-                          </div>
-                          <span className="ml-2 text-xs md:text-lg text-[#C4B27D] tracking-wider">
-                            {t("wines.btnSheet")}
-                          </span>
-                        </a>
-                      </div>
-                      <animated.div style={dropdownAnimation1}>
-                        <div className="w-2/4 mx-auto pt-4">
-                          <ul className="text-xs md:text-lg text-[#C4B27D] text-center">
-                            {wineData.attributes.technicalSheet &&
-                              wineData.attributes.technicalSheet.map(
+                  {wineData &&
+                    wineData.attributes &&
+                    wineData.attributes.technicalSheet && (
+                      <div>
+                        <div className="flex justify-center">
+                          <a
+                            className="border-b border-[#C4B27D] cursor-pointer"
+                            onClick={handleDownloadClick1}
+                          >
+                            <div className="w-2 inline-block">
+                              <img
+                                src={iconDownload}
+                                alt=""
+                                className="w-full"
+                              />
+                            </div>
+                            <span className="ml-2 text-xs md:text-lg text-[#C4B27D] tracking-wider">
+                              {t("wines.btnSheet")}
+                            </span>
+                          </a>
+                        </div>
+                        <animated.div style={dropdownAnimation1}>
+                          <div className="w-2/4 mx-auto pt-4">
+                            <ul className="text-xs md:text-lg text-[#C4B27D] text-center">
+                              {wineData.attributes.technicalSheet.map(
                                 (sheet, index) => (
-                                  <li className="py-2 px-4">
-                                    <a
-                                      key={index}
-                                      href={sheet.href}
-                                      target={sheet.target}
-                                    >
+                                  <li key={index} className="py-2 px-4">
+                                    <a href={sheet.href} target={sheet.target}>
                                       {sheet.text}
                                     </a>
                                   </li>
                                 )
                               )}
-                          </ul>
-                        </div>
-                      </animated.div>
-                    </div>
-                  )}
+                            </ul>
+                          </div>
+                        </animated.div>
+                      </div>
+                    )}
                   {/* Fichas tecnicas end */}
                 </div>
               </div>
@@ -329,25 +353,29 @@ function WinesInWorld() {
             </div>
 
             {/* Img pre footer start */}
-            {wineData && (
-              <div className="flex justify-center items-center h-full ">
-                <div className="container contenedor mx-auto max-w-screen-xl xl:max-w-screen-2xl">
-                  <div className="w-full aspect-video h-auto xl:h-[40rem]">
-                    <div className="recuadro-1"></div>
-                    <div className="recuadro-2"></div>
-                    <img
-                      src={
-                        wineData.attributes.secondaryImage.data.attributes.url
-                      }
-                      className="imagen  absolute xl:top-[-70px] 2xl:top-[-200px]"
-                      alt={
-                        wineData.attributes.secondaryImage.data.attributes.name
-                      }
-                    />
+            {wineData &&
+              wineData.attributes &&
+              wineData.attributes.secondaryImage &&
+              wineData.attributes.secondaryImage.data && (
+                <div className="flex justify-center items-center h-full ">
+                  <div className="container contenedor mx-auto max-w-screen-xl xl:max-w-screen-2xl">
+                    <div className="w-full aspect-video h-auto xl:h-[40rem]">
+                      <div className="recuadro-1"></div>
+                      <div className="recuadro-2"></div>
+                      <img
+                        src={
+                          wineData.attributes.secondaryImage.data.attributes.url
+                        }
+                        className="imagen  absolute xl:top-[-70px] 2xl:top-[-200px]"
+                        alt={
+                          wineData.attributes.secondaryImage.data.attributes
+                            .name
+                        }
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-            )}
+              )}
             {/* Img pre footer start */}
 
             {/* Footer bottle start */}
@@ -357,34 +385,80 @@ function WinesInWorld() {
                 style={windsorLight}
               >
                 {/* Bottle start */}
-                {allRelatedImages.map((image) => (
-                  <div
-                    key={image.id}
-                    className="border border-[#C4B27D] flex flex-col justify-between px-3 pt-3 md:border-0 md:p-0"
-                  >
-                    <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
-                      <Link
-                        to={`/wines-in-world/${image.slugName}`}
-                        className="text-white uppercase text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
-                      >
-                        {t("wines.btnFooter")}
-                      </Link>
-                      <div className="flex flex-col justify-center items-center text-base lg:text-xl xl:text-2xl text-center">
-                        <span className="uppercase">
-                          {image.imageFamilyName}
-                        </span>
-                        <span>{image.imageName}</span>
-                      </div>
-                    </div>
-                    <Link to={`/wines-in-world/${image.slugName}`}>
-                      <img
-                        src={image.imageUrl}
-                        alt={image.imageName}
-                        className="w-1/2 md:w-3/4 mx-auto transform hover:-translate-y-1 transition ease-in-out duration-300"
-                      />
-                    </Link>
-                  </div>
-                ))}
+                {Array.isArray(allRelatedImages) &&
+                  allRelatedImages.length > 0 &&
+                  allRelatedImages
+                    .filter((image) => {
+                      try {
+                        return (
+                          image &&
+                          typeof image === "object" &&
+                          image.id &&
+                          image.imageUrl &&
+                          typeof image.imageUrl === "string" &&
+                          image.slugName &&
+                          typeof image.slugName === "string" &&
+                          image.imageFamilyName &&
+                          typeof image.imageFamilyName === "string" &&
+                          image.imageName &&
+                          typeof image.imageName === "string"
+                        );
+                      } catch (error) {
+                        console.error(
+                          "Error al validar imagen relacionada:",
+                          error
+                        );
+                        return false;
+                      }
+                    })
+                    .map((image) => {
+                      try {
+                        return (
+                          <div
+                            key={image.id}
+                            className="border border-[#C4B27D] flex flex-col justify-between px-3 pt-3 md:border-0 md:p-0"
+                          >
+                            <div className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4">
+                              <Link
+                                to={`/ribera-del-cuarzo-collection/${image.slugName}`}
+                                className="text-white uppercase text-sm lg:text-lg border-b border-transparent hover:border-[#C4B27D] hover:text-[#C4B27D] transition duration-300 ease-in-out"
+                              >
+                                {t("wines.btnFooter")}
+                              </Link>
+                              <div className="flex flex-col justify-center items-center text-base lg:text-xl xl:text-2xl text-center">
+                                <span className="uppercase">
+                                  {image.imageFamilyName}
+                                </span>
+                                <span>{image.imageName}</span>
+                              </div>
+                            </div>
+                            <Link
+                              to={`/ribera-del-cuarzo-collection/${image.slugName}`}
+                            >
+                              <img
+                                src={image.imageUrl}
+                                alt={image.imageName}
+                                className="w-1/2 md:w-3/4 mx-auto transform hover:-translate-y-1 transition ease-in-out duration-300"
+                                onError={(e) => {
+                                  console.error(
+                                    "Error al cargar imagen:",
+                                    image.imageUrl
+                                  );
+                                  e.target.style.display = "none";
+                                }}
+                              />
+                            </Link>
+                          </div>
+                        );
+                      } catch (error) {
+                        console.error(
+                          "Error al renderizar imagen relacionada:",
+                          error
+                        );
+                        return null;
+                      }
+                    })
+                    .filter(Boolean)}
                 {/* Bottle end */}
               </div>
             </div>

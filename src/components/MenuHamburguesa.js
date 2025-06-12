@@ -155,15 +155,15 @@ const Home = () => {
 
         // Filtrar solo los vinos cuya categoría sea "In Argentina" o "En Argentina"
         const filteredMenuArgData = filterWinesByCategory(wineData, [
-          "In Argentina",
-          "En Argentina",
+          "Araucana collection",
+          "Coleccion Araucana",
         ]);
         setMenuArgData(filteredMenuArgData);
 
         // Filtrar solo los vinos cuya categoría sea "In the world" o "En el mundo"
         const filteredMenuWorldData = filterWinesByCategory(wineData, [
-          "In the world",
-          "En el mundo",
+          "Ribera del Cuarzo collection",
+          "Coleccion Ribera del Cuarzo",
         ]);
         setMenuWorldData(filteredMenuWorldData);
       } catch (error) {
@@ -373,7 +373,7 @@ const Home = () => {
                           menuArgData.map((wine) => (
                             <li key={wine.id}>
                               <Link
-                                to={`/wines-in-argentina/${wine.attributes.slug}`}
+                                to={`/araucana-collection/${wine.attributes.slug}`}
                               >
                                 <div style={robotoFontRegular}>
                                   <span className="subMenu tracking-widest familyName">
@@ -399,7 +399,7 @@ const Home = () => {
                           menuWorldData.map((wine) => (
                             <li key={wine.id}>
                               <Link
-                                to={`/wines-in-world/${wine.attributes.slug}`}
+                                to={`/ribera-del-cuarzo-collection/${wine.attributes.slug}`}
                               >
                                 <div style={robotoFontRegular}>
                                   <span className="subMenu tracking-widest familyName">

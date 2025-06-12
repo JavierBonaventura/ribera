@@ -17,6 +17,24 @@ import "../App.css";
 
 const MenuDesktop = () => {
   const { t, i18n } = useTranslation();
+
+  const [dynamicHeightClass, setDynamicHeightClass] = useState("h-screen");
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerHeight <= 620) {
+        setDynamicHeightClass("h-[700px]");
+      } else {
+        setDynamicHeightClass("h-screen");
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Set initial height
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   // inicio codigo para retrasar la aparicion del logo
   const [isVisible, setIsVisible] = useState(false);
   const [activeButton, setActiveButton] = useState("en");
@@ -245,15 +263,15 @@ const MenuDesktop = () => {
 
         // Filtrar solo los vinos cuya categoría sea "In Argentina" o "En Argentina"
         const filteredMenuArgData = filterWinesByCategory(wineData, [
-          "In Argentina",
-          "En Argentina",
+          "Araucana collection",
+          "Coleccion Araucana",
         ]);
         setMenuArgData(filteredMenuArgData);
 
         // Filtrar solo los vinos cuya categoría sea "In the world" o "En el mundo"
         const filteredMenuWorldData = filterWinesByCategory(wineData, [
-          "In the world",
-          "En el mundo",
+          "Ribera del Cuarzo collection",
+          "Coleccion Ribera del Cuarzo",
         ]);
         setMenuWorldData(filteredMenuWorldData);
       } catch (error) {
@@ -282,7 +300,7 @@ const MenuDesktop = () => {
     >
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
-          <div className="h-screen relative p-5">
+          <div className={`${dynamicHeightClass} relative p-5`}>
             <video
               ref={videoRef1}
               className={`video-background ${
@@ -563,7 +581,7 @@ const MenuDesktop = () => {
                                 menuArgData.map((wine) => (
                                   <li key={wine.id}>
                                     <Link
-                                      to={`/wines-in-argentina/${wine.attributes.slug}`}
+                                      to={`/araucana-collection/${wine.attributes.slug}`}
                                     >
                                       <div style={robotoFontRegular}>
                                         <span className="subMenu tracking-widest familyName">
@@ -589,7 +607,7 @@ const MenuDesktop = () => {
                                 menuWorldData.map((wine) => (
                                   <li key={wine.id}>
                                     <Link
-                                      to={`/wines-in-world/${wine.attributes.slug}`}
+                                      to={`/ribera-del-cuarzo-collection/${wine.attributes.slug}`}
                                     >
                                       <div style={robotoFontRegular}>
                                         <span className="subMenu tracking-widest familyName">
