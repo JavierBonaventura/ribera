@@ -255,36 +255,55 @@ const MenuDesktop = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        // 1. Traer todos los vinos
         const response = await axios.get(
           `https://back-ribera-gl7lw5cfra-uc.a.run.app/api/wines?populate=wines_categories&locale=${idiomaSeleccionado}`
         );
-
         const wineData = response.data.data;
 
-        // Filtrar solo los vinos cuya categoría sea "In Argentina" o "En Argentina"
-        const filteredMenuArgData = filterWinesByCategory(wineData, [
-          "Araucana collection",
-          "Coleccion Araucana",
-        ]);
-        setMenuArgData(filteredMenuArgData);
+        // 2. Traer la categoría "Araucana collection" (en el idioma correspondiente)
+        const responseCatArg = await axios.get(
+          `https://back-ribera-gl7lw5cfra-uc.a.run.app/api/wines-categories?filters[name][$in]=${
+            idiomaSeleccionado === "es"
+              ? "Coleccion Araucana"
+              : "Araucana collection"
+          }&populate[wines][pagination][limit]=100&locale=${idiomaSeleccionado}`
+        );
+        const winesArgIds =
+          responseCatArg.data.data[0]?.attributes?.wines?.data.map(
+            (w) => w.id
+          ) || [];
 
-        // Filtrar solo los vinos cuya categoría sea "In the world" o "En el mundo"
-        const filteredMenuWorldData = filterWinesByCategory(wineData, [
-          "Ribera del Cuarzo collection",
-          "Coleccion Ribera del Cuarzo",
-        ]);
+        // 3. Traer la categoría "Ribera del Cuarzo collection"
+        const responseCatWorld = await axios.get(
+          `https://back-ribera-gl7lw5cfra-uc.a.run.app/api/wines-categories?filters[name][$in]=${
+            idiomaSeleccionado === "es"
+              ? "Coleccion Ribera del Cuarzo"
+              : "Ribera del Cuarzo collection"
+          }&populate[wines][pagination][limit]=100&locale=${idiomaSeleccionado}`
+        );
+        const winesWorldIds =
+          responseCatWorld.data.data[0]?.attributes?.wines?.data.map(
+            (w) => w.id
+          ) || [];
+
+        // 4. Filtrar y ordenar los vinos según el orden de la categoría
+        const filteredMenuArgData = winesArgIds
+          .map((id) => wineData.find((w) => w.id === id))
+          .filter(Boolean);
+
+        const filteredMenuWorldData = winesWorldIds
+          .map((id) => wineData.find((w) => w.id === id))
+          .filter(Boolean);
+
+        console.log(filteredMenuWorldData);
+
+        setMenuArgData(filteredMenuArgData);
         setMenuWorldData(filteredMenuWorldData);
       } catch (error) {
         console.error("Error al llamar a la API", error);
       }
     };
-
-    const filterWinesByCategory = (wines, categories) =>
-      wines.filter((wine) =>
-        wine.attributes.wines_categories.data.some((category) =>
-          categories.includes(category.attributes.name)
-        )
-      );
 
     fetchData();
   }, [idiomaSeleccionado]);
@@ -562,12 +581,12 @@ const MenuDesktop = () => {
                       >
                         {t("menu.titleC")}
                       </p>
-                      <animated.div style={dropdownAnimation3}>
-                        <ul
-                          className={`text-center space-y-0 lg:space-y-1 transition-opacity duration-500 ${
-                            isVisible3 ? "opacity-100" : "opacity-0"
-                          }`}
-                        >
+                      <div
+                        className={`transition-opacity duration-500 ${
+                          isVisible3 ? "opacity-100" : "opacity-0"
+                        }`}
+                      >
+                        <ul className="text-center space-y-0 lg:space-y-1">
                           <li>
                             <p style={robotoFontRegular} onClick={opcion4}>
                               <span className="!mb-0 subMenu tracking-widest uppercase">
@@ -575,25 +594,28 @@ const MenuDesktop = () => {
                               </span>
                             </p>
                           </li>
-                          <animated.div style={dropdownAnimation4}>
-                            <ul className="text-center">
-                              {menuArgData &&
-                                menuArgData.map((wine) => (
-                                  <li key={wine.id}>
-                                    <Link
-                                      to={`/araucana-collection/${wine.attributes.slug}`}
-                                    >
-                                      <div style={robotoFontRegular}>
-                                        <span className="subMenu tracking-widest familyName">
-                                          {wine.attributes.familyName}{" "}
-                                          {wine.attributes.name}
-                                        </span>
-                                      </div>
-                                    </Link>
-                                  </li>
-                                ))}
-                            </ul>
-                          </animated.div>
+                          {/* Submenú Araucana */}
+                          {mostrarMenu4 && (
+                            <li>
+                              <ul className="text-center">
+                                {menuArgData &&
+                                  menuArgData.map((wine) => (
+                                    <li key={wine.id}>
+                                      <Link
+                                        to={`/araucana-collection/${wine.attributes.slug}`}
+                                      >
+                                        <div style={robotoFontRegular}>
+                                          <span className="subMenu tracking-widest familyName">
+                                            {wine.attributes.familyName}{" "}
+                                            {wine.attributes.name}
+                                          </span>
+                                        </div>
+                                      </Link>
+                                    </li>
+                                  ))}
+                              </ul>
+                            </li>
+                          )}
                           <li>
                             <p style={robotoFontRegular} onClick={opcion5}>
                               <span className="!mb-0 subMenu tracking-widest uppercase">
@@ -601,27 +623,30 @@ const MenuDesktop = () => {
                               </span>
                             </p>
                           </li>
-                          <animated.div style={dropdownAnimation5}>
-                            <ul className="text-center">
-                              {menuWorldData &&
-                                menuWorldData.map((wine) => (
-                                  <li key={wine.id}>
-                                    <Link
-                                      to={`/ribera-del-cuarzo-collection/${wine.attributes.slug}`}
-                                    >
-                                      <div style={robotoFontRegular}>
-                                        <span className="subMenu tracking-widest familyName">
-                                          {wine.attributes.familyName}{" "}
-                                          {wine.attributes.name}
-                                        </span>
-                                      </div>
-                                    </Link>
-                                  </li>
-                                ))}
-                            </ul>
-                          </animated.div>
+                          {/* Submenú Ribera del Cuarzo */}
+                          {mostrarMenu5 && (
+                            <li>
+                              <ul className="text-center">
+                                {menuWorldData &&
+                                  menuWorldData.map((wine) => (
+                                    <li key={wine.id}>
+                                      <Link
+                                        to={`/ribera-del-cuarzo-collection/${wine.attributes.slug}`}
+                                      >
+                                        <div style={robotoFontRegular}>
+                                          <span className="subMenu tracking-widest familyName">
+                                            {wine.attributes.familyName}{" "}
+                                            {wine.attributes.name}
+                                          </span>
+                                        </div>
+                                      </Link>
+                                    </li>
+                                  ))}
+                              </ul>
+                            </li>
+                          )}
                         </ul>
-                      </animated.div>
+                      </div>
                     </div>
                   </div>
                   <div className="absolute bottom-5 md:px-5  w-full container mx-auto max-w-screen-xl xl:max-w-screen-2xl  2xl:max-w-none  left-1/2 transform -translate-x-1/2">
