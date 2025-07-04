@@ -42,7 +42,7 @@ function Header() {
         </div>
       </header>
 
-      <div className=" bg-[#F3EEE3] pt-4 pb-12">
+      <div className=" bg-[#F3EEE3] pt-4 pb-12 ">
         <div className="container mx-auto flex flex-col justify-center items-center mt-10">
           <div className="pt-9">
             <h1
@@ -78,10 +78,10 @@ const LifeOnEstate = () => {
     >
       {(style, item) => (
         <animated.div style={{ ...style, width: "100%" }}>
-          <div className="bg-[#F3EEE3] ">
+          <div className="bg-[#F3EEE3]">
             <Header />
 
-            <div>
+            <div className="bg-[#F3EEE3]">
               <Screen />
             </div>
           </div>
@@ -231,7 +231,7 @@ const Screen = () => {
             minHeight: "100vh",
           }}
         >
-          <div className="mt-[-20px]">
+          <div className="mt-[-20px] bg-[#F3EEE3]">
             <div className="bg-[#F3EEE3] pb-2">
               <p className="ml-6 text-left relative">
                 <span
@@ -250,7 +250,7 @@ const Screen = () => {
             </div>
 
             <div className="container mx-auto flex flex-col justify-center  items-center">
-              <div>
+              <div className="bg-[#F3EEE3]">
                 {images ? (
                   <animated.img
                     className="w-full"
@@ -262,7 +262,7 @@ const Screen = () => {
                 )}
               </div>
             </div>
-            <div className="flex justify-center space-x-10 pt-2  bg-[#F3EEE3]">
+            <div className="flex justify-center space-x-10 pt-2 !bg-[#F3EEE3]">
               <button
                 className="w-14 h-14 rounded-full flex items-center justify-center mr-2"
                 onClick={handlePrev}
@@ -283,7 +283,7 @@ const Screen = () => {
             </div>
           </div>
           <div>
-            <div className="bg-[#F3EEE3] pt-5">
+            <div className="!bg-[#F3EEE3] pt-5">
               <div className="container mx-auto flex flex-col justify-center items-center">
                 <div className="flex flex-col gap-y-5">
                   <div className="flex flex-col gap-y-5">
@@ -305,7 +305,7 @@ const Screen = () => {
                 </div>
               </div>
             </div>
-            <div class="container mx-auto bg-[#F3EEE3]">
+            <div class="container mx-auto !bg-[#F3EEE3]">
               <div class="py-20">
                 <div class="flex justify-center">
                   <a
